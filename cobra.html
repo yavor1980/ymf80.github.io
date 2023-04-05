@@ -1,0 +1,435 @@
+
+<style>
+button
+{
+position:absolute;
+right:22%;
+top:9%;
+transform:scale(2);
+background:red;
+color:white;
+cursor:pointer;
+}
+
+.hd
+{
+position:absolute;
+
+border-radius:55%;
+transition:1s;
+
+}
+.tng
+{
+position:absolute;
+background:radial-gradient(#888,#b00);
+border-radius:55%;
+transition:1s;
+left:33%;
+top:22%;
+width:44%;
+height:77%;
+//opacity:0;
+}
+
+.bd
+{
+position:absolute;
+
+border-radius:55%;
+transition:1s;
+
+}
+
+.ttl
+{
+position:absolute;
+text-align:center;
+transition:1s;
+z-index:1;
+
+}
+
+.frz
+{
+position:absolute;
+text-align:center;
+transition:1s;
+z-index:1;
+
+}
+
+</style>
+<body id=idbd>
+
+<button id=idb>DANGER</button>
+
+<div class=hd>
+  <div class=hd></div>
+  <div class=hd></div>
+   <div class=hd>
+    <div class=hd></div>
+    <div class=hd></div>
+	<div class=tng><div class=tng></div></div>	
+   </div>
+  
+</div>
+
+<div class=bd>
+ <div class=bd></div>
+ <div class=bd><div class=bd></div></div>
+
+</div>
+ 
+<div class=ttl>
+ SNAKES
+</div>
+<div class=ttl>agressive<br>defence</div>
+<div class=ttl>keep<br>a distance</div>
+<div class=ttl>be ready</div>
+<div class=ttl style='color:#fff'>
+ class Snke<br>
+ <div style='position:absolute;left:-11%;top:66%'>{</div>
+ <div style='position:absolute;left:11%;top:166%'>
+  constructor(){super();}
+ 
+ </div>  
+ <div style='position:absolute;left:-11%;top:333%'>}</div>
+ 
+</div>
+
+<div class=frz>overload the chip</div>
+<div class=frz>flying cntrllr</div>
+<div class=frz>operation cntrllr</div>
+
+<div class=frz>GitHub</div>
+ <div class=frz>Commit</div>
+
+<div class=frz>Smartphone</div>
+ <div class=frz>control</div>
+
+
+
+</body >
+
+<script>
+//<br> <br><div class=frz>new</div>
+hd=document.getElementsByClassName('hd')
+tng=document.getElementsByClassName('tng')
+bd=document.getElementsByClassName('bd')
+ttl=document.getElementsByClassName('ttl')
+frz=document.getElementsByClassName('frz')
+
+
+idbd.style.background=
+   'linear-gradient(-44deg,#00f,#ff0)'
+
+snk=
+'подотряд класса<br>'+
+'пресмыкающихся<br>'+
+'отряда чешуйчатые<br>'
+
+function inn(nm,i, l,t, w,h, bkg)
+{
+nm[i].style.background=bkg
+nm[i].style.left=l+'%'
+nm[i].style.top=t+'%'
+nm[i].style.width=w+'%'
+nm[i].style.height=h+'%' 
+}
+   inn(hd,0, 29,22, 33,33,'radial-gradient(#080,#000)')
+    hd[0].style.cursor='pointer' 
+   inn(hd,1, 22,22, 22,22,'radial-gradient(11px,#ff0,#fff)')
+   inn(hd,2, 66,22, 22,22,'radial-gradient(11px,#ff0,#fff)')
+   inn(hd,3, 29,66, 44,11,'radial-gradient(#800,#000)')
+   inn(hd,4, 12,9, 8,11,'#fff')
+   inn(hd,5, 83,9, 8,11,'#fff')
+   
+   inn(tng,1, 33,55, 33,77,'#900')
+   
+   inn(bd,0, 41,44, 9,44,'radial-gradient(#080,#000)')
+     bd[0].style.zIndex=-1
+   inn(bd,1, -33,88, 333,22,'radial-gradient(#080,#000)')
+     bd[0].style.zIndex=-1
+   inn(bd,2, 0,29, 99,22,'radial-gradient(#0f0,#000)')
+     bd[0].style.zIndex=-1
+   inn(bd,3, 6,22, 88,66,'radial-gradient(#770,#0f0)')
+     bd[0].style.zIndex=-1
+
+hd[0].style.transform='scale(0)'
+
+ttl[0].style.left=6+'%'
+ttl[0].style.top=6+'%'
+ttl[0].style.width=22+'%'
+ttl[0].style.height=8+'%'
+ttl[0].style.color='#fff'
+ttl[0].style.opacity=1
+ttl[0].style.background='#f00'
+ttl[0].style.fontSize='3em'
+ttl[0].style.cursor='pointer'
+
+ttl[1].style.left=11+'%'
+ttl[1].style.top=33+'%'
+ttl[1].style.color='#f00'
+ttl[1].style.transform='scale(0)'
+
+ttl[2].style.left=66+'%'
+ttl[2].style.top=22+'%'
+ttl[2].style.color='#e00'
+ttl[2].style.transform='scale(0)'
+
+ttl[3].style.left=77+'%'
+ttl[3].style.top=44+'%'
+ttl[3].style.color='d00'
+ttl[3].style.transform='scale(0)'
+
+ttl[4].style.left=7+'%'
+ttl[4].style.top=33+'%'
+ttl[4].style.color='000'
+ttl[4].style.transform='scale(0)'
+
+
+
+frz[0].style.left=39+'%'
+frz[0].style.top=66+'%'
+frz[0].style.color='ff0'
+frz[0].style.transform='scale(0)'
+
+frz[1].style.left=7+'%'
+frz[1].style.top=62+'%'
+frz[1].style.color='f0f'
+frz[1].style.transform='scale(0)'
+
+frz[2].style.left=11+'%'
+frz[2].style.top=69+'%'
+frz[2].style.color='f0f'
+frz[2].style.transform='scale(0)'
+
+frz[3].style.left=44+'%'
+frz[3].style.top=7+'%'
+frz[3].style.color='ff0'
+frz[3].style.transform='scale(3)'
+frz[3].style.cursor='pointer'
+
+frz[4].style.left=44+'%'
+frz[4].style.top=17+'%'
+frz[4].style.color='fff'
+frz[4].style.transform='scale(0)'
+
+frz[5].style.left=11+'%'
+frz[5].style.top=77+'%'
+frz[5].style.color='ff0'
+frz[5].style.transform='scale(3)'
+frz[5].style.cursor='pointer'
+
+frz[6].style.left=11+'%'
+frz[6].style.top=84+'%'
+frz[6].style.color='ff0'
+frz[6].style.transform='scale(0)'
+
+  bcl=0
+ function cl()
+{
+
+ if(bcl)
+ {
+idbd.style.background=
+   'linear-gradient(-44deg,#00f,#ff0)'
+   hd[0].style.transform='translate(1,-22%)'
+   hd[0].style.transform='scale(1.3)'
+   hd[1].style.transform='scale(1.3)'
+   hd[2].style.transform='scale(1.3)'
+   
+   bd[0].style.transform='scale(1,1.5) translate(1,-22%)'
+   bd[1].style.transform='scale(1.8)'
+   
+ }
+  else
+  {
+  idbd.style.background=
+    'linear-gradient(-44deg,#00f,#ff0)'
+	hd[0].style.transform='translate(1,0%)'
+    hd[0].style.transform='scale(0.7)'
+	hd[1].style.transform='scale(0.7)'
+	hd[2].style.transform='scale(0.7)'
+	
+	bd[0].style.transform='scale(1,1)'
+	bd[1].style.transform='scale(0.7)'
+	
+   
+   } 
+ bcl=!bcl
+
+ 
+}
+
+ function clk()
+{  
+    b=Math.round(Math.random())
+	if(b) v=44
+	 else  v=-44
+	
+   hd[1].style.background='radial-gradient(22px,#f00,#fff)'
+   hd[2].style.background='radial-gradient(22px,#f00,#fff)'
+   hd[4].style.transform='scale(1,17) translate(0,48%)'
+   hd[5].style.transform='scale(1,17) translate(0,48%)'
+   tng[0].style.transform=
+   'scale(1,11) translate(0,48%) skew('+v+'deg)'
+   
+    ttl[1].style.transform='scale(3) '
+    ttl[2].style.transform='scale(3) '
+    ttl[3].style.transform='scale(3) '
+	frz[0].style.transform='scale(3) '
+	//frz[1].style.transform='scale(3) '
+	//frz[2].style.transform='scale(3) '
+  // tng[0].style.opacity=1
+   tng[1].style.transform='scale(11,0.2) '
+   bd[2].style.transform='scale(8,3)'   
+   bd[2].style.borderTopLeftRadius='22%'
+   bd[2].style.borderTopRightRadius='22%'
+   bd[3].style.borderTopLeftRadius='22%'
+   bd[3].style.borderTopRightRadius='22%'
+    idb.style.opacity=0
+   
+setTimeout(()=>{
+   hd[1].style.background='radial-gradient(#ff0,#fff)'
+   hd[2].style.background='radial-gradient(#ff0,#fff)'
+   hd[4].style.transform='scale(1)'
+   hd[5].style.transform='scale(1)'
+   tng[0].style.transform='scale(1,1) '
+    idb.style.opacity=1
+    
+	ttl[1].style.transform='scale(0)'
+    ttl[2].style.transform='scale(0) '
+    ttl[3].style.transform='scale(0) '
+    frz[0].style.transform='scale(0) '
+  
+   tng[1].style.transform='scale(1,1) translate(0,0)'
+   bd[2].style.transform='scale(1)'
+   bd[2].style.borderTopLeftRadius='55%'
+   bd[2].style.borderTopRightRadius='55%'
+   bd[3].style.borderTopLeftRadius='55%'
+   bd[3].style.borderTopRightRadius='55%'
+     }
+	 ,999)
+}
+
+
+  i= setInterval(cl, 999)
+
+idb.onmousedown=()=>
+{
+   clk()
+   
+}
+hd[0].onmousemove=()=>
+{
+   clk()
+   
+}
+ttl[0].onmouseover=()=>
+{
+     //ttl[0].style.transform='scale(1.3)'
+	 ttl[0].style.fontSize='2em'
+	 ttl[0].style.width='40%'
+	 ttl[0].style.height='22%'
+   
+	ttl[0].innerHTML=snk
+	
+	ttl[4].style.color='#f00'
+    ttl[4].style.transform='scale(2) translate(33%,0)'
+   
+   frz[1].style.transform='scale(3) translate(33%,-22px)'
+   frz[2].style.transform='scale(3) translate(33%,-22px)'
+
+}
+ttl[0].onmouseout=()=>
+{
+     ttl[0].style.transform='scale(1)'
+	 ttl[0].style.fontSize='3em'
+	  ttl[0].style.width='22%'
+	 ttl[0].style.height='11%'
+	 ttl[0].innerHTML='SNAKES'
+	 
+	 ttl[4].style.color='#000'
+	 ttl[4].style.transform='scale(0)'
+	 
+	 frz[1].style.transform='scale(0)'
+     frz[2].style.transform='scale(0)'
+	 
+}
+
+  bfrz3=0, frz3I=0
+frz[3].onmouseover=()=>
+{
+   frz[3].innerHTML='Upload'
+   frz[3].style.color='#fff'
+   
+ frz3I=setInterval(()=>{
+   frz[3].style.transform='scale(3)'
+   //frz[4].style.color='#f00'
+  if(bfrz3==0){   
+      frz[4].style.transform='scale(2)'
+	  frz[4].style.color='#ff0'
+       }else{	 
+      frz[4].style.transform='scale(4)'
+	  frz[4].style.color='#f00'
+	  }
+	 bfrz3=!bfrz3
+	
+  }
+ 
+  ,666)
+ 
+}
+frz[3].onmouseout=()=>
+{
+     frz[3].innerHTML='GitHub'
+	  frz[3].style.color='#ff0'
+	 iC=5 
+	clearInterval(frz3I)
+	frz[4].style.transform='scale(0)'
+ 
+}
+frz[3].onclick=()=>
+{
+     frz[3].innerHTML='Pages'
+	  
+ 
+}
+
+frz[5].onmouseover=()=>
+{
+   frz[5].innerHTML='moving'
+   frz[5].style.color='#f00'
+   frz[5].style.transform='scale(3) skew(-33deg)'
+   frz[6].style.transform='scale(4) skew(-33deg)'
+   frz[6].style.color='#800'
+   
+}
+frz[5].onmouseout=()=>
+{
+     frz[5].innerHTML='Smartphone'
+	 frz[5].style.color='#ff0'
+	 frz[5].style.transform='scale(3) skew(0deg)'
+	 frz[6].innerHTML='control'
+	 frz[6].style.transform='scale(0)'
+	 frz[6].style.color='#ff0'
+	 
+}
+frz[5].onclick=()=>
+{
+     frz[5].innerHTML='define'
+	 frz[5].style.color='#550'
+	 frz[5].style.transform='scale(3) skew(33deg)'
+	 frz[6].innerHTML='directns'
+	 frz[6].style.transform='scale(3) skew(33deg)'
+	 frz[6].style.color='#660'
+	 
+}
+
+
+
+//r= Math.round( *255)
+//d[0].innerHTML+=r
+</script>

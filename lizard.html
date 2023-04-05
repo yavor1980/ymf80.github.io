@@ -1,0 +1,299 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+
+</head>
+
+<body id=idbd>
+
+<style>
+#idbd
+{
+background: linear-gradient(#fff,#222);
+}
+
+.btn
+{
+position:absolute;
+background:#f00;
+top:11%;
+width:11%;
+height:12%;
+
+text-align:center;
+font-size:2em;
+color:#000;
+cursor:pointer;
+
+ border-top-left-radius:33%;
+ border-top-right-radius:33%; 
+ border-bottom-left-radius:111%;
+ border-bottom-right-radius:111%; 
+ 
+}
+
+.hd
+{
+ position:absolute;   
+ background: radial-gradient(#880,#222);
+ 
+ transition:1s;
+  border-radius:55%; 
+}
+.mth
+{
+position:absolute;   
+  transition:1s;
+
+}
+.gl
+{
+ position:absolute;   
+  transition:1s;
+ 
+}
+.zr
+{
+ position:absolute;   
+  transition: 1s;
+  left:33%;
+  top:33%;
+  width:33%;
+  height:33%;
+  background:red;
+  border-radius:55%;
+}
+.lpw
+{
+position:absolute;   
+border-radius:22%;
+border-top-left-radius:55%;
+border-top-right-radius:55%;
+transition: 1s;
+ background: radial-gradient(#330,#222);
+  
+}
+.rpw
+{
+position:absolute;   
+border-radius:22%;
+border-top-left-radius:55%;
+border-top-right-radius:55%;
+transition:1s;
+ background: radial-gradient(#330,#222);
+      
+}
+
+.frz
+{
+position:absolute;   
+
+transition:1s;
+color:red;
+transform:scale(0);
+      
+	  
+}
+
+</style>
+
+
+<div class=hd>
+ <div class=lpw ></div>
+ <div class=rpw ></div>
+ <div class=lpw ></div>
+ 
+</div>
+
+<div class=hd>
+<div class=hd>
+ <div class=gl ><div class=zr ></div></div>
+ <div class=gl ><div class=zr ></div></div>
+ 
+ <div class=mth >
+  <div class=mth ></div>
+  <div class=mth ></div>
+  <div class=mth ></div>
+ </div>
+</div>
+</div>
+
+<div class=frz >Agressive one</div>
+<div class=frz >Агрессия безвекторна</div>
+<div class=frz >Эмоциональное<br> раздражение</div>
+<div class=frz >
+while(true)<br>
+{<br>
+&nbsp &nbsp atack()<br>
+}<br>
+</div>
+
+<div class=frz >
+function atack()<br>
+{<br>
+&nbsp &nbsp s.style.transform='scale(5)'<br>
+}<br>
+</div>
+
+<button class=btn >danger</button>
+
+<script>
+//<div class>
+   hd=document.getElementsByClassName('hd')
+   lpw=document.getElementsByClassName('lpw')
+   rpw=document.getElementsByClassName('rpw')
+   
+   gl=document.getElementsByClassName('gl')
+   zr=document.getElementsByClassName('zr')
+   
+   mth=document.getElementsByClassName('mth')
+   
+   btn=document.getElementsByClassName('btn')
+   frz=document.getElementsByClassName('frz')
+  
+   bd=0, bstp=0
+   
+ function inn(nm,i, l,t, w,h, bkgrd, btlr,btrr,bblr,bbrr)
+ {
+     nm[i].style.left=l+'%'
+	 nm[i].style.top=t+'%'  
+     nm[i].style.width=w+'%'
+     nm[i].style.height=h+'%'  
+     nm[i].style.background=bkgrd
+	 nm[i].style.borderTopLeftRadius=btlr+'%'
+	 nm[i].style.borderTopRightRadius=btrr+'%'  
+	 nm[i].style.borderBottomLeftRadius=bblr+'%'
+	 nm[i].style.borderBottomRightRadius=bbrr+'%'  
+  }	 
+  inn(hd,0, 22,22, 55,66,
+    'radial-gradient(#880,#222)',-55,55,33,33)
+  inn(hd,1, 38,33, 22,44,
+    'radial-gradient(#880,#222)',55,55,33,33)
+  inn(hd,2, 19,22, 66,66,
+    'radial-gradient(#880,#222)',55,55,33,33)
+  inn(gl,0, 18,17, 14,22,'#fff',55,55,55,55)
+  inn(gl,1, 59,17, 14,22,'#fff',55,55,55,55)
+  inn(mth,0, 22,53, 55,1,
+   'radial-gradient(#f00,#840)',55,55,55,55)
+  inn(mth,1, 9,17, 11,99,'#fff',5,5,55,55)
+  inn(mth,2, 70,14, 11,99,'#fff',5,5,55,55)
+  inn(lpw,0, 2,88, 33,22,
+     'radial-gradient(#330,#222)',55,55,5,5)
+  inn(lpw,1, 33,48, 33,55,
+     'radial-gradient(#330,#222)',55,55,5,5)
+	lpw[1].style.zIndex=-1
+  inn(rpw,0, 66,88, 33,22,
+     'radial-gradient(#330,#222)',55,55,5,5)
+  inn(frz,0, 33,2)
+  inn(frz,1, 33,7)
+  inn(frz,2, 11,19)
+   frz[2].style.color='#700'
+   frz[2].style.transition='0s'
+  inn(frz,3, 11,44)
+   frz[3].style.color='#fff'
+   //frz[3].style.transition='0s'
+  inn(frz,4, 4,77)
+   frz[4].style.color='#fff'
+	
+	
+	btn[0].style.left=76+'%'
+ 
+  
+  function clk()
+  {
+   frz[0].style.transform='scale(3)'
+   frz[1].style.transform='scale(3)'
+   frz[2].style.transform='scale(3) translate(22%,0)'
+   frz[3].style.transform='scale(3) translate(22%,0)'
+   frz[4].style.transform='scale(2) translate(44%,0)'
+	  
+      mth[0].style.height='22%'
+	   bd=Math.round(Math.random())
+	   
+	if(bd)  
+	  hd[2].style.transform='scale(2) translate(-44%,0)'
+	 else  
+	  hd[2].style.transform='scale(2) translate(44%,0)'
+	  
+	   gl[0].style.transform='scale(2)'
+       gl[1].style.transform='scale(2)'
+	  lpw[0].style.transform='translate(0,0)'
+	  rpw[0].style.transform='translate(0,0)'
+	   btn[0].innerHTML='quiet'
+	  
+
+    setTimeout(()=>{
+   frz[0].style.transform='scale(0)'
+   frz[1].style.transform='scale(0)'
+   frz[2].style.transform='scale(0)'
+   frz[3].style.transform='scale(0)'
+   frz[4].style.transform='scale(0)'
+   
+    mth[0].style.height='1%'
+	hd[2].style.transform='scale(1) translate(0%,0)'
+	gl[0].style.transform='scale(1)'
+    gl[1].style.transform='scale(1)'
+	  lpw[0].style.transform='translate(0,0%)'
+	  rpw[0].style.transform='translate(0,0)'
+	    btn[0].innerHTML='danger'
+   }, 2222)
+    
+	
+  }
+  
+ function stp()
+ {  
+    if( bstp)
+   {
+    lpw[0].style.transform='translate(0,-33%)'
+	rpw[0].style.transform='translate(0,33%)'
+	lpw[1].style.transform='translate(-144%,0) rotate(44deg)'
+	lpw[1].style.borderBottomRightRadius='55%'
+	lpw[1].style.borderBottomLeftRadius='0%'
+	
+	hd[1].style.transform='scale(1.3) translate(0%,0)'
+	hd[2].style.transform='rotate(-22deg) translate(0%,0)'
+   } 
+   else
+   {
+    lpw[0].style.transform='translate(0,33%)'
+	rpw[0].style.transform='translate(0,-33%)'
+	lpw[1].style.transform='translate(144%,0) rotate(-44deg)'
+    lpw[1].style.borderBottomRightRadius='0%'
+	lpw[1].style.borderBottomLeftRadius='55%'
+		
+	hd[1].style.transform='scale(1) translate(0%,0)'
+	hd[2].style.transform='rotate(22deg) translate(0%,0)'
+   }
+     bstp=!bstp
+ }
+ 
+  
+     setInterval(stp, 1111);	
+      
+	 
+btn[0].onmousedown=()=>
+{ 
+   clk()
+   
+}
+	 
+hd[2].onmousemove=()=>
+{ 
+     clk()
+  
+}
+hd[2].onmouseout=()=>
+{ 
+   clk()
+     frz[0].style.transform='scale(0)'
+}
+   //setInterval(()=>{ btn[0].onmousedown() }, 3377);	
+   //event.clientY+''; 
+    //Math.round(Math.random()
+</script>
+</body>
+
+</html>
+

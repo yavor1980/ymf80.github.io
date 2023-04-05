@@ -1,0 +1,455 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+
+</head>
+
+<body id=idbd>
+
+<style>
+#idbd
+{
+background: radial-gradient(#222,#666);
+
+}
+#idb
+{
+ position:absolute;   
+ text-align:center;
+  cursor:pointer;
+ font-size:2em;
+ background:red;
+  left:8%;
+  top:6%;
+}
+
+.fc
+{
+ position:absolute;   
+ transition:2222ms;
+ cursor:pointer;
+ 
+}
+.gl
+{
+ position:absolute;   
+ border-radius:50%;
+
+   transition:2s;
+}
+.ns
+{
+ position:absolute;
+  background: radial-gradient(#888,#ff0);
+      
+	 border-radius:50%;
+	 transition:2s;
+}
+.mth
+{
+ position:absolute;
+  
+	 border-radius:50%;
+	 transition:2s; 
+	 
+}
+.ears
+{
+position:absolute;
+ background:red;
+ border-radius:50%;
+ 
+}
+.smk
+{
+position:absolute;
+transition:2s; 
+ background: #000;
+ border-radius:0%;
+ opacity:1;
+ z-index:0;
+}
+
+.frz
+{
+position:absolute;
+transition:2s; 
+}
+
+.me
+{
+position:absolute;
+transition:2s; 
+}
+
+</style>
+
+<div class=fc>
+<div class=fc></div>
+<div class=fc></div>
+ <div class=gl  >
+  <div class=gl  ></div>
+ </div>
+ <div class=gl  >
+  <div class=gl  ></div>
+ </div>
+ <div class=ns ><div class=ns ></div></div>
+ 
+ <div class=mth >
+  <div class=mth >
+   <div class=mth ><div class=mth ></div></div>
+   
+  </div> 
+ </div>
+ 
+<div class=ears >
+</div> 
+<div class=ears ></div>
+</div>
+
+<div class=smk >
+ <div class=smk ></div>
+ <div class=smk ></div>
+</div>
+
+<div class=frz >FIRE TO EVERYONE</div>
+<div class=frz >flame</div>
+<div class=frz >transition</div>
+<div class=frz >enough?</div>
+<div class=frz >encrse intervl!</div>
+
+<div class=me >my own position</div>
+<div class=me >I would't like to dstrb</div>
+
+<button id=idb> FIRE</button>
+
+
+<script>
+ 
+   fc=document.getElementsByClassName('fc')
+   gl=document.getElementsByClassName('gl')
+   ns=document.getElementsByClassName('ns')
+   mth=document.getElementsByClassName('mth')
+   ears=document.getElementsByClassName('ears')
+   
+   smk=document.getElementsByClassName('smk')
+   
+   frz=document.getElementsByClassName('frz')
+   me=document.getElementsByClassName('me')
+   
+s= 
+ {
+ //Math.random()*44
+// bs:0, intr:1, bm:0, r:0, g:0, b:0,
+  init:function()
+  {
+     fc[0].style.background='radial-gradient(#aaa,#333)'
+	 fc[0].style.left=19+'%'
+	 fc[0].style.top=22+'%'  
+     fc[0].style.width=+22+'%'
+     fc[0].style.height=44+'%'
+	 fc[0].style.borderTopLeftRadius='33%'
+	 fc[0].style.borderBottomLeftRadius='55%'
+	 fc[0].style.borderTopRightRadius='33%'
+	 fc[0].style.borderBottomRightRadius='55%'
+	 
+	 fc[1].style.background='#000'
+	 fc[1].style.left=15+'%'
+	 fc[1].style.top=-11+'%'  
+     fc[1].style.width=88+'%'
+     fc[1].style.height=22+'%'
+	 fc[1].style.transition='2s'
+	 fc[1].style.borderRadius='55%'
+ 
+	 fc[2].style.background='#000'
+	 fc[2].style.left=1+'%'
+	 fc[2].style.top=-9+'%'  
+     fc[2].style.width=22+'%'
+     fc[2].style.height=22+'%'
+	 fc[2].style.transition='2s'
+	 fc[2].style.borderRadius='55%'
+	 
+	 gl[0].style.background='#fff'
+	 gl[0].style.left=11+'%'
+	 gl[0].style.top=17+'%'  
+     gl[0].style.width=22+'%'
+     gl[0].style.height=22+'%'
+	 gl[0].style.transition='2s'
+	 
+     gl[1].style.background='#000';
+     gl[1].style.left=33+'%'
+	 gl[1].style.top=33+'%'  
+     gl[1].style.width=33+'%'
+     gl[1].style.height=33+'%'
+	 gl[1].style.transition='2s'
+	
+	 gl[2].style.background='#fff'
+	 gl[2].style.left=66+'%'
+	 gl[2].style.top=17+'%'  
+     gl[2].style.width=22+'%'
+     gl[2].style.height=22+'%'
+	 gl[2].style.transition='2s'
+	 
+     gl[3].style.background='#000';
+     gl[3].style.left=33+'%'
+	 gl[3].style.top=33+'%'  
+     gl[3].style.width=33+'%'
+     gl[3].style.height=33+'%'
+	 gl[3].style.transition='2s'
+	
+	 ns[0].style.left=38+'%'	
+     ns[0].style.top=22+'%'	
+	 ns[0].style.height=44+'%'	
+	 ns[0].style.width=22+'%'	
+	 ns[0].style.background='radial-gradient(#777,#333)'
+     
+	 ns[1].style.left=-2+'%'	
+     ns[1].style.top=79+'%'	
+	 ns[1].style.height=22+'%'	
+	 ns[1].style.width=111+'%'	
+	 ns[1].style.background='radial-gradient(#777,#333)'
+	 
+	 mth[0].style.left=22+'%'	
+     mth[0].style.top=77+'%'	
+	 mth[0].style.height=11+'%'	
+	 mth[0].style.width=55+'%'	
+	 mth[0].style.background='#f00'
+     
+	 mth[1].style.left=11+'%'	
+     mth[1].style.top=44+'%'	
+	 mth[1].style.height=11+'%'	
+	 mth[1].style.width=77+'%'	
+	 mth[1].style.background='#000'
+	 
+	 mth[2].style.left=55+'%'	
+     mth[2].style.top=-333+'%'	
+	 mth[2].style.height=444+'%'	
+	 mth[2].style.width=111+'%'	
+	 mth[2].style.background='radial-gradient(#070,#333)'
+     mth[2].style.transform='rotate(-9deg)'
+	 mth[2].style.borderTopRightRadius='5%'
+	 mth[2].style.borderBottomRightRadius='5%'
+	 
+	 mth[3].style.left=99+'%'	
+     mth[3].style.top=0+'%'	
+	 mth[3].style.height=111+'%'	
+	 mth[3].style.width=11+'%'	
+	 mth[3].style.background='radial-gradient(#070,#333)'
+ 
+ 
+     ears[0].style.background='radial-gradient(#777,#333)'
+     ears[0].style.left=-9+'%'
+	 ears[0].style.top=29+'%'  
+     ears[0].style.width=11+'%'
+     ears[0].style.height=22+'%'  
+	 ears[0].style.transition='4s'
+     ears[0].style.zIndex=-1	 
+	 
+	 ears[1].style.background='radial-gradient(#777,#333)'
+     ears[1].style.left=97+'%'
+	 ears[1].style.top=29+'%'  
+     ears[1].style.width=11+'%'
+     ears[1].style.height=22+'%'  
+	 ears[1].style.transition='2s' 
+	 ears[1].style.zIndex=-1
+	 
+	 smk[0].style.background='radial-gradient(#f00,#333)'
+     smk[0].style.left=39+'%'
+	 smk[0].style.top=75+'%'  
+     smk[0].style.width=11+'%'
+     smk[0].style.height=22+'%' 
+	 smk[0].style.borderTopLeftRadius=44+'%'
+	 smk[0].style.borderTopRightRadius=55+'%'
+	 smk[0].style.borderBottomLeftRadius=22+'%'
+	 smk[0].style.borderBottomRightRadius=22+'%'
+     smk[0].style.transform='scale(0)'
+	
+	 smk[1].style.background='radial-gradient(#ff0,#333)'
+	 smk[1].style.left=19+'%'
+	 smk[1].style.top=-13+'%'  
+     smk[1].style.width=33+'%'
+     smk[1].style.height=44+'%'  
+	 smk[1].style.zIndex=-2
+	 
+	 smk[2].style.background='#f00'
+	 smk[2].style.left=-9+'%'
+	 smk[2].style.top=-133+'%'  
+     smk[2].style.width=111+'%'
+     smk[2].style.height=111+'%'
+     smk[2].style.borderTopLeftRadius=44+'%'
+	 smk[2].style.borderTopRightRadius=66+'%'
+	 smk[2].style.borderBottomLeftRadius=55+'%'
+	 smk[2].style.borderBottomRightRadius=33+'%'
+	 smk[2].style.opacity=0
+
+     frz[0].style.transform='scale(0)'
+     frz[0].style.color='#f00'
+	 frz[0].style.left='22%'
+	 frz[0].style.top='9%'
+	 frz[0].style.cursor='pointer'
+	
+	 frz[1].style.transform='scale(3.6) skew(22deg)'
+     frz[1].style.color='#f00'
+	 frz[1].style.left='66%'
+	 frz[1].style.top='11%' 
+	 frz[1].style.cursor='pointer'
+     
+	 frz[2].style.transform='scale(3.6)'
+     frz[2].style.color='#f00'
+	 frz[2].style.left='44%'
+	 frz[2].style.top='8%'
+	 frz[2].style.cursor='pointer'
+	 
+	 frz[3].style.transform='scale(0)'
+     frz[3].style.color='#f00'
+	 frz[3].style.left='55%'
+	 frz[3].style.top='22%'
+	 
+	 frz[4].style.transform='scale(0)'
+     frz[4].style.color='#f00'
+	 frz[4].style.left='55%'
+	 frz[4].style.top='33%'
+	 
+	 me[0].style.transform='scale(0)'
+     me[0].style.color='#f0f'
+	 me[0].style.left='55%'
+	 me[0].style.top='33%'
+	 
+	 me[1].style.transform='scale(0)'
+     me[1].style.color='#ff0'
+	 me[1].style.left='55%'
+	 me[1].style.top='33%'
+ }, 
+ 
+  cl:function()
+ { 
+  if(s.bs){
+   fc[0].style.transform='scale(0.9)'
+   gl[1].style.transform='scale(0.9)'
+   gl[3].style.transform='scale(0.9)'
+   }
+     else{
+   fc[0].style.transform='scale(1.1)'   
+   gl[1].style.transform='scale(1.2)'
+   gl[3].style.transform='scale(1.2)'
+	
+   }
+     s.bs=!s.bs
+   
+ },
+ clk:function()
+ { 
+   frz[0].style.transform='scale(3) translate(77%,222%)'
+   frz[0].style.color='#0f0'
+   
+   smk[0].style.transform='scale(1)'
+   	idb.style.opacity=0
+	
+  setTimeout(()=>{
+            frz[0].style.transform='scale(0)'
+				
+			smk[2].style.opacity=0.4
+			mth[3].style.background='#f00'
+		
+   }, 1111)
+   setTimeout(()=>{
+				
+				smk[2].style.opacity=0;
+   }, 2222)
+  setTimeout(()=>{
+				smk[0].style.transform='scale(0)'
+				
+   }, 3333)
+   setTimeout(()=>{
+				mth[3].style.background='#000'
+				idb.style.opacity=1
+				
+	
+   }, 7777) 
+	 
+ },
+
+}
+     s.init()
+
+    setInterval(()=>{ s.cl();   }, 2222)
+
+
+idb.onclick=()=>{   
+  
+   s.clk();
+  
+}
+fc[0].onmousemove=()=>{   
+   me[0].style.transform='scale(3) translate(44%,288%)'
+   me[0].style.color='#00f'
+   me[1].style.transform='scale(3) translate(7%,222%)'
+   me[1].style.color='#0d0'
+   fc[0].style.transform='scale(1.6)'
+   gl[1].style.background='#f00'
+   gl[3].style.background='#f00'
+}
+fc[0].onmouseout=()=>{   
+  
+   me[0].style.transform='scale(0) '
+   me[0].style.color='#000'
+   me[1].style.transform='scale(0) '
+   me[1].style.color='#000'
+   fc[0].style.transform='scale(1)'
+   gl[1].style.background='#000'
+   gl[3].style.background='#000'
+}
+
+frz[1].onmouseover=()=>{   
+  
+   frz[1].style.transform='scale(1.6) translate(-44%,44%)'
+   frz[1].style.color='#fff'
+   frz[1].innerHTML=
+  'Интенсивный процесс<br> окисления (горение),<br>'+
+  'сопровождающийся излучением<br> в видимом '+
+  'диапазоне<br> и выделением<br> тепловой энергии.'
+  
+}  
+frz[1].onmouseout=()=>{   
+  
+  frz[1].style.transform='scale(3.6) skew(22deg)'
+  frz[1].innerHTML='flame'
+  frz[1].style.color='#f00'
+  
+}
+
+frz[2].onmouseover=()=>{   
+  
+   frz[2].style.transform='scale(3.6) '
+   frz[2].style.color='#fff'
+   frz[2].innerHTML='1000ms'
+   frz[3].style.transform='scale(3) '
+   frz[3].style.color='#0f0'
+  setTimeout(()=> 
+  {
+   frz[4].style.transform='scale(3) '
+   frz[4].style.color='#ff0'
+   setTimeout(()=> 
+  {
+   frz[4].style.transform='scale(0) '
+   frz[4].style.color='#000'
+  },999)
+  },999)
+  
+
+}  
+frz[2].onmouseout=()=>{   
+  
+  frz[2].style.transform='scale(3.6) skew(22deg)'
+  frz[2].innerHTML='transition'
+  frz[2].style.color='#f00'
+  frz[3].style.transform='scale(0) '
+  frz[3].style.color='#f00'
+  
+}
+
+</script>
+</body>
+
+</html>
