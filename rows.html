@@ -1,0 +1,410 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+
+</head>
+
+<body id=idbd>
+
+<style>
+#idbd
+{
+background: linear-gradient(#222,#666);
+}
+
+.rw0
+{
+ position:absolute;   
+ border-radius:5%;
+ transition:1s;
+ text-align:center;
+ //padding-top:2px;
+}
+.rw1
+{
+ position:absolute;   
+ border-radius:5%;
+ transition:1s;
+ text-align:center;
+}
+.rw2
+{
+ position:absolute;   
+ border-radius:5%;
+ transition:1s;
+ text-align:center;
+}
+
+.frz
+{
+ position:absolute;   
+ border-radius:5%;
+ transition:1s;
+
+}
+
+.trnsfrm
+{
+ position:absolute;   
+ transition:1s;
+}
+
+.vctr
+{
+ position:absolute;   
+ transition:1s;
+}
+
+.drn
+{
+ position:absolute;   
+ transition:1s;
+}
+
+</style>
+
+<div class=rw0>
+  <div class=rw0  >lft-tp<br> corner</div>
+  <div class=rw0  >top </div>
+  <div class=rw0  >rght-tp<br> corner</div>
+</div>
+<div class=rw1  >
+  <div class=rw1  >left </div>
+  <div class=rw1  >center</div>
+  <div class=rw1  >right </div>
+</div>
+<div class=rw2  >
+  <div class=rw2  >lft-bttm<br> corner</div>
+  <div class=rw2  ><br>bottom</div>
+  <div class=rw2  >rght-bttm<br> corner</div>
+  
+</div>
+  
+  <div class=rw2  ></div>
+  
+<div class=frz  >directions</div>
+
+<div class=trnsfrm  >transform</div>
+<div class=trnsfrm  >scale</div>
+<div class=trnsfrm  >translate</div>
+<div class=trnsfrm  >rotate</div>
+<div class=trnsfrm  >skew</div>
+
+<div class=vctr  >VCTR</div>
+<div class=vctr  >flying phantasy</div>
+<div class=vctr  >create patterns</div>
+<div class=vctr  >edit models</div>
+
+<div class=drn  >drone</div>
+<div class=drn  >flying</div>
+<div class=drn  >control</div>
+<div class=drn  >acting</div>
+
+<script>
+
+   rw0=document.getElementsByClassName('rw0')
+   rw1=document.getElementsByClassName('rw1')
+   rw2=document.getElementsByClassName('rw2')
+   frz=document.getElementsByClassName('frz')
+   trnsfrm=document.getElementsByClassName('trnsfrm')
+   vctr=document.getElementsByClassName('vctr')
+   drn=document.getElementsByClassName('drn')
+	
+ function init(c,i, l,t, w,h,bkg)
+ { 
+	 c[i].style.left=l+'%'
+	 c[i].style.top=t+'%'  
+     c[i].style.width=w+'%'
+     c[i].style.height=h+'%'
+     c[i].style.background=bkg;
+ }    
+
+     init(rw0,0, 7,3, 66,22,'#660')
+	 
+	 init(rw0,1, 6,3, 22,88,'#00f')
+	   rw0[1].style.fontSize='0em'
+       rw0[1].style.cursor='pointer'
+	 init(rw0,2, 38,3, 22,88,'#f00')
+	   rw0[2].style.fontSize='0em'
+	   rw0[2].style.cursor='pointer'
+	 init(rw0,3, 71,3, 22,88,'#0f0')
+	   rw0[3].style.fontSize='0em'
+	   rw0[3].style.cursor='pointer'
+	 
+	 init(rw1,0, 7,33, 66,22,'#680')
+	 
+	 init(rw1,1, 3,6, 22,88,'#0f0')
+	  rw1[1].style.fontSize='0em'
+      rw1[1].style.cursor='pointer'
+	 init(rw1,2, 38,6, 22,88,'#fff')
+	  rw1[2].style.fontSize='0em'
+	  rw1[2].style.cursor='pointer'
+	 init(rw1,3, 71,6, 22,88,'#00f')
+	  rw1[3].style.fontSize='0em'
+	  rw1[3].style.cursor='pointer'
+	
+     init(rw2,0, 7,66, 66,22,'#6a0')
+	
+	 init(rw2,1, 6,6, 22,88,'#ff0')
+	  rw2[1].style.fontSize='0em'
+      rw2[1].style.cursor='pointer'
+	 init(rw2,2, 38,6, 22,88,'#0ff')
+	  rw2[2].style.fontSize='0em'
+      rw2[2].style.cursor='pointer'
+	 init(rw2,3, 71,6, 22,88,'#f0f')
+	  rw2[3].style.fontSize='0em'
+	  rw2[3].style.cursor='pointer'
+	   
+	  rw2[4].style.left='77%'
+      rw2[4].style.top='3%'
+	  rw2[4].style.width='22%'
+      rw2[4].style.height='77%'	 
+	  rw2[4].style.background='#770'
+	  rw2[4].style.cursor='pointer'
+	 
+	  frz[0].style.left='77%'
+      frz[0].style.top='27%'
+	  frz[0].style.cursor='pointer'
+	  frz[0].style.transform='scale(0)'
+	  
+      trnsfrm[0].style.left='11%'
+      trnsfrm[0].style.top='27%'
+	  trnsfrm[0].style.color='#f0f'
+	  trnsfrm[0].style.transform='scale(3)'
+	  trnsfrm[0].style.cursor='pointer'
+
+      trnsfrm[1].style.left='44%'
+      trnsfrm[1].style.top='27%'	  
+	  trnsfrm[1].style.transform='scale(0)'
+	  
+	  trnsfrm[2].style.left='44%'
+      trnsfrm[2].style.top='27%'	  
+	  trnsfrm[2].style.transform='scale(0)'
+    
+	  trnsfrm[3].style.left='44%'
+      trnsfrm[3].style.top='27%'	  
+	  trnsfrm[3].style.transform='scale(0)'
+	
+	  trnsfrm[4].style.left='44%'
+      trnsfrm[4].style.top='27%'	  
+	  trnsfrm[4].style.transform='scale(0)'
+	
+      vctr[0].style.left='9%'
+      vctr[0].style.top='58%'
+	  vctr[0].style.color='#0ff'
+      vctr[0].style.transform='scale(3)'
+	  vctr[0].style.cursor='pointer'
+	 
+      vctr[1].style.left='44%'
+      vctr[1].style.top='58%'	  
+	  vctr[1].style.transform='scale(0)'
+
+      vctr[2].style.left='44%'
+      vctr[2].style.top='58%'	  
+	  vctr[2].style.transform='scale(0)'
+	  
+	  vctr[3].style.left='44%'
+      vctr[3].style.top='58%'	  
+	  vctr[3].style.transform='scale(0)'
+	  
+      drn[0].style.left='9%'
+      drn[0].style.top='91%'
+	  drn[0].style.color='#f8f'
+      drn[0].style.transform='scale(3)'
+	  drn[0].style.cursor='pointer'
+	  
+	  drn[1].style.left='39%'
+      drn[1].style.top='91%'
+	  drn[1].style.transform='scale(0)'
+	  
+	  drn[2].style.left='39%'
+      drn[2].style.top='91%'
+	  drn[2].style.transform='scale(0)'
+	  
+	  drn[3].style.left='39%'
+      drn[3].style.top='91%'
+	  drn[3].style.transform='scale(0)'
+	 
+    bcl=0
+  function cl()
+  {  
+   if(bcl){
+      rw1[1].style.transform='scale(1.2)'
+	  rw1[3].style.transform='scale(1)'
+	   
+     }else{
+	  rw1[1].style.transform='scale(1)'
+	  rw1[3].style.transform='scale(1.2)'
+		 
+	 }
+     	bcl=!bcl
+  }
+  
+      i= setInterval(()=>cl(), 2222)
+	  
+ 
+ function mv(nm,fnt)
+ {
+  nm.onmousemove=()=>
+  {
+     nm.style.transform='scale(1.2)'
+     nm.style.color='#800'
+     nm.style.fontSize=fnt
+ }
+  nm.onmouseout=()=>
+  {
+     nm.style.transform='scale(1)'
+     nm.style.color='#000'
+	 nm.style.fontSize='0em'
+  }
+ 
+ }
+   mv(rw0[1],'3em')  
+   mv(rw0[2],'3em') 
+   mv(rw0[3],'3em') 
+   mv(rw1[1],'3em')
+   mv(rw1[2],'3em')
+   mv(rw1[3],'3em') 
+   mv(rw2[1],'2em')
+   mv(rw2[2],'2em')
+   mv(rw2[3],'2em') 
+
+   
+
+idir=0
+function fdir(nm,fr)
+{
+nm.onclick=()=>
+{
+rw2[4].innerHTML+=fr
+ idir++
+ 
+}
+}
+
+fdir(rw0[1],'left-top-corner <br>' )
+fdir(rw0[2],'top <br>' )
+fdir(rw0[3],'right-top-corner <br>' )
+
+fdir(rw1[1],'left <br>' )
+fdir(rw1[2],'center <br>' )
+fdir(rw1[3],'right <br>' )
+
+fdir(rw2[1],'left-bottom-corner <br>' )
+fdir(rw2[2],'bottom <br>' )
+fdir(rw2[3],'right-bottom-corner <br>' )
+
+rw2[4].onmouseover=()=>
+{
+rw2[4].style.height='88%'
+}
+rw2[4].onclick=()=>
+{
+rw2[4].style.fontSize='4em'
+rw2[4].style.color='#f00'
+rw2[4].innerHTML='<br>'+idir
+ idir=0
+ 
+ frz[0].style.transform='scale(3) translate(33%,69%)'
+ 
+}
+rw2[4].onmouseout=()=>
+{
+rw2[4].style.height='77%'
+rw2[4].style.fontSize='2em'
+rw2[4].style.color='#000'
+
+ rw2[4].innerHTML=''
+frz[0].style.transform='scale(0)'
+
+}
+
+trnsfrm[0].onmouseover=()=>
+{
+ trnsfrm[0].style.transform=
+  'scale(4) translate(22%,0%)'
+ trnsfrm[1].style.transform=
+  ' scale(4) translate(44%,-88%)'
+ trnsfrm[1].style.color='#700'
+ trnsfrm[2].style.transform=
+  ' scale(4) translate(44%,-8%)'
+ trnsfrm[2].style.color='#757'
+ trnsfrm[3].style.transform=
+  ' scale(4) translate(44%,80%)'
+ trnsfrm[3].style.color='#734'
+ trnsfrm[4].style.transform=
+  ' scale(4) translate(44%,166%)'
+ trnsfrm[4].style.color='#347'
+ 
+}//
+trnsfrm[0].onmouseout=()=>
+{
+ trnsfrm[0].style.transform='scale(3)'
+ trnsfrm[1].style.transform='scale(0) '
+ trnsfrm[1].style.color='#000'
+ trnsfrm[2].style.transform='scale(0) '
+ trnsfrm[2].style.color='#000'
+ trnsfrm[3].style.transform='scale(0) '
+ trnsfrm[3].style.color='#000'
+ trnsfrm[4].style.transform='scale(0) '
+ trnsfrm[4].style.color='#000'
+} 
+ 
+vctr[0].onmouseover=()=>
+{
+ vctr[0].style.transform=
+  'scale(4) translate(22%,0%)'
+ vctr[1].style.transform=
+  'scale(4) translate(4%,-88%)'
+ vctr[1].style.color='#800'
+ vctr[2].style.transform=
+  'scale(4) translate(48%,-8%)'
+ vctr[2].style.color='#864'
+ vctr[3].style.transform=
+  'scale(4) translate(84%,77%)'
+ vctr[3].style.color='#486'
+ 
+}
+vctr[0].onmouseout=()=>
+{
+ vctr[0].style.transform='scale(3)'
+ vctr[1].style.transform='scale(0)'
+ vctr[1].style.color='#000'
+ vctr[2].style.transform='scale(0)'
+ vctr[2].style.color='#000'
+ vctr[3].style.transform='scale(0)'
+ vctr[3].style.color='#000'
+}  
+ 
+drn[0].onmouseover=()=>
+{
+ drn[0].style.transform=
+  'scale(4) translate(22%,0%)'
+ drn[1].style.transform=
+  'scale(3) translate(99%,-222%)'
+ drn[1].style.color='#900'
+ drn[2].style.transform=
+  'scale(3) translate(55%,-111%)'
+ drn[2].style.color='#900'
+ drn[3].style.transform=
+  'scale(3) translate(-9%,1%)'
+ drn[3].style.color='#900'
+}
+drn[0].onmouseout=()=>
+{
+ drn[0].style.transform='scale(3)'
+ drn[1].style.transform='scale(0)'
+ drn[1].style.color='#000'
+ drn[2].style.transform='scale(0)'
+ drn[2].style.color='#000'
+ drn[3].style.transform='scale(0)'
+ drn[3].style.color='#000'
+}   
+
+
+ 
+</script>
+</body>
+
+</html>
