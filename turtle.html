@@ -1,0 +1,616 @@
+<html>
+<body >
+<style>
+
+body
+{
+ background:linear-gradient(57deg,#000,#888);
+}
+
+.grnd
+{
+position:absolute;
+transition:1s;
+
+}
+
+.pzr
+{
+position:absolute;
+background: linear-gradient(#880,#000);
+width:33%;
+height:31%;
+left:33%;
+top:44%;
+transition:3s;
+border-top-left-radius:55%;
+border-top-right-radius:55%;
+border-bottom-left-radius:33%;
+border-bottom-right-radius:33%;
+cursor:pointer;
+}
+
+.pw
+{
+position:absolute;
+left:-22%;
+width:44%;
+height:28%; 
+transition:1s;
+ 
+}
+
+.frz
+{
+position:absolute;
+transition:1s;
+
+}
+
+.prgrss
+{
+position:absolute;
+transition:1s;
+
+}
+
+.scty
+{
+position:absolute;
+transition:1s;
+}
+.scty:hover
+{
+z-index:1;
+}
+
+.otr
+{
+position:absolute;
+transition:1s;
+cursor:pointer;
+}
+.otr:hover
+{
+z-index:1;
+}
+
+.frmwrk
+{
+position:absolute;
+transition:1s;
+cursor:pointer;
+}
+
+</style>
+
+<div class=grnd>
+ <div class=grnd></div>
+</div>
+<div class=grnd>BCKGRND</div>
+<div class=grnd>base</div>
+
+<div class=pzr>
+<div class=pzr></div>
+
+ <div class=pw></div>
+ <div class=pw></div>
+ <div class=pw>
+  <div class=pw></div>
+  <div class=pw></div>  
+ </div>
+
+</div>
+
+<div class=frz>
+ PROGRESS<br> CAN'T BE<br> STOPPED
+</div>
+<div class=frz>
+ turtle is symbol
+</div>
+<div class=frz>
+ total 
+</div>
+<div class=frz>
+ development
+</div>
+
+<div class=prgrss>
+Progress
+</div>
+<div class=prgrss>
+ Increasing the level<br> of organization
+</div>
+<div class=prgrss>
+ The complexity<br> of the organization
+</div>
+
+<div class=scty>
+PostIndustrial<br> society 
+</div>
+<div class=scty>
+Innovation<br> economy
+</div>
+<div class=scty>
+Venture business
+</div>
+
+<div class=otr>
+ <div class=otr>!</div>
+ <div class=otr>!</div>
+</div>
+<div class=otr>
+  unity in the struggle<br> of opposites
+ </div>
+ <div class=otr>
+  quantity to quality
+ </div>
+
+<div class=frmwrk>WordPress</div>
+ <div class=frmwrk>CMS</div>
+<div class=frmwrk>Drupal</div>
+ <div class=frmwrk></div>
+ 
+
+
+<script>
+  grnd=document.getElementsByClassName('grnd')
+  pzr=document.getElementsByClassName('pzr')
+  pw=document.getElementsByClassName('pw')
+  frz=document.getElementsByClassName('frz')
+  prgrss=document.getElementsByClassName('prgrss')
+  scty=document.getElementsByClassName('scty')
+  otr=document.getElementsByClassName('otr')
+  frmwrk=document.getElementsByClassName('frmwrk')
+
+
+  grnd[0].style.background=
+   'linear-gradient(#0b0,#880)'
+  grnd[0].style.left='0%'
+  grnd[0].style.bottom='0%'
+  grnd[0].style.width='100%'
+  grnd[0].style.height='33%' 
+  grnd[0].style.borderTopLeftRadius='33%'
+  grnd[0].style.borderTopRightRadius='33%'
+  
+  grnd[1].style.background=
+   'radial-gradient(#440,#bb0)'
+  grnd[1].style.borderTopLeftRadius=55+'%'
+  grnd[1].style.borderTopRightRadius=55+'%'
+  grnd[1].style.borderBottomLeftRadius=11+'%'
+  grnd[1].style.borderBottomRightRadius=11+'%'
+  grnd[1].style.left=1+'%'
+  grnd[1].style.bottom=5+'%'
+  grnd[1].style.width=98+'%'
+  grnd[1].style.height=33+'%'
+  grnd[1].style.cursor='pointer'
+ 
+  grnd[2].style.left=82+'%' 
+  grnd[2].style.top=69+'%'
+  grnd[2].style.color='#606'
+  grnd[2].style.transform='scale(0)'
+  
+  grnd[3].style.left=82+'%' 
+  grnd[3].style.top=69+'%'
+  grnd[3].style.color='#078'
+  grnd[3].style.transform='scale(0)'
+  
+  pzr[1].style.left=0+'%' 
+  pzr[1].style.top=69+'%'
+  pzr[1].style.width=99+'%'
+  pzr[1].style.borderRadius=22+'%' 
+  pzr[1].style.background=
+   'linear-gradient(0deg,#220,#040)'
+   
+  pw[0].style.left=-11+'%'
+  pw[0].style.top=82+'%'
+  pw[0].style.borderRadius=22+'%'
+  pw[0].style.borderTopLeftRadius=55+'%' 
+  pw[0].style.background=
+   'linear-gradient(180deg,#220,#080)'; 
+  
+  pw[1].style.left=68+'%' 
+  pw[1].style.top=82+'%'	
+  pw[1].style.borderRadius=22+'%' 
+  pw[1].style.borderTopRightRadius=55+'%'
+  pw[1].style.background='linear-gradient(180deg,#220,#080)'
+  
+  pw[2].style.left=33+'%' 
+  
+  pw[2].style.top=50+'%'
+  pw[2].style.width=33+'%' 
+  pw[2].style.height=55+'%'
+  pw[2].style.borderRadius=44+'%' 
+  pw[2].style.background='radial-gradient(#080, #220)';
+  
+  pw[3].style.left=22+'%' 
+  pw[3].style.top=9+'%'
+  pw[3].style.width=33+'%' 
+  pw[3].style.height=33+'%'
+  pw[3].style.borderRadius=55+'%' 
+  pw[3].style.background=
+   'radial-gradient(11px, #f00, #fff)';
+  pw[3].style.transform='scale(0.6)'
+  
+  pw[4].style.left=55+'%' 
+  pw[4].style.top=9+'%'
+  pw[4].style.width=33+'%' 
+  pw[4].style.height=33+'%'
+  pw[4].style.borderRadius=55+'%'  
+  pw[4].style.background=
+   'radial-gradient(11px, #f00, #fff)';
+  pw[4].style.transform='scale(0.6)'
+  
+  frz[0].style.transform='scale(0)' 
+  frz[0].style.left=44+'%' 
+  frz[0].style.top=20+'%'
+ 
+  frz[1].style.transform='scale(0)' 
+  frz[1].style.left=44+'%' 
+  frz[1].style.top=44+'%'
+ 
+  frz[2].style.transform='scale(0)' 
+  frz[2].style.left=11+'%' 
+  frz[2].style.top=52+'%'
+  frz[2].style.color='#bb8'
+ 
+  frz[3].style.transform='scale(0)' 
+  frz[3].style.left=16+'%' 
+  frz[3].style.top=58+'%'
+  frz[3].style.color='#8bb'
+ 
+  prgrss[0].style.left=11+'%' 
+  prgrss[0].style.top=7+'%'
+  prgrss[0].style.transform='scale(2)'
+  prgrss[0].style.color='#0f0'
+  prgrss[0].style.cursor='pointer' 
+   
+  prgrss[1].style.transform='scale(0)'
+  prgrss[1].style.left=11+'%' 
+  prgrss[1].style.top=12+'%'
+  prgrss[1].style.color='#0f0' 
+  
+  prgrss[2].style.transform='scale(0)'
+  prgrss[2].style.left=11+'%' 
+  prgrss[2].style.top=6+'%'
+  prgrss[2].style.color='#0f0' 
+  
+  scty[0].style.transform='scale(2)'
+  scty[0].style.left=42+'%' 
+  scty[0].style.top=9+'%'
+  scty[0].style.color='#0f0' 
+  scty[0].style.cursor='pointer' 
+  
+  scty[1].style.transform='scale(2)'
+  scty[1].style.left=42+'%' 
+  scty[1].style.top=22+'%'
+  scty[1].style.color='#ff0' 
+  scty[1].style.cursor='pointer' 
+  
+  scty[2].style.transform='scale(2)'
+  scty[2].style.left=44+'%' 
+  scty[2].style.top=33+'%' 
+  scty[2].style.color='#00f'
+  scty[2].style.cursor='pointer' 
+  
+  otr[0].style.left=66+'%' 
+  otr[0].style.top=22+'%' 
+  otr[0].style.width=4+'%'
+  
+  otr[1].style.transform='scale(4)'
+  otr[1].style.left=6+'%' 
+  otr[1].style.top=7+'%' 
+  otr[1].style.color='#ff0'
+
+  otr[2].style.transform='scale(4)'
+  otr[2].style.left=99+'%' 
+  otr[2].style.top=79+'%' 
+  otr[2].style.color='#0f0'
+  
+  otr[3].style.left=66+'%' 
+  otr[3].style.top=5+'%' 
+  otr[3].style.color='#f0f'
+  otr[3].style.transform='scale(0)'
+
+  otr[4].style.left=67+'%' 
+  otr[4].style.top=17+'%' 
+  otr[4].style.color='#0ff'
+  otr[4].style.transform='scale(0)'
+
+  frmwrk[0].style.left=13+'%' 
+  frmwrk[0].style.top=44+'%' 
+  frmwrk[0].style.color='#f00'
+  frmwrk[0].style.transform='scale(3)'
+  
+  frmwrk[1].style.left=11+'%' 
+  frmwrk[1].style.top=55+'%' 
+  frmwrk[1].style.transform='scale(0)'
+  
+  frmwrk[2].style.left=66+'%' 
+  frmwrk[2].style.top=40+'%' 
+  frmwrk[2].style.color='#f00'
+  frmwrk[2].style.transform='scale(3)'
+  
+  frmwrk[3].style.left=77+'%' 
+  frmwrk[3].style.top=44+'%' 
+  frmwrk[3].style.transform='scale(0)'
+  
+   Ig=0
+   bg=0
+   function mv()
+   {
+   if(bg){
+     grnd[1].style.transform='scale(1,1.2)'
+     pw[0].style.transform='translate(0, 22%)'
+     pw[1].style.transform='translate(0, -11%)'
+	 otr[1].style.transform='scale(4.2) '
+     otr[2].style.transform='scale(4.8) '
+	 
+	}else{
+	  grnd[1].style.transform='scale(1,1)'
+	  pw[0].style.transform='translate(0, -11%)'
+      pw[1].style.transform='translate(0, 22%)'
+	  otr[1].style.transform='scale(0.8)'
+      otr[1].style.transform='scale(4.8) '
+      otr[2].style.transform='scale(4.2) '
+	 }	 
+	   bg=!bg
+   }
+   
+  Ig=setInterval(mv, 1111) 
+  
+  Igrnd1=0
+  bgrnd1=0
+  grnd[1].onmouseover=()=>
+  {
+   grnd[1].style.background=
+    'radial-gradient(#222,#ff0) '
+   grnd[2].style.transform=
+    'scale(3) translate(0,77%) skew(-33deg)' 
+   grnd[3].style.transform=
+    'scale(3) translate(0,133%) skew(-22deg)' 
+  Igrnd1=setInterval(()=>{
+    if(bgrnd1){
+     grnd[3].innerHTML='for dvlpmnt'
+	 grnd[3].style.color='#00b'
+	}else{
+	 grnd[3].innerHTML='base'
+	 grnd[3].style.color='#078'
+	
+	}
+       bgrnd1=!bgrnd1
+     },999)	
+	
+  }
+  grnd[1].onmouseout=()=>
+  {
+   grnd[1].style.background=
+    'radial-gradient(#000,#ff0) '
+   grnd[2].style.transform='scale(0)' 
+   grnd[3].style.transform='scale(0)'
+    
+	bgrnd1=0
+	grnd[3].style.color='#078'
+	clearInterval(Igrnd1)
+  } 
+  
+  Ipzr0=0
+  bpzr0=0
+  pzr[0].onmouseover=()=>
+  {
+   grnd[1].style.background=
+    'radial-gradient(#220,#990)'
+   frz[0].style.color='#f00'
+    frz[1].style.color='#f80'
+	
+   b=Math.round(Math.random())
+   if(b){
+    pw[2].style.transform=
+	 'scale(1.4) translate(-33%, -33%)' 
+	frz[0].style.transform=
+	 'scale(3) skew(-33deg) translate(33%, 22%)' 
+	frz[0].style.zIndex=1
+	frz[1].style.transform=
+	 'scale(3) skew(-33deg) translate(69%, 222%)' 
+	 
+	 }else{//
+    pw[2].style.transform='scale(1.4) translate(33%, -33%)'
+	frz[0].style.transform=
+	 'scale(3) skew(33deg) translate(-33%, 22%)' 
+	frz[1].style.transform=
+	 'scale(3) skew(33deg) translate(69%, 222%)' 
+	}
+    pw[3].style.transform='scale(1) '
+	pw[4].style.transform='scale(1) '
+	
+  Ipzr0=setInterval(()=>{
+	if(bpzr0){ 
+	 frz[2].style.transform='scale(2) '
+	 frz[3].style.transform='scale(3) '
+	  }else{
+	 frz[2].style.transform='scale(3) '
+	 frz[3].style.transform='scale(2) '
+	}  bpzr0=!bpzr0
+  	
+	 },999)
+	
+  }
+  pzr[0].onmouseout=()=>
+  {
+    grnd[1].style.background=
+     'radial-gradient(#440,#bb0)'
+	 pw[2].style.transform='scale(1) ' 
+	 pw[3].style.transform='scale(0.6) '
+	 pw[4].style.transform='scale(0.6) '
+     frz[0].style.transform='scale(0) '
+	 frz[1].style.transform='scale(0) '
+	 frz[2].style.transform='scale(0) '
+	 frz[3].style.transform='scale(0) '
+	 
+	 clearInterval(Ipzr0)
+  }
+  
+  prgrss[0].onmouseover=()=>
+  {
+    prgrss[0].style.zIndex=1
+    prgrss[0].style.transform=
+	 'scale(2.4) translate(11%,0)' 
+	prgrss[0].style.color='#f00'
+    //prgrss[0].style.zIndex=1
+	prgrss[0].innerHTML=
+     'development direction<br> from lowest to highest'
+   prgrss[1].style.transform=
+    'scale(2) translate(0,88%)' 
+   prgrss[1].style.color='#880' 
+   prgrss[2].style.transform=
+    'scale(2) translate(0,233%)'
+   prgrss[2].style.color='#bb0' 
+  }
+  prgrss[0].onmouseout=()=>
+  {
+    prgrss[0].style.transform='scale(2)' 
+	prgrss[0].style.color='#0f0'
+    prgrss[0].style.zIndex=0
+	prgrss[0].innerHTML='Progress'
+   prgrss[1].style.transform='scale(0)' 
+   prgrss[2].style.transform='scale(0)' 
+   
+  }    
+  
+  scty[0].onmouseover=()=>
+  {
+   scty[0].style.zIndex=1
+   scty[0].style.transform='scale(2.4)' 
+   scty[0].style.color='#f0f'
+   scty[0].innerHTML=
+	'the economy is dominated<br> by an innovative sector with<br> high-performance industry' 
+  }
+  scty[0].onmouseout=()=>
+  {
+   scty[0].style.zIndex=0
+   scty[0].style.transform='scale(2)' 
+   scty[0].style.color='#0f0'
+   scty[0].innerHTML='PostIndustrial<br> seciety'
+  }   
+  
+  scty[1].onmouseover=()=>
+  {
+   scty[1].style.transform='scale(2.4)' 
+   scty[1].style.color='#0f0'
+   scty[1].style.zIndex=1
+   scty[1].innerHTML=
+    'Innovations demanded<br> by the consumer'
+  }
+  scty[1].onmouseout=()=>
+  {
+   scty[1].style.transform='scale(2)' 
+   scty[1].style.color='#ff0'
+   scty[1].style.zIndex=0
+   scty[1].innerHTML=
+    'Innovation<br>economy'
+  }  
+
+  scty[2].onmouseover=()=>
+  {
+   scty[2].innerHTML=
+    'introduction of advanced<br>'+  
+	'technologies into production'
+   scty[2].style.transform='scale(2.4) translate(11%,0)' 
+   scty[2].style.color='#0ff'
+   scty[2].style.zIndex=2
+  }
+  scty[2].onmouseout=()=>
+  {
+   scty[2].innerHTML='Venture business'
+   scty[2].style.transform='scale(2) ' 
+   scty[2].style.color='#00f'
+   scty[2].style.zIndex=0
+  }  
+
+    
+  otr[0].onmouseover=()=>
+  {
+   otr[1].style.transform=
+    'translate(0,33%) scale(4)' 
+   otr[1].innerHTML='negate '
+   otr[2].style.transform=
+    'translate(0,333%) scale(4)' 
+   otr[2].innerHTML='negation '
+   otr[3].style.transform=
+    ' scale(3)'
+   otr[4].style.transform=
+    ' scale(3)'
+
+	clearInterval(Ig)
+  }
+  otr[0].onmouseout=()=>
+  {
+   otr[1].style.transform='scale(4) translate(0,0%)'
+   otr[1].innerHTML='!'
+   otr[2].style.transform='scale(4) translate(0,0%)' 
+   otr[2].innerHTML='!'
+   otr[3].style.transform='scale(0)'
+   otr[4].style.transform='scale(0)'
+
+   Ig=setInterval(mv,1111)
+  }    
+   otr[0].onclick=()=>
+  {
+   otr[1].innerHTML='dialectic '
+   otr[2].innerHTML='knowledge'
+  }
+
+  frmwrk[0].onmouseover=()=>
+  {
+    frmwrk[0].style.transform='scale(3.9)'
+    frmwrk[1].style.transform='scale(3)'
+	frmwrk[1].style.color='#f80'
+  }
+  frmwrk[0].onmouseout=()=>
+  {
+    frmwrk[0].style.transform='scale(3)'
+    frmwrk[1].style.transform='scale(0)'
+    frmwrk[1].innerHTML='CMF'
+  }   
+  frmwrk[0].onclick=()=>
+  {
+   frmwrk[1].style.color='#0ff'
+   frmwrk[1].innerHTML='content<br> management<br> system'
+
+  }   
+ 
+  Ifrm2=0
+  afrm2=['Content','Management','Framework']
+  ifrm2=0
+  frmwrk[2].onmouseover=()=>
+  {  
+   frmwrk[2].style.transform='scale(3.4)'
+   frmwrk[2].style.color='#ff0'
+   frmwrk[2].innerHTML='CMS+API=CMF'
+   frmwrk[3].style.transform=
+    'scale(3.4) translate(0,99%)'
+	
+ Ifrm2=setInterval(()=>{
+ 	
+  frmwrk[3].innerHTML=afrm2[ifrm2]
+  frmwrk[3].style.color='#f73'
+	   
+	   ifrm2++
+	 if(ifrm2==3) ifrm2=0  
+	
+	  },999)
+  }  
+  frmwrk[2].onmouseout=()=>
+  {
+   frmwrk[2].style.transform='scale(3)'
+   frmwrk[2].style.color='#f00'
+   frmwrk[2].innerHTML='Drupal'
+   frmwrk[3].style.transform='scale(0)'
+   frmwrk[3].innerHTML=''
+   ifrm2=0
+   clearInterval(Ifrm2)
+  }   
+</script>
+</body>
+
+</html>
