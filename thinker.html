@@ -1,0 +1,588 @@
+<html>
+
+<body>
+
+<style>
+body
+{
+background:linear-gradient(44deg,blue,yellow);
+//height:122%;
+
+}
+
+.d
+{
+position:absolute;
+border-radius:55%;
+transition:1s;
+}
+
+.zr
+{
+position:absolute;
+background:#000;
+left:39%;
+top:39%;
+width:22%;
+height:22%;
+border-radius:55%;
+transition:2s;
+}
+
+.nm
+{
+position:absolute;
+font-size:2em;
+transition:2s;
+cursor:pointer;
+color:#fff;
+}
+
+.gd
+{
+position:absolute;
+font-size:2em;
+transition:2s;
+cursor:pointer;
+}
+
+.fnd
+{
+position:absolute;
+font-size:2em;
+transition:2s;
+cursor:pointer;
+}
+
+.intrs
+{
+position:absolute;
+font-size:2em;
+transition:2s;
+cursor:pointer;
+}
+.intrs:hover
+{
+transform:scale(2) translate(55px,-33%);
+color:#f0f;
+z-index:1;
+}
+
+.dvc
+{
+position:absolute;
+transition:2s;
+cursor:pointer;
+}
+
+</style>
+
+<div class=d>
+   <div class=d><div class=zr></div></div>
+   <div class=d><div class=zr></div></div>
+      <div class=d> </div> 
+	  
+</div> 
+
+ <div class=nm> </div> 
+ <div class=nm> </div> 
+ <div class=nm> </div> 
+ <div class=nm> </div> 
+ <div class=nm> </div> 
+ <div class=nm> </div> 
+
+ <div class=gd>Product </div> 
+ <div class=gd>Price </div> 
+ <div class=gd>Production</div> 
+ <div class=gd>Crisis</div>
+ <div class=gd>Keynesianism</div> 
+ <div class=gd>market admin.<br> regulation</div>
+ 
+ <div class=fnd>Fonds</div> 
+ <div class=fnd>Premium </div> 
+ <div class=fnd>Production dvlpmnt</div>
+ <div class=fnd>Capitalism </div> 
+ <div class=fnd>Social
+   <br>&nbsp &nbsp &nbsp &nbsp
+   orientation
+ </div> 
+  
+ <div class=intrs>InterAct </div> 
+ <div class=intrs>Saturation </div> 
+ <div class=intrs>multple realisasns </div> 
+ <div class=intrs>Controllr </div> 
+ 
+ <div class=dvc> 
+   <div class=dvc>debet </div>
+   <div class=dvc>credit </div>
+ </div> 
+  
+<script>
+// bd=document.getElementsByTagName('body')
+ 
+ d=document.getElementsByClassName('d')
+ zr=document.getElementsByClassName('zr')
+ nm=document.getElementsByClassName('nm')
+ gd=document.getElementsByClassName('gd')
+ fnd=document.getElementsByClassName('fnd')
+ intrs=document.getElementsByClassName('intrs')
+ dvc=document.getElementsByClassName('dvc')
+  
+
+
+ o=
+{  
+   b:0, dg:0,  
+init:function()
+{
+d[0].style.width='44%';
+d[0].style.height='55%';
+d[0].style.left='11%';
+d[0].style.top='22%';
+d[0].style.background='radial-gradient(#080,#000 )'
+d[0].style.cursor='pointer';
+
+d[1].style.width='22%';
+d[1].style.height='33%';
+d[1].style.left='22%';
+d[1].style.top='2%';
+d[1].style.background='#fff'
+
+d[2].style.width='22%';
+d[2].style.height='33%';
+d[2].style.left='66%';
+d[2].style.top='2%';
+d[2].style.background='#fff'
+
+d[3].style.width='44%';
+d[3].style.height='11%';
+d[3].style.left='33%';
+d[3].style.top='66%';
+d[3].style.background='radial-gradient(#000,#d00 )'
+d[3].style.zIndex=1
+
+
+nm[0].style.left='66%';
+nm[0].style.top='11%';
+nm[0].style.color='#000';
+nm[0].innerHTML='Market'
+
+nm[1].style.left='55%';
+nm[1].style.top='22%';
+nm[1].style.color='#f00';
+nm[1].innerHTML='labor'
+nm[1].style.transform='scale(0)';
+
+nm[2].style.left='66%';
+nm[2].style.top='22%';
+nm[2].style.color='#0f0';
+nm[2].innerHTML='currency'
+nm[2].style.transform='scale(0)';
+
+nm[3].style.left='77%';
+nm[3].style.top='22%';
+nm[3].style.color='#990';
+nm[3].innerHTML='shares'
+nm[3].style.transform='scale(0)';
+
+nm[4].style.left='66%';
+nm[4].style.top='33%';
+nm[4].style.color='#909';
+nm[4].innerHTML='raw materials'
+nm[4].style.transform='scale(0)';
+
+nm[5].style.left='77%';
+nm[5].style.top='33%';
+nm[5].style.color='#0bb';
+nm[5].innerHTML='goods'
+nm[5].style.transform='scale(0)';
+
+gd[0].style.left='66%';
+gd[0].style.top='40%';
+
+gd[1].style.left='66%';
+gd[1].style.top='45%';
+
+gd[2].style.left='66%';
+gd[2].style.top='50%';
+
+gd[3].style.left='33%';
+gd[3].style.top='6%';
+
+gd[4].style.left='66%';
+gd[4].style.top='2%';
+
+gd[5].style.left='66%';
+gd[5].style.top='22%';
+gd[5].style.transform='scale(0)';
+
+fnd[0].style.left='6%';
+fnd[0].style.top='88%';
+fnd[0].style.color='#770';
+fnd[0].style.transform='scale(1.2)';
+
+fnd[1].style.left='33%';
+fnd[1].style.top='85%';
+fnd[1].style.color='#bb0';
+fnd[1].style.transform='scale(0)';
+
+fnd[2].style.left='33%';
+fnd[2].style.top='89%';
+fnd[2].style.color='#880'
+fnd[2].style.transform='scale(0)';
+
+fnd[3].style.left='22%';
+fnd[3].style.top='14%';
+fnd[3].style.color='#99f';
+
+fnd[4].style.left='55%';
+fnd[4].style.top='11%';
+fnd[4].style.color='#880';
+fnd[4].style.transform='scale(0)';
+
+intrs[0].style.left='6%';
+intrs[0].style.top='66%';
+intrs[0].style.color='#0ff';
+
+intrs[1].style.left='6%';
+intrs[1].style.top='75%';
+intrs[1].style.color='#7ff';
+
+intrs[2].style.color='#ff0'
+intrs[2].style.left='33%';
+intrs[2].style.top='88%';
+intrs[2].style.transform='scale(0)';
+
+intrs[3].style.color='#ff0'
+intrs[3].style.left='8%';
+intrs[3].style.top='7%';
+
+dvc[0].style.left='60%';
+dvc[0].style.top='66%';
+dvc[0].style.width='24%';
+dvc[0].style.height='18%';
+dvc[0].style.background='#0ff';
+dvc[0].style.border='3px ridge #f00';
+
+dvc[1].style.left='6%';
+dvc[1].style.top='6%';
+dvc[1].style.fontSize='0em';
+
+dvc[2].style.left='55%';
+dvc[2].style.top='6%';
+dvc[2].style.fontSize='0em';
+
+
+},
+
+cl:function()
+{ 
+  if(o.b)
+  {
+  d[0].style.transform='scale(1.2)';
+  zr[0].style.transform='scale(2)';
+   zr[0].style.background='#f00';
+  zr[1].style.transform='scale(2)';
+   zr[1].style.background='#f00';     
+	fnd[4].style.color='#666';
+    fnd[4].style.transform=
+	 'scale(2) skew(-22deg)';
+  }
+    else
+  { 
+  zr[0].style.transform='scale(1)';
+   zr[0].style.background='#000';
+  zr[1].style.transform='scale(1)';
+   zr[1].style.background='#000';
+   d[0].style.transform='scale(1)';
+   fnd[4].style.color='#770';
+   fnd[4].style.transform=
+    'scale(1.2) skew(22deg)';
+  }	
+    o.b=!o.b
+},
+
+} 
+    o.init()
+ 
+ 
+ d0I=0
+d[0].onmouseover=()=>
+{
+ o.cl()
+ d0I=setInterval(()=>o.cl(),999)
+	
+   dvc[0].onmouseover()
+}	
+d[0].onmouseout=()=>
+{
+  zr[0].style.transform='scale(1)';
+   zr[0].style.background='#000';
+  zr[1].style.transform='scale(1)';
+    zr[1].style.background='#000';
+   d[0].style.transform='scale(1)';
+	
+	clearInterval(d0I)
+	 dvc[0].onmouseout()
+   
+   fnd[4].style.color='#fff';
+   fnd[4].style.transform='scale(0)';
+}
+
+bclk=0
+	
+nm[0].onmouseover=()=>
+{
+	nm[0].style.transform='scale(1.9)'
+	nm[0].style.color='#f00'
+    nm[1].style.transform='scale(1.5) rotate(-22deg)'
+    nm[2].style.transform='scale(1.5) rotate(-22deg)'
+	nm[3].style.transform='scale(1.5) rotate(-22deg)'
+	nm[4].style.transform='scale(1.5) rotate(22deg)'
+	nm[5].style.transform='scale(1.5) rotate(22deg)'
+	
+}	  
+nm[0].onclick=()=>
+{
+	nm[0].innerHTML='Failure to self-regulate'
+	nm[0].style.transform='translate(-44%,0)'
+	  	
+}	
+nm[0].onmouseout=()=>
+{
+  nm[0].innerHTML='Market'
+	nm[0].style.transform='scale(1)'
+	nm[0].style.color='#000'
+	nm[1].style.transform='scale(0) rotate(0deg)'
+    nm[2].style.transform='scale(0) rotate(0deg)'
+	nm[3].style.transform='scale(0) rotate(0deg)'
+	nm[4].style.transform='scale(0) rotate(0deg)'
+	nm[5].style.transform='scale(0) rotate(0deg)'
+
+}	  
+
+gd[0].onmouseover=()=>
+{
+  gd[0].style.color='#f00'
+  gd[0].style.transform='scale(1.2)'
+	gd[0].innerHTML='product of labor'
+    
+}	  
+gd[0].onclick=()=>
+{
+  gd[0].style.color='#fff'
+  gd[0].style.transform='scale(1) translate(0,-44%)'
+	gd[0].innerHTML='surplus<br> value'
+	
+}	 
+gd[0].onmouseout=()=>
+{
+  gd[0].style.color='#000'
+  gd[0].style.transform='scale(1)'
+	gd[0].innerHTML='Product'
+	
+}	 
+
+gd[1].onmouseover=()=>
+{
+  gd[1].style.color='#f00'
+  gd[1].style.transform='scale(1.2)'
+	gd[1].innerHTML='product detail'
+    
+}	  
+gd[1].onmouseout=()=>
+{
+   gd[1].style.color='#000'
+   gd[1].style.transform='scale(1)'
+	gd[1].innerHTML='Price'
+	
+}
+
+gd[2].onmouseover=()=>
+{
+    gd[2].style.color='#f00'
+	gd[2].style.transform='scale(1.2) translate(-22%,0)'
+	gd[2].innerHTML='receiving the goods'
+    
+}	  
+gd[2].onmouseout=()=>
+{
+   gd[2].style.color='#000'
+   gd[2].style.transform='scale(1)'
+	gd[2].innerHTML='Production'
+	
+}
+	 
+gd[3].onmouseover=()=>
+{
+  gd[3].style.background='#f00'
+  gd[3].style.color='#fff'
+	gd[3].innerHTML='Overproduction'
+    gd[3].style.transform='scale(1.2)'
+}	  
+gd[3].onclick=()=>
+{
+   gd[3].style.background=''
+   gd[3].style.border='5px #ff0 ridge'
+   gd[3].style.color='#f00'
+  gd[3].innerHTML='Demonopolization'
+	gd[3].style.transform='scale(2)'
+}
+gd[3].onmouseout=()=>
+{
+   gd[3].style.background=''
+   gd[3].style.border=''
+   gd[3].style.color='#000'
+	gd[3].innerHTML='Crisis'
+	gd[3].style.transform='scale(1)'
+}
+
+gd[4].onmouseover=()=>
+{
+   gd[4].style.color='#f00'
+   gd[5].style.color='#f0f'
+   gd[4].style.transform='scale(1.6)'
+   gd[5].style.transform='scale(1) skew(22deg)'
+}
+gd[4].onmouseout=()=>
+{
+   gd[4].style.color='#000'
+   gd[4].style.transform='scale(1)'
+   gd[5].style.transform='scale(0)'
+}
+
+Ifnd0=0
+bfnd0=0	
+fnd[0].onmouseover=()=>
+{
+ fnd[0].style.color='#f00'
+ fnd[0].style.transform='scale(2) translate(25px,-11px)'
+  
+   Ifnd0=setInterval(()=>{
+     if(bfnd0){
+	  fnd[1].style.transform='scale(1.8)'
+      fnd[2].style.transform='scale(1.2)'
+	   }else{
+	  fnd[1].style.transform='scale(1.2)'
+      fnd[2].style.transform='scale(1.8)'
+	   }       
+           bfnd0=!bfnd0
+     },999)
+}	  
+fnd[0].onmouseout=()=>
+{
+ fnd[0].style.color='#770'
+ fnd[0].style.transform='scale(1.2)'
+  fnd[1].style.transform='scale(0)'
+  fnd[2].style.transform='scale(0)'
+   clearInterval(Ifnd0)
+}	 
+
+fnd[3].onmouseover=()=>
+{
+  fnd[3].innerHTML='Goods<=>Money<=>Goods'
+   fnd[3].style.transform='scale(2)'
+   fnd[3].style.color='#f00'
+  
+}	  
+fnd[3].onmouseout=()=>
+{
+  fnd[3].innerHTML='Capitalism'
+   fnd[3].style.transform='scale(1)'
+   fnd[3].style.color='#99f'
+ 
+}	 
+
+intrs[0].onmouseover=()=>
+{   
+   intrs[0].style.color='#0f0'
+   intrs[0].innerHTML='reactn on the action'
+  
+}	  
+intrs[0].onmouseout=()=>
+{
+  intrs[0].style.color='#0ff'
+  intrs[0].innerHTML='InterAct'
+  
+}	 
+
+intrs[1].onmouseover=()=>
+{  
+   intrs[1].style.color='#f0f'
+   intrs[1].innerHTML='for_each(c.i in c.f())'
+   intrs[2].style.transform='scale(2)'
+   
+}	  
+intrs[1].onmouseout=()=>
+{
+  intrs[1].style.color='#7ff'
+  intrs[1].innerHTML='Saturation'
+  intrs[2].style.transform='scale(0)'
+  
+}	 
+
+ai3=['Analysis','decision','action']
+ii3=0
+i3I=0
+intrs[3].onmouseover=()=>
+{  
+   intrs[3].style.color='#f0f'
+   intrs[3].style.transform='scale(2)'
+   
+  i3I=setInterval(()=>{ 
+    intrs[3].innerHTML=ai3[ii3]
+	 ii3++
+	 if(ii3==3) ii3=0
+	
+	},999)
+	
+}	  
+intrs[3].onmouseout=()=>
+{
+  intrs[3].style.transform='scale(1)'
+  intrs[3].style.color='#ff0'
+    intrs[3].innerHTML='Controllr'
+ clearInterval(i3I)
+  ii3=0
+ 
+}	
+	 
+Idvs=0
+bdvs=0	 
+dvc[0].onmouseover=()=>
+{
+  dvc[0].style.border='11px ridge #700'
+  dvc[0].style.transform='skew(22deg)'
+  
+  
+  Idvs=setInterval(()=>{
+    if(bdvs)
+	{
+	 dvc[1].style.fontSize='2em'
+     dvc[2].style.fontSize='1.5em'
+	}else{1.5
+	 dvc[1].style.fontSize='1.5em'
+     dvc[2].style.fontSize='2em'
+	
+	}
+	
+	 bdvs=!bdvs
+    },1111)
+  
+  
+}	
+dvc[0].onmouseout=()=>
+{
+  dvc[0].style.border='3px ridge #f00'
+  dvc[0].style.transform='skew(0deg)'
+  dvc[1].style.fontSize='0em'
+  dvc[2].style.fontSize='0em'
+  
+  clearInterval(Idvs)
+}	 
+	 
+//clearInterval(i) radial-gradient(, )
+</script>
+</body>
+
+</html>
