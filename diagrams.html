@@ -1,0 +1,429 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+
+</head>
+
+<body id=idbd>
+
+<style>
+#idbd
+{
+background: linear-gradient(#fff,#222);
+}
+
+.jws
+{
+ position:absolute; 
+ transition:2s;
+}
+.mth
+{
+ position:absolute;    
+ transition:2s;
+}
+.gl
+{
+ position:absolute;   
+ transition:2s;
+}
+.zr
+{
+ position:absolute;   
+ transition:4s;
+ background:#000;
+ width:44%;
+ height:44%;
+ left:22%;
+ top:22%;
+ border-radius:55%;
+}
+.ns
+{
+ position:absolute;   
+ transition:4s;
+    
+}
+
+.wng
+{
+ position:absolute;   
+ font-size:3em;
+ text-align:center;
+ transition:3s;
+ cursor:pointer;
+}
+
+.ttl
+{
+ position:absolute;   
+ bottom:0%;
+ font-size:0.4em;
+ text-align:center;
+ transition:3s;
+    
+}
+
+.tps
+{
+ position:absolute;   
+ transition:1s;
+ cursor:pointer;
+ width:22%;
+	 
+}
+
+.vctr
+{
+ position:absolute;   
+ transition:1s;
+ cursor:pointer;
+	 
+}
+
+.dly
+{
+ position:absolute;   
+ transition:1s;
+ cursor:pointer;
+ width:22%;
+	 
+}
+
+.me
+{
+ position:absolute;   
+ transition:1s;
+ cursor:pointer;
+ width:22%;
+	 
+}
+
+</style>
+
+<div class=jws>  
+ <div class=gl ><div class=zr ></div></div>
+ <div class=gl ><div class=zr ></div></div>
+ <div class=ns ><div class=ns ></div></div>
+ <div class=mth ></div>
+</div>
+
+ <div class=wng >
+  DIAGRAMS
+  <div class=wng ><div class=ttl >R</div></div>
+  <div class=wng ><div class=ttl >G</div></div>
+  <div class=wng ><div class=ttl >B</div></div>
+  <div class=wng ><div class=ttl >LB</div></div>     
+  <div class=wng ></div>
+ </div>
+   
+<div class=tps >Diagram</div>
+<div class=tps >Lines</div>
+<div class=tps >Rectangles</div>
+<div class=tps >Circles</div>
+<div class=tps >Graphs</div>
+
+<div class=vctr >VCTR=>GitHub</div>
+<div class=vctr >vector modeling</div>
+<div class=vctr >error</div>
+<div class=vctr >404</div>
+
+<div class=dly >site desapeared</div>
+<div class=dly >full control</div>
+<div class=dly >noman</div>
+<div class=dly >constrctve</div>
+<div class=dly >deal</div>
+
+
+
+<script>
+
+  jws=document.getElementsByClassName('jws')
+  mth=document.getElementsByClassName('mth')
+  gl=document.getElementsByClassName('gl')
+  zr=document.getElementsByClassName('zr')
+  ns=document.getElementsByClassName('ns')
+  
+  wng=document.getElementsByClassName('wng')
+ 
+  tps=document.getElementsByClassName('tps')
+  vctr=document.getElementsByClassName('vctr')
+  dly=document.getElementsByClassName('dly')
+  
+
+  jws[0].style.left=4+'%'
+  jws[0].style.background='radial-gradient(#ffc,#f88)'
+  jws[0].style.left=61+'%'
+  jws[0].style.top=33+'%'
+  jws[0].style.width=22+'%'
+  jws[0].style.height=44+'%'
+  jws[0].style.cursor='pointer'
+  jws[0].style.borderTopLeftRadius=44+'%'
+  jws[0].style.borderTopRightRadius=44+'%'
+  jws[0].style.borderBottomLeftRadius=33+'%'
+  jws[0].style.borderBottomRightRadius=33+'%'
+   //jws[0].style.transform='translate(448%)'	
+	
+function initj(nm,i,l,t,w,h,bg)
+{
+ nm[i].style.left=l+'%'
+ nm[i].style.bottom=t+'%'  
+ nm[i].style.width=w+'%'
+ nm[i].style.height=h+'%'  
+ nm[i].style.background=bg
+}	
+	
+   initj(wng,0,11,22,33,44,'#fff')
+   //wng[0].style.top=8+'%'     
+   initj(wng,1,5,1,22,9,'#f90')
+   initj(wng,2,27,1,22,9,'#f00')
+   initj(wng,3,49,1,22,9,'#00f')
+   initj(wng,4,71,1,22,9,'#0ff')
+   initj(wng,5,1,1,77,3,'')
+	wng[5].style.borderTopLeftRadius=55+'%'
+	wng[5].style.borderBottomLeftRadius=55+'%'
+    wng[5].style.background='radial-gradient(#333,#bbb)'
+	wng[5].style.transform='rotate(33deg)'
+	    
+  initj(gl,0,18,0,14,22,'#fff')
+	gl[0].style.borderRadius=55+'%'
+    gl[0].style.top=17+'%'
+  initj(gl,1,66,0,14,22,'#fff')
+	gl[1].style.borderRadius=55+'%'
+    gl[1].style.top=17+'%'
+  initj(ns,0,44,0,11,36,'radial-gradient(#ffc,#f88)')
+    ns[0].style.borderRadius=55+'%'
+    ns[0].style.top=17+'%'
+  initj(ns,1,-44,-7,199,33,'radial-gradient(#ffc,#f88)')
+    ns[1].style.borderRadius=55+'%'
+  initj(mth,0,22,22,55,1,'radial-gradient(#000,#f00)')
+	mth[0].style.borderRadius=55+'%'
+  
+function initfrz(nm,i,l,t,sc)
+{
+ nm[i].style.left=l+'%'
+ nm[i].style.top=t+'%'
+ nm[i].style.transform='scale('+sc+')'
+} 
+
+  initfrz(tps,0,22,17,2)
+  initfrz(tps,1,33,4,0)
+  initfrz(tps,2,44,8,0)
+  initfrz(tps,3,55,4,0)
+  initfrz(tps,4,66,8,0)
+  
+  initfrz(vctr,0,6,8,0)
+  initfrz(vctr,1,19,89,0)
+  initfrz(vctr,2,55,33,0)
+  initfrz(vctr,3,55,33,0)
+   vctr[3].style.color='#f32'
+  initfrz(dly,0,44,8,0)
+  initfrz(dly,1,44,89,0)
+  initfrz(dly,2,66,22,0)
+   dly[2].style.transform=
+    'rotate(-22deg) scale(3)'
+   dly[2].style.width='0%'
+  initfrz(dly,3,44,86,0)
+   dly[3].style.width=6+'%'
+  initfrz(dly,4,44,94,0)
+   dly[4].style.width=6+'%'
+  
+  
+  Id=0
+  Im=0
+ function mv()
+ {
+  zr[0].style.left=1+'%'
+  zr[1].style.left=1+'%'    
+  wng[0].style.transform='skew(44deg)'
+  wng[5].style.opacity=1
+	 
+Id=setInterval(()=>
+  {mvd(1); mvd(2);
+    mvd(3); mvd(4); },
+	  2222)
+Im=setInterval(mvm, 666)
+		
+ }
+ 
+ function mvd(n)
+ {   
+   wng[n].style.height=Math.random()*80+'%'
+  
+ }
+  v=0
+ function mvm()
+ { 
+    v=Math.random()*88
+   mth[0].style.height=Math.random()*11+'%'
+   wng[5].style.transform=
+    'rotate(33deg) translate('+v+'%,-1888%)'
+ }
+ 
+     mv()
+ 
+ 
+jws[0].onmouseover=()=>
+{ 
+ jws[0].style.background='radial-gradient(#f88,#ffc)'
+ jws[0].style.transform='scale(1.1) translate(-14%)'
+ tps[0].onmouseover()
+ dly[2].onmouseover()
+}
+jws[0].onmouseout=()=>
+{ 
+ jws[0].style.background='radial-gradient(#ffc,#f88)'
+ jws[0].style.transform='scale(1)' 
+ tps[0].onmouseout()
+ dly[2].onmouseout()
+}
+
+Iwng0=0
+bwng0=0
+wng[0].onmouseover=()=>
+{ 
+  clearInterval(Id)
+  clearInterval(Im)
+ wng[0].style.transform='skew(0deg)'		
+  	 
+ wng[1].style.height=9+'%'
+ wng[2].style.height=9+'%'
+ wng[3].style.height=9+'%'
+ wng[4].style.height=9+'%'
+ wng[5].style.opacity=0
+   
+ zr[0].style.left=22+'%'
+ zr[1].style.left=22+'%'
+ mth[0].style.height=1+'%'
+ wng[0].style.transform='skew(0deg)' 
+	 
+ vctr[0].style.color='#f0f' 
+ vctr[0].style.transform='scale(2) translate(22%,0)'  
+   
+ vctr[1].style.color='#0ff' 
+ vctr[1].style.transform='scale(4) translate(22%,0)'
+ vctr[1].innerHTML='bright future'
+ vctr[2].style.transform='' 
+ vctr[3].style.transform=''
+
+Iwng0=setInterval(()=>{
+ if(bwng0){
+ vctr[2].style.color='#778'
+  vctr[2].innerHTML='fatal'
+ vctr[2].style.transform=
+  'scale(3.4) skew(-33deg)  ' 
+ vctr[3].style.transform=
+  'scale(3) translate(0%,-155%) skew(33deg) ' 
+   }else{
+ vctr[2].style.color='#000'
+   vctr[2].innerHTML='error'
+ vctr[2].style.transform=
+  'scale(3)  skew(33deg) ' 
+ vctr[3].style.transform=
+  'scale(3.4) translate(0%,-155%) skew(-33deg)' 
+   }
+    bwng0=!bwng0
+   },999)
+   
+ dly[0].style.transform='scale(2) translate(22%,0)' 
+ dly[0].style.color='#f0f'
+ dly[1].style.transform='scale(2) translate(22%,0)'
+ dly[1].style.color='#ff0'
+   
+}
+
+wng[0].onmouseout=()=>
+{ 
+ wng[0].style.transform='skew(44deg)'	
+  Id=setInterval(()=>
+  {mvd(1); mvd(2);
+    mvd(3); mvd(4); },
+	  2222)
+ Im=setInterval(mvm, 666)
+ clearInterval(Iwng0) 
+ 
+  zr[0].style.left=1+'%'
+  zr[1].style.left=1+'%'    
+  wng[5].style.opacity=1
+ 
+  vctr[0].style.color='#000' 
+  vctr[0].style.transform='scale(0) translate(0,0)'  
+  vctr[1].style.color='#000' 
+  vctr[1].style.transform='scale(2) translate(0,0)'
+  vctr[1].innerHTML='vector modeling'   
+  vctr[2].style.transform='scale(0) '
+  vctr[3].style.transform='scale(0) '
+  
+  dly[0].style.transform='scale(0) translate(0,0)'
+  dly[1].style.transform='scale(0) translate(0,0)'
+  
+}
+   
+tps[0].onmouseover=()=>
+{ 
+  tps[0].style.color='#f00'
+  tps[0].style.transform=
+   'scale(2.3) translate(2%,0) skew(-33deg)'
+  tps[0].innerHTML=
+  'graphical representation of data '+ 
+  'line segments or geometric shapes'
+  
+  tps[1].style.color='#f0f'
+  tps[2].style.color='#f0f'
+  tps[3].style.color='#f0f'
+  tps[4].style.color='#f0f'
+  tps[1].style.transform='scale(2) skew(33deg)'
+  tps[2].style.transform='scale(2) skew(22deg)'
+  tps[3].style.transform='scale(2) skew(11deg)'
+  tps[4].style.transform='scale(2) skew(5deg)'
+
+}
+tps[0].onmouseout=()=>
+{ 
+  tps[0].style.color='#000'
+  tps[0].style.transform='scale(2)'
+  tps[0].innerHTML='Diagram'
+  tps[1].style.color='#000'
+  tps[2].style.color='#000'
+  tps[3].style.color='#000'
+  tps[4].style.color='#000'
+  tps[1].style.transform='scale(0) skew(0deg)'
+  tps[2].style.transform='scale(0) skew(0deg)'
+  tps[3].style.transform='scale(0) skew(0deg)'
+  tps[4].style.transform='scale(0) skew(0deg)'
+  
+}
+
+dly[2].onmouseover=()=>
+{ 
+  dly[2].innerHTML='fenoman'
+  dly[2].style.transform=
+   'scale(4) rotate(-22deg) translate(0%,0)'
+  dly[2].style.opacity=0.2
+  dly[3].style.transform=
+   'scale(4) skew(-33deg)'
+  dly[3].style.color='#fff'
+  dly[4].style.transform=
+   'scale(4) translate(99%,-44%) skew(33deg)'
+  dly[4].style.color='#ff0'
+
+}
+dly[2].onmouseout=()=>
+{ 
+  dly[2].innerHTML='noman'
+  dly[2].style.transform='scale(3) rotate(-22deg)'
+  dly[2].style.opacity=1
+  dly[3].style.transform='scale(0)'
+  dly[3].style.color='#000'
+  dly[4].style.transform='scale(0)'
+  dly[4].style.color='#000'
+   
+}
+
+
+</script>
+</body>
+
+</html>
+
