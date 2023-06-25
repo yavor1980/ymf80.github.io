@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+body
+{
+ //overflow:scroll;
+}
+
+canvas
+{
+ position:absolute;
+ transition:1s;
+}
+
+.btn
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+}
+
+input
+{
+ background:red;
+}
+
+.cmmnt
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+}
+
+</style>
+</head>
+
+<body   >
+
+<canvas  >
+ no canvas 
+</canvas> 
+
+<input type=button class=btn value='round'>
+<input type=button class=btn value='clear'>
+<input type=button class=btn value='rng'>
+
+<input type=range class=btn min=0 max=9>
+<input type=range class=btn min=0 max=9>
+<input type=range class=btn min=0 max=9>
+
+<div class=cmmnt >0</div>
+
+<div class=cmmnt ></div>
+<div class=cmmnt ></div>
+<div class=cmmnt ></div>
+
+<script>
+cnv=document.getElementsByTagName('canvas')
+btn=document.getElementsByClassName('btn')
+cmmnt=document.getElementsByClassName('cmmnt')
+
+
+cnv[0].style.width=77+'%'
+cnv[0].style.height=77+'%'
+cnv[0].style.border='11px ridge #ff0'
+cnv[0].style.cursor='pointer'
+ cntxt=cnv[0].getContext('2d')
+
+btn[0].style.left=85+'%'
+btn[0].style.top=4+'%'
+btn[0].style.width=7+'%'
+btn[0].style.height=4+'%'
+btn[0].style.background='#f00'
+btn[0].style.color='#ff0'
+//btn[0].style.fontSize='0em'
+btn[0].style.transform='scale(1.5)'
+
+btn[1].style.left=85+'%'
+btn[1].style.top=14+'%'
+btn[1].style.width=7+'%'
+btn[1].style.height=4+'%'
+btn[1].style.fontSize='0em'
+btn[1].style.transform='scale(1.5)'
+btn[1].style.background='#0f0'
+
+btn[2].style.left=85+'%'
+btn[2].style.top=24+'%'
+btn[2].style.width=7+'%'
+btn[2].style.height=4+'%'
+btn[2].style.fontSize='0em'
+btn[2].style.transform='scale(1.5)'
+btn[2].style.background='#00f'
+btn[2].style.color='#ff0'
+
+btn[3].style.left=85+'%'
+btn[3].style.top=33+'%'
+btn[3].style.width=7+'%'
+btn[3].style.height=4+'%'
+btn[3].style.transform='scale(1.5)'
+btn[3].value=Math.random()*99
+
+btn[4].style.left=85+'%'
+btn[4].style.top=40+'%'
+btn[4].style.width=7+'%'
+btn[4].style.height=4+'%'
+btn[4].style.transform='scale(1.5)'
+btn[4].value=Math.random()*99
+
+btn[5].style.left=85+'%'
+btn[5].style.top=47+'%'
+btn[5].style.width=7+'%'
+btn[5].style.height=4+'%'
+btn[5].style.transform='scale(1.5)'
+btn[5].value=Math.random()*99
+
+cmmnt[0].style.left=55+'%'
+cmmnt[0].style.top=11+'%'
+cmmnt[0].style.fontSize='1em'
+cmmnt[0].style.textArea='center'
+cmmnt[0].style.transform='scale(0)'
+
+cmmnt[1].style.left=4+'%'
+cmmnt[1].style.top=84+'%'
+cmmnt[1].style.width='19%'
+cmmnt[1].style.height='11%'
+cmmnt[1].style.background='#f00'
+
+cmmnt[2].style.left=27+'%'
+cmmnt[2].style.top=84+'%'
+cmmnt[2].style.width='19%'
+cmmnt[2].style.height='11%'
+cmmnt[2].style.background='#f0f'
+
+cmmnt[3].style.left=49+'%'
+cmmnt[3].style.top=84+'%'
+cmmnt[3].style.width='19%'
+cmmnt[3].style.height='11%'
+cmmnt[3].style.background='#00f'
+
+cnv[0].onmouseover=()=>
+{
+ cnv[0].style.border='11px ridge #ee0'
+}
+cnv[0].onmouseout=()=>
+{
+  cnv[0].style.border='11px ridge #ff0'
+}
+nrnd=0, nln=0
+cnv[0].onclick=()=>
+{
+ if(bbtn0){
+  cntxt.beginPath()
+  cntxt.arc(event.clientX/4+28,event.clientY/4+8,
+    9,0,2*Math.PI)
+  cntxt.stroke()
+   nrnd++
+ }else{
+  cntxt.beginPath()
+  cntxt.moveTo(0,0)
+  cntxt.lineTo(event.clientX/4+28,event.clientY/4+8)
+  cntxt.stroke()
+   nln++  
+ } 
+ cmmnt[0].style.color='#a00' 
+ cmmnt[0].style.transform=
+    'scale(3.4) '
+  cmmnt[0].innerHTML='rnds: '+nrnd+'<br>'+
+     'lns: '+nln
+  
+ setTimeout(()=>{
+  cmmnt[0].style.transform='scale(0) '
+   //cmmnt[0].innerHTML=ncnv
+ },999)
+ 
+}
+
+btn[0].onmouseover=()=>
+{
+ btn[0].style.transform='scale(1.7)'
+ btn[0].style.fontSize='1.2em'
+}
+btn[0].onmouseout=()=>
+{
+ btn[0].style.transform='scale(1.5)'
+ btn[0].style.fontSize='1em'
+}
+bbtn0=1
+btn[0].onclick=()=>
+{   
+  if(bbtn0){
+    btn[0].value='line'
+  }else{
+    btn[0].value='round'
+  } 
+    bbtn0=!bbtn0
+}
+
+btn[1].onmouseover=()=>
+{
+ btn[1].style.transform='scale(1.7)'
+ btn[1].style.fontSize='1em'
+}
+btn[1].onmouseout=()=>
+{
+ btn[1].style.transform='scale(1.5)'
+ btn[1].style.fontSize='0e1'
+}
+btn[1].onclick=()=>
+{
+ cntxt.clearRect(0,0,999,999)
+  nrnd=0
+  nln=0
+ cmmnt[0].style.color='#f00' 
+ cmmnt[0].style.transform= 'scale(4) '
+ cmmnt[0].innerHTML=nrnd+' '+nln
+ 
+ setTimeout(()=>{
+  cmmnt[0].style.transform='scale(0) '
+ },999)
+ 
+}
+
+btn[2].onmouseover=()=>
+{
+ btn[2].style.transform='scale(1.7)'
+ btn[2].style.fontSize='1em'
+}
+btn[2].onmouseout=()=>
+{
+ btn[2].style.transform='scale(1.5)'
+ btn[2].style.fontSize='0em'
+}
+nbtn2=0
+btn[2].onclick=()=>
+{  
+  btn[3].value=Math.round(Math.random()*9)
+  btn[4].value=Math.round(Math.random()*9)
+  btn[5].value=Math.round(Math.random()*9)
+  
+  cmmnt[1].style.background='#'+btn[3].value+'00'
+  cmmnt[2].style.background='#0'+btn[4].value+'0'
+  cmmnt[3].style.background='#00'+btn[5].value
+}   
+
+cmmnt[1].onmouseover=()=>
+{  
+ cmmnt[1].style.transform='scale(1.2)'
+ cmmnt[2].style.transform='scale(0)'
+ cmmnt[3].style.transform='scale(0)'
+}
+cmmnt[1].onmouseout=()=>
+{  
+ cmmnt[1].style.transform='scale(1)'  
+ cmmnt[2].style.transform='scale(1)'
+ cmmnt[3].style.transform='scale(1)'
+}
+
+cmmnt[2].onmouseover=()=>
+{  
+ cmmnt[2].style.transform='scale(1.2)'
+ cmmnt[1].style.transform='scale(0)'
+ cmmnt[3].style.transform='scale(0)'
+}
+cmmnt[2].onmouseout=()=>
+{  
+ cmmnt[2].style.transform='scale(1)' 
+ cmmnt[1].style.transform='scale(1)'  
+ cmmnt[3].style.transform='scale(1)'
+}
+
+cmmnt[3].onmouseover=()=>
+{  
+ cmmnt[3].style.transform='scale(1.2)'
+ cmmnt[1].style.transform='scale(0)'
+ cmmnt[2].style.transform='scale(0)'
+}
+cmmnt[3].onmouseout=()=>
+{  
+ cmmnt[3].style.transform='scale(1)'  
+ cmmnt[1].style.transform='scale(1)'  
+ cmmnt[2].style.transform='scale(1)'
+}
+
+//for(var i=0;i<n;i++) 
+</script> 
+</html>
+
+

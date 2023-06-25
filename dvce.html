@@ -1,0 +1,432 @@
+
+<html>
+
+<head> </head>
+<body>
+
+<style>
+
+body
+{
+background: linear-gradient(#550,#0ff);
+
+}
+
+.bck
+{
+position: absolute;
+transition:1s;
+color:#fff;
+cursor:pointer;
+}
+
+.vlm
+{
+position: absolute;
+transition:1s;
+cursor:pointer;
+}
+
+.nrm
+{
+position: absolute;
+transition:1s;
+cursor:pointer;
+}
+
+.tst
+{
+position: absolute;
+transition:1s;
+cursor:pointer;
+}
+
+.mltmtr
+{
+position: absolute;
+transition:1s;
+cursor:pointer;
+}
+
+.grps
+{
+position: absolute;
+transition:1s;
+cursor:pointer;
+}
+
+</style>
+         
+ <div class=bck ></div>
+ <div class=bck></div>
+ <div class=bck></div>
+ <div class=bck></div>
+ <div class=bck>mix color</div>
+
+ <div class=vlm >volume</div>
+ <div class=vlm>units</div>
+ <div class=vlm>enough<br> type</div>
+ <div class=vlm>is it really<br> for us?</div>
+ 
+ <div class=nrm>normal</div>
+ <div class=nrm>any process...</div>
+ <div class=nrm>ordrd prjct</div>
+ 
+ <div class=tst>
+  <div class=tst></div>
+  <div class=tst>rndm</div>
+  <div class=tst></div>
+ </div>
+ 
+ <div class=mltmtr>
+  <div class=mltmtr>
+   <div class=mltmtr></div>
+  </div>
+  
+  <div class=mltmtr></div>
+ </div>
+ 
+ <button class=grps>grps</button>
+ <div class=grps>switch</div>
+ <div class=grps>by button</div>
+ 
+<script>
+
+bck=document.getElementsByClassName('bck')
+vlm=document.getElementsByClassName('vlm')
+nrm=document.getElementsByClassName('nrm')
+tst=document.getElementsByClassName('tst')
+mltmtr=document.getElementsByClassName('mltmtr')
+grps=document.getElementsByClassName('grps')
+
+
+//for(i=1; i<6; i++)
+ bck[0].style.left=3+'%'
+ bck[0].style.top=4+'%'
+ bck[0].style.width=22+'%'
+ bck[0].style.height=12+'%'
+ bck[0].style.background='#f00'
+ 
+ bck[1].style.left=27+'%'
+ bck[1].style.top=4+'%'
+ bck[1].style.width=22+'%'
+ bck[1].style.height=12+'%'
+ bck[1].style.background='#0f0'
+ 
+ bck[2].style.left=51+'%'
+ bck[2].style.top=4+'%'
+ bck[2].style.width=22+'%'
+ bck[2].style.height=12+'%'
+ bck[2].style.background='#00f'
+ 
+ bck[3].style.left=75+'%'
+ bck[3].style.top=4+'%'
+ bck[3].style.width=22+'%'
+ bck[3].style.height=12+'%'
+ bck[3].style.background='#fff'
+
+ bck[4].style.left=75+'%'
+ bck[4].style.top=5+'%'
+ bck[4].style.zIndex=0
+ bck[4].style.transform='scale(0)'
+
+ vlm[0].style.left=16+'%'
+ vlm[0].style.top=22+'%'
+ vlm[0].style.color='#ff0'
+ vlm[0].style.transform='scale(3)'
+ 
+ vlm[1].style.left=16+'%'
+ vlm[1].style.top=29+'%'
+ vlm[1].style.color='#00f'
+ vlm[1].style.transform='scale(0)'
+ 
+ vlm[2].style.left=16+'%'
+ vlm[2].style.top=35+'%'
+ vlm[2].style.color='#0ff'
+ vlm[2].style.transform='scale(0)'
+ 
+ vlm[3].style.left=16+'%'
+ vlm[3].style.top=44+'%'
+ vlm[3].style.color='#0ff'
+ vlm[3].style.transform='scale(0)'
+ 
+ nrm[0].style.left=16+'%'
+ nrm[0].style.top=28+'%'
+ nrm[0].style.color='#0ff'
+ nrm[0].style.transform='scale(3)'
+ 
+ nrm[1].style.left=16+'%'
+ nrm[1].style.top=33+'%'
+ nrm[1].style.color='#0ff'
+ nrm[1].style.transform='scale(0)'
+ 
+ nrm[2].style.left=16+'%'
+ nrm[2].style.top=43+'%'
+ nrm[2].style.color='#0ff'
+ nrm[2].style.transform='scale(0)'
+ 
+ tst[0].style.left=16+'%'
+ tst[0].style.top=43+'%'
+ tst[0].style.width=22+'%'
+ tst[0].style.height=33+'%'
+ tst[0].style.background='radial-gradient(#f00,#000)'
+ tst[0].style.borderRadius='9%'
+ 
+ dgt=0
+ tst[1].style.left=6+'%'
+ tst[1].style.top=13+'%'
+ tst[1].style.width=88+'%'
+ tst[1].style.height=22+'%'
+ tst[1].style.background='#fff'
+ tst[1].style.textAlign='center'
+ tst[1].style.fontSize='3em'
+ 
+ tst[2].style.left=33+'%'
+ tst[2].style.top=39+'%'
+ tst[2].style.width=33+'%'
+ tst[2].style.height=16+'%'
+ tst[2].style.background='#ff0'
+ tst[2].style.color='#f00'
+ tst[2].style.textAlign='center'
+ tst[2].style.fontSize='2em'
+
+ tst[3].style.left=47+'%'
+ tst[3].style.top=70+'%'
+ tst[3].style.color='#fff'
+ 
+ mltmtr[0].style.left=55+'%'
+ mltmtr[0].style.top=43+'%'
+ mltmtr[0].style.width=22+'%'
+ mltmtr[0].style.height=33+'%'
+ mltmtr[0].style.background='radial-gradient(#0f0,#000)'
+ mltmtr[0].style.borderRadius='9%'
+ 
+ mltmtr[1].style.left=24+'%'
+ mltmtr[1].style.top=24+'%'
+ mltmtr[1].style.width=55+'%'
+ mltmtr[1].style.height=55+'%'
+ mltmtr[1].style.background='#ff0'
+ mltmtr[1].style.borderRadius='55%'
+ 
+ mltmtr[2].style.left=44+'%'
+ mltmtr[2].style.top=11+'%'
+ mltmtr[2].style.width=11+'%'
+ mltmtr[2].style.height=77+'%'
+ mltmtr[2].style.background='radial-gradient(#00f,#000)'
+ 
+ mltmtr[3].style.left=49+'%'
+ mltmtr[3].style.top=11+'%'
+ mltmtr[3].style.transform='scale(0)'
+ 
+ grps[0].style.left=45+'%'
+ grps[0].style.top=55+'%'
+ grps[0].style.transform='scale(2)'
+ 
+ grps[1].style.left=44+'%'
+ grps[1].style.top=50+'%'
+ grps[1].style.transform='scale(0)'
+ 
+ grps[2].style.left=44+'%'
+ grps[2].style.top=50+'%'
+ grps[2].style.transform='scale(0)'
+ 
+//============================================= 
+bck[0].onmouseover=()=>
+{
+  bck[0].style.background='#d00'
+  bck[0].innerHTML='#f00'
+  bck[0].style.fontSize='4em'
+  bck[0].style.textAlign='center'
+  bck[0].style.height='17%'
+} 
+bck[0].onmouseout=()=>
+{
+   bck[0].style.background='#f00'
+   bck[0].innerHTML=''
+   bck[0].style.height='12%'
+} 
+ 
+bck[1].onmouseover=()=>
+{
+  bck[1].style.background='#0d0'
+  bck[1].innerHTML='#0f0'
+  bck[1].style.fontSize='4em'
+  bck[1].style.textAlign='center'
+  bck[1].style.height='17%'
+  
+} 
+bck[1].onmouseout=()=>
+{
+   bck[1].style.background='#0f0'
+   bck[1].innerHTML=''
+   bck[1].style.height='12%'
+} 
+ 
+bck[2].onmouseover=()=>
+{
+  bck[2].style.background='#00d'
+  bck[2].innerHTML='#00f'
+  bck[2].style.fontSize='4em'
+  bck[2].style.textAlign='center'
+  bck[2].style.height='17%'
+} 
+bck[2].onmouseout=()=>
+{
+  bck[2].style.background='#00f'
+  bck[2].innerHTML=''
+  bck[2].style.height='12%'
+} 
+
+bck[3].onmouseover=()=>
+{
+  bck[3].style.background='#000'
+  bck[3].innerHTML='#000'
+  bck[3].style.fontSize='4em'
+  bck[3].style.textAlign='center'
+  bck[3].style.height='17%'
+  bck[4].style.transform='scale(3) translate(-33%,188%)'
+  
+} 
+bck[3].onmouseout=()=>
+{
+  bck[3].style.background='#fff'
+  bck[3].innerHTML=''
+  bck[3].style.height='12%'
+  bck[4].style.transform='scale(0)'
+  
+} 
+
+Ivlm0=0
+bvlm=0
+vlm[0].onmouseover=()=>
+{
+  vlm[0].innerHTML='multiple<br> category'
+  vlm[0].style.zIndex=1
+  vlm[0].style.color='#fff'
+  vlm[0].style.transform='scale(4) translate(22%,33%)'
+  vlm[1].style.transform='scale(4) translate(244%,-55%)'
+  vlm[2].style.transform=
+   'scale(4) translate(200%,-11%) skew(22deg)'
+  vlm[2].style.color='#808'
+  vlm[3].style.transform=
+   'scale(4) translate(204%,-11%) skew(-22deg)'
+  vlm[3].style.color='#880'
+
+} 
+vlm[0].onmouseout=()=>
+{
+  vlm[0].innerHTML='volume'
+  vlm[0].style.color='#ff0'
+  vlm[0].style.transform='scale(3)'
+  vlm[1].style.transform='scale(0) '
+  vlm[2].style.transform='scale(0) '
+  vlm[3].style.transform='scale(0) '
+} 
+
+nrm[0].onmouseover=()=>
+{
+  nrm[0].innerHTML='distrbtn'
+  nrm[0].style.color='#066'
+  nrm[0].style.transform='scale(4) skew(44deg)'
+  nrm[1].style.color='#660'
+  nrm[1].style.transform=
+   'scale(4) translate(100%,-66%) skew(22deg)'
+  nrm[2].style.color='#066'
+  nrm[2].style.transform=
+   'scale(4) translate(122%,-66%) skew(-22deg)'
+} 
+nrm[0].onmouseout=()=>
+{
+  nrm[0].innerHTML='normal'
+  nrm[0].style.color='#0ff'
+  nrm[0].style.transform='scale(3)'
+  nrm[1].style.color='#660'
+  nrm[1].style.transform='scale(0)'
+  nrm[2].style.color='#606'
+  nrm[2].style.transform='scale(0)'
+} 
+
+Itst=0
+tst[0].onmouseover=()=>
+{   
+  tst[0].style.transform='scale(1.2)'
+  Itst= setInterval(()=>{
+   tst[1].innerHTML=dgt
+    dgt++
+     },999) 
+  
+} 
+tst[0].onmouseout=()=>
+{ dgt=0
+   tst[1].innerHTML=dgt
+  tst[0].style.transform='scale(1)'
+  clearInterval(Itst)
+  tst[1].innerHTML=''
+  
+} 
+
+tst[2].onmouseover=()=>
+{ 
+ dgt=Math.round(Math.random()*99)
+   tst[3].innerHTML=dgt
+ tst[3].style.transform='scale(4)'
+ 
+} 
+tst[2].onmouseout=()=>
+{ 
+ tst[3].style.transform='scale(0)'
+ 
+} 
+
+mltmtr[0].onmouseover=()=>
+{ 
+ mltmtr[0].style.transform='scale(1.2)'
+ mltmtr[2].style.transform='scale(1.2,1) rotate(-33deg)'
+ mltmtr[3].style.transform='scale(3) translate(0,-111%)'
+ mltmtr[3].innerHTML='on'
+ 
+ tst[0].onmouseover()
+} 
+mltmtr[0].onmouseout=()=>
+{ 
+ mltmtr[0].style.transform='scale(1)'
+ mltmtr[2].style.transform='scale(1)'
+ mltmtr[3].style.transform='scale(0) '
+ mltmtr[3].innerHTML='off'
+ 
+ tst[0].onmouseout()
+} 
+
+grps[0].onclick=()=>
+{ 
+ mltmtr[0].onmouseover()
+  grps[0].innerHTML='rept'
+ grps[1].style.color='#0f0'
+ grps[1].style.transform=
+  'scale(3) translate(8%,-299%) skew(35deg)'
+ grps[2].style.color='#f00'
+ grps[2].style.transform=
+  'scale(3) translate(111%,-288%) skew(-35deg)'
+   
+} 
+grps[0].onmouseover=()=>
+{ 
+grps[0].style.transform='scale(2.6)'
+grps[0].style.color='#f00'
+ grps[0].innerHTML='act!'
+}
+grps[0].onmouseout=()=>
+{ 
+ mltmtr[0].onmouseout()
+ grps[0].style.transform='scale(2)'
+ grps[0].style.color='#000'
+ grps[1].style.transform='scale(0)'
+ grps[2].style.transform='scale(0)'
+  grps[0].innerHTML='grps'
+} 
+
+
+</script>
+</body>
+
+</html>
