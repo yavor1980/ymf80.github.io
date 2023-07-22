@@ -1,0 +1,282 @@
+
+<html>
+<body id=idbd>
+<style>
+
+#idbd
+{
+background:linear-gradient(#bb0,#033);
+}
+
+button
+{
+position:absolute;
+background:#b00;
+color:#ff0;
+left:11%;
+top:11%;
+width:11%;
+font-size:2.3em;
+border-radius:33%;
+transition:1s;
+cursor:pointer;
+}
+button:hover
+{
+transform:scale(1.2);
+}
+
+.pnp
+{
+position:absolute;
+transition:1s;
+cursor:pointer;
+z-index:1;
+}
+.pnp:hover
+{
+transform:scale(1.2);
+}
+
+.tpnp
+{
+position:absolute;
+transition:1s;
+}
+
+.fnctn
+{
+position:absolute;
+transition:1s;
+}
+
+</style>
+
+<button>pnp</button>
+
+<div class=pnp>
+ <div class=pnp></div>
+ <div class=pnp></div>
+ <div class=pnp></div>
+ <div class=pnp>
+  <div class=pnp></div>
+ </div>
+</div> 
+
+<div class=tpnp>
+ bipolar<br>&nbsp transistor
+</div>
+<div class=tpnp>
+ base
+</div>
+<div class=tpnp>
+ collector
+</div>
+<div class=tpnp>
+ emitter
+</div>
+<div class=tpnp>
+ control<br>&nbsp circuit
+</div>
+<div class=tpnp>
+ working<br>&nbsp circuit
+</div>
+
+<div class=fnctn>
+ function
+</div>
+<div class=fnctn>
+ signal<br>&nbsp amplification 
+</div>
+<div class=fnctn>
+ TTL
+</div>
+
+<script>
+btn=document.getElementsByTagName('button')
+pnp=document.getElementsByClassName('pnp')
+tpnp=document.getElementsByClassName('tpnp')
+fnctn=document.getElementsByClassName('fnctn')
+
+
+pnp[0].style.left='33%'
+pnp[0].style.top='33%'
+pnp[0].style.width='22%'
+pnp[0].style.height='33%' 
+pnp[0].style.border='11px ridge #707'
+pnp[0].style.borderRadius='55%'
+ 
+pnp[1].style.left='22%'
+pnp[1].style.top='-11%'
+pnp[1].style.width='14%'
+pnp[1].style.height='124%' 
+pnp[1].style.background='#707'
+pnp[1].style.borderRadius='15%'
+
+pnp[2].style.left='-44%'
+pnp[2].style.top='46%'
+pnp[2].style.width='74%'
+pnp[2].style.height='8%' 
+pnp[2].style.background='#707'
+pnp[2].style.borderRadius='15%'
+
+pnp[3].style.left='22%'
+pnp[3].style.top='24%'
+pnp[3].style.width='67%'
+pnp[3].style.height='8%' 
+pnp[3].style.background='#707'
+pnp[3].style.borderRadius='15%'
+pnp[3].style.transform='rotate(-22deg)'
+
+pnp[4].style.left='22%'
+pnp[4].style.top='68%'
+pnp[4].style.width='69%'
+pnp[4].style.height='8%' 
+pnp[4].style.background='#707'
+pnp[4].style.borderRadius='15%'
+pnp[4].style.transform='rotate(22deg)'
+
+pnp[5].style.left='77%'
+pnp[5].style.top='-70%'
+pnp[5].style.width='0'
+pnp[5].style.height='0'
+pnp[5].style.borderLeft='22px solid transparent'
+pnp[5].style.borderRight='22px solid transparent'
+pnp[5].style.borderTop='0px solid #909'
+pnp[5].style.borderBottom='44px solid #800'
+pnp[5].style.transform='rotate(88deg)' 
+
+tpnp[0].style.left='67%'
+tpnp[0].style.top='11%'
+tpnp[0].style.opacity=0
+tpnp[0].style.transform='scale(0)'
+
+tpnp[1].style.left='67%'
+tpnp[1].style.top='11%'
+tpnp[1].style.opacity=0
+tpnp[1].style.transform='scale(0)'
+
+tpnp[2].style.left='67%'
+tpnp[2].style.top='11%'
+tpnp[2].style.opacity=0
+tpnp[2].style.transform='scale(0)'
+
+tpnp[3].style.left='67%'
+tpnp[3].style.top='11%'
+tpnp[3].style.opacity=0
+tpnp[3].style.transform='scale(0)'
+
+tpnp[4].style.left='67%'
+tpnp[4].style.top='11%'
+tpnp[4].style.opacity=0
+tpnp[4].style.transform='scale(0)'
+
+tpnp[5].style.left='67%'
+tpnp[5].style.top='11%'
+tpnp[5].style.opacity=0
+tpnp[5].style.transform='scale(0)'
+
+fnctn[0].style.left='77%'
+fnctn[0].style.top='33%'
+fnctn[0].style.cursor='pointer'
+fnctn[0].style.color='#330'
+fnctn[0].style.transform=
+ 'scale(3) skew(-22deg)'
+
+fnctn[1].style.left='66%'
+fnctn[1].style.top='30%'
+fnctn[1].style.transform='scale(0)'
+
+fnctn[2].style.left='66%'
+fnctn[2].style.top='30%'
+fnctn[2].style.transform='scale(0)'
+
+
+bbtn=1
+btn[0].onclick=()=>
+{
+ if(bbtn){
+  btn[0].innerHTML='npn'
+  pnp[5].style.transform=
+   'rotate(-84deg)translate(-18%,-228%)'
+ }else{
+  btn[0].innerHTML='pnp'
+  pnp[5].style.transform='rotate(88deg)'
+ }
+ bbtn=!bbtn
+}
+
+pnp[0].onmouseover=()=>
+{
+ pnp[2].style.transform='translate(-3%,0)'
+ tpnp[0].style.transform=
+  'scale(3) translate(-4%,0) skew(22deg)'
+ tpnp[0].style.color='#f00'
+ tpnp[0].style.opacity=1
+ tpnp[1].style.transform=
+  'scale(3) translate(-333%,0) skew(22deg)'
+ tpnp[1].style.color='#0f0' 
+ tpnp[1].style.opacity=1
+ tpnp[2].style.transform=
+  'scale(3) translate(0,222%) skew(22deg)'
+ tpnp[2].style.color='#0f0' 
+ tpnp[2].style.opacity=1
+ tpnp[3].style.transform=
+  'scale(3) translate(0,777%) skew(22deg)'
+ tpnp[3].style.color='#0f0' 
+ tpnp[3].style.opacity=1
+ tpnp[4].style.transform=
+  'scale(3) translate(-400%,333%) skew(22deg)'
+ tpnp[4].style.color='#f00' 
+ tpnp[4].style.opacity=1
+ tpnp[5].style.transform=
+  'scale(3) translate(44%,226%) skew(22deg)'
+ tpnp[5].style.color='#800'
+ tpnp[5].style.opacity=1
+}
+pnp[0].onmouseout=()=>
+{
+ pnp[2].style.transform='translate(0,0)'
+ tpnp[0].style.transform='scale(0)'
+ tpnp[0].style.color='#000'
+ tpnp[0].style.opacity=0
+ tpnp[1].style.transform='scale(0)'
+ tpnp[1].style.color='#f00' 
+ tpnp[1].style.opacity=0
+ tpnp[2].style.transform='scale(0)'
+ tpnp[2].style.color='#f00' 
+ tpnp[2].style.opacity=0
+ tpnp[3].style.transform='scale(0)'
+ tpnp[3].style.color='#f00' 
+ tpnp[3].style.opacity=0
+ tpnp[4].style.transform='scale(0)'
+ tpnp[4].style.color='#f00' 
+ tpnp[4].style.opacity=0
+ tpnp[5].style.transform='scale(0)'
+ tpnp[5].style.color='#f00'
+ tpnp[5].style.opacity=0
+}
+
+fnctn[0].onmouseover=()=>
+{
+ fnctn[0].style.color='#900'
+ fnctn[0].style.transform='scale(4)'
+ fnctn[1].style.color='#f00'
+ fnctn[1].style.transform=
+  'scale(4) translate(-44%,-77%) skew(22deg)'
+ fnctn[2].style.color='#ff0'
+ fnctn[2].style.transform=
+  'scale(4) translate(66%,-188%) skew(22deg)'
+}
+fnctn[0].onmouseout=()=>
+{
+ fnctn[0].style.color='#000'
+ fnctn[0].style.transform=
+  'scale(3) skew(-22deg)'
+ fnctn[1].style.transform='scale(0)'
+ fnctn[2].style.transform='scale(0)'
+}
+
+</script>
+</body>
+</html>
