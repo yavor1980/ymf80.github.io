@@ -1,0 +1,430 @@
+<DOCTYPE html>
+<html>
+<style>
+body
+{
+ background:#ee0;
+}
+
+button
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ font-size:1.5em;
+}
+button:hover
+{
+ transform:scale(1.2);
+}
+
+.wrs
+{
+ position:absolute;
+ transition:1s;
+} 
+
+.elm
+{
+ position:absolute;
+ transition:1s;
+} 
+.elm:hover
+{
+ transform:scale(1.2);
+} 
+
+.clma
+{
+ position:absolute;
+ transition:1s;
+} 
+.clma:hover
+{
+ transform:scale(1.2);
+} 
+
+.telm
+{
+ position:absolute;
+ transition:1s;
+} 
+
+.tprcss
+{
+ position:absolute;
+ transition:1s;
+} 
+
+</style>
+<body id=idbd>
+
+<button>change</button>
+<button>on</button>
+
+<div class=wrs>
+ <div class=wrs></div>
+  <div class=wrs>
+   <div class=elm>>></div>
+  </div>
+  <div class=wrs>
+   <div class=elm></div>
+   <div class=clma></div>
+  </div>
+  <div class=wrs>
+   <div class=elm>||</div>
+   <div class=clma></div>
+  </div> 
+ <div class=telm>cirquit</div>
+ <div class=telm></div>
+ <div class=telm>integrator</div>
+</div> 
+
+<div class=tprcss>cpctr charging...</div>
+<div class=tprcss>pulse<br>&nbsp smoothing</div>
+
+ 
+
+
+<script>
+btn=document.getElementsByTagName('button')
+wrs=document.getElementsByClassName('wrs')
+elm=document.getElementsByClassName('elm')
+clma=document.getElementsByClassName('clma')
+
+tprcss=document.getElementsByClassName('tprcss')
+
+telm=document.getElementsByClassName('telm')
+
+btn[0].style.left=4+'%'
+btn[0].style.top=5+'%'
+btn[0].style.width=9+'%'
+btn[0].style.height=5+'%'
+btn[0].style.background='#b0b'
+btn[0].style.color='#0b0'
+btn[0].style.borderRadius=22+'%'
+ 
+btn[1].style.left=4+'%'
+btn[1].style.top=11+'%'
+btn[1].style.width=9+'%'
+btn[1].style.height=5+'%'
+btn[1].style.background='#909'
+btn[1].style.color='#0b0'
+btn[1].style.borderRadius=29+'%'
+ 
+wrs[0].style.left=16+'%'
+wrs[0].style.top=11+'%'
+wrs[0].style.width=60+'%'
+wrs[0].style.height=59+'%'
+
+wrs[1].style.left=17+'%'
+wrs[1].style.top=88+'%'
+wrs[1].style.width=11+'%'
+wrs[1].style.height=7+'%'
+wrs[1].style.background='#000'
+wrs[1].style.cursor='pointer'
+
+wrs[2].style.left=21.5+'%'
+wrs[2].style.top=33+'%'
+wrs[2].style.width=1.2+'%'
+wrs[2].style.height=55+'%'
+wrs[2].style.background='#000'
+
+wrs[3].style.left=21.5+'%'
+wrs[3].style.top=32+'%'
+wrs[3].style.width=44+'%'
+wrs[3].style.height=2+'%'
+wrs[3].style.background='#000'
+ 
+wrs[4].style.left=55+'%'
+wrs[4].style.top=33+'%'
+wrs[4].style.width=1.3+'%'
+wrs[4].style.height=55+'%'
+wrs[4].style.background='#000'
+wrs[4].style.cursor='pointer'
+ 
+elm[0].style.left=-244+'%'
+elm[0].style.top=20+'%'
+elm[0].style.width=399+'%'
+elm[0].style.height=30+'%'
+elm[0].style.background='#999'
+elm[0].style.cursor='pointer' 
+elm[0].style.borderRadius=55+'%'
+elm[0].style.padding='9px'
+elm[0].style.transform='rotate(-90deg)'
+elm[0].style.fontSize='3em'
+ 
+elm[1].style.left=28+'%'
+elm[1].style.top=-222+'%'
+elm[1].style.width=28+'%'
+elm[1].style.height=555+'%'
+elm[1].style.background='#999'
+elm[1].style.cursor='pointer'
+elm[1].style.zIndex=1
+ 
+elm[2].style.left=99+'%'
+elm[2].style.top=38+'%'
+elm[2].style.background='#ee0'
+elm[2].style.color='#777'
+elm[2].style.cursor='pointer'
+elm[2].style.transform=
+ 'scale(4) rotate(90deg)'
+
+clma[0].style.left=99+'%'
+clma[0].style.top=-222+'%'
+clma[0].style.width=8+'%'
+clma[0].style.height=255+'%'
+clma[0].style.cursor='pointer'
+clma[0].style.borderRadius=55+'%'
+clma[0].style.border='11px ridge #000'
+
+clma[1].style.left=-177+'%'
+clma[1].style.bottom=-14+'%'
+clma[1].style.width=222+'%'
+clma[1].style.height=8+'%'
+clma[1].style.cursor='pointer'
+clma[1].style.borderRadius=55+'%'
+clma[1].style.border='11px ridge #000'
+
+telm[0].style.left=86+'%'
+telm[0].style.top=4+'%'
+telm[0].style.color='#b00'
+telm[0].style.cursor='pointer'
+telm[0].style.transform='scale(4)'
+telm[0].style.border='4px ridge transparent'
+
+telm[1].style.left=20+'%'
+telm[1].style.top=77+'%'
+telm[1].style.transform='scale(0)'
+
+telm[2].style.left=44+'%'
+telm[2].style.top=9+'%'
+telm[2].style.color='#b00'
+telm[2].style.transform='scale(3)'
+
+tprcss[0].style.left=77+'%'
+tprcss[0].style.top=11+'%'
+tprcss[0].style.color='#b00'
+tprcss[0].style.transform='scale(0)'
+
+tprcss[1].style.left=77+'%'
+tprcss[1].style.top=11+'%'
+tprcss[1].style.color='#b00'
+tprcss[1].style.transform='scale(0)'
+
+bbtn0=1
+btn[0].onmouseover=()=>
+{
+ btn[0].style.color='#0f0'
+}
+btn[0].onmouseout=()=>
+{
+ btn[0].style.color='#0b0'
+}
+btn[0].onclick=()=>
+{
+if(bbtn0)
+{
+ elm[1].style.transform=
+  'translate(130%,233%) rotate(90deg)'
+ elm[2].style.transform=
+  'scale(4) translate(-399%,-133%) rotate(0deg)'
+ elm[2].style.transform='#0b0'
+  telm[2].innerHTML='differentiator'
+ }else{
+ elm[1].style.transform='rotate(0deg)'
+ elm[2].style.transform=
+  'scale(4)  rotate(90deg)'
+  telm[2].innerHTML='integrator'
+ }
+  bbtn0=!bbtn0
+}
+
+bcbtn1=9
+Ibtn1=0
+bbtn1=0
+btn[1].onmouseover=()=>
+{
+ btn[1].style.color='#0f0'
+}
+btn[1].onmouseout=()=>
+{
+ btn[1].style.color='#0b0'
+}
+btn[1].onclick=()=>
+{
+ elm[0].style.background='#f00'
+ elm[0].style.transform=
+  'scale(1.2) rotate(-90deg)'
+ elm[1].style.background='#f00'
+ elm[1].style.transform='scale(1.2)'
+ elm[2].style.color='#f00'
+ elm[2].style.transform=
+  'scale(5) rotate(90deg)'
+ tprcss[0].style.transform=
+  'scale(3) translate(0,-222%) skew(11deg)'
+ tprcss[1].style.transform=
+  'scale(3) skew(-11deg)'
+  
+ if(bcbtn1){ 
+  Ibtn1=setInterval(()=>{
+  if(bbtn1){  
+   elm[0].style.background='#f00'
+   elm[0].style.transform=
+    'scale(1.2) rotate(-90deg)'
+   elm[1].style.background='#f00'
+   elm[1].style.transform='scale(1.2)'
+   elm[2].style.color='#f00'
+   elm[2].style.transform=
+    'scale(5) rotate(90deg)'
+  }else{
+   elm[0].style.background='#a00'
+   elm[0].style.transform=
+    'scale(1) rotate(-90deg)'
+   elm[1].style.background='#a00'
+   elm[1].style.transform='scale(1)'
+   elm[2].style.color='#a00'
+   elm[2].style.transform=
+    'scale(4) rotate(90deg)'
+  }
+    bbtn1=!bbtn1
+ },999)
+   btn[1].innerHTML='off'
+}else{
+   clearInterval(Ibtn1)
+  elm[0].style.background='#999'
+  elm[0].style.transform=
+   'scale(1) rotate(-90deg)'
+  elm[1].style.background='#999'
+  elm[1].style.transform='scale(1)' 
+  elm[2].style.color='#999'
+  elm[2].style.transform=
+   'scale(4) rotate(90deg)'
+  tprcss[0].style.transform='scale(0)'
+  tprcss[1].style.transform='scale(0)' 
+   btn[1].innerHTML='on'
+ }  
+ bcbtn1=!bcbtn1
+}
+
+wrs[0].onmouseover=()=>
+{
+ wrs[0].style.background='#ff0'
+}
+wrs[0].onmouseout=()=>
+{
+ wrs[0].style.background=''
+}
+
+wrs[1].onmouseover=()=>
+{
+ wrs[1].style.transform='scale(1.2)'
+ telm[1].style.color='#f00'
+ telm[1].style.transform=
+  'scale(3) translate(66%,-33%)'
+  telm[1].innerHTML='ground'
+}
+wrs[1].onmouseout=()=>
+{
+ wrs[1].style.transform='scale(1)'
+ telm[1].style.transform='scale(0)'
+}
+
+elm[0].onmouseover=()=>
+{
+ elm[0].style.transform=
+  'scale(1.2) rotate(-90deg)'
+ telm[1].style.transform=
+  'scale(3) translate(111%,-255%)'
+ telm[1].style.color='#800'
+  telm[1].innerHTML='current<br>&nbsp source'
+}
+elm[0].onmouseout=()=>
+{
+ elm[0].style.transform=
+  'scale(1) rotate(-90deg)'
+ telm[1].style.transform='scale(0)'
+ telm[1].style.color='#000'
+}
+
+elm[1].onmouseover=()=>
+{
+ elm[1].style.transform='scale(1.2) '
+ telm[1].style.transform=
+  'scale(3) translate(-7%,-444%)'
+ telm[1].style.color='#090'
+  telm[1].innerHTML='resistor'
+}
+elm[1].onmouseout=()=>
+{
+ elm[1].style.transform='scale(1)'
+ telm[1].style.transform='scale(0)'
+ telm[1].style.color='#000'
+}
+
+elm[2].onmouseover=()=>
+{
+ elm[2].style.transform=
+  'scale(5) rotate(90deg) '
+ telm[1].style.transform=
+  'scale(3) translate(55%,-88%)'
+ telm[1].style.color='#009'
+  telm[1].innerHTML='capacity'
+}
+elm[2].onmouseout=()=>
+{
+ elm[2].style.transform=
+  'scale(4) rotate(90deg)'
+ telm[1].style.transform='scale(0)'
+ telm[1].style.color='#000'
+}
+
+clma[0].onmouseover=()=>
+{
+ telm[1].style.transform=
+  'scale(3) translate(222%,-222%)'
+ telm[1].style.color='#006'
+  telm[1].innerHTML='clemma'
+}
+clma[0].onmouseout=()=>
+{
+ telm[1].style.transform='scale(0)'
+ telm[1].style.color='#000'
+}
+
+clma[1].onmouseover=()=>
+{
+ telm[1].style.transform=
+  'scale(3) translate(222%,0%)'
+ telm[1].style.color='#006'
+  telm[1].innerHTML='clemma'
+}
+clma[1].onmouseout=()=>
+{
+ telm[1].style.transform='scale(0)'
+ telm[1].style.color='#000'
+}
+
+telm[0].onmouseover=()=>
+{
+ telm[0].style.transform='scale(5)'
+ telm[0].style.border='4px ridge #099'
+ telm[2].style.transform=
+  'scale(4.3) translate(-22%,-22%)'
+ telm[2].style.color='#700' 
+  telm[2].innerHTML='integrator'
+}
+telm[0].onmouseout=()=>
+{
+ telm[0].style.transform='scale(4)'
+ telm[0].style.border='none'
+ telm[2].style.transform='scale(4)'
+ telm[2].style.color='#b00'
+}
+ 
+
+//  'radial-gradient(#000,#999)'
+</script>
+
+</body>
+</html>
