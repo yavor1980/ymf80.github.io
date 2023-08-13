@@ -7,6 +7,18 @@
  background:linear-gradient(0deg,#00f,#0f0);
 }
 
+#idsw
+{
+position:absolute;
+width:11%;
+height:44%;
+left:83%;
+top:44%; 
+z-index:1;
+transition:2s;
+transition-timing-function:ease;
+}
+
 .btn
 {
 position:absolute;
@@ -18,36 +30,14 @@ cursor:pointer;
 transition:1s;
 background:black;
 color:white;
-border-bottom-left-radius:55%;
-border-bottom-right-radius:55%;
-border-top-left-radius:22%;
-border-top-right-radius:22%;
 font-size:3em;
-}
-.btn:hover
-{
-transform:scale(1.3);
-}
-
-#idsw
-{
-position:absolute;
-width:11%;
-height:44%;
-left:83%;
-top:44%; 
-z-index:1;
-transition:2s;
-transition-timing-function:ease;
-
 }
 
 .s
 {
 position:absolute;
-transition:2s;
+transition:0.2s;
 cursor:pointer;
-
 }
 
 .nrv
@@ -56,7 +46,6 @@ position:absolute;
 transition:1s;
 transform:scale(2);
 cursor:pointer;
-
 }
 
 .trtn
@@ -66,7 +55,6 @@ z-index:1;
 transition:1s;
 transform:scale(2);
 cursor:pointer;
-
 }
 
 .instr
@@ -74,19 +62,18 @@ cursor:pointer;
 position:absolute;
 transition:1s;
 transform:scale(2);
-
 }
 
 .smth
 {
 position:absolute;
 transition:1s;
-
 }
 
 </style>
 
 <button class=btn>HIT</button>
+
 <img src='img/sword.png' id=idsw >
 
 <div class=s>
@@ -139,20 +126,16 @@ transition:1s;
 </div>
 
 <script>
-
-  btn=document.getElementsByClassName('btn')
-  s=document.getElementsByClassName('s')
-  nrv=document.getElementsByClassName('nrv')
-  trtn=document.getElementsByClassName('trtn')
-  instr=document.getElementsByClassName('instr')
-  smth=document.getElementsByClassName('smth')
+ btn=document.getElementsByClassName('btn')
+ s=document.getElementsByClassName('s')
+ nrv=document.getElementsByClassName('nrv')
+ trtn=document.getElementsByClassName('trtn')
+ instr=document.getElementsByClassName('instr')
+ smth=document.getElementsByClassName('smth')
     
-o=
-{  b:1,
-init:function()
-{
  
- 
+ btn[0].style.borderRadius='33%'
+	
  s[0].style.left='11%'
  s[0].style.top='22%'
  s[0].style.width='11%'
@@ -249,64 +232,67 @@ init:function()
  smth[1].style.left='44%'
  smth[1].style.top='4%'
  smth[1].style.transform='scale(0)'
-},
 
-cl:function()
+b=0
+Icl=0
+function cl()
 {
- if(o.b) 
-  s[0].style.transform='scale(1.4)'
+ if(b) 
+  s[0].style.transform='scale(1.1)'
     else
-  s[0].style.transform='scale(0.6)'
-    o.b=!o.b
-},
-
+  s[0].style.transform='scale(0.9)'
+    b=!b
 }	 
-   o.init()
-   
-    setInterval(o.cl, 222)
-    
+ Icl=setInterval(cl, 222)
+ 
+btn[0].onmouseover=()=>
+{
+ btn[0].style.transform='scale(1.2)'
+}
+btn[0].onmouseout=()=>
+{
+ btn[0].style.transform='scale(1)'
+}
 btn[0].onclick=()=>
 {
+ idsw.style.left='28%'
  idsw.style.transform=
   'rotate(88deg) translate(-111%,0) scale(1)'
-  s[2].style.transform='scale(2)'
-  s[4].style.transform='scale(2)'
-  s[2].style.background='red'
-  s[4].style.background='red'
-
-  nrv[0].innerHTML='strike'
-  nrv[0].style.transform='scale(4)'
-  nrv[0].style.color='red'
-  trtn[0].innerHTML='no danger'
-  trtn[0].style.transform='scale(4)'
-  trtn[0].style.color='#ff0'
-  idsw.style.left='28%'
-  btn[0].style.transform='scale(0)'
-  smth[0].style.transform=
-   'scale(3) translate(33%,111%) skew(22deg)'
-  smth[0].style.color='#b00'
-  smth[1].style.transform=
-   'scale(3) translate(-44%,199%) skew(-22deg)'
-  smth[1].style.color='#700'
+ s[2].style.transform='scale(2)'
+ s[4].style.transform='scale(2)'
+ s[2].style.background='red'
+ s[4].style.background='red'
+ nrv[0].innerHTML='strike'
+ nrv[0].style.transform='scale(4)'
+ nrv[0].style.color='red'
+ trtn[0].innerHTML='no danger'
+ trtn[0].style.transform='scale(4)'
+ trtn[0].style.color='#ff0'
+ btn[0].style.transform='scale(0)'
+ smth[0].style.transform=
+  'scale(3) translate(33%,111%) skew(22deg)'
+ smth[0].style.color='#b00'
+ smth[1].style.transform=
+  'scale(3) translate(-44%,199%) skew(-22deg)'
+ smth[1].style.color='#700'
   
  setTimeout(()=>
  {
-    idsw.style.transform='translate(0,0)';
-	s[2].style.transform='scale(1)'
-    s[4].style.transform='scale(1)'
-	s[2].style.background='#000'
-    s[4].style.background='#000'
-    nrv[0].innerHTML='Asthenia'
-    nrv[0].style.transform='scale(2)'
-    nrv[0].style.color='#000'
-	trtn[0].innerHTML='Treatment'
-    trtn[0].style.transform='scale(2)'
-    trtn[0].style.color='#000'
-	smth[0].style.transform='scale(0)'
-	smth[1].style.transform='scale(0)'
-	idsw.style.left='77%'
-	btn[0].style.transform='scale(1)'
-	
+  idsw.style.left='77%'
+  idsw.style.transform='translate(0,0)';
+  btn[0].style.transform='scale(1)'
+  s[2].style.transform='scale(1)'
+  s[4].style.transform='scale(1)'
+  s[2].style.background='#000'
+  s[4].style.background='#000'
+   nrv[0].innerHTML='Asthenia'
+  nrv[0].style.transform='scale(2)'
+  nrv[0].style.color='#000'
+   trtn[0].innerHTML='Treatment'
+  trtn[0].style.transform='scale(2)'
+  trtn[0].style.color='#000'
+  smth[0].style.transform='scale(0)'
+  smth[1].style.transform='scale(0)'
  },
  
  2222)
@@ -316,17 +302,17 @@ btn[0].onclick=()=>
 idsw.onmouseover=()=>
 {
   btn[0].onclick()
-
 }
 
 Is=0
-bs=0
+bs=1
 s[0].onmouseover=()=>
 {
  s[0].style.background='#666'
+ s[0].style.transform='scale(1.1)'
  instr[0].style.transform='scale(3)'
  instr[1].style.transform='scale(3)'
-
+ clearInterval(Icl)
  Is=setInterval(()=>{
   if(bs){ 
    instr[2].style.transform='scale(3)'
@@ -351,9 +337,9 @@ s[0].onmouseout=()=>
  instr[1].style.transform='scale(0)'
  instr[2].style.transform='scale(0)' 
  instr[3].style.transform='scale(0)'
- instr[3].innerHTML='sbj'
- 
+  bs=1
   clearInterval(Is)
+ Icl=setInterval(cl, 222)
 }
 s[0].onclick=()=>
 {
@@ -393,7 +379,6 @@ nrv[0].onmouseover=()=>
 	  }
     bnrv=!bnrv
  },1111)
- 
 }
 nrv[0].onmouseout=()=>
 {
@@ -412,13 +397,12 @@ btrt=0
 Itrt=0
 trtn[0].onmouseover=()=>
 {
-  trtn[0].style.color='red '
-  trtn[0].style.transform='scale(3) '
-  trtn[1].style.transform='scale(2) '
-  trtn[1].style.color='#808 '
-  trtn[2].style.transform='scale(2) '
-  trtn[2].style.color='#bb0 '
-  
+ trtn[0].style.color='red '
+ trtn[0].style.transform='scale(3) '
+ trtn[1].style.transform='scale(2) '
+ trtn[1].style.color='#808 '
+ trtn[2].style.transform='scale(2) '
+ trtn[2].style.color='#bb0 '
  Itrt=setInterval(()=>{
    if(btrt){
   trtn[3].style.transform='scale(3) '
@@ -428,20 +412,17 @@ trtn[0].onmouseover=()=>
   trtn[3].style.color='#770 '
   }
    btrt=!btrt
-    
  },999)
-   
 }
 trtn[0].onmouseout=()=>
 {
-  trtn[0].style.color='black '
-  trtn[0].style.transform='scale(2) '
-  trtn[1].style.transform='scale(0) '
-  trtn[2].style.transform='scale(0) '
-  trtn[2].style.color='#fff '
-  trtn[3].style.transform='scale(0) '
-  trtn[3].style.color='#fff '
- 
+ trtn[0].style.color='black '
+ trtn[0].style.transform='scale(2) '
+ trtn[1].style.transform='scale(0) '
+ trtn[2].style.transform='scale(0) '
+ trtn[2].style.color='#fff '
+ trtn[3].style.transform='scale(0) '
+ trtn[3].style.color='#fff '
    clearInterval(Itrt)
 }
 	
