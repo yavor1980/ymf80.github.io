@@ -5,7 +5,6 @@
 #idbd
 { 
  background:linear-gradient(#0c0,#00c);
-
 }
 
 #idb
@@ -35,19 +34,18 @@
 { 
  position:absolute; 
  transition:2s;
-  border-radius:55%;
-  left:22%;
-  top:33%;
-  width:11%;
-  height:18%;
-  cursor:pointer;
+ border-radius:55%;
+ left:22%;
+ top:33%;
+ width:11%;
+ height:18%;
+ cursor:pointer;
 }
 .fc
 { 
  position:absolute; 
  transition:2s;
-  border-radius:55%;
-  
+ border-radius:55%;
 }
 
 .wtr
@@ -56,7 +54,6 @@
  transition:1s;
  text-align:center;
  cursor:pointer;
-  
 }
 
 .prgr
@@ -65,42 +62,34 @@
  transition:1s;
  text-align:center;
  cursor:pointer;
-  
 }
 
 .stn
 { 
  position:absolute; 
  transition:1s;
-  text-align:center;
-  cursor:pointer;
-  
+ text-align:center;
+ cursor:pointer;
 }
 .zn
 { 
  position:absolute; 
  transition:1s;
-  text-align:center;
-  cursor:pointer;
-  
+ text-align:center;
+ cursor:pointer;
 }
 .st
 { 
  position:absolute; 
  transition:1s;
-  text-align:center;
-  cursor:pointer;
-  
+ text-align:center;
+ cursor:pointer;
 } 
  
- 
-
-
 </style>
-
 <button id=idb>come</button>
 
-<img id=idaq src='imgs/aquarium.png'   >
+<img id=idaq src='img/aquarium.png'   >
 
 <div class=fsh>
  <div class=fsh> 
@@ -122,8 +111,8 @@
   sequences
  </div>
  
- <div class=prgr></div>
- <div class=prgr></div>
+ <div class=prgr>button</div>
+ <div class=prgr>function</div>
  
  <div class=stn></div>
  <div class=stn>
@@ -139,18 +128,17 @@
   dynamic<br> site
  </div>
  <div class=st>
-  fields<br> coords
+  php<br> python
  </div>
  
  <div class=zn>
   <b ><</b>&nbsp &nbsp &nbsp &nbsp &nbsp <b>></b>
  </div>
- 
+ <div class=zn></div>
 
 <script>
 fsh=document.getElementsByClassName('fsh') 
 fc=document.getElementsByClassName('fc')
-
 wtr=document.getElementsByClassName('wtr')
 prgr=document.getElementsByClassName('prgr')
 stn=document.getElementsByClassName('stn')
@@ -158,11 +146,6 @@ st=document.getElementsByClassName('st')
 zn=document.getElementsByClassName('zn')
  
  
-o=
-{ b:0,
-
-init:function()
-{
 fsh[1].style.background='radial-gradient(#009,#090)'
 fsh[1].style.left='22%'
 fsh[1].style.top='22%'
@@ -180,7 +163,6 @@ fsh[3].style.left='22%'
 fsh[3].style.top='33%'
 fsh[3].style.transform='scale(0)'
 fsh[3].style.textAlign='center'
-
 
 fc[0].style.background='#0ff'
 fc[0].style.left='22%'
@@ -207,9 +189,7 @@ wtr[0].style.height='11%'
 
 wtr[1].style.left='44%'
 wtr[1].style.top='22%'
-wtr[1].style.width='44%'
 wtr[1].style.height='11%'
-wtr[1].style.textAlign='left'
 wtr[1].style.textAlign='left'
 
 wtr[2].style.left='7%'
@@ -227,9 +207,18 @@ wtr[4].style.top='31%'
 wtr[4].style.color='#887'
 wtr[4].style.transform='scale(0)'
 
+zn[0].style.left='54%'
+zn[0].style.top='44%'
+zn[0].style.transform='scale(3) '
+zn[0].style.zIndex=-1
+
+zn[1].style.left='44%'
+zn[1].style.top='33%'
+zn[1].style.transform='scale(0) '
+
 prgr[0].style.left='55%'
 prgr[0].style.top='44%'
-prgr[0].style.zIndex=4
+prgr[0].style.zIndex=1
 prgr[0].style.transform='scale(2)'
 
 prgr[1].style.left='55%'
@@ -258,11 +247,6 @@ stn[2].style.width='11%'
 stn[2].style.height='5%'
 stn[2].style.transform='scale(0) '
 
-zn[0].style.left='54%'
-zn[0].style.top='44%'
-zn[0].style.transform='scale(3) '
-zn[0].style.zIndex=-1
-
 st[0].style.left='9%'
 st[0].style.top='66%'
 st[0].style.transform='scale(3) '
@@ -270,60 +254,35 @@ st[0].style.opacity=0.2
 
 st[1].style.left='22%'
 st[1].style.top='77%'
+st[1].style.color='#900'
 st[1].style.transform='scale(0) '
-//st[1].style.zIndex=1
 
-},
-
-cl:function()
+b=0
+function cl()
 {
- if(o.b)
+ if(b)
  {
   fsh[1].style.transform='scale(1.1)'
   fsh[2].style.transform=
-	 'scale(-4,1) translate(33%,0)'
+   'scale(-4,1) translate(33%,0)'
  } 
   else
  {
   fsh[1].style.transform='scale(0.9)'
   fsh[2].style.transform=
-	 'scale(4,1) translate(33%,0)'
+   'scale(4,1) translate(33%,0)'
  } 
-   o.b=!o.b
-},
-
-clk:function()
-{
-
-fsh[0].style.transform='scale(3)'
-fc[0].style.transform='scale(3)'
-fc[1].style.transform='scale(3)'
-fc[2].style.transform='scale(1,3)'
-idb.style.transform='scale(0)'
-setTimeout(()=>
-	 {
-   fsh[0].style.transform='scale(1)'
-   fc[0].style.transform='scale(1)'
-   fc[1].style.transform='scale(1)'	  
-   fc[2].style.transform='scale(1,1)'
-   idb.style.transform='scale(1)'
-	 },
-
-	 2222)
-
-},
-
+   b=!b
 }
-    o.init()
-	 
-    setInterval(o.cl, 2222)	
+
+ setInterval(cl, 2222)	
  
 wtr[0].innerHTML= 
 'Gases dissolved in water: nitrogen, oxygen, argon,'+    
 'carbon dioxide - and other impurities in the air.'+ 
-'The properties of the solvent are especially pronounced '+
-'in marine water, in which almost all substances dissolve.' 
- 
+'The properties of the solvent are especially  '+
+'pronounced in marine water, in which almost all'+ 'substances dissolve.' 
+
 wtr[1].innerHTML= 
  'heavy water (DO)<br>'+
  'superheavy water (TO)<br>'+
@@ -331,160 +290,160 @@ wtr[1].innerHTML=
  'tritium-protium water (THO)<br>'+
  'deuterium-protium water (DHO)<br>'
  
- idb.onmouseover=()=>
- {
-  idb.style.transform='scale(1.2)'
-  
- } 
- idb.onmouseout=()=>
+idb.onmouseover=()=>
+{
+ idb.style.transform='scale(1.2)'
+} 
+idb.onmouseout=()=>
+{
+ idb.style.transform='scale(1)'
+}
+idb.onclick=()=>
+{
+ idb.style.transform='scale(0)'
+ fsh[0].style.transform='scale(3)'
+ fc[0].style.transform='scale(3)'
+ fc[1].style.transform='scale(3)'
+ fc[2].style.transform='scale(1,3)'
+ fsh[3].style.color='#f00'
+ fsh[3].style.transform=
+  'scale(3) translate(55%,0%) skew(-22deg)'
+ fc[1].style.background=
+  'radial-gradient(#f00,#0ff)'
+ fc[0].style.background=
+  'radial-gradient(#f00,#0ff)'
+ setTimeout(()=>
  {
   idb.style.transform='scale(1)'
-  
- }
- idb.onclick=()=>
- {
-  o.clk()
-  
- }
+  fsh[0].style.transform='scale(1)'
+  fc[0].style.transform='scale(1)'
+  fc[1].style.transform='scale(1)'	  
+  fc[2].style.transform='scale(1,1)'
+ },2222)
+}
  
- fsh[0].onmouseover=()=>
- {
-  o.clk()
-  fsh[3].style.transform='scale(2) skew(22deg)'
-  fc[1].style.background=
-   'radial-gradient(#f00,#0ff)'
-  fc[0].style.background=
-   'radial-gradient(#f00,#0ff)'
- }
- fsh[0].onmouseout=()=>
- {
-  fsh[3].style.transform='scale(0) '
-  fc[1].style.background='#0ff'
-  fc[0].style.background='#0ff'
- }
+fsh[0].onmouseover=()=>
+{
+ idb.onclick()
+}
+fsh[0].onmouseout=()=>
+{
+ fsh[3].style.transform='scale(0) '
+ fc[1].style.background='#0ff'
+ fc[0].style.background='#0ff'
+ fsh[3].style.color='#000'
+}
  
- wtr[0].onmouseover=()=>
- {
-   wtr[0].style.transform='scale(1.5)'
-   wtr[0].style.color='#00f'
-  
- }
- wtr[0].onmouseout=()=>
- {
-  wtr[0].style.transform='scale(1)'
-  wtr[0].style.color='#000'
-  fsh[3].style.transform='scale(0)'
+wtr[0].onmouseover=()=>
+{
+ wtr[0].style.transform='scale(1.7)'
+ wtr[0].style.color='#220'
+}
+wtr[0].onmouseout=()=>
+{
+ wtr[0].style.transform='scale(1)'
+ wtr[0].style.color='#000'
+ fsh[3].style.transform='scale(0)'
+}
  
- }
+wtr[1].onmouseover=()=>
+{ 
+ wtr[1].style.transform='scale(1.7)'
+ wtr[1].style.color='#110'
+}
+wtr[1].onmouseout=()=>
+{
+ wtr[1].style.transform='scale(1)'
+ wtr[1].style.color='#000'
+}
  
- wtr[1].onmouseover=()=>
- { 
-  wtr[1].style.transform='scale(1.5)'
-  wtr[1].style.color='#f00'
+wtr[2].onmouseover=()=>
+{
+ wtr[2].style.transform=
+  'scale(3.5) translate(33%,0)'
+ wtr[2].style.color='#ff0'
+ wtr[3].style.transform=
+  'scale(3.5) translate(33%,0)'
+ wtr[4].style.transform=
+  'scale(3.5) translate(33%,55%)'
+}
+wtr[2].onmouseout=()=>
+{
+ wtr[2].style.transform='scale(2)'
+ wtr[2].style.color='#909'
+ wtr[3].style.transform='scale(0) '
+ wtr[4].style.transform='scale(0) '
+}
  
- }
- wtr[1].onmouseout=()=>
- {
-  wtr[1].style.transform='scale(1)'
-  wtr[1].style.color='#000'
- 
- }
- 
- wtr[2].onmouseover=()=>
- {
-  wtr[2].style.transform=
-   'scale(3.5) translate(33%,0)'
-  wtr[2].style.color='#ff0'
-  wtr[3].style.transform=
-   'scale(3.5) translate(33%,0)'
-  wtr[4].style.transform=
-   'scale(3.5) translate(33%,55%)'
- }
- wtr[2].onmouseout=()=>
- {
-  wtr[2].style.transform='scale(2)'
-  wtr[2].style.color='#909'
-  wtr[3].style.transform=
-   'scale(0) '
-  wtr[4].style.transform=
-   'scale(0) '
- }
- 
-tg=['button','input','select','option','table']
- prgr[0].innerHTML=tg[0]
+tg=['button','input','select','option','table'] 
 tgclr=['','input','select','option','table']
- itg=0
- Itg=0
- prgr[0].onmouseover=()=>
- {
-  prgr[0].style.transform='scale(4) '
-  prgr[0].style.color='#fff'
-  zn[0].style.transform='scale(6) '
-  zn[0].style.color='#f00'
-    
+itg=1
+Itg=0
+prgr[0].onmouseover=()=>
+{
+ prgr[0].style.transform='scale(4) '
+ prgr[0].style.color='#fff'
+ zn[0].style.transform='scale(6) '
+ zn[0].style.color='#f00'
+ zn[1].innerHTML='tags'
+ zn[1].style.color='#ff0'
+ zn[1].style.transform='scale(4) skew(-33deg)'
  Itg=setInterval(()=>
  {  
-    prgr[0].innerHTML=tg[itg]
-	 itg++
-      if(itg==5) itg=0
-    
+   prgr[0].innerHTML=tg[itg]
+	itg++
+   if(itg==5) itg=0
   }
-  ,999)
- 
+  ,499)
  }
- 
 prgr[0].onmouseout=()=>
- {
-  prgr[0].style.transform='scale(2)'
-  prgr[0].style.color='#000'
-  zn[0].style.transform='scale(3) '
-  zn[0].style.color='#000'
-    itg=0
-  prgr[0].innerHTML=tg[itg]
-  
-  clearInterval(Itg)
-   
- }   
-
+{
+ prgr[0].style.transform='scale(2)'
+ prgr[0].style.color='#000'
+ prgr[0].innerHTML=tg[0]
+ zn[0].style.transform='scale(3) '
+ zn[0].style.color='#000'
+ zn[1].style.transform='scale(0) '
+  itg=0
+  clearInterval(Itg)  
+}   
 
 mx=['function','structure','class','library']
 prgr[1].innerHTML=mx[0]
-
 imx=0
 Imx=0	
- prgr[1].onmouseover=()=>
- {
-  prgr[1].style.transform='scale(4) '
-  prgr[1].style.color='#fff'
-	
+prgr[1].onmouseover=()=>
+{
+ prgr[1].style.transform='scale(4) '
+ prgr[1].style.color='#fff'
+ zn[1].innerHTML='terms'
+ zn[1].style.color='#ff0'
+ zn[1].style.transform='scale(4) skew(-22deg)'
  Imx=setInterval(()=>
  {  
-    prgr[1].innerHTML=mx[imx]
-	 imx++
-	  if(imx==4) imx=0
-      
-  }
-  ,999)
- 
- }
- 
+  prgr[1].innerHTML=mx[imx]
+   imx++
+  if(imx==4) imx=0
+ },499) 
+}
 prgr[1].onmouseout=()=>
- {
-  prgr[1].style.transform='scale(2)'
-   prgr[1].style.color='#000'
-    imx=0
-  clearInterval(Imx)
-    
- }
+{
+ prgr[1].style.transform='scale(2)'
+ prgr[1].style.color='#000'
+ prgr[1].innerHTML=mx[0]
+ zn[1].style.transform='scale(0) '
+ imx=0
+ clearInterval(Imx)    
+}
 
 Ifr4=0
 bfr4=0
 stn[0].onmouseover=()=>
- {
-    stn[0].style.opacity=1
+{
+stn[0].style.opacity=1
+stn[0].style.background='radial-gradient(#000,#0d0)'
  Ifr4=setInterval(()=>
  {
-  stn[0].style.background='radial-gradient(#000,#0d0)'
   if(bfr4){
    stn[0].style.transform='scale(2) rotate(-45deg)'
    stn[1].style.transform='scale(2.5) '
@@ -499,39 +458,35 @@ stn[0].onmouseover=()=>
    stn[2].style.color='#008'
    }
       bfr4=!bfr4
- },999)
- }   
+   },999)
+  }   
 stn[0].onmouseout=()=>
  {
   stn[0].style.opacity=0.7
   stn[0].style.transform='scale(2) rotate(-45deg)'
   stn[1].style.transform='scale(0) '
   stn[2].style.transform='scale(0) '
- 
-   clearInterval(Ifr4)
- 
- }
+   bfr4=0
+   clearInterval(Ifr4) 
+}
  
 st[0].onmouseover=()=>
- {
-  st[0].style.transform='scale(4) translate(22%,0)'
-  st[0].style.color='#f60'
-  st[0].style.opacity=1
-   st[0].innerHTML='Server<br> control'
-  st[1].style.transform='scale(4) translate(44%,0)'
-   
- }
- st[0].onmouseout=()=>
- {
-  st[0].style.transform='scale(3) '
-  st[0].style.color=''
-  st[0].style.opacity=0.2
-   st[0].innerHTML='dynamic<br> site'
-  st[1].style.transform='scale(0) '
-  
- }
+{
+ st[0].style.transform='scale(4) translate(22%,0)'
+ st[0].style.color='#f60'
+ st[0].style.opacity=1
+  st[0].innerHTML='Server<br> control'
+ st[1].style.transform='scale(4) translate(44%,0)'   
+}
+st[0].onmouseout=()=>
+{
+ st[0].style.transform='scale(3) '
+ st[0].style.color=''
+ st[0].style.opacity=0.2
+  st[0].innerHTML='dynamic<br> site'
+ st[1].style.transform='scale(0) ' 
+}
  
-// Math.round(Math.random()*3) 
 </script>
 </body>
 
