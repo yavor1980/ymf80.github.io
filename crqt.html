@@ -85,7 +85,6 @@ button:hover
 
  
 
-
 <script>
 btn=document.getElementsByTagName('button')
 wrs=document.getElementsByClassName('wrs')
@@ -196,6 +195,7 @@ telm[0].style.border='4px ridge transparent'
 telm[1].style.left=20+'%'
 telm[1].style.top=77+'%'
 telm[1].style.transform='scale(0)'
+telm[1].style.zIndex=1
 
 telm[2].style.left=44+'%'
 telm[2].style.top=9+'%'
@@ -262,9 +262,9 @@ btn[1].onclick=()=>
  elm[2].style.transform=
   'scale(5) rotate(90deg)'
  tprcss[0].style.transform=
-  'scale(3) translate(0,-222%) skew(11deg)'
+  'scale(3) translate(-33%,333%) skew(11deg)'
  tprcss[1].style.transform=
-  'scale(3) skew(-11deg)'
+  'scale(3) translate(-33%,244%) skew(-11deg)'
   
  if(bcbtn1){ 
   Ibtn1=setInterval(()=>{
@@ -422,8 +422,7 @@ telm[0].onmouseout=()=>
  telm[2].style.color='#b00'
 }
  
-
-//  'radial-gradient(#000,#999)'
+ 
 </script>
 
 </body>
