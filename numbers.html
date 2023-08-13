@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 
 <html>
 
@@ -10,36 +10,21 @@
 <style>
 #idbd
 {
-background:#9b0;
-
+background:linear-gradient(44deg,#330,#cc0);
 }
 
-#idrmk
+.blck
 {
 position:absolute;
-left:18%;
-top:11%;
 text-align:center;
-background:red;
 transition:1s;
-
+font-size:1.2em;
 }
-#idrmk:hover
+.blck:hover
 {
-transform:scale(3);
-
+transform:scale(1.2);
 }
 
-.btn
-{
-cursor:pointer;
-
-}
-#idr
-{
-transition:1s;
-
-}
 .nm
 {
 position:absolute;
@@ -48,38 +33,35 @@ transition:1s;
 cursor:pointer;
 color:#800;
 z-index:1;
-
 }
 
-.frz
+.mthm
 {
 position:absolute;
 transition:1s;
 cursor:pointer;
-
 }
+
 .php
 {
 position:absolute;
 transition:1s;
 cursor:pointer;
-
 }
+
 .sql
 {
 position:absolute;
 transition:1s;
 cursor:pointer;
-
 }
+
 .gthb
 {
 position:absolute;
 transition:1s;
 cursor:pointer;
-
 }
-
 
 .srv
 {
@@ -87,29 +69,26 @@ position:absolute;
 transition:1s;
 cursor:pointer;
 color:#000;
-
 }
+
 .cntrl
 {
 position:absolute;
 transition:1s;
 cursor:pointer;
 color:#000;
-
 }
-
-
 
 </style>
 </head>
 
-<body id=idbd onmousedown onclick>
+<body id=idbd >
   
-<div id=idrmk> 
-  <input type=button value='get' class=btn  >
-  <input type=button value='erase' class=btn ><br>
-  <input type=range id=idr value=0 min=0 max=100 step=1 > 
- 
+<div Class=blck> 
+ <input type=button value='get' class=blck >
+ <input type=button value='erase' class=blck ><br>
+ <input type=range Class=blck value=0 
+    min=0 max=100 step=1> 
 </div>
 
  <div class=nm> </div>
@@ -122,13 +101,13 @@ color:#000;
  <div class=nm> </div>
  <div class=nm> </div>
 
- <div class=frz>
-   natural series
+ <div class=mthm>
+ natural series
  </div>
-<div class=frz> 
- Each number is 1 more than the previous one.
+<div class=mthm> 
+ Each number is 1 more<br>&nbsp than the previous one.
 </div>
-<div class=frz> 
+<div class=mthm> 
  The natural series is infinite
 </div>
 
@@ -226,10 +205,10 @@ color:#000;
 
 <script  >
 
-btn=document.getElementsByClassName('btn')
+blck=document.getElementsByClassName('blck')
 nm=document.getElementsByClassName('nm')
 
-frz=document.getElementsByClassName('frz')
+mthm=document.getElementsByClassName('mthm')
 php=document.getElementsByClassName('php')
 sql=document.getElementsByClassName('sql')
 gthb=document.getElementsByClassName('gthb')
@@ -237,109 +216,138 @@ srv=document.getElementsByClassName('srv')
 cntrl=document.getElementsByClassName('cntrl')
 
  
- idr.value=33 
+blck[0].style.left='66%'
+blck[0].style.top='8%'
+blck[0].style.width='22%'
+blck[0].style.height='15%'
+blck[0].style.background=
+ 'radial-gradient(#ff0,#f00)'
+blck[0].style.borderRadius='22%'
+blck[0].style.border='8px ridge #bb0'
 
-frz[0].style.left='22%'
-frz[0].style.top='40%'
-frz[0].style.background='#f00'
-frz[0].style.color='#fff'
-frz[0].style.transform='scale(2)'
+blck[1].style.left='11%'
+blck[1].style.top='11%'
+blck[1].style.width='33%'
+blck[1].style.height='33%'
+blck[1].style.background='#0bb'
+blck[1].style.cursor='pointer'
 
-frz[1].style.left='44%'
-frz[1].style.top='22%'
-frz[1].style.color='#fff'
-frz[1].style.transform='scale(0)'
+blck[2].style.left='54%'
+blck[2].style.top='11%'
+blck[2].style.width='33%'
+blck[2].style.height='33%'
+blck[2].style.background='#0bb'
+blck[2].style.cursor='pointer'
+
+blck[3].style.left='11%'
+blck[3].style.top='68%'
+blck[3].style.width='66%'
+//blck[3].style.height='8%'
+blck[3].style.background='#0bb'
+
+mthm[0].style.left='22%'
+mthm[0].style.top='40%'
+mthm[0].style.color='#0bb'
+mthm[0].style.transform='scale(5)'
+
+mthm[1].style.left='44%'
+mthm[1].style.top='22%'
+mthm[1].style.color='#0ff'
+mthm[1].style.transform='scale(0)'
 	 
-frz[2].style.background='none'
-frz[2].style.left='44%'
-frz[2].style.top='29%'
-frz[2].style.color='#fff'
-frz[2].style.transform='scale(0)'	 
+mthm[2].style.background='none'
+mthm[2].style.left='44%'
+mthm[2].style.top='29%'
+mthm[2].style.color='#ff0'
+mthm[2].style.transform='scale(0)'	 
 	
-php[0].style.background='none'
 php[0].style.left='15%'
-php[0].style.top='55%'
-php[0].style.transform='scale(2)'
+php[0].style.top='52%'
+php[0].style.color='#f0c'
+php[0].style.transform='scale(3)'
 
-php[1].style.background='none'
 php[1].style.left='29%'
-php[1].style.top='55%'
-php[1].style.transform='scale(2)'
+php[1].style.top='52%'
+php[1].style.color='#f0b'
+php[1].style.transform='scale(3)'
 	
-php[2].style.background='none'
 php[2].style.left='44%'
-php[2].style.top='55%'
-php[2].style.transform='scale(2)'	
+php[2].style.top='52%'
+php[2].style.color='#f0d'
+php[2].style.transform='scale(3)'	
 
-php[3].style.color='#ff0'
 php[3].style.left='11%'
 php[3].style.top='49%'
+php[3].style.color='#990'
 php[3].style.transform='scale(0)'	
 
-php[4].style.color='#ff0'
 php[4].style.left='11%'
 php[4].style.top='49%'
+php[4].style.color='#87d'
 php[4].style.transform='scale(0)'	
 
-php[5].style.color='#0ff'
 php[5].style.left='33%'
 php[5].style.top='41%'
-php[5].style.transform='scale(0)'	
-
-php[6].style.color='#f0f'
+php[5].style.color='#80d'
+php[5].style.transform='scale(0)'
+	
 php[6].style.left='44%'
 php[6].style.top='44%'
+php[6].style.color='#70d'
 php[6].style.transform='scale(0)'
-
 
 sql[0].style.left='11%'
 sql[0].style.top='66%'
-//frzz[0].style.color='#fff'
-sql[0].style.transform='scale(2)'
+sql[0].style.color='#0cc'
+sql[0].style.transform='scale(3.3)'
 
-sql[1].style.left='22%'
+sql[1].style.left='24%'
 sql[1].style.top='66%'
-sql[1].style.transform='scale(2)'
+sql[1].style.color='#0dd'
+sql[1].style.transform='scale(3)'
 	 
-sql[2].style.left='33%'
+sql[2].style.left='38%'
 sql[2].style.top='66%'
-sql[2].style.transform='scale(2)'	
+sql[2].style.color='#0bb'
+sql[2].style.transform='scale(3.5)'	
 
 sql[3].style.left='15%'
 sql[3].style.top='73%'
-sql[3].style.transform='scale(2)'
+sql[3].style.color='#0bb'
+sql[3].style.transform='scale(3.2)'
 
-sql[4].style.left='29%'
+sql[4].style.left='34%'
 sql[4].style.top='73%'
-sql[4].style.transform='scale(2)'
+sql[4].style.color='#0cc'
+sql[4].style.transform='scale(3.4)'
 
 sql[5].style.left='22%'
 sql[5].style.top='59%'
-sql[5].style.color='#00f'
-sql[5].style.transform='scale(2)'
+sql[5].style.color='#0bb'
+sql[5].style.transform='scale(3.5)'
 
 sql[6].style.left='38%'
 sql[6].style.top='59%'
 sql[6].style.color='#0ff'
-sql[6].style.transform='scale(2)'
+sql[6].style.transform='scale(3.2)'
 
 gthb[0].style.left='19%'
-gthb[0].style.top='79%'
+gthb[0].style.top='30%'
 gthb[0].style.color='#f0f'
-gthb[0].style.transform='scale(2)'
+gthb[0].style.transform='scale(3)'
 
 gthb[1].style.left='19%'
-gthb[1].style.top='83%'
+gthb[1].style.top='23%'
 gthb[1].style.transform='scale(0)'
 
 gthb[2].style.left='19%'
-gthb[2].style.top='83%'
+gthb[2].style.top='23%'
 gthb[2].style.transform='scale(0)'
 
 srv[0].style.left='65%'
-srv[0].style.top='49%'
-srv[0].style.color='#f77'
-srv[0].style.transform='scale(2)'
+srv[0].style.top='55%'
+srv[0].style.color='#b00'
+srv[0].style.transform='scale(3)'
 
 srv[1].style.left='55%'
 srv[1].style.top='36%'
@@ -394,106 +402,105 @@ cntrl[4].style.top='55%'
 cntrl[4].style.color='#f00'
 cntrl[4].style.transform='scale(0)'  
   
-idrmk.onmousemove=()=>
+blck[0].onmousemove=()=>
 {
- idr.value=Math.round(Math.random()*99)
-
+ blck[3].value=Math.round(Math.random()*99)
 }
 
-nnm=0
-btn[0].onclick=()=>
+iblck=0
+blck[1].onclick=()=>
 {
-  nm[nnm].style.left=Math.random()*99+'%'
-  nm[nnm].style.top=Math.random()*99+'%'
-  nm[nnm].innerHTML=idr.value
-      nnm++ 
-	  
- for(i=0;i<nnm;i++)
-  {
-  nm[i].style.left=Math.random()*99+'%'
-  nm[i].style.top=Math.random()*99+'%'
-  }
+ nm[iblck].style.left=
+  Math.random()*20+'%'
+ nm[iblck].style.top=
+  Math.random()*20+'%'
+ nm[iblck].innerHTML=blck[3].value
+  iblck++ 	  
+}
+setInterval(()=>{
+ for(i=0;i<iblck;i++)
+ {
+  nm[i].style.transform=
+   'scale('+(Math.random()/2+1)+')' 
+ }  
+},999)
  
-}
-
-btn[1].onclick=()=>
+blck[2].onclick=()=>
 {
- for(i=0;i<nnm;i++)
+ for(i=0;i<iblck;i++)
    nm[i].innerHTML=''
-
-  nnm=0
- 
+ iblck=0
 }
 
-frz[0].onmouseover=()=>
+mthm[0].onmouseover=()=>
 {
- frz[0].style.opacity=1
- frz[0].style.transform='scale(3)'
- frz[0].style.background='none'
- frz[0].style.color='#f00'
- frz[0].innerHTML=
-  'Sequence<br> of all natural numbers'
- 
- frz[1].style.transform='scale(2)'
- frz[2].style.transform='scale(2)'
- 
+ mthm[0].style.transform=
+  'scale(3) translate(11%,-11%)'
+ mthm[0].innerHTML=
+  'Sequence <br>&nbsp of all natural numbers'
+ mthm[1].style.transform=
+  'scale(2.6) skew(22deg)'
+ mthm[2].style.transform=
+  'scale(2.7) translate(11%,44%) skew(11deg)'
 }
-frz[0].onmouseout=()=>
+mthm[0].onmouseout=()=>
 {
- frz[0].style.opacity=0.5
- frz[0].style.transform='scale(2)'
- frz[0].style.background='#f00'
- frz[0].style.color='#fff'
-  frz[0].innerHTML='natural series'
- frz[1].style.transform='scale(0)'
- frz[2].style.transform='scale(0)'
+ mthm[0].style.transform='scale(5)'
+ mthm[0].style.color='#0bb'
+  mthm[0].innerHTML='natural series'
+ mthm[1].style.transform='scale(0)'
+ mthm[2].style.transform='scale(0)'
 }  
 
 php[0].onmouseover=()=>
 {
- php[0].style.color='#fff'
- php[0].style.transform='scale(3)'
+ php[0].style.color='#f05'
+ php[0].style.transform='scale(4)'
  php[0].innerHTML='$x, $y'
- php[3].style.transform='scale(3)'
+ php[3].style.transform=
+  'scale(3) translate(0,-33%)'
 }
 php[0].onmouseout=()=>
 {
- php[0].style.color='#000'
- php[0].style.transform='scale(2)'
+ php[0].style.color='#f0b'
+ php[0].style.transform='scale(3)'
   php[0].innerHTML='var'
  php[3].style.transform='scale(0)'
- 
 }  
 
 php[1].onmouseover=()=>
 {
- php[1].style.color='#fff'
- php[1].style.transform='scale(3) translate(0,-66%)'
-  php[1].innerHTML='$a=array(n)'
- php[4].style.transform='scale(3) translate(22%,-222%)'
+ php[1].style.color='#f0b'
+ php[1].innerHTML='$a=array(n)'
+ php[1].style.transform=
+  'scale(4) translate(0,-22%)'
+ php[4].style.transform=
+  'scale(4) translate(122%,-222%) skew(-22deg)'
 }
 php[1].onmouseout=()=>
 {
- php[1].style.color='#000'
- php[1].style.transform='scale(2)'
+ php[1].style.color='#f0c'
+ php[1].style.transform='scale(3)'
   php[1].innerHTML='Array'
  php[4].style.transform='scale(0)'
 }  
 
 php[2].onmouseover=()=>
 {
- php[2].style.color='#fff'
- php[2].style.transform='scale(3)'
+ php[2].style.color='#f0b'
+ php[2].style.transform='scale(4)'
  php[2].style.zIndex=1
   php[2].innerHTML=
    'Properties<br> Methods<br> Events'
- php[5].style.transform='scale(3) skew(22deg)'
- php[6].style.transform='scale(3) skew(-22deg)'
+ php[5].style.transform=
+  'scale(3) skew(22deg) translate(22%,-198%)'
+ php[6].style.transform=
+  'scale(3) skew(-22deg) translate(11%,-188%)'
 }
 php[2].onmouseout=()=>
 {
- php[2].style.color='#000'
- php[2].style.transform='scale(2)'
+ php[2].style.color='#f0d'
+ php[2].style.transform='scale(3)'
   php[2].innerHTML='Class'
  php[5].style.transform='scale(0)'
  php[6].style.transform='scale(0)'
@@ -501,178 +508,163 @@ php[2].onmouseout=()=>
 
 sql[0].onmouseover=()=>
 {
-  sql[0].style.color='#fff'
-  sql[0].style.transform='scale(3) translate(22%,-55%)'
+  sql[0].style.color='#0dd'
+  sql[0].style.transform=
+   'scale(4) translate(22%,-55%)'
    sql[0].innerHTML+=
     ' * where col1>9 order_by nm'
 }
 sql[0].onmouseout=()=>
 {
- sql[0].style.color='#000'
- sql[0].style.transform='scale(2)'
+ sql[0].style.color='#0cc'
+ sql[0].style.transform='scale(3)'
   sql[0].innerHTML='select'
 }  
 
 sql[1].onmouseover=()=>
 {
-  sql[1].style.color='#fff'
-  sql[1].style.transform='scale(3) translate(0,-55%)'
-   sql[1].innerHTML+=' table "t1"'
+ sql[1].style.color='#0bb'
+  sql[1].innerHTML+=' table "t1"'
+ sql[1].style.transform=
+  'scale(4) translate(0,-55%)'
+  
 }
 sql[1].onmouseout=()=>
 {
- sql[1].style.color='#000'
- sql[1].style.transform='scale(2)'
+ sql[1].style.color='#0dd'
+ sql[1].style.transform='scale(3)'
   sql[1].innerHTML='create'
 }  
 
 sql[2].onmouseover=()=>
 {
-  sql[2].style.color='#fff'
-  sql[2].style.transform='scale(3) translate(0,-55%)'
+  sql[2].style.color='#099'
+  sql[2].style.transform=
+   'scale(4) translate(0,-55%)'
    sql[2].innerHTML+=' table "t1"'
 }
 sql[2].onmouseout=()=>
 {
- sql[2].style.color='#000'
- sql[2].style.transform='scale(2)'
+ sql[2].style.color='#0bb'
+ sql[2].style.transform='scale(3)'
   sql[2].innerHTML='delete'
 }  
 
 sql[3].onmouseover=()=>
 {
-  sql[3].style.color='#fff'
-  sql[3].style.transform='scale(3) translate(29%,-55%)'
+  sql[3].style.color='#0ff'
+  sql[3].style.transform=
+   'scale(4) translate(29%,-55%)'
    sql[3].innerHTML+=
-    'into t1 where nm==""'
- 
+    ' into t1 where nm==""'
 }
 sql[3].onmouseout=()=>
 {
- sql[3].style.color='#000'
- sql[3].style.transform='scale(2)'
+ sql[3].style.color='#0bb'
+ sql[3].style.transform='scale(3.2)'
   sql[3].innerHTML='insert'
- 
 }  
 
 sql[4].onmouseover=()=>
 {
-  sql[4].style.color='#fff'
-  sql[4].style.transform='scale(3) translate(29%,-55%)'
+  sql[4].style.color='#0ff'
+  sql[4].style.transform='scale(4) translate(29%,-55%)'
    sql[4].innerHTML+=
-    'from t1 where nm=="any"'
- 
+    'from t1<br>&nbsp where nm=="any"'
 }
 sql[4].onmouseout=()=>
 {
- sql[4].style.color='#000'
- sql[4].style.transform='scale(2)'
+ sql[4].style.color='#0cc'
+ sql[4].style.transform='scale(3.3)'
   sql[4].innerHTML='remove'
- 
 }  
 
 sql[5].onmouseover=()=>
 {
   sql[5].style.color='#0ff'
-  sql[5].style.transform='scale(3) '
+  sql[5].style.transform='scale(4) '
    sql[5].innerHTML=' definition'
-   
- 
 }
 sql[5].onmouseout=()=>
 {
- sql[5].style.color='#0f0'
- sql[5].style.transform='scale(2)'
+ sql[5].style.color='#0bb'
+ sql[5].style.transform='scale(3.2)'
   sql[5].innerHTML='DDL'
- 
 }  
 
 sql[6].onmouseover=()=>
 {
-  sql[6].style.color='#f00'
-  sql[6].style.transform='scale(3) '
-  sql[6].innerHTML=' manipulating'
+ sql[6].style.color='#0ff'
+ sql[6].style.transform='scale(4) '
+ sql[6].innerHTML=' manipulating'
   sql[6].style.zIndex=1
-   
 }
 sql[6].onmouseout=()=>
 {
- sql[6].style.color='#f0f'
- sql[6].style.transform='scale(2)'
- sql[6].innerHTML='DML'
- 
+ sql[6].style.color='#0bb'
+ sql[6].style.transform='scale(3.2)'
+  sql[6].innerHTML='DML'
 } 
 
 gthb[0].onmouseover=()=>
 {
-  gthb[0].style.color='#fff'
-  gthb[0].style.transform='scale(3) translate(44%,0)'
-  gthb[0].innerHTML+=
-   '->repository '
-  gthb[1].style.transform='scale(3) '
-  gthb[1].style.color='#f00 '
-  gthb[2].style.transform='scale(3) translate(0,69%)'
-  gthb[2].style.color='#f60 '
+ gthb[0].style.color='#b0b'
+ gthb[0].style.transform='scale(4) translate(11%,0)'
+  gthb[0].innerHTML+='->repository '
+ gthb[1].style.transform=
+  'scale(3) translate(33%,-33%)'
+ gthb[1].style.color='#f00 '
+ gthb[2].style.transform=
+  'scale(3) translate(44%,11%)' 
+ gthb[2].style.color='#90f '
 }
-bf5cl=0
 gthb[0].onclick=()=>
 {
- if(bf5cl==0)
   gthb[0].innerHTML+='->Pages<br>'
-    bf5cl=1
 }  
 gthb[0].onmouseout=()=>
 {
  gthb[0].style.color='#f0f'
- gthb[0].style.transform='scale(2)'
+ gthb[0].style.transform='scale(3)'
  gthb[0].innerHTML='GitHub'
- 
  gthb[1].style.transform='scale(0)'
  gthb[1].style.color='#000 '
  gthb[2].style.transform='scale(0) '
  gthb[2].style.color='#000 '
-  bf5cl=0
 }  
-
 
 bsrv=0
 Isrv=0
 srv[0].onmouseover=()=>
 {
  srv[0].style.color='#f00'
- srv[0].style.transform='scale(3)'
+ srv[0].style.transform='scale(3.5)'
  srv[0].innerHTML+='<=>Client'
  srv[1].style.transform='scale(2)'
- srv[2].style.transform='scale(2) '
-  
-  
-  Isrv= setInterval(()=>{
-   if(bsrv){
-     srv[3].style.transform='scale(2)'
-     srv[4].style.transform='scale(3) '
+ srv[2].style.transform='scale(2) ' 
+Isrv= setInterval(()=>{
+ if(bsrv){
+  srv[3].style.transform='scale(2)'
+  srv[4].style.transform='scale(3) '
   srv[5].style.transform=
    'scale(2) translate(0,-22px) skew(22deg)'
   srv[6].style.transform=
    'scale(2) translate(0,-22px) skew(-22deg)'
-    }else{
-	 srv[3].style.transform='scale(3)'
-     srv[4].style.transform='scale(2) '
+ }else{
+  srv[3].style.transform='scale(3)'
+  srv[4].style.transform='scale(2) '
   srv[5].style.transform=
    'scale(2) translate(0,-22px) skew(-22deg)'
   srv[6].style.transform=
    'scale(2) translate(0,-22px) skew(22deg)'
   } 
 	  bsrv=!bsrv  
-  }
-  
-  
-  ,999)
-  
+ },999)
 }  
 srv[0].onmouseout=()=>
 {
- srv[0].style.color='#f77'
- srv[0].style.transform='scale(2)'
+ srv[0].style.color='#b00'
+ srv[0].style.transform='scale(3)'
  srv[0].innerHTML='Server'
  srv[0].style.zIndex=0
  srv[1].style.transform='scale(0)'
@@ -681,9 +673,7 @@ srv[0].onmouseout=()=>
  srv[4].style.transform='scale(0) '
  srv[5].style.transform='scale(0)'
  srv[6].style.transform='scale(0) '
-
-clearInterval(Isrv)
-  
+  clearInterval(Isrv)
 }  
 
 cntrl[0].onmouseover=()=>
@@ -696,8 +686,7 @@ cntrl[0].onmouseover=()=>
  cntrl[2].style.transform='scale(2)'
  cntrl[2].style.color='#f05'
  cntrl[3].style.transform='scale(2)'
- cntrl[4].style.transform='scale(3)'
-  
+ cntrl[4].style.transform='scale(3)'  
 }  
 cntrl[0].onmouseout=()=>
 {
