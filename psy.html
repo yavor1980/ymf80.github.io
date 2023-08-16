@@ -7,189 +7,211 @@ body
  background:linear-gradient(177deg, #f60,#ff0);
 }
 
-.hd
+.psch
 {
  position:absolute;
- width:98%;
- height:88%;
  color:#fff;
  transition:1s;
  text-align:center;
- font-size:1.2em;
+ font-size:1.7em;
 }
 
-.ftr
+.tmprm
 {
  position:absolute;
  transition:1s;
  text-align:center;
  transform:scale(0);
- font-size:2em;
+ font-size:2.5em;
 }
 
 .dfn
 {
  position:absolute;
  transition:1s;
+ color:#fff;
  text-align:center;
  cursor:pointer;
- font-size:1.2em;
+ font-size:3em;
+}
+
+.vctr
+{
+ position:absolute;
+ transition:1s;
+}
+
+.ggl
+{
+ position:absolute;
+ transition:1s;
 }
 
 </style>
 
-
-<div class=hd>
- <div class=hd>
+ <div class=psch>
   Object of psychology
  </div>
- <div class=hd>
+ <div class=psch>
   Tasks of psychology
  </div>
- <div class=hd>
+ <div class=psch>
   Methods of psychology
  </div>
 
- <div class=hd><br>Temperament</div>
- <div class=hd><br>behavioral type</div>
+ <div class=psch><br>Temperament</div>
+ <div class=psch><br>behavioral type</div>
 
- <div class=ftr>choleric </div>
- <div class=ftr>melancholic </div>
- <div class=ftr>phlegmatic </div>
- <div class=ftr>sanguine </div>
+ <div class=tmprm>choleric </div>
+ <div class=tmprm>melancholic </div>
+ <div class=tmprm>phlegmatic </div>
+ <div class=tmprm>sanguine </div>
  
- <div class=ftr>introvert </div>
- <div class=ftr>extrovert </div>
- <div class=ftr>ambivert </div>
+ <div class=tmprm>introvert </div>
+ <div class=tmprm>extrovert </div>
+ <div class=tmprm>ambivert </div>
  
  <div class=dfn>Attention </div>
  <div class=dfn>Perception </div>
  <div class=dfn>Thinking </div>
+  <div class=dfn></div>
  
- <div class=dfn>VCTR </div>
- <div class=dfn></div>
+ <div class=vctr>VCTR</div>
+  <div class=vctr></div>
+ <div class=vctr>forget<br>&nbsp &nbsp classic!</div>
  
-</div>
-
+ <div class=ggl></div>
 
 
 <script>
 
-  hd=document.getElementsByClassName('hd')  
-  ftr=document.getElementsByClassName('ftr') 
-  dfn=document.getElementsByClassName('dfn') 
+psch=document.getElementsByClassName('psch')  
+tmprm=document.getElementsByClassName('tmprm') 
+dfn=document.getElementsByClassName('dfn') 
+vctr=document.getElementsByClassName('vctr')
+ggl=document.getElementsByClassName('ggl')
    
-   
-  hd[1].style.left=16+'%'
-  hd[1].style.top=11+'%'
-  hd[1].style.width=22+'%'
-  hd[1].style.height=11+'%'
-  hd[1].style.background='#777'
-  hd[1].style.cursor='pointer'
- 
-  hd[2].style.left=40+'%'
-  hd[2].style.top=11+'%'
-  hd[2].style.width=22+'%'
-  hd[2].style.height=11+'%'
-  hd[2].style.background='#777'
-  hd[2].style.cursor='pointer'
-  
-  hd[3].style.left=64+'%'
-  hd[3].style.top=11+'%'
-  hd[3].style.width=22+'%'
-  hd[3].style.height=11+'%'
-  hd[3].style.background='#777'
-  hd[3].style.cursor='pointer'
-  
-  hd[4].style.left=22+'%'
-  hd[4].style.top=28+'%'
-  hd[4].style.width=22+'%'
-  hd[4].style.height=15+'%'
-  hd[4].style.background='#500'
-  hd[4].style.cursor='pointer'
- 
-  hd[5].style.left=55+'%'
-  hd[5].style.top=28+'%'
-  hd[5].style.width=22+'%'
-  hd[5].style.height=15+'%'
-  hd[5].style.background='#005'  	
-  hd[5].style.cursor='pointer'
-  
-  ftr[0].style.left=2+'%'
-  ftr[0].style.top=55+'%'
-  ftr[0].style.width=22+'%'
-  ftr[0].style.height=11+'%'
-  ftr[0].style.background='#900' 	
-   
-  ftr[1].style.left=2+'%'
-  ftr[1].style.top=69+'%'
-  ftr[1].style.width=22+'%'
-  ftr[1].style.height=11+'%'
-  ftr[1].style.background='#808' 
-
-  ftr[2].style.left=28+'%'
-  ftr[2].style.top=69+'%'
-  ftr[2].style.width=22+'%'
-  ftr[2].style.height=11+'%'
-  ftr[2].style.background='#770'
-
-  ftr[3].style.left=29+'%'
-  ftr[3].style.top=55+'%'
-  ftr[3].style.width=22+'%'
-  ftr[3].style.height=11+'%'
-  ftr[3].style.background='#099'
-
-  ftr[4].style.left=44+'%'
-  ftr[4].style.top=55+'%'
-  ftr[4].style.width=22+'%'
-  ftr[4].style.height=11+'%'
-  ftr[4].style.background='#808'
     
-  ftr[5].style.left=66+'%'
-  ftr[5].style.top=55+'%'
-  ftr[5].style.width=22+'%'
-  ftr[5].style.height=11+'%'
-  ftr[5].style.background='#770'
+psch[0].style.left=16+'%'
+psch[0].style.top=11+'%'
+psch[0].style.width=22+'%'
+psch[0].style.height=11+'%'
+psch[0].style.background='#777'
+psch[0].style.cursor='pointer'
+ 
+psch[1].style.left=40+'%'
+psch[1].style.top=11+'%'
+psch[1].style.width=22+'%'
+psch[1].style.height=11+'%'
+psch[1].style.background='#999'
+psch[1].style.cursor='pointer'
   
-  ftr[6].style.left=55+'%'
-  ftr[6].style.top=66+'%'
-  ftr[6].style.width=22+'%'
-  ftr[6].style.height=11+'%'
-  ftr[6].style.background='#069'
+psch[2].style.left=64+'%'
+psch[2].style.top=11+'%'
+psch[2].style.width=22+'%'
+psch[2].style.height=11+'%'
+psch[2].style.background='#666'
+psch[2].style.cursor='pointer'
   
-  dfn[0].style.left=11+'%'
-  dfn[0].style.top=80+'%'
-  dfn[0].style.width=22+'%'
-  dfn[0].style.height=11+'%'
-  dfn[0].style.background='#808'
+psch[3].style.left=22+'%'
+psch[3].style.top=28+'%'
+psch[3].style.width=22+'%'
+psch[3].style.height=15+'%'
+psch[3].style.background='#500'
+psch[3].style.cursor='pointer'
+ 
+psch[4].style.left=55+'%'
+psch[4].style.top=28+'%'
+psch[4].style.width=22+'%'
+psch[4].style.height=15+'%'
+psch[4].style.background='#005'  	
+psch[4].style.cursor='pointer'
+  
+tmprm[0].style.left=2+'%'
+tmprm[0].style.top=55+'%'
+tmprm[0].style.width=22+'%'
+tmprm[0].style.height=11+'%'
+tmprm[0].style.background='#990' 	
+   
+tmprm[1].style.left=2+'%'
+tmprm[1].style.top=69+'%'
+tmprm[1].style.width=22+'%'
+tmprm[1].style.height=11+'%'
+tmprm[1].style.background='#808' 
+
+tmprm[2].style.left=28+'%'
+tmprm[2].style.top=69+'%'
+tmprm[2].style.width=22+'%'
+tmprm[2].style.height=11+'%'
+tmprm[2].style.background='#770'
+
+tmprm[3].style.left=29+'%'
+tmprm[3].style.top=55+'%'
+tmprm[3].style.width=22+'%'
+tmprm[3].style.height=11+'%'
+tmprm[3].style.background='#0bb'
+
+tmprm[4].style.left=44+'%'
+tmprm[4].style.top=55+'%'
+tmprm[4].style.width=22+'%'
+tmprm[4].style.height=11+'%'
+tmprm[4].style.background='#808'
     
-  dfn[1].style.left=38+'%'
-  dfn[1].style.top=80+'%'
-  dfn[1].style.width=22+'%'
-  dfn[1].style.height=11+'%'
-  dfn[1].style.background='#770'
+tmprm[5].style.left=66+'%'
+tmprm[5].style.top=57+'%'
+tmprm[5].style.width=22+'%'
+tmprm[5].style.height=11+'%'
+tmprm[5].style.background='#770'
   
-  dfn[2].style.left=66+'%'
-  dfn[2].style.top=80+'%'
-  dfn[2].style.width=22+'%'
-  dfn[2].style.height=11+'%'
-  dfn[2].style.background='#088'
+tmprm[6].style.left=55+'%'
+tmprm[6].style.top=66+'%'
+tmprm[6].style.width=22+'%'
+tmprm[6].style.height=11+'%'
+tmprm[6].style.background='#069'
   
-  dfn[3].style.left=80+'%'
-  dfn[3].style.top=29+'%'
-  dfn[3].style.transform='scale(1.7)'
-  dfn[3].style.color='#0bb'
+dfn[0].style.left=11+'%'
+dfn[0].style.top=80+'%'
+dfn[0].style.width=22+'%'
+dfn[0].style.height=11+'%'
+dfn[0].style.background='#808'
+    
+dfn[1].style.left=38+'%'
+dfn[1].style.top=80+'%'
+dfn[1].style.width=22+'%'
+dfn[1].style.height=11+'%'
+dfn[1].style.background='#770'
   
-  dfn[4].style.left=80+'%'
-  dfn[4].style.top=39+'%'
-  dfn[4].style.transform='scale(0)'
-  dfn[4].style.color='#808'
+dfn[2].style.left=66+'%'
+dfn[2].style.top=80+'%'
+dfn[2].style.width=22+'%'
+dfn[2].style.height=11+'%'
+dfn[2].style.background='#088'
   
+dfn[3].style.left=29+'%'
+dfn[3].style.top=66+'%'
+dfn[3].style.transform='scale(0)'
+  
+vctr[0].style.left=8+'%'
+vctr[0].style.top=33+'%'
+vctr[0].style.transform='scale(3)'
+vctr[0].style.color='#0bb'
+vctr[0].style.cursor='pointer'
+  
+vctr[1].style.left=8+'%'
+vctr[1].style.top=39+'%'
+vctr[1].style.color='#808'
+vctr[1].style.transform='scale(0)'
+  
+vctr[2].style.left=8+'%'
+vctr[2].style.top=39+'%'
+vctr[2].style.color='#800'
+vctr[2].style.transform='scale(0)'
+ 
 obj='The totality of mental phenomena '
   
 tsk=
-'-learn to understand the essence of mental  '+'phenomena;<br>'+ 
-'-learn to manage them '
+'-learn to understand the essence of mental '+
+'phenomena;<br>-learn to manage them '
 
 mthd=
 '-organizational'+'<br>'+ 
@@ -198,184 +220,194 @@ mthd=
 '-experiment'+'<br>'+
 '-statistical'+'<br>'
 
-hd[1].onmouseover=()=>
+psch[0].onmouseover=()=>
 {  
-  hd[1].style.transform='scale(1.4)'
-  hd[1].style.background='#555'
-  hd[1].style.zIndex=1
-  hd[1].style.height='14%'
-   hd[1].innerHTML=obj	
+ psch[0].style.transform=
+  'scale(1.4) translate(-11%,-11%)'
+ psch[0].style.background='#555'
+ psch[0].style.zIndex=1
+ psch[0].style.height='14%'
+  psch[0].innerHTML=obj	
 }		  
-hd[1].onmouseout=()=>
+psch[0].onmouseout=()=>
 {
-  hd[1].style.transform='scale(1)'
-  hd[1].style.background='#bbb'
-  hd[1].style.height='11%'
-   hd[1].innerHTML='Object of psychology'
+ psch[0].style.transform='scale(1)'
+ psch[0].style.background='#777'
+ psch[0].style.height='11%'
+  psch[0].innerHTML='Object of psychology'
 }
 
-hd[2].onmouseover=()=>
+psch[1].onmouseover=()=>
 {   
-  hd[2].style.transform='scale(1.4)'
-  hd[2].style.background='#555'
-  hd[2].style.zIndex=1
-  hd[2].style.height='25%'
-   hd[2].innerHTML=tsk
+ psch[1].style.transform='scale(1.4)'
+ psch[1].style.background='#555'
+ psch[1].style.zIndex=1
+ psch[1].style.height='25%'
+  psch[1].innerHTML=tsk
 }		  
-hd[2].onmouseout=()=>
+psch[1].onmouseout=()=>
 {
-  hd[2].style.transform='scale(1)'
-  hd[2].style.background='#bbb'
-  hd[2].style.zIndex=0
-  hd[2].style.height='11%'
-   hd[2].innerHTML='Tasks of psychology'
+ psch[1].style.transform='scale(1)'
+ psch[1].style.background='#999'
+ psch[1].style.zIndex=0
+ psch[1].style.height='11%'
+  psch[1].innerHTML='Tasks of psychology'
 }
 
-hd[3].onmouseover=()=>
+psch[2].onmouseover=()=>
 {  
-  hd[3].style.transform='scale(1.4)'
-  hd[3].style.background='#555'
-  hd[3].style.zIndex=1
-  hd[3].style.height='22%'
-   hd[3].innerHTML=mthd
-		
+ psch[2].style.transform='scale(1.4)'
+ psch[2].style.background='#555'
+ psch[2].style.zIndex=1
+ psch[2].style.height='22%'
+  psch[2].innerHTML=mthd		
 }		  
-hd[3].onmouseout=()=>
+psch[2].onmouseout=()=>
 {
-  hd[3].style.transform='scale(1)'
-  hd[3].style.background='#bbb'
-  hd[3].style.zIndex=0
-  hd[3].style.height='11%'
-   hd[3].innerHTML='Methods of psychology'
+ psch[2].style.transform='scale(1)'
+ psch[2].style.background='#666'
+ psch[2].style.zIndex=0
+ psch[2].style.height='11%'
+  psch[2].innerHTML='Methods of psychology'
 }
 
-hd[4].onmouseover=()=>
+psch[3].onmouseover=()=>
 {  
-  hd[4].style.transform='scale(1.4)'
-  hd[4].style.height='23%'
-  hd[4].style.background='red'
-   hd[4].innerHTML=
-    '-level of mental activity <br>'+  
-    '-mental condition'
-  ftr[0].style.transform=
-   'scale(1) translate(0,-88%) skew(-33deg)'
-  ftr[1].style.transform=
-   'scale(1) translate(0,-88%) skew(-33deg)'
-  ftr[2].style.transform=
-   'scale(1) translate(0,-88%) skew(-33deg)'
-  ftr[3].style.transform=
-   'scale(1) translate(0,-88%) skew(-33deg)'
+ psch[3].style.transform='scale(1.4)'
+ psch[3].style.height='23%'
+ psch[3].style.background='red'
+  psch[3].innerHTML=
+   '-level of mental activity <br>'+  
+   '-mental condition'
+ tmprm[0].style.transform=
+  'scale(1) translate(11%,-88%) skew(-33deg)'
+ tmprm[1].style.transform=
+  'scale(1) translate(11%,-88%) skew(-33deg)'
+ tmprm[2].style.transform=
+  'scale(1) translate(0,-88%) skew(-33deg)'
+ tmprm[3].style.transform=
+  'scale(1) translate(0,-88%) skew(-33deg)'
       
 }		
-hd[4].onmouseout=()=>
+psch[3].onmouseout=()=>
 {  
-  hd[4].style.transform='scale(1)'
-  hd[4].style.height='15%'
-  hd[4].style.background='#500'
-  hd[4].style.zIndex=0
-   hd[4].innerHTML=
- 	'<br> Temperament'
-		
-  ftr[0].style.transform='scale(0)'
-  ftr[1].style.transform='scale(0)'
-  ftr[2].style.transform='scale(0)'
-  ftr[3].style.transform='scale(0)'  
+ psch[3].style.transform='scale(1)'
+ psch[3].style.height='15%'
+ psch[3].style.background='#500'
+ psch[3].style.zIndex=0
+  psch[3].innerHTML=
+   '<br> Temperament'
+tmprm[0].style.transform='scale(0)'
+tmprm[1].style.transform='scale(0)'
+tmprm[2].style.transform='scale(0)'
+tmprm[3].style.transform='scale(0)'  
 }		  
 
-hd[5].onmouseover=()=>
+psch[4].onmouseover=()=>
 {        
-  hd[5].style.transform='scale(1.4)'
-  hd[5].style.background='#00f'
-  hd[5].style.color='#fff'
-   hd[5].innerHTML='Orientation of consciousness'
-  ftr[4].style.transform=
-   'scale(1) translate(-22%,-33%) skew(33deg)'
-  ftr[5].style.transform=
-   'scale(1) translate(0,-55%) skew(33deg)'
-  ftr[6].style.transform=
-   'scale(1) translate(0,-8%) skew(33deg)'
+ psch[4].style.transform='scale(1.4)'
+ psch[4].style.background='#00f'
+ psch[4].style.color='#fff'
+  psch[4].innerHTML='Orientation of consciousness'
+ tmprm[4].style.transform=
+  'scale(1) translate(-22%,-33%) skew(33deg)'
+ tmprm[5].style.transform=
+  'scale(1) translate(0,-55%) skew(33deg)'
+ tmprm[6].style.transform=
+  'scale(1) translate(0,-8%) skew(33deg)'
 }	
-hd[5].onmouseout=()=>
+psch[4].onmouseout=()=>
 {  
-  hd[5].style.transform='scale(1)'
-  hd[5].style.background='#005'
-   hd[5].innerHTML='<br> behavioral type'
-  ftr[4].style.transform='scale(0)'
-  ftr[5].style.transform='scale(0)'
-  ftr[6].style.transform='scale(0)'  
+ psch[4].style.transform='scale(1)'
+ psch[4].style.background='#005'
+  psch[4].innerHTML='<br> behavioral type'
+ tmprm[4].style.transform='scale(0)'
+ tmprm[5].style.transform='scale(0)'
+ tmprm[6].style.transform='scale(0)'  
 }	
 
 dfn[0].onmouseover=()=>
 {        
-  dfn[0].style.transform='scale(1.4)'
-  dfn[0].style.background='#00f'
-  dfn[0].style.height='15%'
-   dfn[0].innerHTML=
-	'Selective orientation of perception ' 
+ dfn[0].style.transform='scale(1.4)'
+ //dfn[0].style.fontSize='1em'
+ dfn[0].style.background='#00f'
+ dfn[3].style.color='#00f'
+ dfn[3].style.transform=
+  'scale(1) translate(-44%,-33%)'
+  dfn[3].innerHTML=
+   'Selective orientation<br> of perception ' 
 }		  
 dfn[0].onmouseout=()=>
 {  
-  dfn[0].style.transform='scale(1)'
-  dfn[0].style.background='#808'
-  dfn[0].style.height='11%'
-   dfn[0].innerHTML='Attention'
+ dfn[0].style.transform='scale(1)'
+ dfn[0].style.fontSize='3em'
+ dfn[0].style.background='#808'
+ dfn[0].style.height='11%'
+ dfn[3].style.transform='scale(0)'
 }	
 
 dfn[1].onmouseover=()=>
 {        
-  dfn[1].style.transform='scale(1.4)'
-  dfn[1].style.background='#00f'
-  dfn[1].style.height='15%'
-   dfn[1].innerHTML=
-    'obtaining objective information'
+ dfn[1].style.transform='scale(1.4)'
+ dfn[1].style.background='#00f'
+ dfn[3].style.color='#050'
+ dfn[3].style.transform=
+  'scale(1) translate(0%,-33%)'
+  dfn[3].innerHTML=
+   'obtaining<br> objective information'
 }		
 dfn[1].onmouseout=()=>
 {  
-  dfn[1].style.transform='scale(1)'
-  dfn[1].style.background='#770'
-  dfn[1].style.height='11%'
-   dfn[1].innerHTML='Perception'
+ dfn[1].style.transform='scale(1)'
+ dfn[1].style.background='#770'
+ dfn[3].style.transform='scale(0)'
 }	
 
 dfn[2].onmouseover=()=>
 {        
-  dfn[2].style.transform='scale(1.4)'
-  dfn[2].style.background='#00f'
-  dfn[2].innerHTML=
-   'The highest level of knowledge '
+ dfn[2].style.transform='scale(1.4)'
+ dfn[2].style.background='#00f'
+ dfn[3].style.transform=
+  'scale(1) translate(44%,-33%)'
+ dfn[3].style.color='#f00'
+  dfn[3].innerHTML=
+   'The highest level<br> of knowledge '
 }	  
 dfn[2].onmouseout=()=>
 {  
-  dfn[2].style.transform='scale(1)'
-  dfn[2].style.background='#088'
-   dfn[2].innerHTML='Thinking'
+ dfn[2].style.transform='scale(1)'
+ dfn[2].style.background='#088'
+ dfn[3].style.transform='scale(0)'
 }	
 
 Idfn=0, bdfn3=0
 adfn3=['intractve','eductn']
-dfn[3].onmouseover=()=>
+vctr[0].onmouseover=()=>
 {        
-  dfn[3].style.transform='scale(2.4)'
-  dfn[3].style.color='#666'
-  dfn[4].style.transform=
-   'scale(2.4) translate(-99%,99%)'
+ vctr[0].style.transform='scale(4)'
+ vctr[0].style.color='#666'
+ vctr[1].style.transform=
+  'scale(2.4) translate(99%,99%)'
+ vctr[2].style.transform=
+  'scale(3) translate(144%,105%) skew(14deg)' 
  Idfn=setInterval(()=>{ 
   if(bdfn3)
-   dfn[4].innerHTML=adfn3[1]
+   vctr[1].innerHTML=adfn3[1]
     else
-   dfn[4].innerHTML=adfn3[0]
+   vctr[1].innerHTML=adfn3[0]
 	bdfn3=!bdfn3
    },999)
 }	  
-dfn[3].onmouseout=()=>
+vctr[0].onmouseout=()=>
 {  
-  dfn[3].style.transform='scale(1.7)'
-  dfn[3].style.color='#0bb'
-  dfn[4].style.transform='scale(0)'
-   dfn[4].innerHTML=adfn3[1]
-    clearInterval(Idfn)
-	bdfn=0
-	dfn[4].innerHTML=adfn3[0]
+ vctr[0].style.transform='scale(3)'
+ vctr[0].style.color='#0bb'
+ vctr[1].style.transform='scale(0)'
+   vctr[1].innerHTML=adfn3[1]
+   clearInterval(Idfn)
+  bdfn=0
+  vctr[1].innerHTML=adfn3[0]
+ vctr[2].style.transform='scale(0)'
 }
  
 </script>
