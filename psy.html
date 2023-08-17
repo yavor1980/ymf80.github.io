@@ -21,8 +21,13 @@ body
  position:absolute;
  transition:1s;
  text-align:center;
- transform:scale(0);
- font-size:2.5em;
+}
+
+.bhvr
+{
+ position:absolute;
+ transition:1s;
+ text-align:center;
 }
 
 .dfn
@@ -41,7 +46,7 @@ body
  transition:1s;
 }
 
-.ggl
+.phlsph
 {
  position:absolute;
  transition:1s;
@@ -59,17 +64,16 @@ body
   Methods of psychology
  </div>
 
- <div class=psch><br>Temperament</div>
- <div class=psch><br>behavioral type</div>
-
+ <div class=tmprm>Temperament</div>
  <div class=tmprm>choleric </div>
  <div class=tmprm>melancholic </div>
  <div class=tmprm>phlegmatic </div>
  <div class=tmprm>sanguine </div>
  
- <div class=tmprm>introvert </div>
- <div class=tmprm>extrovert </div>
- <div class=tmprm>ambivert </div>
+ <div class=bhvr>behavioral type</div>
+ <div class=bhvr>introvert </div>
+ <div class=bhvr>extrovert </div>
+ <div class=bhvr>ambivert </div>
  
  <div class=dfn>Attention </div>
  <div class=dfn>Perception </div>
@@ -80,16 +84,18 @@ body
   <div class=vctr></div>
  <div class=vctr>forget<br>&nbsp &nbsp classic!</div>
  
- <div class=ggl></div>
-
+ <div class=phlsph>outlook</div>
+ <div class=phlsph>materialistic</div>
+ <div class=phlsph>idealistic</div>
 
 <script>
 
 psch=document.getElementsByClassName('psch')  
 tmprm=document.getElementsByClassName('tmprm') 
+bhvr=document.getElementsByClassName('bhvr')
 dfn=document.getElementsByClassName('dfn') 
 vctr=document.getElementsByClassName('vctr')
-ggl=document.getElementsByClassName('ggl')
+phlsph=document.getElementsByClassName('phlsph')
    
     
 psch[0].style.left=16+'%'
@@ -113,62 +119,59 @@ psch[2].style.height=11+'%'
 psch[2].style.background='#666'
 psch[2].style.cursor='pointer'
   
-psch[3].style.left=22+'%'
-psch[3].style.top=28+'%'
-psch[3].style.width=22+'%'
-psch[3].style.height=15+'%'
-psch[3].style.background='#500'
-psch[3].style.cursor='pointer'
- 
-psch[4].style.left=55+'%'
-psch[4].style.top=28+'%'
-psch[4].style.width=22+'%'
-psch[4].style.height=15+'%'
-psch[4].style.background='#005'  	
-psch[4].style.cursor='pointer'
-  
-tmprm[0].style.left=2+'%'
-tmprm[0].style.top=55+'%'
+tmprm[0].style.left=22+'%'
+tmprm[0].style.top=28+'%'
 tmprm[0].style.width=22+'%'
-tmprm[0].style.height=11+'%'
-tmprm[0].style.background='#990' 	
+tmprm[0].style.height=15+'%'
+tmprm[0].style.background='#500'
+tmprm[0].style.color='#ff0'
+tmprm[0].style.fontSize='2em'
+tmprm[0].style.cursor='pointer'
+ 
+tmprm[1].style.left=22+'%'
+tmprm[1].style.top=44+'%'
+tmprm[1].style.color='#420' 	
+tmprm[1].style.transform='scale(0)'
    
-tmprm[1].style.left=2+'%'
-tmprm[1].style.top=69+'%'
-tmprm[1].style.width=22+'%'
-tmprm[1].style.height=11+'%'
-tmprm[1].style.background='#808' 
+tmprm[2].style.left=22+'%'
+tmprm[2].style.top=44+'%'
+tmprm[2].style.color='#503' 
+tmprm[2].style.transform='scale(0)'
 
-tmprm[2].style.left=28+'%'
-tmprm[2].style.top=69+'%'
-tmprm[2].style.width=22+'%'
-tmprm[2].style.height=11+'%'
-tmprm[2].style.background='#770'
+tmprm[3].style.left=22+'%'
+tmprm[3].style.top=44+'%'
+tmprm[3].style.color='#440'
+tmprm[3].style.transform='scale(0)'
 
-tmprm[3].style.left=29+'%'
-tmprm[3].style.top=55+'%'
-tmprm[3].style.width=22+'%'
-tmprm[3].style.height=11+'%'
-tmprm[3].style.background='#0bb'
+tmprm[4].style.left=22+'%'
+tmprm[4].style.top=44+'%'
+tmprm[4].style.color='#066'
+tmprm[4].style.transform='scale(0)'
 
-tmprm[4].style.left=44+'%'
-tmprm[4].style.top=55+'%'
-tmprm[4].style.width=22+'%'
-tmprm[4].style.height=11+'%'
-tmprm[4].style.background='#808'
+bhvr[0].style.left=55+'%'
+bhvr[0].style.top=28+'%'
+bhvr[0].style.width=22+'%'
+bhvr[0].style.height=15+'%'
+bhvr[0].style.background='#005' 
+bhvr[0].style.color='#0ff'
+bhvr[0].style.fontSize='2em'
+bhvr[0].style.cursor='pointer'
+
+bhvr[1].style.left=55+'%'
+bhvr[1].style.top=44+'%'
+bhvr[1].style.color='#505'
+bhvr[1].style.transform='scale(0)'
     
-tmprm[5].style.left=66+'%'
-tmprm[5].style.top=57+'%'
-tmprm[5].style.width=22+'%'
-tmprm[5].style.height=11+'%'
-tmprm[5].style.background='#770'
+bhvr[2].style.left=55+'%'
+bhvr[2].style.top=44+'%'
+bhvr[2].style.color='#550'
+bhvr[2].style.transform='scale(0)'
   
-tmprm[6].style.left=55+'%'
-tmprm[6].style.top=66+'%'
-tmprm[6].style.width=22+'%'
-tmprm[6].style.height=11+'%'
-tmprm[6].style.background='#069'
-  
+bhvr[3].style.left=55+'%'
+bhvr[3].style.top=44+'%'
+bhvr[3].style.color='#055'
+bhvr[3].style.transform='scale(0)'  
+   
 dfn[0].style.left=11+'%'
 dfn[0].style.top=80+'%'
 dfn[0].style.width=22+'%'
@@ -206,6 +209,24 @@ vctr[2].style.left=8+'%'
 vctr[2].style.top=39+'%'
 vctr[2].style.color='#800'
 vctr[2].style.transform='scale(0)'
+ 
+phlsph[0].style.left=8+'%'
+phlsph[0].style.top=55+'%'
+phlsph[0].style.color='#800'
+phlsph[0].style.cursor='pointer'
+phlsph[0].style.transform='scale(3)'
+
+phlsph[1].style.left=18+'%'
+phlsph[1].style.top=55+'%'
+phlsph[1].style.color='#800'
+phlsph[1].style.transform=
+ 'scale(0) '
+
+phlsph[2].style.left=18+'%'
+phlsph[2].style.top=55+'%'
+phlsph[2].style.color='#008'
+phlsph[2].style.transform='scale(0)'
+
  
 obj='The totality of mental phenomena '
   
@@ -271,59 +292,56 @@ psch[2].onmouseout=()=>
   psch[2].innerHTML='Methods of psychology'
 }
 
-psch[3].onmouseover=()=>
+tmprm[0].onmouseover=()=>
 {  
- psch[3].style.transform='scale(1.4)'
- psch[3].style.height='23%'
- psch[3].style.background='red'
-  psch[3].innerHTML=
+ tmprm[0].style.transform='scale(1.4)'
+ tmprm[0].style.height='23%'
+ tmprm[0].style.background='#900'
+  tmprm[0].innerHTML=
    '-level of mental activity <br>'+  
    '-mental condition'
- tmprm[0].style.transform=
-  'scale(1) translate(11%,-88%) skew(-33deg)'
  tmprm[1].style.transform=
-  'scale(1) translate(11%,-88%) skew(-33deg)'
+  'scale(4) translate(-11%,149%) skew(-33deg)'
  tmprm[2].style.transform=
-  'scale(1) translate(0,-88%) skew(-33deg)'
+  'scale(4.2) translate(88%,144%) skew(-33deg)'
  tmprm[3].style.transform=
-  'scale(1) translate(0,-88%) skew(-33deg)'
-      
+  'scale(4) translate(-11%,222%) skew(-33deg)'
+ tmprm[4].style.transform=
+  'scale(4.2) translate(111%,244%) skew(-33deg)' 
 }		
-psch[3].onmouseout=()=>
+tmprm[0].onmouseout=()=>
 {  
- psch[3].style.transform='scale(1)'
- psch[3].style.height='15%'
- psch[3].style.background='#500'
- psch[3].style.zIndex=0
-  psch[3].innerHTML=
-   '<br> Temperament'
-tmprm[0].style.transform='scale(0)'
+ tmprm[0].style.transform='scale(1)'
+ tmprm[0].style.height='15%'
+ tmprm[0].style.background='#500'
+ tmprm[0].style.zIndex=0
+  tmprm[0].innerHTML='Temperament'
 tmprm[1].style.transform='scale(0)'
 tmprm[2].style.transform='scale(0)'
-tmprm[3].style.transform='scale(0)'  
+tmprm[3].style.transform='scale(0)'
+tmprm[4].style.transform='scale(0)'  
 }		  
 
-psch[4].onmouseover=()=>
+bhvr[0].onmouseover=()=>
 {        
- psch[4].style.transform='scale(1.4)'
- psch[4].style.background='#00f'
- psch[4].style.color='#fff'
-  psch[4].innerHTML='Orientation of consciousness'
- tmprm[4].style.transform=
-  'scale(1) translate(-22%,-33%) skew(33deg)'
- tmprm[5].style.transform=
-  'scale(1) translate(0,-55%) skew(33deg)'
- tmprm[6].style.transform=
-  'scale(1) translate(0,-8%) skew(33deg)'
+ bhvr[0].style.transform='scale(1.4)'
+ bhvr[0].style.background='#009'
+  bhvr[0].innerHTML='Orientation of consciousness'
+ bhvr[1].style.transform=
+  'scale(4) translate(-99%,99%) skew(33deg)'
+ bhvr[2].style.transform=
+  'scale(4) translate(22%,99%) skew(33deg)'
+ bhvr[3].style.transform=
+  'scale(4) translate(-22%,166%) skew(33deg)'
 }	
-psch[4].onmouseout=()=>
+bhvr[0].onmouseout=()=>
 {  
- psch[4].style.transform='scale(1)'
- psch[4].style.background='#005'
-  psch[4].innerHTML='<br> behavioral type'
- tmprm[4].style.transform='scale(0)'
- tmprm[5].style.transform='scale(0)'
- tmprm[6].style.transform='scale(0)'  
+ bhvr[0].style.transform='scale(1)'
+ bhvr[0].style.background='#005'
+  bhvr[0].innerHTML='behavioral type'
+ bhvr[1].style.transform='scale(0)'
+ bhvr[2].style.transform='scale(0)'
+ bhvr[3].style.transform='scale(0)'  
 }	
 
 dfn[0].onmouseover=()=>
@@ -408,6 +426,24 @@ vctr[0].onmouseout=()=>
   bdfn=0
   vctr[1].innerHTML=adfn3[0]
  vctr[2].style.transform='scale(0)'
+}
+
+phlsph[0].onmouseover=()=>
+{  
+ phlsph[0].style.transform=
+  'scale(4) translate(22%,0)'
+ phlsph[0].style.color='#b00'
+ phlsph[1].style.transform=
+  'scale(5) translate(66%,-44%)'
+ phlsph[2].style.transform=
+  'scale(4) translate(99%,88%)'
+}
+phlsph[0].onmouseout=()=>
+{  
+ phlsph[0].style.transform='scale(3)'
+ phlsph[0].style.color='#800'
+ phlsph[1].style.transform='scale(0)'
+ phlsph[2].style.transform='scale(0)'
 }
  
 </script>
