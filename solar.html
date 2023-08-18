@@ -11,7 +11,6 @@
 #idbd
 {
 background: linear-gradient(#000,#000);
-
 }
 
 #idb
@@ -27,12 +26,10 @@ transition:1s;
 border-radius:22%;
 cursor:pointer;
 font-size:2em;
-
 }
 #idb:hover
 {
 transform:scale(1.3);
-
 }
 .sol
 {
@@ -57,27 +54,25 @@ transform:scale(1.3);
 }
 
 .spc
-{
-position:absolute;
-transition:1s;
-cursor:pointer;
-
+{ 
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
 }
 .strs
 {
  position:absolute;  
-  border-radius:55%;
-  transition:2s;
-  width:0.4%;
-  height:1%;
-  z-index:-1;
+ border-radius:55%;
+ transition:2s;
+ width:0.4%;
+ height:1%;
+ z-index:-1;
 }
 
 .shtl
 {
  position:absolute;  
  transition:1s;
- 
 }
 .flm
 {
@@ -123,10 +118,10 @@ transform:scale(2);
 <div class=strs ></div>
 
 <div class=spc >
-Galaxy
+ Galaxy
 </div>
 <div class=spc >
-redshift
+ redshift
 </div>
 <div class=spc >
  radio galaxy
@@ -145,210 +140,203 @@ redshift
  props
 </div>
 <div class=rct >
-  setInterval(()=>mv(),999)
+ setInterval(()=>mv(),999)
 </div>
-
 
 
 <script>
  // 
-  sol=document.getElementsByClassName('sol')
-  plnt=document.getElementsByClassName('plnt')
-  shtl=document.getElementsByClassName('shtl')
-  flm=document.getElementsByClassName('flm')
-  strs=document.getElementsByClassName('strs')
+sol=document.getElementsByClassName('sol')
+plnt=document.getElementsByClassName('plnt')
+shtl=document.getElementsByClassName('shtl')
+flm=document.getElementsByClassName('flm')
+strs=document.getElementsByClassName('strs')
   
-  spc=document.getElementsByClassName('spc')
-  rct=document.getElementsByClassName('rct')
+spc=document.getElementsByClassName('spc')
+rct=document.getElementsByClassName('rct')
   
-  
-o= 
- {
-	 b:0,
-  init:function()
-  {
-      	 
-     sol[1].style.opacity='0.2'
-     sol[1].style.transform='scale(1)'
-     sol[1].style.zIndex=-1
-	 sol[1].style.left=-6+'%'
-	 sol[1].style.top=-6+'%'  
-     sol[1].style.width=111+'%'
-     sol[1].style.height=111+'%'
 
-     plnt[0].style.background=
-	  'radial-gradient(#0f0,#333)'
-	 plnt[0].style.left=Math.random()*77+'%'
-     plnt[0].style.top=Math.random()*77+'%'  
-     plnt[0].style.width=44+'%'
-     plnt[0].style.height=44+'%'
-	 plnt[0].style.cursor='pointer'
+ sol[1].style.opacity='0.2'
+ sol[1].style.transform='scale(1)'
+ sol[1].style.zIndex=-1
+ sol[1].style.left=-6+'%'
+ sol[1].style.top=-6+'%'  
+ sol[1].style.width=111+'%'
+ sol[1].style.height=111+'%'
+ 
+ plnt[0].style.background=
+  'radial-gradient(#0f0,#333)'
+ plnt[0].style.left=Math.random()*77+'%'
+ plnt[0].style.top=Math.random()*77+'%'  
+ plnt[0].style.width=44+'%'
+ plnt[0].style.height=44+'%'
+ plnt[0].style.cursor='pointer'
 	
-     plnt[1].style.background='radial-gradient(#f00,#000)';
-     plnt[1].style.left=Math.random()*77+'%'
-     plnt[1].style.top=Math.random()*77+'%'  
-     plnt[1].style.width=33+'%'
-     plnt[1].style.height=33+'%'
-	 plnt[1].style.cursor='pointer'
+ plnt[1].style.background=
+  'radial-gradient(#f00,#000)';
+ plnt[1].style.left=Math.random()*77+'%'
+ plnt[1].style.top=Math.random()*77+'%'  
+ plnt[1].style.width=33+'%'
+ plnt[1].style.height=33+'%'
+ plnt[1].style.cursor='pointer'
 	 
-	 plnt[2].style.background=
-	   'radial-gradient(#ff0,#333)';
-     plnt[2].style.left=Math.random()*77+'%'
-	 plnt[2].style.top=Math.random()*77+'%'  
-     plnt[2].style.width=22+'%'
-     plnt[2].style.height=22+'%'  
-	 plnt[2].style.cursor='pointer'
+ plnt[2].style.background=
+  'radial-gradient(#ff0,#333)';
+ plnt[2].style.left=Math.random()*77+'%'
+ plnt[2].style.top=Math.random()*77+'%'  
+ plnt[2].style.width=22+'%'
+ plnt[2].style.height=22+'%'  
+ plnt[2].style.cursor='pointer'
 	 
-	 plnt[3].style.left=88+'%'
-     plnt[3].style.top=-22+'%'  
-	 plnt[3].style.color='#f09'
-	 plnt[3].style.cursor='pointer'
-	 plnt[3].style.transform='scale(2)'
+ plnt[3].style.left=88+'%'
+ plnt[3].style.top=-22+'%'  
+ plnt[3].style.color='#f09'
+ plnt[3].style.cursor='pointer'
+ plnt[3].style.transform='scale(2)'
 	 
-	 plnt[4].style.left=94+'%'
-     plnt[4].style.top=-33+'%'  
-	 plnt[4].style.width=33+'%'
-	 plnt[4].style.color='#f0f'
-     plnt[4].style.transition='1s'
-	 plnt[4].style.transform='scale(0)'
+ plnt[4].style.left=94+'%'
+ plnt[4].style.top=-33+'%'  
+ plnt[4].style.width=33+'%'
+ plnt[4].style.color='#f0f'
+ plnt[4].style.transition='1s'
+ plnt[4].style.transform='scale(0)'
 	 
-     shtl[0].style.left=66+'%'
-	 shtl[0].style.top=45+'%'  
-     shtl[0].style.width=16+'%'
-     shtl[0].style.height=11+'%' 
-     shtl[0].style.transform=
-	  'rotate(0deg)  skew(44deg)'
+ shtl[0].style.left=66+'%'
+ shtl[0].style.top=45+'%'  
+ shtl[0].style.width=16+'%'
+ shtl[0].style.height=11+'%' 
+ shtl[0].style.transform=
+  'rotate(0deg)  skew(44deg)'
 	   
-     shtl[1].style.background=
-      'radial-gradient(#090,#444)';
-     shtl[1].style.left=6+'%'
-	 shtl[1].style.top=-3+'%'  
-     shtl[1].style.width=99+'%'
-     shtl[1].style.height=33+'%'
-	 shtl[1].style.transform=
-	  'rotate(0deg)  skew(0deg)'
-	 shtl[1].style.borderTopLeftRadius=55+'%'
-	 shtl[1].style.borderBottomLeftRadius=55+'%'
-	// shtl[1].style.zIndex=0
+ shtl[1].style.background=
+  'radial-gradient(#090,#444)';
+ shtl[1].style.left=6+'%'
+ shtl[1].style.top=-3+'%'  
+ shtl[1].style.width=99+'%'
+ shtl[1].style.height=33+'%'
+ shtl[1].style.transform=
+  'rotate(0deg)  skew(0deg)'
+ shtl[1].style.borderTopLeftRadius=55+'%'
+ shtl[1].style.borderBottomLeftRadius=55+'%'
 	 
-	 shtl[2].style.background=
-      'radial-gradient(#080,#444)' 
-     shtl[2].style.left=55+'%'
-	 shtl[2].style.top=-22+'%'  
-     shtl[2].style.width=55+'%'
-     shtl[2].style.height=144+'%'	
-	 shtl[2].style.borderRadius=22+'%'
+ shtl[2].style.background=
+  'radial-gradient(#080,#444)' 
+ shtl[2].style.left=55+'%'
+ shtl[2].style.top=-22+'%'  
+ shtl[2].style.width=55+'%'
+ shtl[2].style.height=144+'%'	
+ shtl[2].style.borderRadius=22+'%'
 	 
-	 shtl[3].style.background=
-	  'radial-gradient(#090,#444)';  
-     shtl[3].style.left=5+'%'
-	 shtl[3].style.top=77+'%'  
-     shtl[3].style.width=99+'%'
-     shtl[3].style.height=33+'%'	
-	 shtl[3].style.borderTopLeftRadius=55+'%'
-	 shtl[3].style.borderBottomLeftRadius=55+'%'
-	 shtl[3].style.zIndex=-1
+ shtl[3].style.background=
+ 'radial-gradient(#090,#444)';  
+ shtl[3].style.left=5+'%'
+ shtl[3].style.top=77+'%'  
+ shtl[3].style.width=99+'%'
+ shtl[3].style.height=33+'%'	
+ shtl[3].style.borderTopLeftRadius=55+'%'
+ shtl[3].style.borderBottomLeftRadius=55+'%'
+ shtl[3].style.zIndex=-1
 	
-     flm[0].style.background='red' 
-	 flm[0].style.left=-44+'%'
-	 flm[0].style.top=7+'%'  
-     flm[0].style.width=33+'%'
-     flm[0].style.height=99+'%'
-	 flm[0].style.opacity=0
+ flm[0].style.background='red' 
+ flm[0].style.left=-44+'%'
+ flm[0].style.top=7+'%'  
+ flm[0].style.width=33+'%'
+ flm[0].style.height=99+'%'
+ flm[0].style.opacity=0
 	
-	 flm[1].style.background='red' 
-	 flm[1].style.left=-44+'%'
-	 flm[1].style.top=7+'%'  
-     flm[1].style.width=33+'%'
-     flm[1].style.height=99+'%'
-	 flm[1].style.opacity=0
+ flm[1].style.background='red' 
+ flm[1].style.left=-44+'%'
+ flm[1].style.top=7+'%'  
+ flm[1].style.width=33+'%'
+ flm[1].style.height=99+'%'
+ flm[1].style.opacity=0
 
-	 strs[0].style.left=11+'%'
-	 strs[0].style.top=55+'%'
-	 strs[0].style.background='#ff0';
-	 strs[1].style.left=77+'%'
-	 strs[1].style.top=22+'%'
-	 strs[1].style.background='#ff0';
-	 strs[2].style.left=22+'%'
-	 strs[2].style.top=22+'%'
-	 strs[2].style.background='#ff0';
-	 strs[3].style.left=44+'%'
-	 strs[3].style.top=88+'%'
-	 strs[3].style.background='#ff0';
-	 strs[4].style.left=88+'%'
-	 strs[4].style.top=77+'%'
-	 strs[4].style.background='#ff0';
+ strs[0].style.left=11+'%'
+ strs[0].style.top=55+'%'
+ strs[0].style.background='#ff0';
+ strs[1].style.left=77+'%'
+ strs[1].style.top=22+'%'
+ strs[1].style.background='#ff0';
+ strs[2].style.left=22+'%'
+ strs[2].style.top=22+'%'
+ strs[2].style.background='#ff0';
+ strs[3].style.left=44+'%'
+ strs[3].style.top=88+'%'
+ strs[3].style.background='#ff0';
+ strs[4].style.left=88+'%'
+ strs[4].style.top=77+'%'
+ strs[4].style.background='#ff0';
 	 
-	 spc[0].style.left=11+'%'
-	 spc[0].style.top=5+'%'
-	 spc[0].style.color='#ff0'
-	 spc[0].style.transform=
-	  'scale(2.5) skew(-11deg)'
+ spc[0].style.left=11+'%'
+ spc[0].style.top=5+'%'
+ spc[0].style.color='#ff0'
+ spc[0].style.transform=
+  'scale(2.5) skew(-11deg)'
 	 
-	 spc[1].style.left=11+'%'
-	 spc[1].style.top=12+'%'
-	 spc[1].style.color='#d0d'
-	 spc[1].style.transform=
-	  'scale(2.5) skew(-22deg)'
+ spc[1].style.left=11+'%'
+ spc[1].style.top=12+'%'
+ spc[1].style.color='#d0d'
+ spc[1].style.transform=
+  'scale(2.5) skew(-22deg)'
 	 
-	 spc[2].style.left=11+'%'
-	 spc[2].style.top=19+'%'
-	 spc[2].style.color='#099'
-	 spc[2].style.transform=
-	  'scale(2.5) skew(-22deg)'
+ spc[2].style.left=11+'%'
+ spc[2].style.top=19+'%'
+ spc[2].style.color='#099'
+ spc[2].style.transform=
+  'scale(2.5) skew(-22deg)'
 	 
-	 spc[3].style.left=11+'%'
-	 spc[3].style.top=29+'%'
-	 spc[3].style.color='#099'
-	 spc[3].style.transform=
-	  'scale(2.5) skew(-22deg)'
+ spc[3].style.left=11+'%'
+ spc[3].style.top=29+'%'
+ spc[3].style.color='#099'
+ spc[3].style.transform=
+  'scale(2.5) skew(-22deg)'
 	  
-	 spc[4].style.left=45+'%'
-	 spc[4].style.top=63+'%'
-	 spc[4].style.color='#fff'
-	 spc[4].style.transform='scale(0) '
+ spc[4].style.left=45+'%'
+ spc[4].style.top=63+'%'
+ spc[4].style.color='#fff'
+ spc[4].style.transform='scale(0) '
 	  
-	 rct[0].style.left=62+'%'
-	 rct[0].style.top=22+'%'
-	 rct[0].style.color='#ff0'
+ rct[0].style.left=62+'%'
+ rct[0].style.top=22+'%'
+ rct[0].style.color='#ff0'
 	 
-	 rct[1].style.left=55+'%'
-	 rct[1].style.top=66+'%'
-	 rct[1].style.color='#ff0'
-	 rct[1].style.transform='scale(0)'
+ rct[1].style.left=55+'%'
+ rct[1].style.top=66+'%'
+ rct[1].style.color='#ff0'
+ rct[1].style.transform='scale(0)'
 	 
-	 rct[2].style.left=77+'%'
-	 rct[2].style.top=66+'%'
-	 rct[2].style.color='#ff0'
-	 rct[2].style.transform='scale(0)'
+ rct[2].style.left=77+'%'
+ rct[2].style.top=66+'%'
+ rct[2].style.color='#ff0'
+ rct[2].style.transform='scale(0)'
 	 
-	 rct[3].style.left=44+'%'
-	 rct[3].style.top=44+'%'
-	 rct[3].style.color='#f8f'
-	 rct[3].style.transform='scale(0)'
-  }, 
+ rct[3].style.left=44+'%'
+ rct[3].style.top=44+'%'
+ rct[3].style.color='#f8f'
+ rct[3].style.transform='scale(0)'
+ 
   
- clsh:function()
+bclsh=0 
+function clsh()
 {
- if(o.b) 
-   shtl[0].style.transform=
-	'scale(1.1) skew(44deg)'
-	  else 
-   shtl[0].style.transform=
-    'scale(0.9) skew(44deg) '
-	    o.b=!o.b
-	 
-},
- clksh:function()
+ if(bclsh) 
+  shtl[0].style.transform=
+   'scale(1.1) skew(44deg)'
+ else 
+  shtl[0].style.transform=
+   'scale(0.9) skew(44deg) '
+     bclsh=!bclsh
+}
+
+function clksh()
 {
   shtl[0].style.transform=
    'skew(22deg) scale(1.1) translate(11%,11%)' 
   flm[0].style.opacity=1
-  flm[1].style.opacity=1
- 
-},
+  flm[1].style.opacity=1 
+}
   
- clpl:function()
+function clpl()
 {
  sol[1].style.transform='scale('+Math.random()*2+')'
    
@@ -374,35 +362,27 @@ o=
    'translate'+Math.random()*88+'%'
  strs[3].style.transform='scale('+Math.random()*2
  strs[4].style.transform='scale('+Math.random()*2
-	
-}, 
-  
-}
-       o.init()
+}	  
 	   
-   setInterval(()=>o.clpl(), 4000)
-   setInterval(()=>o.clsh(), 999)
+   setInterval(()=>clpl(), 4000)
+   setInterval(()=>clsh(), 999)
    
 shtl[0].onmouseover=()=>
 {
-  shtl[0].style.transform='scale(2) skew(22deg)'
-	 
+ shtl[0].style.transform='scale(2) skew(22deg)'
 }
 shtl[0].onmouseout=()=>
 {
-  shtl[0].style.transform='scale(1) skew(44deg)'
-    	
+ shtl[0].style.transform='scale(1) skew(44deg)'   	
 }
      
-shtl[2].onmousemove=()=>
+shtl[2].onmouseover=()=>
 {
   shtl[2].style.cursor='pointer'
-	 
 }
 shtl[2].onclick=()=>
 {
-  idb.onmousedown()
-    	
+  idb.onmousedown() 	
 }
 
 idb.onmousedown=()=>
@@ -414,22 +394,21 @@ idb.onmousedown=()=>
  flm[1].style.transform=
 	 'translate(-444%,0%) skew(44deg)'   
  shtl[2].style.borderRadius='55%'
-       o.clksh()
-	
-	setTimeout(()=>{
-	 flm[0].style.opacity=0
-	 flm[1].style.opacity=0
-	 shtl[2].style.borderRadius='22%'
-	 shtl[0].style.transform=
-	  'translate(-11%,-11%) skew(44deg)'
-	 flm[0].style.transition='0s'
-	 flm[0].style.transform=
-	  'translate(0%,0%) skew(44deg)'
-	 flm[1].style.transition='0s'
-	 flm[1].style.transform=
-	   'translate(0%,0%) skew(44deg)'
-      
-	}, 1111)
+        
+		clksh()
+ setTimeout(()=>{
+  flm[0].style.opacity=0
+  flm[1].style.opacity=0
+  shtl[2].style.borderRadius='22%'
+  shtl[0].style.transform=
+   'translate(-11%,-11%) skew(44deg)'
+  flm[0].style.transition='0s'
+  flm[0].style.transform=
+   'translate(0%,0%) skew(44deg)'
+  flm[1].style.transition='0s'
+  flm[1].style.transform=
+   'translate(0%,0%) skew(44deg)'
+ }, 1111)
             
 }
 
@@ -489,35 +468,34 @@ plnt[3].onmouseout=()=>
 
 spc[0].onmouseover=()=>
 {
-  spc[0].style.transform=
-   'scale(1.9) translate(22%,0)'
-  spc[0].style.zIndex=1
-  spc[0].style.color='#ddd'
-   spc[0].innerHTML=
-'A gravitationally bound system of stars,<br>'+
-'star clusters, interstellar gas <br>'+ 
-'and dust, dark matter, planets. '
-	  	  
+ spc[0].style.transform=
+  'scale(1.9) translate(22%,0)'
+ spc[0].style.zIndex=1
+ spc[0].style.color='#ddd'
+  spc[0].innerHTML=
+   'A gravitationally bound system of stars,<br>'+
+   'star clusters, interstellar gas <br>'+ 
+   'and dust, dark matter, planets. '
 }
 spc[0].onmouseout=()=>
 {
-  spc[0].style.transform=
-   'scale(2.5) skew(-22deg)'
-  spc[0].innerHTML='Galaxy'
-  spc[0].style.color='#ff0'
-   spc[0].style.zIndex=0
+ spc[0].style.transform=
+  'scale(2.5) skew(-22deg)'
+ spc[0].innerHTML='Galaxy'
+ spc[0].style.color='#ff0'
+ spc[0].style.zIndex=0
 }
 
 spc[1].onmouseover=()=>
 {
  spc[1].style.transform=
-   'scale(1.9) translate(22%,0)'
+  'scale(1.9) translate(22%,0)'
  spc[1].style.zIndex=1
- spc[1].style.color='#ddd'
+ spc[1].style.color='#ccc'
   spc[1].innerHTML=
-'Lowering the radiation frequencies,<br>'+ 
-'when dynamically deleting sources. <br>'+  
-'Non-stationarity of the Metagalaxy..'	   	   
+   'Lowering the radiation frequencies,<br>'+ 
+   'when dynamically deleting sources. <br>'+  
+   'Non-stationarity of the Metagalaxy..'	   	   
 }
 spc[1].onmouseout=()=>
 {
@@ -533,10 +511,10 @@ spc[2].onmouseover=()=>
  spc[2].style.transform=
    'scale(1.9) translate(22%,0)'
  spc[2].style.zIndex=1
- spc[2].style.color='#ddd'
+ spc[2].style.color='#eee'
   spc[2].innerHTML=
-  'Increased radio emission '+ '(10<sup>37</sup>10<sup>38</sup> erg/s)' 	   
-	   
+  'Increased radio emission '+ 
+  '(10<sup>37</sup>10<sup>38</sup> erg/s)' 	   
 }
 spc[2].onmouseout=()=>
 {
@@ -545,7 +523,6 @@ spc[2].onmouseout=()=>
  spc[2].style.color='#099' 
  spc[2].style.zIndex=0 
   spc[2].innerHTML='radio galaxy'
-   
 } 
 
 spc[3].onmouseover=()=>
@@ -553,9 +530,8 @@ spc[3].onmouseover=()=>
  spc[3].style.transform=
    'scale(1.9) translate(22%,0)'
  spc[3].style.zIndex=1
- spc[3].style.color='#099'
+ spc[3].style.color='#ddd'
   spc[3].innerHTML='by complex observation...' 	   
-	   
 }
 spc[3].onmouseout=()=>
 {
@@ -566,10 +542,10 @@ spc[3].onmouseout=()=>
   spc[3].innerHTML='Researching'
 }  
  
- Irct0=0
- brct0=0
- fnc=['init','mv','cl','pr']
-  ifnc=0
+Irct0=0
+brct0=0
+fnc=['init','mv','cl','pr']
+ ifnc=0
 rct[0].onmouseover=()=>
 {
  rct[0].style.transform=' scale(2.2) '
