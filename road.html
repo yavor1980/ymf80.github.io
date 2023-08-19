@@ -9,11 +9,6 @@ body
 background:linear-gradient(44deg,#ff0,#0ff)
 }
 
-button
-{
-background:linear-gradient(44deg,#ff0,#0ff)
-}
-
 .tl
 {
 position:absolute;
@@ -28,7 +23,7 @@ position:absolute;
 transition:1s;
 }
 
-.sh
+.cr
 {
 position:absolute;
 background: radial-gradient(#ff0,#550);
@@ -85,10 +80,9 @@ cursor:pointer;
 
 <div class=rd>
   <div class=rd></div>
-
-  <div class=sh>
-   <div class=sh></div>
-   <div class=sh></div>
+  <div class=cr>
+   <div class=cr></div>
+   <div class=cr></div>
   </div>
 </div>
 
@@ -116,7 +110,7 @@ cursor:pointer;
 
 tl=document.getElementsByClassName('tl')
 rd=document.getElementsByClassName('rd')
-sh=document.getElementsByClassName('sh')
+cr=document.getElementsByClassName('cr')
 
 md=document.getElementsByClassName('md')
 nndrn=document.getElementsByClassName('nndrn')
@@ -131,31 +125,29 @@ nm[i].style.top=t+'%'
 nm[i].style.width=w+'%'
 nm[i].style.height=h+'%' 
 nm[i].style.background= bkg
-
 }
 
-  inn(tl,0, 11,22, 9,22, '#000')
-   tl[0].style.borderRadius='5%'
-  inn(tl,1, 7,9, 88,22, '#f00')
-   tl[1].style.borderRadius='55%'
-  inn(tl,2, 7,33, 88,22, '#ff0')
-   tl[2].style.borderRadius='55%'
-  inn(tl,3, 7,58, 88,22, '#0f0')
-   tl[3].style.borderRadius='55%'
+inn(tl,0, 11,22, 9,22, '#000')
+ tl[0].style.borderRadius='5%'
+inn(tl,1, 7,9, 88,22, '#f00')
+ tl[1].style.borderRadius='55%'
+inn(tl,2, 7,33, 88,22, '#ff0')
+ tl[2].style.borderRadius='55%'
+inn(tl,3, 7,58, 88,22, '#0f0')
+ tl[3].style.borderRadius='55%'
   
-  inn(rd,0, 15,1, 77,99, '#777')
-   rd[0].style.borderRadius='5%'
-   rd[0].style.transform='skew(-22deg)'
-  inn(rd,1, 44,88, 9,22, '#fff')
+inn(rd,0, 15,1, 77,99, '#777')
+ rd[0].style.borderRadius='5%'
+ rd[0].style.transform='skew(-22deg)'
+inn(rd,1, 44,77, 9,22, '#fff')
   
-  inn(sh,1, 2,11, 88,66, 'radial-gradient(#ff0,#550)')
-   sh[1].style.borderBottomLeftRadius='55%'
-   sh[1].style.borderBottomRightRadius='55%'
-  
-  inn(sh,2, 3,11, 88,66, 'radial-gradient(#ff0,#550)')
-   sh[2].style.borderRadius='5%'
+inn(cr,1, 2,11, 88,66, 'radial-gradient(#ff0,#550)')
+ cr[1].style.borderBottomLeftRadius='55%'
+ cr[1].style.borderBottomRightRadius='55%'
+
+inn(cr,2, 3,11, 88,66, 'radial-gradient(#ff0,#550)')
+ cr[2].style.borderRadius='5%'
    
- 
  md[0].style.left='22%'
  md[0].style.top='3%'
  md[0].style.transform='scale(2)'
@@ -211,7 +203,7 @@ nm[i].style.background= bkg
  vctr[2].style.transform='scale(0)'
  
  vctr[3].style.left='33%'
- vctr[3].style.top='99%'
+ vctr[3].style.top='92%'
  vctr[3].style.color='#0ff'
  vctr[3].style.transform='scale(0)'
  
@@ -231,7 +223,6 @@ nm[i].style.background= bkg
  dly[2].style.transform='scale(0)'
  
  
-
 bcl=0; v=22; n=0
 function cl()
 {
@@ -239,9 +230,9 @@ function cl()
  if(bcl)
  {
   tl[n].style.transform='scale(1.4)'
-  sh[0].style.transform=
+  cr[0].style.transform=
    'scale(1) translate(-33%,0) rotate('+(-v)+'deg)'	
-  rd[1].style.transform='translate(0,-99%)'
+  rd[1].style.transform='translate(0,-33%)'
   rd[1].style.transition='0s'
   rd[1].style.opacity=0
  }   
@@ -250,25 +241,28 @@ function cl()
   tl[n].style.transform='scale(1)'
    n= Math.round( Math.random()*3)
   tl[n].style.zIndex=1
-  sh[0].style.transform=
+  cr[0].style.transform=
    'scale(1.3) translate(33%,0) rotate('+v+'deg)'
-  rd[1].style.transform='translate(0,-666%)'
+  rd[1].style.transform='translate(0,-388%)'
   rd[1].style.transition='2s'
   rd[1].style.opacity=1	
  }  
-     
-    bcl=!bcl
+     bcl=!bcl
 }
-
      setInterval(cl,999)
 
-
  bdly=0
-sh[0].onmouseover=()=>
+cr[0].onmouseover=()=>
 {
- sh[0].style.boxShadow='33px 33px'
- sh[1].style.transform=
+ cr[0].style.borderBottomLeftRadius='33%'
+ cr[0].style.borderBottomRightRadius='33%'
+ cr[0].style.boxShadow='33px 33px'
+ cr[1].style.borderBottomLeftRadius='33%'
+ cr[1].style.borderBottomRightRadius='33%'
+ cr[1].style.transform=
   'scale(2,1) translate(2%, 5%)'
+ cr[2].style.borderBottomLeftRadius='44%'
+ cr[2].style.borderBottomRightRadius='44%'
  md[1].style.transform='scale(3) '
  
  dlyI=setInterval(()=>
@@ -276,31 +270,29 @@ sh[0].onmouseover=()=>
  if(bdly)
  {
   dly[0].style.transform='scale(3,5) skew(-33deg)'
-  dly[1].style.transform='scale(3,3) skew(-33deg)'
+  dly[1].style.transform='scale(3,3) skew(33deg)'
   dly[2].style.transform='scale(3,5) skew(-33deg)'
  } else 
  {
-  dly[0].style.transform='scale(3,3) skew(-33deg)'
+  dly[0].style.transform='scale(3,3) skew(33deg)'
   dly[1].style.transform='scale(3,5) skew(-33deg)'
-  dly[2].style.transform='scale(3,3) skew(-33deg)'
+  dly[2].style.transform='scale(3,3) skew(33deg)'
  }
      bdly=!bdly
  }
-      ,999)
-		
+    ,999)	
 }
-sh[0].onmouseout=()=>
+cr[0].onmouseout=()=>
 {
-  sh[0].style.boxShadow='9px 9px'
-  sh[1].style.transform='scale(0.1)'
-  md[1].style.transform='scale(0) '
- 
-  dly[0].style.transform='scale(0) skew(0deg)'
-  dly[1].style.transform='scale(0) skew(0deg)'
-  dly[2].style.transform='scale(0) skew(0deg)'
- 
+ cr[0].style.borderRadius='5%'
+ cr[0].style.boxShadow='9px 9px'
+ cr[1].style.transform='scale(0.1)'
+ cr[2].style.borderRadius='5%'
+ md[1].style.transform='scale(0) '
+ dly[0].style.transform='scale(0) skew(0deg)'
+ dly[1].style.transform='scale(0) skew(0deg)'
+ dly[2].style.transform='scale(0) skew(0deg)'
   clearInterval(dlyI)
- 
 }
 
 tl[0].onmouseover=()=>
@@ -326,7 +318,6 @@ md[0].onmouseover=()=>
   'scale(2) translate(11%, 33%)'
  md[0].style.color='#bbf'
   md[0].innerHTML=rls
- 
 }
 md[0].onmouseout=()=>
 {
@@ -347,37 +338,36 @@ vctr[0].onmouseover=()=>
  vctr[1].style.transform=
   'scale(3) translate(-33%,-22%) skew(-44deg)' 
  vctr[2].style.transform=
-  'scale(3) translate(77%,-399%) skew(-22deg)'
+  'scale(3) translate(77%,-399%) skew(-44deg)'
  vctr[3].style.transform=
-   'scale(3) translate(77%,-388%) skew(-22deg)'
+   'scale(3) translate(77%,-300%) skew(-44deg)'
 }
 vctr[0].onmouseout=()=>
 {
-  vctr[0].style.color='#809'
-  vctr[0].style.transform='scale(2)'
-  vctr[0].innerHTML='VCTR idea' 
-  vctr[1].style.transform='scale(0)'
-  vctr[2].style.transform='scale(0)'
-  vctr[3].style.transform='scale(0)'
-  
+ vctr[0].style.color='#809'
+ vctr[0].style.transform='scale(2)'
+ vctr[0].innerHTML='VCTR idea' 
+ vctr[1].style.transform='scale(0)'
+ vctr[2].style.transform='scale(0)'
+ vctr[3].style.transform='scale(0)'
 }
 
 nndrn[0].onmouseover=()=>
 {
-  nndrn[0].style.transform='scale(3,9)'
-  nndrn[1].style.transform=
-   'scale(3) translate(99%,-222%)'
-  nndrn[2].style.transform=
-   'scale(3) translate(69%,-144%) skew(23deg)'
-  nndrn[3].style.transform=
-   'scale(3) translate(98%,-84%) skew(11deg)'
+ nndrn[0].style.transform='scale(3,9)'
+ nndrn[1].style.transform=
+  'scale(3) translate(99%,-222%)'
+ nndrn[2].style.transform=
+  'scale(3) translate(69%,-144%) skew(23deg)'
+ nndrn[3].style.transform=
+  'scale(3) translate(98%,-84%) skew(11deg)'
 }
 nndrn[0].onmouseout=()=>
 {
-  nndrn[0].style.transform='scale(3,3)'
-  nndrn[1].style.transform='scale(0)'
-  nndrn[2].style.transform='scale(0)'
-  nndrn[3].style.transform='scale(0)'
+ nndrn[0].style.transform='scale(3,3)'
+ nndrn[1].style.transform='scale(0)'
+ nndrn[2].style.transform='scale(0)'
+ nndrn[3].style.transform='scale(0)'
 }
 
 //d[0].innerHTML+=r
