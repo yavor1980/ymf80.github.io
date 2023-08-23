@@ -34,6 +34,17 @@ button:hover
  transform:scale(1.2);
 } 
 
+.drssl
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+} 
+.drssl:hover
+{
+ transform:scale(1.2);
+} 
+
 .clma
 {
  position:absolute;
@@ -73,6 +84,11 @@ button:hover
   </div>
   <div class=wrs>
    <div class=elm>||</div>
+   <div class=drssl>
+    <div class=drssl></div>
+	<div class=drssl></div>
+	<div class=drssl></div>
+   </div>
    <div class=clma></div>
   </div> 
  <div class=telm>cirquit</div>
@@ -89,11 +105,12 @@ button:hover
 btn=document.getElementsByTagName('button')
 wrs=document.getElementsByClassName('wrs')
 elm=document.getElementsByClassName('elm')
+drssl=document.getElementsByClassName('drssl')
 clma=document.getElementsByClassName('clma')
 
+telm=document.getElementsByClassName('telm')
 tprcss=document.getElementsByClassName('tprcss')
 
-telm=document.getElementsByClassName('telm')
 
 btn[0].style.left=4+'%'
 btn[0].style.top=5+'%'
@@ -131,7 +148,7 @@ wrs[2].style.background='#000'
 
 wrs[3].style.left=21.5+'%'
 wrs[3].style.top=32+'%'
-wrs[3].style.width=44+'%'
+wrs[3].style.width=55+'%'
 wrs[3].style.height=2+'%'
 wrs[3].style.background='#000'
  
@@ -153,9 +170,9 @@ elm[0].style.padding='9px'
 elm[0].style.transform='rotate(-90deg)'
 elm[0].style.fontSize='3em'
  
-elm[1].style.left=28+'%'
+elm[1].style.left=21+'%'
 elm[1].style.top=-222+'%'
-elm[1].style.width=28+'%'
+elm[1].style.width=23+'%'
 elm[1].style.height=555+'%'
 elm[1].style.background='#999'
 elm[1].style.cursor='pointer'
@@ -168,6 +185,44 @@ elm[2].style.color='#777'
 elm[2].style.cursor='pointer'
 elm[2].style.transform=
  'scale(4) rotate(90deg)'
+
+drssl[0].style.left=133+'%'
+drssl[0].style.top=-9+'%'
+drssl[0].style.width=177+'%'
+drssl[0].style.height=5+'%'
+
+drssl[1].style.left=0+'%'
+drssl[1].style.top=0+'%'
+drssl[1].style.width=44+'%'
+drssl[1].style.height=44+'%'
+drssl[1].style.borderRadius='55%'
+drssl[1].style.borderLeft='15px ridge transparent'
+drssl[1].style.borderRight='15px ridge #777'
+drssl[1].style.borderTop='15px ridge #777'
+drssl[1].style.borderBottom='15px ridge transparent'
+drssl[1].style.transform='rotate(-45deg)'
+
+drssl[2].style.left=222+'%'
+drssl[2].style.top=0+'%'
+drssl[2].style.width=44+'%'
+drssl[2].style.height=44+'%'
+drssl[2].style.borderRadius='55%'
+drssl[2].style.borderLeft='15px ridge transparent'
+drssl[2].style.borderRight='15px ridge #777'
+drssl[2].style.borderTop='15px ridge #777'
+drssl[2].style.borderBottom='15px ridge transparent'
+drssl[2].style.transform='rotate(-45deg)'
+
+drssl[3].style.left=444+'%'
+drssl[3].style.top=0+'%'
+drssl[3].style.width=44+'%'
+drssl[3].style.height=44+'%'
+drssl[3].style.borderRadius='55%'
+drssl[3].style.borderLeft='15px ridge transparent'
+drssl[3].style.borderRight='15px ridge #777'
+drssl[3].style.borderTop='15px ridge #777'
+drssl[3].style.borderBottom='15px ridge transparent'
+drssl[3].style.transform='rotate(-45deg)'
 
 clma[0].style.left=99+'%'
 clma[0].style.top=-222+'%'
@@ -229,7 +284,6 @@ if(bbtn0)
   'translate(130%,233%) rotate(90deg)'
  elm[2].style.transform=
   'scale(4) translate(-399%,-133%) rotate(0deg)'
- elm[2].style.transform='#0b0'
   telm[2].innerHTML='differentiator'
  }else{
  elm[1].style.transform='rotate(0deg)'
@@ -265,9 +319,8 @@ btn[1].onclick=()=>
   'scale(3) translate(-33%,333%) skew(11deg)'
  tprcss[1].style.transform=
   'scale(3) translate(-33%,244%) skew(-11deg)'
-  
  if(bcbtn1){ 
-  Ibtn1=setInterval(()=>{
+ Ibtn1=setInterval(()=>{
   if(bbtn1){  
    elm[0].style.background='#f00'
    elm[0].style.transform=
@@ -277,6 +330,18 @@ btn[1].onclick=()=>
    elm[2].style.color='#f00'
    elm[2].style.transform=
     'scale(5) rotate(90deg)'
+   drssl[1].style.borderLeft='22px ridge transparent'
+   drssl[1].style.borderRight='15px ridge #f00'
+   drssl[1].style.borderTop='15px ridge #f00'
+   drssl[1].style.borderBottom='22px ridge transparent'
+   drssl[2].style.borderLeft='22px ridge transparent'
+   drssl[2].style.borderRight='15px ridge #f00'
+   drssl[2].style.borderTop='15px ridge #f00'
+   drssl[2].style.borderBottom='22px ridge transparent'
+   drssl[3].style.borderLeft='22px ridge transparent'
+   drssl[3].style.borderRight='15px ridge #f00'
+   drssl[3].style.borderTop='15px ridge #f00'
+   drssl[3].style.borderBottom='22px ridge transparent'
   }else{
    elm[0].style.background='#a00'
    elm[0].style.transform=
@@ -286,6 +351,18 @@ btn[1].onclick=()=>
    elm[2].style.color='#a00'
    elm[2].style.transform=
     'scale(4) rotate(90deg)'
+   drssl[1].style.borderLeft='22px ridge transparent'
+   drssl[1].style.borderRight='15px ridge #900'
+   drssl[1].style.borderTop='15px ridge #900'
+   drssl[1].style.borderBottom='22px ridge transparent'
+   drssl[2].style.borderLeft='15px ridge transparent'
+   drssl[2].style.borderRight='15px ridge #900'
+   drssl[2].style.borderTop='15px ridge #000'
+   drssl[2].style.borderBottom='22px ridge transparent'
+   drssl[3].style.borderLeft='22px ridge transparent'
+   drssl[3].style.borderRight='15px ridge #900'
+   drssl[3].style.borderTop='15px ridge #900'
+   drssl[3].style.borderBottom='22px ridge transparent'
   }
     bbtn1=!bbtn1
  },999)
@@ -300,6 +377,18 @@ btn[1].onclick=()=>
   elm[2].style.color='#999'
   elm[2].style.transform=
    'scale(4) rotate(90deg)'
+  drssl[1].style.borderLeft='22px ridge transparent'
+  drssl[1].style.borderRight='15px ridge #777'
+  drssl[1].style.borderTop='15px ridge #777'
+  drssl[1].style.borderBottom='22px ridge transparent'
+  drssl[2].style.borderLeft='22px ridge transparent'
+  drssl[2].style.borderRight='15px ridge #777'
+  drssl[2].style.borderTop='15px ridge #777'
+  drssl[2].style.borderBottom='22px ridge transparent'
+  drssl[3].style.borderLeft='22px ridge transparent'
+  drssl[3].style.borderRight='15px ridge #777'
+  drssl[3].style.borderTop='22px ridge #777'
+  drssl[3].style.borderBottom='15px ridge transparent'
   tprcss[0].style.transform='scale(0)'
   tprcss[1].style.transform='scale(0)' 
    btn[1].innerHTML='on'
@@ -375,6 +464,21 @@ elm[2].onmouseout=()=>
 {
  elm[2].style.transform=
   'scale(4) rotate(90deg)'
+ telm[1].style.transform='scale(0)'
+ telm[1].style.color='#000'
+}
+
+drssl[0].onmouseover=()=>
+{
+ drssl[0].style.transform='scale(1.2)'
+ telm[1].style.transform=
+  'scale(3) translate(222%,-255%)'
+ telm[1].style.color='#076'
+  telm[1].innerHTML='throttle'
+}
+drssl[0].onmouseout=()=>
+{
+ drssl[0].style.transform='scale(1)'
  telm[1].style.transform='scale(0)'
  telm[1].style.color='#000'
 }
