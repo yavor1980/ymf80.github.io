@@ -1,12 +1,13 @@
+
 <html>
 <body id=idbd>
 <style>
 
 #idbd
 {
- background:linear-gradient(0deg,#000,#ff0);
-  
+background:linear-gradient(0deg,#000,#ff0);
 }
+
 #idb
 {
 position:absolute;
@@ -29,9 +30,8 @@ transform:scale(1.3);
 .drv
 {
 position:absolute;
-transition:  2s;
- left:44%;
- 
+transition:2s;
+left:44%;
 }
 
 .flm
@@ -39,7 +39,6 @@ transition:  2s;
 position:absolute;
 transition:  1s;
 transform:scale(1.2);
-  
 }
 
 .frz
@@ -49,8 +48,7 @@ transition:  1s;
 transform: scale(2);
 font-size: 1.2em;
 cursor: pointer;
-color: #fff;
-   
+color: #00f;
 }
 .frz:hover
 {
@@ -63,27 +61,18 @@ color: #fff;
 position:absolute;
 transition:1s;
 cursor:pointer; 
-   
 }
 
 </style>
 
 <button id=idb>enough </button>
 
-
  <div class=drv></div>
  <div class=drv></div>
  <div class=drv></div>
  <div class=flm></div>
  <div class=flm></div>
  <div class=flm></div>
-
-<div class=hdd>
-    different
-</div>
-<div class=hdd>
-    flames
-</div>
 
    <div class=frz>
     White
@@ -114,13 +103,23 @@ cursor:pointer;
   </div>
 </div>
 
+<div class=hdd>
+    different
+</div>
+<div class=hdd>
+    flames
+</div>
+<div class=hdd>
+    harmonic<br>&nbsp ballance 
+</div>
 
 <script>
-  drv=document.getElementsByClassName('drv')
-  flm=document.getElementsByClassName('flm')
-  frz=document.getElementsByClassName('frz')
-  hdd=document.getElementsByClassName('hdd')
-	  
+drv=document.getElementsByClassName('drv')
+flm=document.getElementsByClassName('flm')
+hdd=document.getElementsByClassName('hdd')
+frz=document.getElementsByClassName('frz')
+
+	 	  
  clr=
  [
   'aluminum,<br>titanium', 'sodium<br>salts', 
@@ -128,16 +127,9 @@ cursor:pointer;
   'carbon,<br>lead,<br>natural<br>gas', 'selenium',
   'potassium','copper,<br> molybdenum',
   '<br> phosphorus,<br> barium,<br> antimony',
-  'boron' 
-   
+  'boron'    
  ]
 	  
-o=
-{
-  b:1, i:0,
-init:function()
-{
- //drv[0].style.left='33%'
  drv[0].style.top='65%'
  drv[0].style.width='4%'
  drv[0].style.height='44%'
@@ -159,7 +151,6 @@ init:function()
  drv[2].style.transform='rotate(0deg)'
  drv[2].style.borderRadius='22%'
 
- 
  flm[0].style.left='33%'
  flm[0].style.top='50%'
  flm[0].style.width='22%'
@@ -184,16 +175,25 @@ init:function()
  flm[2].style.height='69%'
  flm[2].style.borderTopLeftRadius='55%'
  flm[2].style.borderTopRightRadius='55%'
+ flm[2].style.background='#000'
  flm[2].style.opacity=0.5
  flm[2].style.zIndex=-1
  
  hdd[0].style.left=7+'%'
  hdd[0].style.top=22+'%'
- hdd[0].style.transform='scale(0)'
+ hdd[0].style.transform=
+  'scale(3) rotate(-33deg)'
  
  hdd[1].style.left=70+'%'
  hdd[1].style.top=17+'%'
- hdd[1].style.transform='scale(0)'
+ hdd[1].style.transform=
+  'scale(3) rotate(33deg)'
+  
+ hdd[2].style.left=66+'%'
+ hdd[2].style.top=33+'%'
+ hdd[2].style.color='#888'
+ hdd[2].style.transform=
+  'scale(4) skew(22deg)'
  
  frz[0].style.left=33+Math.random()*7+'%'
  frz[0].style.top=7+'%'
@@ -222,98 +222,80 @@ init:function()
  frz[8].style.left=58+Math.random()*7+'%'
  frz[8].style.top=47+'%'
 
-},
-
-cld:function()
+b=0
+function cld()
 {
-   hdd[0].style.transform='scale(3) rotate(-33deg)'
-   hdd[0].style.color='#000'
-   hdd[1].style.transform='scale(3) rotate(33deg)'
-   hdd[1].style.color='#000'
-  
- if(o.b){
-    drv[0].style.transform=
-	 'rotate(69deg) '
-	drv[1].style.transform=
-	 'rotate(-69deg) '
-	flm[0].style.transform=
-	 'scale(2.1) translate(0,-11%) '
-	flm[1].style.transform=
-	 ' scale(1.9) translate(0,-11%)'
-	
-	flm[0].style.borderTopLeftRadius=0    
-	flm[1].style.borderTopRightRadius='55%'
-    flm[2].style.background='#fa0'
-	 
-	 }
-    else{
-     drv[1].style.transform=
-	 'rotate(-77deg) scale(1)'
-	 drv[0].style.transform=
-	 'rotate(77deg) scale(1)'
-	flm[0].style.transform=
-	 'scale(1.9) translate(0,-11%)'
-	flm[1].style.transform=
-	 ' scale(2.1) translate(0,-11%)'
-	 
-	 flm[0].style.borderTopLeftRadius='55%'
-	 flm[1].style.borderTopRightRadius=0
-	 flm[2].style.background='#f70'
-	  
-	 }
-	  o.b=!o.b
-},
+ 
+ if(b){
+  drv[0].style.transform=
+   'rotate(69deg) '
+  drv[1].style.transform=
+   'rotate(-69deg) '
+  flm[0].style.transform=
+   'scale(2.1) translate(0,-11%) '
+  flm[1].style.transform=
+   ' scale(1.9) translate(0,-11%)'
+  flm[0].style.borderTopLeftRadius=0    
+  flm[1].style.borderTopRightRadius='55%'
+  flm[2].style.background='#fa0' 
+ }else{
+  drv[1].style.transform=
+   'rotate(-77deg) scale(1)'
+  drv[0].style.transform=
+   'rotate(77deg) scale(1)'
+  flm[0].style.transform=
+   'scale(1.9) translate(0,-11%)'
+  flm[1].style.transform=
+   'scale(2.1) translate(0,-11%)'
+  flm[0].style.borderTopLeftRadius='55%'
+  flm[1].style.borderTopRightRadius=0
+  flm[2].style.background='#f70'
+ }
+  b=!b
+}
 
-clk:function()
+I=0
+function clk()
 {
-  if(o.i){
-   clearInterval(o.i)
-     o.i=0
+  clearInterval(I)
   idb.style.opacity=0 
-    flm[0].style.transform='scale(0.1) translate(0, 492%)'
-    flm[1].style.transform='scale(0.1) translate(0, 482%)'
-	 flm[2].style.background='#000'
-	 
-   }
-   setTimeout(()=>
-      {o.i= setInterval(o.cld, 999);
-   	   idb.style.opacity=1
-	   flm[3].style.opacity=0
-	  }, 3333)
-   
-},
+  flm[0].style.transform=
+   'scale(0) translate(0, 70%)'
+  flm[1].style.transform=
+   'scale(0) translate(0, 70%)'
+  flm[2].style.background='#000'
+ setTimeout(()=>{
+   I=setInterval(cld, 999)
+  idb.style.opacity=1
+ }, 999)  
+}
 
-}	  
-
-  	  o.init()
-     	 o.i= setInterval(o.cld, 999)
+  I= setInterval(cld, 999)
       
-
+	  
 idb.onclick=()=>
 {    
- o.clk() 
-  
+ clk() 
 }  
 
 function act(nm,i,clrr,clrrr)
 {
-
-nm[i].onmouseover=()=>
-{    
- nm[i].innerHTML=clr[i]
+ nm[i].onmouseover=()=>
+ {    
+   nm[i].innerHTML=clr[i]
   flm[0].style.background=clrr
   flm[1].style.background=clrr
   frz[i].style.transform='scale(2.3)'
-} 
-nm[i].onmouseout=()=>
-{    
- nm[i].innerHTML=clrrr
+  frz[i].style.color='#006'
+ } 
+ nm[i].onmouseout=()=>
+ {    
+   nm[i].innerHTML=clrrr
   flm[0].style.background='#f00'
   flm[1].style.background='#f00'
   frz[i].style.transform='scale(2)'
-  
-}
- 
+  frz[i].style.color='#00f'
+ }
 }
 act(frz,0,'#fff','White')
 act(frz,1,'#ff0','Yellow')
@@ -327,23 +309,48 @@ act(frz,8,'#0f0','blue green')
 
 hdd[0].onmouseover=()=>
 {    
-  hdd[0].style.transform='scale(4) rotate(-33deg)'
-  hdd[0].style.color='#f00'
+ hdd[0].style.transform=
+  'scale(4) rotate(-33deg) skew(-33deg)'
+ hdd[0].style.color='#f00'
+ hdd[1].onmouseover()
 }
 hdd[0].onmouseout=()=>
 {    
-  hdd[0].style.transform='scale(3) rotate(-33deg)'
-  hdd[0].style.color='#000'
+ hdd[0].style.transform=
+  'scale(3) rotate(-33deg)'
+ hdd[0].style.color='#000'
+ hdd[1].onmouseout()
 } 
+
 hdd[1].onmouseover=()=>
 {    
-  hdd[1].style.transform='scale(4) rotate(33deg)'
-  hdd[1].style.color='#f00'
+ hdd[1].style.transform=
+  'scale(4) rotate(33deg) skew(33deg)'
+ hdd[1].style.color='#f00'
+ hdd[0].onmouseover()
 }
 hdd[1].onmouseout=()=>
 {    
-  hdd[1].style.transform='scale(3) rotate(33deg)'
-  hdd[1].style.color='#000'
+ hdd[1].style.transform=
+  'scale(3) rotate(33deg)'
+ hdd[1].style.color='#000'
+ hdd[0].onmouseout()
+}  
+
+hdd[2].onmouseover=()=>
+{    
+ hdd[2].style.transform=
+  'scale(5) skew(-22deg)'
+ hdd[2].style.color='#009'
+ hdd[2].innerHTML='symmetry'
+}
+hdd[2].onmouseout=()=>
+{    
+ hdd[2].style.transform=
+  'scale(4) skew(22deg)'
+ hdd[2].style.color='#888'
+ hdd[2].innerHTML=
+  'harmonic<br>&nbsp ballance'
 }  
 	  
 </script>
