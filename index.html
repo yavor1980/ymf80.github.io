@@ -49,7 +49,6 @@ img
  background:radial-gradient(#ff0,#0f0);    
 }
 
-	
 #idtchnlgy
 {
  position:absolute;
@@ -61,7 +60,7 @@ img
 .tchnlgy
 {
  position:absolute;
- transition:0.5s;
+ transition:1s;
  transform:scale(2);
 }
 .tchnlgy:hover
@@ -126,14 +125,34 @@ img
  transform:scale(2.4) translate(6%,0);
 }   
  
+#idimgs
+{
+ position:absolute;
+ left:74%;
+ top:4%;
+ width:9%;
+ height:33%;
+} 
+.imgs
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ transform:scale(2);
+} 
+.imgs:hover
+{
+ transform:scale(2.5);
+} 
+
 </style>
 </head>
 
 <body id=idbd onmousedown onclick>
 
-<div id=idlft  ></div>
-<div id=idcntr  ></div>
-<div id=idrght  ></div>
+<div id=idlft></div>
+<div id=idcntr></div>
+<div id=idrght></div>
 
 <div id=idtchnlgy>
  <div class=tchnlgy>
@@ -152,7 +171,7 @@ img
   <a href=plant.html>PLANT</a>
  </div>
  <div class=tchnlgy>
-  <a href=pnp.html>transistor</a>
+  <a href=transstr.html>transistor</a>
  </div>
  <div class=tchnlgy>
   <a href=numbers.html>numbers</a>
@@ -176,8 +195,8 @@ img
   <a href=crqt.html>cirquit</a>
  </div>
 </div> 
- 
-	 
+
+ 	 
 <div id=idspce>
  <div class=spce>
   <a href=mars.html>MARS</a>
@@ -195,8 +214,8 @@ img
   <a href=road.html>ROAD</a>
  </div>
 </div>
-  
-  
+ 
+ 
 <div id=idedctn>    
  <div class=edctn>
   <a href=diagrams.html>DIAGRAMS</a>
@@ -214,7 +233,7 @@ img
   <a href=times.html>times</a>
  </div>
  <div class=edctn>
-  <a href=tictactoe.html>tictactoe</a>
+  <a href=reactJS/tictactoe.html>tictactoe</a>
  </div>
  <div class=edctn>
   <a href=shedule.html>shedule</a>
@@ -230,6 +249,8 @@ img
  </div>
 </div> 
 
+
+ 
 <div id=idntre>
  <div class=ntre>
   <a href=lizard.html>LIZARD</a>
@@ -255,44 +276,54 @@ img
  <div class=ntre>
   <a href=fireplace.html><img  src=img/fire.png></a>
  </div>
- 
 </div>
-  
+
+<div id=idimgs>
+ <div class=imgs>
+  <a href=images.html>images</a>
+ </div>
+ <div class=imgs>
+  <a href=sbmrne.html>subnurrine</a>
+ </div>
+</div>
 
 <script >
-
+img=document.getElementsByTagName('img')
 tchnlgy=document.getElementsByClassName('tchnlgy') 
 spce=document.getElementsByClassName('spce')
 edctn=document.getElementsByClassName('edctn')
 ntre=document.getElementsByClassName('ntre') 
+imgs=document.getElementsByClassName('imgs') 
 
+
+ img[0].style.transform='scale(3) translate(-33%,0)'
  
  tchnlgy[0].style.left='1%'
  tchnlgy[0].style.top='3%'
  tchnlgy[1].style.left='1%'
  tchnlgy[1].style.top='15%'
- tchnlgy[2].style.left='1%'
+ tchnlgy[2].style.left='-7%'
  tchnlgy[2].style.top='28%'
- tchnlgy[3].style.left='1%'
+ tchnlgy[3].style.left='5%'
  tchnlgy[3].style.top='40%'
- tchnlgy[4].style.left='1%'
+ tchnlgy[4].style.left='-5%'
  tchnlgy[4].style.top='51%'
- tchnlgy[5].style.left='11%'
+ tchnlgy[5].style.left='18%'
  tchnlgy[5].style.top='59%'
- tchnlgy[6].style.left='1%'
+ tchnlgy[6].style.left='-7%'
  tchnlgy[6].style.top='69%'
- tchnlgy[7].style.left='1%'
+ tchnlgy[7].style.left='11%'
  tchnlgy[7].style.top='79%'
- tchnlgy[8].style.left='1%'
+ tchnlgy[8].style.left='-2%'
  tchnlgy[8].style.top='91%'
  tchnlgy[9].style.left='1%'
- tchnlgy[9].style.top='101%'
+ tchnlgy[9].style.top='103%'
  tchnlgy[10].style.left='1%'
- tchnlgy[10].style.top='111%'
- tchnlgy[11].style.left='1%'
+ tchnlgy[10].style.top='113%'
+ tchnlgy[11].style.left='-6%'
  tchnlgy[11].style.top='122%'
- tchnlgy[12].style.left='1%'
- tchnlgy[12].style.top='131%'
+ tchnlgy[12].style.left='6%'
+ tchnlgy[12].style.top='132%'
  
  spce[0].style.left='1%'
  spce[0].style.top='0%'
@@ -345,27 +376,21 @@ ntre=document.getElementsByClassName('ntre')
  ntre[6].style.top='88%'
  ntre[7].style.left='55%'
  ntre[7].style.top='88%'
- ntre[7].style.width='44%'
- ntre[7].style.height='22%'
- 
 
- r=0
- g=0
- b=0
-for(i=0; i<idtchnlgy.length; i++){   
+ imgs[0].style.left='3%'
+ imgs[0].style.top='3%'
+ imgs[1].style.left='3%'
+ imgs[1].style.top='14%'
+
+//for(i=0; i<idtchnlgy.length; i++)
+{   
  r= Math.round(Math.random()*9)
  g= Math.round(Math.random()*9)
  b= Math.round(Math.random()*9)
-  lft[i].style.color='#'+r+g+b
 }	
- 
- 
- 
-		
+ 		
 </script>
 
-
 </body>
-
 
 </html>
