@@ -1,0 +1,110 @@
+<html>
+<body id=idbd>
+<style>
+
+#idbd
+{
+background:radial-gradient(557px,#ff0, #fff );
+z-index:1;
+}
+
+.d
+{
+position:absolute; 
+transition:1s;
+width:6%;
+height:11%;
+z-index:1;
+cursor:pointer;
+}
+.d:hover
+{
+width:12%;
+height:22%;
+}
+
+</style>
+
+<img src='img/bust.png' class=d >
+<img src='img/cat.png' class=d >
+<img src='img/insect.png' class=d >
+<img src='img/snowman.png' class=d >
+<img src='img/auto.png' class=d >
+
+<img src='img/like.png' class=d >
+<img src='img/plate.png' class=d >
+<img src='img/bridge.png' class=d >
+<img src='img/bee.png' class=d >
+<img src='img/shipping.png' class=d >	
+
+<img src='img/man.png' class=d >	
+<img src='img/n_w.png' class=d >	
+<img src='img/mdrop.png' class=d >	
+<img src='img/fish.png' class=d >	
+<img src='img/fish1.png' class=d >	
+
+<img src='img/danger.png' class=d >	
+<img src='img/primus.png' class=d >	
+<img src='img/forward.png' class=d >	
+<img src='img/aquarium.png' class=d >	
+<img src='img/turtle1.png' class=d >	
+
+<img src='img/honey.png' class=d >	
+<img src='img/space.png' class=d >	
+<img src='img/planet.png' class=d >	
+<img src='img/red.png' class=d >	
+<img src='img/flame.png' class=d >	
+
+<img src='img/flower.png' class=d >		
+<img src='img/crocovamp.png' class=d >	
+<img src='img/away.png' class=d >
+<img src='img/flying.png' class=d >	
+<img src='img/train.png' class=d >	
+
+<img src='img/cabrioet.png' class=d>	
+<img src='img/fire.png' class=d >	
+<img src='img/tank.png' class=d >	
+<img src='img/violin.png' class=d >	
+<img src='img/horror.png' class=d >	
+
+<img src='img/joker.png' class=d >	
+<img src='img/glory.png' class=d >	
+<img src='img/plane.png' class=d >
+<img src='img/tenor.png' class=d >	
+
+<script>
+d=document.getElementsByClassName('d')
+
+ 
+for(i=0;i<d.length;i++) 
+{  
+ d[i].style.left=(Math.random()*77)+'%'
+ d[i].style.top=(Math.random()*77)+'%'	   
+}
+ 
+function cl()
+{
+ for(i=0;i<d.length;i++) 
+ {  
+  d[i].style.transform='scale('+(0.6+Math.random())
+ }
+} 
+ i=0   
+  i=setInterval(cl, 999)
+
+  
+idbd.onmouseover=()=>
+{ 
+ clearInterval(i) 
+} 
+idbd.onmouseout=()=>
+{ 
+ i=setInterval(cl, 999)
+} 
+
+//d[i].style.transform='scale('+(0.6+Math.random())
+//for(i=0;i<d.length;i++)
+</script>
+</body>
+
+</html>
