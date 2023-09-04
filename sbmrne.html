@@ -10,54 +10,111 @@ body
 .sbmrne
 {   
  position:absolute;
- transision:1s;
+ transition:1s;
  left:33%;
  top:49%;
  width:33%;
  height:33%;
- opacity:0.5;
  cursor:pointer;
+}
+
+.apprts
+{   
+ position:absolute;
+ transition:1s;
+ width:29%;
+ height:33%;
+ background:radial-gradient(#f00,#ff0);
+ border-radius:55%;
 }
 
 </style>
 
 <div class=sbmrne>
  <div class=sbmrne></div>
+ <div class=sbmrne>
+  <div class=apprts></div>
+  <div class=apprts></div>
+ </div>
  <div class=sbmrne></div>
  <div class=sbmrne></div>
 </div>
 
 <script> 
 sbmrne=document.getElementsByClassName('sbmrne')
+apprts=document.getElementsByClassName('apprts')
 
  
 sbmrne[1].style.left=6+'%'
 sbmrne[1].style.top=4+'%'
-sbmrne[1].style.width=88+'%'
+sbmrne[1].style.width=77+'%'
 sbmrne[1].style.height=88+'%'
-sbmrne[1].style.background=
- 'radial-gradient(#0f0,#090)'
+sbmrne[1].style.background='#050'
 sbmrne[1].style.borderRadius=55+'%'
+sbmrne[1].style.opacity=0.9
 
 sbmrne[2].style.left=6+'%'
 sbmrne[2].style.top=4+'%'
 sbmrne[2].style.width=88+'%'
 sbmrne[2].style.height=88+'%'
 sbmrne[2].style.background=
- 'radial-gradient(#0f0,#090)'
+ 'radial-gradient(#0c0,#060)'
 sbmrne[2].style.borderRadius=55+'%'
+sbmrne[2].style.transform=
+ 'scale(0.8) translate(-9%,0)'
 
-sbmrne[3].style.left=6+'%'
-sbmrne[3].style.top=4+'%'
-sbmrne[3].style.width=88+'%'
-sbmrne[1].style.height=88+'%'
-sbmrne[1].style.background=
- 'radial-gradient(#0f0,#090)'
-sbmrne[1].style.borderRadius=55+'%'
+sbmrne[3].style.left=-16+'%'
+sbmrne[3].style.top=55+'%'
+sbmrne[3].style.width=122+'%'
+sbmrne[3].style.height=22+'%'
+sbmrne[3].style.background='#070'
+sbmrne[3].style.borderRadius=55+'%'
+sbmrne[3].style.opacity=0.8
+sbmrne[3].style.zIndex=-1
 
- //setInterval(so,5555)
+sbmrne[4].style.left=33+'%'
+sbmrne[4].style.top=-22+'%'
+sbmrne[4].style.width=22+'%'
+sbmrne[4].style.height=66+'%'
+sbmrne[4].style.background='#070'
+sbmrne[4].style.borderRadius=55+'%'
+sbmrne[4].style.opacity=0.6
+sbmrne[4].style.zIndex=-1
 
-     
+apprts[0].style.left=17+'%'
+apprts[0].style.top=58+'%'
+apprts[0].style.opacity=0
+
+apprts[1].style.left=55+'%'
+apprts[1].style.top=58+'%'
+apprts[1].style.opacity=0
+
+function smv()
+{
+ rnd=Math.random()/3+1
+ sbmrne[0].style.transform=
+  'scale('+rnd+') rotate('+rnd+'deg)'
+}
+
+Isbmrne=0
+Isbmrne= setInterval(smv,999)
+
+sbmrne[0].onmouseover=()=>
+{
+ sbmrne[0].style.transform='scale(1.2)'
+ apprts[0].style.opacity=0.7
+ apprts[1].style.opacity=0.7
+  clearInterval(Isbmrne)
+}
+sbmrne[0].onmouseout=()=>
+{
+ sbmrne[0].style.transform='scale(1)'
+ apprts[0].style.opacity=0
+ apprts[1].style.opacity=0
+  Isbmrne= setInterval(smv,999)
+}
+
+ //setInterval(so,5555)     
 </script>
 </body>
 </html>
