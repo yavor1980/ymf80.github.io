@@ -7,11 +7,6 @@
  background:#ddd;
 }
 
-#idbust
-{
- 
-}
-
 #idcat
 {
  position:absolute;
@@ -211,7 +206,8 @@ frz=document.getElementsByClassName('frz')
  drn[4].style.borderRight='2px solid transparent'
  drn[4].style.borderBottom='2px solid transparent'
  drn[4].style.transform='scale(2) rotate(-55deg)'
-  
+ drn[4].style.transition='666ms'
+ 
  prplr[0].style.left=4+'%'
  prplr[0].style.top=-13+'%'
  prplr[0].style.width=22+'%'
@@ -366,7 +362,6 @@ drn[0].style.transform=
 drn[1].style.background='#bb0'
 drn[2].style.background='#bb0'
 drn[3].style.opacity=1
-drn[4].style.opacity=1
 fdrn[0].style.transform=
  'scale(3) translate(88%,-88%) '
 fdrn[0].style.color='#bb0'
@@ -385,8 +380,17 @@ prplr[3].style.transition='666ms'
  drnI= setInterval(()=>{ 
    w-=1; h-=1
     b++   
-  if(b%2==0) drn[4].style.opacity=0
-   else drn[4].style.opacity=1
+  if(b%2==0){ 
+   drn[4].style.opacity=0
+   drn[4].style.transition='0s'
+   drn[4].style.transform=
+    'scale(2) translate(0,0) rotate(-55deg)'
+ }else{ 
+   drn[4].style.opacity=1
+   drn[4].style.transition='666ms'
+   drn[4].style.transform=
+    'scale(2) translate(-111%,-111%) rotate(-55deg)'
+  }
  },666)
 }
 drn[0].onmouseout=()=>
