@@ -1,0 +1,62 @@
+<DOCTYPE html>
+
+<html>
+
+<head>
+<title>counter</title>
+<meta http-equiv="content-type" content="text/html" >
+<link rel='stylesheet' type='text/css'>
+
+<style>
+#idbd
+{
+background:linear-gradient(44deg,#330,#cc0);
+}
+
+.coil
+{
+position:absolute;
+transition:1s;
+}
+
+
+</style>
+</head>
+
+<body id=idbd >
+<div class=coil>
+ <div class=coil> </div>
+ <div class=coil> </div>
+ <div class=coil> </div>
+</div> 
+
+
+<script>
+
+coil=document.getElementsByClassName('coil')
+
+
+coil[0].style.left=33+'%'
+coil[0].style.top=33+'%'
+coil[0].style.width=22+'%'
+coil[0].style.height=8+'%'
+coil[0].style.background='#445'
+coil[0].style.opacity=0.4
+
+
+
+coil[0].onmouseover=()=>
+{
+ coil[0].style.transform='scale(2)'
+}  
+coil[0].onmouseout=()=>
+{
+ coil[0].style.transform='scale(1)'
+}    
+
+
+</script>
+
+</body>
+
+</html>
