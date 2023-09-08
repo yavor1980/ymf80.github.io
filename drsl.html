@@ -17,41 +17,136 @@ background:linear-gradient(44deg,#330,#cc0);
 {
 position:absolute;
 transition:1s;
+cursor:pointer;
+left:33%;
+top:39%;
+width:22%;
+height:14%;
+//background:#bbb;
+transform:scale(2);
 }
 
+.fld
+{
+position:absolute;
+transition:1s;
+opacity:0;
+}
 
 </style>
 </head>
 
 <body id=idbd >
+
 <div class=coil>
  <div class=coil> </div>
  <div class=coil> </div>
  <div class=coil> </div>
+ <div class=coil> </div>
+ <div class=coil> </div>
+ <div class=coil> </div>
+ <div class=coil> </div>
+ <div class=fld> </div>
+ <div class=fld> </div>
 </div> 
 
 
 <script>
 
 coil=document.getElementsByClassName('coil')
+fld=document.getElementsByClassName('fld')
 
 
-coil[0].style.left=33+'%'
-coil[0].style.top=33+'%'
-coil[0].style.width=22+'%'
-coil[0].style.height=8+'%'
-coil[0].style.background='#445'
-coil[0].style.opacity=0.4
+coil[1].style.left=0+'%'
+coil[1].style.top=0+'%'
+coil[1].style.width=12+'%'
+coil[1].style.height=64+'%'
+coil[1].style.border='11px ridge #333'
+coil[1].style.borderRadius='55%'
 
+coil[2].style.left=22+'%'
+coil[2].style.top=0+'%'
+coil[2].style.width=12+'%'
+coil[2].style.height=64+'%'
+coil[2].style.border='11px ridge #333'
+coil[2].style.borderRadius='55%'
 
+coil[3].style.left=44+'%'
+coil[3].style.top=0+'%'
+coil[3].style.width=12+'%'
+coil[3].style.height=64+'%'
+coil[3].style.border='11px ridge #333'
+coil[3].style.borderRadius='55%'
+
+coil[4].style.left=66+'%'
+coil[4].style.top=0+'%'
+coil[4].style.width=12+'%'
+coil[4].style.height=64+'%'
+coil[4].style.border='11px ridge #333'
+coil[4].style.borderRadius='55%'
+
+coil[5].style.left=88+'%'
+coil[5].style.top=0+'%'
+coil[5].style.width=12+'%'
+coil[5].style.height=64+'%'
+coil[5].style.border='11px ridge #333'
+coil[5].style.borderRadius='55%'
+
+coil[6].style.left=-8+'%'
+coil[6].style.top=88+'%'
+coil[6].style.width=3+'%'
+coil[6].style.height=64+'%'
+coil[6].style.background='#333'
+coil[6].style.zIndex=-1
+
+coil[7].style.left=113+'%'
+coil[7].style.top=88+'%'
+coil[7].style.width=3+'%'
+coil[7].style.height=64+'%'
+coil[7].style.background='#333'
+coil[7].style.zIndex=-1
+
+fld[0].style.left=-28+'%'
+fld[0].style.top=-77+'%'
+fld[0].style.width=166+'%'
+fld[0].style.height=111+'%'
+fld[0].style.border='3px solid #f0f'
+fld[0].style.borderBottom='3px solid transparent'
+fld[0].style.borderRadius=55+'%'
+
+fld[1].style.left=-28+'%'
+fld[1].style.top=55+'%'
+fld[1].style.width=166+'%'
+fld[1].style.height=111+'%'
+fld[1].style.border='3px solid #f0f'
+fld[1].style.borderTop='3px solid transparent'
+fld[1].style.borderRadius=55+'%'
 
 coil[0].onmouseover=()=>
 {
- coil[0].style.transform='scale(2)'
+ coil[0].style.transform='scale(2.1)'
+ coil[1].style.border='11px ridge #900'
+ coil[2].style.border='11px ridge #900'
+ coil[3].style.border='11px ridge #900'
+ coil[4].style.border='11px ridge #900'
+ coil[5].style.border='11px ridge #900'
+ coil[6].style.background='#900'
+ coil[7].style.background='#900'
+ fld[0].style.opacity=1
+ fld[1].style.opacity=1
 }  
 coil[0].onmouseout=()=>
 {
- coil[0].style.transform='scale(1)'
+ coil[0].style.transform='scale(2)'
+ coil[1].style.border='11px ridge #333'
+ coil[2].style.border='11px ridge #333'
+ coil[3].style.border='11px ridge #333'
+ coil[4].style.border='11px ridge #333'
+ coil[5].style.border='11px ridge #333'
+ coil[6].style.background='#333'
+ coil[7].style.background='#333'
+ fld[0].style.opacity=0
+ fld[1].style.opacity=0
 }    
 
 
