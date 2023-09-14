@@ -20,7 +20,6 @@ body
 {
  position:absolute;
  transition:1s;
- text-align:center;
 }
 
 .bhvr
@@ -126,8 +125,8 @@ tmprm[0].style.width=22+'%'
 tmprm[0].style.height=15+'%'
 tmprm[0].style.background='#500'
 tmprm[0].style.color='#ff0'
+tmprm[0].style.textAlign='center'
 tmprm[0].style.fontSize='2em'
-//tmprm[0].style.paddingTop='1%'
 tmprm[0].style.cursor='pointer'
  
 tmprm[1].style.left=22+'%'
@@ -267,15 +266,17 @@ psch[0].onmouseout=()=>
 psch[1].onmouseover=()=>
 {   
  psch[1].style.transform='scale(1.4)'
- psch[1].style.background='#555'
- psch[1].style.zIndex=1
  psch[1].style.height='25%'
+ psch[1].style.background='#555'
+ psch[1].style.textAlign='left'
+ psch[1].style.zIndex=1
   psch[1].innerHTML=tsk
 }		  
 psch[1].onmouseout=()=>
 {
  psch[1].style.transform='scale(1)'
  psch[1].style.background='#999'
+ psch[1].style.textAlign='center'
  psch[1].style.zIndex=0
  psch[1].style.height='11%'
   psch[1].innerHTML='Tasks of psychology'
@@ -285,6 +286,7 @@ psch[2].onmouseover=()=>
 {  
  psch[2].style.transform='scale(1.4)'
  psch[2].style.background='#555'
+ psch[2].style.textAlign='left'
  psch[2].style.zIndex=1
  psch[2].style.height='22%'
   psch[2].innerHTML=mthd		
@@ -293,6 +295,7 @@ psch[2].onmouseout=()=>
 {
  psch[2].style.transform='scale(1)'
  psch[2].style.background='#666'
+ psch[2].style.textAlign='center'
  psch[2].style.zIndex=0
  psch[2].style.height='11%'
   psch[2].innerHTML='Methods of psychology'
@@ -303,6 +306,7 @@ tmprm[0].onmouseover=()=>
  tmprm[0].style.transform='scale(1.4)'
  tmprm[0].style.height='23%'
  tmprm[0].style.background='#900'
+ tmprm[0].style.textAlign='left'
  tmprm[0].style.border='5px ridge #090'
   tmprm[0].innerHTML=
    '-level of mental activity <br>'+  
@@ -321,6 +325,7 @@ tmprm[0].onmouseout=()=>
  tmprm[0].style.transform='scale(1)'
  tmprm[0].style.height='15%'
  tmprm[0].style.background='#500'
+  tmprm[0].style.textAlign='center'
  tmprm[0].style.border='none'
  tmprm[0].style.zIndex=0
   tmprm[0].innerHTML='Temperament'
