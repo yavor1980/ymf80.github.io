@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
 
 <head>
@@ -6,13 +6,14 @@
 <style>
 body
 {
- //overflow:scroll;
+ background:radial-gradient(#0f0,#b0b);
 }
 
 canvas
 {
  position:absolute;
  transition:1s;
+  background:#0f0;
 }
 
 .btn
@@ -46,16 +47,15 @@ input
 <input type=button class=btn value='round'>
 <input type=button class=btn value='clear'>
 <input type=button class=btn value='rng'>
-
 <input type=range class=btn min=0 max=9>
 <input type=range class=btn min=0 max=9>
 <input type=range class=btn min=0 max=9>
 
-<div class=cmmnt >0</div>
+<div class=cmmnt></div>
 
-<div class=cmmnt ></div>
-<div class=cmmnt ></div>
-<div class=cmmnt ></div>
+<div class=cmmnt></div>
+<div class=cmmnt></div>
+<div class=cmmnt></div>
 
 <script>
 cnv=document.getElementsByTagName('canvas')
