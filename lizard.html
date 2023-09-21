@@ -16,17 +16,14 @@ background: linear-gradient(#fff,#222);
 .btn
 {
 position:absolute;
-width:11%;
-height:12%;
 text-align:center;
 font-size:2em;
-color:#000;
 cursor:pointer;
-border-top-left-radius:33%;
-border-top-right-radius:33%; 
-border-bottom-left-radius:111%;
-border-bottom-right-radius:111%; 
 transition:1s;
+width:11%;
+height:12%;
+
+
 }
 .btn:hover
 {
@@ -92,11 +89,13 @@ transform:scale(0);
 {
 position:absolute;   
 transition:1s;
-color:red;
 transform:scale(0);
 }
 
 </style>
+
+<button class=btn >danger</button>
+<button class=btn >insrctn</button>
 
 <div class=hd>
  <div class=lpw ></div>
@@ -120,26 +119,26 @@ transform:scale(0);
 <div class=agrss >Agressive one</div>
 <div class=agrss >Aggression is vectorless</div>
 <div class=agrss >Emotional<br> irritation</div>
-<div class=alg >
+
+<div class=alg > 
 while(true)<br>
 {<br>
 &nbsp &nbsp atack()<br>
 }<br>
 </div>
-
 <div class=alg >
 function atack()<br>
 {<br>
 &nbsp &nbsp s.style.transform='scale(5)'<br>
 }<br>
 </div>
-
 <div class=alg >
  ...transform='scale(4) skew(33deg)'
 </div>
+<div class=alg >
+ Inserted blocks!
+</div>
 
-<button class=btn >danger</button>
-<button class=btn >insrctn</button>
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -153,16 +152,23 @@ mth=document.getElementsByClassName('mth')
   
 agrss=document.getElementsByClassName('agrss')
 alg=document.getElementsByClassName('alg')
-  
-  
+
+
 btn[0].style.left=76+'%'
 btn[0].style.top=4+'%'
+btn[0].style.color='#00b'
 btn[0].style.background='#f00'
+btn[0].style.borderTopLeftRadius=33+'%'
+btn[0].style.borderTopRightRadius=33+'%'
+btn[0].style.borderBottomLeftRadius=111+'%'
+btn[0].style.borderBottomRightRadius=111+'%'
  
 btn[1].style.left=79+'%'
 btn[1].style.top=18+'%'
-btn[1].style.background='#900'  
-  
+btn[1].style.color='#0b0'
+btn[1].style.background='#b00'  
+btn[1].style.borderRadius=33+'%'
+ 
  bd=0, bstp=0   
 function inn(nm,i, l,t, w,h, bkgrd, btlr,btrr,bblr,bbrr)
 {
@@ -208,7 +214,9 @@ inn(alg,1, 4,77)
  alg[1].style.color='#400'	
 inn(alg,2, 14,77)
  alg[2].style.color='#ff0'
-   		  
+inn(alg,3, 35,33)
+ alg[3].style.color='#f00'
+		  
 function clk()
 {
  agrss[0].style.transform='scale(3)'
@@ -279,10 +287,13 @@ btn[1].onmouseover=()=>
 {
  alg[2].style.transform=
   'scale(3) translate(22%,0)'
+ alg[3].style.transform=
+  'scale(4) translate(-22%,-200%) skew(22deg)'
 }
 btn[1].onmouseout=()=>
 {
- alg[2].style.transform='scale(0) '
+ alg[2].style.transform='scale(0)'
+ alg[3].style.transform='scale(0)'
 }
 btn[1].onclick=()=>
 { 
