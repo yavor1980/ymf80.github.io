@@ -6,8 +6,6 @@
 body
 {
 background:linear-gradient(44deg,blue,yellow);
-//height:122%;
-
 }
 
 .d
@@ -42,7 +40,7 @@ color:#fff;
 {
 position:absolute;
 font-size:2em;
-transition:2s;
+transition:1s;
 cursor:pointer;
 }
 
@@ -50,7 +48,7 @@ cursor:pointer;
 {
 position:absolute;
 font-size:2em;
-transition:2s;
+transition:1s;
 cursor:pointer;
 }
 
@@ -58,7 +56,7 @@ cursor:pointer;
 {
 position:absolute;
 font-size:2em;
-transition:2s;
+transition:1s;
 cursor:pointer;
 }
 .intrs:hover
@@ -71,17 +69,16 @@ z-index:1;
 .dvc
 {
 position:absolute;
-transition:2s;
+transition:1s;
 cursor:pointer;
 }
 
 </style>
 
 <div class=d>
-   <div class=d><div class=zr></div></div>
-   <div class=d><div class=zr></div></div>
-      <div class=d> </div> 
-	  
+ <div class=d><div class=zr></div></div>
+ <div class=d><div class=zr></div></div>
+  <div class=d></div>   
 </div> 
 
  <div class=nm> </div> 
@@ -103,7 +100,7 @@ cursor:pointer;
  <div class=fnd>Production dvlpmnt</div>
  <div class=fnd>Capitalism </div> 
  <div class=fnd>Social
-   <br>&nbsp &nbsp &nbsp &nbsp
+  <br>&nbsp &nbsp &nbsp &nbsp
    orientation
  </div> 
   
@@ -118,23 +115,15 @@ cursor:pointer;
  </div> 
   
 <script>
-// bd=document.getElementsByTagName('body')
- 
- d=document.getElementsByClassName('d')
- zr=document.getElementsByClassName('zr')
- nm=document.getElementsByClassName('nm')
- gd=document.getElementsByClassName('gd')
- fnd=document.getElementsByClassName('fnd')
- intrs=document.getElementsByClassName('intrs')
- dvc=document.getElementsByClassName('dvc')
+d=document.getElementsByClassName('d')
+zr=document.getElementsByClassName('zr')
+nm=document.getElementsByClassName('nm')
+gd=document.getElementsByClassName('gd')
+fnd=document.getElementsByClassName('fnd')
+intrs=document.getElementsByClassName('intrs')
+dvc=document.getElementsByClassName('dvc')
   
 
-
- o=
-{  
-   b:0, dg:0,  
-init:function()
-{
 d[0].style.width='44%';
 d[0].style.height='55%';
 d[0].style.left='11%';
@@ -161,41 +150,40 @@ d[3].style.top='66%';
 d[3].style.background='radial-gradient(#000,#d00 )'
 d[3].style.zIndex=1
 
-
 nm[0].style.left='66%';
 nm[0].style.top='11%';
 nm[0].style.color='#000';
-nm[0].innerHTML='Market'
+ nm[0].innerHTML='Market'
 
 nm[1].style.left='55%';
 nm[1].style.top='22%';
 nm[1].style.color='#f00';
-nm[1].innerHTML='labor'
 nm[1].style.transform='scale(0)';
+ nm[1].innerHTML='labor'
 
 nm[2].style.left='66%';
 nm[2].style.top='22%';
 nm[2].style.color='#0f0';
-nm[2].innerHTML='currency'
 nm[2].style.transform='scale(0)';
+ nm[2].innerHTML='currency'
 
 nm[3].style.left='77%';
 nm[3].style.top='22%';
 nm[3].style.color='#990';
-nm[3].innerHTML='shares'
 nm[3].style.transform='scale(0)';
+ nm[3].innerHTML='shares'
 
 nm[4].style.left='66%';
 nm[4].style.top='33%';
 nm[4].style.color='#909';
-nm[4].innerHTML='raw materials'
 nm[4].style.transform='scale(0)';
+ nm[4].innerHTML='raw materials'
 
 nm[5].style.left='77%';
-nm[5].style.top='33%';
+nm[5].style.top='30%';
 nm[5].style.color='#0bb';
-nm[5].innerHTML='goods'
 nm[5].style.transform='scale(0)';
+ nm[5].innerHTML='goods'
 
 gd[0].style.left='66%';
 gd[0].style.top='40%';
@@ -208,6 +196,7 @@ gd[2].style.top='50%';
 
 gd[3].style.left='33%';
 gd[3].style.top='6%';
+gd[3].style.color='#900';
 
 gd[4].style.left='66%';
 gd[4].style.top='2%';
@@ -272,183 +261,163 @@ dvc[2].style.left='55%';
 dvc[2].style.top='6%';
 dvc[2].style.fontSize='0em';
 
-
-},
-
-cl:function()
+b=0
+function cl()
 { 
-  if(o.b)
-  {
+ if(b)
+ {
   d[0].style.transform='scale(1.2)';
   zr[0].style.transform='scale(2)';
-   zr[0].style.background='#f00';
+  zr[0].style.background='#f00';
   zr[1].style.transform='scale(2)';
-   zr[1].style.background='#f00';     
-	fnd[4].style.color='#666';
-    fnd[4].style.transform=
-	 'scale(2) skew(-22deg)';
-  }
-    else
-  { 
+  zr[1].style.background='#f00';     
+  fnd[4].style.color='#666';
+  fnd[4].style.transform=
+   'scale(2) skew(-22deg)';
+ }
+  else
+ { 
   zr[0].style.transform='scale(1)';
-   zr[0].style.background='#000';
+  zr[0].style.background='#000';
   zr[1].style.transform='scale(1)';
-   zr[1].style.background='#000';
-   d[0].style.transform='scale(1)';
-   fnd[4].style.color='#770';
-   fnd[4].style.transform=
-    'scale(1.2) skew(22deg)';
-  }	
-    o.b=!o.b
-},
-
-} 
-    o.init()
+  zr[1].style.background='#000';
+  d[0].style.transform='scale(1)';
+  fnd[4].style.color='#770';
+  fnd[4].style.transform=
+   'scale(1.2) skew(22deg)';
+ }	
+    b=!b
+}
  
- 
- d0I=0
+Id0=0
 d[0].onmouseover=()=>
 {
- o.cl()
- d0I=setInterval(()=>o.cl(),999)
-	
-   dvc[0].onmouseover()
+ cl()
+ Id0=setInterval(()=>cl(),999)
+ dvc[0].onmouseover()
 }	
 d[0].onmouseout=()=>
 {
-  zr[0].style.transform='scale(1)';
-   zr[0].style.background='#000';
-  zr[1].style.transform='scale(1)';
-    zr[1].style.background='#000';
-   d[0].style.transform='scale(1)';
-	
-	clearInterval(d0I)
-	 dvc[0].onmouseout()
-   
-   fnd[4].style.color='#fff';
-   fnd[4].style.transform='scale(0)';
+ zr[0].style.transform='scale(1)';
+ zr[0].style.background='#000';
+ zr[1].style.transform='scale(1)';
+ zr[1].style.background='#000';
+ d[0].style.transform='scale(1)';
+ fnd[4].style.color='#fff';
+ fnd[4].style.transform='scale(0)';	
+  clearInterval(Id0)
+  dvc[0].onmouseout()
 }
 
-bclk=0
-	
+bclk=0	
 nm[0].onmouseover=()=>
 {
-	nm[0].style.transform='scale(1.9)'
-	nm[0].style.color='#f00'
-    nm[1].style.transform='scale(1.5) rotate(-22deg)'
-    nm[2].style.transform='scale(1.5) rotate(-22deg)'
-	nm[3].style.transform='scale(1.5) rotate(-22deg)'
-	nm[4].style.transform='scale(1.5) rotate(22deg)'
-	nm[5].style.transform='scale(1.5) rotate(22deg)'
-	
+ nm[0].style.transform='scale(1.9)'
+ nm[0].style.color='#f00'
+ nm[1].style.transform='scale(1.5) rotate(-22deg)'
+ nm[2].style.transform='scale(1.5) rotate(-22deg)'
+ nm[3].style.transform='scale(1.5) rotate(-22deg)'
+ nm[4].style.transform='scale(1.5) rotate(22deg)'
+ nm[5].style.transform='scale(1.5) rotate(22deg)'
 }	  
 nm[0].onclick=()=>
 {
-	nm[0].innerHTML='Failure to self-regulate'
-	nm[0].style.transform='translate(-44%,0)'
-	  	
+ nm[0].style.transform=
+  'translate(-44%,0) skew(22deg)'
+  nm[0].innerHTML='Failure<br> to self-regulate'
 }	
 nm[0].onmouseout=()=>
 {
+ nm[0].style.transform='scale(1)'
+ nm[0].style.color='#000'
+ nm[1].style.transform='scale(0) rotate(0deg)'
+ nm[2].style.transform='scale(0) rotate(0deg)'
+ nm[3].style.transform='scale(0) rotate(0deg)'
+ nm[4].style.transform='scale(0) rotate(0deg)'
+ nm[5].style.transform='scale(0) rotate(0deg)'
   nm[0].innerHTML='Market'
-	nm[0].style.transform='scale(1)'
-	nm[0].style.color='#000'
-	nm[1].style.transform='scale(0) rotate(0deg)'
-    nm[2].style.transform='scale(0) rotate(0deg)'
-	nm[3].style.transform='scale(0) rotate(0deg)'
-	nm[4].style.transform='scale(0) rotate(0deg)'
-	nm[5].style.transform='scale(0) rotate(0deg)'
-
 }	  
 
 gd[0].onmouseover=()=>
 {
-  gd[0].style.color='#f00'
-  gd[0].style.transform='scale(1.2)'
-	gd[0].innerHTML='product of labor'
-    
-}	  
-gd[0].onclick=()=>
-{
-  gd[0].style.color='#fff'
-  gd[0].style.transform='scale(1) translate(0,-44%)'
-	gd[0].innerHTML='surplus<br> value'
-	
-}	 
+ gd[0].style.color='#f00'
+ gd[0].style.transform='scale(1.2)'
+  gd[0].innerHTML='product of labor'
+}	   
 gd[0].onmouseout=()=>
 {
-  gd[0].style.color='#000'
-  gd[0].style.transform='scale(1)'
-	gd[0].innerHTML='Product'
-	
+ gd[0].style.color='#000'
+ gd[0].style.transform='scale(1)'
+  gd[0].innerHTML='Product'
 }	 
+gd[0].onclick=()=>
+{
+ gd[0].style.color='#fff'
+ gd[0].style.transform='scale(1) translate(0,-44%)'
+  gd[0].innerHTML='surplus<br> value'
+}	
 
 gd[1].onmouseover=()=>
 {
-  gd[1].style.color='#f00'
-  gd[1].style.transform='scale(1.2)'
-	gd[1].innerHTML='product detail'
-    
+ gd[1].style.color='#f00'
+ gd[1].style.transform='scale(1.2)'
+  gd[1].innerHTML='product detail'
 }	  
 gd[1].onmouseout=()=>
 {
-   gd[1].style.color='#000'
-   gd[1].style.transform='scale(1)'
-	gd[1].innerHTML='Price'
-	
+ gd[1].style.color='#000'
+ gd[1].style.transform='scale(1)'
+  gd[1].innerHTML='Price'
 }
 
 gd[2].onmouseover=()=>
 {
-    gd[2].style.color='#f00'
-	gd[2].style.transform='scale(1.2) translate(-22%,0)'
-	gd[2].innerHTML='receiving the goods'
-    
+ gd[2].style.color='#f00'
+ gd[2].style.transform='scale(1.2) translate(-22%,0)'
+  gd[2].innerHTML='receiving the goods'
 }	  
 gd[2].onmouseout=()=>
 {
-   gd[2].style.color='#000'
-   gd[2].style.transform='scale(1)'
-	gd[2].innerHTML='Production'
-	
+ gd[2].style.color='#000'
+ gd[2].style.transform='scale(1)'
+  gd[2].innerHTML='Production'
 }
 	 
 gd[3].onmouseover=()=>
 {
-  gd[3].style.background='#f00'
-  gd[3].style.color='#fff'
-	gd[3].innerHTML='Overproduction'
-    gd[3].style.transform='scale(1.2)'
+ gd[3].style.color='#b00'
+ gd[3].style.transform='scale(1.2)'
+  gd[3].innerHTML='Overproduction'
 }	  
-gd[3].onclick=()=>
-{
-   gd[3].style.background=''
-   gd[3].style.border='5px #ff0 ridge'
-   gd[3].style.color='#f00'
-  gd[3].innerHTML='Demonopolization'
-	gd[3].style.transform='scale(2)'
-}
 gd[3].onmouseout=()=>
 {
-   gd[3].style.background=''
-   gd[3].style.border=''
-   gd[3].style.color='#000'
-	gd[3].innerHTML='Crisis'
-	gd[3].style.transform='scale(1)'
+ gd[3].style.color='#900'
+ gd[3].style.transform='scale(1)'
+ gd[3].style.border='none'
+  gd[3].innerHTML='Crisis'
+}
+gd[3].onclick=()=>
+{
+ gd[3].style.border='5px #000 ridge'
+ gd[3].style.color='#f00'
+ gd[3].style.transform='scale(2)'
+ gd[3].style.zIndex=1
+  gd[3].innerHTML='Demonopolization'
 }
 
 gd[4].onmouseover=()=>
 {
-   gd[4].style.color='#f00'
-   gd[5].style.color='#f0f'
-   gd[4].style.transform='scale(1.6)'
-   gd[5].style.transform='scale(1) skew(22deg)'
+ gd[4].style.color='#f00'
+ gd[5].style.color='#f0f'
+ gd[4].style.transform='scale(1.6)'
+ gd[5].style.transform=
+  'scale(1.5) translate(0,-22%) skew(22deg)'
 }
 gd[4].onmouseout=()=>
 {
-   gd[4].style.color='#000'
-   gd[4].style.transform='scale(1)'
-   gd[5].style.transform='scale(0)'
+ gd[4].style.color='#000'
+ gd[4].style.transform='scale(1)'
+ gd[5].style.transform='scale(0)'
 }
 
 Ifnd0=0
@@ -456,128 +425,111 @@ bfnd0=0
 fnd[0].onmouseover=()=>
 {
  fnd[0].style.color='#f00'
- fnd[0].style.transform='scale(2) translate(25px,-11px)'
-  
-   Ifnd0=setInterval(()=>{
-     if(bfnd0){
-	  fnd[1].style.transform='scale(1.8)'
-      fnd[2].style.transform='scale(1.2)'
-	   }else{
-	  fnd[1].style.transform='scale(1.2)'
-      fnd[2].style.transform='scale(1.8)'
-	   }       
-           bfnd0=!bfnd0
-     },999)
+ fnd[0].style.transform=
+  'scale(2) translate(25px,-11px)'
+ Ifnd0=setInterval(()=>{
+  if(bfnd0){
+   fnd[1].style.transform='scale(1.8)'
+   fnd[2].style.transform='scale(1.2)'
+  }else{
+   fnd[1].style.transform='scale(1.2)'
+   fnd[2].style.transform='scale(1.8)'
+  }       
+    bfnd0=!bfnd0
+ },999)
 }	  
 fnd[0].onmouseout=()=>
 {
  fnd[0].style.color='#770'
  fnd[0].style.transform='scale(1.2)'
-  fnd[1].style.transform='scale(0)'
-  fnd[2].style.transform='scale(0)'
-   clearInterval(Ifnd0)
+ fnd[1].style.transform='scale(0)'
+ fnd[2].style.transform='scale(0)'
+  clearInterval(Ifnd0)
 }	 
 
 fnd[3].onmouseover=()=>
 {
-  fnd[3].innerHTML='Goods<=>Money<=>Goods'
-   fnd[3].style.transform='scale(2)'
-   fnd[3].style.color='#f00'
-  
+ fnd[3].style.transform='scale(2)'
+ fnd[3].style.color='#f00'
+  fnd[3].innerHTML='Goods<=>Money<=>Goods'  
 }	  
 fnd[3].onmouseout=()=>
 {
+ fnd[3].style.transform='scale(1)'
+ fnd[3].style.color='#99f'
   fnd[3].innerHTML='Capitalism'
-   fnd[3].style.transform='scale(1)'
-   fnd[3].style.color='#99f'
- 
 }	 
 
 intrs[0].onmouseover=()=>
 {   
-   intrs[0].style.color='#0f0'
-   intrs[0].innerHTML='reactn on the action'
-  
+ intrs[0].style.color='#0f0'
+  intrs[0].innerHTML='reactn on the action'
 }	  
 intrs[0].onmouseout=()=>
 {
-  intrs[0].style.color='#0ff'
-  intrs[0].innerHTML='InterAct'
-  
+ intrs[0].style.color='#0ff'
+  intrs[0].innerHTML='InterAct' 
 }	 
 
 intrs[1].onmouseover=()=>
 {  
-   intrs[1].style.color='#f0f'
-   intrs[1].innerHTML='for_each(c.i in c.f())'
-   intrs[2].style.transform='scale(2)'
-   
+ intrs[1].style.color='#f0f'
+ intrs[2].style.transform='scale(2)'
+  intrs[1].innerHTML='for_each(c.i in c.f())' 
 }	  
 intrs[1].onmouseout=()=>
 {
-  intrs[1].style.color='#7ff'
-  intrs[1].innerHTML='Saturation'
-  intrs[2].style.transform='scale(0)'
-  
+ intrs[1].style.color='#7ff'
+ intrs[2].style.transform='scale(0)'
+  intrs[1].innerHTML='Saturation' 
 }	 
 
-ai3=['Analysis','decision','action']
+ai3=['Analysis','Decision','Action']
 ii3=0
 i3I=0
 intrs[3].onmouseover=()=>
 {  
-   intrs[3].style.color='#f0f'
-   intrs[3].style.transform='scale(2)'
-   
-  i3I=setInterval(()=>{ 
-    intrs[3].innerHTML=ai3[ii3]
-	 ii3++
-	 if(ii3==3) ii3=0
-	
-	},999)
-	
+ intrs[3].style.color='#f0f'
+ intrs[3].style.transform='scale(2)'  
+ i3I=setInterval(()=>{ 
+  intrs[3].innerHTML=ai3[ii3]
+	ii3++
+  if(ii3==3) ii3=0
+ },999)	
 }	  
 intrs[3].onmouseout=()=>
 {
-  intrs[3].style.transform='scale(1)'
-  intrs[3].style.color='#ff0'
-    intrs[3].innerHTML='Controllr'
- clearInterval(i3I)
-  ii3=0
- 
+ intrs[3].style.transform='scale(1)'
+ intrs[3].style.color='#ff0'
+ intrs[3].innerHTML='Controllr'
+  clearInterval(i3I)
+ ii3=0
 }	
 	 
 Idvs=0
 bdvs=0	 
 dvc[0].onmouseover=()=>
 {
-  dvc[0].style.border='11px ridge #700'
-  dvc[0].style.transform='skew(22deg)'
-  
-  
-  Idvs=setInterval(()=>{
-    if(bdvs)
-	{
-	 dvc[1].style.fontSize='2em'
-     dvc[2].style.fontSize='1.5em'
-	}else{1.5
-	 dvc[1].style.fontSize='1.5em'
-     dvc[2].style.fontSize='2em'
-	
-	}
-	
-	 bdvs=!bdvs
-    },1111)
-  
-  
+ dvc[0].style.border='11px ridge #700'
+ dvc[0].style.transform='skew(22deg)' 
+ Idvs=setInterval(()=>{
+  if(bdvs)
+ {
+  dvc[1].style.fontSize='2em'
+  dvc[2].style.fontSize='1.5em'
+ }else{
+  dvc[1].style.fontSize='1.5em'
+  dvc[2].style.fontSize='2em'	
+ }	
+  bdvs=!bdvs
+},1111)
 }	
 dvc[0].onmouseout=()=>
 {
-  dvc[0].style.border='3px ridge #f00'
-  dvc[0].style.transform='skew(0deg)'
-  dvc[1].style.fontSize='0em'
-  dvc[2].style.fontSize='0em'
-  
+ dvc[0].style.border='3px ridge #f00'
+ dvc[0].style.transform='skew(0deg)'
+ dvc[1].style.fontSize='0em'
+ dvc[2].style.fontSize='0em'  
   clearInterval(Idvs)
 }	 
 	 
