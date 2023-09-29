@@ -88,17 +88,20 @@ sbmrne[3].style.left=-16+'%'
 sbmrne[3].style.top=55+'%'
 sbmrne[3].style.width=122+'%'
 sbmrne[3].style.height=22+'%'
-sbmrne[3].style.background='#070'
+sbmrne[3].style.background=
+ 'radial-gradient(#060,#000)'
 sbmrne[3].style.borderRadius=55+'%'
 sbmrne[3].style.opacity=0.8
 sbmrne[3].style.zIndex=-1
 
-sbmrne[4].style.left=33+'%'
+sbmrne[4].style.left=22+'%'
 sbmrne[4].style.top=-22+'%'
-sbmrne[4].style.width=22+'%'
+sbmrne[4].style.width=44+'%'
 sbmrne[4].style.height=66+'%'
-sbmrne[4].style.background='#070'
-sbmrne[4].style.borderRadius=55+'%'
+sbmrne[4].style.background=
+  'radial-gradient(#090,#000)'
+sbmrne[4].style.borderTopLeftRadius=22+'%'
+sbmrne[4].style.borderTopRightRadius=22+'%'
 sbmrne[4].style.opacity=0.6
 sbmrne[4].style.zIndex=-1
 
@@ -131,9 +134,10 @@ prjctr[0].style.left=55+'%'
 prjctr[0].style.top=22+'%'
 prjctr[0].style.width=11+'%'
 prjctr[0].style.height=13+'%'
-prjctr[0].style.background='#bb0'
+prjctr[0].style.background=
+ 'radial-gradient(33px,#ff0,#f00)'
 prjctr[0].style.borderRadius='55%'
-prjctr[0].style.opacity=0.5
+prjctr[0].style.opacity=0.3
 prjctr[0].style.cursor='pointer'
 prjctr[0].style.transform=
  'rotate(-28deg) skew(44deg)'
@@ -154,11 +158,13 @@ function smv()
 
 function pmv()
 {
- rnd=Math.random()*155
+ tr=Math.random()*155
+ sc=Math.random()+1
  prjctr[0].style.transform=
-'translate('+rnd+'%,33%) rotate(-28deg) skew(44deg)' 
+'translate('+tr+'%,33%) rotate(-28deg) skew(44deg)'+
+'scale('+sc+')' 
 }
-  Iprjctr= setInterval(pmv,999)
+ Iprjctr= setInterval(pmv,999)
 
 sbmrne[0].onmouseover=()=>
 {
@@ -166,12 +172,8 @@ sbmrne[0].onmouseover=()=>
  apprts[0].style.opacity=0.7
  apprts[1].style.opacity=0.7
   clearInterval(Isbmrne)
- tsbmrne[2].innerHTML='torpedo atack...'
  tsbmrne[2].style.transform=
-  'scale(4) skew(9deg) translate(66%,44%)'
- setTimeout(()=>{
-   tsbmrne[2].innerHTML='missed!'
- },1111) 
+  'scale(4) skew(9deg) translate(-6%,55%)' 
 }
 sbmrne[0].onmouseout=()=>
 {
@@ -199,14 +201,18 @@ tsbmrne[0].onmouseout=()=>
 
 prjctr[0].onmouseover=()=>
 {
- prjctr[0].style.background='#ff0'
+ prjctr[0].style.background=
+  'radial-gradient(66px,#ff0,#f00)'
  prjctr[1].style.transform=
   'scale(3) translate(88%,88%)'
+ prjctr[0].style.opacity=0.4
 }
 prjctr[0].onmouseout=()=>
 {
- prjctr[0].style.background='#bb0'
+ prjctr[0].style.background=
+  'radial-gradient(33px,#ff0,#f00)'
  prjctr[1].style.transform='scale(0)'
+ prjctr[0].style.opacity=0.3
 }
 
  //setInterval(so,5555)     
