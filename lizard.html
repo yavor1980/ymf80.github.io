@@ -22,8 +22,6 @@ cursor:pointer;
 transition:1s;
 width:11%;
 height:12%;
-
-
 }
 .btn:hover
 {
@@ -50,31 +48,22 @@ transition:1s;
 .zr
 {
  position:absolute;   
- transition: 1s;
+ transition:1s;
  left:33%;
  top:33%;
  width:33%;
  height:33%;
- background:red;
+ background:#f00;
  border-radius:55%;
 }
-.lpw
-{
- position:absolute;   
- border-radius:22%;
- border-top-left-radius:55%;
- border-top-right-radius:55%;
- transition: 1s;
- background: radial-gradient(#330,#222);
-}
-.rpw
+.pw
 {
  position:absolute;   
  border-radius:22%;
  border-top-left-radius:55%;
  border-top-right-radius:55%;
  transition:1s;
- background: radial-gradient(#330,#222);  
+ background:radial-gradient(#330,#222);
 }
 
 .agrss
@@ -98,22 +87,20 @@ transform:scale(0);
 <button class=btn >insrctn</button>
 
 <div class=hd>
- <div class=lpw ></div>
- <div class=rpw ></div>
- <div class=lpw ></div>
-</div>
-
-<div class=hd>
-<div class=hd>
- <div class=gl ><div class=zr ></div></div>
- <div class=gl ><div class=zr ></div></div>
- 
- <div class=mth >
-  <div class=mth ></div>
-  <div class=mth ></div>
-  <div class=mth ></div>
+ <div class=pw ></div>
+ <div class=pw ></div>
+ <div class=pw ></div>
+ <div class=hd>
+  <div class=hd>
+   <div class=gl ><div class=zr ></div></div>
+   <div class=gl ><div class=zr ></div></div>
+   <div class=mth >
+    <div class=mth ></div>
+    <div class=mth ></div>
+    <div class=mth ></div>
+  </div>
  </div>
-</div>
+ 
 </div>
 
 <div class=agrss >Agressive one</div>
@@ -121,16 +108,16 @@ transform:scale(0);
 <div class=agrss >Emotional<br> irritation</div>
 
 <div class=alg > 
-while(true)<br>
-{<br>
-&nbsp &nbsp atack()<br>
-}<br>
+ while(true)<br>
+ {<br>
+ &nbsp &nbsp atack()<br>
+ }<br>
 </div>
 <div class=alg >
-function atack()<br>
-{<br>
-&nbsp &nbsp s.style.transform='scale(5)'<br>
-}<br>
+ function atack()<br>
+ {<br>
+  &nbsp &nbsp s.style.transform='scale(5)'<br>
+ }<br>
 </div>
 <div class=alg >
  ...transform='scale(4) skew(33deg)'
@@ -144,8 +131,7 @@ function atack()<br>
 btn=document.getElementsByClassName('btn')
 
 hd=document.getElementsByClassName('hd')
-lpw=document.getElementsByClassName('lpw')
-rpw=document.getElementsByClassName('rpw')   
+pw=document.getElementsByClassName('pw')
 gl=document.getElementsByClassName('gl')
 zr=document.getElementsByClassName('zr')
 mth=document.getElementsByClassName('mth')
@@ -184,7 +170,7 @@ function inn(nm,i, l,t, w,h, bkgrd, btlr,btrr,bblr,bbrr)
 }	 
 inn(hd,0, 22,22, 55,66,
  'radial-gradient(#880,#222)',-55,55,33,33)
-inn(hd,1, 38,33, 22,44,
+inn(hd,1, 28,22, 44,66,
  'radial-gradient(#880,#222)',55,55,33,33)
  hd[1].style.cursor='pointer'
 inn(hd,2, 19,22, 66,66,
@@ -195,19 +181,17 @@ inn(mth,0, 22,53, 55,1,
  'radial-gradient(#f00,#840)',55,55,55,55)
 inn(mth,1, 9,17, 11,99,'#fff',5,5,55,55)
 inn(mth,2, 70,14, 11,99,'#fff',5,5,55,55)
-inn(lpw,0, 2,88, 33,22,
+inn(pw,0, 2,88, 33,22,
  'radial-gradient(#330,#222)',55,55,5,5)
-inn(lpw,1, 33,48, 33,55,
+inn(pw,1, 33,48, 33,55,
  'radial-gradient(#330,#222)',55,55,5,5)
- lpw[1].style.zIndex=-1
-inn(rpw,0, 66,88, 33,22,
+ pw[1].style.zIndex=-1
+inn(pw,2, 66,88, 33,22,
  'radial-gradient(#330,#222)',55,55,5,5)
 inn(agrss,0, 33,2)
 inn(agrss,1, 33,7)
 inn(agrss,2, 11,19)
- agrss[2].style.textAlign='center'
  agrss[2].style.color='#700'
- agrss[2].style.transition='0s'
 inn(alg,0, 11,44)
  alg[0].style.color='#800'
 inn(alg,1, 4,77)
@@ -219,10 +203,12 @@ inn(alg,3, 35,33)
 		  
 function clk()
 {
- agrss[0].style.transform='scale(3)'
- agrss[1].style.transform='scale(3)'
+ agrss[0].style.transform=
+  'scale(3) translate(0,-199%) skew(22deg)'
+ agrss[1].style.transform=
+  'scale(3) translate(0,-177%) skew(-22deg)'
  agrss[2].style.transform=
-  'scale(3) translate(22%,0)'  
+  'scale(3) translate(-37%,-77%) skew(-22deg)'  
  mth[0].style.height='22%'
   bd=Math.round(Math.random())	   
  if(bd)  
@@ -231,8 +217,8 @@ function clk()
   hd[2].style.transform='scale(2) translate(44%,0)'
  gl[0].style.transform='scale(2)'
  gl[1].style.transform='scale(2)'
- lpw[0].style.transform='translate(0,0)'
- rpw[0].style.transform='translate(0,0)'
+ pw[0].style.transform='translate(0,0)'
+ pw[2].style.transform='translate(0,0)'
   btn[0].innerHTML='quiet'
  setTimeout(()=>{
   agrss[0].style.transform='scale(0)'
@@ -241,35 +227,39 @@ function clk()
   alg[0].style.transform='scale(0)'
   alg[1].style.transform='scale(0)'
   mth[0].style.height='1%'
-  hd[2].style.transform='scale(1) translate(0%,0)'
+  hd[2].style.transform=
+   'scale(1) translate(0%,0)'
   gl[0].style.transform='scale(1)'
   gl[1].style.transform='scale(1)'
-  lpw[0].style.transform='translate(0,0%)'
-  rpw[0].style.transform='translate(0,0)'
+  pw[0].style.transform='translate(0,0%)'
+  pw[2].style.transform='translate(0,0)'
   btn[0].innerHTML='danger'
-  }, 2222)
- }
+ },  2222)
+}
   
 function stp()
 {  
  if( bstp)
  {
-  lpw[0].style.transform='translate(0,-33%)'
-  rpw[0].style.transform='translate(0,33%)'
-  lpw[1].style.transform=
+  pw[0].style.transform='translate(0,-33%)'
+  pw[1].style.transform=
    'translate(-144%,0) rotate(44deg)'
-  lpw[1].style.borderBottomRightRadius='55%'
-  lpw[1].style.borderBottomLeftRadius='0%'
-  hd[1].style.transform='scale(1.3) translate(0%,0)'
-   hd[2].style.transform='rotate(-22deg) translate(0%,0)'
+  pw[2].style.transform='translate(0,33%)'
+  pw[1].style.borderBottomRightRadius='55%'
+  pw[1].style.borderBottomLeftRadius='0%'
+  hd[1].style.transform=
+   'scale(1.3) translate(0%,0)'
+  hd[2].style.transform=
+   'rotate(-22deg) translate(0%,0)'
   } 
    else
   {
-   lpw[0].style.transform='translate(0,33%)'
-   rpw[0].style.transform='translate(0,-33%)'
-   lpw[1].style.transform='translate(144%,0) rotate(-44deg)'
-   lpw[1].style.borderBottomRightRadius='0%'
-   lpw[1].style.borderBottomLeftRadius='55%'
+   pw[0].style.transform='translate(0,33%)'
+   pw[1].style.transform=
+    'translate(144%,0) rotate(-44deg)'
+   pw[2].style.transform='translate(0,-33%)'
+   pw[1].style.borderBottomRightRadius='0%'
+   pw[1].style.borderBottomLeftRadius='55%'
    hd[1].style.transform='scale(1) translate(0%,0)'
    hd[2].style.transform=
     'rotate(22deg) translate(0%,0)'
@@ -302,7 +292,6 @@ btn[1].onclick=()=>
  alg[1].style.transform=
   'scale(2) translate(44%,-88%)'
  btn[1].style.opacity=0
- 
  setTimeout(()=>{
   alg[0].style.transform='scale(0)'
   alg[1].style.transform='scale(0)'
@@ -310,16 +299,11 @@ btn[1].onclick=()=>
  }, 2222)
 }
 	 
-hd[2].onmousemove=()=>
+hd[2].onmouseover=()=>
 { 
-     clk() 
+  clk() 
 }
 
-hd[2].onmouseout=()=>
-{ 
-   clk()
- agrss[0].style.transform='scale(0)'
-}
   
 </script>
 </body>
