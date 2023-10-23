@@ -15,30 +15,29 @@ background: linear-gradient(#fff,#222);
 
 .btn
 {
-position:absolute;
-text-align:center;
-font-size:2em;
-cursor:pointer;
-transition:1s;
-width:11%;
-height:12%;
+ position:absolute;
+ transition:1s;
+ width:11%;
+ height:12%;
+ text-align:center;
+ font-size:2em;
+ cursor:pointer;
 }
 .btn:hover
 {
-transform:scale(1.2);
+ transform:scale(1.2);
 }
 
 .hd
 {
-position:absolute;   
-background: radial-gradient(#880,#222); 
-transition:1s;
-border-radius:55%; 
+ position:absolute;   
+ transition:1s;
+ border-radius:55%; 
 }
 .mth
 {
-position:absolute;   
-transition:1s;
+ position:absolute;   
+ transition:1s;
 }
 .gl
 {
@@ -58,12 +57,12 @@ transition:1s;
 }
 .pw
 {
- position:absolute;   
+ position:absolute; 
+ transition:1s;
+ background:radial-gradient(#330,#222);
  border-radius:22%;
  border-top-left-radius:55%;
  border-top-right-radius:55%;
- transition:1s;
- background:radial-gradient(#330,#222);
 }
 
 .agrss
@@ -76,20 +75,21 @@ transform:scale(0);
 
 .alg
 {
-position:absolute;   
-transition:1s;
-transform:scale(0);
+ position:absolute;   
+ transition:1s;
+ transform:scale(0);
 }
 
 </style>
 
 <button class=btn >danger</button>
-<button class=btn >insrctn</button>
+<button class=btn >instrctn</button>
 
 <div class=hd>
- <div class=pw ></div>
- <div class=pw ></div>
- <div class=pw ></div>
+ <div class=pw></div>
+ <div class=pw></div>
+ <div class=pw></div>
+ <div class=pw></div>
  <div class=hd>
   <div class=hd>
    <div class=gl ><div class=zr ></div></div>
@@ -100,7 +100,6 @@ transform:scale(0);
     <div class=mth ></div>
   </div>
  </div>
- 
 </div>
 
 <div class=agrss >Agressive one</div>
@@ -155,7 +154,7 @@ btn[1].style.color='#0b0'
 btn[1].style.background='#b00'  
 btn[1].style.borderRadius=33+'%'
  
- bd=0, bstp=0   
+     
 function inn(nm,i, l,t, w,h, bkgrd, btlr,btrr,bblr,bbrr)
 {
  nm[i].style.left=l+'%'
@@ -188,8 +187,12 @@ inn(pw,1, 33,48, 33,55,
  pw[1].style.zIndex=-1
 inn(pw,2, 66,88, 33,22,
  'radial-gradient(#330,#222)',55,55,5,5)
+inn(pw,3, 44,1, 11,8,
+ 'linear-gradient(#f80,#555)',77,77,33,33)
 inn(agrss,0, 33,2)
+ agrss[0].style.color='#009'
 inn(agrss,1, 33,7)
+ agrss[1].style.color='#00b'
 inn(agrss,2, 11,19)
  agrss[2].style.color='#700'
 inn(alg,0, 11,44)
@@ -200,7 +203,37 @@ inn(alg,2, 14,77)
  alg[2].style.color='#ff0'
 inn(alg,3, 35,33)
  alg[3].style.color='#f00'
-		  
+		
+ bd=0, bstp=0
+function stp()
+{  
+ if( bstp)
+ {
+  pw[0].style.transform='translate(0,-33%)'
+  pw[1].style.transform=
+   'translate(-144%,0) rotate(44deg)'
+  pw[2].style.transform='translate(0,33%)'
+  pw[1].style.borderBottomRightRadius='55%'
+  pw[1].style.borderBottomLeftRadius='0%'
+  hd[1].style.transform=
+   'scale(1.3) translate(0%,0)'
+  hd[2].style.transform='rotate(-22deg)'
+ } 
+  else
+ {
+  pw[0].style.transform='translate(0,33%)'
+  pw[1].style.transform=
+   'translate(144%,0) rotate(-44deg)'
+  pw[2].style.transform='translate(0,-33%)'
+  pw[1].style.borderBottomRightRadius='0%'
+  pw[1].style.borderBottomLeftRadius='55%'
+  hd[1].style.transform='scale(1) translate(0%,0)'
+  hd[2].style.transform='rotate(22deg)'
+ }
+  bstp=!bstp
+}
+    setInterval(stp, 1111);	
+		 
 function clk()
 {
  agrss[0].style.transform=
@@ -210,7 +243,7 @@ function clk()
  agrss[2].style.transform=
   'scale(3) translate(-37%,-77%) skew(-22deg)'  
  mth[0].style.height='22%'
-  bd=Math.round(Math.random())	   
+ bd=Math.round(Math.random())	   
  if(bd)  
   hd[2].style.transform='scale(2) translate(-44%,0)'
  else  
@@ -219,6 +252,10 @@ function clk()
  gl[1].style.transform='scale(2)'
  pw[0].style.transform='translate(0,0)'
  pw[2].style.transform='translate(0,0)'
+ pw[3].style.background=
+  'linear-gradient(-177deg,#f40,#555)'
+ pw[3].style.transform=
+  'scale(1.4,3) translate(0,-44%)'
   btn[0].innerHTML='quiet'
  setTimeout(()=>{
   agrss[0].style.transform='scale(0)'
@@ -233,40 +270,12 @@ function clk()
   gl[1].style.transform='scale(1)'
   pw[0].style.transform='translate(0,0%)'
   pw[2].style.transform='translate(0,0)'
+  pw[3].style.background=
+   'linear-gradient(#f80,#555)'
+  pw[3].style.transform='scale(1)'
   btn[0].innerHTML='danger'
  },  2222)
 }
-  
-function stp()
-{  
- if( bstp)
- {
-  pw[0].style.transform='translate(0,-33%)'
-  pw[1].style.transform=
-   'translate(-144%,0) rotate(44deg)'
-  pw[2].style.transform='translate(0,33%)'
-  pw[1].style.borderBottomRightRadius='55%'
-  pw[1].style.borderBottomLeftRadius='0%'
-  hd[1].style.transform=
-   'scale(1.3) translate(0%,0)'
-  hd[2].style.transform=
-   'rotate(-22deg) translate(0%,0)'
-  } 
-   else
-  {
-   pw[0].style.transform='translate(0,33%)'
-   pw[1].style.transform=
-    'translate(144%,0) rotate(-44deg)'
-   pw[2].style.transform='translate(0,-33%)'
-   pw[1].style.borderBottomRightRadius='0%'
-   pw[1].style.borderBottomLeftRadius='55%'
-   hd[1].style.transform='scale(1) translate(0%,0)'
-   hd[2].style.transform=
-    'rotate(22deg) translate(0%,0)'
-   }
-     bstp=!bstp
-}
-    setInterval(stp, 1111);	
       
 btn[0].onmousedown=()=>
 { 
