@@ -11,7 +11,7 @@ body
 {
  background:#999;
 }
-  
+
 #idclc
 {
  position:absolute;
@@ -22,26 +22,58 @@ body
  height:55%;
  background:#ff0;
  text-align:center;
- padding:9px;
+ padding-top:44px;
  border:27px ridge red;
 }
- 
-input
+
+#idnm
 {
- margin:15px;
- cursor:pointer;
- transition:300ms;
- transform:scale(2);
+ position:absolute;
+ left:22%;
+ top:2%;
+ width:55%;
+ background:#000;
+ color:#fff;
+ text-align:center;
+ margin:9px;
+ transform:scale(1.5,2);
 }
-input:hover
-{
- transform:scale(2.3);
-}
- 
+
 .cld
 {
  position:absolute;
  font-size:3em;
+} 
+
+.dgt
+{
+ margin:15px;
+ cursor:pointer;
+ transition:300ms;
+ //width:9%;
+ //height:7%;
+ background:#0ff;
+ margin:19px;
+ transform:scale(2);
+ text-align:center;
+}
+.dgt:hover
+{
+ transform:scale(2.3);
+}
+
+.zn
+{
+ margin:15px;
+ cursor:pointer;
+ transition:300ms;
+ background:#f0f;
+ transform:scale(2);
+ text-align:center;
+}
+.zn:hover
+{
+ background:#b0b;
 } 
  
 </style>
@@ -49,92 +81,93 @@ input:hover
 </head>
 
 <body>
+<div class=cld></div>
+<div class=cld></div>
 
 <div id=idclc>
- <input type value id=nm  onclick>      <br>
+ <input type id=idnm><br>
 
- <input type=submit value=1 onclick=setn(1)>
- <input type=submit value=2 onclick=setn(2)>
- <input type=submit value=3 onclick=setn(3)>  <br> 
- <input type=submit value=4 onclick=setn(4)>
- <input type=submit value=5 onclick=setn(5)>
- <input type=submit value=6 onclick=setn(6)>  <br>
- <input type=submit value=7 onclick=setn(7)>
- <input type=submit value=8 onclick=setn(8)>
- <input type=submit value=9 onclick=setn(9)> <br>  
- <input type=submit value=0 onclick=setn(0)> <br>
+ <input type=submit value=1 class=dgt onclick=setn(1)>
+ <input type=submit value=2 class=dgt onclick=setn(2)>
+ <input type=submit value=3 class=dgt onclick=setn(3)><br> 
+ <input type=submit value=4 class=dgt onclick=setn(4)>
+ <input type=submit value=5 class=dgt onclick=setn(5)>
+ <input type=submit value=6 class=dgt onclick=setn(6)><br>
+ <input type=submit value=7 class=dgt onclick=setn(7)>
+ <input type=submit value=8 class=dgt onclick=setn(8)>
+ <input type=submit value=9 class=dgt onclick=setn(9)><br>  
+ <input type=submit value=0 class=dgt onclick=setn(0)><br>
  
- <input type=submit value='+' id=pl onclick=setpl()> 
- <input type=submit value='-' id=min onclick=setmin()> 
- <input type=submit value='*' id=mul onclick=setmul()> 
- <input type=submit value='/' id=div onclick=setdiv()> 
- <input type=submit value='=' id onclick=clc()><br>
- <input type=submit value='c' id onclick=c()><br><br>
+ <input type=submit value='+' class=zn onclick=setpl()> 
+ <input type=submit value='-' class=zn onclick=setmin()> 
+ <input type=submit value='*' class=zn onclick=setmul()> 
+ <input type=submit value='/' class=zn onclick=setdiv()> 
+ <input type=submit value='=' class=zn onclick=clc()><br>
+ <input type=submit value='c' class=zn onclick=c()><br><br>
 </div>
 
-<div class=cld></div>
-<div class=cld></div>
-
 <script>
-d=document.getElementsByClassName('cld')
+//nm=document.getElementById('nm')
+cld=document.getElementsByClassName('cld')
+dgt=document.getElementsByClassName('dgt')
+
+
 s='55+99*5='; i=0
-d[0].innerHTML='YOU CAN SET ALL THE EXPRESSION:'
-d[1].style.left=55+'%'
-d[1].style.top=11+'%'
+cld[0].innerHTML='YOU CAN SET ALL THE EXPRESSION:'
+cld[1].style.left=55+'%'
+cld[1].style.top=11+'%'
 function vsl()
 {
- if(i==s.length){i=0; 
-  d[1].innerHTML=''; }
-  d[1].innerHTML+=s[i]
+ if(i==s.length)
+ {
+  i=0; 
+  cld[1].innerHTML=''; 
+ }
+  cld[1].innerHTML+=s[i]
    i++
 }
     setInterval(vsl,666)
-
-var x=[]; var zn=[]; var op=[]; var n=0; 
-
+	
+var x=[]; 
+var zn=[]; 
+var op=[]; 
+var n=0; 
+  c()
 function setn(v)
 {  
- nm.value+=v; 
- x[n]*=10; x[n]+=v;
+ idnm.value+=v; 
+  x[n]*=10; x[n]+=v;
 }
 
 function setpl()
 {
- nm.value+='+';
- if(zn[n]=='0')zn[n]='+' 
+ idnm.value+='+';
+ if(zn[n]=='0') zn[n]='+' 
   n++; zn[n]='+'; 
 }
   
 function setmin()
 {
- nm.value+='-';  
+ idnm.value+='-';  
   n++; zn[n]='-'; 
 }
   
 function setmul()
 { 
- nm.value+='*';  
+ idnm.value+='*';  
   n++; op[n]='*'; 
 }
   
 function setdiv()
 { 
- nm.value+='/';  
+ idnm.value+='/';  
   n++; op[n]='/';
 }
-  
-function c()
-{
- nm.value=''; n=0; 
-  x[0]=x[1]=x[2]=x[3]=x[4]=0;
-  zn[0]=zn[1]=zn[2]=zn[3]=zn[4]='0'; 
-  op[0]=op[1]=op[2]=op[3]=op[4]=0; 
-}
-  
+ 
 function clc()
 {
  n++;
- nm.value='';  
+ idnm.value='';  
  for(var i=0;i<n;i++)
   if(zn[i]=='-') x[i]*=-1;
 
@@ -145,11 +178,19 @@ function clc()
  }
  for(var i=1;i<n;i++)
   x[0]+=x[i];  
+   idnm.value=x[0];
  n=0;   
  x[1]=x[2]=x[3]=x[4]=0;
  zn[0]=zn[1]=zn[2]=zn[3]=zn[4]='0';
  op[0]=op[1]=op[2]=op[3]=op[4]=0;	
-  nm.value=x[0]; 
+}
+
+function c()
+{
+ idnm.value=''; n=0; 
+  x[0]=x[1]=x[2]=x[3]=x[4]=0;
+  zn[0]=zn[1]=zn[2]=zn[3]=zn[4]='0'; 
+  op[0]=op[1]=op[2]=op[3]=op[4]=0; 
 }
 
 idclc.onmouseover=()=>
