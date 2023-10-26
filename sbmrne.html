@@ -147,12 +147,18 @@ prjctr[1].style.top=9+'%'
 prjctr[1].style.color='#bbb'
 prjctr[1].style.transform='scale(0) '
 
-
+bsmv=0
 function smv()
 {
- rnd=Math.random()/3+1
- sbmrne[0].style.transform=
-  'scale('+rnd+') rotate('+rnd+'deg)'
+ if(bsmv==0){
+   rnd=Math.random()/3+1
+  sbmrne[0].style.transform=
+   'scale('+rnd+') rotate('+rnd+'deg)'
+ }else{
+   rnd=Math.random()/2+0.5
+  apprts[0].style.transform='scale('+rnd+')'
+  apprts[1].style.transform='scale('+rnd+')'
+ }
 }
   Isbmrne= setInterval(smv,999)
 
@@ -171,7 +177,7 @@ sbmrne[0].onmouseover=()=>
  sbmrne[0].style.transform='scale(1.2)'
  apprts[0].style.opacity=0.7
  apprts[1].style.opacity=0.7
-  clearInterval(Isbmrne)
+  bsmv=1
  tsbmrne[2].style.transform=
   'scale(4) skew(9deg) translate(-6%,55%)' 
 }
@@ -180,7 +186,7 @@ sbmrne[0].onmouseout=()=>
  sbmrne[0].style.transform='scale(1)'
  apprts[0].style.opacity=0
  apprts[1].style.opacity=0
-  Isbmrne= setInterval(smv,999)
+  bsmv=0
  tsbmrne[2].style.transform='scale(0)' 
 }
 
@@ -214,8 +220,7 @@ prjctr[0].onmouseout=()=>
  prjctr[1].style.transform='scale(0)'
  prjctr[0].style.opacity=0.3
 }
-
- //setInterval(so,5555)     
+ 
 </script>
 </body>
 </html>
