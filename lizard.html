@@ -188,7 +188,7 @@ inn(pw,1, 33,48, 33,55,
 inn(pw,2, 66,88, 33,22,
  'radial-gradient(#330,#222)',55,55,5,5)
 inn(pw,3, 44,1, 11,8,
- '#555',-77,-77,33,33)
+ '#fb0',-77,-77,33,33)
   //pw[3].style.opacity=0.4
 inn(pw,4, 33,1, 33,99,
  'radial-gradient(#f80,#555)',77,77,9,9)
@@ -255,10 +255,12 @@ function clk()
  gl[1].style.transform='scale(2)'
  pw[0].style.transform='translate(0,0)'
  pw[2].style.transform='translate(0,0)'
- pw[3].style.background='#999'
+ pw[3].style.background='#f80'
  pw[3].style.transform=
   'scale(1.4,3) translate(0,-44%)'
-  btn[0].innerHTML='quiet'
+ pw[4].style.transform=
+  'scale(1.4,1.4) translate(0,-11%)'
+ btn[0].innerHTML='quiet'
  setTimeout(()=>{
   agrss[0].style.transform='scale(0)'
   agrss[1].style.transform='scale(0)'
@@ -272,8 +274,9 @@ function clk()
   gl[1].style.transform='scale(1)'
   pw[0].style.transform='translate(0,0%)'
   pw[2].style.transform='translate(0,0)'
-  pw[3].style.background='#555'
+  pw[3].style.background='#fb0'
   pw[3].style.transform='scale(1)'
+  pw[4].style.transform='scale(1)'
   btn[0].innerHTML='danger'
  },  2222)
 }
