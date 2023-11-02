@@ -1,421 +1,321 @@
 <DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8'>
-
+ <meta charset='utf-8'>
 </head>
-
 <body id=idbd>
-
 <style>
 #idbd
 {
-background: linear-gradient(#0ff,#0f0);
+ background: linear-gradient(#0ff,#0f0);
 }
 
 .btn
 {
-position:absolute;
-//transition:1s;
-text-align:center;
-font-size:2em;
-color:#fff;
-cursor:pointer;
- z-index:0;
+ position:absolute;
+ color:#fff;
+ transition:1s;
+ text-align:center;
+ font-size:2em;
+ cursor:pointer;
 }
 
 .plnt
 {
  position:absolute;   
-  transition:2s;
-  cursor:pointer;
-  
-}
-.smk
-{
-position:absolute;   
-   transition:2s;
-
+ transition:2s;
+ cursor:pointer;
 }
 
 .cld
 {
-position:absolute;   
-   transition:2s;
+ position:absolute;   
+ transition:2s;
  border-radius:50%;
 }
 
 .frz
 {
-position:absolute;   
-   transition:3s;
+ position:absolute;   
+ transition:3s;
  border-radius:5%;
 }
 
 .alg
 {
-position:absolute;   
-   transition:3s;
- 
+ position:absolute;   
+ transition:3s;
 }
-
-
-
 </style>
 
 <div class=plnt>
-
-<div class=plnt >
-  <div class=smk ></div> 
-  <div class=smk ></div> 
-  <div class=smk ></div> 
-  <div class=smk ></div>
-</div>
-    
- <div class=plnt ></div>
- <div class=plnt ></div>
- <div class=plnt ></div>
+ <div class=plnt></div>
+ <div class=plnt></div>
+ <div class=plnt></div>
+ <div class=plnt></div>    
+ <div class=plnt></div> 
 </div>
 
-<div class=cld > 
-    <div class=cld > </div>
-    <div class=cld >  </div>
-	<div class=cld >  </div>
-	<div class=cld >  </div>
-	
+<div class=cld> 
+ <div class=cld></div>
+ <div class=cld></div>
+ <div class=cld></div>
+ <div class=cld></div>	
 </div>
-<div class=frz ></div>
-<div class=frz ></div>
-<div class=frz ></div>
-<div class=frz >Waiting for...</div>
+
+<div class=frz>GLOBAL<br>&nbsp POLLUTION...</div>
+<div class=frz>STOP IT!</div>
+<div class=frz></div>
+<div class=frz>Waiting for...</div>
 
 <div class=alg >Start(plnt)</div>
 <div class=alg >Stop(algrtm) </div>
 
-
 <script>
- 
-   plnt=document.getElementsByClassName('plnt')
-   smk=document.getElementsByClassName('smk')
-   cld=document.getElementsByClassName('cld')
-   frz=document.getElementsByClassName('frz')
-   alg=document.getElementsByClassName('alg')
-	
-o= 
- {
-  b:0, bcl:0, intr:0,
-  initplnt:function()
-  {
-     
-     plnt[0].style.background='linear-gradient(#840,#000)' 
-  	 plnt[0].style.left=22+'%'
-	 plnt[0].style.bottom=6+'%'  
-     plnt[0].style.width=22+'%'
-     plnt[0].style.height=44+'%'	 
-     plnt[0].style.borderTopLeftRadius=9+'%'
-	 plnt[0].style.borderTopRightRadius=9+'%'
-	 
-     
-	 plnt[1].style.background='linear-gradient(#620,#000)';
-     plnt[1].style.left=66+'%'
-	 plnt[1].style.top=-22+'%'  
-     plnt[1].style.width=22+'%'
-     plnt[1].style.height=22+'%'
-	 plnt[1].style.transform='rotate(0)'
-	   
-	 plnt[2].style.background='#000';
-     plnt[2].style.left=22+'%'
-	 plnt[2].style.top=49+'%'  
-     plnt[2].style.width=55+'%'
-     plnt[2].style.height=44+'%'  
-	 plnt[2].style.borderTopLeftRadius=9+'%'
-	 plnt[2].style.borderTopRightRadius=9+'%'
-     plnt[2].style.borderBottomLeftRadius=0+'%'
-	 plnt[2].style.borderBottomRightRadius=0+'%'
-	  
-     plnt[3].style.background='#000';
-     plnt[3].style.left=11+'%'
-	 plnt[3].style.top=17+'%'  
-     plnt[3].style.width=22+'%'
-     plnt[3].style.height=22+'%'  
-	 plnt[3].style.borderRadius=0
-	
-	 plnt[4].style.background='#000';
-     plnt[4].style.left=59+'%'
-	 plnt[4].style.top=17+'%'  
-     plnt[4].style.width=22+'%'
-     plnt[4].style.height=22+'%'  
-	 plnt[4].style.borderRadius=0
-	 
-	 smk[0].style.background='#333' 
-  	 smk[0].style.left=1+'%'
-	 smk[0].style.top=-42+'%'  
-     smk[0].style.width=44+'%'
-     smk[0].style.height=33+'%'
-	 smk[0].style.opacity=0
-	 smk[0].style.borderRadius=55+'%'
-	 
-	 smk[1].style.background='#333' 
-  	 smk[1].style.left=166+'%'
-	 smk[1].style.top=-77+'%'  
-     smk[1].style.width=44+'%'
-     smk[1].style.height=33+'%' 
-	 smk[1].style.opacity=0
-	 smk[1].style.borderRadius=55+'%'
-	 
-	 smk[2].style.background='#333' 
-  	 smk[2].style.left=1+'%'
-	 smk[2].style.top=-42+'%'  
-     smk[2].style.width=99+'%'
-     smk[2].style.height=33+'%'
-	 smk[2].style.opacity=0
-	 smk[2].style.borderRadius=55+'%'
-	 
-	 smk[3].style.background='#333' 
-  	 smk[3].style.left=222+'%'
-	 smk[3].style.top=-77+'%'  
-     smk[3].style.width=99+'%'
-     smk[3].style.height=33+'%'
-	 smk[3].style.opacity=0
-	 smk[3].style.borderRadius=55+'%'
-	 
-	 smk[0].style.background='#333' 
-  	 smk[3].style.left=222+'%'
-	 smk[3].style.top=-77+'%'  
-     smk[3].style.width=99+'%'
-     smk[3].style.height=33+'%'
-	 smk[3].style.opacity=0
-	 smk[3].style.borderRadius=55+'%'
-	 
-   },
+plnt=document.getElementsByClassName('plnt')
+cld=document.getElementsByClassName('cld')
    
-  initcld:function()
-  {  
-	 cld[0].style.background='#500'
-     cld[0].style.opacity=0
-  	 cld[0].style.left=66+'%'
-	 cld[0].style.top=33+'%'  
-     cld[0].style.width=9+'%'
-     cld[0].style.height=14+'%'
-	 
-	 cld[1].style.background='#500' 
-     cld[1].style.left=17+'%'
-	 cld[1].style.top=55+'%'  
-	 cld[1].style.width=66+'%'
-     cld[1].style.height=66+'%'
-	 
-	 cld[2].style.background='#fff' 
-  	 cld[2].style.left=22+'%'
-	 cld[2].style.top=22+'%'  
-     cld[2].style.width=22+'%'
-     cld[2].style.height=22+'%'
+frz=document.getElementsByClassName('frz')
+alg=document.getElementsByClassName('alg')
+	
 
-     cld[3].style.background='#fff' 
-  	 cld[3].style.left=55+'%'
-	 cld[3].style.top=22+'%'  
-     cld[3].style.width=22+'%'
-     cld[3].style.height=22+'%'
-
-     cld[4].style.background='#fff' 
-  	 cld[4].style.left=33+'%'
-	 cld[4].style.top=77+'%'  
-     cld[4].style.width=33+'%'
-     cld[4].style.height=8+'%'
-     
-	 frz[0].innerHTML='GLOBAL POLLUTION' 
-  	 frz[0].style.left=11+'%'
-	 frz[0].style.top=11+'%'  
-     frz[0].style.fontSize=3+'em'
-     frz[0].style.color='#fff'
-	 frz[0].style.opacity=0
+plnt[0].style.left=22+'%'
+plnt[0].style.bottom=6+'%'  
+plnt[0].style.width=22+'%'
+plnt[0].style.height=44+'%'
+plnt[0].style.background=
+ 'linear-gradient(#840,#000)' 
+plnt[0].style.borderTopLeftRadius=9+'%'
+plnt[0].style.borderTopRightRadius=9+'%'
 	 
-	 frz[1].innerHTML='STOP IT!' 
-  	 frz[1].style.left=33+'%'
-	 frz[1].style.top=33+'%'  
-     frz[1].style.fontSize=5+'em'
-     frz[1].style.color='#f00'
-	 frz[1].style.opacity=0
+plnt[1].style.left=66+'%'
+plnt[1].style.top=-22+'%'  
+plnt[1].style.width=22+'%'
+plnt[1].style.height=22+'%'
+plnt[1].style.background=
+ 'linear-gradient(#620,#000)';
+plnt[1].style.transform='rotate(0)'
+	   
+plnt[2].style.left=22+'%'
+plnt[2].style.top=49+'%'  
+plnt[2].style.width=55+'%'
+plnt[2].style.height=44+'%' 
+plnt[2].style.background='#000';
+plnt[2].style.borderTopLeftRadius=9+'%'
+plnt[2].style.borderTopRightRadius=9+'%'
+plnt[2].style.borderBottomLeftRadius=0+'%'
+plnt[2].style.borderBottomRightRadius=0+'%'
 	  
-  	 frz[2].style.left=17+'%'
-	 frz[2].style.top=3+'%'  
-     frz[2].style.fontSize=2+'em'
-     frz[2].style.color='#700'
-	 frz[2].style.cursor='pointer'
-	 frz[2].style.transform='scale(0)'
-	frz[2].innerHTML=
-	 'Greenhouse effect <br> Increasing '+
-	 'in annual mean global temperature'+
-	 'air near the surface of the planet,'+ 
-	 'emerging by changing the optical'+
-     'properties of the atmosphere.'
-
+plnt[3].style.left=11+'%'
+plnt[3].style.top=17+'%'  
+plnt[3].style.width=22+'%'
+plnt[3].style.height=22+'%'  
+plnt[3].style.background='#000';
+plnt[3].style.borderRadius=0
+	
+plnt[4].style.left=59+'%'
+plnt[4].style.top=17+'%'  
+plnt[4].style.width=22+'%'
+plnt[4].style.height=22+'%'  
+plnt[4].style.background='#000';
+plnt[4].style.borderRadius=0
 	 
-	 frz[3].style.left=66+'%'
-	 frz[3].style.top=20+'%'  
-     frz[3].style.transform='scale(4)'
-     frz[3].style.color='pink'
-	 frz[3].style.cursor='pointer'
-
-     alg[0].style.left=22+'%'
-	 alg[0].style.top=7+'%'  
-     alg[0].style.transform='scale(6)'
-     alg[0].style.color='#f80'
+plnt[5].style.left=88+'%'
+plnt[5].style.top=-47+'%'  
+plnt[5].style.width=4+'%'
+plnt[5].style.height=3+'%'
+plnt[5].style.background='#333' 
+plnt[5].style.opacity=0
+plnt[5].style.borderRadius=55+'%'
+	 	 
+cld[0].style.left=66+'%'
+cld[0].style.top=33+'%'  
+cld[0].style.width=9+'%'
+cld[0].style.height=14+'%'
+cld[0].style.background='#500'
+cld[0].style.opacity=0
 	 
-	 alg[1].style.left=22+'%'
-	 alg[1].style.top=22+'%'  
-     alg[1].style.transform='scale(4)'
-     alg[1].style.color='#fd0'
+cld[1].style.left=17+'%'
+cld[1].style.top=55+'%'  
+cld[1].style.width=66+'%'
+cld[1].style.height=66+'%'
+cld[1].style.background='#500'
 	 
-  },  
-  
+cld[2].style.left=22+'%'
+cld[2].style.top=22+'%'  
+cld[2].style.width=22+'%'
+cld[2].style.height=22+'%'
+cld[2].style.background='#fff'
  
+cld[3].style.left=55+'%'
+cld[3].style.top=22+'%'  
+cld[3].style.width=22+'%'
+cld[3].style.height=22+'%'
+cld[3].style.background='#fff'
+
+cld[4].style.left=33+'%'
+cld[4].style.top=77+'%'  
+cld[4].style.width=33+'%'
+cld[4].style.height=8+'%'
+cld[4].style.background='#fff'
+     
+frz[0].style.left=11+'%'
+frz[0].style.top=11+'%'  
+frz[0].style.fontSize=3+'em'
+frz[0].style.color='#880'
+frz[0].style.opacity=0
+frz[0].style.zIndex=1
+
+frz[1].style.left=33+'%'
+frz[1].style.top=33+'%'  
+frz[1].style.fontSize=5+'em'
+frz[1].style.color='#f00'
+frz[1].style.opacity=0 
+	 
+frz[2].style.left=17+'%'
+frz[2].style.top=3+'%'  
+frz[2].style.fontSize=2+'em'
+frz[2].style.color='#700'
+frz[2].style.cursor='pointer'
+frz[2].style.transform='scale(0)'
+ frz[2].innerHTML=
+  'Greenhouse effect <br> Increasing '+
+  'in annual mean global temperature'+
+  'air near the surface of the planet,'+ 
+  'emerging by changing the optical'+
+  'properties of the atmosphere.'
+
+frz[3].style.left=66+'%'
+frz[3].style.top=20+'%'  
+frz[3].style.transform='scale(4)'
+frz[3].style.color='pink'
+frz[3].style.cursor='pointer'
+
+alg[0].style.left=22+'%'
+alg[0].style.top=7+'%'  
+alg[0].style.transform='scale(6)'
+alg[0].style.color='#f80'
+	 
+alg[1].style.left=22+'%'
+alg[1].style.top=22+'%'  
+alg[1].style.transform='scale(4)'
+alg[1].style.color='#fd0'
+
+o= 
+{
+ b:0, bcl:0, intr:0,  
  clk:function()
  {  
-  idbd.style.background='linear-gradient(#fff,#222)'
-   if(o.bcl==0)
-   {
-   	
-     frz[2].style.transform='scale(1)'
-     plnt[0].style.transform='scale(1.1) '
-	 plnt[1].style.transform='scale(1.2) '
-	 plnt[2].style.transform='scale(1.2) '
-	 plnt[3].style.transform='scale(1.2) '
-	 plnt[4].style.transform='scale(1.2) '
-	 plnt[2].style.background='#800'
-	 plnt[3].style.background='#700'
-	 plnt[4].style.background='#600'
-	 cld[0].style.transform='scale(1) '	
-	 cld[0].style.opacity=0
-	 cld[2].style.transform='scale(1) '	
-	 cld[3].style.transform='scale(1) '	
-	 cld[2].style.background='#ddd'
-	 cld[3].style.background='#ddd'
-	 cld[4].style.background='#ddd'
-    smk[0].style.opacity=0.5	
-	smk[0].style.transform='scale(22,9) translate(-33%,-3%)'
-	smk[1].style.opacity=0.5	
-	smk[1].style.transform='scale(22,9) translate(22%,-3%)'
-	smk[2].style.opacity=0.5	
-	smk[2].style.transform='scale(9) translate(-33%,-3%)'
-	smk[3].style.opacity=0.5	
-	smk[3].style.transform='scale(9) translate(3%,-3%)'
-	
-	setTimeout(()=>{
-	 frz[0].style.opacity=1; 
-	 frz[1].style.opacity=1; 
-	
-	},1111)
-	
-     frz[0].style.transform='scale('+(Math.random()+0.5)
-	 frz[1].style.transform='scale('+(Math.random()+0.5)
-	 
-	// frz[1].innerHTML='STOP IT!'
-	 frz[1].style.fontSize=5+Math.random()*4+'em'
-	 
-	}
-     else
-	{
-	frz[2].style.transform='scale(0.8)'
-	plnt[0].style.transform='scale(1) '
-	plnt[1].style.transform='scale(1) '
-	plnt[2].style.transform='scale(1) '
-	plnt[3].style.transform='scale(1) '
-	plnt[4].style.transform='scale(1) '
-	plnt[2].style.background='#f00'
-	plnt[3].style.background='#f00'
-	plnt[4].style.background='#f00'
-	cld[0].style.transform='scale(4) '
-	cld[0].style.opacity=1
-	cld[2].style.transform='scale(1.5) '
-	cld[3].style.transform='scale(1.5) '
-	 cld[2].style.background='#f00'
-	 cld[3].style.background='#f00'
-	 cld[4].style.background='#f00'
-	 
-	 frz[1].style.opacity=0
-	 
-	 smk[0].style.opacity=0
-	 smk[0].style.transform='scale(1)'
-	 smk[1].style.opacity=0
-	 smk[1].style.transform='scale(1)'
-	} 
+  idbd.style.background=
+   'linear-gradient(#fff,#222)'
+  if(o.bcl==0)
+  {
+   frz[2].style.transform='scale(1)'
+   plnt[0].style.transform='scale(1.1) '
+   plnt[1].style.transform='scale(1.2) '
+   plnt[2].style.transform='scale(1.2) '
+   plnt[3].style.transform='scale(1.2) '
+   plnt[4].style.transform='scale(1.2) '
+   plnt[2].style.background='#800'
+   plnt[3].style.background='#700'
+   plnt[4].style.background='#600'
+   plnt[5].style.opacity=0.5	
+   plnt[5].style.transform=
+    'scale(22,11) translate(-33%,-33%)'
+   cld[0].style.transform='scale(1) '	
+   cld[0].style.opacity=0
+   cld[2].style.transform='scale(1) '	
+   cld[3].style.transform='scale(1) '	
+   cld[2].style.background='#ddd'
+   cld[3].style.background='#ddd'
+   cld[4].style.background='#ddd'
+   setTimeout(()=>{
+	frz[0].style.opacity=1; 
+	frz[1].style.opacity=1; 
+   }, 1111)
+   frz[0].style.transform='scale('+(Math.random()+1.0)+
+    ') skew(11deg) translate(44%,0)'
+   frz[1].style.transform='scale('+(Math.random()+0.5)
+   frz[1].style.fontSize=5+Math.random()*4+'em'
+  }
+  else
+  { 
+   plnt[0].style.transform='scale(1) '
+   plnt[1].style.transform='scale(1) '
+   plnt[2].style.transform='scale(1) '
+   plnt[2].style.background='#f00'
+   plnt[3].style.transform='scale(1) '
+   plnt[3].style.background='#f00'
+   plnt[4].style.transform='scale(1) '
+   plnt[4].style.background='#f00'
+   plnt[5].style.transform=
+    'scale(33,22) translate(-33%,-33%)'
+   cld[0].style.transform='scale(4) '
+   cld[0].style.opacity=1
+   cld[2].style.transform='scale(1.5) '
+   cld[2].style.background='#f00'
+   cld[3].style.transform='scale(1.5) '
+   cld[3].style.background='#f00'
+   cld[4].style.background='#f00'
+   frz[1].style.opacity=0
+   frz[2].style.transform='scale(0.8)'
+  } 
 	o.bcl=!o.bcl 
  },  
- 
-  
- 
 }
-        o.initplnt()
-		o.initcld()
+
+Ifr=0,bfr=0
+Ifr=setInterval(()=>{
+ if(bfr)	  
+  frz[3].style.transform='scale(4)'
+ else
+  frz[3].style.transform='scale(6)'
+    bfr=!bfr
+},1111)
    
 plnt[0].onmouseover=()=>
 { 	
-   o.intr=setInterval(()=>{ o.clk(); }, 1111);
-    clearInterval(Ifr)
-   frz[3].style.transform='scale(0)'
-   alg[0].style.transform='scale(0)'
-   alg[1].style.transform='scale(0)'
-    
+ o.intr=setInterval(()=>{o.clk();}, 1111);
+  clearInterval(Ifr)
+ frz[3].style.transform='scale(0)'
+ alg[0].style.transform='scale(0)'
+ alg[1].style.transform='scale(0)'   
 }
 plnt[0].onmouseout=()=>
 { 	
+  clearInterval(o.intr)
+  o.intr=0
  idbd.style.background='linear-gradient(#0ff,#0f0)'
-   clearInterval(o.intr)
-	  o.intr=0
-	   smk[0].style.opacity=0
-	   smk[1].style.opacity=0
-	   smk[2].style.opacity=0
-	   smk[3].style.opacity=0
-	   cld[0].style.transform='scale(0)'
-	   plnt[2].style.background='#000'
-	   plnt[3].style.background='#000'
-	   plnt[4].style.background='#000'
-	  frz[0].style.transform='scale(0)'
-	  frz[1].style.transform='scale(0)'
-	  frz[2].style.transform='scale(0)'
-	  alg[0].style.transform='scale(6)'
-      alg[1].style.transform='scale(4)'
-	  
-	  Ifr= setInterval(()=>{
-      if(bfr)	  
-	      frz[3].style.transform='scale(4)'
-       else
-	      frz[3].style.transform='scale(6)'
+ cld[0].style.transform='scale(0)'
+ plnt[2].style.background='#000'
+ plnt[3].style.background='#000'
+ plnt[4].style.background='#000' 
+ plnt[5].style.opacity=0
+ 
+ frz[0].style.transform='scale(0)'
+ frz[1].style.transform='scale(0)'
+ frz[2].style.transform='scale(0)'
+ alg[0].style.transform='scale(6)'
+ alg[1].style.transform='scale(4)'
+ Ifr= setInterval(()=>{
+  if(bfr)	  
+   frz[3].style.transform='scale(4)'
+  else
+   frz[3].style.transform='scale(6)'
       bfr=!bfr
-
-	},1111)
-	
+ },1111)	
 }
-	    Ifr=0
-    	bfr=0
-	Ifr= setInterval(()=>{
-      if(bfr)	  
-	      frz[3].style.transform='scale(4)'
-       else
-	      frz[3].style.transform='scale(6)'
-      bfr=!bfr
-
-	},1111)
-
+	   
 frz[3].onmouseover=()=>
 { 
  frz[3].style.transform='scale(6)'
  frz[3].style.color='#f00'
- //alg[0].style.transform='scale(6) skew(0)'
- //alg[1].style.transform='scale(4) skew(1deg)'
- //
 }
 frz[3].onmouseout=()=>
 { 
  frz[3].style.transform='scale(4)'
- frz[3].style.color='pink'
- //alg[0].style.transform='scale(0)'
- //alg[1].style.transform='scale(0)'
-
+ frz[3].style.color='pink' 
 }
-
-
-
 
 </script>
 </body>
