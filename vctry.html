@@ -17,6 +17,7 @@
 {
  position:absolute;
  transition:1s;
+ z-index:3;
 }
 
 </style>
@@ -85,17 +86,21 @@ function sltcl()
  if(bcl){
   slte[0].style.transition='999ms'
   slte[0].style.transform=
-   'scale(1.2) translate(-22%,-888%)'
+   'scale(1.2) translate('+(Math.random()*666-333)+
+   '%,-888%)'
   setTimeout(()=>{
    slte[1].style.transition='444ms'
+   slte[1].style.opacity=0.5
    slte[1].style.transform=
     'scale(9) translate(-'+(222+Math.random()*111)+
 	'%,-88%)'	
    slte[2].style.transition='444ms'
+   slte[2].style.opacity=0.5
    slte[2].style.transform=
     'scale(9) translate(0%,-'+(222+Math.random()*111)+
 	'%)'	
    slte[3].style.transition='444ms'
+   slte[3].style.opacity=0.5
    slte[3].style.transform=
     'scale(9) translate('+(222+Math.random()*111)+
 	'%,-88%)'	
