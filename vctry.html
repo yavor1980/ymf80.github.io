@@ -1,0 +1,151 @@
+<html>
+<body id=idbd>
+<style>
+
+#idbd
+{
+ background:radial-gradient(222px,#999,#333);
+}
+
+.hd
+{
+ position:absolute;
+ transition:1s; 
+}
+
+.slte
+{
+ position:absolute;
+ transition:1s;
+}
+
+</style>
+
+<div class=hd>Waiting...</div>
+
+<div class=slte>
+ <div class=slte></div>
+ <div class=slte></div>
+ <div class=slte></div>
+</div>
+
+
+<script>
+hd=document.getElementsByClassName('hd')  
+slte=document.getElementsByClassName('slte')
+     
+hd[0].style.left=44+'%'
+hd[0].style.top=33+'%'
+hd[0].style.transform='scale(7)'
+hd[0].style.color='#b00'
+hd[0].style.cursor='pointer'
+ 
+slte[0].style.left=46+'%'
+slte[0].style.bottom=9+'%'
+slte[0].style.width=2+'%'
+slte[0].style.height=3+'%'
+slte[0].style.background=
+ 'radial-gradient(11px,#ff0,#f00)'
+slte[0].style.borderRadius=55+'%'
+slte[0].style.transform='scale(0)'
+
+slte[1].style.width=22+'%'
+slte[1].style.height=33+'%'
+slte[1].style.background=
+ 'radial-gradient(#f00,#ff0)'
+slte[1].style.borderRadius=55+'%'
+
+slte[2].style.width=22+'%'
+slte[2].style.height=33+'%'
+slte[2].style.background=
+ 'radial-gradient(#f00,#ff0)'
+slte[2].style.borderRadius=55+'%'
+
+slte[3].style.width=22+'%'
+slte[3].style.height=33+'%'
+slte[3].style.background=
+ 'radial-gradient(#f00,#ff0)'
+slte[3].style.borderRadius=55+'%'
+ 
+Icl=0
+bcl=0
+function cl()
+{
+ if(bcl){
+  hd[0].style.transform='scale(7)'
+ }else{
+  hd[0].style.transform='scale(9)'
+ }	  
+ bcl=!bcl
+}  
+  Icl=setInterval(()=>cl(),999)
+  
+function sltcl()
+{
+ if(bcl){
+  slte[0].style.transition='999ms'
+  slte[0].style.transform=
+   'scale(1.2) translate(-22%,-888%)'
+  setTimeout(()=>{
+   slte[1].style.transition='444ms'
+   slte[1].style.transform=
+    'scale(9) translate(-'+(222+Math.random()*111)+
+	'%,-88%)'	
+   slte[2].style.transition='444ms'
+   slte[2].style.transform=
+    'scale(9) translate(0%,-'+(222+Math.random()*111)+
+	'%)'	
+   slte[3].style.transition='444ms'
+   slte[3].style.transform=
+    'scale(9) translate('+(222+Math.random()*111)+
+	'%,-88%)'	
+  }, 444)
+ }else{
+  slte[0].style.transition='0s'
+  slte[0].style.transform=
+   'scale(0) translate(0%,0%)'
+  slte[1].style.transition='0ms'
+  slte[1].style.transform=
+    'scale(0) translate(0%,0%)'
+  slte[2].style.transition='0ms'
+  slte[2].style.transform=
+    'scale(0) translate(0%,0%)'	
+  slte[3].style.transition='0ms'
+  slte[3].style.transform=
+    'scale(0) translate(0%,0%)'	 	
+ }	  
+ bcl=!bcl
+}  
+
+hd[0].onmouseover=()=>
+{
+ idbd.style.background=
+  'linear-gradient(#00f,#ff0)'
+ hd[0].style.color='#f00'
+ hd[0].style.transform='scale(9) skew(-22deg)'
+  hd[0].innerHTML='VICTORY!'
+  clearInterval(Icl)
+  sltcl()
+  Icl=setInterval(()=>sltcl(),999)
+}
+hd[0].onmouseout=()=>
+{
+ idbd.style.background=
+  'radial-gradient(222px,#999,#333)'
+ slte[0].style.transition='0s'
+ slte[0].style.transform=
+  'scale(0) translate(0%,0%)'
+ hd[0].style.color='#b00'
+  hd[0].innerHTML='Waiting...'
+  clearInterval(Icl)
+  cl(); Icl=setInterval(()=>cl(),999)
+}
+
+ 
+ 
+ 
+ 
+</script>
+</body>
+
+</html>

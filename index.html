@@ -11,14 +11,13 @@
 a
 {
  text-decoration:none;
- cursor:pointer;
 }
 
 img
 {
+ transition:1s;
  padding:1%;
  width:22%;
- transition:1s;
 }
 
 #idlft
@@ -196,7 +195,6 @@ img
  </div>
 </div> 
 
- 	 
 <div id=idspce>
  <div class=spce>
   <a href=mars.html>MARS</a>
@@ -214,7 +212,6 @@ img
   <a href=road.html>ROAD</a>
  </div>
 </div>
- 
  
 <div id=idedctn>    
  <div class=edctn>
@@ -249,8 +246,6 @@ img
  </div>
 </div> 
 
-
- 
 <div id=idntre>
  <div class=ntre>
   <a href=lizard.html>LIZARD</a>
@@ -283,14 +278,18 @@ img
   <a href=images.html>images</a>
  </div>
  <div class=imgs>
-  <a href=sbmrne.html>submurrine</a>
+  <a href=sbmrne.html>submurine</a>
  </div>
  <div class=imgs>
   <a href=drsl.html>throttle</a>
  </div>
+ <div class=imgs>
+  <a href=vctry.html>Victory</a>
+ </div>
 </div>
 
 <script >
+a=document.getElementsByTagName('a')
 img=document.getElementsByTagName('img')
 tchnlgy=document.getElementsByClassName('tchnlgy') 
 spce=document.getElementsByClassName('spce')
@@ -299,101 +298,127 @@ ntre=document.getElementsByClassName('ntre')
 imgs=document.getElementsByClassName('imgs') 
 
 
- img[0].style.transform='scale(3) translate(-33%,0)'
+img[0].style.transform=
+ 'scale(3) translate(-33%,0)'
  
- tchnlgy[0].style.left='1%'
- tchnlgy[0].style.top='3%'
- tchnlgy[1].style.left='1%'
- tchnlgy[1].style.top='15%'
- tchnlgy[2].style.left='-7%'
- tchnlgy[2].style.top='28%'
- tchnlgy[3].style.left='5%'
- tchnlgy[3].style.top='40%'
- tchnlgy[4].style.left='-5%'
- tchnlgy[4].style.top='51%'
- tchnlgy[5].style.left='18%'
- tchnlgy[5].style.top='59%'
- tchnlgy[6].style.left='-7%'
- tchnlgy[6].style.top='69%'
- tchnlgy[7].style.left='11%'
- tchnlgy[7].style.top='79%'
- tchnlgy[8].style.left='-2%'
- tchnlgy[8].style.top='91%'
- tchnlgy[9].style.left='1%'
- tchnlgy[9].style.top='103%'
- tchnlgy[10].style.left='1%'
- tchnlgy[10].style.top='113%'
- tchnlgy[11].style.left='-6%'
- tchnlgy[11].style.top='122%'
- tchnlgy[12].style.left='6%'
- tchnlgy[12].style.top='132%'
+tchnlgy[0].style.left='1%'
+tchnlgy[0].style.top='3%'
+tchnlgy[1].style.left='1%'
+tchnlgy[1].style.top='15%'
+tchnlgy[2].style.left='-7%'
+tchnlgy[2].style.top='28%'
+tchnlgy[3].style.left='5%'
+tchnlgy[3].style.top='40%'
+tchnlgy[4].style.left='-5%'
+tchnlgy[4].style.top='51%'
+tchnlgy[5].style.left='18%'
+tchnlgy[5].style.top='59%'
+tchnlgy[6].style.left='-7%'
+tchnlgy[6].style.top='69%'
+tchnlgy[7].style.left='11%'
+tchnlgy[7].style.top='79%'
+tchnlgy[8].style.left='-2%'
+tchnlgy[8].style.top='91%'
+tchnlgy[9].style.left='1%'
+tchnlgy[9].style.top='103%'
+tchnlgy[10].style.left='1%'
+tchnlgy[10].style.top='113%'
+tchnlgy[11].style.left='-6%'
+tchnlgy[11].style.top='122%'
+tchnlgy[12].style.left='6%'
+tchnlgy[12].style.top='132%'
  
- spce[0].style.left='1%'
- spce[0].style.top='0%'
- spce[1].style.left='2%'
- spce[1].style.top='11%'
- spce[2].style.left='2%'
- spce[2].style.top='22%'
- spce[3].style.left='2%'
- spce[3].style.top='33%'
- spce[4].style.left='2%'
- spce[4].style.top='44%'
+spce[0].style.left='1%'
+spce[0].style.top='0%'
+spce[1].style.left='2%'
+spce[1].style.top='11%'
+spce[2].style.left='2%'
+spce[2].style.top='22%'
+spce[3].style.left='2%'
+spce[3].style.top='33%'
+spce[4].style.left='2%'
+spce[4].style.top='44%'
 
- edctn[0].style.left='1%'
- edctn[0].style.top='0%'
- edctn[1].style.left='2%'
- edctn[1].style.top='11%'
- edctn[2].style.left='2%'
- edctn[2].style.top='22%'
- edctn[3].style.left='1%'
- edctn[3].style.top='33%'
- edctn[4].style.left='2%'
- edctn[4].style.top='44%'
- edctn[5].style.left='2%'
- edctn[5].style.top='55%'
- edctn[6].style.left='1%'
- edctn[6].style.top='66%'
- edctn[7].style.left='2%'
- edctn[7].style.top='77%'
- edctn[7].style.zIndex=1
- edctn[8].style.left='2%'
- edctn[8].style.top='88%'
- edctn[8].style.zIndex=1
- edctn[9].style.left='2%'
- edctn[9].style.top='99%'
- edctn[9].style.zIndex=1
+edctn[0].style.left='1%'
+edctn[0].style.top='0%'
+edctn[1].style.left='2%'
+edctn[1].style.top='11%'
+edctn[2].style.left='2%'
+edctn[2].style.top='22%'
+edctn[3].style.left='1%'
+edctn[3].style.top='33%'
+edctn[4].style.left='2%'
+edctn[4].style.top='44%'
+edctn[5].style.left='2%'
+edctn[5].style.top='55%'
+edctn[6].style.left='1%'
+edctn[6].style.top='66%'
+edctn[7].style.left='2%'
+edctn[7].style.top='77%'
+edctn[7].style.zIndex=1
+edctn[8].style.left='2%'
+edctn[8].style.top='88%'
+edctn[8].style.zIndex=1
+edctn[9].style.left='2%'
+edctn[9].style.top='99%'
+edctn[9].style.zIndex=1
 
- ntre[0].style.left='1%'
- ntre[0].style.top='11%'
- ntre[1].style.left='2%'
- ntre[1].style.top='22%'
- ntre[2].style.left='2%'
- ntre[2].style.top='33%'
- ntre[3].style.left='1%'
- ntre[3].style.top='44%'
- ntre[4].style.left='-25%'
- ntre[4].style.top='88%'
- ntre[5].style.left='12%'
- ntre[5].style.top='88%'
- ntre[6].style.left='33%'
- ntre[6].style.top='88%'
- ntre[7].style.left='55%'
- ntre[7].style.top='88%'
+ntre[0].style.left='1%'
+ntre[0].style.top='11%'
+ntre[1].style.left='2%'
+ntre[1].style.top='22%'
+ntre[2].style.left='2%'
+ntre[2].style.top='33%'
+ntre[3].style.left='1%'
+ntre[3].style.top='44%'
+ntre[4].style.left='-25%'
+ntre[4].style.top='88%'
+ntre[5].style.left='12%'
+ntre[5].style.top='88%'
+ntre[6].style.left='33%'
+ntre[6].style.top='88%'
+ntre[7].style.left='55%'
+ntre[7].style.top='88%'
 
- imgs[0].style.left='3%'
- imgs[0].style.top='3%'
- imgs[1].style.left='3%'
- imgs[1].style.top='14%'
- imgs[2].style.left='3%'
- imgs[2].style.top='25%'
+imgs[0].style.left='3%'
+imgs[0].style.top='3%'
+imgs[1].style.left='3%'
+imgs[1].style.top='14%'
+imgs[2].style.left='-3%'
+imgs[2].style.top='25%'
+imgs[3].style.left='19%'
+imgs[3].style.top='35%'
 
-//for(i=0; i<idtchnlgy.length; i++)
+for(i=0; i<tchnlgy.length; i++)
 {   
- r= Math.round(Math.random()*9)
- g= Math.round(Math.random()*9)
- b= Math.round(Math.random()*9)
+ r=Math.round(Math.random()*9)
+ g=Math.round(Math.random()*9)
+  a[i].style.color='#'+r+g+0
 }	
- 		
+n0=0
+for(i=0; i<spce.length; i++)
+{   
+n0=tchnlgy.length
+ r=Math.round(Math.random()*9)
+ b=Math.round(Math.random()*9)
+  a[n0+i].style.color='#'+r+0+g
+}
+n1=0
+for(i=0; i<edctn.length; i++)
+{   
+n1=spce.length
+ r=Math.round(Math.random()*9)
+  a[n0+n1+i].style.color='#'+r+0+0
+}	
+n2=0
+for(i=0; i<imgs.length; i++)
+{   
+n2=imgs.length
+ r=Math.round(Math.random()*9)
+  a[36+i].style.color='#'+r+0+0
+}	
+
+ 	//alert(tchnlgy.length)	
 </script>
 
 </body>
