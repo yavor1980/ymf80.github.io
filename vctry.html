@@ -23,6 +23,7 @@
 </style>
 
 <div class=hd>Waiting...</div>
+<div class=hd>When?..</div>
 
 <div class=slte>
  <div class=slte></div>
@@ -40,6 +41,12 @@ hd[0].style.top=33+'%'
 hd[0].style.transform='scale(7)'
 hd[0].style.color='#b00'
 hd[0].style.cursor='pointer'
+ 
+hd[1].style.left=44+'%'
+hd[1].style.top=58+'%'
+hd[1].style.transform='scale(7)'
+hd[1].style.color='#900'
+hd[1].style.cursor='pointer' 
  
 slte[0].style.left=46+'%'
 slte[0].style.bottom=9+'%'
@@ -74,8 +81,10 @@ function cl()
 {
  if(bcl){
   hd[0].style.transform='scale(7)'
+  hd[1].style.transform='scale(9)'
  }else{
   hd[0].style.transform='scale(9)'
+  hd[1].style.transform='scale(7)'
  }	  
  bcl=!bcl
 }  
@@ -129,6 +138,7 @@ hd[0].onmouseover=()=>
  hd[0].style.color='#f00'
  hd[0].style.transform='scale(9) skew(-22deg)'
   hd[0].innerHTML='VICTORY!'
+ hd[1].style.transform='scale(0)'
   clearInterval(Icl)
   sltcl()
   Icl=setInterval(()=>sltcl(),999)
