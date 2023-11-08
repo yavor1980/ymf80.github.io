@@ -156,8 +156,14 @@ hd[0].onmouseout=()=>
   cl(); Icl=setInterval(()=>cl(),999)
 }
 
- 
- 
+hd[1].onmouseover=()=>
+{
+ hd[0].onmouseover()
+}
+hd[1].onmouseout=()=>
+{
+ hd[0].onmouseout()
+} 
  
  
 </script>
