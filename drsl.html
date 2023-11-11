@@ -10,34 +10,33 @@
 <style>
 #idbd
 {
-background:linear-gradient(44deg,#330,#cc0);
+ background:linear-gradient(44deg,#330,#cc0);
 }
 
 .coil
 {
-position:absolute;
-transition:1s;
-cursor:pointer;
-left:33%;
-top:39%;
-width:22%;
-height:14%;
-//background:#bbb;
-transform:scale(2);
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ left:33%;
+ top:39%;
+ width:22%;
+ height:14%;
+ transform:scale(2);
 }
 
 .fld
 {
-position:absolute;
-transition:333ms;
-opacity:0;
+ position:absolute;
+ transition:333ms;
+ opacity:0;
 }
 
 .ttl
 {
-position:absolute;
-transition:333ms;
-cursor:pointer;
+ position:absolute;
+ transition:333ms;
+ cursor:pointer;
 }
 
 
@@ -45,7 +44,7 @@ cursor:pointer;
 </head>
 
 <body id=idbd >
-<div class=ttl>Trottle</div>
+<div class=ttl>Trotle</div>
 <div class=ttl>self-induction<br>&nbsp generator</div>
 <div class=ttl>oscillatory<br>&nbsp circuit</div>
 
@@ -60,13 +59,10 @@ cursor:pointer;
  <div class=fld></div>
  <div class=fld></div>
  <div class=fld>U=</div>
- <div class=fld> L*(dI/dt)</div>
+ <div class=fld>-L*(dI/dt)</div>
 </div> 
 
-
-
 <script>
-
 coil=document.getElementsByClassName('coil')
 fld=document.getElementsByClassName('fld')
 ttl=document.getElementsByClassName('ttl')
@@ -140,10 +136,12 @@ fld[1].style.borderRadius=55+'%'
 fld[2].style.left=-26+'%'
 fld[2].style.top=33+'%'
 fld[2].style.color='#00f'
+fld[2].style.transform='scale(0)'
 
 fld[3].style.left=-1+'%'
 fld[3].style.top=33+'%'
 fld[3].style.color='#0f0'
+fld[3].style.transform='scale(0)'
 
 ttl[0].style.left=55+'%'
 ttl[0].style.top=8+'%'
@@ -186,10 +184,10 @@ coil[0].onmouseover=()=>
   fld[1].style.transform=
    'scale('+p+')'
   fld[2].style.transform=
-   'scale('+(p+1)+')'
+   'scale('+(p+1)+') translate(15%,0)'
   fld[3].style.transform=
-   'scale('+(p+0.6)+')'
- },333)
+   'scale('+(p+1.4)+') translate(22%,0)'
+ }, 333)
 }  
 coil[0].onmouseout=()=>
 {
