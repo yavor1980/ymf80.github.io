@@ -5,29 +5,29 @@
 <style>
 #idbd
 {
-background: linear-gradient(9deg,#0a0,#a00);
+ background: linear-gradient(9deg,#0a0,#a00);
 }
 .btn
 {
-position:absolute;
-background:#300;
-left:77%;
-top:9%;
-width:11%;
-height:11%;
-font-size:2em;
-color:#fff;
-text-align:center;
-transition:1s; 
-border-top-left-radius:22%;
-border-top-right-radius:22%;
-border-bottom-left-radius:55%;
-border-bottom-right-radius:55%; 
-cursor:pointer; 
+ position:absolute;
+ background:#300;
+ left:77%;
+ top:9%;
+ width:11%;
+ height:11%;
+ font-size:2em;
+ color:#fff;
+ text-align:center;
+ transition:1s; 
+ border-top-left-radius:22%;
+ border-top-right-radius:22%;
+ border-bottom-left-radius:55%;
+ border-bottom-right-radius:55%; 
+ cursor:pointer; 
 }
 .btn:hover
 {
-transform:scale(1.3);
+ transform:scale(1.3);
 }
 
 .eagle
@@ -39,28 +39,26 @@ transform:scale(1.3);
  width:11%;
  height:44%;
  transition:2s; 
-  border-top-left-radius:66%;
-  border-top-right-radius:66%;
-  border-bottom-left-radius:55%;
-  border-bottom-right-radius:55%;  
-   cursor:pointer;
+ border-top-left-radius:66%;
+ border-top-right-radius:66%;
+ border-bottom-left-radius:55%;
+ border-bottom-right-radius:55%;  
+ cursor:pointer;
 } 
 .hd
 {
-position:absolute;
-  background:blue;
+ position:absolute;
+ background:blue;
  border-top-left-radius:55%;
  border-top-right-radius:55%;
  border-bottom-left-radius:55%;
  border-bottom-right-radius:55%;
  z-index:1;  
  transition:2s;
- 
 }
 .lwng
 {
  position:absolute;
- 
  border-top-left-radius:55%;
  border-top-right-radius:5%;
  border-bottom-left-radius:55%;
@@ -110,273 +108,268 @@ position:absolute;
 
 <div class=eagle >
  <div class=hd >
+  <div class=eagle ></div>
   <div class=hd ></div>
   <div class=hd ></div> 
   <div class=hd ></div>
  </div>
  <div class=lwng ><div class=lwng ></div></div>
- <div class=rwng ><div class=rwng ></div></div>
- 
+ <div class=rwng ><div class=rwng ></div></div> 
 </div>
 
- <div class=wrd>AQUILA</div> 
- <div class=wrd>NON</div>  
- <div class=wrd>CAPTAT</div> 
- <div class=wrd>MUSCAS</div> 
+<div class=wrd>AQUILA</div> 
+<div class=wrd>NON</div>  
+<div class=wrd>CAPTAT</div> 
+<div class=wrd>MUSCAS</div> 
  
- <div class=flt>flight</div>
- <div class=flt></div>
- <div class=flt>transform any block</div>
+<div class=flt>flight</div>
+<div class=flt></div>
+<div class=flt>transform any block</div>
  
- <div class=gthb>GitHub</div> 
- <div class=gthb>Add server!</div>
- <div class=gthb>Control content</div>
- <div class=gthb>Instructns to client</div>
- <div class=gthb></div>
-  <div class=gthb>LocalHost</div>
+<div class=gthb>GitHub</div> 
+<div class=gthb>Add server!</div>
+<div class=gthb>Control content</div>
+<div class=gthb>Instructns to client</div>
+<div class=gthb></div>
+<div class=gthb>LocalHost</div>
  
  
-
 <script>
+btn=document.getElementsByClassName('btn')
 
- btn=document.getElementsByClassName('btn')
- eagle=document.getElementsByClassName('eagle')
- hd=document.getElementsByClassName('hd')
- lwng=document.getElementsByClassName('lwng')
- rwng=document.getElementsByClassName('rwng')
+eagle=document.getElementsByClassName('eagle')
+hd=document.getElementsByClassName('hd')
+lwng=document.getElementsByClassName('lwng')
+rwng=document.getElementsByClassName('rwng')
   
- wrd=document.getElementsByClassName('wrd')
- flt=document.getElementsByClassName('flt')
- gthb=document.getElementsByClassName('gthb')
+wrd=document.getElementsByClassName('wrd')
+flt=document.getElementsByClassName('flt')
+gthb=document.getElementsByClassName('gthb')
 
   
 var eagl= 
+{
+ b:1,    
+ init:function()
  {
-   b:1,    
-  init:function()
-  {
-	 lwng[0].style.background=
-	  'radial-gradient(#444,#000)';
-	 lwng[0].style.left='-89%'
-	 lwng[0].style.top='6%'  
-	 lwng[0].style.width='99%'
-	 lwng[0].style.height='122%'
-    
-	 lwng[1].style.background=
-	  'radial-gradient(#444,#000)';
-	 lwng[1].style.left='-33%'
-	 lwng[1].style.top='0%'  
-	 lwng[1].style.width='99%'
-	 lwng[1].style.height='99%'
-	  
-	 rwng[0].style.background=
-	  'radial-gradient(#444,#000)';
-     rwng[0].style.left='88%'
-	 rwng[0].style.top='6%'  
-	 rwng[0].style.width='99%'
-	 rwng[0].style.height='122%'
-	 rwng[0].style.zIndex=-1
-	  
-	 rwng[1].style.background=
-	  'radial-gradient(#444,#000)';
-	 rwng[1].style.left='33%'
-	 rwng[1].style.top='0%'  
-	 rwng[1].style.width='99%'
-	 rwng[1].style.height='99%'
-	 rwng[1].style.zIndex=-2
-     	 
-	 hd[0].style.background=
-	  'radial-gradient(#444,#000)';
-     hd[0].style.left='18%'
-	 hd[0].style.top='-11%' 	 
-     hd[0].style.width='66%'
-	 hd[0].style.height='66%' 
-	 hd[0].style.zIndex=1
-	 
-	 hd[1].style.background=
-	  'radial-gradient(#f60,#000)';
-     hd[1].style.left='33%'
-	 hd[1].style.top='33%' 
-	 hd[1].style.width='44%'
-	 hd[1].style.height='44%' 
-	 
-	 hd[2].style.background=
-	  'radial-gradient(#ff0,#f00)'
-     hd[2].style.left='20%'
-	 hd[2].style.top='17%' 
-	 hd[2].style.width='22%'
-	 hd[2].style.height='0%'
-	 
-	 hd[3].style.background=
-	  'radial-gradient(#ff0,#f00)'
-     hd[3].style.left='62%'
-	 hd[3].style.top='17%' 
-	 hd[3].style.width='22%'
-	 hd[3].style.height='0%'
-	 
-	  wrd[0].style.left='44%' 
-      wrd[0].style.top='6%'  
-      wrd[0].style.color='#ff0' 
-	  wrd[0].style.opacity=0
-      wrd[0].style.fontSize='3em' 
-	  
-      wrd[1].style.left='55%'
-      wrd[1].style.top='17%'
-	  wrd[1].style.color='#f0f'
-	  wrd[1].style.opacity=0
-      wrd[1].style.fontSize='3em' 
-	    
-      wrd[2].style.left='66%' 
-      wrd[2].style.top='26%'
-	  wrd[2].style.color='#0ff'
-	  wrd[2].style.opacity=0
-      wrd[2].style.fontSize='3em' 
-	  
-      wrd[3].style.left='71%' 
-      wrd[3].style.top='36%'
-	  wrd[3].style.color='#f00'
-      wrd[3].style.opacity=0	  
-      wrd[3].style.fontSize='3em'
-
-	  flt[0].style.left='6%' 
-      flt[0].style.top='11%'
-	  flt[0].style.color='#f00'
-      flt[0].style.opacity=1	  
-      flt[0].style.fontSize='3em'
-	  flt[0].style.cursor='pointer'
-	  
-	  flt[1].style.left='16%' 
-      flt[1].style.top='19%'
-	  flt[1].style.color='#f00'
-	  flt[1].style.opacity=1
-      flt[1].style.transform='scale(0)'	  
-      
-	  flt[2].style.left='16%' 
-      flt[2].style.top='19%'
-	  flt[2].style.color='#f00'
-	  flt[2].style.opacity=1
-      flt[2].style.transform='scale(0)'	 
-	  
-	  gthb[0].style.left='67%' 
-      gthb[0].style.top='66%'
-	  gthb[0].style.color='#f00'
-	  gthb[0].style.cursor='pointer'
-	  gthb[0].style.transform='scale(3)'	
-	  
-	  gthb[1].style.left='58%' 
-      gthb[1].style.top='57%'
-      gthb[1].style.transform='scale(0)'	  
-	 
-	  gthb[2].style.left='64%' 
-      gthb[2].style.top='55%'
-      gthb[2].style.transform='scale(0)'
-	 
-      gthb[3].style.left='70%' 
-      gthb[3].style.top='74%'
-      gthb[3].style.transform='scale(0)'
-	 
-      gthb[4].style.left='70%' 
-      gthb[4].style.top='76%'
-      gthb[4].style.transform='scale(0)'
-	 
-	  gthb[5].style.left='70%' 
-      gthb[5].style.top='46%'
-      gthb[5].style.transform='scale(0)'
-	 
-  },
+  eagle[1].style.left='-8%'
+  eagle[1].style.top='-22%'  
+  eagle[1].style.width='99%'
+  eagle[1].style.height='6%'  
+  eagle[1].style.background='none'
+  eagle[1].style.border='11px ridge #ff0'
+  eagle[1].style.transform='scale(0)'
   
-  cl:function()
+  lwng[0].style.background=
+   'radial-gradient(#444,#000)';
+  lwng[0].style.left='-89%'
+  lwng[0].style.top='6%'  
+  lwng[0].style.width='99%'
+  lwng[0].style.height='122%'
+  lwng[1].style.background=
+   'radial-gradient(#444,#000)';
+  lwng[1].style.left='-33%'
+  lwng[1].style.top='0%'  
+  lwng[1].style.width='99%'
+  lwng[1].style.height='99%'
+	  
+  rwng[0].style.background=
+   'radial-gradient(#444,#000)';
+  rwng[0].style.left='88%'
+  rwng[0].style.top='6%'  
+  rwng[0].style.width='99%'
+  rwng[0].style.height='122%'
+  rwng[0].style.zIndex=-1
+	  
+  rwng[1].style.background=
+   'radial-gradient(#444,#000)';
+  rwng[1].style.left='33%'
+  rwng[1].style.top='0%'  
+  rwng[1].style.width='99%'
+  rwng[1].style.height='99%'
+  rwng[1].style.zIndex=-2
+     	 
+  hd[0].style.background=
+   'radial-gradient(#444,#000)';
+  hd[0].style.left='18%'
+  hd[0].style.top='-11%' 	 
+  hd[0].style.width='66%'
+  hd[0].style.height='66%' 
+  hd[0].style.zIndex=1
+	 
+  hd[1].style.background=
+   'radial-gradient(#f60,#000)';
+  hd[1].style.left='33%'
+  hd[1].style.top='33%' 
+  hd[1].style.width='44%'
+  hd[1].style.height='44%' 
+	 
+  hd[2].style.background=
+	  'radial-gradient(#f00,#ff0)'
+  hd[2].style.left='20%'
+  hd[2].style.top='17%' 
+  hd[2].style.width='22%'
+  hd[2].style.height='0%'
+	 
+  hd[3].style.background=
+   'radial-gradient(#f00,#ff0)'
+  hd[3].style.left='62%'
+  hd[3].style.top='17%' 
+  hd[3].style.width='22%'
+  hd[3].style.height='0%'
+	 
+  wrd[0].style.left='44%' 
+  wrd[0].style.top='6%'  
+  wrd[0].style.color='#ff0' 
+  wrd[0].style.opacity=0
+  wrd[0].style.fontSize='3em' 
+	  
+  wrd[1].style.left='55%'
+  wrd[1].style.top='17%'
+  wrd[1].style.color='#f0f'
+  wrd[1].style.opacity=0
+  wrd[1].style.fontSize='3em' 
+	    
+  wrd[2].style.left='66%' 
+  wrd[2].style.top='26%'
+  wrd[2].style.color='#0ff'
+  wrd[2].style.opacity=0
+  wrd[2].style.fontSize='3em' 
+	  
+  wrd[3].style.left='71%' 
+  wrd[3].style.top='36%'
+  wrd[3].style.color='#f00'
+  wrd[3].style.opacity=0	  
+  wrd[3].style.fontSize='3em'
+
+  flt[0].style.left='6%' 
+  flt[0].style.top='11%'
+  flt[0].style.color='#f00'
+  flt[0].style.opacity=1	  
+  flt[0].style.fontSize='3em'
+  flt[0].style.cursor='pointer'
+	  
+  flt[1].style.left='16%' 
+  flt[1].style.top='19%'
+  flt[1].style.color='#f00'
+  flt[1].style.opacity=1
+  flt[1].style.transform='scale(0)'	  
+      
+  flt[2].style.left='16%' 
+  flt[2].style.top='19%'
+  flt[2].style.color='#f00'
+  flt[2].style.opacity=1
+  flt[2].style.transform='scale(0)'	 
+	  
+  gthb[0].style.left='67%' 
+  gthb[0].style.top='66%'
+  gthb[0].style.color='#f00'
+  gthb[0].style.cursor='pointer'
+  gthb[0].style.transform='scale(3)'	
+	  
+  gthb[1].style.left='58%' 
+  gthb[1].style.top='57%'
+  gthb[1].style.transform='scale(0)'	  
+	 
+  gthb[2].style.left='64%' 
+  gthb[2].style.top='55%'
+  gthb[2].style.transform='scale(0)'
+	 
+  gthb[3].style.left='70%' 
+  gthb[3].style.top='74%'
+  gthb[3].style.transform='scale(0)'
+	 
+  gthb[4].style.left='70%' 
+  gthb[4].style.top='76%'
+  gthb[4].style.transform='scale(0)'
+	 
+  gthb[5].style.left='70%' 
+  gthb[5].style.top='46%'
+  gthb[5].style.transform='scale(0)'	 
+ },
+ cl:function()
  { 
   if(eagl.b==0)
-    eagle[0].style.transform='scale(1.2)'
-     else
-	eagle[0].style.transform='scale(1)'
-   eagl.b=!eagl.b
+   eagle[0].style.transform='scale(1.2)'
+  else
+   eagle[0].style.transform='scale(1)'
+    eagl.b=!eagl.b
  },
-  
   clk:function()
  {       
-  	v=Math.random()*11
-	 eagle[0].style.transform=
-	   'skew('+(Math.random()*44-22)+'deg)'
-    lwng[1].style.transform=
-	 'translate(-33%,-11%) scale('+(1+v/11)+',1)'
-    rwng[1].style.transform=
-	 'translate(33%,-11%) scale('+(1+v/11)+',1)'
- 
-	  hd[2].style.height=18+'%'
-	  hd[3].style.height=18+'%'
-	  
-	  wrd[0].style.opacity=1
-	  wrd[1].style.opacity=1
-	  wrd[2].style.opacity=1
-	  wrd[3].style.opacity=1
-	  
-	  btn[0].style.opacity=0 
-	   setTimeout(eagl.re, 2222)
-      	  	
+   v=Math.random()*11
+  eagle[0].style.transform=
+   'skew('+(Math.random()*44-22)+'deg)'
+  eagle[1].style.transform=
+   'scale(2) translate(0,-66%)'
+  lwng[1].style.transform=
+   'translate(-33%,-11%) scale('+(1+v/11)+',1)'
+  rwng[1].style.transform=
+   'translate(33%,-11%) scale('+(1+v/11)+',1)'
+  hd[2].style.height=18+'%'
+  hd[3].style.height=18+'%'
+  wrd[0].style.opacity=1
+  wrd[1].style.opacity=1
+  wrd[2].style.opacity=1
+  wrd[3].style.opacity=1
+  btn[0].style.opacity=0 
+   setTimeout(eagl.re, 2222)     	  	
  },	
   re:function()
  {
-   eagle[0].style.transform=
-	   'skew(0deg)'
-    lwng[1].style.transform=
-	 'translate(0%,0%) scale(1)'
-    rwng[1].style.transform=
-	 'translate(0%,0%) scale(1)'
-	 hd[2].style.height=0+'%'
-	 hd[3].style.height=0+'%'
-	 
-   btn[0].style.opacity=1   
-   wrd[0].style.opacity=0
-   wrd[1].style.opacity=0
-   wrd[2].style.opacity=0
-   wrd[3].style.opacity=0
+  eagle[0].style.transform='skew(0deg)'
+  eagle[1].style.transform='scale(0)'
+  lwng[1].style.transform=
+   'translate(0%,0%) scale(1)'
+  rwng[1].style.transform=
+   'translate(0%,0%) scale(1)'
+  hd[2].style.height=0+'%'
+  hd[3].style.height=0+'%'
+  btn[0].style.opacity=1   
+  wrd[0].style.opacity=0
+  wrd[1].style.opacity=0
+  wrd[2].style.opacity=0
+  wrd[3].style.opacity=0
  } 
 }    
    eagl.init()
 	
     setInterval(eagl.cl, 999)	
   
-	
-	btn[0].onclick=()=>
-	{
-	  eagl.clk()
-	    	   
-    }		  
-	eagle[0].onmousemove=()=>
-	{
-	  eagl.clk()
-	   	  
-    } 
+btn[0].onclick=()=>
+{
+ eagl.clk()
+}	
+	  
+eagle[0].onmousemove=()=>
+{
+ eagl.clk()
+} 
  
  fv=0
 flt[0].onmouseover=()=>
 {
- fv=Math.round(Math.random()*55)
- 
+  fv=Math.round(Math.random()*55)
+ flt[0].style.transform='scale(1.1)'
+ flt[0].style.color='#888'
   flt[0].innerHTML=
    "eagle.style.transform='skew("+9+"deg)'"
-  flt[0].style.transform='scale(1.1)'
-  flt[0].style.color='#888'
+ flt[1].style.transform='scale(3) translate(11%,99%)'
+ flt[1].style.color='#f00'
   flt[1].innerHTML=
    'transition="1s"<br>translate('+fv+'%,'+fv+'%)'
-  flt[1].style.transform='scale(3) translate(11%,99%)'
-  flt[1].style.color='#f00'
-  flt[2].style.transform='scale(3) translate(1%,33%)'
-  flt[2].style.color='#00f'
-  
+ flt[2].style.transform='scale(3) translate(1%,33%)'
+ flt[2].style.color='#00f' 
 }		  
 flt[0].onmouseout=()=>
 {
+ flt[0].style.color='#f00'
+ flt[0].style.transform='scale(1)'
   flt[0].innerHTML='flight'
-  flt[0].style.color='#f00'
-  flt[0].style.transform='scale(1)'
-  flt[1].style.transform='scale(0)'
-  flt[1].style.color='#fff'
-  flt[2].style.transform='scale(0) '
-  flt[2].style.color='#fff'
-  
+ flt[1].style.transform='scale(0)'
+ flt[1].style.color='#fff'
+ flt[2].style.transform='scale(0) '
+ flt[2].style.color='#fff' 
 }    
 
 alg=['PHP','Python','java','C#']
@@ -384,22 +377,22 @@ ialg=0
 Igthb=0
 gthb[0].onmouseover=()=>
 {
-  gthb[0].innerHTML='static host'
-  gthb[0].style.color='#555'
-  gthb[0].style.transform='scale(4)'
-  gthb[1].style.transform=
+ gthb[0].style.color='#555'
+ gthb[0].style.transform='scale(4)'
+  gthb[0].innerHTML='static hosting'
+ gthb[1].style.transform=
    'scale(3) translate(-11%,-99%)'
-  gthb[1].style.color='#f00'
-  gthb[2].style.transform=
-   'scale(3) translate(-11%,-222%)'
-  gthb[2].style.color='#f0f'
-  gthb[3].style.transform=
-   'scale(3) translate(-11%,33%)'
-  gthb[3].style.color='#ff0'
+ gthb[1].style.color='#f00'
+ gthb[2].style.transform=
+  'scale(3) translate(-11%,-222%)'
+ gthb[2].style.color='#f0f'
+ gthb[3].style.transform=
+  'scale(3) translate(-11%,33%)'
+ gthb[3].style.color='#ff0'
   
  Igthb= setInterval(()=>{
-   gthb[4].innerHTML=alg[ialg]
-	ialg++ 
+  gthb[4].innerHTML=alg[ialg]
+   ialg++ 
    if(ialg==4) ialg=0
   },1111)
   gthb[4].style.transform=
@@ -408,26 +401,24 @@ gthb[0].onmouseover=()=>
   gthb[5].style.transform=
    'scale(3) translate(-22%,119%)'
   gthb[5].style.color='#0f6'
-  
 }		  
 gthb[0].onmouseout=()=>
 {
-  gthb[0].innerHTML='GitHub'
-  gthb[0].style.color='#f00'
-  gthb[0].style.transform='scale(3)'
-  gthb[1].style.transform='scale(0)'
-  gthb[1].style.color='#fff'
-  gthb[2].style.transform='scale(0)'
-  gthb[2].style.color='#fff'
-  gthb[3].style.transform='scale(0) '
-  gthb[3].style.color='#fff'
-  gthb[4].style.transform='scale(0) '
-  gthb[4].style.color='#fff'
-  gthb[5].style.transform='scale(0) '
-  gthb[5].style.color='#fff'
-
-   clearInterval(Igthb)
-     ialg=0   
+ gthb[0].innerHTML='GitHub'
+ gthb[0].style.color='#f00'
+ gthb[0].style.transform='scale(3)'
+ gthb[1].style.transform='scale(0)'
+ gthb[1].style.color='#fff'
+ gthb[2].style.transform='scale(0)'
+ gthb[2].style.color='#fff'
+ gthb[3].style.transform='scale(0) '
+ gthb[3].style.color='#fff'
+ gthb[4].style.transform='scale(0) '
+ gthb[4].style.color='#fff'
+ gthb[5].style.transform='scale(0) '
+ gthb[5].style.color='#fff'
+  clearInterval(Igthb)
+  ialg=0   
 }       
 
 
