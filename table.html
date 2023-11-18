@@ -5,47 +5,46 @@
 <style>
 #idbd
 {
-background: linear-gradient(#0ff,44%,#ff0);
+ background: linear-gradient(#0ff,44%,#ff0);
 }
 
 .btn
 {
-position:absolute;
-cursor:pointer;
-font-size:1.6em;
-transition:1s;
+ position:absolute;
+ cursor:pointer;
+ font-size:1.6em;
+ transition:1s;
 }
 .btn:hover
 {
-transform:scale(1.2);
+ transform:scale(1.2);
 }
 
 #idfc
 {
-position:absolute;   
-width:55%;
-height:55%;
-left:33%;
-top:33%;
-transition:1s; 
+ position:absolute;   
+ left:33%;
+ top:33%;
+ width:55%;
+ height:55%;
+ transition:1s; 
 }
 .fc
 {
-position:absolute;   
-border-radius:50%;
-transition:1s; 
+ position:absolute;   
+ border-radius:50%;
+ transition:1s; 
 }
 .zr
 {
-position:absolute;   
-border-radius:50%;
-left:33%;
-top:33%;
-width:33%;
-height:33%;
-background:#000;
-transition:1s;
-
+ position:absolute;   
+ border-radius:50%;
+ left:33%;
+ top:33%;
+ width:33%;
+ height:33%;
+ background:#000;
+ transition:1s;
 }
 
 .bd
@@ -73,7 +72,6 @@ transition:1s;
 {
  position:absolute;   
  transition:1s;
- 
 }
 
 .mth
@@ -107,7 +105,7 @@ td
 
 <button class=btn>bclr</button>
 <button class=btn>clr</button>
-<div class=btn></div>
+ <div class=btn></div>
 
 <div id=idfc >
  <div class=fc >
@@ -204,7 +202,6 @@ td
 </div>
 
 <script>
-//
 btn=document.getElementsByClassName('btn')
 fc=document.getElementsByClassName('fc')
 zr=document.getElementsByClassName('zr')
@@ -414,7 +411,44 @@ mth[5].style.left=66+'%'
 mth[5].style.top=20+'%'
 mth[5].style.transform='scale(0)'
 	 
-  b=0
+btn[0].onmouseover=()=>
+{
+ btn[2].style.transform=
+  'scale(2) translate(12%,0) skew(22deg)'
+ btn[2].style.color='#f00'
+  btn[2].innerHTML='change td bckgrnd...'
+}
+btn[0].onmouseout=()=>
+{
+ btn[2].style.transform='scale(0)'
+}
+btn[0].onclick=()=>
+{
+for(i=0;i<9;i++)
+ td[i].style.background='#'+
+  Math.round(Math.random()*9)+
+  Math.round(Math.random()*9)+
+  Math.round(Math.random()*9)
+}
+
+btn[1].onmouseover=()=>
+{
+ btn[2].style.transform=
+  'scale(2) translate(12%,0) skew(-22deg)'
+ btn[2].style.color='#900'
+  btn[2].innerHTML='clear td bckgrnd...'
+}
+btn[1].onmouseout=()=>
+{
+ btn[2].style.transform='scale(0)'
+}
+btn[1].onclick=()=>
+{
+ for(i=0;i<9;i++)
+  td[i].style.background='#bbb'
+} 	 
+	 
+b=0
 function cl()
 {       
   vs=Math.random()*22-11
@@ -434,55 +468,16 @@ function cl()
   lg[2].style.transform='rotate(0deg)'
   lg[3].style.transform='rotate(0deg)'
  }
-	   b=!b
+   b=!b
 }
    setInterval(()=>cl(),999)
    
-
-btn[0].onmouseover=()=>
-{
- btn[2].style.transform=
-  'scale(2) translate(12%,0) skew(22deg)'
- btn[2].style.color='#f00'
-  btn[2].innerHTML='change td bckgrnd...'
-}
-btn[0].onmouseout=()=>
-{
- btn[2].style.transform='scale(0)'
-}
-btn[0].onclick=()=>
-{
-for(i=0;i<9;i++)
- td[i].style.background='#'+
-   Math.round(Math.random()*9)+
-   Math.round(Math.random()*9)+
-   Math.round(Math.random()*9)
-}
-
-btn[1].onmouseover=()=>
-{
- btn[2].style.transform=
-  'scale(2) translate(12%,0) skew(-22deg)'
- btn[2].style.color='#900'
-  btn[2].innerHTML='clear td bckgrnd...'
-}
-btn[1].onmouseout=()=>
-{
- btn[2].style.transform='scale(0)'
-}
-btn[1].onclick=()=>
-{
-for(i=0;i<9;i++)
- td[i].style.background='#bbb'
-} 
-	 
 fcI=0
 fc[0].onmouseover=()=>
 {
  bm=Math.random()-0.5
  if(bm<0) x=-33
   else x=33
- 
  fc[0].style.transform=
   'scale(1.5) translate('+x+'%,0)'
  fc[1].style.transform='scale(1.6)'
@@ -491,10 +486,19 @@ fc[0].onmouseover=()=>
  zr[1].style.transform='scale(1.6)'
  zr[0].style.background='#f00'
  zr[1].style.background='#f00'
- 
+ bd[1].style.transform=
+  'scale(2) translate(0,-22%) rotate(88deg)'
+ bd[2].style.transform=
+  'translate(-44%,-22%) rotate(88deg)' 
+ bd[3].style.transform=
+  'scale(2) translate(0,-22%) rotate(-88deg)'
+ bd[4].style.transform=
+  'translate(44%,-22%) rotate(88deg)' 
  mtrlgy[2].style.color='#f00'
- mtrlgy[2].style.transform='scale(3) translate(0,-33%)'
- mth[4].style.transform='scale(3) translate(22%,-22%)'
+ mtrlgy[2].style.transform=
+  'scale(3) translate(0,-33%)'
+ mth[4].style.transform=
+  'scale(3) translate(22%,-22%)'
  mth[5].style.transform=
   'scale(3) translate(-66%,-55%)'
  fcI= setInterval(()=>
@@ -512,23 +516,27 @@ fc[0].onmouseout=()=>
  zr[1].style.transform='scale(1)'
  zr[0].style.background='#000'
  zr[1].style.background='#000'
+ bd[1].style.transform='rotate(0deg)'
+ bd[2].style.transform='rotate(0deg)'
+ bd[3].style.transform='rotate(0deg)'
+ bd[4].style.transform='rotate(0deg)'
  mtrlgy[2].style.color='#fff'
  mtrlgy[2].style.transform='scale(0)'
  mth[4].style.transform='scale(0)'
+  //mth[4].innerHTML=0
  mth[5].style.transform='scale(0) '
   clearInterval(fcI)
 } 
 
-  
 vtbl=[0,0,0,0,0,0,0,0,0]
 litd=0; itd=0 
 i=0
 setInterval(()=>{
-td[litd].style.transform='scale(1)'
-td[litd].style.border='5px ridge #f00'
-td[litd].style.background='#bbb'
-td[litd].style.zIndex=0
- itd=Math.round(Math.random()*8)
+ td[litd].style.transform='scale(1)'
+ td[litd].style.border='5px ridge #f00'
+ td[litd].style.background='#bbb'
+ td[litd].style.zIndex=0
+  itd=Math.round(Math.random()*8)
  vtbl[itd]=Math.round(Math.random()*8)
  td[itd].innerHTML=vtbl[itd]
  td[itd].style.border='none'
@@ -556,27 +564,25 @@ tbl[0].onmouseover=()=>
   'scale(2) skew(19deg) translate(33%,-177%)'
  dsprs[0].style.transform=
   'scale(2) skew(22deg) translate(-33%,0)'
-
-Itbl0=setInterval(()=>
-{
- if(btbl0){
-  dsprs[1].style.transform=
-   'scale(2) translate(-9%,299%) skew(-33deg)'
-  tbl[2].style.transform=
-   'scale(2) skew(-19deg) translate(33%,-77%)'
-  tbl[3].style.transform=
-   'scale(3) skew(19deg) translate(33%,-77%)'
- }else{
-  dsprs[1].style.transform=
-   'scale(2) translate(-9%,299%) skew(33deg)'
-  tbl[2].style.transform=
-   'scale(3) skew(19deg) translate(33%,-77%)'
-  tbl[3].style.transform=
-   'scale(2) skew(-19deg) translate(33%,-77%)'
- }
-   btbl0=!btbl0
-}
-  ,999)
+ Itbl0=setInterval(()=>
+ {
+  if(btbl0){
+   dsprs[1].style.transform=
+    'scale(2) translate(-9%,299%) skew(-33deg)'
+   tbl[2].style.transform=
+    'scale(2) skew(-19deg) translate(33%,-77%)'
+   tbl[3].style.transform=
+    'scale(3) skew(19deg) translate(33%,-77%)'
+  }else{
+   dsprs[1].style.transform=
+    'scale(2) translate(-9%,299%) skew(33deg)'
+   tbl[2].style.transform=
+    'scale(3) skew(19deg) translate(33%,-77%)'
+   tbl[3].style.transform=
+    'scale(2) skew(-19deg) translate(33%,-77%)'
+  }
+    btbl0=!btbl0
+ },999)
 }
 tbl[0].onmouseout=()=>
 {
@@ -605,15 +611,15 @@ tbl[4].onmouseout=()=>
 mtrI=0 
 amtr=
 ['abs relative',
-'multiplctv addtv',
-'systmatc random',
-'dynamic static',
+ 'multiplctv addtv',
+ 'systmatc random',
+ 'dynamic static',
 ]
 arr=
 ['notattn',
-'value',
-'occurrence',
-'time',
+ 'value',
+ 'occurrence',
+ 'time',
 ]
 var imtr=0
 mtrlgy[0].onmouseover=()=>
@@ -626,13 +632,12 @@ mtrlgy[0].onmouseover=()=>
  mtrlgy[1].style.color='#f00'
  mtrlgy[3].style.color='#f00'
  mtrlgy[3].style.transform='scale(3) '
-
  mtrI=setInterval(()=>{
   mtrlgy[0].innerHTML=arr[imtr]
   mtrlgy[1].innerHTML=amtr[imtr]
    imtr++
- if(imtr==4) imtr=0
-},  1111)
+  if(imtr==4) imtr=0
+ },  1111)
 }
 mtrlgy[0].onmouseout=()=>
 {
@@ -652,12 +657,14 @@ Imth0=0
 bmth0=0
 mth[0].onmouseover=()=>
 {
- mth[0].style.transform='scale(4) ' 
+ mth[0].style.transform=
+  'scale(4) translate(11%,-16%) skew(-15deg)' 
  mth[1].style.transform=
   'scale(3) translate(-33%,-77%)'
  mth[3].style.transform=
   'scale(3) translate(22%,-99%)'
- Imth0=setInterval(()=>{ 
+ Imth0=setInterval(()=>
+ { 
   if(bmth0){ 
    mth[2].style.transform=
     'scale(3) translate(-33%,-222%)'
