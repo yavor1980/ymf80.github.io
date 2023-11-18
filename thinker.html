@@ -5,72 +5,72 @@
 <style>
 body
 {
-background:linear-gradient(44deg,blue,yellow);
+ background:linear-gradient(44deg,blue,yellow);
 }
 
 .d
 {
-position:absolute;
-border-radius:55%;
-transition:1s;
+ position:absolute;
+ border-radius:55%;
+ transition:1s;
 }
 
 .zr
 {
-position:absolute;
-background:#000;
-left:39%;
-top:39%;
-width:22%;
-height:22%;
-border-radius:55%;
-transition:2s;
+ position:absolute;
+ transition:2s;
+ left:39%;
+ top:39%;
+ width:22%;
+ height:22%;
+ background:#000;
+ border-radius:55%;
 }
 
 .nm
 {
-position:absolute;
-font-size:2em;
-transition:2s;
-cursor:pointer;
-color:#fff;
+ position:absolute;
+ font-size:2em;
+ color:#fff;
+ transition:2s;
+ cursor:pointer;
 }
 
 .gd
 {
-position:absolute;
-font-size:2em;
-transition:1s;
-cursor:pointer;
+ position:absolute;
+ font-size:2em;
+ transition:1s;
+ cursor:pointer;
 }
 
 .fnd
 {
-position:absolute;
-font-size:2em;
-transition:1s;
-cursor:pointer;
+ position:absolute;
+ font-size:2em;
+ transition:1s; 
+ cursor:pointer;
 }
 
 .intrs
 {
-position:absolute;
-font-size:2em;
-transition:1s;
-cursor:pointer;
+ position:absolute;
+ font-size:2em;
+ transition:1s;
+ cursor:pointer;
 }
 .intrs:hover
 {
-transform:scale(2) translate(55px,-33%);
-color:#f0f;
-z-index:1;
+ transform:scale(2) translate(55px,-33%) skew(-11deg);
+ color:#f0f;
+ z-index:1;
 }
 
 .dvc
 {
-position:absolute;
-transition:1s;
-cursor:pointer;
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
 }
 
 </style>
@@ -81,31 +81,32 @@ cursor:pointer;
   <div class=d></div>   
 </div> 
 
- <div class=nm></div> 
+<div class=nm></div> 
  <div class=nm></div> 
  <div class=nm></div> 
  <div class=nm></div> 
  <div class=nm></div> 
  <div class=nm></div> 
 
- <div class=gd>Product </div> 
- <div class=gd>Price </div> 
- <div class=gd>Production</div> 
- <div class=gd>Crisis</div>
- <div class=gd>Keynesianism</div> 
+<div class=gd>Product </div> 
+<div class=gd>Price </div> 
+<div class=gd>Production</div> 
+<div class=gd>Crisis</div>
+<div class=gd>Keynesianism</div> 
  <div class=gd>market admin.<br> regulation</div>
  
- <div class=fnd>Fonds</div> 
+<div class=fnd>Fonds</div> 
  <div class=fnd>Premium </div> 
  <div class=fnd>Production dvlpmnt</div>
- <div class=fnd>Capitalism </div> 
+
+<div class=fnd>Capitalism </div> 
  <div class=fnd>Social
   <br>&nbsp &nbsp &nbsp &nbsp
    orientation
  </div> 
   
- <div class=intrs>InterAct </div> 
- <div class=intrs>Saturation </div> 
+<div class=intrs>InterAct </div> 
+<div class=intrs>Saturation </div> 
  <div class=intrs>multple realisasns </div> 
  <div class=intrs>Controllr </div> 
  
@@ -124,7 +125,6 @@ fnd=document.getElementsByClassName('fnd')
 intrs=document.getElementsByClassName('intrs')
 dvc=document.getElementsByClassName('dvc')
   
-
 d[0].style.width='44%';
 d[0].style.height='55%';
 d[0].style.left='11%';
@@ -273,27 +273,29 @@ dvc[3].style.opacity=0
 b=0
 function cl()
 { 
+ d[3].style.transform='scale(1,'+
+   (0.4+Math.random())+')'
  if(b)
- {
-  d[0].style.transform='scale(1.2)';
-  zr[0].style.transform='scale(2)';
-  zr[0].style.background='#f00';
-  zr[1].style.transform='scale(2)';
-  zr[1].style.background='#f00';     
-  fnd[4].style.color='#666';
+ {//
+  d[0].style.transform='scale(1.2)'
+  zr[0].style.transform='scale(2)'
+  zr[0].style.background='#f00'
+  zr[1].style.transform='scale(2)'
+  zr[1].style.background='#f00'   
+  fnd[4].style.color='#666'
   fnd[4].style.transform=
-   'scale(2) skew(-22deg)';
+   'scale(2) skew(-22deg)'
  }
   else
  { 
-  zr[0].style.transform='scale(1)';
-  zr[0].style.background='#000';
-  zr[1].style.transform='scale(1)';
-  zr[1].style.background='#000';
-  d[0].style.transform='scale(1)';
-  fnd[4].style.color='#770';
+  d[0].style.transform='scale(1)'
+  zr[0].style.transform='scale(1)'
+  zr[0].style.background='#000'
+  zr[1].style.transform='scale(1)'
+  zr[1].style.background='#000'
+  fnd[4].style.color='#770'
   fnd[4].style.transform=
-   'scale(1.2) skew(22deg)';
+   'scale(1.2) skew(22deg)'
  }	
     b=!b
 }
@@ -307,13 +309,14 @@ d[0].onmouseover=()=>
 }	
 d[0].onmouseout=()=>
 {
- zr[0].style.transform='scale(1)';
- zr[0].style.background='#000';
- zr[1].style.transform='scale(1)';
- zr[1].style.background='#000';
- d[0].style.transform='scale(1)';
- fnd[4].style.color='#fff';
- fnd[4].style.transform='scale(0)';	
+ d[0].style.transform='scale(1)'
+ d[3].style.transform='scale(1)'
+ zr[0].style.transform='scale(1)'
+ zr[0].style.background='#000'
+ zr[1].style.transform='scale(1)'
+ zr[1].style.background='#000'
+ fnd[4].style.color='#fff'
+ fnd[4].style.transform='scale(0)'	
   clearInterval(Id0)
   dvc[0].onmouseout()
 }
@@ -330,12 +333,6 @@ nm[0].onmouseover=()=>
  nm[4].style.transform='scale(1.5) rotate(22deg)'
  nm[5].style.transform='scale(1.5) rotate(22deg)'
 }	  
-nm[0].onclick=()=>
-{
- nm[0].style.transform=
-  'translate(-44%,0) skew(22deg)'
-  nm[0].innerHTML='Failure<br> to self-regulate'
-}	
 nm[0].onmouseout=()=>
 {
  nm[0].style.transform='scale(1)'
@@ -347,6 +344,12 @@ nm[0].onmouseout=()=>
  nm[5].style.transform='scale(0) rotate(0deg)'
   nm[0].innerHTML='Market'
 }	  
+nm[0].onclick=()=>
+{
+ nm[0].style.transform=
+  'translate(-44%,0) skew(22deg)'
+  nm[0].innerHTML='Failure<br> to self-regulate'
+}	
 
 gd[0].onmouseover=()=>
 {
@@ -396,14 +399,15 @@ gd[2].onmouseout=()=>
 gd[3].onmouseover=()=>
 {
  gd[3].style.color='#b00'
- gd[3].style.transform='scale(1.2)'
+ gd[3].style.transform='scale(1.2) skew(11deg)'
   gd[3].innerHTML='Overproduction'
 }	  
 gd[3].onmouseout=()=>
 {
  gd[3].style.color='#900'
- gd[3].style.transform='scale(1)'
+ gd[3].style.transform='scale(1) '
  gd[3].style.border='none'
+ gd[3].style.background='none'
   gd[3].innerHTML='Crisis'
 }
 gd[3].onclick=()=>
@@ -412,6 +416,7 @@ gd[3].onclick=()=>
  gd[3].style.color='#f00'
  gd[3].style.transform='scale(2)'
  gd[3].style.zIndex=1
+ gd[3].style.background='#ff0'
   gd[3].innerHTML='Demonopolization'
 }
 
@@ -436,7 +441,7 @@ fnd[0].onmouseover=()=>
 {
  fnd[0].style.color='#f00'
  fnd[0].style.transform=
-  'scale(2) translate(25px,-11px)'
+  'scale(2) translate(25px,-6px) skew(22deg)'
  Ifnd0=setInterval(()=>{
   if(bfnd0){
    fnd[1].style.transform='scale(1.8)'
@@ -459,7 +464,7 @@ fnd[0].onmouseout=()=>
 
 fnd[3].onmouseover=()=>
 {
- fnd[3].style.transform='scale(2)'
+ fnd[3].style.transform='scale(2) skew(-14deg)'
  fnd[3].style.color='#f00'
   fnd[3].innerHTML='Goods<=>Money<=>Goods'  
 }	  
@@ -524,16 +529,16 @@ dvc[0].onmouseover=()=>
  dvc[0].style.transform='skew(22deg)' 
  dvc[3].style.opacity=1
  Idvs=setInterval(()=>{
-  if(bdvs)
- {
-  dvc[1].style.fontSize='2em'
-  dvc[2].style.fontSize='1.5em'
- }else{
-  dvc[1].style.fontSize='1.5em'
-  dvc[2].style.fontSize='2em'	
- }	
-  bdvs=!bdvs
-}, 888)
+  if(bdvs) 
+  {
+   dvc[1].style.fontSize='2em'
+   dvc[2].style.fontSize='1.5em'
+  }else{
+   dvc[1].style.fontSize='1.5em'
+   dvc[2].style.fontSize='2em'	
+  }	
+   bdvs=!bdvs
+ }, 888)
 }	
 dvc[0].onmouseout=()=>
 {
