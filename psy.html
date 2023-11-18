@@ -53,51 +53,49 @@ body
 
 </style>
 
- <div class=psch>
-  Object of psychology
- </div>
- <div class=psch>
-  Tasks of psychology
- </div>
- <div class=psch>
-  Methods of psychology
- </div>
+<div class=psch>
+ Object of psychology
+</div>
+<div class=psch>
+ Tasks of psychology
+</div>
+<div class=psch>
+ Methods of psychology
+</div>
 
- <div class=tmprm>Temperament</div>
- <div class=tmprm>choleric </div>
- <div class=tmprm>melancholic </div>
- <div class=tmprm>phlegmatic </div>
- <div class=tmprm>sanguine </div>
+<div class=tmprm>Temperament</div>
+<div class=tmprm>choleric </div>
+<div class=tmprm>melancholic </div>
+<div class=tmprm>phlegmatic </div>
+<div class=tmprm>sanguine </div>
  
- <div class=bhvr>behavioral type</div>
- <div class=bhvr>introvert </div>
- <div class=bhvr>extrovert </div>
- <div class=bhvr>ambivert </div>
+<div class=bhvr>behavioral type</div>
+<div class=bhvr>introvert </div>
+<div class=bhvr>extrovert </div>
+<div class=bhvr>ambivert </div>
  
- <div class=dfn>Attention </div>
- <div class=dfn>Perception </div>
- <div class=dfn>Thinking </div>
-  <div class=dfn></div>
+<div class=dfn>Attention </div>
+<div class=dfn>Perception </div>
+<div class=dfn>Thinking </div>
+ <div class=dfn></div>
  
- <div class=vctr>VCTR</div>
-  <div class=vctr></div>
- <div class=vctr>forget<br>&nbsp &nbsp classic!</div>
+<div class=vctr>VCTR</div>
+ <div class=vctr></div>
+<div class=vctr>forget<br>&nbsp &nbsp classic!</div>
  
- <div class=phlsph>outlook</div>
- <div class=phlsph>materialistic</div>
- <div class=phlsph>idealistic</div>
-  <div class=phlsph></div>
+<div class=phlsph>outlook</div>
+<div class=phlsph>materialistic</div>
+<div class=phlsph>idealistic</div>
+ <div class=phlsph></div>
 
 <script>
-
 psch=document.getElementsByClassName('psch')  
 tmprm=document.getElementsByClassName('tmprm') 
 bhvr=document.getElementsByClassName('bhvr')
 dfn=document.getElementsByClassName('dfn') 
 vctr=document.getElementsByClassName('vctr')
 phlsph=document.getElementsByClassName('phlsph')
-   
-    
+       
 psch[0].style.left=16+'%'
 psch[0].style.top=11+'%'
 psch[0].style.width=22+'%'
@@ -304,13 +302,13 @@ psch[2].onmouseout=()=>
 tmprm[0].onmouseover=()=>
 {  
  tmprm[0].style.transform='scale(1.4)'
- tmprm[0].style.height='23%'
+ tmprm[0].style.height='22%'
  tmprm[0].style.background='#900'
  tmprm[0].style.textAlign='left'
  tmprm[0].style.border='5px ridge #090'
   tmprm[0].innerHTML=
-   '-level of mental activity <br>'+  
-   '-mental condition'
+   '-level of mental <br>&nbsp activity <br>&nbsp'+  
+   '-mental <br>&nbsp condition'
  tmprm[1].style.transform=
   'scale(4) translate(-11%,149%) skew(-33deg)'
  tmprm[2].style.transform=
@@ -457,9 +455,11 @@ phlsph[0].onmouseover=()=>
    phlsph[3].innerHTML='primary'
  phlsphI=setInterval(()=>{
   if(bphlsph)
-   phlsph[3].style.transform='scale(3)' 
+   phlsph[3].style.transform=
+    'scale(3) skew(-22deg)' 
   else
-   phlsph[3].style.transform='scale(4)' 
+   phlsph[3].style.transform=
+    'scale(4) skew(-11deg)' 
      bphlsph=!bphlsph
  },1111)  
 }
