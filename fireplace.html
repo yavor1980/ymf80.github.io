@@ -37,7 +37,7 @@
 .flm
 {
  position:absolute;
- transition:1s;
+ transition:999ms;
  transform:scale(1.2);
 }
 
@@ -52,8 +52,8 @@
 }
 .frz:hover
 {
- transform: scale(2);
- z-index: 1;
+ transform:scale(2);
+ z-index:1;
 }
 
 .hdd
@@ -65,7 +65,7 @@
 
 </style>
 
-<button id=idb>enough </button>
+<button id=idb>enough</button>
 
 <div class=drv></div>
 <div class=drv></div>
@@ -118,17 +118,7 @@ drv=document.getElementsByClassName('drv')
 flm=document.getElementsByClassName('flm')
 hdd=document.getElementsByClassName('hdd')
 frz=document.getElementsByClassName('frz')
-
-	 	  
-clr=
-[
- 'aluminum,<br>titanium', 'sodium<br>salts', 
- 'calcium,<br>wood', 'lithium,<br>strontium',
- 'carbon,<br>lead,<br>natural<br>gas', 'selenium',
- 'potassium','copper,<br> molybdenum',
- '<br> phosphorus,<br> barium,<br> antimony','boron'    
-]
-	  	  
+	 	    
 drv[0].style.top='65%'
 drv[0].style.width='4%'
 drv[0].style.height='44%'
@@ -251,29 +241,37 @@ function cld()
  }
   b=!b
 }
+     I=setInterval(cld,999)
 
-I=0
 function clk()
 {
   clearInterval(I)
  idb.style.opacity=0 
  flm[0].style.transform=
-  'scale(0) translate(0, 70%)'
+  'scale(0) translate(0,70%)'
  flm[1].style.transform=
-  'scale(0) translate(0, 70%)'
+  'scale(0) translate(0,70%)'
  flm[2].style.background='#000'
- setTimeout(()=>{
-  I=setInterval(cld, 999)
+ setTimeout(()=>
+ {
+   I=setInterval(cld,999)
   idb.style.opacity=1
  }, 999)  
 }
-   I=setInterval(cld, 999)
-      
+
 idb.onclick=()=>
 {    
  clk() 
 }  
 
+clr=
+[
+ 'aluminum,<br>titanium', 'sodium<br>salts', 
+ 'calcium,<br>wood', 'lithium,<br>strontium',
+ 'carbon,<br>lead,<br>natural<br>gas', 'selenium',
+ 'potassium','copper,<br> molybdenum',
+ '<br> phosphorus,<br> barium,<br> antimony','boron'    
+]
 function act(nm,i,clrr,clrrr)
 {
  nm[i].onmouseover=()=>
@@ -309,14 +307,14 @@ hdd[0].onmouseover=()=>
  hdd[0].style.transform=
   'scale(4) rotate(-33deg) skew(-33deg)'
  hdd[0].style.color='#f00'
- hdd[1].onmouseover()
+  hdd[1].onmouseover()
 }
 hdd[0].onmouseout=()=>
 {    
  hdd[0].style.transform=
   'scale(3) rotate(-33deg)'
  hdd[0].style.color='#000'
- hdd[1].onmouseout()
+  hdd[1].onmouseout()
 } 
 
 hdd[1].onmouseover=()=>
@@ -324,14 +322,14 @@ hdd[1].onmouseover=()=>
  hdd[1].style.transform=
   'scale(4) rotate(33deg) skew(33deg)'
  hdd[1].style.color='#f00'
- hdd[0].onmouseover()
+  hdd[0].onmouseover()
 }
 hdd[1].onmouseout=()=>
 {    
  hdd[1].style.transform=
   'scale(3) rotate(33deg)'
  hdd[1].style.color='#000'
- hdd[0].onmouseout()
+  hdd[0].onmouseout()
 }  
 
 hdd[2].onmouseover=()=>
