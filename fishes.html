@@ -64,7 +64,7 @@
  cursor:pointer;
 }
 
-.stn
+.bbl
 { 
  position:absolute; 
  transition:1s;
@@ -96,91 +96,83 @@
   <div class=fc> </div>
   <div class=fc> </div>
   <div class=fc> </div>
+  <div class=bbl></div>
+  <div class=bbl></div>
+  <div class=bbl></div>
  </div>
  <div class=fsh> </div>
 </div>
 <div class=fsh>floating fish</div>
 
- <div class=wtr></div>
- <div class=wtr></div>
- <div class=wtr>AlgRthm</div>
- <div class=wtr>
-  instruction
- </div>
- <div class=wtr>
-  sequences
- </div>
+<div class=wtr></div>
+<div class=wtr></div>
+<div class=wtr>AlgRthm</div>
+<div class=wtr>instruction</div>
+<div class=wtr>sequences</div>
  
- <div class=prgr>button</div>
- <div class=prgr>function</div>
+<div class=prgr>button</div>
+<div class=prgr>function</div>
  
- <div class=stn></div>
- <div class=stn>
-  sink(stone)<br>
-  struct wtr<br>
-  new object<br>
- </div>
- <div class=stn>
-  delete obj
- </div>
+
  
- <div class=st>
-  dynamic<br> site
- </div>
- <div class=st>
-  php<br> python
- </div>
+<div class=st>
+ dynamic<br> site
+</div>
+<div class=st>
+ php<br> python
+</div>
  
- <div class=zn>
-  <b ><</b>&nbsp &nbsp &nbsp &nbsp &nbsp <b>></b>
- </div>
- <div class=zn></div>
+<div class=zn>
+ <b ><</b>&nbsp &nbsp &nbsp &nbsp &nbsp <b>></b>
+</div>
+<div class=zn></div>
 
 <script>
 fsh=document.getElementsByClassName('fsh') 
 fc=document.getElementsByClassName('fc')
 wtr=document.getElementsByClassName('wtr')
 prgr=document.getElementsByClassName('prgr')
-stn=document.getElementsByClassName('stn')
+bbl=document.getElementsByClassName('bbl')
 st=document.getElementsByClassName('st')
 zn=document.getElementsByClassName('zn')
- 
  
 fsh[1].style.left='22%'
 fsh[1].style.top='22%'
 fsh[1].style.width='66%'
 fsh[1].style.height='99%'
-fsh[1].style.background='radial-gradient(#bb0,#f70)'
+fsh[1].style.background=
+ 'radial-gradient(#bb0,#f70)'
 
 fsh[2].style.left='44%'
 fsh[2].style.top='11%'
 fsh[2].style.width='22%'
 fsh[2].style.height='111%'
-fsh[2].style.background='radial-gradient(#440,#f70)'
+fsh[2].style.background=
+ 'radial-gradient(#440,#f70)'
 fsh[2].style.zIndex=-1
 
 fsh[3].style.left='22%'
 fsh[3].style.top='33%'
 fsh[3].style.transform='scale(0)'
-fsh[3].style.textAlign='center'
 
-fc[0].style.background='#0ff'
 fc[0].style.left='22%'
 fc[0].style.top='22%'
 fc[0].style.width='9%'
 fc[0].style.height='11%'
+fc[0].style.background='#0ff'
 
-fc[1].style.background='#0ff'
 fc[1].style.left='66%'
 fc[1].style.top='22%'
 fc[1].style.width='9%'
 fc[1].style.height='11%'
+fc[1].style.background='#0ff'
 
-fc[2].style.background='#700'
 fc[2].style.left='33%'
 fc[2].style.top='66%'
 fc[2].style.width='33%'
 fc[2].style.height='5%'
+fc[2].style.background=
+ 'radial-gradient(#000,#f00)'
 
 wtr[0].style.left='33%'
 wtr[0].style.top='6%'
@@ -226,26 +218,29 @@ prgr[1].style.top='55%'
 prgr[1].style.zIndex=1
 prgr[1].style.transform='scale(2)'
 
-stn[0].style.left='69%'
-stn[0].style.top='48%'
-stn[0].style.width='11%'
-stn[0].style.height='5%'
-stn[0].style.background='radial-gradient(#800,#555)'
-stn[0].style.transform='scale(2) rotate(-45deg)'
-stn[0].style.borderRadius='50%'
-stn[0].style.opacity=0.7
+bbl[0].style.width='5%'
+bbl[0].style.height='5%'
+bbl[0].style.borderRadius='50%'
+bbl[0].style.opacity=0.3
+bbl[0].style.background=
+ 'radial-gradient(#800,#555)'
+bbl[0].style.transform='scale(0)' 
 
-stn[1].style.left='55%'
-stn[1].style.top='69%'
-stn[1].style.width='11%'
-stn[1].style.height='5%'
-stn[1].style.transform='scale(0) '
+bbl[1].style.width='5%'
+bbl[1].style.height='5%'
+bbl[1].style.borderRadius='50%'
+bbl[1].style.opacity=0.3
+bbl[1].style.background=
+ 'radial-gradient(#800,#555)'
+bbl[1].style.transform='scale(0)' 
 
-stn[2].style.left='75%'
-stn[2].style.top='74%'
-stn[2].style.width='11%'
-stn[2].style.height='5%'
-stn[2].style.transform='scale(0) '
+bbl[2].style.width='5%'
+bbl[2].style.height='5%'
+bbl[2].style.borderRadius='50%'
+bbl[2].style.opacity=0.3
+bbl[2].style.background=
+ 'radial-gradient(#800,#555)'
+bbl[2].style.transform='scale(0)'
 
 st[0].style.left='9%'
 st[0].style.top='66%'
@@ -302,16 +297,22 @@ idb.onclick=()=>
 {
  idb.style.transform='scale(0)'
  fsh[0].style.transform='scale(3)'
- fc[0].style.transform='scale(3)'
- fc[1].style.transform='scale(3)'
- fc[2].style.transform='scale(1,3)'
  fsh[3].style.color='#f00'
  fsh[3].style.transform=
   'scale(3) translate(55%,0%) skew(-22deg)'
- fc[1].style.background=
-  'radial-gradient(#f00,#0ff)'
  fc[0].style.background=
-  'radial-gradient(#f00,#0ff)'
+  'radial-gradient(#770,#0ff)'
+ fc[0].style.transform='scale(3)'
+ fc[1].style.background=
+  'radial-gradient(#770,#0ff)'
+ fc[1].style.transform='scale(3)'
+ fc[2].style.transform='scale(1,3)'
+ bbl[0].style.transform=
+  'scale(2) translate(-111%,-222%)'
+ bbl[1].style.transform=
+  'scale(2) translate(111%,-333%)'
+ bbl[2].style.transform=
+  'scale(2) translate(333%,-444%)'
  setTimeout(()=>
  {
   idb.style.transform='scale(1)'
@@ -319,7 +320,10 @@ idb.onclick=()=>
   fc[0].style.transform='scale(1)'
   fc[1].style.transform='scale(1)'	  
   fc[2].style.transform='scale(1,1)'
- },2222)
+  bbl[0].style.transform='scale(0)'
+  bbl[1].style.transform='scale(0)'
+  bbl[2].style.transform='scale(0)'
+ },   2222)
 }
  
 fsh[0].onmouseover=()=>
@@ -434,41 +438,6 @@ prgr[1].onmouseout=()=>
  zn[1].style.transform='scale(0) '
  imx=0
  clearInterval(Imx)    
-}
-
-Ifr4=0
-bfr4=0
-stn[0].onmouseover=()=>
-{
-stn[0].style.opacity=1
-stn[0].style.background='radial-gradient(#900,#999)'
- Ifr4=setInterval(()=>
- {
-  if(bfr4){
-   stn[0].style.transform='scale(2) rotate(-45deg)'
-   stn[1].style.transform='scale(2.5) '
-   stn[1].style.color='#f00'
-   stn[2].style.transform='scale(2) '
-   stn[2].style.color='#00f'
-    }else{
-   stn[0].style.transform='scale(2.5) rotate(-45deg)'
-   stn[1].style.transform='scale(2) '
-   stn[1].style.color='#700'
-   stn[2].style.transform='scale(2.5) '
-   stn[2].style.color='#008'
-   }
-      bfr4=!bfr4
-   },999)
-  }   
-stn[0].onmouseout=()=>
- {
-  stn[0].style.opacity=0.7
-  stn[0].style.background='radial-gradient(#800,#555)'
-  stn[0].style.transform='scale(2) rotate(-45deg)'
-  stn[1].style.transform='scale(0) '
-  stn[2].style.transform='scale(0) '
-   bfr4=0
-   clearInterval(Ifr4) 
 }
  
 st[0].onmouseover=()=>
