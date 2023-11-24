@@ -218,28 +218,31 @@ prgr[1].style.top='55%'
 prgr[1].style.zIndex=1
 prgr[1].style.transform='scale(2)'
 
+bbl[0].style.left='45%'
+bbl[0].style.top='66%'
 bbl[0].style.width='5%'
 bbl[0].style.height='5%'
 bbl[0].style.borderRadius='50%'
-bbl[0].style.opacity=0.3
 bbl[0].style.background=
- 'radial-gradient(#800,#555)'
+ 'radial-gradient(#00f,#fff)'
 bbl[0].style.transform='scale(0)' 
 
+bbl[1].style.left='45%'
+bbl[1].style.top='66%'
 bbl[1].style.width='5%'
 bbl[1].style.height='5%'
 bbl[1].style.borderRadius='50%'
-bbl[1].style.opacity=0.3
 bbl[1].style.background=
- 'radial-gradient(#800,#555)'
+ 'radial-gradient(#00b,#fff)'
 bbl[1].style.transform='scale(0)' 
 
+bbl[2].style.left='45%'
+bbl[2].style.top='66%'
 bbl[2].style.width='5%'
 bbl[2].style.height='5%'
 bbl[2].style.borderRadius='50%'
-bbl[2].style.opacity=0.3
 bbl[2].style.background=
- 'radial-gradient(#800,#555)'
+ 'radial-gradient(#009,#fff)'
 bbl[2].style.transform='scale(0)'
 
 st[0].style.left='9%'
@@ -269,8 +272,7 @@ function cl()
  } 
    b=!b
 }
-
- setInterval(cl, 2222)	
+    setInterval(cl, 2222)	
  
 wtr[0].innerHTML= 
 'Gases dissolved in water: nitrogen, oxygen, argon,'+    
@@ -308,15 +310,16 @@ idb.onclick=()=>
  fc[1].style.transform='scale(3)'
  fc[2].style.transform='scale(1,3)'
  bbl[0].style.transform=
-  'scale(2) translate(-111%,-222%)'
+  'scale(3) translate(-111%,-133%)'
  bbl[1].style.transform=
-  'scale(2) translate(111%,-333%)'
+  'scale(5) translate(111%,-188%)'
  bbl[2].style.transform=
-  'scale(2) translate(333%,-444%)'
+  'scale(9,4) translate(333%,-444%)'
  setTimeout(()=>
  {
   idb.style.transform='scale(1)'
   fsh[0].style.transform='scale(1)'
+  fsh[3].style.transform='scale(0)'
   fc[0].style.transform='scale(1)'
   fc[1].style.transform='scale(1)'	  
   fc[2].style.transform='scale(1,1)'
@@ -328,14 +331,37 @@ idb.onclick=()=>
  
 fsh[0].onmouseover=()=>
 {
- idb.onclick()
+ idb.style.transform='scale(0)'
+ fsh[0].style.transform='scale(3)'
+ fsh[3].style.color='#f00'
+ fsh[3].style.transform=
+  'scale(3) translate(55%,0%) skew(-22deg)'
+ fc[0].style.background=
+  'radial-gradient(#770,#0ff)'
+ fc[0].style.transform='scale(3)'
+ fc[1].style.background=
+  'radial-gradient(#770,#0ff)'
+ fc[1].style.transform='scale(3)'
+ fc[2].style.transform='scale(1,3)'
+ 
+ bbl[0].style.transform=
+  'scale(3) translate(444%,222%)'
+ bbl[1].style.transform=
+  'scale(5) translate(666%,88%)'
+ bbl[2].style.transform=
+  'scale(4) translate(999%,43%)'
 }
 fsh[0].onmouseout=()=>
 {
- fsh[3].style.transform='scale(0) '
- fc[1].style.background='#0ff'
- fc[0].style.background='#0ff'
- fsh[3].style.color='#000'
+ idb.style.transform='scale(1)'
+ fsh[0].style.transform='scale(1)'
+ fsh[3].style.transform='scale(0)'
+ fc[0].style.transform='scale(1)'
+ fc[1].style.transform='scale(1)'	  
+ fc[2].style.transform='scale(1,1)'
+ bbl[0].style.transform='scale(0)'
+ bbl[1].style.transform='scale(0)'
+ bbl[2].style.transform='scale(0)'
 }
  
 wtr[0].onmouseover=()=>
