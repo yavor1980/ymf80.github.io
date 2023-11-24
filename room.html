@@ -132,8 +132,8 @@
  <div class=drft>moving</div>
 
 <div class=vctr>VCTR</div>
- <div class=vctr>bright future! </div>
  <div class=vctr>creative </div>
+
 
 <div class=trnsf>transfrm </div>
  <div class=trnsf> </div>
@@ -191,7 +191,8 @@ drn[3].style.left=38+'%'
 drn[3].style.top=33+'%'
 drn[3].style.width=22+'%'
 drn[3].style.height=22+'%'
-drn[3].style.background='#070'
+drn[3].style.background=
+ 'radial-gradient(#333,#0b0)'
 drn[3].style.borderRadius='44%'
 drn[3].style.opacity=0
 drn[3].style.transform='scale(2)'
@@ -202,7 +203,6 @@ drn[4].style.width=22+'%'
 drn[4].style.height=22+'%'
 drn[4].style.borderRadius='55%'
 drn[4].style.opacity=0
-drn[4].style.transition=0
 drn[4].style.border='1px solid #000'
 drn[4].style.borderLeft='2px solid transparent'
 drn[4].style.borderRight='2px solid transparent'
@@ -270,12 +270,7 @@ vctr[1].style.left=55+'%'
 vctr[1].style.top=12+'%'
 vctr[1].style.transform='scale(0)'
 vctr[1].style.color='#060'
- 
-vctr[2].style.left=55+'%'
-vctr[2].style.top=12+'%'
-vctr[2].style.transform='scale(0)'
-vctr[2].style.color='#060'
- 
+  
 trnsf[0].style.left=77+'%'
 trnsf[0].style.top=77+'%'
 trnsf[0].style.transform='scale(3)'
@@ -415,21 +410,21 @@ Ivctr=0
 bvctr=0
 vctr[0].onmouseover=()=>
 {
-vctr[0].style.color='#f00'
-vctr[0].style.transform='scale(4)'
-vctr[0].innerHTML='new line!!'
-vctr[1].style.transform=
- 'scale(4) translate(33%,166%) skew(-22deg)'
-vctr[1].style.color='#ff0'
-vctr[2].style.transform=
- 'scale(4) translate(33%,133%) skew(22deg)'
-vctr[2].style.color='#f90'
-
+ vctr[0].style.color='#f00'
+ vctr[0].style.transform='scale(4)'
+  vctr[0].innerHTML='new line!!'
+ 
+ vctr[1].style.color='#f90'
  Ivctr=setInterval(()=>{
-  if(bvctr)
-   vctr[2].innerHTML='modelling'
-  else
-   vctr[2].innerHTML='creative'
+  if(bvctr){
+   vctr[1].style.transform=
+    'scale(4) translate(33%,55%) skew(22deg)'
+    vctr[1].innerHTML='modelling'
+ }else{
+   vctr[1].style.transform=
+    'scale(4) translate(33%,55%) skew(-22deg)'
+   vctr[1].innerHTML='creative'
+ } 
    bvctr=!bvctr
  },999)
 } 
@@ -440,8 +435,7 @@ vctr[0].onmouseout=()=>
  vctr[0].innerHTML='VCTR'
  vctr[1].style.transform='scale(0)'
  vctr[1].style.color='#000'
- vctr[2].style.transform='scale(0) '
- vctr[2].style.color='#880'
+  vctr[1].innerHTML='creative'
   clearInterval(Ivctr)
 } 
  
