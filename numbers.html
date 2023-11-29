@@ -10,73 +10,59 @@
 <style>
 #idbd
 {
-background:linear-gradient(44deg,#330,#cc0);
+ background:linear-gradient(44deg,#330,#cc0);
 }
 
 .blck
 {
-position:absolute;
-text-align:center;
-transition:1s;
-font-size:1.2em;
+ position:absolute;
+ text-align:center;
+ transition:1s;
+ font-size:1.2em;
 }
 .blck:hover
 {
-transform:scale(1.2);
+ transform:scale(1.2);
 }
 
 .nm
 {
-position:absolute;
-font-size:3em;
-transition:1s;
-cursor:pointer;
-color:#800;
-z-index:1;
+ position:absolute;
+ font-size:3em;
+ transition:1s;
+ cursor:pointer;
+ color:#800;
+ z-index:1;
+}
+
+.indctr
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
 }
 
 .mthm
 {
-position:absolute;
-transition:1s;
-cursor:pointer;
-}
-
-.php
-{
-position:absolute;
-transition:1s;
-cursor:pointer;
-}
-
-.sql
-{
-position:absolute;
-transition:1s;
-cursor:pointer;
-}
-
-.gthb
-{
-position:absolute;
-transition:1s;
-cursor:pointer;
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
 }
 
 .srv
 {
-position:absolute;
-transition:1s;
-cursor:pointer;
-color:#000;
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ color:#000;
 }
 
 .cntrl
 {
-position:absolute;
-transition:1s;
-cursor:pointer;
-color:#000;
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ color:#000;
 }
 
 </style>
@@ -84,151 +70,83 @@ color:#000;
 
 <body id=idbd >
   
-<div Class=blck> 
- <input type=button value='get' class=blck >
- <input type=button value='erase' class=blck ><br>
- <input type=range Class=blck value=0 
+<div class=blck> 
+ <input type=button class=blck value='get'>
+ <input type=button class=blck value='erase'><br>
+ <input class=blck type=range value=0 
     min=0 max=100 step=1> 
 </div>
+<div class=nm></div>
+<div class=nm></div>
+<div class=nm></div>
+<div class=nm></div>
+<div class=nm></div>
+<div class=nm></div>
+<div class=nm></div>
+<div class=nm></div>
+<div class=nm></div>
+<div class=blck>0</div>
 
- <div class=nm> </div>
- <div class=nm> </div>
- <div class=nm> </div>
- <div class=nm> </div>
- <div class=nm> </div>
- <div class=nm> </div>
- <div class=nm> </div>
- <div class=nm> </div>
- <div class=nm> </div>
+<div class=indctr>
+ <div class=indctr></div>
+ <div class=indctr></div>
+ <div class=indctr></div>
+ <div class=indctr></div>
+ <div class=indctr></div>
+ <div class=indctr></div>
+ <div class=indctr></div>
+</div>
 
- <div class=mthm>
- natural series
+<div class=mthm>
+ natural
+</div>
+ <div class=mthm> 
+  Each number is 1 more<br>&nbsp 
+   than the previous one.
  </div>
-<div class=mthm> 
- Each number is 1 more<br>&nbsp than the previous one.
-</div>
-<div class=mthm> 
- The natural series is infinite
-</div>
+ <div class=mthm> 
+  The natural series is infinite
+ </div>
 
-<div class=php> 
- var
-</div>
-<div class=php> 
- Array
-</div>
-<div class=php> 
- Class
-</div>
-<div class=php> 
- local global
-</div>
-<div class=php> 
- initlstion
-</div>
-<div class=php> 
- constrctr()
-</div>
-<div class=php> 
- destrctr()
-</div>
+<div class=srv>Server</div>
+ <div class=srv> 
+  PHP<br>Python<br>NodeJS
+ </div>
+ <div class=srv> 
+  HTML<br>CSS<br>JS
+ </div>
+ <div class=srv>back</div>
+ <div class=srv>front</div>
+ <div class=srv>answer</div>
+ <div class=srv>request</div>
+ <div class=srv>data<br>&nbsp exchngng</div>
 
-<div class=sql> 
- select
-</div>
-<div class=sql> 
- create
-</div>
-<div class=sql> 
- delete
-</div>
-<div class=sql> 
- insert
-</div>
-<div class=sql> 
- remove
-</div>
-<div class=sql> 
- DDL
-</div>
-<div class=sql> 
- DML
-</div>
-
-<div class=gthb> 
- GitHub
-</div>
-<div class=gthb> 
- 404 error but published
-</div>
-<div class=gthb> 
- use GitHub desktop
-</div>
-
-<div class=srv> 
- Server
-</div>
-<div class=srv> 
- PHP<br> Python<br> NodeJS
-</div>
-<div class=srv> 
- HTML<br> CSS<br> JS
-</div>
-<div class=srv> 
- back
-</div>
-<div class=srv> 
- front
-</div>
-<div class=srv> 
- answer
-</div>
-<div class=srv> 
- request
-</div>
-
-<div class=cntrl> 
- Control
-</div>
-<div class=cntrl> 
- Add MC for full control
-</div>
-<div class=cntrl> 
- Mobile link 
-</div>
-<div class=cntrl> 
- define<br> &nbsp coords!
-</div>
-<div class=cntrl> 
- strike!
-</div>
+<div class=cntrl>Control</div>
+<div class=cntrl>Add MC for full control</div>
 
 <script  >
-
 blck=document.getElementsByClassName('blck')
 nm=document.getElementsByClassName('nm')
+indctr=document.getElementsByClassName('indctr')
 
 mthm=document.getElementsByClassName('mthm')
-php=document.getElementsByClassName('php')
-sql=document.getElementsByClassName('sql')
-gthb=document.getElementsByClassName('gthb')
 srv=document.getElementsByClassName('srv')
 cntrl=document.getElementsByClassName('cntrl')
 
- 
 blck[0].style.left='66%'
-blck[0].style.top='8%'
+blck[0].style.top='11%'
 blck[0].style.width='22%'
-blck[0].style.height='15%'
+blck[0].style.height='23%'
 blck[0].style.background=
  'radial-gradient(#ff0,#f00)'
 blck[0].style.borderRadius='22%'
-blck[0].style.border='8px ridge #bb0'
+blck[0].style.border='8px ridge #b0b'
 
 blck[1].style.left='11%'
 blck[1].style.top='11%'
 blck[1].style.width='33%'
 blck[1].style.height='33%'
+blck[1].style.color='#b00'
 blck[1].style.background='#0bb'
 blck[1].style.cursor='pointer'
 
@@ -236,113 +154,90 @@ blck[2].style.left='54%'
 blck[2].style.top='11%'
 blck[2].style.width='33%'
 blck[2].style.height='33%'
+blck[2].style.color='#900'
 blck[2].style.background='#0bb'
 blck[2].style.cursor='pointer'
 
 blck[3].style.left='11%'
 blck[3].style.top='68%'
 blck[3].style.width='66%'
-//blck[3].style.height='8%'
-blck[3].style.background='#0bb'
 
-mthm[0].style.left='22%'
-mthm[0].style.top='40%'
+blck[4].style.left='50%'
+blck[4].style.top='22%'
+blck[4].style.cursor='pointer'
+blck[4].style.transform='scale(4)'
+
+indctr[0].style.left='20%'
+indctr[0].style.top='39%'
+indctr[0].style.width='10%'
+indctr[0].style.height='18%'
+indctr[0].style.background='#bb0'
+indctr[0].style.borderRadius='7%'
+indctr[0].style.transform='scale(3)'
+
+indctr[1].style.left='11%'
+indctr[1].style.top='5%'
+indctr[1].style.width='77%'
+indctr[1].style.height='8%'
+indctr[1].style.background='#555'
+indctr[1].style.borderRadius='55%'
+
+indctr[2].style.left='11%'
+indctr[2].style.top='46%'
+indctr[2].style.width='77%'
+indctr[2].style.height='8%'
+indctr[2].style.background='#555'
+indctr[2].style.borderRadius='55%'
+
+indctr[3].style.left='11%'
+indctr[3].style.bottom='4%'
+indctr[3].style.width='77%'
+indctr[3].style.height='8%'
+indctr[3].style.background='#555'
+indctr[3].style.borderRadius='55%'
+
+indctr[4].style.left='5%'
+indctr[4].style.top='8%'
+indctr[4].style.width='8%'
+indctr[4].style.height='42%'
+indctr[4].style.background='#555'
+indctr[4].style.borderRadius='55%'
+
+indctr[5].style.left='5%'
+indctr[5].style.top='52%'
+indctr[5].style.width='8%'
+indctr[5].style.height='41%'
+indctr[5].style.background='#555'
+indctr[5].style.borderRadius='55%'
+
+indctr[6].style.right='6%'
+indctr[6].style.top='8%'
+indctr[6].style.width='8%'
+indctr[6].style.height='42%'
+indctr[6].style.background='#555'
+indctr[6].style.borderRadius='55%'
+
+indctr[7].style.right='6%'
+indctr[7].style.top='52%'
+indctr[7].style.width='8%'
+indctr[7].style.height='41%'
+indctr[7].style.background='#555'
+indctr[7].style.borderRadius='55%'
+
+mthm[0].style.left='44%'
+mthm[0].style.top='9%'
 mthm[0].style.color='#0bb'
 mthm[0].style.transform='scale(5)'
 
-mthm[1].style.left='44%'
-mthm[1].style.top='22%'
-mthm[1].style.color='#0ff'
+mthm[1].style.left='33%'
+mthm[1].style.top='17%'
+mthm[1].style.color='#ee0'
 mthm[1].style.transform='scale(0)'
 	 
-mthm[2].style.background='none'
-mthm[2].style.left='44%'
-mthm[2].style.top='29%'
+mthm[2].style.left='33%'
+mthm[2].style.top='17%'
 mthm[2].style.color='#ff0'
-mthm[2].style.transform='scale(0)'	 
-	
-php[0].style.left='15%'
-php[0].style.top='52%'
-php[0].style.color='#f0c'
-php[0].style.transform='scale(3)'
-
-php[1].style.left='29%'
-php[1].style.top='52%'
-php[1].style.color='#f0b'
-php[1].style.transform='scale(3)'
-	
-php[2].style.left='44%'
-php[2].style.top='52%'
-php[2].style.color='#f0d'
-php[2].style.transform='scale(3)'	
-
-php[3].style.left='11%'
-php[3].style.top='49%'
-php[3].style.color='#990'
-php[3].style.transform='scale(0)'	
-
-php[4].style.left='11%'
-php[4].style.top='49%'
-php[4].style.color='#87d'
-php[4].style.transform='scale(0)'	
-
-php[5].style.left='33%'
-php[5].style.top='41%'
-php[5].style.color='#80d'
-php[5].style.transform='scale(0)'
-	
-php[6].style.left='44%'
-php[6].style.top='44%'
-php[6].style.color='#70d'
-php[6].style.transform='scale(0)'
-
-sql[0].style.left='11%'
-sql[0].style.top='66%'
-sql[0].style.color='#0cc'
-sql[0].style.transform='scale(3.3)'
-
-sql[1].style.left='24%'
-sql[1].style.top='66%'
-sql[1].style.color='#0dd'
-sql[1].style.transform='scale(3)'
-	 
-sql[2].style.left='38%'
-sql[2].style.top='66%'
-sql[2].style.color='#0bb'
-sql[2].style.transform='scale(3.5)'	
-
-sql[3].style.left='15%'
-sql[3].style.top='73%'
-sql[3].style.color='#0bb'
-sql[3].style.transform='scale(3.2)'
-
-sql[4].style.left='34%'
-sql[4].style.top='73%'
-sql[4].style.color='#0cc'
-sql[4].style.transform='scale(3.4)'
-
-sql[5].style.left='22%'
-sql[5].style.top='59%'
-sql[5].style.color='#0bb'
-sql[5].style.transform='scale(3.5)'
-
-sql[6].style.left='38%'
-sql[6].style.top='59%'
-sql[6].style.color='#0ff'
-sql[6].style.transform='scale(3.2)'
-
-gthb[0].style.left='19%'
-gthb[0].style.top='30%'
-gthb[0].style.color='#f0f'
-gthb[0].style.transform='scale(3)'
-
-gthb[1].style.left='19%'
-gthb[1].style.top='23%'
-gthb[1].style.transform='scale(0)'
-
-gthb[2].style.left='19%'
-gthb[2].style.top='23%'
-gthb[2].style.transform='scale(0)'
+mthm[2].style.transform='scale(0)'	
 
 srv[0].style.left='65%'
 srv[0].style.top='55%'
@@ -379,43 +274,37 @@ srv[6].style.top='33%'
 srv[6].style.color='#bf0'
 srv[6].style.transform='scale(0)'
 
-cntrl[0].style.left='55%'
-cntrl[0].style.top='61%'
+srv[7].style.left='66%'
+srv[7].style.top='66%'
+srv[7].style.color='#f0b'
+srv[7].style.transform='scale(0)'
+
+cntrl[0].style.left='62%'
+cntrl[0].style.top='66%'
 cntrl[0].style.color='#0ff'
 cntrl[0].style.transform='scale(2)'
 
 cntrl[1].style.left='55%'
 cntrl[1].style.top='68%'
 cntrl[1].style.transform='scale(0)'
-
-cntrl[2].style.left='55%'
-cntrl[2].style.top='73%'
-cntrl[2].style.transform='scale(0)'
-  
-cntrl[3].style.left='50%'
-cntrl[3].style.top='79%'
-cntrl[3].style.color='#f08'
-cntrl[3].style.transform='scale(0)'
-  
-cntrl[4].style.left='77%'
-cntrl[4].style.top='55%'
-cntrl[4].style.color='#f00'
-cntrl[4].style.transform='scale(0)'  
-  
+   
 blck[0].onmousemove=()=>
 {
  blck[3].value=Math.round(Math.random()*99)
 }
 
 iblck=0
+sum=0
 blck[1].onclick=()=>
-{
+{ 
+  sum=sum+Number(blck[3].value)
  nm[iblck].style.left=
   Math.random()*20+'%'
  nm[iblck].style.top=
   Math.random()*20+'%'
- nm[iblck].innerHTML=blck[3].value
-  iblck++ 	  
+  nm[iblck].innerHTML=blck[3].value
+  blck[4].innerHTML=sum
+ iblck++ 	  
 }
 setInterval(()=>{
  for(i=0;i<iblck;i++)
@@ -423,214 +312,66 @@ setInterval(()=>{
   nm[i].style.transform=
    'scale('+(Math.random()/2+1)+')' 
  }  
-},999)
- 
+},  999)
+
 blck[2].onclick=()=>
 {
  for(i=0;i<iblck;i++)
    nm[i].innerHTML=''
- iblck=0
+  iblck=0
+  sum=0
+  blck[4].innerHTML=0
 }
 
+blck[4].onmouseover=()=>
+{
+ blck[4].style.transform='scale(5) skew(-22deg)'
+}
+blck[4].onmouseout=()=>
+{
+ blck[4].style.transform='scale(4)'
+}
+
+ifi=0,lifi=1
+entr=0
+function fi(clr)
+{
+ for(i=1;i<4;i++)
+  indctr[i].style.background=clr
+ indctr[6].style.background=clr
+ indctr[7].style.background=clr
+}
+indctr[0].onmouseover=()=>
+{entr=1
+ indctr[0].style.transform='scale(3.4)'
+ //if(entr==1) 
+  fi('#f00')
+}
+indctr[0].onmouseout=()=>
+{entr=0
+ indctr[0].style.transform='scale(3)'
+  fi('#555')
+} 
+ 
 mthm[0].onmouseover=()=>
 {
+ mthm[0].style.color='#099'
  mthm[0].style.transform=
-  'scale(3) translate(11%,-11%)'
+  'scale(3) translate(11%,-11%) skew(-11)'
  mthm[0].innerHTML=
-  'Sequence <br>&nbsp of all natural numbers'
+  'natural numbers'
  mthm[1].style.transform=
   'scale(2.6) skew(22deg)'
  mthm[2].style.transform=
-  'scale(2.7) translate(11%,44%) skew(11deg)'
+  'scale(2.7) translate(11%,155%) skew(11deg)'
 }
 mthm[0].onmouseout=()=>
 {
  mthm[0].style.transform='scale(5)'
  mthm[0].style.color='#0bb'
-  mthm[0].innerHTML='natural series'
+  mthm[0].innerHTML='natural'
  mthm[1].style.transform='scale(0)'
  mthm[2].style.transform='scale(0)'
-}  
-
-php[0].onmouseover=()=>
-{
- php[0].style.color='#f05'
- php[0].style.transform='scale(4)'
- php[0].innerHTML='$x, $y'
- php[3].style.transform=
-  'scale(3) translate(0,-33%)'
-}
-php[0].onmouseout=()=>
-{
- php[0].style.color='#f0b'
- php[0].style.transform='scale(3)'
-  php[0].innerHTML='var'
- php[3].style.transform='scale(0)'
-}  
-
-php[1].onmouseover=()=>
-{
- php[1].style.color='#f0b'
- php[1].innerHTML='$a=array(n)'
- php[1].style.transform=
-  'scale(4) translate(0,-22%)'
- php[4].style.transform=
-  'scale(4) translate(122%,-222%) skew(-22deg)'
-}
-php[1].onmouseout=()=>
-{
- php[1].style.color='#f0c'
- php[1].style.transform='scale(3)'
-  php[1].innerHTML='Array'
- php[4].style.transform='scale(0)'
-}  
-
-php[2].onmouseover=()=>
-{
- php[2].style.color='#f0b'
- php[2].style.transform='scale(4)'
- php[2].style.zIndex=1
-  php[2].innerHTML=
-   'Properties<br> Methods<br> Events'
- php[5].style.transform=
-  'scale(3) skew(22deg) translate(22%,-198%)'
- php[6].style.transform=
-  'scale(3) skew(-22deg) translate(11%,-188%)'
-}
-php[2].onmouseout=()=>
-{
- php[2].style.color='#f0d'
- php[2].style.transform='scale(3)'
-  php[2].innerHTML='Class'
- php[5].style.transform='scale(0)'
- php[6].style.transform='scale(0)'
-}  
-
-sql[0].onmouseover=()=>
-{
-  sql[0].style.color='#0dd'
-  sql[0].style.transform=
-   'scale(4) translate(22%,-55%)'
-   sql[0].innerHTML+=
-    ' * where col1>9 order_by nm'
-}
-sql[0].onmouseout=()=>
-{
- sql[0].style.color='#0cc'
- sql[0].style.transform='scale(3)'
-  sql[0].innerHTML='select'
-}  
-
-sql[1].onmouseover=()=>
-{
- sql[1].style.color='#0bb'
-  sql[1].innerHTML+=' table "t1"'
- sql[1].style.transform=
-  'scale(4) translate(0,-55%)'
-  
-}
-sql[1].onmouseout=()=>
-{
- sql[1].style.color='#0dd'
- sql[1].style.transform='scale(3)'
-  sql[1].innerHTML='create'
-}  
-
-sql[2].onmouseover=()=>
-{
-  sql[2].style.color='#099'
-  sql[2].style.transform=
-   'scale(4) translate(0,-55%)'
-   sql[2].innerHTML+=' table "t1"'
-}
-sql[2].onmouseout=()=>
-{
- sql[2].style.color='#0bb'
- sql[2].style.transform='scale(3)'
-  sql[2].innerHTML='delete'
-}  
-
-sql[3].onmouseover=()=>
-{
-  sql[3].style.color='#0ff'
-  sql[3].style.transform=
-   'scale(4) translate(29%,-55%)'
-   sql[3].innerHTML+=
-    ' into t1 where nm==""'
-}
-sql[3].onmouseout=()=>
-{
- sql[3].style.color='#0bb'
- sql[3].style.transform='scale(3.2)'
-  sql[3].innerHTML='insert'
-}  
-
-sql[4].onmouseover=()=>
-{
-  sql[4].style.color='#0ff'
-  sql[4].style.transform='scale(4) translate(29%,-55%)'
-   sql[4].innerHTML+=
-    'from t1<br>&nbsp where nm=="any"'
-}
-sql[4].onmouseout=()=>
-{
- sql[4].style.color='#0cc'
- sql[4].style.transform='scale(3.3)'
-  sql[4].innerHTML='remove'
-}  
-
-sql[5].onmouseover=()=>
-{
-  sql[5].style.color='#0ff'
-  sql[5].style.transform='scale(4) '
-   sql[5].innerHTML=' definition'
-}
-sql[5].onmouseout=()=>
-{
- sql[5].style.color='#0bb'
- sql[5].style.transform='scale(3.2)'
-  sql[5].innerHTML='DDL'
-}  
-
-sql[6].onmouseover=()=>
-{
- sql[6].style.color='#0ff'
- sql[6].style.transform='scale(4) '
- sql[6].innerHTML=' manipulating'
-  sql[6].style.zIndex=1
-}
-sql[6].onmouseout=()=>
-{
- sql[6].style.color='#0bb'
- sql[6].style.transform='scale(3.2)'
-  sql[6].innerHTML='DML'
-} 
-
-gthb[0].onmouseover=()=>
-{
- gthb[0].style.color='#b0b'
- gthb[0].style.transform='scale(4) translate(11%,0)'
-  gthb[0].innerHTML+='->repository '
- gthb[1].style.transform=
-  'scale(3) translate(33%,-33%)'
- gthb[1].style.color='#f00 '
- gthb[2].style.transform=
-  'scale(3) translate(44%,11%)' 
- gthb[2].style.color='#90f '
-}
-gthb[0].onclick=()=>
-{
-  gthb[0].innerHTML+='->Pages<br>'
-}  
-gthb[0].onmouseout=()=>
-{
- gthb[0].style.color='#f0f'
- gthb[0].style.transform='scale(3)'
- gthb[0].innerHTML='GitHub'
- gthb[1].style.transform='scale(0)'
- gthb[1].style.color='#000 '
- gthb[2].style.transform='scale(0) '
- gthb[2].style.color='#000 '
 }  
 
 bsrv=0
@@ -642,21 +383,29 @@ srv[0].onmouseover=()=>
  srv[0].innerHTML+='<=>Client'
  srv[1].style.transform='scale(2)'
  srv[2].style.transform='scale(2) ' 
-Isrv= setInterval(()=>{
- if(bsrv){
-  srv[3].style.transform='scale(2)'
-  srv[4].style.transform='scale(3) '
-  srv[5].style.transform=
-   'scale(2) translate(0,-22px) skew(22deg)'
-  srv[6].style.transform=
-   'scale(2) translate(0,-22px) skew(-22deg)'
- }else{
-  srv[3].style.transform='scale(3)'
-  srv[4].style.transform='scale(2) '
-  srv[5].style.transform=
-   'scale(2) translate(0,-22px) skew(-22deg)'
-  srv[6].style.transform=
-   'scale(2) translate(0,-22px) skew(22deg)'
+ Isrv= setInterval(()=>{
+  if(bsrv){
+   srv[3].style.transform=
+    'scale(2) translate(0,-20px)'
+   srv[4].style.transform=
+    'scale(3) translate(0,-20px)'
+   srv[5].style.transform=
+    'scale(2) translate(0,-22px) skew(22deg)'
+   srv[6].style.transform=
+    'scale(2) translate(0,-22px) skew(-22deg)'
+   srv[7].style.transform=
+    'scale(3) translate(0,22px)' 
+  }else{
+   srv[3].style.transform=
+    'scale(3) translate(0,-20px)'
+   srv[4].style.transform=
+    'scale(2) translate(0,-20px)'
+   srv[5].style.transform=
+    'scale(2) translate(0,-22px) skew(-22deg)'
+   srv[6].style.transform=
+    'scale(2) translate(0,-22px) skew(22deg)'
+   srv[7].style.transform=
+    'scale(3.5) translate(0,22px)'  
   } 
 	  bsrv=!bsrv  
  },999)
@@ -670,9 +419,10 @@ srv[0].onmouseout=()=>
  srv[1].style.transform='scale(0)'
  srv[2].style.transform='scale(0)'
  srv[3].style.transform='scale(0)'
- srv[4].style.transform='scale(0) '
+ srv[4].style.transform='scale(0)'
  srv[5].style.transform='scale(0)'
- srv[6].style.transform='scale(0) '
+ srv[6].style.transform='scale(0)'
+ srv[7].style.transform='scale(0)'
   clearInterval(Isrv)
 }  
 
@@ -681,12 +431,9 @@ cntrl[0].onmouseover=()=>
  cntrl[0].style.color='#7f9'
  cntrl[0].style.transform='scale(3)'
  cntrl[0].innerHTML='Flight MC'
- cntrl[1].style.transform='scale(2)'
  cntrl[1].style.color='#f00'
- cntrl[2].style.transform='scale(2)'
- cntrl[2].style.color='#f05'
- cntrl[3].style.transform='scale(2)'
- cntrl[4].style.transform='scale(3)'  
+ cntrl[1].style.transform=
+  'scale(2) translate(0,22px)'
 }  
 cntrl[0].onmouseout=()=>
 {
@@ -696,13 +443,7 @@ cntrl[0].onmouseout=()=>
  cntrl[0].style.zIndex=0
  cntrl[1].style.transform='scale(0)'
  cntrl[1].style.color='#000'
- cntrl[2].style.transform='scale(0)'
- cntrl[2].style.color='#000'
- cntrl[3].style.transform='scale(0)'
- cntrl[4].style.transform='scale(0)'
 }  
-
-
 
 </script>
 
