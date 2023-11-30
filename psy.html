@@ -50,7 +50,6 @@ body
  position:absolute;
  transition:1s;
 }
-
 </style>
 
 <div class=psch>
@@ -69,7 +68,7 @@ body
 <div class=tmprm>phlegmatic </div>
 <div class=tmprm>sanguine </div>
  
-<div class=bhvr>behavioral type</div>
+<div class=bhvr>Behavioral type</div>
 <div class=bhvr>introvert </div>
 <div class=bhvr>extrovert </div>
 <div class=bhvr>ambivert </div>
@@ -100,6 +99,7 @@ psch[0].style.left=16+'%'
 psch[0].style.top=11+'%'
 psch[0].style.width=22+'%'
 psch[0].style.height=11+'%'
+psch[0].style.color='#bf0'
 psch[0].style.background='#777'
 psch[0].style.cursor='pointer'
  
@@ -107,6 +107,7 @@ psch[1].style.left=40+'%'
 psch[1].style.top=11+'%'
 psch[1].style.width=22+'%'
 psch[1].style.height=11+'%'
+psch[1].style.color='#bf0'
 psch[1].style.background='#999'
 psch[1].style.cursor='pointer'
   
@@ -114,6 +115,7 @@ psch[2].style.left=64+'%'
 psch[2].style.top=11+'%'
 psch[2].style.width=22+'%'
 psch[2].style.height=11+'%'
+psch[2].style.color='#bf0'
 psch[2].style.background='#666'
 psch[2].style.cursor='pointer'
   
@@ -175,18 +177,21 @@ dfn[0].style.left=11+'%'
 dfn[0].style.top=80+'%'
 dfn[0].style.width=22+'%'
 dfn[0].style.height=11+'%'
+dfn[0].style.color='#bbb'
 dfn[0].style.background='#808'
     
 dfn[1].style.left=38+'%'
 dfn[1].style.top=80+'%'
 dfn[1].style.width=22+'%'
 dfn[1].style.height=11+'%'
+dfn[1].style.color='#bbb'
 dfn[1].style.background='#770'
   
 dfn[2].style.left=66+'%'
 dfn[2].style.top=80+'%'
 dfn[2].style.width=22+'%'
 dfn[2].style.height=11+'%'
+dfn[2].style.color='#bbb'
 dfn[2].style.background='#088'
   
 dfn[3].style.left=29+'%'
@@ -230,41 +235,44 @@ phlsph[3].style.top=47+'%'
 phlsph[3].style.color='#f00'
 phlsph[3].style.transform='scale(0)'
  
- 
 obj='The totality of mental phenomena '
   
 tsk=
-'-learn to understand the essence of mental '+
-'phenomena;<br>-learn to manage them '
+ '-learn to understand <br>&nbsp the essence of'+
+ '<br>&nbsp mental <br>&nbsp phenomena;<br>'+
+ '-learn to manage <br>&nbsp them'
 
 mthd=
-'-organizational'+'<br>'+ 
-'-empirical'+'<br>'+ 
-'-observation'+'<br>'+ 
-'-experiment'+'<br>'+
-'-statistical'+'<br>'
+ '-organizational'+'<br>'+ 
+ '-empirical'+'<br>'+ 
+ '-observation'+'<br>'+ 
+ '-experiment'+'<br>'+
+ '-statistical'+'<br>'
 
 psch[0].onmouseover=()=>
 {  
  psch[0].style.transform=
   'scale(1.4) translate(-11%,-11%)'
+ psch[0].style.height='12%'
+ psch[0].style.color='#ff0'
  psch[0].style.background='#555'
  psch[0].style.zIndex=1
- psch[0].style.height='14%'
   psch[0].innerHTML=obj	
 }		  
 psch[0].onmouseout=()=>
 {
  psch[0].style.transform='scale(1)'
- psch[0].style.background='#777'
  psch[0].style.height='11%'
+ psch[0].style.color='#bf0'
+ psch[0].style.background='#777'
   psch[0].innerHTML='Object of psychology'
 }
 
 psch[1].onmouseover=()=>
 {   
  psch[1].style.transform='scale(1.4)'
- psch[1].style.height='25%'
+ psch[1].style.height='27%'
+ psch[1].style.color='#ff0'
  psch[1].style.background='#555'
  psch[1].style.textAlign='left'
  psch[1].style.zIndex=1
@@ -273,29 +281,32 @@ psch[1].onmouseover=()=>
 psch[1].onmouseout=()=>
 {
  psch[1].style.transform='scale(1)'
+ psch[1].style.height='11%'
+ psch[1].style.color='#bf0'
  psch[1].style.background='#999'
  psch[1].style.textAlign='center'
  psch[1].style.zIndex=0
- psch[1].style.height='11%'
   psch[1].innerHTML='Tasks of psychology'
 }
 
 psch[2].onmouseover=()=>
 {  
  psch[2].style.transform='scale(1.4)'
+ psch[2].style.height='22%'
+ psch[2].style.color='#ff0'
  psch[2].style.background='#555'
  psch[2].style.textAlign='left'
  psch[2].style.zIndex=1
- psch[2].style.height='22%'
   psch[2].innerHTML=mthd		
 }		  
 psch[2].onmouseout=()=>
 {
  psch[2].style.transform='scale(1)'
+ psch[2].style.height='11%'
+ psch[2].style.color='#bf0'
  psch[2].style.background='#666'
  psch[2].style.textAlign='center'
  psch[2].style.zIndex=0
- psch[2].style.height='11%'
   psch[2].innerHTML='Methods of psychology'
 }
 
@@ -351,7 +362,7 @@ bhvr[0].onmouseout=()=>
  bhvr[0].style.transform='scale(1)'
  bhvr[0].style.background='#005'
  bhvr[0].style.border='none'
-  bhvr[0].innerHTML='behavioral type'
+  bhvr[0].innerHTML='Behavioral type'
  bhvr[1].style.transform='scale(0)'
  bhvr[2].style.transform='scale(0)'
  bhvr[3].style.transform='scale(0)'  
@@ -360,7 +371,7 @@ bhvr[0].onmouseout=()=>
 dfn[0].onmouseover=()=>
 {        
  dfn[0].style.transform='scale(1.4)'
- //dfn[0].style.fontSize='1em'
+ dfn[0].style.color='#ddd'
  dfn[0].style.background='#00f'
  dfn[3].style.color='#00f'
  dfn[3].style.transform=
@@ -372,6 +383,7 @@ dfn[0].onmouseout=()=>
 {  
  dfn[0].style.transform='scale(1)'
  dfn[0].style.fontSize='3em'
+ dfn[0].style.color='#bbb'
  dfn[0].style.background='#808'
  dfn[0].style.height='11%'
  dfn[3].style.transform='scale(0)'
@@ -380,6 +392,7 @@ dfn[0].onmouseout=()=>
 dfn[1].onmouseover=()=>
 {        
  dfn[1].style.transform='scale(1.4)'
+ dfn[1].style.color='#ddd'
  dfn[1].style.background='#00f'
  dfn[3].style.color='#050'
  dfn[3].style.transform=
@@ -390,6 +403,7 @@ dfn[1].onmouseover=()=>
 dfn[1].onmouseout=()=>
 {  
  dfn[1].style.transform='scale(1)'
+ dfn[1].style.color='#bbb'
  dfn[1].style.background='#770'
  dfn[3].style.transform='scale(0)'
 }	
@@ -397,6 +411,7 @@ dfn[1].onmouseout=()=>
 dfn[2].onmouseover=()=>
 {        
  dfn[2].style.transform='scale(1.4)'
+ dfn[2].style.color='#ddd'
  dfn[2].style.background='#00f'
  dfn[3].style.transform=
   'scale(1) translate(44%,-33%)'
@@ -407,6 +422,7 @@ dfn[2].onmouseover=()=>
 dfn[2].onmouseout=()=>
 {  
  dfn[2].style.transform='scale(1)'
+ dfn[2].style.color='#bbb'
  dfn[2].style.background='#088'
  dfn[3].style.transform='scale(0)'
 }	
