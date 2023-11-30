@@ -332,25 +332,103 @@ blck[4].onmouseout=()=>
  blck[4].style.transform='scale(4)'
 }
 
-ifi=0,lifi=1
-entr=0
-function fi(clr)
+function fi0(clr)
+{
+ indctr[1].style.background=clr
+ for(i=3;i<8;i++)
+  indctr[i].style.background=clr
+}
+function fi1(clr)
+{
+ indctr[6].style.background=clr
+ indctr[7].style.background=clr
+}
+function fi2(clr)
+{indctr[1].style.background=clr
+ indctr[2].style.background=clr
+ indctr[3].style.background=clr
+ indctr[5].style.background=clr
+ indctr[6].style.background=clr
+}
+function fi3(clr)
 {
  for(i=1;i<4;i++)
   indctr[i].style.background=clr
  indctr[6].style.background=clr
  indctr[7].style.background=clr
 }
+function fi4(clr)
+{
+ indctr[2].style.background=clr
+ indctr[4].style.background=clr
+ indctr[6].style.background=clr
+ indctr[7].style.background=clr
+}
+function fi5(clr)
+{
+ indctr[1].style.background=clr
+ indctr[2].style.background=clr
+ indctr[3].style.background=clr
+ indctr[4].style.background=clr
+ indctr[7].style.background=clr
+}
+function fi6(clr)
+{
+ indctr[1].style.background=clr
+ indctr[2].style.background=clr
+ indctr[3].style.background=clr
+ indctr[4].style.background=clr
+ indctr[5].style.background=clr
+ indctr[7].style.background=clr
+}
+function fi7(clr)
+{
+ indctr[1].style.background=clr
+ indctr[6].style.background=clr
+ indctr[7].style.background=clr
+}
+function fi8(clr)
+{
+ for(i=1;i<8;i++)
+  indctr[i].style.background=clr
+}
+function fi9(clr)
+{
+ for(i=1;i<4;i++)
+  indctr[i].style.background=clr
+ indctr[4].style.background=clr
+ indctr[6].style.background=clr
+ indctr[7].style.background=clr
+}
+function ficlr(clr)
+{
+ for(i=1;i<8;i++)
+  indctr[i].style.background=clr
+}
+bind=0
 indctr[0].onmouseover=()=>
-{entr=1
- indctr[0].style.transform='scale(3.4)'
- //if(entr==1) 
-  fi('#f00')
+{
+ indctr[0].style.transform='scale(3.4)' 
+ bind=Math.round(Math.random()*9) 
+ switch(bind)
+ {
+  case 0: fi0('#f00'); break;
+  case 1: fi1('#f00'); break;
+  case 2: fi2('#f00'); break;
+  case 3: fi3('#f00'); break;
+  case 4: fi4('#f00'); break;
+  case 5: fi5('#f00'); break;
+  case 6: fi6('#f00'); break;
+  case 7: fi7('#f00'); break;
+  case 8: fi8('#f00'); break;
+  case 9: fi9('#f00'); break;
+ }
+  
 }
 indctr[0].onmouseout=()=>
-{entr=0
+{
  indctr[0].style.transform='scale(3)'
-  fi('#555')
+  ficlr('#555')
 } 
  
 mthm[0].onmouseover=()=>
