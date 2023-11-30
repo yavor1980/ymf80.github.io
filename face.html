@@ -1,28 +1,26 @@
 <DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8'>
-
+ <meta charset='utf-8'>
 </head>
 
 <body id=idbd>
-
 <style>
 #idbd
 {
-background: radial-gradient(#333,#666);
+ background:radial-gradient(222px,#ff0,#666);
 }
 
 #idb
 {
-position:absolute; 
-left:8%;
-top:6%;
-text-align:center;
-cursor:pointer;
-font-size:2em;
-background:#900;
-transition:1s;
+ position:absolute; 
+ left:8%;
+ top:6%;
+ background:#900;
+ text-align:center;
+ cursor:pointer;
+ font-size:2em;
+ transition:1s;
 }
 #idb:hover
 {
@@ -31,64 +29,64 @@ transition:1s;
 
 .fc
 {
-position:absolute;   
-transition:2s;
-cursor:pointer;
+ position:absolute;   
+ transition:2s;
+ cursor:pointer;
 }
 .gl
 {
-position:absolute;   
-border-radius:50%;
-transition:2s;
+ position:absolute;   
+ border-radius:50%;
+ transition:2s;
 }
 .ns
 {
-position:absolute;    
-border-radius:50%;
-transition:2s;
+ position:absolute;    
+ border-radius:50%;
+ transition:2s;
 }
 .mth
 {
-position:absolute;  
-border-radius:50%;
-transition:2s; 
+ position:absolute;  
+ border-radius:50%;
+ transition:2s; 
 }
 .ears
 {
-position:absolute;
-background:red;
-border-radius:50%;
+ position:absolute;
+ background:red;
+ border-radius:50%;
 }
 
 .smk
 {
-position:absolute;
-transition:2s; 
-background: #000;
+ position:absolute;
+ transition:2s; 
+ background: #000;
 }
 
 .fre
 {
-position:absolute;
-transition:2s; 
+ position:absolute;
+ transition:2s; 
 }
 
 .trnstn
 {
-position:absolute;
-transition:2s; 
+ position:absolute;
+ transition:2s; 
 }
 
 .me
 {
-position:absolute;
-transition:2s; 
+ position:absolute;
+ transition:2s; 
 }
 
 .lm
 {
-position:absolute;
-transition:1s; 
+ position:absolute;
+ transition:1s; 
 }
 
 </style>
@@ -96,30 +94,29 @@ transition:1s;
 <button id=idb> FIRE</button>
 
 <div class=fc>
-<div class=fc></div>
-<div class=fc></div>
+ <div class=fc></div>
+ <div class=fc></div>
  <div class=gl>
   <div class=gl></div>
  </div>
- <div class=gl  >
-  <div class=gl  ></div>
+ <div class=gl>
+  <div class=gl></div>
  </div>
- <div class=ns ><div class=ns ></div></div>
- <div class=mth >
-  <div class=mth >
-   <div class=mth ><div class=mth ></div>
-  </div>
- </div> 
+ <div class=ns><div class=ns></div></div>
+ <div class=mth>
+  <div class=mth>
+   <div class=mth>
+    <div class=mth></div>
+   </div>
+  </div> 
  </div>
- 
-<div class=ears >
-</div> 
-<div class=ears ></div>
+ <div class=ears></div> 
+ <div class=ears></div>
 </div>
 
-<div class=smk >
- <div class=smk ></div>
- <div class=smk ></div>
+<div class=smk>
+ <div class=smk></div>
+ <div class=smk></div>
 </div>
 
 <div class=fre >FIRE TO EVERYONE</div>
@@ -144,240 +141,234 @@ transition:1s;
 <div class=lm >8</div>
 
 <script>
- fc=document.getElementsByClassName('fc')
- gl=document.getElementsByClassName('gl')
- ns=document.getElementsByClassName('ns')
- mth=document.getElementsByClassName('mth')
- ears=document.getElementsByClassName('ears')
+fc=document.getElementsByClassName('fc')
+gl=document.getElementsByClassName('gl')
+ns=document.getElementsByClassName('ns')
+mth=document.getElementsByClassName('mth')
+ears=document.getElementsByClassName('ears')
    
- smk=document.getElementsByClassName('smk')
+smk=document.getElementsByClassName('smk')
    
- fre=document.getElementsByClassName('fre')
- trnstn=document.getElementsByClassName('trnstn')
- me=document.getElementsByClassName('me')
- lm=document.getElementsByClassName('lm')
+fre=document.getElementsByClassName('fre')
+trnstn=document.getElementsByClassName('trnstn')
+me=document.getElementsByClassName('me')
+lm=document.getElementsByClassName('lm')
    
+fc[0].style.background=
+ 'radial-gradient(#aaa,#333)'
+fc[0].style.left=19+'%'
+fc[0].style.top=22+'%'  
+fc[0].style.width=+22+'%'
+fc[0].style.height=44+'%'
+fc[0].style.borderTopLeftRadius='33%'
+fc[0].style.borderTopRightRadius='33%'
+fc[0].style.borderBottomLeftRadius='55%'
+fc[0].style.borderBottomRightRadius='55%'
+	 
+fc[1].style.background='#000'
+fc[1].style.left=15+'%'
+fc[1].style.top=-11+'%'  
+fc[1].style.width=88+'%'
+fc[1].style.height=22+'%'
+fc[1].style.borderRadius='55%'
+ 
+fc[2].style.background='#000'
+fc[2].style.left=1+'%'
+fc[2].style.top=-9+'%'  
+fc[2].style.width=22+'%'
+fc[2].style.height=22+'%'
+fc[2].style.borderRadius='55%'
+	 
+gl[0].style.background='#fff'
+gl[0].style.left=11+'%'
+gl[0].style.top=17+'%'  
+gl[0].style.width=22+'%'
+gl[0].style.height=22+'%'
+	 
+gl[1].style.background='#000'
+gl[1].style.left=33+'%'
+gl[1].style.top=33+'%'  
+gl[1].style.width=33+'%'
+gl[1].style.height=33+'%'
+	
+gl[2].style.background='#fff'
+gl[2].style.left=66+'%'
+gl[2].style.top=17+'%'  
+gl[2].style.width=22+'%'
+gl[2].style.height=22+'%'
+	 
+gl[3].style.background='#000';
+gl[3].style.left=33+'%'
+gl[3].style.top=33+'%'  
+gl[3].style.width=33+'%'
+gl[3].style.height=33+'%'
+gl[3].style.transition='2s'
+	
+ns[0].style.left=38+'%'	
+ns[0].style.top=22+'%'	
+ns[0].style.height=44+'%'	
+ns[0].style.width=22+'%'	
+ns[0].style.background=
+ 'radial-gradient(#777,#333)'
+     
+ns[1].style.left=-2+'%'	
+ns[1].style.top=79+'%'	
+ns[1].style.height=22+'%'	
+ns[1].style.width=111+'%'	
+ns[1].style.background=
+ 'radial-gradient(#777,#333)'
+	 
+mth[0].style.left=22+'%'	
+mth[0].style.top=77+'%'	
+mth[0].style.height=11+'%'	
+mth[0].style.width=55+'%'	
+mth[0].style.background='#f00'
+     
+mth[1].style.left=11+'%'	
+mth[1].style.top=44+'%'	
+mth[1].style.height=11+'%'	
+mth[1].style.width=77+'%'	
+mth[1].style.background='#000'
+	 
+mth[2].style.left=55+'%'	
+mth[2].style.top=-333+'%'	
+mth[2].style.height=444+'%'	
+mth[2].style.width=111+'%'	
+mth[2].style.background=
+ 'radial-gradient(#070,#333)'
+mth[2].style.transform='rotate(-9deg)'
+mth[2].style.borderTopRightRadius='5%'
+mth[2].style.borderBottomRightRadius='5%'
+	 
+mth[3].style.left=99+'%'	
+mth[3].style.top=0+'%'	
+mth[3].style.height=111+'%'	
+mth[3].style.width=11+'%'	
+mth[3].style.background=
+ 'radial-gradient(#070,#333)'
+	 
+ears[0].style.background=
+ 'radial-gradient(#777,#333)'
+ears[0].style.left=-9+'%'
+ears[0].style.top=29+'%'  
+ears[0].style.width=11+'%'
+ears[0].style.height=22+'%'  
+ears[0].style.transition='4s'
+ears[0].style.zIndex=-1	 
+	 
+ears[1].style.background=
+ 'radial-gradient(#777,#333)'
+ears[1].style.left=97+'%'
+ears[1].style.top=29+'%'  
+ears[1].style.width=11+'%'
+ears[1].style.height=22+'%'  
+ears[1].style.transition='2s' 
+ears[1].style.zIndex=-1
+	 
+smk[0].style.background=
+ 'radial-gradient(#f00,#333)'
+smk[0].style.left=39+'%'
+smk[0].style.top=75+'%'  
+smk[0].style.width=11+'%'
+smk[0].style.height=22+'%' 
+smk[0].style.borderTopLeftRadius=44+'%'
+smk[0].style.borderTopRightRadius=55+'%'
+smk[0].style.borderBottomLeftRadius=22+'%'
+smk[0].style.borderBottomRightRadius=22+'%'
+smk[0].style.transform='scale(0)'
+	
+smk[1].style.background=
+ 'radial-gradient(#ff0,#333)'
+smk[1].style.left=19+'%'
+smk[1].style.top=-13+'%'  
+smk[1].style.width=33+'%'
+smk[1].style.height=44+'%'  
+smk[1].style.zIndex=-2
+	 
+smk[2].style.background='#f00'
+smk[2].style.left=-9+'%'
+smk[2].style.top=-133+'%'  
+smk[2].style.width=111+'%'
+smk[2].style.height=111+'%'
+smk[2].style.borderTopLeftRadius=44+'%'
+smk[2].style.borderTopRightRadius=66+'%'
+smk[2].style.borderBottomLeftRadius=55+'%'
+smk[2].style.borderBottomRightRadius=33+'%'
+smk[2].style.opacity=0
 
- fc[0].style.background=
-  'radial-gradient(#aaa,#333)'
- fc[0].style.left=19+'%'
- fc[0].style.top=22+'%'  
- fc[0].style.width=+22+'%'
- fc[0].style.height=44+'%'
- fc[0].style.borderTopLeftRadius='33%'
- fc[0].style.borderTopRightRadius='33%'
- fc[0].style.borderBottomLeftRadius='55%'
- fc[0].style.borderBottomRightRadius='55%'
-	 
- fc[1].style.background='#000'
- fc[1].style.left=15+'%'
- fc[1].style.top=-11+'%'  
- fc[1].style.width=88+'%'
- fc[1].style.height=22+'%'
- fc[1].style.borderRadius='55%'
- 
- fc[2].style.background='#000'
- fc[2].style.left=1+'%'
- fc[2].style.top=-9+'%'  
- fc[2].style.width=22+'%'
- fc[2].style.height=22+'%'
- fc[2].style.transition='2s'
- fc[2].style.borderRadius='55%'
-	 
- gl[0].style.background='#fff'
- gl[0].style.left=11+'%'
- gl[0].style.top=17+'%'  
- gl[0].style.width=22+'%'
- gl[0].style.height=22+'%'
- gl[0].style.transition='2s'
-	 
- gl[1].style.background='#000';
- gl[1].style.left=33+'%'
- gl[1].style.top=33+'%'  
- gl[1].style.width=33+'%'
- gl[1].style.height=33+'%'
- gl[1].style.transition='2s'
+fre[0].style.transform='scale(0)'
+fre[0].style.color='#f00'
+fre[0].style.left='22%'
+fre[0].style.top='9%'
+fre[0].style.cursor='pointer'
 	
- gl[2].style.background='#fff'
- gl[2].style.left=66+'%'
- gl[2].style.top=17+'%'  
- gl[2].style.width=22+'%'
- gl[2].style.height=22+'%'
- gl[2].style.transition='2s'
-	 
- gl[3].style.background='#000';
- gl[3].style.left=33+'%'
- gl[3].style.top=33+'%'  
- gl[3].style.width=33+'%'
- gl[3].style.height=33+'%'
- gl[3].style.transition='2s'
-	
- ns[0].style.left=38+'%'	
- ns[0].style.top=22+'%'	
- ns[0].style.height=44+'%'	
- ns[0].style.width=22+'%'	
- ns[0].style.background=
-  'radial-gradient(#777,#333)'
+fre[1].style.transform=
+ 'scale(3) skew(-11deg)'
+fre[1].style.color='#f00'
+fre[1].style.left='66%'
+fre[1].style.top='11%' 
+fre[1].style.cursor='pointer'
      
- ns[1].style.left=-2+'%'	
- ns[1].style.top=79+'%'	
- ns[1].style.height=22+'%'	
- ns[1].style.width=111+'%'	
- ns[1].style.background=
-  'radial-gradient(#777,#333)'
+fre[2].style.left='66%'
+fre[2].style.top='22%' 
+fre[2].style.color='#f88'
+fre[2].style.transform='scale(0) '
 	 
- mth[0].style.left=22+'%'	
- mth[0].style.top=77+'%'	
- mth[0].style.height=11+'%'	
- mth[0].style.width=55+'%'	
- mth[0].style.background='#f00'
-     
- mth[1].style.left=11+'%'	
- mth[1].style.top=44+'%'	
- mth[1].style.height=11+'%'	
- mth[1].style.width=77+'%'	
- mth[1].style.background='#000'
+trnstn[0].style.transform=
+ 'scale(3.4) skew(22deg)'
+trnstn[0].style.color='#f00'
+trnstn[0].style.left='44%'
+trnstn[0].style.top='8%'
+trnstn[0].style.cursor='pointer'
 	 
- mth[2].style.left=55+'%'	
- mth[2].style.top=-333+'%'	
- mth[2].style.height=444+'%'	
- mth[2].style.width=111+'%'	
- mth[2].style.background=
-  'radial-gradient(#070,#333)'
- mth[2].style.transform='rotate(-9deg)'
- mth[2].style.borderTopRightRadius='5%'
- mth[2].style.borderBottomRightRadius='5%'
+trnstn[1].style.transform='scale(0)'
+trnstn[1].style.color='#f00'
+trnstn[1].style.left='55%'
+trnstn[1].style.top='22%'
 	 
- mth[3].style.left=99+'%'	
- mth[3].style.top=0+'%'	
- mth[3].style.height=111+'%'	
- mth[3].style.width=11+'%'	
- mth[3].style.background=
-  'radial-gradient(#070,#333)'
+trnstn[2].style.transform='scale(0)'
+trnstn[2].style.opacity=0
+trnstn[2].style.color='#f00'
+trnstn[2].style.left='55%'
+trnstn[2].style.top='33%'
 	 
- ears[0].style.background=
-  'radial-gradient(#777,#333)'
- ears[0].style.left=-9+'%'
- ears[0].style.top=29+'%'  
- ears[0].style.width=11+'%'
- ears[0].style.height=22+'%'  
- ears[0].style.transition='4s'
- ears[0].style.zIndex=-1	 
-	 
- ears[1].style.background=
-  'radial-gradient(#777,#333)'
- ears[1].style.left=97+'%'
- ears[1].style.top=29+'%'  
- ears[1].style.width=11+'%'
- ears[1].style.height=22+'%'  
- ears[1].style.transition='2s' 
- ears[1].style.zIndex=-1
-	 
- smk[0].style.background=
-  'radial-gradient(#f00,#333)'
- smk[0].style.left=39+'%'
- smk[0].style.top=75+'%'  
- smk[0].style.width=11+'%'
- smk[0].style.height=22+'%' 
- smk[0].style.borderTopLeftRadius=44+'%'
- smk[0].style.borderTopRightRadius=55+'%'
- smk[0].style.borderBottomLeftRadius=22+'%'
- smk[0].style.borderBottomRightRadius=22+'%'
- smk[0].style.transform='scale(0)'
+trnstn[3].style.transform='scale(0)'
+trnstn[3].style.opacity=0
+trnstn[3].style.color='#f0f'
+trnstn[3].style.left='55%'
+trnstn[3].style.top='27%'
 	
- smk[1].style.background=
-  'radial-gradient(#ff0,#333)'
- smk[1].style.left=19+'%'
- smk[1].style.top=-13+'%'  
- smk[1].style.width=33+'%'
- smk[1].style.height=44+'%'  
- smk[1].style.zIndex=-2
-	 
- smk[2].style.background='#f00'
- smk[2].style.left=-9+'%'
- smk[2].style.top=-133+'%'  
- smk[2].style.width=111+'%'
- smk[2].style.height=111+'%'
- smk[2].style.borderTopLeftRadius=44+'%'
- smk[2].style.borderTopRightRadius=66+'%'
- smk[2].style.borderBottomLeftRadius=55+'%'
- smk[2].style.borderBottomRightRadius=33+'%'
- smk[2].style.opacity=0
-
- fre[0].style.transform='scale(0)'
- fre[0].style.color='#f00'
- fre[0].style.left='22%'
- fre[0].style.top='9%'
- fre[0].style.cursor='pointer'
-	
- fre[1].style.transform=
-  'scale(3) skew(-11deg)'
- fre[1].style.color='#f00'
- fre[1].style.left='66%'
- fre[1].style.top='11%' 
- fre[1].style.cursor='pointer'
-     
- fre[2].style.left='66%'
- fre[2].style.top='22%' 
- fre[2].style.color='#f88'
- fre[2].style.transform='scale(0) '
-	 
- trnstn[0].style.transform=
-  'scale(3.4) skew(22deg)'
- trnstn[0].style.color='#f00'
- trnstn[0].style.left='44%'
- trnstn[0].style.top='8%'
- trnstn[0].style.cursor='pointer'
-	 
- trnstn[1].style.transform='scale(0)'
- trnstn[1].style.color='#f00'
- trnstn[1].style.left='55%'
- trnstn[1].style.top='22%'
-	 
- trnstn[2].style.transform='scale(0)'
- trnstn[2].style.opacity=0
- trnstn[2].style.color='#f00'
- trnstn[2].style.left='55%'
- trnstn[2].style.top='33%'
-	 
- trnstn[3].style.transform='scale(0)'
- trnstn[3].style.opacity=0
- trnstn[3].style.color='#f0f'
- trnstn[3].style.left='55%'
- trnstn[3].style.top='27%'
-	
- me[0].style.left='55%'
- me[0].style.top='33%'
- me[0].style.transform='scale(0)'
- me[0].style.color='#f0f'
+me[0].style.left='55%'
+me[0].style.top='33%'
+me[0].style.transform='scale(0)'
+me[0].style.color='#f0f'
  
- me[1].style.left='55%'
- me[1].style.top='33%'
- me[1].style.transform='scale(0)'
- me[1].style.color='#ff0'
+me[1].style.left='55%'
+me[1].style.top='33%'
+me[1].style.transform='scale(0)'
+me[1].style.color='#ff0'
  
- lm[0].style.left='16%'
- lm[0].style.top='77%'
- lm[0].style.color='#f0f'
- lm[0].style.cursor='pointer'
- lm[0].style.transform='scale(4)'
+lm[0].style.left='16%'
+lm[0].style.top='77%'
+lm[0].style.color='#f0f'
+lm[0].style.cursor='pointer'
+lm[0].style.transform='scale(4)'
  
- lm[1].style.left='14%'
- lm[1].style.top='86%'
- lm[1].style.color='#ff0'
- lm[1].style.transform='scale(0)'
+lm[1].style.left='14%'
+lm[1].style.top='86%'
+lm[1].style.color='#ff0'
+lm[1].style.transform='scale(0)'
  
- lm[2].style.left='14%'
- lm[2].style.top='86%'
- lm[2].style.color='#090'
- lm[2].style.transform='scale(0)'
+lm[2].style.left='14%'
+lm[2].style.top='86%'
+lm[2].style.color='#090'
+lm[2].style.transform='scale(0)'
  
- lm[3].style.left='33%'
- lm[3].style.top='86%'
- lm[3].style.color='#b00'
- lm[3].style.transform=
-  'scale(0) rotate(90deg)'
- 
+lm[3].style.left='33%'
+lm[3].style.top='86%'
+lm[3].style.color='#b00'
+lm[3].style.transform=
+ 'scale(0) rotate(90deg)'
  
 bs=0 
 function cl()
@@ -393,6 +384,7 @@ function cl()
  }
    bs=!bs
 }
+  setInterval(()=>cl(), 2222)
  
 function clk()
 { 
@@ -402,6 +394,8 @@ function clk()
  fre[0].style.color='#0f0'
  smk[0].style.transform='scale(1)'
  setTimeout(()=>{
+  idbd.style.background=
+   'radial-gradient(444px,#ff0,#777)' 
   smk[2].style.opacity=0.4
   mth[3].style.background='#f00'
  }, 1111)
@@ -409,26 +403,25 @@ function clk()
   smk[2].style.opacity=0;
  }, 2222)
  setTimeout(()=>{
-  idbd.style.background=
-   'radial-gradient(#444,#777)' 
   smk[0].style.transform='scale(0)'
  }, 3333)
  setTimeout(()=>{
+  idbd.style.background=
+   'radial-gradient(222px,#ff0,#666)'
   idb.style.transform='scale(1)'
   mth[3].style.background='#000'
-  fre[0].style.transform='scale(0)'
-  idbd.style.background=
-   'radial-gradient(#333,#666)'
- }, 5555) 	 
+  fre[0].style.transform='scale(0)' 
+ }, 5555)  
 } 
- setInterval(()=>cl(), 2222)
-
+ 
 idb.onclick=()=>{   
  clk(); 
 }
 
 fc[0].onmouseover=()=>{   
  fc[0].style.transform='scale(1.2)'
+ fc[0].style.background=
+  'radial-gradient(#888,#333)'
  fc[1].style.background='#005'
  fc[2].style.background='#040'
  me[0].style.transform='scale(3) translate(44%,288%)'
@@ -437,10 +430,16 @@ fc[0].onmouseover=()=>{
  me[1].style.color='#0d0'
  gl[1].style.background='#f00'
  gl[3].style.background='#f00'
+ ears[0].style.background=
+  'radial-gradient(#777,#900)'
+ ears[1].style.background=
+  'radial-gradient(#777,#900)'
   lm[0].onmouseover()
 }
 fc[0].onmouseout=()=>{   
  fc[0].style.transform='scale(1)'
+ fc[0].style.background=
+  'radial-gradient(#aaa,#333)'
  fc[1].style.background='#000'
  fc[2].style.background='#000'
  me[0].style.transform='scale(0) '
@@ -449,6 +448,10 @@ fc[0].onmouseout=()=>{
  me[1].style.color='#000'   
  gl[1].style.background='#000'
  gl[3].style.background='#000'
+ ears[0].style.background=
+  'radial-gradient(#777,#333)'
+ ears[1].style.background=
+  'radial-gradient(#777,#333)'
    lm[0].onmouseout()
 }
 
@@ -476,7 +479,6 @@ trnstn[0].onmouseover=()=>{
   'scale(4) skew(-22deg)'
  trnstn[0].style.color='#990'
   trnstn[0].innerHTML='1000ms'
-   
  Itrn=setTimeout(()=> 
  {
   trnstn[1].style.transform='scale(3) '
@@ -512,7 +514,6 @@ lm[0].onmouseover=()=>{
  lm[1].style.transform='scale(5)'
  lm[2].style.transform=
   'scale(9) translate(222%,0)'
-  
  Ilm=setInterval(()=>{
   lm[2].innerHTML=xlm
    xlm++
@@ -531,7 +532,6 @@ lm[0].onmouseout=()=>{
   xlm=0
   lm[2].innerHTML=xlm
 }
-
 
 </script>
 </body>
