@@ -346,19 +346,22 @@ eagle[0].onmousemove=()=>
  eagl.clk()
 } 
  
- fv=0
+fv=0
 flt[0].onmouseover=()=>
 {
   fv=Math.round(Math.random()*55)
- flt[0].style.transform='scale(1.1)'
+ flt[0].style.transform=
+  'scale(1.1) skew(-11deg)'
  flt[0].style.color='#888'
   flt[0].innerHTML=
    "eagle.style.transform='skew("+9+"deg)'"
- flt[1].style.transform='scale(3) translate(11%,99%)'
+ flt[1].style.transform=
+  'scale(3) translate(11%,99%)'
  flt[1].style.color='#f00'
   flt[1].innerHTML=
    'transition="1s"<br>translate('+fv+'%,'+fv+'%)'
- flt[2].style.transform='scale(3) translate(1%,33%)'
+ flt[2].style.transform=
+  'scale(3) translate(1%,33%) skew(11deg)'
  flt[2].style.color='#00f' 
 }		  
 flt[0].onmouseout=()=>
