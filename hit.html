@@ -133,7 +133,6 @@ trtn=document.getElementsByClassName('trtn')
 instr=document.getElementsByClassName('instr')
 smth=document.getElementsByClassName('smth')
     
- 
 btn[0].style.borderRadius='33%'
 	
 s[0].style.left='11%'
@@ -178,7 +177,7 @@ s[4].style.background='#000'
  
 nrv[0].style.left='22%'
 nrv[0].style.top='11%'
-nrv[0].style.color='#000'
+nrv[0].style.color='#700'
 nrv[0].style.cursor='pointer'
  
 nrv[1].style.left='33%'
@@ -191,7 +190,7 @@ nrv[2].style.transform='scale(0)'
  
 trtn[0].style.left='22%'
 trtn[0].style.top='66%'
-trtn[0].style.color='#000'
+trtn[0].style.color='#900'
  
 trtn[1].style.left='44%'
 trtn[1].style.top='66%'
@@ -354,7 +353,8 @@ inrv=0
 bnrv=0
 nrv[0].onmouseover=()=>
 {
- nrv[0].style.transform='scale(3) translate(11%,0)'
+ nrv[0].style.transform=
+  'scale(3) translate(11%,0) skew(11deg)'
  nrv[0].style.color='#f00'
  nrv[0].innerHTML='Neuropsychiatric weakness<br>'
  nrv[2].style.transform=
@@ -378,7 +378,7 @@ nrv[0].onmouseover=()=>
 nrv[0].onmouseout=()=>
 {
  nrv[0].style.transform='scale(2) translate(-11%,0)'
- nrv[0].style.color='#000'
+ nrv[0].style.color='#700'
  nrv[0].innerHTML='Asthenia'
  nrv[1].style.transform='scale(0) '
  nrv[1].style.color='#fff'
@@ -392,10 +392,10 @@ btrt=0
 Itrt=0
 trtn[0].onmouseover=()=>
 {
- trtn[0].style.color='red '
+ trtn[0].style.color='#f00'
  trtn[0].style.transform='scale(3) '
  trtn[1].style.transform='scale(2) '
- trtn[1].style.color='#808 '
+ trtn[1].style.color='#808'
  trtn[2].style.transform='scale(2) '
  trtn[2].style.color='#bb0 '
  Itrt=setInterval(()=>{
@@ -411,7 +411,7 @@ trtn[0].onmouseover=()=>
 }
 trtn[0].onmouseout=()=>
 {
- trtn[0].style.color='black '
+ trtn[0].style.color='#900'
  trtn[0].style.transform='scale(2) '
  trtn[1].style.transform='scale(0) '
  trtn[2].style.transform='scale(0) '
