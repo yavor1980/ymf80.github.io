@@ -15,10 +15,22 @@ body
  transition:1s;
 }
 
-.zr
+.lzr
 {
  position:absolute;
- transition:2s;
+ transition:1s;
+ left:39%;
+ top:39%;
+ width:22%;
+ height:22%;
+ background:#000;
+ border-radius:55%;
+}
+
+.rzr
+{
+ position:absolute;
+ transition:1s;
  left:39%;
  top:39%;
  width:22%;
@@ -76,17 +88,27 @@ body
 </style>
 
 <div class=d>
- <div class=d><div class=zr></div></div>
- <div class=d><div class=zr></div></div>
-  <div class=d></div>   
+ <div class=d>
+  <div class=lzr></div>
+  <div class=lzr></div>
+ </div>
+ <div class=d>
+  <div class=rzr></div>
+  <div class=rzr></div>
+ </div>
+ <div class=d></div>  
+ <div class=d>
+  <div class=d></div>
+  <div class=d></div>
+ </div>  
 </div> 
 
-<div class=nm></div> 
- <div class=nm></div> 
- <div class=nm></div> 
- <div class=nm></div> 
- <div class=nm></div> 
- <div class=nm></div> 
+<div class=nm>Market</div> 
+ <div class=nm>raw materials</div> 
+ <div class=nm>labor</div> 
+ <div class=nm>goods</div> 
+ <div class=nm>currency</div> 
+ <div class=nm>shares</div> 
 
 <div class=gd>Product </div> 
 <div class=gd>Price </div> 
@@ -118,73 +140,106 @@ body
   
 <script>
 d=document.getElementsByClassName('d')
-zr=document.getElementsByClassName('zr')
+lzr=document.getElementsByClassName('lzr')
+rzr=document.getElementsByClassName('rzr')
 nm=document.getElementsByClassName('nm')
 gd=document.getElementsByClassName('gd')
 fnd=document.getElementsByClassName('fnd')
 intrs=document.getElementsByClassName('intrs')
 dvc=document.getElementsByClassName('dvc')
   
-d[0].style.width='44%';
-d[0].style.height='55%';
-d[0].style.left='11%';
-d[0].style.top='22%';
-d[0].style.background='radial-gradient(#080,#000 )'
-d[0].style.cursor='pointer';
+d[0].style.left='11%'
+d[0].style.top='22%'
+d[0].style.width='44%'
+d[0].style.height='55%'
+d[0].style.background=
+ 'radial-gradient(#fff,#f7f)'
+d[0].style.cursor='pointer'
 
-d[1].style.width='22%';
-d[1].style.height='33%';
-d[1].style.left='22%';
-d[1].style.top='2%';
+d[1].style.left='14%'
+d[1].style.top='2%'
+d[1].style.width='22%'
+d[1].style.height='33%'
 d[1].style.background='#fff'
 
-d[2].style.width='22%';
-d[2].style.height='33%';
-d[2].style.left='66%';
-d[2].style.top='2%';
+d[2].style.left='66%'
+d[2].style.top='2%'
+d[2].style.width='22%'
+d[2].style.height='33%'
 d[2].style.background='#fff'
 
+d[3].style.left='29%';
+d[3].style.top='72%';
 d[3].style.width='44%';
 d[3].style.height='11%';
-d[3].style.left='33%';
-d[3].style.top='66%';
-d[3].style.background='radial-gradient(#000,#d00 )'
-d[3].style.zIndex=1
+d[3].style.background=
+ 'radial-gradient(#000,#f00)'
 
-nm[0].style.left='66%';
-nm[0].style.top='11%';
-nm[0].style.color='#000';
- nm[0].innerHTML='Market'
+d[4].style.left='39%'
+d[4].style.top='24%'
+d[4].style.width='22%'
+d[4].style.height='33%'
+d[4].style.background=
+ 'radial-gradient(#bbb,#f4f)'
+d[4].style.borderBottomLeftRadius='10%' 
+d[4].style.borderBottomRightRadius='10%'
 
-nm[1].style.left='55%';
-nm[1].style.top='22%';
-nm[1].style.color='#800';
+d[5].style.left='-22%'
+d[5].style.top='88%'
+d[5].style.width='144%'
+d[5].style.height='33%'
+d[5].style.background=
+ 'radial-gradient(#bbb,#f4f)'
+
+d[6].style.left='1%'
+d[6].style.top='-22%'
+d[6].style.width='99%'
+d[6].style.height='33%'
+d[6].style.borderTop='44px ridge #000'
+d[6].style.opacity=0
+
+lzr[1].style.background='none'
+lzr[1].style.transform=
+ 'scale(5) translate(-6%,-5%)'
+lzr[1].style.border='8px ridge #000'
+lzr[1].style.zIndex=1
+lzr[1].style.opacity=0
+  
+rzr[1].style.background='none'
+rzr[1].style.transform=
+ 'scale(5) translate(-6%,-5%)'
+rzr[1].style.border='8px ridge #000'
+rzr[1].style.zIndex=1
+rzr[1].style.opacity=0  
+  
+nm[0].style.left='66%'
+nm[0].style.top='11%'
+nm[0].style.color='#000'
+
+nm[1].style.left='55%'
+nm[1].style.top='22%'
+nm[1].style.color='#800'
 nm[1].style.transform='scale(0)'
- nm[1].innerHTML='raw materials'
 
 nm[2].style.left='66%';
 nm[2].style.top='22%';
 nm[2].style.color='#0f0';
 nm[2].style.transform='scale(0)'
- nm[2].innerHTML='labor'
 
 nm[3].style.left='77%';
 nm[3].style.top='22%';
 nm[3].style.color='#990';
 nm[3].style.transform='scale(0)'
- nm[3].innerHTML='goods'
 
 nm[4].style.left='66%';
 nm[4].style.top='33%';
 nm[4].style.color='#909';
 nm[4].style.transform='scale(0)'
- nm[4].innerHTML='currency'
 
 nm[5].style.left='77%';
 nm[5].style.top='30%';
 nm[5].style.color='#0bb';
 nm[5].style.transform='scale(0)'
- nm[5].innerHTML='shares'
 
 gd[0].style.left='66%';
 gd[0].style.top='40%';
@@ -271,28 +326,31 @@ dvc[3].style.borderRadius=55+'%'
 dvc[3].style.opacity=0
 
 b=0
-function cl()
+function clk()
 { 
  d[3].style.transform='scale(1,'+
    (0.4+Math.random())+')'
+ d[6].style.opacity=1  
+ lzr[1].style.opacity=1
+ rzr[1].style.opacity=1
  if(b)
- {//
+ {
   d[0].style.transform='scale(1.2)'
-  zr[0].style.transform='scale(2)'
-  zr[0].style.background='#f00'
-  zr[1].style.transform='scale(2)'
-  zr[1].style.background='#f00'   
+  lzr[0].style.transform='scale(2)'
+  lzr[0].style.background='#00f'
+  rzr[0].style.transform='scale(2)'
+  rzr[0].style.background='#00f'
   fnd[4].style.color='#666'
   fnd[4].style.transform=
    'scale(2) skew(-22deg)'
  }
-  else
+ else
  { 
   d[0].style.transform='scale(1)'
-  zr[0].style.transform='scale(1)'
-  zr[0].style.background='#000'
-  zr[1].style.transform='scale(1)'
-  zr[1].style.background='#000'
+  lzr[0].style.transform='scale(1)'
+  lzr[0].style.background='#009'
+  rzr[0].style.transform='scale(1)'
+  rzr[0].style.background='#009'
   fnd[4].style.color='#770'
   fnd[4].style.transform=
    'scale(1.2) skew(22deg)'
@@ -303,18 +361,21 @@ function cl()
 Id0=0
 d[0].onmouseover=()=>
 {
- cl()
- Id0=setInterval(()=>cl(),999)
+ clk()
+ Id0=setInterval(()=>clk(),999)
  dvc[0].onmouseover()
 }	
 d[0].onmouseout=()=>
 {
  d[0].style.transform='scale(1)'
  d[3].style.transform='scale(1)'
- zr[0].style.transform='scale(1)'
- zr[0].style.background='#000'
- zr[1].style.transform='scale(1)'
- zr[1].style.background='#000'
+ d[6].style.opacity=0
+ lzr[0].style.transform='scale(1)'
+ lzr[0].style.background='#000'
+ lzr[1].style.opacity=0
+ rzr[0].style.transform='scale(1)'
+ rzr[0].style.background='#000'
+ rzr[1].style.opacity=0
  fnd[4].style.color='#fff'
  fnd[4].style.transform='scale(0)'	
   clearInterval(Id0)
@@ -324,7 +385,7 @@ d[0].onmouseout=()=>
 bclk=0	
 nm[0].onmouseover=()=>
 {
- nm[0].style.transform='scale(1.9)'
+ nm[0].style.transform='scale(1.9) skew(15deg)'
  nm[0].style.color='#f00'
  nm[1].style.transform='scale(1.5) rotate(-22deg)'
  nm[2].style.transform=
@@ -423,8 +484,8 @@ gd[3].onclick=()=>
 gd[4].onmouseover=()=>
 {
  gd[4].style.color='#f00'
+ gd[4].style.transform='scale(1.6) skew(-22deg)'
  gd[5].style.color='#f0f'
- gd[4].style.transform='scale(1.6)'
  gd[5].style.transform=
   'scale(1.5) translate(0,-22%) skew(22deg)'
 }
