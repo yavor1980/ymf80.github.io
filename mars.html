@@ -10,159 +10,136 @@
 
 #idgrd
 {
-position:absolute;
-background:linear-gradient(#555,#f00);
-width:100%;
-height:31%;
-top:69%;
-left:0%;
-transition:3s;  
-border-radius:0%;
- transform:scale(1);
+ position:absolute;
+ transition:3s;
+ left:0%;
+ top:69%;
+ width:100%;
+ height:31%;
+ background:linear-gradient(#555,#f00);  
+ border-radius:0%;
 }
 .kr1
 {
-position:absolute;
-background:radial-gradient(#f00,#000);
+ position:absolute;
  transition:2s;
-border-radius:55%;
+ background:radial-gradient(#f00,#000);
+ border-radius:55%;
  cursor:pointer;
 }
 .kr2
 {
-position:absolute;
-background:radial-gradient(#b00,#000);
-border-radius:55%;
-transition:2s;
-cursor:pointer;
+ position:absolute;
+ transition:2s;
+ background:radial-gradient(#b00,#000);
+ border-radius:55%;
+ cursor:pointer;
 }
 .kr3
 {
-position:absolute;
-background:radial-gradient(#d00,#000);
-border-radius:55%;
-transition:2s;
-cursor:pointer;
+ position:absolute;
+ transition:2s;
+ background:radial-gradient(#d00,#000);
+ border-radius:55%;
+ cursor:pointer;
 }
 .star
 {
-position:absolute;
-background:#ff0;
-left:11%;
-top:11%;
-width:1%;
-height:1%;
-border-radius:66%;
+ position:absolute;
+ left:11%;
+ top:11%;
+ width:1%;
+ height:1%;
+ background:#ff0;
+ border-radius:66%;
 }
 
 #ids
 {
-position:absolute;
-background:radial-gradient(#555,#ff0);
-width:24%;
-height:33%;
-left:39%;
-top:33%;
-transition:2s;
-border-top-left-radius:22%;
-border-top-right-radius:22%;
-border-bottom-left-radius:55%;
-border-bottom-right-radius:55%;
-z-index:1;
+ position:absolute;
+  transition:2s;
+ left:39%;
+ top:33%;
+ width:24%;
+ height:33%;
+ background:radial-gradient(#555,#ff0);
+ border-top-left-radius:22%;
+ border-top-right-radius:22%;
+ border-bottom-left-radius:55%;
+ border-bottom-right-radius:55%;
+ z-index:1;
 }
 .hd
 {
  position:absolute;
- border-radius:4%; 
+ transition:2s;
  background:linear-gradient(-89deg,#555,#ff0);
- transition:2s; 
-  z-index:1;
+ border-radius:4%; 
+ z-index:1;
 }
 .lhnd
 {
-position:absolute;
-background:linear-gradient(-88deg,#555,#ff0);
-width:22%;
-height:88%; 
-transition:2s;
-border-radius:33%;
+ position:absolute;
+ transition:2s;
+ width:22%;
+ height:88%; 
+ background:linear-gradient(-88deg,#555,#ff0);
+ border-radius:33%;
 }
 .rhnd
 {
-position:absolute;
-background:linear-gradient(-88deg,#555,#ff0);
-width:22%;
-height:88%; 
-transition:2s;
-border-radius:33%;
+ position:absolute;
+ transition:2s;
+ width:22%;
+ height:88%; 
+ background:linear-gradient(-88deg,#555,#ff0);
+ border-radius:33%;
 }
 .llg
 {
-position:absolute;
-width:18%;
-height:55%; 
-z-index:2;
-transition:3s;
-background:linear-gradient(-66deg,#555,#ff0);
+ position:absolute;
+ transition:3s;
+ width:18%;
+ height:55%; 
+ background:linear-gradient(-66deg,#555,#ff0);
+ z-index:2;
 }
 .rlg
 {
-position:absolute;
-width:18%;
-height:55%; 
-z-index:2;
-transition:3s;
-background:linear-gradient(-66deg,#555,#ff0);
+ position:absolute;
+ transition:1s;
+ width:18%;
+ height:55%; 
+ background:linear-gradient(-66deg,#555,#ff0);
+ z-index:1;
 }
 
 .inf
 {
-position:absolute;
-transition:1s;
-cursor:pointer;
-font-size:2em;
-text-align:center;
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ font-size:2em;
+ text-align:center;
 }
 
 .frz
 {
-position:absolute;
-z-index:3;
-transform:scale(1.4);
-transition:1s;
-cursor:pointer;
+ position:absolute;
+ transition:1s;
+ z-index:3;
+ transform:scale(1.4);
+ cursor:pointer;
 }
 .me
 {
-position:absolute;
-transform:scale(1.4);
-transition:1s;
-cursor:pointer;
-z-index:1;
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ transform:scale(1.4);
+ z-index:1;
 }
-
-
 </style>
-
-<div id=ids>
-  <div class=hd>
-   <div class=hd> </div>
-   <div class=hd> </div>
-   <div class=hd> </div>
-   <div class=hd> </div>
-  </div>
-  
-  <div class=lhnd><div class=lhnd><div class=lhnd></div></div></div>
-  <div class=rhnd><div class=rhnd><div class=rhnd></div></div></div>
-  <div class=llg><div class=llg></div></div>
-  <div class=rlg><div class=rlg></div></div>
-     
-</div>
-<div class=me></div>
-<div class=me></div>
-<div class=me>
- answer me!
-</div>
 
 <div id=idgrd>
  <div class=kr1><div class=kr1></div></div> 
@@ -176,98 +153,102 @@ z-index:1;
 <div class=star></div>
 <div class=star></div>
 
+<div class=frz>Mass</div>
+<div class=frz>Square</div>
+<div class=frz>Acceleration of gravity</div>
+<div class=frz>Satellite</div>
+<div class=frz>Tallest mountain SS</div>
 <div class=inf>what?</div>
 <div class=inf>how?</div>
 <div class=inf>who?</div>
 <div class=inf>new order!</div>
 <div class=inf>disorgnzsd!</div>
 
-<div class=frz>
- Mass
+<div id=ids>
+ <div class=hd>
+  <div class=hd> </div>
+  <div class=hd> </div>
+  <div class=hd> </div>
+  <div class=hd> </div>
+ </div>
+ <div class=lhnd>
+  <div class=lhnd>
+   <div class=lhnd></div>
+  </div>
+ </div>
+ <div class=rhnd>
+  <div class=rhnd>
+   <div class=rhnd></div>
+  </div>
+ </div>
+ <div class=llg>
+  <div class=llg></div>
+ </div>
+ <div class=rlg>
+  <div class=rlg></div>
+ </div>    
 </div>
-<div class=frz>
- Square 
+<div class=me></div>
+<div class=me></div>
+<div class=me>
+ answer me!
 </div>
-<div class=frz>
- Acceleration of gravity
-</div>
-<div class=frz>
- Satellite
-</div>
-<div class=frz>
- Tallest mountain SS
-</div>
-
-
 
 <script>
-
-  hd=document.getElementsByClassName('hd')
-  llg=document.getElementsByClassName('llg')
-  rlg=document.getElementsByClassName('rlg')
-  lhnd=document.getElementsByClassName('lhnd')
-  rhnd=document.getElementsByClassName('rhnd')
-  me=document.getElementsByClassName('me')
-  inf=document.getElementsByClassName('inf')
+hd=document.getElementsByClassName('hd')
+llg=document.getElementsByClassName('llg')
+rlg=document.getElementsByClassName('rlg')
+lhnd=document.getElementsByClassName('lhnd')
+rhnd=document.getElementsByClassName('rhnd')
+me=document.getElementsByClassName('me')
+inf=document.getElementsByClassName('inf')
   
-  kr1=document.getElementsByClassName('kr1')
-  kr2=document.getElementsByClassName('kr2')
-  kr3=document.getElementsByClassName('kr3')
-  frz=document.getElementsByClassName('frz')
- 
-  star=document.getElementsByClassName('star')
-  
-  
-//=================================================
-  
-  frz[0].style.left='6%'
-  frz[0].style.top='11%'  
-  frz[0].style.color='#f0f'
-    
-  frz[1].style.left='6%'
-  frz[1].style.top='17%'
-  frz[1].style.color='#ff0'
-
-  frz[2].style.left='8%'
-  frz[2].style.top='23%'
-  frz[2].style.width='16%'
-  frz[2].style.color='#0ff'
- 
-  frz[3].style.left='6%'
-  frz[3].style.top='29%'
-  frz[3].style.color='#ddd'
- 
-  frz[4].style.left='8%'
-  frz[4].style.top='35%'
-  frz[4].style.width='14%'
-  frz[4].style.color='#099'
+kr1=document.getElementsByClassName('kr1')
+kr2=document.getElementsByClassName('kr2')
+kr3=document.getElementsByClassName('kr3')
+frz=document.getElementsByClassName('frz')
+star=document.getElementsByClassName('star')
    
-  me[0].style.left='55%'
-  me[0].style.top='33%'
-  me[0].style.color='#fff'
-  me[0].style.transform='scale(0)'
- 
-  me[1].style.left='55%'
-  me[1].style.top='33%'
-  me[1].style.color='#fff'
-  me[1].style.transform='scale(0)'
-  
-  me[2].style.left='55%'
-  me[2].style.top='33%'
-  me[2].style.color='#0f0'
-  me[2].style.transform='scale(0)'
-//==================================================
-  
- ss=
- {
-   b:0, bb:0,
+frz[0].style.left='6%'
+frz[0].style.top='11%'  
+frz[0].style.color='#f0f'
+frz[1].style.left='6%'
+frz[1].style.top='17%'
+frz[1].style.color='#ff0'
+frz[2].style.left='8%'
+frz[2].style.top='23%'
+frz[2].style.width='16%'
+frz[2].style.color='#0ff'
+frz[3].style.left='6%'
+frz[3].style.top='29%'
+frz[3].style.color='#ddd'
+frz[4].style.left='8%'
+frz[4].style.top='35%'
+frz[4].style.width='14%'
+frz[4].style.color='#099'
+   
+me[0].style.left='55%'
+me[0].style.top='33%'
+me[0].style.color='#fff'
+me[0].style.transform='scale(0)'
+me[1].style.left='55%'
+me[1].style.top='33%'
+me[1].style.color='#fff'
+me[1].style.transform='scale(0)'
+me[2].style.left='55%'
+me[2].style.top='33%'
+me[2].style.color='#0f0'
+me[2].style.transform='scale(0)'
+
+ss=
+{
+  b:0, bb:0,
   init:function()
-  {
+ {
   hd[0].style.left=33+'%'
   hd[0].style.top=-33+'%'
   hd[0].style.width=44+'%'
   hd[0].style.height=44+'%'  
-  
   hd[1].style.left=29+'%'
   hd[1].style.top=29+'%'
   hd[1].style.width=11+'%'
@@ -298,18 +279,21 @@ z-index:1;
   llg[1].style.width=104+'%'
   llg[1].style.height=14+'%'
   llg[1].style.borderRadius=22+'%' 
-  llg[1].style.background='linear-gradient(#555,#000)'; 
+  llg[1].style.background=
+   'linear-gradient(#555,#000)'; 
   
   rlg[0].style.left=68+'%' 
   rlg[0].style.bottom=-33+'%'	
   rlg[0].style.borderRadius=22+'%' 
-  rlg[0].style.background='linear-gradient(-88deg,#555,yellow)';
+  rlg[0].style.background=
+   'linear-gradient(-88deg,#555,yellow)'
   rlg[1].style.left=1+'%' 
   rlg[1].style.bottom=-1+'%'
   rlg[1].style.width=104+'%'
   rlg[1].style.height=14+'%'
   rlg[1].style.borderRadius=22+'%' 
-  rlg[1].style.background='linear-gradient(#555,#000)';
+  rlg[1].style.background=
+   'linear-gradient(#555,#000)'
   
   lhnd[0].style.left=-11+'%'
   lhnd[0].style.top=1+'%'
@@ -319,12 +303,14 @@ z-index:1;
   lhnd[1].style.bottom=-1+'%'
   lhnd[1].style.width=99+'%'
   lhnd[1].style.height=22+'%'
-  lhnd[1].style.background='linear-gradient(#666,#000)';
+  lhnd[1].style.background=
+   'linear-gradient(#666,#000)'
   lhnd[2].style.left=11+'%'
   lhnd[2].style.top=-1+'%'
   lhnd[2].style.width=55+'%'
   lhnd[2].style.height=55+'%'
-  lhnd[2].style.background='linear-gradient(#f00,#f00)';
+  lhnd[2].style.background=
+   'linear-gradient(#f00,#f00)'
   lhnd[2].style.opacity=0
   
   rhnd[0].style.left=88+'%'
@@ -335,12 +321,14 @@ z-index:1;
   rhnd[1].style.bottom=-1+'%'
   rhnd[1].style.width=99+'%'
   rhnd[1].style.height=22+'%'
-  rhnd[1].style.background='linear-gradient(#666,#000)';
+  rhnd[1].style.background=
+   'linear-gradient(#666,#000)'
   rhnd[2].style.right=11+'%'
   rhnd[2].style.top=-1+'%'
   rhnd[2].style.width=55+'%'
   rhnd[2].style.height=55+'%'
-  rhnd[2].style.background='linear-gradient(#f00,#f00)';
+  rhnd[2].style.background=
+   'linear-gradient(#f00,#f00)'
   rhnd[2].style.opacity=0
   
   inf[0].style.left=70+'%'
@@ -349,27 +337,23 @@ z-index:1;
   inf[0].style.height=11+'%'
   inf[0].style.background='#ff0'
   inf[0].style.opacity=0.3
-  
   inf[1].style.left=70+'%'
   inf[1].style.top=33+'%'
   inf[1].style.width=22+'%'
   inf[1].style.height=11+'%'
   inf[1].style.background='#f60'
   inf[1].style.opacity=0.4
-  
   inf[2].style.left=44+'%'
   inf[2].style.top=7+'%'
   inf[2].style.width=22+'%'
   inf[2].style.height=11+'%'
   inf[2].style.background='#f60'
   inf[2].style.opacity=0.3
-  
   inf[3].style.left=22+'%'
   inf[3].style.top=7+'%'
   inf[3].style.width=22+'%'
   inf[3].style.height=11+'%'
   inf[3].style.transform='scale(0)'
-  
   inf[4].style.left=22+'%'
   inf[4].style.top=7+'%'
   inf[4].style.width=22+'%'
@@ -379,193 +363,166 @@ z-index:1;
  
  cl:function()
  {  
-   if(!ss.b) 
-   {
-    llg[0].style.transform= 
-	 'translate(0%,-19%) scale(1, 0.7)' 
-    rlg[0].style.transform= 
-	 'translate(0%,19%) scale(1, 1.3)'
-	hd[0].style.transform='rotate(44deg)'
-	 	 
-   }
-    else
-   {
-    llg[0].style.transform= 
-	 'translate(0%,19%) scale(1,1.3)' 
-    rlg[0].style.transform= 
-	 'translate(0%,-19%) scale(1,0.7)' 		
-	hd[0].style.transform='rotate(-44deg)' 
-	 
-   }	
+  if(!ss.b) 
+  {
+   hd[0].style.transform='rotate(44deg)'
+   llg[0].style.transform= 
+	'translate(0%,-19%) scale(1, 0.7)' 
+   rlg[0].style.transform= 
+    'translate(0%,19%) scale(1, 1.3)' 	 
+  }else{
+   hd[0].style.transform='rotate(-44deg)'
+   llg[0].style.transform= 
+	'translate(0%,19%) scale(1,1.3)' 
+   rlg[0].style.transform= 
+	'translate(0%,-19%) scale(1,0.7)' 	
+  }	
     ss.b=!ss.b
  },
- 
 } 
    ss.init()
-   
-     
- grd=
- {  
-  init:function()
-  {
-   kr1[0].style.left=12+'%'
-   kr1[0].style.top=24+'%'
-   kr1[0].style.width=22+'%' 
-   kr1[0].style.height=33+'%'
-   kr1[0].style.borderRadius=55+'%' 
-   
-   kr1[1].style.left=20+'%' 
-   kr1[1].style.top=20+'%'
-   kr1[1].style.width=55+'%' 
-   kr1[1].style.height=55+'%'
-   kr1[1].style.zIndex=1
-   kr1[1].style.cursor='pointer'
-   kr1[1].style.borderRadius=66+'%' 
-   
-   kr2[0].style.left=40+'%'
-   kr2[0].style.top=55+'%'
-   kr2[0].style.width=22+'%' 
-   kr2[0].style.height=33+'%'
-   kr2[0].style.borderRadius=55+'%' 
-   
-   kr2[1].style.left=20+'%' 
-   kr2[1].style.top=20+'%'
-   kr2[1].style.width=55+'%' 
-   kr2[1].style.height=55+'%'
-   kr2[1].style.zIndex=1
-   kr2[1].style.cursor='pointer'
-   kr2[1].style.borderRadius=66+'%' 
+       
+grd=
+{  
+ init:function()
+ {
+  kr1[0].style.left=12+'%'
+  kr1[0].style.top=24+'%'
+  kr1[0].style.width=22+'%' 
+  kr1[0].style.height=33+'%'
+  kr1[0].style.borderRadius=55+'%' 
+  kr1[1].style.left=20+'%' 
+  kr1[1].style.top=20+'%'
+  kr1[1].style.width=55+'%' 
+  kr1[1].style.height=55+'%'
+  kr1[1].style.zIndex=1
+  kr1[1].style.cursor='pointer'
+  kr1[1].style.borderRadius=66+'%'  
+  kr2[0].style.left=40+'%'
+  kr2[0].style.top=55+'%'
+  kr2[0].style.width=22+'%' 
+  kr2[0].style.height=33+'%'
+  kr2[0].style.borderRadius=55+'%' 
+  kr2[1].style.left=20+'%' 
+  kr2[1].style.top=20+'%'
+  kr2[1].style.width=55+'%' 
+  kr2[1].style.height=55+'%'
+  kr2[1].style.zIndex=1
+  kr2[1].style.cursor='pointer'
+  kr2[1].style.borderRadius=66+'%' 
+  kr3[0].style.left=68+'%'
+  kr3[0].style.top=33+'%'
+  kr3[0].style.width=22+'%' 
+  kr3[0].style.height=33+'%'
+  kr3[0].style.borderRadius=55+'%' 
+  kr3[1].style.left=20+'%' 
+  kr3[1].style.top=20+'%'
+  kr3[1].style.width=55+'%' 
+  kr3[1].style.height=55+'%'
+  kr3[1].style.zIndex=1
+  kr3[1].style.cursor='pointer'
+  kr3[1].style.borderRadius=66+'%' 
  
-   kr3[0].style.left=68+'%'
-   kr3[0].style.top=33+'%'
-   kr3[0].style.width=22+'%' 
-   kr3[0].style.height=33+'%'
-   kr3[0].style.borderRadius=55+'%' 
-   
-   kr3[1].style.left=20+'%' 
-   kr3[1].style.top=20+'%'
-   kr3[1].style.width=55+'%' 
-   kr3[1].style.height=55+'%'
-   kr3[1].style.zIndex=1
-   kr3[1].style.cursor='pointer'
-   kr3[1].style.borderRadius=66+'%' 
- 
-   star[0].style.left=Math.random()*88+'%' 
-   star[0].style.top=Math.random()*44+'%'     
-   star[1].style.left=Math.random()*88+'%' 
-   star[1].style.top=Math.random()*44+'%'
-   star[2].style.left=Math.random()*88+'%' 
-   star[2].style.top=Math.random()*44+'%'
-   star[3].style.left=Math.random()*88+'%' 
-   star[3].style.top=Math.random()*44+'%'
-   star[4].style.left=Math.random()*88+'%' 
-   star[4].style.top=Math.random()*44+'%'
-   
-  },
-  
-   cl:function()
-   {
-    star[0].style.opacity=Math.random() 
-	star[1].style.opacity=Math.random() 
-	star[2].style.opacity=Math.random() 
-	star[3].style.opacity=Math.random() 
-	star[4].style.opacity=Math.random() 
-	
-    kr1[1].style.transform='scale('+(Math.random()+0.5)
-	kr2[1].style.transform='scale('+(Math.random()+0.5)
-	kr3[1].style.transform='scale('+(Math.random()+0.5)
-
-   },   
- 
- }
+  star[0].style.left=Math.random()*88+'%' 
+  star[0].style.top=Math.random()*44+'%'     
+  star[1].style.left=Math.random()*88+'%' 
+  star[1].style.top=Math.random()*44+'%'
+  star[2].style.left=Math.random()*88+'%' 
+  star[2].style.top=Math.random()*44+'%'
+  star[3].style.left=Math.random()*88+'%' 
+  star[3].style.top=Math.random()*44+'%'
+  star[4].style.left=Math.random()*88+'%' 
+  star[4].style.top=Math.random()*44+'%'
+ },
+ cl:function()
+ {
+  star[0].style.opacity=Math.random() 
+  star[1].style.opacity=Math.random() 
+  star[2].style.opacity=Math.random() 
+  star[3].style.opacity=Math.random() 
+  star[4].style.opacity=Math.random() 
+  kr1[1].style.transform='scale('+(Math.random()+0.5)
+  kr2[1].style.transform='scale('+(Math.random()+0.5)
+  kr3[1].style.transform='scale('+(Math.random()+0.5)
+ },   
+}
     grd.init()
-//=================================================	
 
-  function f()
-  {
-   ss.cl()
-   grd.cl()
-  }  
+function f()
+{
+ ss.cl()
+ grd.cl()
+}  
     setInterval(()=>f(),999)
-//=================================================
- 
- idsI=0 
- fids=[0,0,0,0,0] 
- bids=0
+
+fids=[0,0,0,0,0] 
+idsI=0
+bids=0
 ids.onmouseover=()=>{
- 
  me[1].innerHTML='Hi!'
  me[1].style.transform=
   'scale(3) translate(4px,-66px) skew(22deg)'
- 
  idsI=setInterval(()=>{
   for(i=0;i<5;i++){
-   fids[i]=Math.round(Math.random()) 
-   
+   fids[i]=Math.round(Math.random())   
   }
   me[0].innerHTML=fids[0]+''+fids[1]+''+fids[2]+''+
    fids[3]+''+fids[4]   
- if(bids){
-  me[0].style.transform=
-   'scale(3) translate(44px,-33px) skew(-11deg)'
-  me[0].style.color='#bb0'
-  me[1].style.transform=
-  'scale(3) translate(4px,-66px) skew(22deg)'
-  me[2].style.transform=
-  'scale(3)  skew(22deg)'
-    }else{
-  me[0].style.transform=
-   'scale(4) translate(44px,-33px) skew(11deg)'
-  me[0].style.color='#ff0'
-  me[1].style.transform=
-  'scale(3) translate(4px,-66px)  skew(-22deg)'
-  me[2].style.transform=
-  'scale(3) skew(-22deg)'
- }
+  if(bids){
+   me[0].style.transform=
+    'scale(3) translate(44px,-33px) skew(-11deg)'
+   me[0].style.color='#bb0'
+   me[1].style.transform=
+    'scale(3) translate(4px,-66px) skew(22deg)'
+   me[2].style.transform=
+    'scale(3)  skew(22deg)'
+  }else{
+   me[0].style.transform=
+    'scale(4) translate(44px,-33px) skew(11deg)'
+   me[0].style.color='#ff0'
+   me[1].style.transform=
+   'scale(3) translate(4px,-66px)  skew(-22deg)'
+   me[2].style.transform=
+    'scale(3) skew(-22deg)'
+  }
      bids=!bids
- },999)
-
+ }, 999)
  ids.style.cursor='pointer'
- ids.style.background='radial-gradient(#f00,#ff0)'
-   
-   rhnd[0].style.transform=
-    'scale(1,0.5) rotate(22deg) translate(-66%,-33%)'
-   lhnd[1].style.transform='scale(2,2) rotate(-55deg)'
-   rhnd[1].style.transform='scale(2,2) rotate(55deg)'
-    hd[0].style.transform=
-	 'scale(3,3) translate(0%,0%)'
-    hd[3].style.height='28%' 
-	hd[1].style.transform='scale(2,2)'
-	hd[1].style.background='#f00'
-    hd[2].style.transform='scale(2,2)'
-	hd[2].style.background='#f00'
-    
- }   
- ids.onmouseout=()=>{
-  for(i=0;i<5;i++)
-   fids[i]=0
-   
-    ids.style.background='radial-gradient(#555,#ff0)'
-  me[0].style.transform='scale(0)'
-  me[0].style.color='#fff' 
+ ids.style.background='radial-gradient(#f00,#ff0)' 
+ rhnd[0].style.transform=
+  'scale(1,0.5) rotate(22deg) translate(-66%,-33%)'
+ lhnd[1].style.transform='scale(2,2) rotate(-55deg)'
+ rhnd[1].style.transform='scale(2,2) rotate(55deg)'
+ hd[0].style.transform=
+  'scale(3,3) translate(0%,0%)'
+ hd[3].style.height='28%' 
+ hd[1].style.transform='scale(2,2)'
+ hd[1].style.background='#f00'
+ hd[2].style.transform='scale(2,2)'
+ hd[2].style.background='#f00'
+}   
+ids.onmouseout=()=>{
+ for(i=0;i<5;i++)
+  fids[i]=0
+ ids.style.background='radial-gradient(#555,#ff0)'
+ me[0].style.transform='scale(0)'
+ me[0].style.color='#fff' 
   me[1].innerHTML='Bye!'
-  me[1].style.transform='scale(0) translate(0,-1px)'
-  me[2].style.transform='scale(0) '
- 
-  lhnd[0].style.transform='scale(1,1) rotate(0deg)'
-  rhnd[0].style.transform='scale(1,1) rotate(0deg)'
-  lhnd[1].style.transform='scale(1,1) rotate(0deg)'
-  rhnd[1].style.transform='scale(1,1) rotate(0deg)'
-   hd[0].style.transform=
-    'scale(1,1) translate(0%,0%)'
-   hd[3].style.height='11%' 
-   hd[1].style.transform='scale(1,1)'
-   hd[1].style.background='#900'
-   hd[2].style.transform='scale(1,1)' 
-   hd[2].style.background='#900'
-        clearInterval(idsI)
-   
- } 
+ me[1].style.transform='scale(0) translate(0,-1px)'
+ me[2].style.transform='scale(0) '
+ lhnd[0].style.transform='scale(1,1) rotate(0deg)'
+ rhnd[0].style.transform='scale(1,1) rotate(0deg)'
+ lhnd[1].style.transform='scale(1,1) rotate(0deg)'
+ rhnd[1].style.transform='scale(1,1) rotate(0deg)'
+ hd[0].style.transform=
+  'scale(1,1) translate(0%,0%)'
+ hd[1].style.background='#900'
+ hd[1].style.transform='scale(1,1)'
+ hd[2].style.background='#900'
+ hd[2].style.transform='scale(1,1)'
+ hd[3].style.height='11%'
+  clearInterval(idsI)
+} 
 
 kr1[0].onmouseover=()=>
 {   
@@ -603,142 +560,132 @@ inf[0].onmouseout=()=>
 
 inf[1].onmouseover=()=>
 {   
+ inf[1].style.height= 16+'%'
+ inf[1].style.color= '#0f0'
+ inf[1].style.border='9px ridge #0ff'
+ inf[1].style.opacity=1 
+ inf[1].style.fontSize='2em'
   inf[1].innerHTML= 'focus<br> civiliztn'
-  inf[1].style.border='9px ridge #0ff'
-  inf[1].style.opacity= 1 
-  inf[1].style.height= 16+'%'
-  inf[1].style.color= '#0f0'
-  inf[1].style.fontSize='2em'
-  
 }     
 inf[1].onmouseout=()=>
-{   
+{ 
+ inf[1].style.height= 11+'%'
+ inf[1].style.border='none'
+ inf[1].style.opacity= 0.3
   inf[1].innerHTML= 'how?'
-  inf[1].style.border='none'
-  inf[1].style.opacity= 0.3
-  inf[1].style.height= 11+'%'
-  
 } 
 
 inf2I=0
 binf2=1
 inf[2].onmouseover=()=>
 {   
-  inf[2].style.opacity= 1 
-  inf[2].style.color= '#0f0'
-  inf[2].style.fontSize='2em'
-  inf[2].style.textAlign='center'
-  inf[2].style.border='9px ridge #ff0'
-  inf[2].style.transform=
-   'scale(1.2) translate(0,-22%)'
-  inf[3].style.transform= 
-   'scale(2) translate(-11%,39%) rotate(-33deg)'
-  inf[3].style.color='#f00'
-  inf[3].style.zIndex=4
-  inf[4].style.transform=
-   'scale(2) translate(-33%,199%) skew(-33deg)'
-  inf[4].style.color='#ff0'
-  inf[4].style.zIndex=1
-
-inf2I= setInterval(()=>{
+ inf[2].style.opacity= 1 
+ inf[2].style.color= '#0f0'
+ inf[2].style.fontSize='2em'
+ inf[2].style.textAlign='center'
+ inf[2].style.border='9px ridge #ff0'
+ inf[2].style.transform=
+  'scale(1.2) translate(0,-22%)'
+ inf[3].style.transform= 
+  'scale(2) translate(-11%,39%) rotate(-33deg)'
+ inf[3].style.color='#f00'
+ inf[3].style.zIndex=4
+ inf[4].style.transform=
+  'scale(2) translate(-33%,199%) skew(-33deg)'
+ inf[4].style.color='#ff0'
+ inf[4].style.zIndex=1
+ inf2I= setInterval(()=>{
   if(binf2)
-    inf[2].innerHTML= "who's me?"
-   else
-    inf[2].innerHTML= "tell me it!"
-   binf2=!binf2
- },1222) 
-  
+   inf[2].innerHTML= "who's me?"
+  else
+   inf[2].innerHTML= "tell me it!"
+    binf2=!binf2
+ },  1222)   
 }     
 inf[2].onmouseout=()=>
 {   
+ inf[2].style.opacity= 0.3
+ inf[2].style.border='none'
+ inf[2].style.transform='scale(1)'
   inf[2].innerHTML= 'who?'
-  inf[2].style.opacity= 0.3
-  inf[2].style.border='none'
-  inf[2].style.transform='scale(1)'
-  inf[3].style.transform='scale(0)'
-  inf[3].style.color='#000'
-  inf[4].style.transform='scale(0) '
-  inf[4].style.color='#000'
-
- clearInterval(inf2I)
- binf2=1
+ inf[3].style.transform='scale(0)'
+ inf[3].style.color='#000'
+ inf[4].style.transform='scale(0) '
+ inf[4].style.color='#000'
+  clearInterval(inf2I)
+  binf2=1
 } 
 
 frz[0].onmouseover=()=>
 {   
+ frz[0].style.color= '#ff0'
+ frz[0].style.transform= 
+  'scale(2) translate(15%,-22%)'
   frz[0].innerHTML= '10.7 % masses of the earth'
-  frz[0].style.color= '#ff0'
-  frz[0].style.transform= 
-   'scale(2) translate(15%,-22%)'
-  
 }     
 frz[0].onmouseout=()=>
 {   
+ frz[0].style.color= '#f0f'
+ frz[0].style.transform= 'scale(1.4)'
   frz[0].innerHTML= 'Mass'
-  frz[0].style.color= '#f0f'
-  frz[0].style.transform= 'scale(1.4)'
 } 
 
 frz[1].onmouseover=()=>
 {   
+ frz[1].style.color= '#0dd'
+ frz[1].style.transform= 
+  'scale(2) translate(15%,-22%)'
   frz[1].innerHTML= '144 800 000 km²'
-  frz[1].style.color= '#0dd'
-  frz[1].style.transform= 
-   'scale(2) translate(15%,-22%)'
-  
 }
 frz[1].onmouseout=()=>
 {   
+ frz[1].style.color= '#ff0'
+ frz[1].style.transform= 'scale(1.4)'
   frz[1].innerHTML= 'Square'
-  frz[1].style.color= '#ff0'
-  frz[1].style.transform= 'scale(1.4)'
 }
    
 frz[2].onmouseover=()=>
 {   
+ frz[2].style.color= '#990'
+ frz[2].style.transform= 
+  'scale(2) translate(15%,-22%)'
   frz[2].innerHTML= '3,721 m/s²'
-  frz[2].style.color= '#990'
-  frz[2].style.transform= 
-   'scale(2) translate(15%,-22%)'
 } 
 frz[2].onmouseout=()=>
 {   
+ frz[2].style.color= '#0ff'
+ frz[2].style.transform= 'scale(1.4)'
   frz[2].innerHTML= 'Acceleration of gravity'
-  frz[2].style.color= '#0ff'
-  frz[2].style.transform= 'scale(1.4)'
 } 
 
 frz[3].onmouseover=()=>
 {   
+ frz[3].style.color= '#0dd'
+ frz[3].style.transform= 
+  'scale(2) translate(15%,-22%)'
   frz[3].innerHTML= 'Phobos Deimos'
-  frz[3].style.color= '#0dd'
-  frz[3].style.transform= 
-   'scale(2) translate(15%,-22%)'
 } 
 frz[3].onmouseout=()=>
 {   
+ frz[3].style.color= '#ddd'
+ frz[3].style.transform= 'scale(1.4)'
   frz[3].innerHTML= 'Satellite'
-  frz[3].style.color= '#ddd'
-  frz[3].style.transform= 'scale(1.4)'
 } 
   
 frz[4].onmouseover=()=>
 {   
-  frz[4].innerHTML= 'Olimp'
   frz[4].style.color= '#099'
   frz[4].style.transform= 
    'scale(2) translate(15%,-22%)'
+   frz[4].innerHTML= 'Olimp'
 } 
 frz[4].onmouseout=()=>
 {   
-  frz[4].innerHTML= 
-  'Tallest mountain SS'
-  frz[4].style.color= '#099'
-  frz[4].style.transform= 'scale(1.4)'
+ frz[4].style.color= '#099'
+ frz[4].style.transform= 'scale(1.4)'
+  frz[4].innerHTML= 'Tallest mountain SS'
 }   
-
-
-      
+     
 </script>
 </body>
 
