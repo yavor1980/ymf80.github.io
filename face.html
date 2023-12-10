@@ -77,12 +77,6 @@
  transition:2s; 
 }
 
-.me
-{
- position:absolute;
- transition:2s; 
-}
-
 .lm
 {
  position:absolute;
@@ -132,9 +126,6 @@
 <div class=trnstn >encrse intervl!</div>
 <div class=trnstn >delay event...</div>
 
-<div class=me >my own position</div>
-<div class=me >I would't like to dstrb...</div>
-
 <div class=lm >lim</div>
 <div class=lm >x-></div>
 <div class=lm >0</div>
@@ -146,77 +137,91 @@ gl=document.getElementsByClassName('gl')
 ns=document.getElementsByClassName('ns')
 mth=document.getElementsByClassName('mth')
 ears=document.getElementsByClassName('ears')
-   
 smk=document.getElementsByClassName('smk')
-   
 fre=document.getElementsByClassName('fre')
 trnstn=document.getElementsByClassName('trnstn')
-me=document.getElementsByClassName('me')
 lm=document.getElementsByClassName('lm')
    
-fc[0].style.background=
- 'radial-gradient(#aaa,#333)'
 fc[0].style.left=19+'%'
 fc[0].style.top=22+'%'  
 fc[0].style.width=+22+'%'
 fc[0].style.height=44+'%'
+fc[0].style.background=
+ 'radial-gradient(#eee,#f5f)'
 fc[0].style.borderTopLeftRadius='33%'
 fc[0].style.borderTopRightRadius='33%'
 fc[0].style.borderBottomLeftRadius='55%'
 fc[0].style.borderBottomRightRadius='55%'
 	 
-fc[1].style.background='#000'
 fc[1].style.left=15+'%'
 fc[1].style.top=-11+'%'  
 fc[1].style.width=88+'%'
 fc[1].style.height=22+'%'
+fc[1].style.background='#000'
 fc[1].style.borderRadius='55%'
  
-fc[2].style.background='#000'
 fc[2].style.left=1+'%'
 fc[2].style.top=-9+'%'  
 fc[2].style.width=22+'%'
 fc[2].style.height=22+'%'
+fc[2].style.background='#000'
 fc[2].style.borderRadius='55%'
 	 
-gl[0].style.background='#fff'
 gl[0].style.left=11+'%'
 gl[0].style.top=17+'%'  
 gl[0].style.width=22+'%'
 gl[0].style.height=22+'%'
+gl[0].style.background='#fff'
 	 
-gl[1].style.background='#000'
 gl[1].style.left=33+'%'
 gl[1].style.top=33+'%'  
 gl[1].style.width=33+'%'
 gl[1].style.height=33+'%'
+gl[1].style.background='#000'
 	
-gl[2].style.background='#fff'
 gl[2].style.left=66+'%'
 gl[2].style.top=17+'%'  
 gl[2].style.width=22+'%'
 gl[2].style.height=22+'%'
+gl[2].style.background='#fff'	 
 	 
-gl[3].style.background='#000';
 gl[3].style.left=33+'%'
 gl[3].style.top=33+'%'  
 gl[3].style.width=33+'%'
 gl[3].style.height=33+'%'
-gl[3].style.transition='2s'
+gl[3].style.background='#000'	
 	
 ns[0].style.left=38+'%'	
 ns[0].style.top=22+'%'	
 ns[0].style.height=44+'%'	
 ns[0].style.width=22+'%'	
 ns[0].style.background=
- 'radial-gradient(#777,#333)'
+ 'radial-gradient(#eee,#f3f)'
      
 ns[1].style.left=-2+'%'	
 ns[1].style.top=79+'%'	
 ns[1].style.height=22+'%'	
 ns[1].style.width=111+'%'	
 ns[1].style.background=
- 'radial-gradient(#777,#333)'
+ 'radial-gradient(#eee,#f3f)'
+	 
+ears[0].style.background=
+ 'radial-gradient(#eee,#f3f)'
+ears[0].style.left=-9+'%'
+ears[0].style.top=29+'%'  
+ears[0].style.width=11+'%'
+ears[0].style.height=22+'%'  
+ears[0].style.transition='4s'
+ears[0].style.zIndex=-1	 
+	 
+ears[1].style.background=
+ 'radial-gradient(#eee,#f3f)'
+ears[1].style.left=97+'%'
+ears[1].style.top=29+'%'  
+ears[1].style.width=11+'%'
+ears[1].style.height=22+'%'  
+ears[1].style.transition='2s' 
+ears[1].style.zIndex=-1	 
 	 
 mth[0].style.left=22+'%'	
 mth[0].style.top=77+'%'	
@@ -246,25 +251,7 @@ mth[3].style.height=111+'%'
 mth[3].style.width=11+'%'	
 mth[3].style.background=
  'radial-gradient(#070,#333)'
-	 
-ears[0].style.background=
- 'radial-gradient(#777,#333)'
-ears[0].style.left=-9+'%'
-ears[0].style.top=29+'%'  
-ears[0].style.width=11+'%'
-ears[0].style.height=22+'%'  
-ears[0].style.transition='4s'
-ears[0].style.zIndex=-1	 
-	 
-ears[1].style.background=
- 'radial-gradient(#777,#333)'
-ears[1].style.left=97+'%'
-ears[1].style.top=29+'%'  
-ears[1].style.width=11+'%'
-ears[1].style.height=22+'%'  
-ears[1].style.transition='2s' 
-ears[1].style.zIndex=-1
-	 
+		
 smk[0].style.background=
  'radial-gradient(#f00,#333)'
 smk[0].style.left=39+'%'
@@ -294,8 +281,8 @@ smk[2].style.borderTopLeftRadius=44+'%'
 smk[2].style.borderTopRightRadius=66+'%'
 smk[2].style.borderBottomLeftRadius=55+'%'
 smk[2].style.borderBottomRightRadius=33+'%'
-smk[2].style.opacity=0
-
+smk[2].style.opacity=0	 
+	 
 fre[0].style.transform='scale(0)'
 fre[0].style.color='#f00'
 fre[0].style.left='22%'
@@ -337,16 +324,6 @@ trnstn[3].style.opacity=0
 trnstn[3].style.color='#f0f'
 trnstn[3].style.left='55%'
 trnstn[3].style.top='27%'
-	
-me[0].style.left='55%'
-me[0].style.top='33%'
-me[0].style.transform='scale(0)'
-me[0].style.color='#f0f'
- 
-me[1].style.left='55%'
-me[1].style.top='33%'
-me[1].style.transform='scale(0)'
-me[1].style.color='#ff0'
  
 lm[0].style.left='16%'
 lm[0].style.top='77%'
@@ -421,37 +398,29 @@ idb.onclick=()=>{
 fc[0].onmouseover=()=>{   
  fc[0].style.transform='scale(1.2)'
  fc[0].style.background=
-  'radial-gradient(#888,#333)'
- fc[1].style.background='#005'
- fc[2].style.background='#040'
- me[0].style.transform='scale(3) translate(44%,288%)'
- me[0].style.color='#00f'
- me[1].style.transform='scale(3) translate(22%,222%)'
- me[1].style.color='#0d0'
+  'radial-gradient(#999,#f9f)'
+ fc[1].style.background='#600'
+ fc[2].style.background='#500'
+ gl[0].style.transform='scale(1.3,0.7)'
  gl[1].style.background='#f00'
+ gl[2].style.transform='scale(1.3,0.7)'
  gl[3].style.background='#f00'
- ears[0].style.background=
-  'radial-gradient(#777,#900)'
- ears[1].style.background=
-  'radial-gradient(#777,#900)'
+ ears[0].style.transform='scale(1.3,1.4)'
+ ears[1].style.transform='scale(1.3,1.4)'
   lm[0].onmouseover()
 }
 fc[0].onmouseout=()=>{   
  fc[0].style.transform='scale(1)'
  fc[0].style.background=
-  'radial-gradient(#aaa,#333)'
+  'radial-gradient(#eee,#f9f)'
  fc[1].style.background='#000'
- fc[2].style.background='#000'
- me[0].style.transform='scale(0) '
- me[0].style.color='#000'
- me[1].style.transform='scale(0) '
- me[1].style.color='#000'   
+ fc[2].style.background='#000'   
+ gl[0].style.transform='scale(1)'
  gl[1].style.background='#000'
+ gl[2].style.transform='scale(1)'
  gl[3].style.background='#000'
- ears[0].style.background=
-  'radial-gradient(#777,#333)'
- ears[1].style.background=
-  'radial-gradient(#777,#333)'
+ ears[0].style.transform='scale(1)'
+ ears[1].style.transform='scale(1)'
    lm[0].onmouseout()
 }
 
@@ -535,5 +504,4 @@ lm[0].onmouseout=()=>{
 
 </script>
 </body>
-
 </html>
