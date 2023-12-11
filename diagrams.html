@@ -7,7 +7,7 @@
 <style>
 #idbd
 {
- background: linear-gradient(#fff,#024);
+ background: linear-gradient(#ff8,#024);
 }
 
 .lctr
@@ -43,7 +43,7 @@
  transition:4s;
 }
 
-.wng
+.tbl
 {
  position:absolute;   
  font-size:3em;
@@ -54,11 +54,11 @@
 
 .ttl
 {
- position:absolute;   
+ position:absolute;  
+ transition:3s;
  bottom:0%;
  font-size:0.4em;
  text-align:center;
- transition:3s;
 }
 
 .tps
@@ -81,19 +81,20 @@
  <div class=lctr></div>
  <div class=lctr></div>
  <div class=lctr>colors...</div>
+ <div class=lctr>0...255</div>
  <div class=gl><div class=zr></div></div>
  <div class=gl><div class=zr></div></div>
  <div class=ns><div class=ns></div></div>
  <div class=mth></div>
 </div>
 
- <div class=wng>
+ <div class=tbl>
   DIAGRAMS
-  <div class=wng><div class=ttl>R</div></div>
-  <div class=wng><div class=ttl>G</div></div>
-  <div class=wng><div class=ttl>B</div></div>
-  <div class=wng><div class=ttl>LB</div></div>     
-  <div class=wng></div>
+  <div class=tbl><div class=ttl>R</div></div>
+  <div class=tbl><div class=ttl>G</div></div>
+  <div class=tbl><div class=ttl>B</div></div>
+  <div class=tbl><div class=ttl>LB</div></div>     
+  <div class=tbl></div>
  </div>
    
 <div class=tps>Diagram</div>
@@ -111,7 +112,7 @@ mth=document.getElementsByClassName('mth')
 gl=document.getElementsByClassName('gl')
 zr=document.getElementsByClassName('zr')
 ns=document.getElementsByClassName('ns')
-wng=document.getElementsByClassName('wng')
+tbl=document.getElementsByClassName('tbl')
 
 tps=document.getElementsByClassName('tps')
 vctr=document.getElementsByClassName('vctr')
@@ -127,7 +128,7 @@ function initj(nm,i,l,t,w,h,bg)
   
 lctr[0].style.left=61+'%'
 lctr[0].style.top=33+'%'
-lctr[0].style.width=22+'%'
+lctr[0].style.width=18+'%'
 lctr[0].style.height=44+'%'
 lctr[0].style.background=
  'radial-gradient(#ffc,#f88)'
@@ -155,12 +156,19 @@ lctr[2].style.borderRadius=55+'%'
 	
 lctr[3].style.left=42+'%'
 lctr[3].style.top=11+'%'
-lctr[3].style.width=9+'%'
-lctr[3].style.height=4+'%'
+lctr[3].style.padding=1+'%'
 lctr[3].style.background='#fff'	
 lctr[3].style.borderRadius=55+'%' 	
 lctr[3].style.opacity=0.5
 lctr[3].style.transform='scale(0)'	
+	
+lctr[4].style.left=42+'%'
+lctr[4].style.top=11+'%'
+lctr[4].style.padding=1+'%'
+lctr[4].style.background='#eee'	
+lctr[4].style.borderRadius=55+'%' 	
+lctr[4].style.opacity=0.5
+lctr[4].style.transform='scale(0)'		
 	
 initj(gl,0,18,0,14,22,'#fff')
  gl[0].style.borderRadius=55+'%'
@@ -176,16 +184,17 @@ initj(ns,1,-44,-7,199,33,'radial-gradient(#ffc,#f88)')
 initj(mth,0,22,22,55,1,'radial-gradient(#000,#f00)')
  mth[0].style.borderRadius=55+'%'
 
-initj(wng,0,11,22,33,44,'#fff')
-initj(wng,1,5,1,22,9,'#f90')
-initj(wng,2,27,1,22,9,'#f00')
-initj(wng,3,49,1,22,9,'#00f')
-initj(wng,4,71,1,22,9,'#0ff')
-initj(wng,5,1,1,77,3,'')
- wng[5].style.borderTopLeftRadius=55+'%'
- wng[5].style.borderBottomLeftRadius=55+'%'
- wng[5].style.background='radial-gradient(#333,#bbb)'
- wng[5].style.transform='rotate(33deg)'
+initj(tbl,0,11,22,33,44,'#fff')
+ tbl[0].style.borderTop='6px ridge #088'
+initj(tbl,1,5,1,22,9,'#f90')
+initj(tbl,2,27,1,22,9,'#f00')
+initj(tbl,3,49,1,22,9,'#00f')
+initj(tbl,4,71,1,22,9,'#0ff')
+initj(tbl,5,1,1,77,3,'')
+ tbl[5].style.borderTopLeftRadius=55+'%'
+ tbl[5].style.borderBottomLeftRadius=55+'%'
+ tbl[5].style.background='radial-gradient(#333,#bbb)'
+ tbl[5].style.transform='rotate(33deg)'
 	    
 function initfrz(nm,i,l,t,sc)
 {
@@ -193,24 +202,22 @@ function initfrz(nm,i,l,t,sc)
  nm[i].style.top=t+'%'
  nm[i].style.transform='scale('+sc+')'
 } 
-
 initfrz(tps,0,22,17,2)
 initfrz(tps,1,33,4,0)
 initfrz(tps,2,44,8,0)
 initfrz(tps,3,55,4,0)
 initfrz(tps,4,66,8,0)
-  
 initfrz(vctr,0,35,23,0)
 initfrz(vctr,1,35,23,0)
    
 function mvd()
 {   
- wng[0].style.transform='skew(44deg)'
- wng[1].style.height=Math.random()*80+'%'
- wng[2].style.height=Math.random()*80+'%'
- wng[3].style.height=Math.random()*80+'%'
- wng[4].style.height=Math.random()*80+'%'
- wng[5].style.opacity=1	 
+ tbl[0].style.transform='skew(44deg)'
+ tbl[1].style.height=Math.random()*80+'%'
+ tbl[2].style.height=Math.random()*80+'%'
+ tbl[3].style.height=Math.random()*80+'%'
+ tbl[4].style.height=Math.random()*80+'%'
+ tbl[5].style.opacity=1	 
 }
 function mvm()
 { 
@@ -218,9 +225,9 @@ function mvm()
  zr[0].style.left=1+'%'
  zr[1].style.left=1+'%'  
  mth[0].style.height=Math.random()*11+'%'
- wng[5].style.transform=
+ tbl[5].style.transform=
   'rotate(33deg) translate('+v+'%,-1888%)'
-}   
+} 
 Id=0
 Im=0  
 Id=setInterval(mvd,2222)
@@ -244,23 +251,24 @@ lctr[0].onmouseout=()=>
 
 Iwng0=0
 bwng0=0
-wng[0].onmouseover=()=>
+tbl[0].onmouseover=()=>
 { 
   clearInterval(Id)
   clearInterval(Im)
  lctr[3].style.transform=
-  'scale(12,6) translate(0,-177%)'
+  'scale(12,6) translate(0,-177%) skew(-13deg)'
  lctr[3].style.borderRadius='33%'
- wng[0].style.transform='skew(0deg)'			 
- wng[1].style.height=9+'%'
- wng[2].style.height=9+'%'
- wng[3].style.height=9+'%'
- wng[4].style.height=9+'%'
- wng[5].style.opacity=0
+ lctr[4].style.color='#900' 
+ 
+ tbl[0].style.transform='skew(0deg)'			 
+ tbl[1].style.height=9+'%'
+ tbl[2].style.height=9+'%'
+ tbl[3].style.height=9+'%'
+ tbl[4].style.height=9+'%'
+ tbl[5].style.opacity=0
  zr[0].style.left=22+'%'
  zr[1].style.left=22+'%'
  mth[0].style.height=1+'%'
- wng[0].style.transform='skew(0deg)' 
  vctr[0].style.color='#f0f' 
  vctr[0].style.transform=
   'scale(2) translate(22%,0)'   
@@ -269,6 +277,9 @@ wng[0].onmouseover=()=>
   'scale(4) translate(22%,0)'
  Iwng0=setInterval(()=>{
   if(bwng0){
+   lctr[4].style.transform=
+    'scale(12,6) translate(50%,-99%) skew(13deg)'
+   lctr[4].style.borderRadius='22%' 
    vctr[0].style.color='#778'
    vctr[0].style.transform=
     'scale(3.4) skew(-33deg)'
@@ -276,6 +287,9 @@ wng[0].onmouseover=()=>
    vctr[1].style.transform=
     'scale(3) translate(0%,-55%) skew(33deg) ' 
   }else{
+   lctr[4].style.transform=
+    'scale(10,6) translate(50%,-99%) skew(10deg)'
+   lctr[4].style.borderRadius='22%' 
    vctr[0].style.color='#000'
    vctr[0].innerHTML='error'
    vctr[0].style.transform=
@@ -286,11 +300,14 @@ wng[0].onmouseover=()=>
     bwng0=!bwng0
  },  999)
 }
-wng[0].onmouseout=()=>
+tbl[0].onmouseout=()=>
 { 
  lctr[3].style.transform='scale(0)'
  lctr[3].style.borderRadius='55%'
- wng[0].style.transform='skew(44deg)' 
+ lctr[4].style.color='#000'
+ lctr[4].style.transform='scale(0)'
+ lctr[4].style.borderRadius='55%'
+ tbl[0].style.transform='skew(44deg)' 
  Id=setInterval(()=>
  {
   mvd(1); mvd(2); mvd(3); mvd(4); 
@@ -299,7 +316,7 @@ wng[0].onmouseout=()=>
   clearInterval(Iwng0) 
  zr[0].style.left=1+'%'
  zr[1].style.left=1+'%'    
- wng[5].style.opacity=1  
+ tbl[5].style.opacity=1  
  vctr[0].style.transform='scale(0)'
  vctr[1].style.transform='scale(0)'
 }
