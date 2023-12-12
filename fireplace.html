@@ -11,6 +11,7 @@
 #idb
 {
  position:absolute;
+  transition:1s;
  left:88%;
  top:9%;
  width:7%;
@@ -20,7 +21,7 @@
  cursor:pointer;
  border-radius:55%;
  font-size:1.2em;
- transition:1s;
+
 }
 #idb:hover
 {
@@ -276,7 +277,7 @@ function act(nm,i,clrr,clrrr)
 {
  nm[i].onmouseover=()=>
  {    
-  frz[i].style.transform='scale(2.3)'
+  frz[i].style.transform='scale(2.3) skew(-5deg)'
   frz[i].style.color='#006'
    nm[i].innerHTML=clr[i]
   flm[0].style.background=clrr
