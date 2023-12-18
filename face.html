@@ -218,12 +218,13 @@ mth[3].style.height=111+'%'
 mth[3].style.background=
  'radial-gradient(#070,#333)'
 		
-mth[4].style.left=337+'%'	
-mth[4].style.top=-1228+'%'	
+mth[4].style.left=37+'%'	
+mth[4].style.top=-999+'%'	
 mth[4].style.width=1188+'%'
 mth[4].style.height=1118+'%'	
 mth[4].style.background='#000'
-mth[4].style.opacity=0
+mth[4].style.opacity=0.3
+mth[4].style.transform='scale(0)'
 
 smk[0].style.left=69+'%'
 smk[0].style.top=67+'%'  
@@ -290,13 +291,14 @@ function cl()
 }
   setInterval(()=>cl(), 2222)
  
+Ifc=0 
 fc[0].onmouseover=()=>
 {   
  idbd.style.background=
   'radial-gradient(300px,#ff0,#777)'  
- smk[0].style.transform='translate(-133%,-22%)' 
+ //smk[0].style.transform='translate(-133%,-22%)' 
  smk[2].style.opacity=0.4
- setInterval(()=>{ 
+ Ifc=setInterval(()=>{ 
   mth[4].style.transform=
    'scale('+(0.7+Math.random()/2)+')'
   smk[0].style.transform='translate(0,0)'
@@ -315,7 +317,6 @@ fc[0].onmouseover=()=>
  ears[0].style.transform='scale(1.3,1.4)'
  ears[1].style.transform='scale(1.3,1.4)'
  mth[3].style.background='#f00'
- mth[4].style.opacity=0.3
  fre[0].style.transform=
   'scale(3) translate(-18%,66%) skew(22deg)'
 }
@@ -337,8 +338,9 @@ fc[0].onmouseout=()=>
  ears[0].style.transform='scale(1)'
  ears[1].style.transform='scale(1)'
  mth[3].style.background='#000'
- mth[4].style.opacity=0
+ mth[4].style.transform='scale(0)'
  fre[0].style.transform='scale(0)'
+  clearInterval(Ifc)
 }
 
 smk[0].onmouseover=()=>
