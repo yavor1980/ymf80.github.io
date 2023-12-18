@@ -75,7 +75,9 @@
  <div class=mth>
   <div class=mth>
    <div class=mth>
-    <div class=mth></div>
+    <div class=mth>
+	 <div class=mth></div>
+	</div>
    </div>
   </div> 
  </div>
@@ -95,11 +97,6 @@
   accompanied by radiation<br>
   in the visible range 
  </div>
-
-<div class=trnstn>transition</div>
-<div class=trnstn>enough?</div>
-<div class=trnstn>encrse intervl!</div>
-<div class=trnstn>delay event...</div>
 
 <script>
 fc=document.getElementsByClassName('fc')
@@ -216,11 +213,18 @@ mth[2].style.transform='rotate(-9deg)'
 	 
 mth[3].style.left=99+'%'	
 mth[3].style.top=0+'%'	
+mth[3].style.width=11+'%'
 mth[3].style.height=111+'%'	
-mth[3].style.width=11+'%'	
 mth[3].style.background=
  'radial-gradient(#070,#333)'
 		
+mth[4].style.left=337+'%'	
+mth[4].style.top=-1228+'%'	
+mth[4].style.width=1188+'%'
+mth[4].style.height=1118+'%'	
+mth[4].style.background='#000'
+mth[4].style.opacity=0
+
 smk[0].style.left=69+'%'
 smk[0].style.top=67+'%'  
 smk[0].style.width=11+'%'
@@ -270,30 +274,6 @@ fre[2].style.top='22%'
 fre[2].style.color='#f88'
 fre[2].style.transform='scale(0) '
 	 
-trnstn[0].style.left='44%'
-trnstn[0].style.top='8%'
-trnstn[0].style.color='#f00'
-trnstn[0].style.transform=
- 'scale(3.4) skew(22deg)'
-trnstn[0].style.cursor='pointer'
-	 
-trnstn[1].style.left='55%'
-trnstn[1].style.top='22%'
-trnstn[1].style.color='#f00'
-trnstn[1].style.transform='scale(0)'
-	 
-trnstn[2].style.left='55%'
-trnstn[2].style.top='33%'
-trnstn[2].style.color='#f00'
-trnstn[2].style.opacity=0
-trnstn[2].style.transform='scale(0)'
-	 
-trnstn[3].style.left='55%'
-trnstn[3].style.top='27%'
-trnstn[3].style.color='#f0f'
-trnstn[3].style.opacity=0 
-trnstn[3].style.transform='scale(0)'
- 
 bs=0 
 function cl()
 { 
@@ -310,14 +290,19 @@ function cl()
 }
   setInterval(()=>cl(), 2222)
  
-fc[0].onmouseover=()=>{   
- smk[2].style.opacity=0.4
- setInterval(()=>{
-  smk[2].style.transform=
-   'scale(1) translate(0,-55%)'
- },999)
+fc[0].onmouseover=()=>
+{   
  idbd.style.background=
   'radial-gradient(300px,#ff0,#777)'  
+ smk[0].style.transform='translate(-133%,-22%)' 
+ smk[2].style.opacity=0.4
+ setInterval(()=>{ 
+  mth[4].style.transform=
+   'scale('+(0.7+Math.random()/2)+')'
+  smk[0].style.transform='translate(0,0)'
+  smk[2].style.transform=
+   'scale(1) translate(0,-55%)'
+ },999) 
  fc[0].style.transform='scale(1.2)'
  fc[0].style.background=
   'radial-gradient(#eee,#f7f)'
@@ -330,10 +315,12 @@ fc[0].onmouseover=()=>{
  ears[0].style.transform='scale(1.3,1.4)'
  ears[1].style.transform='scale(1.3,1.4)'
  mth[3].style.background='#f00'
+ mth[4].style.opacity=0.3
  fre[0].style.transform=
   'scale(3) translate(-18%,66%) skew(22deg)'
 }
-fc[0].onmouseout=()=>{   
+fc[0].onmouseout=()=>
+{   
  smk[2].style.opacity=0
  smk[2].style.transform='scale(0)'
  idbd.style.background=
@@ -350,24 +337,28 @@ fc[0].onmouseout=()=>{
  ears[0].style.transform='scale(1)'
  ears[1].style.transform='scale(1)'
  mth[3].style.background='#000'
+ mth[4].style.opacity=0
  fre[0].style.transform='scale(0)'
 }
 
-smk[0].onmouseover=()=>{   
+smk[0].onmouseover=()=>
+{   
  smk[2].style.opacity=0.4
  smk[2].style.transform=
   'scale(1) translate(0,-55%)'
  idbd.style.background=
   'radial-gradient(300px,#ff0,#777)' 
 }  
-smk[0].onmouseout=()=>{   
+smk[0].onmouseout=()=>
+{   
  smk[2].style.opacity=0
  smk[2].style.transform='scale(0)'
  idbd.style.background=
   'radial-gradient(222px,#bb0,#666)'  
 }
 
-fre[1].onmouseover=()=>{   
+fre[1].onmouseover=()=>
+{   
  fre[1].style.transform=
   'scale(4) skew(22deg) translate(7%,44%)'
  fre[1].style.color='#990'
@@ -376,47 +367,13 @@ fre[1].onmouseover=()=>{
   'scale(2) skew(-11deg) translate(-7%,44%)'
  fre[2].style.opacity=1
 }  
-fre[1].onmouseout=()=>{   
+fre[1].onmouseout=()=>
+{   
  fre[1].style.transform='scale(3.6) skew(-22deg)'
  fre[1].innerHTML='flame'
  fre[1].style.color='#f00'
  fre[2].style.transform='scale(0)'
  fre[2].style.opacity=0
-}
-
-Itrn=0
-IItrn=0
-trnstn[0].onmouseover=()=>{   
- trnstn[0].style.transform=
-  'scale(4) skew(-22deg)'
- trnstn[0].style.color='#990'
-  trnstn[0].innerHTML='1000ms'
- Itrn=setTimeout(()=> 
- {
-  trnstn[1].style.transform='scale(3) '
-  trnstn[1].style.color='#ff0'
-  trnstn[2].style.transform='scale(3) '
-  trnstn[2].style.opacity=1
- },222) 
- IItrn=setTimeout(()=> 
- {
-  trnstn[3].style.transform='scale(5) '
-  trnstn[3].style.opacity=1
- },444)
-}  
-trnstn[0].onmouseout=()=>{     
- trnstn[0].style.transform=
-  'scale(3) skew(22deg)'
- trnstn[0].innerHTML='transition'
- trnstn[0].style.color='#f00'
- trnstn[1].style.transform='scale(0) '
- trnstn[1].style.color='#f00'
- trnstn[2].style.transform='scale(0) '
- trnstn[2].style.opacity=0
- trnstn[3].style.transform='scale(0) '
- trnstn[3].style.opacity=0  
-  clearInterval(Itrn) 
-  clearInterval(IItrn)
 }
 
 </script>
