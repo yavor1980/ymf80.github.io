@@ -8,7 +8,7 @@
 <style>
 #idbd
 {
- background:linear-gradient(#0f4,#0ff,#f42);
+ background:linear-gradient(#fb0,#0ff,#f42);
 }
 
 .btn
@@ -91,33 +91,32 @@
 </style>
 
 <button class=btn >danger</button>
-<button class=btn >instrctn</button>
 
 <div class=grnd>
  <div class=grnd></div>
-  <div class=grnd></div>
-  <div class=grnd></div>
+ <div class=grnd></div>
+ <div class=grnd></div>
 </div>
 
 <div class=hd>
+ <div class=hd>
+  <div class=hd>
+   <div class=gl><div class=zr></div></div>
+   <div class=gl><div class=zr></div></div>
+   <div class=mth>
+    <div class=mth></div>
+    <div class=mth></div>
+   </div>
+  </div>
+ </div>
  <div class=pw></div>
  <div class=pw></div>
  <div class=pw></div>
  <div class=pw><div class=pw></div></div>
- <div class=hd>
-  <div class=hd>
-   <div class=gl ><div class=zr ></div></div>
-   <div class=gl ><div class=zr ></div></div>
-   <div class=mth >
-    <div class=mth ></div>
-    <div class=mth ></div>
-  </div>
- </div>
-</div>
-
-<div class=agrss >Agressive one</div>
-<div class=agrss >Aggression is vectorless</div>
-<div class=agrss >Emotional<br> irritation</div>
+ 
+<div class=agrss>Agressive one</div>
+<div class=agrss>Aggression is vectorless</div>
+<div class=agrss>Emotional<br> irritation</div>
 
 <div class=alg > 
  while(true)<br>
@@ -137,7 +136,6 @@
 <div class=alg >
  Inserted blocks!
 </div>
-
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -160,13 +158,7 @@ btn[0].style.borderTopLeftRadius=33+'%'
 btn[0].style.borderTopRightRadius=33+'%'
 btn[0].style.borderBottomLeftRadius=111+'%'
 btn[0].style.borderBottomRightRadius=111+'%'
- 
-btn[1].style.left=79+'%'
-btn[1].style.top=18+'%'
-btn[1].style.color='#0b0'
-btn[1].style.background='#b00'  
-btn[1].style.borderRadius=33+'%'
-      
+
 grnd[1].style.left=0+'%'	  
 grnd[1].style.bottom=0+'%'
 grnd[1].style.width=100+'%'
@@ -190,7 +182,7 @@ grnd[2].style.opacity=0.4
 grnd[3].style.left=55+'%'	  
 grnd[3].style.bottom=0+'%'
 grnd[3].style.width=35+'%'
-grnd[3].style.height=194+'%'
+grnd[3].style.height=294+'%'
 grnd[3].style.background=
  'radial-gradient(#222,#822)'  
 grnd[3].style.borderTopLeftRadius=38+'%'	  
@@ -230,7 +222,7 @@ inn(pw,1, 33,48, 33,55,
  pw[1].style.zIndex=-1
 inn(pw,2, 66,88, 33,22,
  'radial-gradient(#330,#222)',55,55,5,5)
-inn(pw,3, 44,1, 11,8,
+inn(pw,3, 44,-1, 11,11,
  'radial-gradient(#f80,#555)',-77,-77,33,33)
 inn(pw,4, 33,1, 33,99,
  'radial-gradient(#f80,#555)',77,77,9,9)
@@ -300,7 +292,7 @@ function clk()
  pw[3].style.background=
   'radial-gradient(#fb0,#555)'
  pw[3].style.transform=
-  'scale(1.4,3) translate(0,-44%)'
+  'scale(1.4,2) translate(0,-44%)'
  pw[4].style.transform=
   'scale(1.4,1.4) translate(0,-11%)'
  btn[0].innerHTML='quiet'
@@ -328,32 +320,6 @@ function clk()
 btn[0].onmousedown=()=>
 { 
  clk()   
-}
-
-btn[1].onmouseover=()=>
-{
- alg[2].style.transform=
-  'scale(3) translate(22%,0)'
- alg[3].style.transform=
-  'scale(4) translate(-22%,-200%) skew(22deg)'
-}
-btn[1].onmouseout=()=>
-{
- alg[2].style.transform='scale(0)'
- alg[3].style.transform='scale(0)'
-}
-btn[1].onclick=()=>
-{ 
- alg[0].style.transform=
-  'scale(3) translate(22%,-22%)'
- alg[1].style.transform=
-  'scale(2) translate(44%,-88%)'
- btn[1].style.opacity=0
- setTimeout(()=>{
-  alg[0].style.transform='scale(0)'
-  alg[1].style.transform='scale(0)'
-  btn[1].style.opacity=1 
- },   2222)
 }
 	 
 hd[2].onmouseover=()=>
