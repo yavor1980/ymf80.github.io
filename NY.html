@@ -1,0 +1,180 @@
+<DOCTYPE html>
+<html>
+<body id=idbd>
+<style>
+#idbd
+{ 
+ background:linear-gradient(#222,#00c);
+}
+
+.crstmtr
+{ 
+ position:absolute; 
+ transition:1s;
+ cursor:pointer;
+ width:44%;
+ height:11%;
+ border-radius:55%;
+ opacity:0.9;
+}
+
+.snwmn
+{ 
+ position:absolute; 
+ transition:1s;
+ cursor:pointer;
+ width:33%;
+ height:33%;
+ border-radius:55%;
+}
+.smint
+{ 
+ position:absolute; 
+ transition:1s;
+ background:#000;
+}
+
+
+</style>
+
+<div class=crstmtr>
+ <div class=crstmtr></div>
+ <div class=crstmtr></div>
+ <div class=crstmtr></div>
+ <div class=crstmtr></div>
+ <div class=crstmtr></div>
+ <div class=crstmtr></div>
+  <div class=crstmtr></div>
+ <div class=crstmtr></div>
+</div>
+
+<div class=snwmn>
+ <div class=snwmn>
+  <div class=smint></div>
+  <div class=smint></div>
+ </div>
+ <div class=snwmn>
+  <div class=smint></div>
+  <div class=smint></div>
+ </div>
+ <div class=snwmn></div>
+</div>
+
+<script>
+crstmtr=document.getElementsByClassName('crstmtr') 
+snwmn=document.getElementsByClassName('snwmn') 
+smint=document.getElementsByClassName('smint')
+
+crstmtr[0].style.left=22+'%'
+crstmtr[0].style.top=16+'%'
+crstmtr[0].style.width=22+'%'
+crstmtr[0].style.height=55+'%'
+
+crstmtr[1].style.left=11+'%'
+crstmtr[1].style.top=11+'%'
+crstmtr[1].style.background=
+ 'radial-gradient(#040,#090)'
+crstmtr[1].style.transform='scale(1.4,1.2)' 
+
+crstmtr[2].style.left=11+'%'
+crstmtr[2].style.top=21+'%'
+crstmtr[2].style.background=
+ 'radial-gradient(#040,#090)'
+crstmtr[2].style.transform='scale(1.8,1.3)' 
+
+crstmtr[3].style.left=11+'%'
+crstmtr[3].style.top=31+'%'
+crstmtr[3].style.background=
+ 'radial-gradient(#040,#090)'
+crstmtr[3].style.transform='scale(2.2,1.4)' 
+
+crstmtr[4].style.left=11+'%'
+crstmtr[4].style.top=41+'%'
+crstmtr[4].style.background=
+ 'radial-gradient(#040,#090)'
+crstmtr[4].style.transform='scale(2.6,1.5)' 
+
+crstmtr[5].style.left=11+'%'
+crstmtr[5].style.top=51+'%'
+crstmtr[5].style.background=
+ 'radial-gradient(#040,#090)'
+crstmtr[5].style.transform='scale(3,1.6)' 
+
+crstmtr[6].style.left=11+'%'
+crstmtr[6].style.top=61+'%'
+crstmtr[6].style.background=
+ 'radial-gradient(#040,#090)'
+crstmtr[6].style.transform='scale(3.4,1.7)' 
+
+crstmtr[7].style.left=11+'%'
+crstmtr[7].style.top=71+'%'
+crstmtr[7].style.background=
+ 'radial-gradient(#040,#090)'
+crstmtr[7].style.transform='scale(3.8,1.8)' 
+
+crstmtr[8].style.left=11+'%'
+crstmtr[8].style.top=81+'%'
+crstmtr[8].style.background=
+ 'radial-gradient(#040,#090)'
+crstmtr[8].style.transform='scale(4.2,1.9)' 
+
+snwmn[0].style.left=66+'%'
+snwmn[0].style.top=33+'%'
+snwmn[0].style.width=22+'%'
+snwmn[0].style.height=44+'%'
+
+snwmn[1].style.left=11+'%'
+snwmn[1].style.top=1+'%'
+snwmn[1].style.background=
+ 'radial-gradient(#888,#bbb)'
+snwmn[1].style.transform='scale(1.4,1.2)' 
+snwmn[1].style.zIndex=2
+
+snwmn[2].style.left=11+'%'
+snwmn[2].style.top=31+'%'
+snwmn[2].style.background=
+ 'radial-gradient(#888,#bbb)'
+snwmn[2].style.transform='scale(1.8,1.3)'
+snwmn[2].style.zIndex=1 
+
+snwmn[3].style.left=11+'%'
+snwmn[3].style.top=69+'%'
+snwmn[3].style.background=
+ 'radial-gradient(#888,#bbb)'
+snwmn[3].style.transform='scale(2.2,1.4)' 
+
+smint[0].style.left=27+'%'
+smint[0].style.top=29+'%'
+smint[0].style.width=9+'%'
+smint[0].style.height=9+'%'
+smint[0].style.borderRadius=55+'%'
+
+smint[1].style.left=71+'%'
+smint[1].style.top=29+'%'
+smint[1].style.width=9+'%' 
+smint[1].style.height=9+'%'
+smint[1].style.borderRadius=55+'%'
+
+crstmtr[0].onmouseover=()=>
+{
+ crstmtr[0].style.transform='scale(1.1)'
+} 
+crstmtr[0].onmouseout=()=>
+{
+ crstmtr[0].style.transform='scale(1)'
+}
+
+snwmn[0].onmouseover=()=>
+{
+ snwmn[0].style.transform='scale(1.1)'
+} 
+snwmn[0].onmouseout=()=>
+{
+ snwmn[0].style.transform='scale(1)'
+}
+
+ 
+</script>
+</body>
+
+</html>
