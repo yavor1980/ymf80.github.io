@@ -26,63 +26,63 @@ body
 {
  position:absolute;
  transition:1s;
- text-align:center;
+ color:#f00;
  transform:scale(0);
 }
 .bfrz
 {
  position:absolute;
  transition:1s;
- text-align:center;
+ color:#e0e;
  transform:scale(0);
 }
 .cfrz
 {
  position:absolute;
  transition:1s;
- text-align:center;
+ color:#f00;
  transform:scale(0);
 }
 .dfrz
 {
  position:absolute;
  transition:1s;
- text-align:center;
+  color:#e00;
  transform:scale(0);
 }
 .efrz
 {
  position:absolute;
  transition:1s;
- text-align:center;
+  color:#d0d;
  transform:scale(0);
 }
 .ffrz
 {
  position:absolute;
  transition:1s;
- text-align:center;
+  color:#330;
  transform:scale(0);
 }
 .hfrz
 {
  position:absolute;
  transition:1s;
- text-align:center;
+ color:#f00;
  transform:scale(0);
 }
 .ifrz
 {
  position:absolute;
  transition:1s;
- text-align:center;
+ color:#e00;
  transform:scale(0);
 }
 .pfrz
 {
  position:absolute;
  transition:1s;
- text-align:center;
+ color:#d00;
  transform:scale(0);
 }
 
@@ -182,8 +182,8 @@ frz=[
 
 for(i=0;i<9;i++)
 { 
- ltra[i].style.left=11+Math.random()*77+'%'
- ltra[i].style.top=11+Math.random()*77+'%'
+ ltra[i].style.left=22+Math.random()*66+'%'
+ ltra[i].style.top=4+Math.random()*88+'%'
  ltra[i].style.color='#'+Math.round(Math.random()*9)+
   Math.round(Math.random()*9)+Math.round(Math.random()*9)
 }
@@ -192,8 +192,8 @@ function init(arr)
 {
  for(i=0;i<arr.length;i++)
  { 
-  arr[i].style.left=11+i*7+'%'
-  arr[i].style.top=11+i*7+'%'
+  arr[i].style.left=(13+i*3)+'%'
+  arr[i].style.top=(13+i*5)+'%'
  }
 }
  init(afrz),init(bfrz),init(cfrz),init(dfrz),
