@@ -85,6 +85,48 @@ body
  color:#d00;
  transform:scale(0);
 }
+.qfrz
+{
+ position:absolute;
+ transition:1s;
+ color:#900;
+ transform:scale(0);
+}
+.rfrz
+{
+ position:absolute;
+ transition:1s;
+ color:#f00;
+ transform:scale(0);
+}
+.sfrz
+{
+ position:absolute;
+ transition:1s;
+ color:#e00;
+ transform:scale(0);
+}
+.tfrz
+{
+ position:absolute;
+ transition:1s;
+ color:#a00;
+ transform:scale(0);
+}
+.ufrz
+{
+ position:absolute;
+ transition:1s;
+ color:#f00;
+ transform:scale(0);
+}
+.vfrz
+{
+ position:absolute;
+ transition:1s;
+ color:#d00;
+ transform:scale(0);
+}
 
 </style>
 
@@ -97,6 +139,12 @@ body
 <div class=ltra>I</div>
 <div class=ltra>H</div>
 <div class=ltra>P</div>
+<div class=ltra>Q</div>
+<div class=ltra>R</div>
+<div class=ltra>S</div>
+<div class=ltra>T</div>
+<div class=ltra>U</div>
+<div class=ltra>V</div>
 
 <div class=afrz>Ab absurdo</div>
 <div class=afrz>Ab igne ignem </div>
@@ -154,15 +202,68 @@ body
 
 <div class=ifrz>Igni et ferro</div>
 <div class=ifrz>In infinitum</div>
-<div class=ifrz>In infinitum</div>
 <div class=ifrz>Injuria realis</div>
 <div class=ifrz>Injuria verbalis </div>
 <div class=ifrz>In memoriam</div>
 <div class=ifrz>In partem salari</div>
 
+<div class=pfrz>Pacta sunt servanda</div>
 <div class=pfrz>Panem et circenses</div>
+<div class=pfrz>Pecunia non olet</div>
+<div class=pfrz>Per aspera ad astra</div>
+<div class=pfrz>Per fas et nefas</div>
+<div class=pfrz>Peregrinatio est vita.</div>
+<div class=pfrz>Periculum est in mora</div>
+<div class=pfrz>Primum noli nocere</div> 
+<div class=pfrz>Primus inter pares</div>
+<div class=pfrz>Pro et contra</div>
 
-     
+<div class=qfrz>Qualis artifex pereo</div>
+<div class=qfrz>Qualis vita, finis ita</div>	
+<div class=qfrz>Qui quaerit, reperit</div>
+<div class=qfrz>Qui tacet, consentire videtur</div>	
+<div class=qfrz>Quilibet fortunae suae faber</div>
+<div class=qfrz>Quot homines, tot sententiae</div>		 
+	 
+<div class=rfrz>Repetitio est mater studiorum</div>	 
+<div class=rfrz>Roma locuta, causa finita</div>
+	 
+<div class=sfrz>Salus populi suprema lex</div>	 
+<div class=sfrz>Satur venter non studet libenter</div>	 
+<div class=sfrz>Scientia potentia est</div> 
+<div class=sfrz>Sic transit gloria mundi</div>
+<div class=sfrz>Sic itur ad astra</div> 
+<div class=sfrz>Si vis pacem, para bellum</div>
+<div class=sfrz>Silentium est aurum</div> 
+<div class=sfrz>Silentium videtur confessio</div>
+<div class=sfrz>Suum cuique</div>
+
+<div class=tfrz>Tabula rasa</div>
+<div class=tfrz>Tempus edax rerum</div>
+<div class=tfrz>Tempus curat omnia</div>
+<div class=tfrz>Tertium non datur</div>
+<div class=tfrz>Totum revolutum</div>
+
+<div class=ufrz>Ubi concordia, ibi victoria</div>
+<div class=ufrz>Ubi emolumentum, ibi onus</div>
+<div class=ufrz>Ubi mel, ibi fel</div>
+<div class=ufrz>Unus dies gradus est vitae</div>
+<div class=ufrz>Utile dulce miscere</div>
+
+<div class=vfrz>Vana sine viribus ira est</div>
+<div class=vfrz>Vince in bono malum</div>
+<div class=vfrz>Veni, vidi, vici</div>
+<div class=vfrz>Verba docent, exempla trahunt</div>
+<div class=vfrz>Verba volant, scripta manent</div>
+<div class=vfrz>Veritas temporis filia</div>
+<div class=vfrz>Vis unita fortior</div>
+<div class=vfrz>Vita sine libertate - nihil</div>
+<div class=vfrz>Vivere est cogitare</div>
+<div class=vfrz>Volens nolens</div>
+<div class=vfrz>Volo, non valeo</div>
+<div class=vfrz>Voluntas est superior intellectu</div>
+<div class=vfrz>Vox populi, vox dei</div>
+
 <script>
 ltra=document.getElementsByClassName('ltra')
 
@@ -175,15 +276,23 @@ ffrz=document.getElementsByClassName('ffrz')
 ifrz=document.getElementsByClassName('ifrz')
 hfrz=document.getElementsByClassName('hfrz')
 pfrz=document.getElementsByClassName('pfrz')
+qfrz=document.getElementsByClassName('qfrz')
+rfrz=document.getElementsByClassName('rfrz')
+sfrz=document.getElementsByClassName('sfrz')
+tfrz=document.getElementsByClassName('tfrz')
+ufrz=document.getElementsByClassName('ufrz')
+vfrz=document.getElementsByClassName('vfrz')
 
 frz=[
-  afrz,bfrz,cfrz,dfrz,efrz,ffrz,ifrz,hfrz,pfrz
+  afrz, bfrz, cfrz, dfrz, efrz, ffrz, ifrz,
+  hfrz, pfrz, qfrz, rfrz, sfrz, tfrz, ufrz, vfrz,
+  
  ]
 
-for(i=0;i<9;i++)
+for(i=0;i<ltra.length;i++)
 { 
  ltra[i].style.left=22+Math.random()*66+'%'
- ltra[i].style.top=4+Math.random()*88+'%'
+ ltra[i].style.top=4+Math.random()*85+'%'
  ltra[i].style.color='#'+Math.round(Math.random()*9)+
   Math.round(Math.random()*9)+Math.round(Math.random()*9)
 }
@@ -196,16 +305,29 @@ function init(arr)
   arr[i].style.top=(13+i*5)+'%'
  }
 }
- init(afrz),init(bfrz),init(cfrz),init(dfrz),
- init(efrz),init(ffrz),init(hfrz),init(ifrz),
- init(pfrz)
+ init(afrz), init(bfrz), init(cfrz), init(dfrz),
+ init(efrz), init(ffrz), init(hfrz), init(ifrz),
+ init(pfrz), init(qfrz), init(rfrz), init(sfrz), 
+ init(sfrz), init(tfrz), init(ufrz), init(vfrz)
+
+f=()=>
+{
+ for(i=0;i<ltra.length;i++)
+ {
+  ltra[i].style.transform='scale('+
+   (4+2*Math.random())+')' 
+ }
+}
+
+Ifrz=setInterval(f, 1111)
 
 function mv(n)
 {
  ltra[n].onmouseover=()=>
  { 
-  for(i=0;i<9;i++)
+  for(i=0;i<ltra.length;i++)
   {
+   clearInterval(Ifrz)
    ltra[i].style.opacity=0
    for(j=0;j<frz[n].length;j++)
     frz[n][j].style.transform='scale(2)'
@@ -214,14 +336,16 @@ function mv(n)
  }
  ltra[n].onmouseout=()=>
  { 
-  for(i=0;i<9;i++)
+  Ifrz=setInterval(f, 1111)
+  for(i=0;i<ltra.length;i++)
    ltra[i].style.opacity=1
    for(j=0;j<frz[n].length;j++)
     frz[n][j].style.transform='scale(0)'
  }
 }
- mv(0),mv(1),mv(2),mv(3),mv(4),
- mv(5),mv(6),mv(7),mv(8)
+ mv(0), mv(1), mv(2), mv(3), mv(4), mv(5), mv(6),
+ mv(7), mv(8), mv(9), mv(10), mv(11), mv(12), mv(13),
+ mv(14)
 
 //
 </script>
