@@ -262,21 +262,31 @@ smint[5].style.top=-45+'%'
 smint[5].style.transform='scale(0)'
 smint[5].style.zIndex=3
 
+f=()=>
+{
+ crstint[2].style.background=
+   'radial-gradient(#'+Math.round(Math.random()*8)+
+   '9f,#b0b)' 
+ crstint[3].style.background=
+  'radial-gradient(#f'+Math.round(Math.random()*8)+
+  'f,#b0b)' 
+}
+
+Itr=setInterval(f, 999) 
+
 crstmtr[0].onmouseover=()=>
 {
+  clearInterval(Itr)
  crstmtr[0].style.transform='scale(1.1)'
  crstint[1].style.background=
   'radial-gradient(#ff0,#bb0)'
-  crstint[2].style.background=
-  'radial-gradient(#f9f,#b0b)' 
- crstint[3].style.background=
-  'radial-gradient(#f8f,#b0b)'   
  crstint[4].style.color='#f00' 
  crstint[4].style.transform=
   'scale(4) translate(88%,-66%) skew(11deg) '
 } 
 crstmtr[0].onmouseout=()=>
 {
+  Itr=setInterval(f, 999)
  crstmtr[0].style.transform='scale(1)'
  crstint[1].style.background=
   'radial-gradient(#990,#770)'
