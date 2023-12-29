@@ -170,7 +170,7 @@ crstint[2].style.top=59+'%'
 crstint[2].style.width=33+'%'
 crstint[2].style.height=25+'%'
 crstint[2].style.background=
- 'radial-gradient(#909,#707)'
+ 'radial-gradient(33px,#eee,#707)'
 crstint[2].style.borderTopLeftRadius=44+'%' 
 crstint[2].style.borderTopRightRadius=44+'%'
 crstint[2].style.borderBottomLeftRadius=55+'%' 
@@ -180,7 +180,7 @@ crstint[3].style.left=1+'%'
 crstint[3].style.top=33+'%'
 crstint[3].style.width=16+'%'
 crstint[3].style.height=44+'%'
-crstint[3].style.border='8px ridge #fd0'
+crstint[3].style.border='8px ridge #f80'
 crstint[3].style.opacity=0.6
 crstint[3].style.borderTopLeftRadius=55+'%' 
 crstint[3].style.borderTopRightRadius=44+'%'
@@ -264,9 +264,8 @@ smint[5].style.zIndex=3
 f=()=>
 {
  crstint[2].style.background=
-   'radial-gradient(#'+Math.round(Math.random()*8)+
-   '9f,#b0b)' 
- crstint[3].style.border='8px ridge #f9'
+   'radial-gradient('+Math.round(Math.random()*44)+
+   'px,#eee,#b0b)' 
 }
 
 crstmtr[0].onmouseover=()=>
@@ -275,6 +274,7 @@ crstmtr[0].onmouseover=()=>
  crstmtr[0].style.transform='scale(1.1)'
  crstint[1].style.background=
   'radial-gradient(#ff0,#bb0)'
+ crstint[3].style.border='8px ridge #ff0' 
  crstint[4].style.color='#f00' 
  crstint[4].style.transform=
   'scale(4) translate(88%,-66%) skew(11deg) '
@@ -287,6 +287,7 @@ crstmtr[0].onmouseout=()=>
   'radial-gradient(#990,#770)'
  crstint[2].style.background=
   'radial-gradient(#909,#707)' 
+  crstint[3].style.border='8px ridge #f80' 
  crstint[4].style.color='#000'  
  crstint[4].style.transform='scale(0)' 
 }
