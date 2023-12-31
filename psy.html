@@ -10,7 +10,6 @@ body
 .psch
 {
  position:absolute;
- color:#fff;
  transition:1s;
  text-align:center;
  font-size:1.7em;
@@ -80,11 +79,10 @@ body
  
 <div class=vctr>VCTR</div>
  <div class=vctr></div>
-<div class=vctr>forget<br>&nbsp &nbsp classic!</div>
- 
+
 <div class=phlsph>outlook</div>
-<div class=phlsph>materialistic</div>
-<div class=phlsph>idealistic</div>
+ <div class=phlsph>materialistic</div>
+ <div class=phlsph>idealistic</div>
  <div class=phlsph></div>
 
 <script>
@@ -101,6 +99,7 @@ psch[0].style.width=22+'%'
 psch[0].style.height=11+'%'
 psch[0].style.color='#bf0'
 psch[0].style.background='#777'
+psch[0].style.border='4px ridge #333'
 psch[0].style.cursor='pointer'
  
 psch[1].style.left=40+'%'
@@ -109,6 +108,7 @@ psch[1].style.width=22+'%'
 psch[1].style.height=11+'%'
 psch[1].style.color='#bf0'
 psch[1].style.background='#999'
+psch[1].style.border='4px ridge #333'
 psch[1].style.cursor='pointer'
   
 psch[2].style.left=64+'%'
@@ -117,6 +117,7 @@ psch[2].style.width=22+'%'
 psch[2].style.height=11+'%'
 psch[2].style.color='#bf0'
 psch[2].style.background='#666'
+psch[2].style.border='4px ridge #333'
 psch[2].style.cursor='pointer'
   
 tmprm[0].style.left=22+'%'
@@ -124,6 +125,7 @@ tmprm[0].style.top=28+'%'
 tmprm[0].style.width=22+'%'
 tmprm[0].style.height=15+'%'
 tmprm[0].style.background='#500'
+tmprm[0].style.border='18px ridge #050'
 tmprm[0].style.color='#ff0'
 tmprm[0].style.textAlign='center'
 tmprm[0].style.fontSize='2em'
@@ -154,6 +156,7 @@ bhvr[0].style.top=28+'%'
 bhvr[0].style.width=22+'%'
 bhvr[0].style.height=15+'%'
 bhvr[0].style.background='#005' 
+bhvr[0].style.border='18px ridge #040'
 bhvr[0].style.color='#0ff'
 bhvr[0].style.fontSize='2em'
 bhvr[0].style.cursor='pointer'
@@ -206,19 +209,14 @@ vctr[0].style.cursor='pointer'
   
 vctr[1].style.left=8+'%'
 vctr[1].style.top=39+'%'
-vctr[1].style.color='#808'
+vctr[1].style.color='#330'
 vctr[1].style.transform='scale(0)'
-  
-vctr[2].style.left=8+'%'
-vctr[2].style.top=39+'%'
-vctr[2].style.color='#800'
-vctr[2].style.transform='scale(0)'
  
-phlsph[0].style.left=8+'%'
+phlsph[0].style.left=11+'%'
 phlsph[0].style.top=55+'%'
 phlsph[0].style.color='#800'
 phlsph[0].style.cursor='pointer'
-phlsph[0].style.transform='scale(3)'
+phlsph[0].style.transform='scale(4) skew(22deg)'
 
 phlsph[1].style.left=18+'%'
 phlsph[1].style.top=55+'%'
@@ -266,7 +264,7 @@ psch[0].onmouseout=()=>
  psch[0].style.height='11%'
  psch[0].style.color='#bf0'
  psch[0].style.background='#777'
- psch[0].style.border='none'
+ psch[0].style.border='4px ridge #333'
   psch[0].innerHTML='Object of psychology'
 }
 
@@ -287,7 +285,7 @@ psch[1].onmouseout=()=>
  psch[1].style.height='11%'
  psch[1].style.color='#bf0'
  psch[1].style.background='#999'
- psch[1].style.border='none'
+ psch[1].style.border='4px ridge #333'
  psch[1].style.textAlign='center'
  psch[1].style.zIndex=0
   psch[1].innerHTML='Tasks of psychology'
@@ -310,7 +308,7 @@ psch[2].onmouseout=()=>
  psch[2].style.height='11%'
  psch[2].style.color='#bf0'
  psch[2].style.background='#666'
-  psch[2].style.border='none'
+ psch[2].style.border='4px ridge #333'
  psch[2].style.textAlign='center'
  psch[2].style.zIndex=0
   psch[2].innerHTML='Methods of psychology'
@@ -322,7 +320,10 @@ tmprm[0].onmouseover=()=>
  tmprm[0].style.height='22%'
  tmprm[0].style.background='#900'
  tmprm[0].style.textAlign='left'
- tmprm[0].style.border='5px ridge #090'
+ tmprm[0].style.borderTop='5px ridge #090'
+ tmprm[0].style.borderBottom='5px ridge #090'
+ tmprm[0].style.borderLeft='5px ridge #060'
+ tmprm[0].style.borderRight='5px ridge #060'
   tmprm[0].innerHTML=
    '-level of mental <br>&nbsp activity <br>&nbsp'+  
    '-mental <br>&nbsp condition'
@@ -341,7 +342,7 @@ tmprm[0].onmouseout=()=>
  tmprm[0].style.height='15%'
  tmprm[0].style.background='#500'
   tmprm[0].style.textAlign='center'
- tmprm[0].style.border='none'
+ tmprm[0].style.border='18px ridge #050'
  tmprm[0].style.zIndex=0
   tmprm[0].innerHTML='Temperament'
  tmprm[1].style.transform='scale(0)'
@@ -354,7 +355,10 @@ bhvr[0].onmouseover=()=>
 {        
  bhvr[0].style.transform='scale(1.4)'
  bhvr[0].style.background='#009'
- bhvr[0].style.border='5px groove #0d0'
+ bhvr[0].style.borderTop='5px groove #0d0'
+ bhvr[0].style.borderBottom='5px groove #0d0'
+ bhvr[0].style.borderLeft='5px groove #090'
+ bhvr[0].style.borderRight='5px groove #090'
   bhvr[0].innerHTML='Orientation of consciousness' 
  bhvr[1].style.transform=
   'scale(4) translate(-99%,99%) skew(33deg)'
@@ -367,7 +371,7 @@ bhvr[0].onmouseout=()=>
 {  
  bhvr[0].style.transform='scale(1)'
  bhvr[0].style.background='#005'
- bhvr[0].style.border='none'
+ bhvr[0].style.border='18px ridge #040'
   bhvr[0].innerHTML='Behavioral type'
  bhvr[1].style.transform='scale(0)'
  bhvr[2].style.transform='scale(0)'
@@ -443,33 +447,31 @@ dfn[2].onmouseout=()=>
 }	
 
 Idfn=0, bdfn3=0
-adfn3=['intractve','eductn']
+adfn3=['interact','education']
 vctr[0].onmouseover=()=>
 {        
  vctr[0].style.transform='scale(4)'
  vctr[0].style.color='#666'
- vctr[1].style.transform=
-  'scale(2.4) translate(99%,99%)'
- vctr[2].style.transform=
-  'scale(3) translate(144%,105%) skew(14deg)' 
  Idfn=setInterval(()=>{ 
-  if(bdfn3)
-   vctr[1].innerHTML=adfn3[1]
-    else
-   vctr[1].innerHTML=adfn3[0]
+  if(bdfn3){
+   vctr[1].style.transform=
+    'scale(5) translate(99%,211%) skew(11deg)'
+	vctr[1].innerHTML=adfn3[1]
+  }else{
+    vctr[1].style.transform=
+     'scale(5) translate(99%,211%) skew(-11deg'
+	 vctr[1].innerHTML=adfn3[0]
+   }
 	bdfn3=!bdfn3
-   },999)
+   }, 999)
 }	  
 vctr[0].onmouseout=()=>
 {  
  vctr[0].style.transform='scale(3)'
  vctr[0].style.color='#0bb'
  vctr[1].style.transform='scale(0)'
-   vctr[1].innerHTML=adfn3[1]
-   clearInterval(Idfn)
-  bdfn=0
-  vctr[1].innerHTML=adfn3[0]
- vctr[2].style.transform='scale(0)'
+  vctr[1].innerHTML=''
+  clearInterval(Idfn)
 }
 
 phlsphI=0
@@ -477,7 +479,7 @@ bphlsph=0
 phlsph[0].onmouseover=()=>
 {  
  phlsph[0].style.transform=
-  'scale(4) translate(22%,0)'
+  'scale(5) translate(22%,0) skew(-22deg)'
  phlsph[0].style.color='#b00'
  phlsph[1].style.transform=
   'scale(5) translate(66%,-44%)'
@@ -496,7 +498,8 @@ phlsph[0].onmouseover=()=>
 }
 phlsph[0].onmouseout=()=>
 {  
- phlsph[0].style.transform='scale(3)'
+ phlsph[0].style.transform=
+  'scale(4) skew(22deg)'
  phlsph[0].style.color='#800'
  phlsph[1].style.transform='scale(0)'
  phlsph[2].style.transform='scale(0)'
