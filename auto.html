@@ -160,14 +160,15 @@ whl[3].style.border='8px ridge #900'
 whl[4].style.left=-3+'%'
 whl[4].style.top=55+'%'  
 whl[4].style.width=106+'%'
-whl[4].style.height=44+'%'
+whl[4].style.height=40+'%'
 whl[4].style.background=
  'radial-gradient(#ff0,#555)'
+whl[4].style.borderBottom='36px ridge #b00' 
 whl[4].style.borderTopLeftRadius=33+'%'
 whl[4].style.borderTopRightRadius=33+'%' 
 whl[4].style.borderBottomLeftRadius=7+'%'
-whl[4].style.borderBottomRightRadius=7+'%'   
-	 
+whl[4].style.borderBottomRightRadius=7+'%' 
+  	 
 fr[0].style.left=6+'%'
 fr[0].style.top=33+'%'  
 fr[0].style.width=22+'%'
@@ -188,7 +189,9 @@ fr[2].style.width=29+'%'
 fr[2].style.height=40+'%'
 fr[2].style.background='#777'
 fr[2].style.borderRadius=14+'%'	 
-	 
+fr[2].style.fontSize='3em'
+fr[2].style.textAlign='center'
+	  
 fr[3].style.left=10+'%'
 fr[3].style.top=4+'%'
 fr[3].style.width=80+'%'
@@ -300,11 +303,9 @@ whl[0].onmouseover=()=>
   'radial-gradient(#ff0,#f00)'
  fr[1].style.background=
   'radial-gradient(#ff0,#f00)'
- Iwhl0=setInterval(()=>{	
-   whl[3].style.background=
-    'radial-gradient('+Math.round(Math.random()*8)+
-    'deg,#888,#000)'
- }, 999)
+ fr[2].style.background='#bbb'
+
+  fr[2].innerHTML='0000'
  frz[1].style.transform=
   'scale(3) translate(-777%,-199%)'
  frz[2].style.transform=
@@ -318,16 +319,17 @@ whl[0].onmouseover=()=>
 }
 whl[0].onmouseout=()=>
 {
- fr[0].style.background='#f00'
- fr[1].style.background='#f00'
  whl[3].style.background=
   'radial-gradient(#888,#000)'
+ fr[0].style.background='#f00'
+ fr[1].style.background='#f00'
+ fr[2].style.background='#777'
+  fr[2].innerHTML=''
  frz[1].style.transform='scale(0)'
  frz[2].style.transform='scale(0)'
  frz[3].style.transform='scale(0)'
  frz[4].style.transform='scale(0)'
- frz[5].style.transform='scale(0)'
-   clearInterval(Iwhl0)			
+ frz[5].style.transform='scale(0)'		
 }
 
 </script>
