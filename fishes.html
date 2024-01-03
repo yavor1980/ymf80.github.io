@@ -35,10 +35,6 @@
  position:absolute; 
  transition:2s;
  border-radius:55%;
- left:22%;
- top:33%;
- width:11%;
- height:18%;
  cursor:pointer;
 }
 .fc
@@ -99,7 +95,7 @@
   <div class=bbl></div>
   <div class=bbl></div>
  </div>
- <div class=fsh> </div>
+ <div class=fsh></div>
 </div>
 <div class=fsh>floating fish</div>
 
@@ -112,13 +108,6 @@
 <div class=prgr>button</div>
 <div class=prgr>function</div>
  
-<div class=st>
- dynamic<br> site
-</div>
-<div class=st>
- php<br> python
-</div>
- 
 <div class=zn>
  <b ><</b>&nbsp &nbsp &nbsp &nbsp &nbsp <b>></b>
 </div>
@@ -130,8 +119,12 @@ fc=document.getElementsByClassName('fc')
 wtr=document.getElementsByClassName('wtr')
 prgr=document.getElementsByClassName('prgr')
 bbl=document.getElementsByClassName('bbl')
-st=document.getElementsByClassName('st')
 zn=document.getElementsByClassName('zn')
+ 
+fsh[0].style.left='22%'
+fsh[0].style.top='22%'
+fsh[0].style.width='11%'
+fsh[0].style.height='34%'
  
 fsh[1].style.left='22%'
 fsh[1].style.top='22%'
@@ -145,7 +138,7 @@ fsh[2].style.top='11%'
 fsh[2].style.width='22%'
 fsh[2].style.height='111%'
 fsh[2].style.background=
- 'radial-gradient(#440,#f70)'
+ 'radial-gradient(#440,#880)'
 fsh[2].style.zIndex=-1
 
 fsh[3].style.left='22%'
@@ -242,15 +235,53 @@ bbl[2].style.background=
  'radial-gradient(#009,#fff)'
 bbl[2].style.transform='scale(0)'
 
-st[0].style.left='9%'
-st[0].style.top='66%'
-st[0].style.transform='scale(3) '
-st[0].style.opacity=0.2
-
-st[1].style.left='22%'
-st[1].style.top='77%'
-st[1].style.color='#900'
-st[1].style.transform='scale(0) '
+idb.onmouseover=()=>
+{
+ idb.style.transform='scale(1.2)'
+} 
+idb.onmouseout=()=>
+{
+ idb.style.transform='scale(1)'
+}
+idb.onclick=()=>
+{
+ idb.style.transform='scale(0)'
+ fsh[0].style.transform='scale(1.3,1)'
+ fsh[3].style.color='#f00'
+ fsh[3].style.transform=
+  'scale(3) translate(55%,-111%) skew(-22deg)'
+ fc[0].style.background=
+  'radial-gradient(#770,#0ff)'
+ fc[0].style.transform='scale(3)'
+ fc[1].style.background=
+  'radial-gradient(#770,#0ff)'
+ fc[1].style.transform='scale(3)'
+ fc[2].style.transform='scale(1,3)'
+ bbl[0].style.transition='1s'
+ bbl[0].style.transform=
+  'scale(3) translate(-111%,-133%)'
+ bbl[1].style.transition='1s' 
+ bbl[1].style.transform=
+  'scale(5) translate(111%,-188%)'
+ bbl[2].style.transition='1s' 
+ bbl[2].style.transform=
+  'scale(9,4) translate(333%,-444%)'
+ setTimeout(()=>
+ {
+  idb.style.transform='scale(1)'
+  fsh[0].style.transform='scale(1)'
+  fsh[3].style.transform='scale(0)'
+  fc[0].style.transform='scale(1)'
+  fc[1].style.transform='scale(1)'	  
+  fc[2].style.transform='scale(1,1)'
+  bbl[0].style.transition='0s'
+  bbl[0].style.transform='scale(0)'
+  bbl[1].style.transition='0s'
+  bbl[1].style.transform='scale(0)'
+  bbl[2].style.transition='0s'
+  bbl[2].style.transform='scale(0)'
+ }, 1000)
+}
 
 b=0
 function cl()
@@ -283,62 +314,15 @@ wtr[1].innerHTML=
  'tritium-deuterium water (TDO)<br>'+
  'tritium-protium water (THO)<br>'+
  'deuterium-protium water (DHO)<br>'
- 
-idb.onmouseover=()=>
-{
- idb.style.transform='scale(1.2)'
-} 
-idb.onmouseout=()=>
-{
- idb.style.transform='scale(1)'
-}
-idb.onclick=()=>
-{
- idb.style.transform='scale(0)'
- fsh[0].style.transform='scale(3)'
- fsh[3].style.color='#f00'
- fsh[3].style.transform=
-  'scale(3) translate(55%,0%) skew(-22deg)'
- fc[0].style.background=
-  'radial-gradient(#770,#0ff)'
- fc[0].style.transform='scale(3)'
- fc[1].style.background=
-  'radial-gradient(#770,#0ff)'
- fc[1].style.transform='scale(3)'
- fc[2].style.transform='scale(1,3)'
- bbl[0].style.transition='1s'
- bbl[0].style.transform=
-  'scale(3) translate(-111%,-133%)'
- bbl[1].style.transition='1s' 
- bbl[1].style.transform=
-  'scale(5) translate(111%,-188%)'
- bbl[2].style.transition='1s' 
- bbl[2].style.transform=
-  'scale(9,4) translate(333%,-444%)'
- setTimeout(()=>
- {
-  idb.style.transform='scale(1)'
-  fsh[0].style.transform='scale(1)'
-  fsh[3].style.transform='scale(0)'
-  fc[0].style.transform='scale(1)'
-  fc[1].style.transform='scale(1)'	  
-  fc[2].style.transform='scale(1,1)'
-  bbl[0].style.transition='0s'
-  bbl[0].style.transform='scale(0)'
-  bbl[1].style.transition='0s'
-  bbl[1].style.transform='scale(0)'
-  bbl[2].style.transition='0s'
-  bbl[2].style.transform='scale(0)'
- },   2222)
-}
- 
+  
+Ifsh=0 
 fsh[0].onmouseover=()=>
 {
  idb.style.transform='scale(0)'
- fsh[0].style.transform='scale(3)'
+ fsh[0].style.transform='scale(1.7,1.4)'
  fsh[3].style.color='#f00'
  fsh[3].style.transform=
-  'scale(3) translate(55%,0%) skew(-22deg)'
+  'scale(3) translate(55%,-122%) skew(-22deg)'
  fc[0].style.background=
   'radial-gradient(#770,#0ff)'
  fc[0].style.transform='scale(3)'
@@ -346,18 +330,29 @@ fsh[0].onmouseover=()=>
   'radial-gradient(#770,#0ff)'
  fc[1].style.transform='scale(3)'
  fc[2].style.transform='scale(1,3)'
- bbl[0].style.transition='1s'
- bbl[0].style.transform=
-  'scale(3) translate(444%,222%)'
- bbl[1].style.transition='1s'
- bbl[1].style.transform=
-  'scale(5) translate(666%,88%)'
- bbl[2].style.transition='1s'
- bbl[2].style.transform=
-  'scale(4) translate(999%,43%)'
+ Ifsh=setInterval(()=>{
+  bbl[0].style.transition='1s'
+  bbl[0].style.transform=
+   'scale(6) translate(444%,-222%)'
+  bbl[1].style.transition='1s'
+  bbl[1].style.transform=
+   'scale(5) translate(666%,-111%)'
+  bbl[2].style.transition='1s'
+  bbl[2].style.transform=
+   'scale(4) translate(555%,-11%)'
+  setTimeout(()=>{
+   bbl[0].style.transition='0s'
+   bbl[0].style.transform='scale(0)'
+   bbl[1].style.transition='0s'
+   bbl[1].style.transform='scale(0)'
+   bbl[2].style.transition='0s'
+   bbl[2].style.transform='scale(0)'
+  },  1000) 
+ },  1222)
 }
 fsh[0].onmouseout=()=>
 {
+  clearInterval(Ifsh)
  idb.style.transform='scale(1)'
  fsh[0].style.transform='scale(1)'
  fsh[3].style.transform='scale(0)'
@@ -472,23 +467,6 @@ prgr[1].onmouseout=()=>
  zn[1].style.transform='scale(0) '
  imx=0
  clearInterval(Imx)    
-}
- 
-st[0].onmouseover=()=>
-{
- st[0].style.transform='scale(4) translate(22%,0)'
- st[0].style.color='#f60'
- st[0].style.opacity=1
-  st[0].innerHTML='Server<br> control'
- st[1].style.transform='scale(4) translate(44%,0)'   
-}
-st[0].onmouseout=()=>
-{
- st[0].style.transform='scale(3) '
- st[0].style.color=''
- st[0].style.opacity=0.2
-  st[0].innerHTML='dynamic<br> site'
- st[1].style.transform='scale(0) ' 
 }
  
 </script>

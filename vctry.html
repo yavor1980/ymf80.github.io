@@ -17,7 +17,7 @@
 {
  position:absolute;
  transition:1s;
- z-index:3;
+ border-radius:55%;
 }
 
 </style>
@@ -29,8 +29,9 @@
  <div class=slte></div>
  <div class=slte></div>
  <div class=slte></div>
+ <div class=slte></div>
+ <div class=slte></div>
 </div>
-
 
 <script>
 hd=document.getElementsByClassName('hd')  
@@ -61,19 +62,26 @@ slte[1].style.width=22+'%'
 slte[1].style.height=33+'%'
 slte[1].style.background=
  'radial-gradient(#f00,#ff0)'
-slte[1].style.borderRadius=55+'%'
 
 slte[2].style.width=22+'%'
 slte[2].style.height=33+'%'
 slte[2].style.background=
  'radial-gradient(#f00,#ff0)'
-slte[2].style.borderRadius=55+'%'
 
 slte[3].style.width=22+'%'
 slte[3].style.height=33+'%'
 slte[3].style.background=
  'radial-gradient(#f00,#ff0)'
-slte[3].style.borderRadius=55+'%'
+ 
+slte[4].style.width=22+'%'
+slte[4].style.height=33+'%'
+slte[4].style.background=
+ 'radial-gradient(#f00,#ff0)'
+
+slte[5].style.width=22+'%'
+slte[5].style.height=33+'%'
+slte[5].style.background=
+ 'radial-gradient(#f00,#ff0)' 
  
 Icl=0
 bcl=0
@@ -113,6 +121,17 @@ function sltcl()
    slte[3].style.transform=
     'scale(9) translate('+(222+Math.random()*111)+
 	'%,-88%)'	
+   slte[4].style.transition='444ms'
+   slte[4].style.opacity=0.5
+   slte[4].style.transform=
+    'scale(9) translate(-'+(222+Math.random()*111)+'%,-'+
+     (222+Math.random()*111)+'%)'	
+   slte[5].style.transition='444ms'
+   slte[5].style.opacity=0.5
+   slte[5].style.transform=
+    'scale(9) translate('+(222+Math.random()*111)+'%,-'+
+     (222+Math.random()*111)+'%)'	
+		
   }, 444)
  }else{
   slte[0].style.transition='0s'
@@ -126,6 +145,12 @@ function sltcl()
     'scale(0) translate(0%,0%)'	
   slte[3].style.transition='0ms'
   slte[3].style.transform=
+    'scale(0) translate(0%,0%)'	 
+  slte[4].style.transition='0ms'
+  slte[4].style.transform=
+    'scale(0) translate(0%,0%)'	
+  slte[5].style.transition='0ms'
+  slte[5].style.transform=
     'scale(0) translate(0%,0%)'	 	
  }	  
  bcl=!bcl
@@ -137,7 +162,7 @@ hd[0].onmouseover=()=>
   'linear-gradient(#00f,#ff0)'
  hd[0].style.color='#f00'
  hd[0].style.transform='scale(9) skew(-22deg)'
-  hd[0].innerHTML='VICTORY!'
+  hd[0].innerHTML='VICTORY!..'
  hd[1].style.transform='scale(0)'
   clearInterval(Icl)
   sltcl()
