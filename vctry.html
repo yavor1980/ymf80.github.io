@@ -20,6 +20,13 @@
  border-radius:55%;
 }
 
+.ppp
+{
+ position:absolute;
+ transition:1s;
+ border-radius:55%;
+}
+
 </style>
 
 <div class=hd>Waiting...</div>
@@ -33,9 +40,16 @@
  <div class=slte></div>
 </div>
 
+<div class=ppp>
+ <div class=ppp></div>
+ <div class=ppp></div>
+ <div class=ppp></div>
+</div>
+
 <script>
 hd=document.getElementsByClassName('hd')  
 slte=document.getElementsByClassName('slte')
+ppp=document.getElementsByClassName('ppp')
      
 hd[0].style.left=44+'%'
 hd[0].style.top=33+'%'
@@ -76,13 +90,48 @@ slte[3].style.background=
 slte[4].style.width=22+'%'
 slte[4].style.height=33+'%'
 slte[4].style.background=
- 'radial-gradient(#f00,#ff0)'
+ 'radial-gradient(#ff0,#f00)'
 
 slte[5].style.width=22+'%'
 slte[5].style.height=33+'%'
 slte[5].style.background=
- 'radial-gradient(#f00,#ff0)' 
+ 'radial-gradient(#ff0,#f00)' 
  
+ppp[0].style.left=78+'%'
+ppp[0].style.bottom=22+'%'
+ppp[0].style.width=2+'%'
+ppp[0].style.height=3+'%'
+ppp[0].style.transform='scale(0)'
+ppp[0].style.opacity=0.8
+
+ppp[1].style.left=0+'%'
+ppp[1].style.top=0+'%'
+ppp[1].style.width=100+'%'
+ppp[1].style.height=100+'%'
+ppp[1].style.zIndex=1
+ppp[1].style.background=
+ 'radial-gradient(3px,#990,#000)'
+ppp[1].style.transform='scale(1)' 
+
+ppp[2].style.left=0+'%'
+ppp[2].style.top=0+'%'
+ppp[2].style.width=100+'%'
+ppp[2].style.height=100+'%'
+ppp[2].style.background=
+ 'radial-gradient(#bb0,#f00)'
+ppp[2].style.borderRadius=22+'%' 
+ppp[2].style.transform='scale(1.8) '
+
+ppp[3].style.left=0+'%'
+ppp[3].style.top=0+'%'
+ppp[3].style.width=100+'%'
+ppp[3].style.height=100+'%'
+ppp[3].style.background=
+ 'radial-gradient(#bb0,#f00)'
+ppp[3].style.borderRadius=22+'%' 
+ppp[3].style.transform=
+ 'scale(1.8) rotate(45deg)'
+
 Icl=0
 bcl=0
 function cl()
@@ -105,6 +154,8 @@ function sltcl()
   slte[0].style.transform=
    'scale(1.2) translate('+(Math.random()*666-333)+
    '%,-888%)'
+  ppp[0].style.transform='scale(5) translate(-66%,-33%)'+
+   'rotate('+(Math.random()*444-222)+'deg)' 
   setTimeout(()=>{
    slte[1].style.transition='444ms'
    slte[1].style.opacity=0.5
@@ -164,9 +215,9 @@ hd[0].onmouseover=()=>
  hd[0].style.transform='scale(9) skew(-22deg)'
   hd[0].innerHTML='VICTORY!..'
  hd[1].style.transform='scale(0)'
+ 
   clearInterval(Icl)
-  sltcl()
-  Icl=setInterval(()=>sltcl(),999)
+  sltcl(); Icl=setInterval(()=>sltcl(),999)
 }
 hd[0].onmouseout=()=>
 {
@@ -177,6 +228,7 @@ hd[0].onmouseout=()=>
   'scale(0) translate(0%,0%)'
  hd[0].style.color='#b00'
   hd[0].innerHTML='Waiting...'
+  ppp[0].style.transform='scale(0)'
   clearInterval(Icl)
   cl(); Icl=setInterval(()=>cl(),999)
 }
