@@ -1,7 +1,5 @@
 <html>
-
 <body>
-
 <style>
 body
 {
@@ -39,7 +37,7 @@ body
  border-radius:55%;
 }
 
-.nm
+.nme
 {
  position:absolute;
  font-size:2em;
@@ -48,7 +46,7 @@ body
  cursor:pointer;
 }
 
-.gd
+.crss
 {
  position:absolute;
  font-size:2em;
@@ -64,21 +62,7 @@ body
  cursor:pointer;
 }
 
-.intrs
-{
- position:absolute;
- font-size:2em;
- transition:1s;
- cursor:pointer;
-}
-.intrs:hover
-{
- transform:scale(2) translate(55px,-33%) skew(-11deg);
- color:#f0f;
- z-index:1;
-}
-
-.dvc
+.dvce
 {
  position:absolute;
  transition:1s;
@@ -91,8 +75,10 @@ body
  <div class=d>
   <div class=lzr></div>
   <div class=lzr></div>
+  <div class=lzr></div>
  </div>
  <div class=d>
+  <div class=rzr></div>
   <div class=rzr></div>
   <div class=rzr></div>
  </div>
@@ -100,53 +86,44 @@ body
  <div class=d>
   <div class=d></div>
   <div class=d></div>
- </div>  
+ </div> 
 </div> 
 
-<div class=nm>Market</div> 
- <div class=nm>raw materials</div> 
- <div class=nm>labor</div> 
- <div class=nm>goods</div> 
- <div class=nm>currency</div> 
- <div class=nm>shares</div> 
+<div class=nme>Market</div> 
+ <div class=nme>raw materials</div> 
+ <div class=nme>labor</div> 
+ <div class=nme>goods</div> 
+ <div class=nme>currency</div> 
+ <div class=nme>shares</div> 
 
-<div class=gd>Product </div> 
-<div class=gd>Price </div> 
-<div class=gd>Production</div> 
-<div class=gd>Crisis</div>
-<div class=gd>Keynesianism</div> 
- <div class=gd>market admin.<br> regulation</div>
+<div class=crss>Crisis</div>
+<div class=crss>Keynesianism</div> 
+ <div class=crss>market admin.<br> regulation</div>
  
 <div class=fnd>Fonds</div> 
  <div class=fnd>Premium </div> 
  <div class=fnd>Production dvlpmnt</div>
-
 <div class=fnd>Capitalism </div> 
  <div class=fnd>Social
   <br>&nbsp &nbsp &nbsp &nbsp
    orientation
  </div> 
   
-<div class=intrs>InterAct </div> 
-<div class=intrs>Saturation </div> 
- <div class=intrs>multple realisasns </div> 
- <div class=intrs>Controllr </div> 
- 
- <div class=dvc> 
-   <div class=dvc>debet </div>
-   <div class=dvc>credit </div>
-   <div class=dvc></div>
- </div> 
+<div class=dvce> 
+ <div class=dvce>debet </div>
+ <div class=dvce>credit </div>
+ <div class=dvce></div>
+ <div class=dvce>S</div>
+</div> 
   
 <script>
 d=document.getElementsByClassName('d')
 lzr=document.getElementsByClassName('lzr')
 rzr=document.getElementsByClassName('rzr')
-nm=document.getElementsByClassName('nm')
-gd=document.getElementsByClassName('gd')
+nme=document.getElementsByClassName('nme')
+crss=document.getElementsByClassName('crss')
 fnd=document.getElementsByClassName('fnd')
-intrs=document.getElementsByClassName('intrs')
-dvc=document.getElementsByClassName('dvc')
+dvce=document.getElementsByClassName('dvce')
   
 d[0].style.left='11%'
 d[0].style.top='22%'
@@ -154,6 +131,9 @@ d[0].style.width='44%'
 d[0].style.height='55%'
 d[0].style.background=
  'radial-gradient(#fff,#f7f)'
+d[0].style.borderTopLeftRadius='33%' 
+d[0].style.borderTopRightRadius='33%'
+d[0].style.borderBottomRadius='33%'
 d[0].style.cursor='pointer'
 
 d[1].style.left='14%'
@@ -205,6 +185,9 @@ lzr[1].style.border='8px ridge #000'
 lzr[1].style.zIndex=1
 lzr[1].style.opacity=0
   
+lzr[2].style.background='#fff'  
+lzr[2].style.opacity=0
+  
 rzr[1].style.background='none'
 rzr[1].style.transform=
  'scale(5) translate(-6%,-5%)'
@@ -212,54 +195,48 @@ rzr[1].style.border='8px ridge #000'
 rzr[1].style.zIndex=1
 rzr[1].style.opacity=0  
   
-nm[0].style.left='66%'
-nm[0].style.top='11%'
-nm[0].style.color='#000'
+rzr[2].style.background='#fff'  
+rzr[2].style.opacity=0  
+  
+nme[0].style.left='66%'
+nme[0].style.top='11%'
+nme[0].style.color='#000'
 
-nm[1].style.left='55%'
-nm[1].style.top='22%'
-nm[1].style.color='#800'
-nm[1].style.transform='scale(0)'
+nme[1].style.left='55%'
+nme[1].style.top='22%'
+nme[1].style.color='#800'
+nme[1].style.transform='scale(0)'
 
-nm[2].style.left='66%';
-nm[2].style.top='22%';
-nm[2].style.color='#0f0';
-nm[2].style.transform='scale(0)'
+nme[2].style.left='66%';
+nme[2].style.top='22%';
+nme[2].style.color='#0f0';
+nme[2].style.transform='scale(0)'
 
-nm[3].style.left='77%';
-nm[3].style.top='22%';
-nm[3].style.color='#990';
-nm[3].style.transform='scale(0)'
+nme[3].style.left='77%';
+nme[3].style.top='22%';
+nme[3].style.color='#990';
+nme[3].style.transform='scale(0)'
 
-nm[4].style.left='66%';
-nm[4].style.top='33%';
-nm[4].style.color='#909';
-nm[4].style.transform='scale(0)'
+nme[4].style.left='66%';
+nme[4].style.top='33%';
+nme[4].style.color='#909';
+nme[4].style.transform='scale(0)'
 
-nm[5].style.left='77%';
-nm[5].style.top='30%';
-nm[5].style.color='#0bb';
-nm[5].style.transform='scale(0)'
+nme[5].style.left='77%';
+nme[5].style.top='30%';
+nme[5].style.color='#0bb';
+nme[5].style.transform='scale(0)'
 
-gd[0].style.left='66%';
-gd[0].style.top='40%';
+crss[0].style.left='33%';
+crss[0].style.top='6%';
+crss[0].style.color='#900';
 
-gd[1].style.left='66%';
-gd[1].style.top='45%';
+crss[1].style.left='66%';
+crss[1].style.top='2%';
 
-gd[2].style.left='66%';
-gd[2].style.top='50%';
-
-gd[3].style.left='33%';
-gd[3].style.top='6%';
-gd[3].style.color='#900';
-
-gd[4].style.left='66%';
-gd[4].style.top='2%';
-
-gd[5].style.left='66%';
-gd[5].style.top='22%';
-gd[5].style.transform='scale(0)';
+crss[2].style.left='66%';
+crss[2].style.top='22%';
+crss[2].style.transform='scale(0)';
 
 fnd[0].style.left='6%';
 fnd[0].style.top='88%';
@@ -285,45 +262,35 @@ fnd[4].style.top='11%';
 fnd[4].style.color='#880';
 fnd[4].style.transform='scale(0)';
 
-intrs[0].style.left='6%';
-intrs[0].style.top='66%';
-intrs[0].style.color='#0ff';
+dvce[0].style.left='60%';
+dvce[0].style.top='66%';
+dvce[0].style.width='24%';
+dvce[0].style.height='18%';
+dvce[0].style.background='#0ff';
+dvce[0].style.border='3px ridge #f00';
 
-intrs[1].style.left='6%';
-intrs[1].style.top='75%';
-intrs[1].style.color='#7ff';
+dvce[1].style.left='6%';
+dvce[1].style.top='6%';
+dvce[1].style.color='#f00';
+dvce[1].style.fontSize='0em';
 
-intrs[2].style.color='#ff0'
-intrs[2].style.left='33%';
-intrs[2].style.top='88%';
-intrs[2].style.transform='scale(0)';
+dvce[2].style.left='55%'
+dvce[2].style.top='6%'
+dvce[2].style.color='#f09';
+dvce[2].style.fontSize='0em'
 
-intrs[3].style.color='#ff0'
-intrs[3].style.left='8%';
-intrs[3].style.top='7%';
+dvce[3].style.left='45%'
+dvce[3].style.top='6%'
+dvce[3].style.width='4%'
+dvce[3].style.height='88%'
+dvce[3].style.background='#f0f'
+dvce[3].style.borderRadius=55+'%'
+dvce[3].style.opacity=0
 
-dvc[0].style.left='60%';
-dvc[0].style.top='66%';
-dvc[0].style.width='24%';
-dvc[0].style.height='18%';
-dvc[0].style.background='#0ff';
-dvc[0].style.border='3px ridge #f00';
-
-dvc[1].style.left='6%';
-dvc[1].style.top='6%';
-dvc[1].style.fontSize='0em';
-
-dvc[2].style.left='55%'
-dvc[2].style.top='6%'
-dvc[2].style.fontSize='0em'
-
-dvc[3].style.left='45%'
-dvc[3].style.top='6%'
-dvc[3].style.width='4%'
-dvc[3].style.height='88%'
-dvc[3].style.background='#f0f'
-dvc[3].style.borderRadius=55+'%'
-dvc[3].style.opacity=0
+dvce[4].style.left='44%'
+dvce[4].style.top='44%'
+dvce[4].style.color='#f99';
+dvce[4].style.transform='scale(0)'
 
 b=0
 function clk()
@@ -332,7 +299,9 @@ function clk()
    (0.4+Math.random())+')'
  d[6].style.opacity=1  
  lzr[1].style.opacity=1
+ lzr[2].style.opacity=0.6
  rzr[1].style.opacity=1
+ rzr[2].style.opacity=0.6
  if(b)
  {
   d[0].style.transform='scale(1.2)'
@@ -363,7 +332,7 @@ d[0].onmouseover=()=>
 {
  clk()
  Id0=setInterval(()=>clk(),999)
- dvc[0].onmouseover()
+ dvce[0].onmouseover()
 }	
 d[0].onmouseout=()=>
 {
@@ -373,127 +342,78 @@ d[0].onmouseout=()=>
  lzr[0].style.transform='scale(1)'
  lzr[0].style.background='#000'
  lzr[1].style.opacity=0
+ lzr[2].style.opacity=0
  rzr[0].style.transform='scale(1)'
  rzr[0].style.background='#000'
  rzr[1].style.opacity=0
+ rzr[2].style.opacity=0
  fnd[4].style.color='#fff'
  fnd[4].style.transform='scale(0)'	
   clearInterval(Id0)
-  dvc[0].onmouseout()
+  dvce[0].onmouseout()
 }
 
 bclk=0	
-nm[0].onmouseover=()=>
+nme[0].onmouseover=()=>
 {
- nm[0].style.transform='scale(1.9) skew(15deg)'
- nm[0].style.color='#f00'
- nm[1].style.transform='scale(1.5) rotate(-22deg)'
- nm[2].style.transform=
+ nme[0].style.transform='scale(1.9) skew(15deg)'
+ nme[0].style.color='#f00'
+ nme[1].style.transform='scale(1.5) rotate(-22deg)'
+ nme[2].style.transform=
   'scale(1.5) rotate(-22deg) translate(0,33%)'
- nm[3].style.transform='scale(1.5) rotate(-22deg)'
- nm[4].style.transform='scale(1.5) rotate(22deg)'
- nm[5].style.transform='scale(1.5) rotate(22deg)'
+ nme[3].style.transform='scale(1.5) rotate(-22deg)'
+ nme[4].style.transform='scale(1.5) rotate(22deg)'
+ nme[5].style.transform='scale(1.5) rotate(22deg)'
 }	  
-nm[0].onmouseout=()=>
+nme[0].onmouseout=()=>
 {
- nm[0].style.transform='scale(1)'
- nm[0].style.color='#000'
- nm[1].style.transform='scale(0) rotate(0deg)'
- nm[2].style.transform='scale(0) rotate(0deg)'
- nm[3].style.transform='scale(0) rotate(0deg)'
- nm[4].style.transform='scale(0) rotate(0deg)'
- nm[5].style.transform='scale(0) rotate(0deg)'
-  nm[0].innerHTML='Market'
+ nme[0].style.transform='scale(1)'
+ nme[0].style.color='#000'
+ nme[1].style.transform='scale(0) rotate(0deg)'
+ nme[2].style.transform='scale(0) rotate(0deg)'
+ nme[3].style.transform='scale(0) rotate(0deg)'
+ nme[4].style.transform='scale(0) rotate(0deg)'
+ nme[5].style.transform='scale(0) rotate(0deg)'
+  nme[0].innerHTML='Market'
 }	  
-nm[0].onclick=()=>
-{
- nm[0].style.transform=
-  'translate(-44%,0) skew(22deg)'
-  nm[0].innerHTML='Failure<br> to self-regulate'
-}	
-
-gd[0].onmouseover=()=>
-{
- gd[0].style.color='#f00'
- gd[0].style.transform='scale(1.2)'
-  gd[0].innerHTML='product of labor'
-}	   
-gd[0].onmouseout=()=>
-{
- gd[0].style.color='#000'
- gd[0].style.transform='scale(1)'
-  gd[0].innerHTML='Product'
-}	 
-gd[0].onclick=()=>
-{
- gd[0].style.color='#900'
- gd[0].style.transform='scale(1) translate(0,-44%)'
-  gd[0].innerHTML='surplus<br> value'
-}	
-
-gd[1].onmouseover=()=>
-{
- gd[1].style.color='#f00'
- gd[1].style.transform='scale(1.2)'
-  gd[1].innerHTML='product detail'
-}	  
-gd[1].onmouseout=()=>
-{
- gd[1].style.color='#000'
- gd[1].style.transform='scale(1)'
-  gd[1].innerHTML='Price'
-}
-
-gd[2].onmouseover=()=>
-{
- gd[2].style.color='#f00'
- gd[2].style.transform='scale(1.2) translate(-22%,0)'
-  gd[2].innerHTML='receiving the goods'
-}	  
-gd[2].onmouseout=()=>
-{
- gd[2].style.color='#000'
- gd[2].style.transform='scale(1)'
-  gd[2].innerHTML='Production'
-}
 	 
-gd[3].onmouseover=()=>
+crss[0].onmouseover=()=>
 {
- gd[3].style.color='#b00'
- gd[3].style.transform='scale(1.2) skew(11deg)'
-  gd[3].innerHTML='Overproduction'
+ crss[0].style.color='#b00'
+ crss[0].style.transform='scale(1.2) skew(11deg)'
+  crss[0].innerHTML='Overproduction'
 }	  
-gd[3].onmouseout=()=>
+crss[0].onmouseout=()=>
 {
- gd[3].style.color='#900'
- gd[3].style.transform='scale(1) '
- gd[3].style.border='none'
- gd[3].style.background='none'
-  gd[3].innerHTML='Crisis'
+ crss[0].style.color='#900'
+ crss[0].style.transform='scale(1)'
+ crss[0].style.border='none'
+ crss[0].style.background='none'
+  crss[0].innerHTML='Crisis'
 }
-gd[3].onclick=()=>
+crss[0].onclick=()=>
 {
- gd[3].style.border='5px #000 ridge'
- gd[3].style.color='#f00'
- gd[3].style.transform='scale(2)'
- gd[3].style.zIndex=1
- gd[3].style.background='#ff0'
-  gd[3].innerHTML='Demonopolization'
+ crss[0].style.border='5px #000 ridge'
+ crss[0].style.color='#f00'
+ crss[0].style.transform='scale(2)'
+ crss[0].style.zIndex=1
+ crss[0].style.background='#ff0'
+  crss[0].innerHTML='Demonopolization'
 }
 
-gd[4].onmouseover=()=>
+crss[1].onmouseover=()=>
 {
- gd[4].style.color='#f00'
- gd[4].style.transform='scale(1.6) skew(-22deg)'
- gd[5].style.color='#f0f'
- gd[5].style.transform=
+ crss[1].style.color='#f00'
+ crss[1].style.transform='scale(1.6) skew(-22deg)'
+ crss[2].style.color='#f0f'
+ crss[2].style.transform=
   'scale(1.5) translate(0,-22%) skew(22deg)'
 }
-gd[4].onmouseout=()=>
+crss[1].onmouseout=()=>
 {
- gd[4].style.color='#000'
- gd[4].style.transform='scale(1)'
- gd[5].style.transform='scale(0)'
+ crss[1].style.color='#000'
+ crss[1].style.transform='scale(1)'
+ crss[2].style.transform='scale(0)'
 }
 
 Ifnd0=0
@@ -534,85 +454,42 @@ fnd[3].onmouseout=()=>
  fnd[3].style.transform='scale(1)'
  fnd[3].style.color='#99f'
   fnd[3].innerHTML='Capitalism'
-}	 
-
-intrs[0].onmouseover=()=>
-{   
- intrs[0].style.color='#0f0'
-  intrs[0].innerHTML='reactn on the action'
-}	  
-intrs[0].onmouseout=()=>
-{
- intrs[0].style.color='#0ff'
-  intrs[0].innerHTML='InterAct' 
-}	 
-
-intrs[1].onmouseover=()=>
-{  
- intrs[1].style.color='#f0f'
- intrs[2].style.transform='scale(2)'
-  intrs[1].innerHTML='for_each(c.i in c.f())' 
-}	  
-intrs[1].onmouseout=()=>
-{
- intrs[1].style.color='#7ff'
- intrs[2].style.transform='scale(0)'
-  intrs[1].innerHTML='Saturation' 
-}	 
-
-ai3=['Analysis','Decision','Action']
-ii3=0
-i3I=0
-intrs[3].onmouseover=()=>
-{  
- intrs[3].style.color='#f0f'
- intrs[3].style.transform='scale(2)'  
- i3I=setInterval(()=>{ 
-  intrs[3].innerHTML=ai3[ii3]
-	ii3++
-  if(ii3==3) ii3=0
- },999)	
-}	  
-intrs[3].onmouseout=()=>
-{
- intrs[3].style.transform='scale(1)'
- intrs[3].style.color='#ff0'
- intrs[3].innerHTML='Controllr'
-  clearInterval(i3I)
- ii3=0
-}	
+}	 	
 	 
 Idvs=0
 bdvs=0	 
-dvc[0].onmouseover=()=>
+dvce[0].onmouseover=()=>
 {
- dvc[0].style.border='11px ridge #700'
- dvc[0].style.transform='skew(22deg)' 
- dvc[3].style.opacity=1
+ dvce[0].style.border='11px ridge #700'
+ dvce[0].style.transform=
+  'scale(1.4) translate(-22%,-22%) skew(22deg)' 
+ dvce[3].style.opacity=1
  Idvs=setInterval(()=>{
-  if(bdvs) 
-  {
-   dvc[1].style.fontSize='2em'
-   dvc[2].style.fontSize='1.5em'
+  if(bdvs){
+   dvce[1].style.fontSize='2em'
+   dvce[2].style.fontSize='1.5em'
+   dvce[4].style.transform=
+    'scale(4)'
   }else{
-   dvc[1].style.fontSize='1.5em'
-   dvc[2].style.fontSize='2em'	
+   dvce[1].style.fontSize='1.5em'
+   dvce[2].style.fontSize='2em'	
+   dvce[4].style.transform=
+    'scale(5)'
   }	
    bdvs=!bdvs
  }, 888)
 }	
-dvc[0].onmouseout=()=>
+dvce[0].onmouseout=()=>
 {
- dvc[0].style.border='3px ridge #f00'
- dvc[0].style.transform='skew(0deg)'
- dvc[1].style.fontSize='0em'
- dvc[2].style.fontSize='0em'  
- dvc[3].style.opacity=0
+ dvce[0].style.border='3px ridge #f00'
+ dvce[0].style.transform='skew(0deg)'
+ dvce[1].style.fontSize='0em'
+ dvce[2].style.fontSize='0em'  
+ dvce[3].style.opacity=0
+ dvce[4].style.transform='scale(0)'
   clearInterval(Idvs)
 }	 
 	 
-//clearInterval(i) radial-gradient(, )
 </script>
 </body>
-
 </html>
