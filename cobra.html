@@ -45,10 +45,10 @@ button:hover
 </div>
 
 <div class=tbe>
- <div class=tbe></div>
  <div class=tbe>
   <div class=tbe></div>
  </div>
+ <div class=tbe></div>
 </div>
  
 <div class=ttl>SNAKES</div>
@@ -67,53 +67,39 @@ tbe=document.getElementsByClassName('tbe')
 ttl=document.getElementsByClassName('ttl')
 
 idbd.style.background=
-   'linear-gradient(-22deg,#ff0,#00f,#0ff)'
+ 'linear-gradient(-22deg,#ff0,#00f,#0ff)'
 
 snk=
  'suborder  <br>'+
  'of the<br>'+
  'reptile class<br>'
 
-hd[0].style.left=19+'%'
-hd[0].style.top=22+'%'
-hd[0].style.width=33+'%'
-hd[0].style.height=33+'%' 
-
-hd[1].style.width=55+'%'
-hd[1].style.height=99+'%' 
-hd[1].style.cursor='pointer' 
-hd[1].style.background=
- 'radial-gradient(#080,#000)'
-hd[1].style.zIndex=1
-
-hd[2].style.left=15+'%'
-hd[2].style.top=22+'%'
-hd[2].style.width=22+'%'
-hd[2].style.height=22+'%' 
-hd[2].style.background=
- 'radial-gradient(11px,#ff0,#fff)'
-
-hd[3].style.left=66+'%'
-hd[3].style.top=22+'%'
-hd[3].style.width=22+'%'
-hd[3].style.height=22+'%' 
-hd[3].style.background=
- 'radial-gradient(11px,#ff0,#fff)'
-
-mth[0].style.left=29+'%'
-mth[0].style.top=66+'%'
-mth[0].style.width=44+'%'
-mth[0].style.height=11+'%' 
-mth[0].style.background=
- 'radial-gradient(#800,#000)'
-
-mth[1].style.left=12+'%'
-mth[1].style.top=33+'%'
-mth[1].style.width=8+'%'
-mth[1].style.height=11+'%' 
-mth[1].style.background='#fff'
-mth[1].style.borderTopLeftRadius=0+'%'
-mth[1].style.borderTopRightRadius=0+'%'
+function init(nm,i,l,t,w,h)
+{
+ nm[i].style.left=l+'%'
+ nm[i].style.top=t+'%'
+ nm[i].style.width=w+'%'
+ nm[i].style.height=h+'%'
+}
+init(hd,0,19,22,33,33)
+init(hd,1,0,22,55,77)
+ hd[1].style.cursor='pointer' 
+ hd[1].style.background=
+  'radial-gradient(#080,#000)'
+ hd[1].style.zIndex=1
+init(hd,2,15,22,22,22) 
+ hd[2].style.background=
+  'radial-gradient(11px,#ff0,#fff)'
+init(hd,3,66,22,22,22) 
+ hd[3].style.background=
+  'radial-gradient(11px,#ff0,#fff)'
+init(mth,0,29,66,44,11) 
+ mth[0].style.background=
+  'radial-gradient(#800,#000)'
+init(mth,1,12,33,8,11)
+ mth[1].style.background='#fff'
+ mth[1].style.borderTopLeftRadius=0+'%'
+ mth[1].style.borderTopRightRadius=0+'%'
 
 mth[2].style.left=83+'%'
 mth[2].style.top=33+'%'
@@ -189,22 +175,23 @@ tbe[2].style.background=
 tbe[2].style.borderBottomLeftRadius=0+'%'
 tbe[2].style.borderBottomRightRadius=0+'%' 
 
-tbe[3].style.left=44+'%'
-tbe[3].style.top=100+'%' 
-tbe[3].style.width=1+'%'
-tbe[3].style.height=1+'%'
-tbe[3].style.borderTop='3px ridge transparent'
-tbe[3].style.borderBottom='0.1px solid #000'
-tbe[3].style.borderLeft='3px ridge transparent'
-tbe[3].style.borderRight='3px ridge transparent'
+tbe[3].style.left=9+'%'
+tbe[3].style.top=222+'%' 
+tbe[3].style.width=119+'%'
+tbe[3].style.height=33+'%'
+tbe[3].style.borderTop='1px ridge transparent'
+tbe[3].style.borderBottom='3px solid #000'
+tbe[3].style.borderLeft='1px ridge transparent'
+tbe[3].style.borderRight='1px ridge transparent'
+tbe[3].style.opacity=0
 
-ttl[0].style.zIndex=1 
 ttl[0].style.left=6+'%'
 ttl[0].style.top=6+'%'
 ttl[0].style.color='#099'
 ttl[0].style.fontSize='3em'
 ttl[0].style.opacity=0.8
 ttl[0].style.cursor='pointer'
+ttl[0].style.zIndex=1 
 
 ttl[1].style.left=66+'%'
 ttl[1].style.top=55+'%'
@@ -232,8 +219,9 @@ function cl()
   bd[3].style.transform='scale(1.2)'
   tbe[0].style.transform=
    'scale(1) rotate(122deg)'
-  tbe[3].style.transition='1s'
-  tbe[3].style.transform='scale(50)'
+  tbe[3].style.transition='0s'
+  tbe[3].style.transform='translate(0,0)'
+  tbe[3].style.opacity=0
  }
   else
  {
@@ -243,8 +231,9 @@ function cl()
   bd[3].style.transform='scale(0.8)' 
   tbe[0].style.transform=
    'scale(1.2) rotate(122deg)'
-  tbe[3].style.transition='0s'
-  tbe[3].style.transform='scale(0)'
+  tbe[3].style.transition='1s'
+  tbe[3].style.transform='translate(0,1222%)'
+  tbe[3].style.opacity=0.8
  } 
  bcl=!bcl
 }
