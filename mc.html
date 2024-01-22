@@ -8,7 +8,7 @@
  transition:777ms;
  cursor: pointer;  
 }
-table
+.lmp
 { 
  position:absolute;  
  transition:1s;
@@ -44,6 +44,7 @@ table
 
 <div class=prcssr>
  <div class=prcssr>
+  MC
   <div class=prcssr></div>
  </div>
  <div class=lp></div>
@@ -59,10 +60,11 @@ table
  <div class=sp></div>  
  <div class=sp></div>
 </div>
-<table>
- <td>0<td><td>0<td><td>0<td><td>0<td><td>0<td>
-</table>
- 
+<div class=lmp>
+ <div class=lmp></div>
+ <div class=lmp></div>
+</div>
+
 <div class=cmnd>mov ax,00h</div>
 <div class=cmnd>xchg bx,ax</div>
 <div class=cmnd>add ax,44h</div>
@@ -85,8 +87,7 @@ prcssr=document.getElementsByClassName('prcssr')
 lp=document.getElementsByClassName('lp')
 rp=document.getElementsByClassName('rp')
 sp=document.getElementsByClassName('sp')
-tbl=document.getElementsByTagName('table')
-td=document.getElementsByTagName('td')
+lmp=document.getElementsByClassName('lmp')
 cmnd=document.getElementsByClassName('cmnd')
 rgstr=document.getElementsByClassName('rgstr')
 snd=document.getElementsByClassName('snd')
@@ -103,9 +104,14 @@ function inn(nm,i,l,t,w,h,bkg,clr)
  nm[i].style.background=bkg
  nm[i].style.color=clr 
 }
+
 inn(prcssr,0, 33,22, 26,27, '#333','')
+ prcssr[0].style.borderRadius=3+'%'
 inn(prcssr,1, 18,14, 64,70, '#444','')
-inn(prcssr,2, -14,11, 26,2, '','')
+ prcssr[1].style.borderRadius=8+'%'
+ prcssr[1].style.textAlign='center'
+ prcssr[1].style.fontSize=3+'em'
+inn(prcssr,2, 14,46, 72,44, '#fff','')
 inn(lp,0, -14,11, 26,2,' #ff0','')
 inn(lp,1, -14,26, 26,2,' #ff0','')
 inn(lp,2, -14,41, 26,2,' #ff0','')
@@ -118,9 +124,14 @@ inn(rp,3, 86,56, 26,2,' #ff0','')
 inn(rp,4, 86,71, 26,2,' #ff0','')
 inn(sp,0, 27,88, 2,29,' #bb0','')
 inn(sp,1, 73,88, 2,29,' #bb0','')
-inn(tbl,0, 33,50,'','','#f0f','#ff0')
- tbl[0].style.border='4px ridge #990'
- tbl[0].style.transform='scale(0)'
+inn(lmp,0, 33,50,8,5, '#707','')
+ lmp[0].style.border='4px ridge #990'
+ lmp[0].style.transform='scale(0)'
+inn(lmp,1, 20,33,16,33, '','') 
+ lmp[1].style.borderRadius=55+'%'
+inn(lmp,2, 66,33,16,33, '','')
+ lmp[2].style.borderRadius=55+'%'
+ 
 inn(cmnd,0, 9,12)
 inn(cmnd,1, 9,16)
 inn(cmnd,2, 9,20)
@@ -171,10 +182,16 @@ rv=0, lrv=0
 icmnd=0
 function clk()
 {
+ prcssr[0].style.background='#700'
+ prcssr[2].innerHTML=''+
+  Math.round(Math.random())+Math.round(Math.random())+
+  Math.round(Math.random())+Math.round(Math.random())
  lp[llv].style.transform='scale(1)'
  rp[lrv].style.transform='scale(1)'
- td[lrv].style.transform='scale(1)'
-  td[lrv].innerHTML=0
+ lmp[1].style.background=
+  '#'+Math.round(9+Math.random())+'00'
+ lmp[2].style.background=
+  '#0'+Math.round(9+Math.random())+'0'
   lv=Math.round(Math.random()*4)
   rv=Math.round(Math.random()*4)
  lp[lv].style.transform=
@@ -183,13 +200,10 @@ function clk()
   'scale(1.2,3) translate(22%,0)'
   llv=lv
   lrv=rv
- td[rv].style.transform='scale(1.4,2)'
-  td[rv].innerHTML=1
  if(bcl)
  {
-  prcssr[0].style.background='#900' 
   prcssr[0].style.transform='scale(1.1)'
-  prcssr[1].style.background='#440'
+  prcssr[1].style.background='#444'
   sp[0].style.transform=
    'scale(2,1.2) translate(0,11%)'
   sp[1].style.transform='scale(1)'
@@ -197,9 +211,8 @@ function clk()
   cmnd[icmnd].style.transform=
    'scale(2) translate(33%,0)'
  }else{
-  prcssr[0].style.background='#700' 
   prcssr[0].style.transform='scale(1)'
-  prcssr[1].style.background='#220'
+  prcssr[1].style.background='#333'
   sp[0].style.transform='scale(1) '
   sp[1].style.transform=
    'scale(2,1.2) translate(0,11%)'
@@ -213,8 +226,7 @@ prcssr[0].onmouseover=()=>
 { 
   clk()
   Ip=setInterval(clk,999)
- 
- tbl[0].style.transform= 
+ lmp[0].style.transform= 
   'scale(3) translate(122%,88%)'
 }
 prcssr[0].onmouseout=()=>
@@ -224,13 +236,14 @@ prcssr[0].onmouseout=()=>
  {
   lp[i].style.transform= 'scale(1)'
   rp[i].style.transform= 'scale(1)'
-  td[i].innerHTML=0
  }
+ prcssr[0].style.background= '#333'
  prcssr[0].style.transform= 'scale(1)'
- prcssr[0].style.background= '#000'
+ prcssr[1].style.background= '#444'
+  prcssr[2].innerHTML=''
  sp[0].style.transform= 'scale(1)'
  sp[1].style.transform= 'scale(1)'
- tbl[0].style.transform= 'scale(0)'
+ lmp[0].style.transform= 'scale(0)'
  cmnd[icmnd].style.transform='scale(1.5)'
   bcl=1
 }
