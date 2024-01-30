@@ -9,51 +9,51 @@
 
 select
 {
-cursor:pointer;
+ cursor:pointer;
 }
 
 .hd
 {
-position:absolute;
-transition:1s;
-text-align:center;
-font-size: 1.4em;
-padding-top: 11px;
+ position:absolute;
+ transition:1s;
+ text-align:center;
+ font-size: 1.4em;
+ padding-top: 11px;
 }
 
 .prjct
 {
-position:absolute;
-transition:1s;
+ position:absolute;
+ transition:1s;
 }
 
 .drns
 {
-position:absolute;
-transition:1s;
-z-index:1;
+ position:absolute;
+ transition:1s;
+ z-index:1;
 }
 
 .tms
 {
-position:absolute;
-transition: 1s;
-text-align:center;
-font-size: 1.5em;
+ position:absolute;
+ transition: 1s;
+ text-align:center;
+ font-size: 1.5em;
 }
 
 .srvr
 {
-position:absolute;
-transition:1s;
-font-size: 1.5em;
+ position:absolute;
+ transition:1s;
+ font-size: 1.5em;
 }
 
 .vctr
 {
-position:absolute;
-transition:1s;
-font-size: 1.5em;
+ position:absolute;
+ transition:1s;
+ font-size: 1.5em;
 }
 
 
@@ -172,14 +172,14 @@ function cl()
  }
   bcl=!bcl	 
 }
- 
-  Icl=setInterval(cl,999)
+    Icl=setInterval(cl,999)
  
 function act(i,l)
 { 
  hd[i].onmouseover=()=>
  {  
   hd[i].style.zIndex=1 
+  hd[i].style.border='4px ridge #f60'
  if(i==1){ 
   hd[2].style.zIndex=0
   hd[3].style.zIndex=0 
@@ -251,6 +251,7 @@ function act(i,l)
   hd[i].style.top='22%'
   hd[i].style.fontSize='1.4em'
   hd[i].style.color='#000'
+  hd[i].style.border='none'
   hd[1].innerHTML='past'
   hd[2].innerHTML='present'
   hd[3].innerHTML='future' 
@@ -279,17 +280,17 @@ prjct[0].onmouseover=()=>
  prjct[0].style.transform='scale(1.8) translate(22%)'
   prjct[0].innerHTML='@intrface<br> @implemnttn'
   prjct[1].innerHTML='initialization'
-pr1I=setInterval(()=>{
- if(bpr1){
-  prjct[1].style.top='55%'
-  prjct[1].style.transform='scale(2.0)'
-  prjct[1].innerHTML='initialization'
- }else{
-  prjct[1].style.top='77%'
-  prjct[1].style.transform=
-   'scale(1.6)  translate(333%)'
-  prjct[1].innerHTML='realisation'  
- }
+ pr1I=setInterval(()=>{
+  if(bpr1){
+   prjct[1].style.top='55%'
+   prjct[1].style.transform='scale(2.0)'
+   prjct[1].innerHTML='initialization'
+   }else{
+   prjct[1].style.top='77%'
+   prjct[1].style.transform=
+    'scale(1.6)  translate(333%)'
+    prjct[1].innerHTML='realisation'  
+   }
     bpr1=!bpr1
   },999)
 }
@@ -350,12 +351,14 @@ tms[2].onmouseover=()=>
   'scale(2) translate(22%,0)'
  tms[2].style.color='#fff'
  tms[2].style.zIndex=2
+ tms[2].style.border='6px ridge #f60'
   tms[2].innerHTML='I thought I would be tomorrow'
 }
 tms[2].onmouseout=()=>
 {
  tms[2].style.transform='scale(1)'
  tms[2].style.color='#000'
+ tms[2].style.border='none'
   tms[2].innerHTML='future in the past'
 }
 
