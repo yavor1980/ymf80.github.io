@@ -14,7 +14,7 @@
 .fc
 {
  position:absolute;   
- transition:2s;
+ transition:1s;
  cursor:pointer;
 }
 .gl
@@ -48,13 +48,7 @@
  transition:1s; 
 }
 
-.fre
-{
- position:absolute;
- transition:2s; 
-}
-
-.trnstn
+.tfre
 {
  position:absolute;
  transition:2s; 
@@ -75,9 +69,7 @@
  <div class=mth>
   <div class=mth>
    <div class=mth>
-    <div class=mth>
-	 <div class=mth></div>
-	</div>
+    <div class=mth></div>
    </div>
   </div> 
  </div>
@@ -90,9 +82,8 @@
  <div class=smk></div>
 </div>
 
-<div class=fre>FIRE<br>&nbsp TO EVERYONE</div>
-<div class=fre>flame</div>
- <div class=fre>
+<div class=tfre>flame</div>
+ <div class=tfre>
   Intensive oxidation process,<br>
   accompanied by radiation<br>
   in the visible range 
@@ -105,8 +96,7 @@ ns=document.getElementsByClassName('ns')
 mth=document.getElementsByClassName('mth')
 ears=document.getElementsByClassName('ears')
 smk=document.getElementsByClassName('smk')
-fre=document.getElementsByClassName('fre')
-trnstn=document.getElementsByClassName('trnstn')
+tfre=document.getElementsByClassName('tfre')
    
 fc[0].style.left=19+'%'
 fc[0].style.top=22+'%'  
@@ -216,35 +206,28 @@ mth[3].style.top=0+'%'
 mth[3].style.width=11+'%'
 mth[3].style.height=111+'%'	
 mth[3].style.background=
- 'radial-gradient(#070,#333)'
+ 'radial-gradient(#000,#333)'
 		
-mth[4].style.left=37+'%'	
-mth[4].style.top=-999+'%'	
-mth[4].style.width=1188+'%'
-mth[4].style.height=1118+'%'	
-mth[4].style.background='#000'
-mth[4].style.opacity=0.3
-mth[4].style.transform='scale(0)'
-
 smk[0].style.left=69+'%'
 smk[0].style.top=67+'%'  
 smk[0].style.width=11+'%'
 smk[0].style.height=22+'%' 
 smk[0].style.background=
  'radial-gradient(#f00,#333)'
-smk[0].style.borderTopLeftRadius=44+'%'
-smk[0].style.borderTopRightRadius=55+'%'
-smk[0].style.borderBottomLeftRadius=22+'%'
-smk[0].style.borderBottomRightRadius=22+'%'
+smk[0].style.borderTopLeftRadius=17+'%'
+smk[0].style.borderTopRightRadius=33+'%'
+smk[0].style.borderBottomLeftRadius=12+'%'
+smk[0].style.borderBottomRightRadius=12+'%'
 smk[0].style.cursor='pointer'
 
 smk[1].style.left=19+'%'
 smk[1].style.top=-13+'%'  
 smk[1].style.width=33+'%'
 smk[1].style.height=44+'%'  
-smk[1].style.zIndex=-1
 smk[1].style.background=
  'radial-gradient(#ff0,#333)'
+smk[1].style.borderBottomLeftRadius=55+'%'
+smk[1].style.borderBottomRightRadius=55+'%'
 	 
 smk[2].style.left=-33+'%'
 smk[2].style.top=-83+'%'  
@@ -258,53 +241,57 @@ smk[2].style.borderBottomRightRadius=33+'%'
 smk[2].style.opacity=0.4
 smk[2].style.transform='scale(0)'
 	 
-fre[0].style.left='66%'
-fre[0].style.top='11%'
-fre[0].style.color='#b00'
-fre[0].style.transform='scale(0)'
-	
-fre[1].style.left='66%'
-fre[1].style.top='11%' 
-fre[1].style.color='#f00'
-fre[1].style.transform=
+tfre[0].style.left='66%'
+tfre[0].style.top='11%'
+tfre[0].style.color='#b00'
+tfre[0].style.transform=
  'scale(3) skew(-11deg)'
-fre[1].style.cursor='pointer'
-     
-fre[2].style.left='66%'
-fre[2].style.top='22%' 
-fre[2].style.color='#f88'
-fre[2].style.transform='scale(0) '
+tfre[0].style.cursor='pointer'
+	
+tfre[1].style.left='55%'
+tfre[1].style.top='12%' 
+tfre[1].style.color='#f00'
+tfre[1].style.transform='scale(0)'
 	 
 bs=0 
 function cl()
 { 
  if(bs){
-  fc[0].style.transform='scale(0.9)'
+  mth[2].style.transform=
+   'scale(0.6,1.3) translate(0,-33%) rotate(-9deg)'
+  mth[3].style.transform='scale(3,1)'
   gl[1].style.transform='scale(0.9)'
   gl[3].style.transform='scale(0.9)'
+  
  }else{
-  fc[0].style.transform='scale(1.1)'   
+  mth[2].style.transform=
+   'scale(1) rotate(-9deg)'
+  mth[3].style.transform='scale(1)' 
   gl[1].style.transform='scale(1.2)'
   gl[3].style.transform='scale(1.2)'
+  
  }
    bs=!bs
 }
-  setInterval(()=>cl(), 2222)
+  cl()
+  Icl=setInterval(()=>cl(),1111)
  
 Ifc=0 
 fc[0].onmouseover=()=>
 {   
+  clearInterval(Icl)
  idbd.style.background=
-  'radial-gradient(300px,#ff0,#777)'  
- //smk[0].style.transform='translate(-133%,-22%)' 
+  'radial-gradient(300px,#ff0,#777)'
+ mth[2].style.transform=
+   'scale(1.0,2.3) translate(11%,-33%) rotate(-9deg)'  
  smk[2].style.opacity=0.4
+ mth[3].style.transform=
+   'scale(2.0,1.0) translate(11%,-6%) rotate(-9deg)'  
  Ifc=setInterval(()=>{ 
-  mth[4].style.transform=
-   'scale('+(0.7+Math.random()/2)+')'
   smk[0].style.transform='translate(0,0)'
   smk[2].style.transform=
    'scale(1) translate(0,-55%)'
- },999) 
+ }, 999) 
  fc[0].style.transform='scale(1.2)'
  fc[0].style.background=
   'radial-gradient(#eee,#f7f)'
@@ -316,12 +303,11 @@ fc[0].onmouseover=()=>
  gl[3].style.background='#f00'
  ears[0].style.transform='scale(1.3,1.4)'
  ears[1].style.transform='scale(1.3,1.4)'
- mth[3].style.background='#f00'
- fre[0].style.transform=
-  'scale(3) translate(-18%,66%) skew(22deg)'
+ mth[2].style.transform='transform(111%,-77%)'
 }
 fc[0].onmouseout=()=>
-{   
+{ cl()
+  Icl=setInterval(()=>cl(),1111)
  smk[2].style.opacity=0
  smk[2].style.transform='scale(0)'
  idbd.style.background=
@@ -337,9 +323,6 @@ fc[0].onmouseout=()=>
  gl[3].style.background='#000'
  ears[0].style.transform='scale(1)'
  ears[1].style.transform='scale(1)'
- mth[3].style.background='#000'
- mth[4].style.transform='scale(0)'
- fre[0].style.transform='scale(0)'
   clearInterval(Ifc)
 }
 
@@ -359,25 +342,26 @@ smk[0].onmouseout=()=>
   'radial-gradient(222px,#bb0,#666)'  
 }
 
-fre[1].onmouseover=()=>
+tfre[0].onmouseover=()=>
 {   
- fre[1].style.transform=
-  'scale(4) skew(22deg) translate(7%,44%)'
- fre[1].style.color='#990'
-  fre[1].innerHTML='oxidation'
- fre[2].style.transform=
-  'scale(2) skew(-11deg) translate(-7%,44%)'
- fre[2].style.opacity=1
+ tfre[0].style.transform=
+  'scale(4) translate(7%,44%) skew(22deg)'
+ tfre[0].style.color='#990'
+  tfre[0].innerHTML='oxidation'
+ tfre[1].style.transform=
+  'scale(2) translate(22%,100%) skew(-11deg)'
+ tfre[1].style.opacity=1
 }  
-fre[1].onmouseout=()=>
+tfre[0].onmouseout=()=>
 {   
- fre[1].style.transform='scale(3.6) skew(-22deg)'
- fre[1].innerHTML='flame'
- fre[1].style.color='#f00'
- fre[2].style.transform='scale(0)'
- fre[2].style.opacity=0
+ tfre[0].style.transform=
+  'scale(3.6) skew(-22deg)'
+ tfre[0].style.color='#f00'
+  tfre[0].innerHTML='flame'
+ tfre[1].style.transform='scale(0)'
+ tfre[1].style.opacity=0
 }
-
+  //'scale('+(0.7+Math.random()/2)+')'
 </script>
 </body>
 </html>
