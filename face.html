@@ -234,10 +234,10 @@ smk[2].style.top=-83+'%'
 smk[2].style.width=111+'%'
 smk[2].style.height=111+'%'
 smk[2].style.background='#f00'
-smk[2].style.borderTopLeftRadius=44+'%'
-smk[2].style.borderTopRightRadius=66+'%'
+smk[2].style.borderTopLeftRadius=Math.random()*44+'%'
+smk[2].style.borderTopRightRadius=Math.random()*44+'%'
 smk[2].style.borderBottomLeftRadius=55+'%'
-smk[2].style.borderBottomRightRadius=33+'%'
+smk[2].style.borderBottomRightRadius=55+'%'
 smk[2].style.opacity=0.4
 smk[2].style.transform='scale(0)'
 	 
@@ -289,8 +289,10 @@ fc[0].onmouseover=()=>
    'scale(2.0,1.0) translate(11%,-6%) rotate(-9deg)'  
  Ifc=setInterval(()=>{ 
   smk[0].style.transform='translate(0,0)'
-  smk[2].style.transform=
-   'scale(1) translate(0,-55%)'
+  smk[2].style.borderTopLeftRadius=Math.random()*44+'%'
+  smk[2].style.borderTopRightRadius=Math.random()*44+'%'
+  smk[2].style.transform='scale('+(0.4+Math.random())+
+   ') translate(0,-55%)'
  }, 999) 
  fc[0].style.transform='scale(1.2)'
  fc[0].style.background=
@@ -328,11 +330,12 @@ fc[0].onmouseout=()=>
 
 smk[0].onmouseover=()=>
 {   
+ idbd.style.background=
+  'radial-gradient(300px,#ff0,#777)'  
  smk[2].style.opacity=0.4
  smk[2].style.transform=
   'scale(1) translate(0,-55%)'
- idbd.style.background=
-  'radial-gradient(300px,#ff0,#777)' 
+  fc[0].onmouseover()
 }  
 smk[0].onmouseout=()=>
 {   
@@ -340,6 +343,7 @@ smk[0].onmouseout=()=>
  smk[2].style.transform='scale(0)'
  idbd.style.background=
   'radial-gradient(222px,#bb0,#666)'  
+  fc[0].onmouseout()
 }
 
 tfre[0].onmouseover=()=>
