@@ -1,0 +1,164 @@
+<DOCTYPE html>
+<html>
+<style>
+#idbd
+{
+ background:radial-gradient(#dd0,#888);
+}
+
+.dsply
+{
+ position:absolute;
+ cursor:pointer;
+ transition:1s;
+ text-align:center;
+}
+
+.lbrry
+{
+ position:absolute;
+ cursor:pointer;
+ transition:1s;
+}
+
+.srvr
+{
+ position:absolute;
+ cursor:pointer;
+ transition:1s;
+ z-index:1;
+}
+
+</style>
+<body id=idbd>
+ 
+<div class=dsply>
+ <div class=dsply></div>
+ <div class=dsply></div>
+ <div class=dsply></div>
+ <div class=dsply></div>
+</div>
+
+<div class=lbrry>react</div>
+ <div class=lbrry>JS</div>
+ <div class=lbrry>native</div> 
+ <div class=lbrry>state</div>
+ <div class=lbrry>props</div>
+<script>
+dsply=document.getElementsByClassName('dsply');
+lbrry=document.getElementsByClassName("lbrry");
+srvr=document.getElementsByClassName("srvr");
+ 
+dsply[0].style.left=39+'%'
+dsply[0].style.top=45+'%'
+dsply[0].style.width=20+'%'
+dsply[0].style.height=22+'%'
+dsply[0].style.background='#909'
+dsply[0].style.borderRadius=5+'%'
+dsply[0].style.transform='scale(3) skew(11deg)'
+
+dsply[1].style.left=4+'%'
+dsply[1].style.top=4+'%'
+dsply[1].style.width=92+'%'
+dsply[1].style.height=83+'%'
+dsply[1].style.background='#555'
+
+dsply[2].style.left=77+'%'
+dsply[2].style.bottom=2+'%'
+dsply[2].style.width=14+'%'
+dsply[2].style.height=10+'%'
+dsply[2].style.background='#222'
+dsply[2].style.borderRadius=50+'%'
+
+dsply[3].style.left=7+'%'
+dsply[3].style.bottom=2+'%'
+dsply[3].style.width=19+'%'
+dsply[3].style.height=9+'%'
+dsply[3].style.background='#022'
+dsply[3].style.borderRadius=15+'%'
+
+lbrry[0].style.left=61+'%'
+lbrry[0].style.top=4+'%'
+lbrry[0].style.transform='scale(3)'
+
+lbrry[1].style.left=61+'%'
+lbrry[1].style.top=9+'%'
+lbrry[1].style.transform='scale(0)'
+
+lbrry[2].style.left=61+'%'
+lbrry[2].style.top=9+'%'
+lbrry[2].style.transform='scale(0)'
+
+lbrry[3].style.left=61+'%'
+lbrry[3].style.top=9+'%'
+lbrry[3].style.color='#900'
+lbrry[3].style.transform='scale(0)'
+
+lbrry[4].style.left=61+'%'
+lbrry[4].style.top=9+'%'
+lbrry[4].style.color='#900'
+lbrry[4].style.transform='scale(0)'
+
+dsply[0].onmouseover=()=>
+{
+ dsply[0].style.transform='scale(3)'
+ dsply[1].style.background='#888'
+ dsply[2].style.background=
+  'radial-gradient(#f00,#bb0)'
+ dsply[3].style.background=
+  'linear-gradient(90deg,#055,#111,#555,#111,#055)'
+  lbrry[0].onmouseover()
+}
+dsply[0].onmouseout=()=>
+{
+ dsply[0].style.transform='scale(3) skew(11deg)'
+ dsply[1].style.background='#555'
+ dsply[2].style.background='#222'
+ dsply[3].style.background='#111'
+  lbrry[0].onmouseout()
+}
+
+Icmpnnt=0
+bcmpnnt=0
+lbrry[0].onmouseover=()=>
+{
+ lbrry[0].style.transform=
+  'scale(4) skew(-22deg)'
+ lbrry[0].style.color='#666'
+ lbrry[1].style.transform=
+  'scale(4) translate(-88%,33%)'
+ lbrry[1].style.color='#f00'
+ lbrry[2].style.transform=
+  'scale(4) translate(77%,33%)'
+ lbrry[2].style.color='#f07'
+ Icmpnnt=setInterval(()=>{
+  if(bcmpnnt){
+   lbrry[3].style.transform=
+    'scale(4) translate(177%,-22%) skew(-11deg)'
+   lbrry[4].style.transform=
+    'scale(4) translate(177%,88%) skew(11deg)'
+  }else{
+   lbrry[3].style.transform=
+    'scale(4) translate(177%,-22%) skew(11deg)'
+   lbrry[4].style.transform=
+    'scale(4) translate(177%,88%) skew(-11deg)'
+  }
+   bcmpnnt=!bcmpnnt
+ }, 999)	
+}
+lbrry[0].onmouseout=()=>
+{
+ lbrry[0].style.transform='scale(3)'
+ lbrry[0].style.color='#000'
+ lbrry[1].style.transform='scale(0)'
+ lbrry[1].style.color='#000'
+ lbrry[2].style.transform='scale(0)'
+ lbrry[2].style.color='#000'
+ lbrry[3].style.transform='scale(0)'
+ lbrry[4].style.transform='scale(0)'
+  clearInterval(Icmpnnt)
+}
+ 
+</script>
+</body>
+</html>
