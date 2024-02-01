@@ -268,29 +268,7 @@ f=()=>
    'px,#eee,#b0b)' 
 }
 
-crstmtr[0].onmouseover=()=>
-{
-  Itr=setInterval(f, 666)
- crstmtr[0].style.transform='scale(1.1)'
- crstint[1].style.background=
-  'radial-gradient(#ff0,#bb0)'
- crstint[3].style.border='8px ridge #ff0' 
- crstint[4].style.color='#f00' 
- crstint[4].style.transform=
-  'scale(4) translate(88%,-66%) skew(11deg) '
-} 
-crstmtr[0].onmouseout=()=>
-{
-  clearInterval(Itr)
- crstmtr[0].style.transform='scale(1)'
- crstint[1].style.background=
-  'radial-gradient(#990,#770)'
- crstint[2].style.background=
-  'radial-gradient(#909,#707)' 
-  crstint[3].style.border='8px ridge #f80' 
- crstint[4].style.color='#000'  
- crstint[4].style.transform='scale(0)' 
-}
+
 
 snwmn[0].onmouseover=()=>
 {
@@ -302,7 +280,6 @@ snwmn[0].onmouseover=()=>
  smint[5].style.color='#f0f' 
  smint[5].style.transform=
   'scale(2) translate(18%,-166%) skew(-12deg)' 
-  crstmtr[0].onmouseover()
 } 
 snwmn[0].onmouseout=()=>
 {
@@ -311,9 +288,33 @@ snwmn[0].onmouseout=()=>
  smint[4].style.transform='rotate(8deg)'
  smint[5].style.color='#000'
  smint[5].style.transform='scale(0)' 
-  crstmtr[0].onmouseout()
 }
 
+crstmtr[0].onmouseover=()=>
+{
+  Itr=setInterval(f, 999)
+ crstmtr[0].style.transform='scale(1.1)'
+ crstint[1].style.background=
+  'radial-gradient(#ff0,#bb0)'
+ crstint[3].style.border='8px ridge #ff0' 
+ crstint[4].style.color='#f00' 
+ crstint[4].style.transform=
+  'scale(4) translate(88%,-66%) skew(11deg) '
+  snwmn[0].onmouseover()
+} 
+crstmtr[0].onmouseout=()=>
+{
+  clearInterval(Itr)
+ crstmtr[0].style.transform='scale(1)'
+ crstint[1].style.background=
+  'radial-gradient(#990,#770)'
+ crstint[2].style.background=
+  'radial-gradient(#909,#707)' 
+  crstint[3].style.border='8px ridge #f80' 
+ crstint[4].style.color='#000'  
+ crstint[4].style.transform='scale(0)'
+  snwmn[0].onmouseout()
+}
  
 </script>
 </body>
