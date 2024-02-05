@@ -8,6 +8,16 @@ body
 {
  background:linear-gradient(-222deg,#ff0,#0ff)
 }
+button
+{
+ position:absolute;
+ cursor:pointer;
+ left:7%;
+ top:5%;
+ background:#888;
+ color:#bbb;
+ transform:scale(3);
+}
 
 .ltra
 {
@@ -22,7 +32,9 @@ body
  transform:scale(7);
 }
 
-.afrz
+.afrz,.bfrz,.cfrz,.dfrz,.efrz,.ffrz,.hfrz,.ifrz,.lfrz,
+.mfrz,.nfrz,.ofrz,.pfrz,.qfrz,.rfrz,.sfrz,.tfrz,.ufrz,
+.vfrz
 {
  position:absolute;
  transition:1s;
@@ -31,132 +43,80 @@ body
 }
 .bfrz
 {
- position:absolute;
- transition:1s;
  color:#e0e;
- transform:scale(0);
 }
 .cfrz
 {
- position:absolute;
- transition:1s;
  color:#f00;
- transform:scale(0);
 }
 .dfrz
 {
- position:absolute;
- transition:1s;
-  color:#e00;
- transform:scale(0);
+ color:#e00;
 }
 .efrz
 {
- position:absolute;
- transition:1s;
-  color:#d0d;
- transform:scale(0);
+ color:#d0d;
 }
 .ffrz
 {
- position:absolute;
- transition:1s;
-  color:#330;
- transform:scale(0);
+ color:#330;
 }
 .hfrz
 {
- position:absolute;
- transition:1s;
  color:#f00;
- transform:scale(0);
 }
 .ifrz
 {
- position:absolute;
- transition:1s;
  color:#e00;
- transform:scale(0);
 }
 .lfrz
 {
- position:absolute;
- transition:1s;
  color:#d00;
- transform:scale(0);
 }
 .mfrz
 {
- position:absolute;
- transition:1s;
  color:#d00;
- transform:scale(0);
 }
 .nfrz
 {
- position:absolute;
- transition:1s;
  color:#d00;
- transform:scale(0);
 }
 .ofrz
 {
- position:absolute;
- transition:1s;
  color:#d00;
- transform:scale(0);
 }
 .pfrz
 {
- position:absolute;
- transition:1s;
  color:#d00;
- transform:scale(0);
 }
 .qfrz
 {
- position:absolute;
- transition:1s;
  color:#900;
- transform:scale(0);
 }
 .rfrz
 {
- position:absolute;
- transition:1s;
  color:#f00;
- transform:scale(0);
 }
 .sfrz
 {
- position:absolute;
- transition:1s;
  color:#e00;
- transform:scale(0);
 }
 .tfrz
 {
- position:absolute;
- transition:1s;
  color:#a00;
- transform:scale(0);
 }
 .ufrz
 {
- position:absolute;
- transition:1s;
  color:#f00;
- transform:scale(0);
 }
 .vfrz
 {
- position:absolute;
- transition:1s;
  color:#d00;
- transform:scale(0);
 }
 
 </style>
+
+<button>order</button>
 
 <div class=ltra>A</div>
 <div class=ltra>B</div>
@@ -351,6 +311,7 @@ body
 
 <script>
 ltra=document.getElementsByClassName('ltra')
+btn=document.getElementsByTagName('button')
 
 afrz=document.getElementsByClassName('afrz')
 bfrz=document.getElementsByClassName('bfrz')
@@ -378,15 +339,20 @@ frz=[
   tfrz, ufrz, vfrz, 
  ]
 
-for(i=0;i<ltra.length;i++)
-{ 
- ltra[i].style.left=22+Math.random()*66+'%'
- ltra[i].style.top=4+Math.random()*85+'%'
- ltra[i].style.color='#'+Math.round(Math.random()*9)+
-  Math.round(Math.random()*9)+Math.round(Math.random()*9)
+function init()
+{
+ for(i=0;i<ltra.length;i++)
+ { 
+  ltra[i].style.left=22+Math.random()*66+'%'
+  ltra[i].style.top=4+Math.random()*85+'%'
+  ltra[i].style.color='#'+
+  Math.round(Math.random()*9)+
+  Math.round(Math.random()*9)+
+  Math.round(Math.random()*9)
+ }
 }
-
-function init(arr)
+ init()
+function initt(arr)
 {
  for(i=0;i<arr.length;i++)
  { 
@@ -394,13 +360,13 @@ function init(arr)
   arr[i].style.top=(13+i*5)+'%'
  }
 }
- init(afrz), init(bfrz), init(cfrz), init(dfrz),
- init(efrz), init(ffrz), init(hfrz), init(ifrz),
- init(lfrz), init(mfrz), init(nfrz), init(ofrz),
- init(pfrz), init(qfrz), init(rfrz), init(sfrz),
- init(sfrz), init(tfrz), init(ufrz), init(vfrz)
+ initt(afrz), initt(bfrz), initt(cfrz), initt(dfrz),
+ initt(efrz), initt(ffrz), initt(hfrz), initt(ifrz),
+ initt(lfrz), initt(mfrz), initt(nfrz), initt(ofrz),
+ initt(pfrz), initt(qfrz), initt(rfrz), initt(sfrz),
+ initt(sfrz), initt(tfrz), initt(ufrz), initt(vfrz)
 
-f=()=>
+f_sc=()=>
 {
  for(i=0;i<ltra.length;i++)
  {
@@ -408,8 +374,28 @@ f=()=>
    (4+2*Math.random())+')' 
  }
 }
+  Ifrz=setInterval(f_sc,1111)
 
-Ifrz=setInterval(f, 1111)
+bbtn=1
+stp=8
+btn[0].onclick=()=>
+{
+ if(bbtn){
+  for(i=0;i<ltra.length;i++)
+  {
+   ltra[i].style.left=(22+i*4)+'%'
+   ltra[i].style.top=(stp+i)+'%'
+   if(i==7) stp=22
+  }
+  btn[0].innerHTML='random'
+ } 
+ else
+ {
+  init(); stp=8
+  btn[0].innerHTML='order'
+ }   
+ bbtn=!bbtn 
+}
 
 function mv(n)
 {
@@ -426,7 +412,7 @@ function mv(n)
  }
  ltra[n].onmouseout=()=>
  { 
-  Ifrz=setInterval(f, 1111)
+  Ifrz=setInterval(f_sc,1111)
   for(i=0;i<ltra.length;i++)
    ltra[i].style.opacity=1
    for(j=0;j<frz[n].length;j++)
