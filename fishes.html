@@ -38,6 +38,12 @@
  cursor:pointer;
  z-index:1;
 }
+.plls
+{ 
+ position:absolute; 
+ transition:2s;
+ border-radius:55%;
+}
 .fc
 { 
  position:absolute; 
@@ -49,6 +55,7 @@
  position:absolute; 
  cursor:pointer;
 }
+
 
 .t_wtr
 { 
@@ -221,12 +228,18 @@ idb.onmouseout=()=>
 idb.onclick=()=>
 {
  idb.style.transform='scale(0)'
- fsh[0].style.transform='scale(1.3,1)'
+ fsh[0].style.transform=
+  'scale(2) translate(133%,0)'
+ setTimeout(()=>
+ {
+  idb.style.transform='scale(1)'
+  fsh[0].style.transform='scale(2)'
+ }, 1000) 
  setTimeout(()=>
  {
   idb.style.transform='scale(1)'
   fsh[0].style.transform='scale(1)'
- }, 1000)
+ }, 2000)
 }  
 
 Ifsh=0 
