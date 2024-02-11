@@ -34,17 +34,6 @@
  cursor: pointer;
 }
 
-.fntzy
-{
- position:absolute;
- transition: 1s;
- cursor: pointer;
-}
-.fntzy:hover
-{
- z-index:1;
-}
-
 </style>
 
 <div class=hd>
@@ -62,29 +51,17 @@
 
 <div class=ftr>
  <div class=ftr>choose any day </div>
- <div class=ftr>every day any task </div>
+  <div class=ftr>every day any task </div>
+  
  <div class=ftr>OOP</div>
  <div class=ftr>VCTR</div>
- 
- <div class=frz>JavaScript</div> 
- <div class=frz>spcl chip</div>
- <div class=frz>hrd to reload chip!</div>
- <div class=frz>mthds</div>
- 
- <div class=fntzy>any phntzy in vctr</div>
- <div class=fntzy>pattern</div>
- <div class=fntzy>ars longa</div>
- <div class=fntzy>vita brevis</div>  
 </div>
 
 
 <script>
 hd=document.getElementsByClassName('hd')  
 ftr=document.getElementsByClassName('ftr')
-frz=document.getElementsByClassName('frz')
-fntzy=document.getElementsByClassName('fntzy')
    
-  
 function inn(nm,i, l,t, w,h,bkg )
 {
  nm[i].style.left=l+'%'
@@ -95,16 +72,22 @@ function inn(nm,i, l,t, w,h,bkg )
 }
     
 inn(hd,0, 1, 1, 98, 35, 'radial-gradient(#0f0,#000)')
-inn(hd,1, 1, 22, 22,22, '#770')
+inn(hd,1, 2, 22, 17,22, '#770')
   hd[1].style.cursor='pointer'
-inn(hd,2, 20,22, 22,22, '#0ff')
+  hd[1].style.border='3px ridge #500'
+  hd[1].style.zIndex=1
+inn(hd,2, 22,22, 17,22, '#0ff')
  hd[2].style.cursor='pointer'
-inn(hd,3, 40,22, 22,22, '#ff0')
+ hd[2].style.border='3px ridge #500'
+inn(hd,3, 42,22, 17,22, '#ff0')
  hd[3].style.cursor='pointer'
-inn(hd,4, 60,22, 22,22, '#f0f')
+ hd[3].style.border='3px ridge #500'
+inn(hd,4, 62,22, 17,22, '#f0f')
  hd[4].style.cursor='pointer'
-inn(hd,5, 80,22, 19,22, '#8f8')
+ hd[4].style.border='3px ridge #500'
+inn(hd,5, 82,22, 17,22, '#8f8')
  hd[5].style.cursor='pointer'
+ hd[5].style.border='3px ridge #500'
 inn(hd,6, 37,66, '','', 'none')
  hd[6].style.cursor='pointer'
  hd[6].style.transform='scale(2)'
@@ -118,7 +101,7 @@ inn(hd,8, 12,67, '','', 'none')
 inn(hd,9, 66,67, '','', 'none')
  hd[9].style.cursor='pointer'
  hd[9].style.transform='scale(3)'
-inn(ftr,1, 44,22, 44,44, '#777')
+inn(ftr,1, 44,22, 44,44, '#555')
  ftr[1].style.cursor='pointer'
 inn(ftr,2, 50,5, 44,44, 'none')
  ftr[2].style.color='#f05'
@@ -139,45 +122,9 @@ ftr[4].style.background='none'
 ftr[4].style.cursor='pointer'
 ftr[4].style.zIndex=1
  
-frz[0].style.left=11+'%'
-frz[0].style.top=44+'%'
-frz[0].style.cursor='pointer'
-  
-frz[1].style.left=11+'%'
-frz[1].style.top=55+'%'
-frz[1].style.cursor='pointer'
-  
-frz[2].style.left=11+'%'
-frz[2].style.top=77+'%'
-frz[2].style.color='#f00'
-frz[2].style.transform='scale(0)'
- 
-frz[3].style.left=39+'%'
-frz[3].style.top=7+'%'
-frz[3].style.color='#f00'
-frz[3].style.transform='scale(0)'
-  
-fntzy[0].style.left=12+'%'
-fntzy[0].style.top=4+'%'
-fntzy[0].style.cursor='pointer'
-  
-fntzy[1].style.left=22+'%'
-fntzy[1].style.top=9+'%'
-fntzy[1].style.transform='scale(0)'
-fntzy[1].style.color='#f77'
-  
-fntzy[2].style.left=33+'%'
-fntzy[2].style.top=11+'%'
-fntzy[2].style.transform='scale(0)'
-fntzy[2].style.color='#f06'
- 
-fntzy[3].style.left=5+'%'
-fntzy[3].style.top=19+'%'
-fntzy[3].style.transform='scale(0)'
-fntzy[3].style.color='#f06'
- 
- bcl=0
-setInterval(()=>
+Icl=0, bcl=0
+
+Icl=setInterval(()=>
 {  
  if(bcl){
   ftr[1].style.transform='scale(1.1)'
@@ -225,7 +172,7 @@ function act(i)
 	ftr[1].innerHTML='cleaning'
 	hd[i].innerHTML='finito'
     hd[i].style.transform=
-	'scale(1.2) translate(-9%,8%)'
+	'scale(1.2) translate(-7%,8%)'
     hd[i].style.color='#088'
 	hd[i].style.zIndex=1
    break
@@ -320,13 +267,15 @@ hd[9].onclick=()=>
 
 ftr[1].onmouseover=()=>
 {
- ftr[1].style.background='#f0f'
- ftr[1].style.color='#fff'
+ ftr[1].style.background='#777'
+ ftr[1].style.color='#900'
+ ftr[1].style.border='7px ridge #b0f'
 }  
 ftr[1].onmouseout=()=>
 {
- ftr[1].style.background='#777'
+ ftr[1].style.background='#555'
  ftr[1].style.color='#000'
+ ftr[1].style.border='none'
 }  
 ftr[1].onclick=()=>
 {
@@ -347,12 +296,9 @@ ftr[3].onmouseover=()=>
 {
  ftr[3].style.color='#ee0'
  ftr[3].style.transform='scale(1.2)'
- frz[3].style.transform='scale(2)'
- frz[3].style.zIndex=1
  asI=setInterval(()=>
  {
   ftr[3].innerHTML=alg[ialg]; 
-  frz[3].innerHTML=mtd[ialg];
    ialg++;
    if(ialg==4){ ialg=0; imtd=0; }   
  },1555) 	 
@@ -365,9 +311,6 @@ ftr[3].onmouseout=()=>
  ftr[3].style.zIndex=1
  ftr[3].innerHTML='OOP'
   ftr[4].style.transform='scale(1)'
-   
-  frz[3].style.transform='scale(0)'
-  
   clearInterval(asI)
   ialg=0
 }  
@@ -389,92 +332,6 @@ ftr[4].onclick=()=>
  ftr[4].innerHTML='math.<br> development'
  ftr[4].style.color='#f00'
 }  
-
-js=['Angular',"reactJS","jQuery","Vue.js",] 
-ijs=0; jsI=0
-frz[0].onmouseover=()=>
-{
- frz[0].style.color='#f0f'
- frz[0].style.transform=
-  'scale(2) translate(7%,11%)'
- jsI=setInterval(()=>
- {
-  frz[0].innerHTML=js[ijs]; ijs++;
-  if(ijs==4) ijs=0  
- },1111)
-}   
-frz[0].onmouseout=()=>
-{
-  frz[0].innerHTML='JavaScript'
- frz[0].style.color='#000'
- frz[0].style.transform='scale(1)'
-  ijs=0
-  clearInterval(jsI)
-}  
-
-If1=0
-bf1=0
-frz[1].onmouseover=()=>
-{
- frz[1].innerHTML='cmnds by<br> infrared snsr'
-frz[1].style.color='#dd0'
-frz[1].style.transform='scale(2) translate(6%,0)'
-frz[2].style.transform='scale(2) translate(33%,0)'
-If1= setInterval(()=>
-{  
- if(bf1){
-  frz[2].style.transform='scale(3) translate(33%,0)'
- }else{
-  frz[2].style.transform='scale(2) translate(33%,0)'
-}	  
-  bf1=!bf1
- }, 999)
-}  
-frz[1].onmouseout=()=>
-{
-  frz[1].innerHTML='spcl chip'
- frz[1].style.color='#000'
- frz[1].style.transform='scale(1)'
- frz[2].style.transform='scale(0)'
-  clearInterval(If1)
-}    
-
-Ifntzy0=0
-bfntzy0=0
-fntzy[0].onmouseover=()=>
-{
- fntzy[0].style.color='#00f' 
- fntzy[0].style.transform='scale(3) translate(22%,0)' 
- Ifntzy0=setInterval(()=>
- {  
-  if(bfntzy0){
-   fntzy[1].style.transform=
-	'scale(3) translate(88%,88%)'
-   fntzy[2].style.transform=
-	'scale(3) translate(88%,-88%)'
-   fntzy[3].style.transform=
-	'scale(2) translate(88%,-8%)'
- }else{
-  fntzy[1].style.transform=
-   'scale(4) translate(88%,88%)'
-  fntzy[2].style.transform=
-   'scale(2) translate(88%,88%)'
-  fntzy[3].style.transform=
-   'scale(3) translate(88%,-8%)'
- }	  
-   bfntzy0=!bfntzy0
- },999) 
-}
-fntzy[0].onmouseout=()=>
-{
- fntzy[0].style.color='#000' 
- fntzy[0].style.transform='scale(1)' 
-  fntzy[0].innerHTML='any phntzy in vctr'
- fntzy[1].style.transform='scale(0)'
- fntzy[2].style.transform='scale(0)'
- fntzy[3].style.transform='scale(0)'
-  clearInterval(Ifntzy0)
-}
 
 //setTimeout(()=>{ftr[3].style.transform='scale(1)'},999)
 </script>
