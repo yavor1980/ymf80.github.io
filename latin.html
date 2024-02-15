@@ -11,12 +11,17 @@ body
 button
 {
  position:absolute;
+ transition:1s;
  cursor:pointer;
- left:7%;
- top:5%;
+ left:8%;
+ top:56%;
  background:#888;
  color:#bbb;
  transform:scale(3);
+}
+button:hover
+{
+ transform:scale(3.4);
 }
 
 .ltra
@@ -116,7 +121,7 @@ button
 
 </style>
 
-<button>order</button>
+<button>random</button>
 
 <div class=ltra>A</div>
 <div class=ltra>B</div>
@@ -338,8 +343,22 @@ frz=[
   lfrz, mfrz, nfrz, ofrz, pfrz, qfrz, rfrz, sfrz, 
   tfrz, ufrz, vfrz, 
  ]
-
+ 
+stp=8 
 function init()
+{ 
+ for(i=0;i<ltra.length;i++)
+ {
+  ltra[i].style.left=(22+i*4)+'%'
+  ltra[i].style.top=(stp+i)+'%'
+  if(i==7) stp=22
+  ltra[i].style.color='#'+
+  Math.round(Math.random()*9)+
+  Math.round(Math.random()*9)+
+  Math.round(Math.random()*9)
+ }
+}
+function initrnd()
 {
  for(i=0;i<ltra.length;i++)
  { 
@@ -376,22 +395,17 @@ f_sc=()=>
 }
   Ifrz=setInterval(f_sc,1111)
 
-bbtn=1
-stp=8
+bbtn=0
 btn[0].onclick=()=>
 {
- if(bbtn){
-  for(i=0;i<ltra.length;i++)
-  {
-   ltra[i].style.left=(22+i*4)+'%'
-   ltra[i].style.top=(stp+i)+'%'
-   if(i==7) stp=22
-  }
+ if(bbtn)
+ {
+  init()
   btn[0].innerHTML='random'
  } 
  else
  {
-  init(); stp=8
+  initrnd(); stp=8
   btn[0].innerHTML='order'
  }   
  bbtn=!bbtn 
