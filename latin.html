@@ -123,6 +123,8 @@ button:hover
 
 <button>random</button>
 
+<div>LATIN</div>
+
 <div class=ltra>A</div>
 <div class=ltra>B</div>
 <div class=ltra>C</div>
@@ -315,8 +317,10 @@ button:hover
 <div class=vfrz>Vox populi, vox dei</div>
 
 <script>
-ltra=document.getElementsByClassName('ltra')
 btn=document.getElementsByTagName('button')
+dv=document.getElementsByTagName('div')
+
+ltra=document.getElementsByClassName('ltra')
 
 afrz=document.getElementsByClassName('afrz')
 bfrz=document.getElementsByClassName('bfrz')
@@ -343,6 +347,15 @@ frz=[
   lfrz, mfrz, nfrz, ofrz, pfrz, qfrz, rfrz, sfrz, 
   tfrz, ufrz, vfrz, 
  ]
+ 
+dv[0].style.position='absolute'
+dv[0].style.transition='1s'
+dv[0].style.left=66+'%'
+dv[0].style.top=66+'%'
+dv[0].style.color='#f00'
+dv[0].style.opacity=0.4
+dv[0].style.cursor='pointer'
+dv[0].style.transform='scale(8) skew(15deg)'
  
 stp=8 
 function init()
@@ -423,6 +436,7 @@ function mv(n)
     frz[n][j].style.transform='scale(2)'
   } 
   ltra[n].style.opacity=1
+  dv[0].style.opacity=0
  }
  ltra[n].onmouseout=()=>
  { 
@@ -431,13 +445,25 @@ function mv(n)
    ltra[i].style.opacity=1
    for(j=0;j<frz[n].length;j++)
     frz[n][j].style.transform='scale(0)'
+  dv[0].style.opacity=0.4
  }
 }
+
+dv[0].onmouseover=()=>
+{
+ dv[0].style.transform='scale(8) skew(-15deg)'
+  dv[0].innerHTML='FRAZES'
+} 
+dv[0].onmouseout=()=>
+{
+ dv[0].style.transform='scale(8) skew(15deg)'
+  dv[0].innerHTML='LATIN'
+} 
+
  mv(0), mv(1), mv(2), mv(3), mv(4), mv(5), mv(6),
  mv(7), mv(8), mv(9), mv(10), mv(11), mv(12), mv(13),
  mv(14), mv(15), mv(16), mv(17), mv(18)
 
-//
 </script>
 </body>
 </html>
