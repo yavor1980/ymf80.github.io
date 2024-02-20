@@ -151,13 +151,13 @@ flme[2].style.opacity=0.6
 flme[2].style.zIndex=1
 flme[2].style.transform='scale(0) translate(0,55%)'
  
-flme[3].style.left='46%'
-flme[3].style.top='50%'
-flme[3].style.width='1%'
-flme[3].style.height='1%'
-flme[3].style.background='#f00'
+flme[3].style.left='11%'
+flme[3].style.top='13%'
+flme[3].style.width='68%'
+flme[3].style.height='22%'
+flme[3].style.background='#999'
 flme[3].style.borderRadius='55%' 
-flme[3].style.transform='scale(0) translate(0,55%)'
+flme[3].style.opacity=0
 
 drv[0].style.top='65%'
 drv[0].style.width='4%'
@@ -227,9 +227,11 @@ function cld()
   flme[1].style.borderTopLeftRadius=0
   flme[1].style.transform=
    'scale(2.1) translate(0,-11%) '
+  flme[1].style.zIndex=1 
   flme[2].style.borderTopRightRadius='55%'
   flme[2].style.transform=
    'scale(1.5) translate(0,-11%)'
+  flme[2].style.zIndex=0
  }else{
   drv[1].style.transform=
    'rotate(-77deg) scale(1)'
@@ -239,9 +241,11 @@ function cld()
   flme[1].style.borderTopLeftRadius='55%'
   flme[1].style.transform=
    'scale(1.5) translate(0,-11%)'
+  flme[1].style.zIndex=0
   flme[2].style.borderTopRightRadius=0
   flme[2].style.transform=
    'scale(2.1) translate(0,-11%)'
+  flme[2].style.zIndex=1  
  }
   b=!b
 }
@@ -296,6 +300,17 @@ flme[0].onmouseout=()=>
   'scale(3) rotate(33deg)'
  hdd[1].style.color='#000' 
 }
+
+flme[1].onmouseover=()=>
+{    
+ flme[3].style.opacity=0.6
+ 
+} 
+flme[1].onmouseout=()=>
+{    
+ flme[3].style.opacity=0
+}
+
 
 clr=
 [
