@@ -11,12 +11,12 @@ body
 .dsk
 {
  position:absolute;
+ transition:2s;
  left:35%;
  top:10%;
  width:400px;
  height:400px; 
- border:2px solid #000;
- transition:2s;
+ border:2px ridge #909;
  transform:skew(33deg); 
 }
 .cll
@@ -45,28 +45,16 @@ body
  transform:scale(0);
 }
 
-.ttsnc
-{
- position: absolute;
- transition:1s;
- cursor:pointer;
-}
-
 </style>
 
 <div class=dsk></div>
 
 <div class=ttpl>Go...</div>
 <div class=ttpl>PLAY!</div>
- <div class=ttpl></div>
-
-<div class=ttsnc>dynamic<br>&nbsp vector</div>
-<div class=ttsnc></div>
 
 <script>
 dsk=document.getElementsByClassName("dsk")
 ttpl=document.getElementsByClassName("ttpl")
-ttsnc=document.getElementsByClassName("ttsnc")
    
 cl=[]
 for(j=0;j<8;j++)
@@ -102,7 +90,7 @@ for(i=0; i<12; i++)
  dsk[0].appendChild(bf[i])
 }
     
-for(i=0; i<12; i++)    
+for(i=0;i<12;i++)    
 {   
  wf[i].style.left= i*50+'px'
  if(i%2==1)	
@@ -112,9 +100,10 @@ for(i=0; i<12; i++)
   wf[i].style.left= 2*(i-8)*50+'px'
   wf[i].style.top= 2*50+'px'
  }
-  wf[i].style.background='#ccc'
+  wf[i].style.background=
+   'radial-gradient(14px,#999,#ccc)' 
 }
-for(i=0; i<12; i++)    
+for(i=0;i<12;i++)    
 { 
  bf[i].style.left= i*50+'px'
  bf[i].style.top= 6*50+'px'
@@ -125,8 +114,19 @@ for(i=0; i<12; i++)
   bf[i].style.left= 50+2*(i-8)*50+'px'
   bf[i].style.top= 5*50+'px'
  }
- bf[i].style.background='#000'
+ bf[i].style.background=
+  'radial-gradient(14px,#555,#222)'
 }
+
+ttpl[0].style.left=11+'%' 
+ttpl[0].style.top=19+'%' 
+ttpl[0].style.color='#f70'
+ttpl[0].style.transform='scale(0)' 
+
+ttpl[1].style.left=14+'%' 
+ttpl[1].style.top=34+'%'
+ttpl[1].style.color='#f00'
+ttpl[1].style.transform='scale(0)'
 
 Isi=0
 bmv=1
@@ -142,30 +142,43 @@ function mv()
 }
  mv()
  Isi=setInterval(mv, 2222)	
+ 
+dsk[0].onmouseover=()=>
+{
+   clearInterval(Isi)
+ dsk[0].style.border='5px ridge #909' 
+ dsk[0].style.transform= 
+  'skew(0deg) scale(1.6) translate(11%,11%)'
+ ttpl[0].style.transform='scale(6) skew(-22deg)' 
+ ttpl[1].style.transform='scale(6) skew(0deg)'
+   
+}	
+dsk[0].onmouseout=()=>
+{
+  mv()
+  Isi= setInterval(mv, 2222)
+ dsk[0].style.border='2px ridge #909'  
+ ttpl[0].style.transform='scale(0)'
+ ttpl[1].style.transform='scale(0)' 	 
+}	 
 	 	
 function tchw(i)
 {
  wf[i].onmouseover=()=>
  {   
   wf[i].style.transform='scale(1.2)'
-  wf[i].style.background='#f00'
+  wf[i].style.background=
+   'radial-gradient(14px,#090,#0c0)'
   wf[i].style.border='1px ridge #ff0'
    wf[i].innerHTML=i   
-  ttpl[2].style.transform=
-   'scale(1.2) translate(444%,555%)'
-  ttpl[2].style.color='#808'
-  ttpl[2].style.fontSize='3em'
-  ttpl[2].style.zIndex=1
-   ttpl[2].innerHTML=i 
  }	
  wf[i].onmouseout=()=>
  {   
   wf[i].style.transform='scale(1)'
-  wf[i].style.background='#ccc'
+  wf[i].style.background=
+   'radial-gradient(14px,#999,#ccc)'
   wf[i].style.border='none'
    wf[i].innerHTML=''
-  ttpl[2].style.transform='scale(0)'
-   ttpl[2].innerHTML=''
  }	
 }
 
@@ -173,25 +186,19 @@ function tchb(i)
 {
  bf[i].onmouseover=()=>
  {
-  bf[i].style.background='#0f0'
+  bf[i].style.background=
+   'radial-gradient(14px,#cc0,#ff0)'
   bf[i].style.border='1px ridge #222'
   bf[i].style.transform='scale(1.2)'
    bf[i].innerHTML=i
-  ttpl[2].style.transform=
-   'scale(1.2) translate(444%,555%)'
-  ttpl[2].style.color='#808'
-  ttpl[2].style.fontSize='3em'
-  ttpl[2].style.zIndex=1
-  ttpl[2].innerHTML=i 
  }	
  bf[i].onmouseout=()=>
  { 
-   bf[i].style.background='#000'
+  bf[i].style.background=
+   'radial-gradient(14px,#555,#222)'
   bf[i].style.border='none'
   bf[i].style.transform='scale(1)'
    bf[i].innerHTML=''
-  ttpl[2].style.transform='scale(0)'
-   ttpl[2].innerHTML=''
  }	
 }	
 
@@ -203,47 +210,8 @@ tchw(9); tchw(10); tchw(11);
 tchb(0); tchb(1); tchb(2);
 tchb(3); tchb(4); tchb(5);
 tchb(6); tchb(7); tchb(8);
-tchb(9); tchb(10); tchb(11);
+tchb(9); tchb(10); tchb(11);	
 	
-ttsnc[0].style.transform=
- 'scale(2.5) translate(44%, 99%)' 	
-	
-dsk[0].onmouseover=()=>
-{
-   clearInterval(Isi)
- dsk[0].style.transform= 
-  'skew(0deg) scale(1.7) translate(11%,11%)'
- ttpl[0].style.transform=
-  'scale(4) translate(55%,29%)' 
- ttpl[0].style.color='#f70' 
- ttpl[1].style.transform=
-  'scale(4) translate(44px,44px)' 
- ttpl[1].style.color='#f00'  
-}	
-dsk[0].onmouseout=()=>
-{
-  mv()
-  Isi= setInterval(mv, 2222)
- ttpl[0].style.transform='scale(0)'
- ttpl[1].style.transform='scale(0)' 	 
-}	
-
-ttsnc[0].onmouseover=()=>
-{   
- ttsnc[0].style.color='#900 '
- ttsnc[0].style.transform=
-  'scale(2) translate(44%,99%)'
-  ttsnc[0].innerHTML='document.createElement()' +'<br>'+ 
-   'dsk[0].AppendChild()'
-}	
-ttsnc[0].onmouseout=()=>
-{ 
- ttsnc[0].style.color='#ff0 '
- ttsnc[0].style.transform=
-  'scale(2.5) translate(44%,99%)'
-  ttsnc[0].innerHTML='dynamic <br>&nbsp vector'        
-}	
-
 </script>
 </body>
 </html>
