@@ -141,7 +141,7 @@ function mv()
    bmv=!bmv
 }
  mv()
- Isi=setInterval(mv, 2222)	
+ Isi=setInterval(mv,2000)	
  
 dsk[0].onmouseover=()=>
 {
@@ -171,6 +171,8 @@ function tchw(i)
    'radial-gradient(14px,#090,#0c0)'
   wf[i].style.border='1px ridge #ff0'
    wf[i].innerHTML=i   
+  for(j=0;j<12;j++)   
+   bf[j].style.transform='scale(1.2)'
  }	
  wf[i].onmouseout=()=>
  {   
@@ -179,6 +181,8 @@ function tchw(i)
    'radial-gradient(14px,#999,#ccc)'
   wf[i].style.border='none'
    wf[i].innerHTML=''
+  for(j=0;j<12;j++) 
+   bf[j].style.transform='scale(1)' 
  }	
 }
 
@@ -191,6 +195,8 @@ function tchb(i)
   bf[i].style.border='1px ridge #222'
   bf[i].style.transform='scale(1.2)'
    bf[i].innerHTML=i
+  for(j=0;j<12;j++) 
+   wf[j].style.transform='scale(1.2)'   
  }	
  bf[i].onmouseout=()=>
  { 
@@ -199,6 +205,8 @@ function tchb(i)
   bf[i].style.border='none'
   bf[i].style.transform='scale(1)'
    bf[i].innerHTML=''
+  for(j=0;j<12;j++) 
+   wf[j].style.transform='scale(1)'  
  }	
 }	
 
