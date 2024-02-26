@@ -40,13 +40,6 @@
 .rd
 {
  position:absolute;
- left:0%;
- bottom:0%;
- width:100%;
- height:22%;
- background:#777;
- border-top-left-radius:33%;
- border-top-right-radius:33%;
  z-index:-2;
 }
 
@@ -72,19 +65,17 @@
   <div class=fr></div>
   <div class=fr></div>
  </div>
- <div class=frz></div>
- <div class=frz>A</div>
- <div class=frz>U</div>
- <div class=frz>T</div>
- <div class=frz>O</div>
- <div class=frz>Motor vs Transmission</div>
+  <div class=frz></div>
+  <div class=frz>A</div>
+  <div class=frz>U</div>
+  <div class=frz>T</div>
+  <div class=frz>O</div>
+  <div class=frz>Motor vs Transmission</div>
 </div>
 
 <div class=rd>
  <div class=rd></div>
 </div>
-
-
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -93,7 +84,6 @@ fr=document.getElementsByClassName('fr')
 rd=document.getElementsByClassName('rd')
    
 frz=document.getElementsByClassName('frz')
-tth=document.getElementsByClassName('tth')
    
 btn[0].style.left=11+'%'
 btn[0].style.top=5+'%'
@@ -127,7 +117,7 @@ whl[0].style.borderTopLeftRadius=33+'%'
 whl[0].style.borderTopRightRadius=33+'%'
 whl[0].style.borderBottomLeftRadius=22+'%'
 whl[0].style.borderBottomRightRadius=22+'%'  
-whl[0].style.transform='scale)(0.8,1)'
+whl[0].style.transform='scale(0.8,1)'
   
 whl[1].style.left=3+'%'
 whl[1].style.top=88+'%'  
@@ -151,11 +141,11 @@ whl[3].style.width=88+'%'
 whl[3].style.height=44+'%'  
 whl[3].style.background=
  'radial-gradient(#888,#000)'
-whl[3].style.borderTopLeftRadius=44+'%'
-whl[3].style.borderTopRightRadius=44+'%'  
-whl[3].style.borderBottomLeftRadius=11+'%'
-whl[3].style.borderBottomRightRadius=11+'%'
-whl[3].style.border='8px ridge #900'   
+whl[3].style.borderTopLeftRadius=55+'%'
+whl[3].style.borderTopRightRadius=55+'%'  
+whl[3].style.borderBottomLeftRadius=33+'%'
+whl[3].style.borderBottomRightRadius=33+'%'
+whl[3].style.border='8px ridge #990'   
      
 whl[4].style.left=-3+'%'
 whl[4].style.top=55+'%'  
@@ -202,6 +192,14 @@ fr[3].style.borderTopLeftRadius=55+'%'
 fr[3].style.borderTopRightRadius=55+'%'	 
 fr[3].style.borderRadius=14+'%'	 
 	 
+rd[0].style.left=0+'%'
+rd[0].style.bottom=0+'%'
+rd[0].style.width=100+'%'
+rd[0].style.height=22+'%'
+rd[0].style.background='#777'
+rd[0].style.borderTopLeftRadius=33+'%'
+rd[0].style.borderTopRightRadius=33+'%'
+ 
 rd[1].style.left=44+'%'
 rd[1].style.top=0+'%' 
 rd[1].style.background='#fff';
@@ -257,7 +255,8 @@ o=
    'radial-gradient(#444,#000)'
   fr[0].style.background='#000'
   fr[1].style.background='#000'
-  frz[0].style.transform='scale(2) translate(0,-233%)'
+  frz[0].style.transform=
+   'scale(2) translate(0,-233%)'
    frz[0].innerHTML='Braking 3s'
   setTimeout(()=>
   {
@@ -270,7 +269,7 @@ o=
    fr[1].style.background='#f00'
 	frz[0].innerHTML='Racing 2s'
    setTimeout(()=>{frz[0].innerHTML='';},2222)
-  },3333)
+  }, 3333)
  } 
 }   
    o.intr=setInterval(()=>{o.cl();}, 222);
@@ -293,7 +292,6 @@ btn[1].onclick=()=>
   whl[0].style.transition='2s'
   whl[0].style.opacity=1
  }, 3333)
- 
 }
 
 Iwhl0=0
@@ -305,9 +303,14 @@ whl[0].onmouseover=()=>
   'radial-gradient(#ff0,#f00)'
  fr[2].style.background='#bbb'
 
-  fr[2].innerHTML='0000'
+  fr[2].innerHTML=
+   Math.round(Math.random()*9)+''+
+   Math.round(Math.random()*9)+''+
+   Math.round(Math.random()*9)+''+
+   Math.round(Math.random()*9)
+   
  frz[1].style.transform=
-  'scale(3) translate(-777%,-199%)'
+  'scale(3) translate(-+777%,-199%)'
  frz[2].style.transform=
   'scale(3) translate(-555%,-188%)'
  frz[3].style.transform=
@@ -334,5 +337,4 @@ whl[0].onmouseout=()=>
 
 </script>
 </body>
-
 </html>
