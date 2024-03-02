@@ -7,6 +7,13 @@
  background:linear-gradient(#222,#00c);
 }
 
+.bckrnd
+{ 
+ position:absolute; 
+ transition:1s;
+ z-index:-1;
+}
+
 .crstmtr
 { 
  position:absolute; 
@@ -41,6 +48,12 @@
 
 </style>
 
+<div class=bckrnd></div>
+<div class=bckrnd></div>
+<div class=bckrnd></div>
+<div class=bckrnd></div>
+
+
 <div class=crstmtr>
  <div class=crstmtr></div>
  <div class=crstmtr></div>
@@ -74,11 +87,43 @@
 </div>
 
 <script>
+bckrnd=document.getElementsByClassName('bckrnd')
 crstmtr=document.getElementsByClassName('crstmtr') 
 crstint=document.getElementsByClassName('crstint') 
 snwmn=document.getElementsByClassName('snwmn') 
 smint=document.getElementsByClassName('smint')
 
+bckrnd[0].style.left=0+'%'
+bckrnd[0].style.bottom=0+'%'
+bckrnd[0].style.width=100+'%'
+bckrnd[0].style.height=22+'%'
+bckrnd[0].style.background=
+ 'radial-gradient(#ddd,#eee)'
+bckrnd[0].style.borderTopLeftRadius=29+'%'
+bckrnd[0].style.borderTopRightRadius=29+'%'
+bckrnd[0].style.opacity=0.2
+
+function finit(nm,i,l,t,w,h,bkgr)
+{
+ nm[i].style.left=l+'%'
+ nm[i].style.top=t+'%'
+ nm[i].style.width=w+'%' 
+ nm[i].style.height=h+'%'
+ nm[i].style.background=bkgr
+}
+finit(bckrnd,1,45,33,1,2,'#ee0')
+ bckrnd[1].style.borderRadius=55+'%'
+ bckrnd[1].style.opacity=0.8
+ bckrnd[1].style.transform='scale(0.2)'
+finit(bckrnd,2,55,16,1,2,'radial-gradient(#78a,#ee0)')
+ bckrnd[2].style.borderRadius=55+'%'
+ bckrnd[2].style.opacity=0.8
+ bckrnd[2].style.transform='scale(5)'
+finit(bckrnd,3,75,14,1,2,'#ee0')
+ bckrnd[3].style.borderRadius=55+'%'
+ bckrnd[3].style.opacity=0.8
+ bckrnd[3].style.transform='scale(0.2)' 
+ 
 crstmtr[0].style.left=22+'%'
 crstmtr[0].style.top=16+'%'
 crstmtr[0].style.width=22+'%'
@@ -161,7 +206,6 @@ crstint[1].style.height=12+'%'
 crstint[1].style.background=
  'radial-gradient(#990,#770)'
 crstint[1].style.borderRadius=55+'%' 
-crstint[1].style.background=
 crstint[1].style.transform='scale(3.4,2.1)' 
 crstint[1].style.zIndex=-1
 
@@ -170,7 +214,7 @@ crstint[2].style.top=59+'%'
 crstint[2].style.width=33+'%'
 crstint[2].style.height=25+'%'
 crstint[2].style.background=
- 'radial-gradient(33px,#eee,#707)'
+ 'radial-gradient(33px,#e0e,#707)'
 crstint[2].style.borderTopLeftRadius=44+'%' 
 crstint[2].style.borderTopRightRadius=44+'%'
 crstint[2].style.borderBottomLeftRadius=55+'%' 
@@ -261,58 +305,66 @@ smint[5].style.top=-45+'%'
 smint[5].style.transform='scale(0)'
 smint[5].style.zIndex=3
 
-f=()=>
+fcrtr=()=>
 {
  crstint[2].style.background=
    'radial-gradient('+Math.round(Math.random()*44)+
    'px,#eee,#b0b)' 
 }
-
-
+fsnmn=()=>
+{
+ lvf=Math.round(Math.random()*(22))
+}
 
 snwmn[0].onmouseover=()=>
 {
- snwmn[0].style.transform='scale(1.1)'
+ snwmn[0].style.transform='scale(1.1)' 
+ smint[3].style.borderRadius=33+'%'
  smint[3].style.transform=
-  'translate(8%,-88%) rotate(222deg)'
+  'scale(1.5) translate(0%,-116%) rotate(215deg)'
+ smint[4].style.borderRadius=33+'%' 
  smint[4].style.transform=
-  'translate(-8%,-111%) rotate(-44deg)' 
+  'scale(1.5) translate(0%,-116%) rotate(-28deg)'
  smint[5].style.color='#f0f' 
  smint[5].style.transform=
   'scale(2) translate(18%,-166%) skew(-12deg)' 
+  Ism=setInterval(fsnmn,999)
 } 
 snwmn[0].onmouseout=()=>
 {
  snwmn[0].style.transform='scale(1)'
+ smint[3].style.borderRadius=0+'%'
  smint[3].style.transform='rotate(188deg)'
+ smint[4].style.borderRadius=0+'%'
  smint[4].style.transform='rotate(8deg)'
  smint[5].style.color='#000'
- smint[5].style.transform='scale(0)' 
+ smint[5].style.transform='scale(0)'
+  clearInterval(Ism)
 }
 
 crstmtr[0].onmouseover=()=>
 {
-  Itr=setInterval(f, 999)
  crstmtr[0].style.transform='scale(1.1)'
  crstint[1].style.background=
   'radial-gradient(#ff0,#bb0)'
- crstint[3].style.border='8px ridge #ff0' 
+ crstint[3].style.border='8px ridge #f50' 
  crstint[4].style.color='#f00' 
  crstint[4].style.transform=
   'scale(4) translate(88%,-66%) skew(11deg) '
+  Itr=setInterval(fcrtr,999)
   snwmn[0].onmouseover()
 } 
 crstmtr[0].onmouseout=()=>
 {
-  clearInterval(Itr)
  crstmtr[0].style.transform='scale(1)'
  crstint[1].style.background=
   'radial-gradient(#990,#770)'
  crstint[2].style.background=
-  'radial-gradient(#909,#707)' 
-  crstint[3].style.border='8px ridge #f80' 
+  'radial-gradient(33px,#e0e,#707)' 
+ crstint[3].style.border='8px ridge #f80' 
  crstint[4].style.color='#000'  
  crstint[4].style.transform='scale(0)'
+  clearInterval(Itr)
   snwmn[0].onmouseout()
 }
  
