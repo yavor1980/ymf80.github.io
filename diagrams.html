@@ -16,11 +16,7 @@
  transition:2s;
  font-size:0.2em;
 }
-.mth
-{
- position:absolute;    
- transition:2s;
-}
+
 .gl
 {
  position:absolute;   
@@ -41,6 +37,11 @@
 {
  position:absolute;   
  transition:4s;
+}
+.mth
+{
+ position:absolute;    
+ transition:2s;
 }
 
 .tbl
@@ -137,6 +138,8 @@ lctr[0].style.borderTopLeftRadius=44+'%'
 lctr[0].style.borderTopRightRadius=44+'%'
 lctr[0].style.borderBottomLeftRadius=33+'%'
 lctr[0].style.borderBottomRightRadius=33+'%'
+lctr[0].style.borderTop='16px ridge #333'
+lctr[0].style.borderBottom='6px ridge #648'	
 	
 lctr[1].style.left=-10+'%'
 lctr[1].style.top=22+'%'
@@ -171,11 +174,13 @@ lctr[4].style.opacity=0.5
 lctr[4].style.transform='scale(0)'		
 	
 initj(gl,0,18,0,14,22,'#fff')
- gl[0].style.borderRadius=55+'%'
  gl[0].style.top=17+'%'
+ gl[0].style.borderRadius=55+'%'
+ gl[0].style.borderTop='16px ridge #886'
 initj(gl,1,66,0,14,22,'#fff')
- gl[1].style.borderRadius=55+'%'
  gl[1].style.top=17+'%'
+ gl[1].style.borderRadius=55+'%'
+ gl[1].style.borderTop='16px ridge #886'
 initj(ns,0,44,0,11,36,'radial-gradient(#ffc,#f88)')
  ns[0].style.borderRadius=55+'%'
  ns[0].style.top=17+'%'
@@ -183,6 +188,7 @@ initj(ns,1,-44,-7,199,33,'radial-gradient(#ffc,#f88)')
  ns[1].style.borderRadius=55+'%'
 initj(mth,0,22,22,55,1,'radial-gradient(#000,#f00)')
  mth[0].style.borderRadius=55+'%'
+ mth[0].style.borderTop='16px ridge #886'
 
 initj(tbl,0,11,22,33,44,'#fff')
  tbl[0].style.borderTop='6px ridge #088'
@@ -213,9 +219,17 @@ initfrz(vctr,1,35,23,0)
 function mvd()
 {   
  tbl[0].style.transform='skew(44deg)'
+ tbl[1].style.borderTopLeftRadius=55+'%'
+ tbl[1].style.borderTopRightRadius=55+'%'
  tbl[1].style.height=Math.random()*80+'%'
+ tbl[2].style.borderTopLeftRadius=55+'%'
+ tbl[2].style.borderTopRightRadius=55+'%'
  tbl[2].style.height=Math.random()*80+'%'
+ tbl[3].style.borderTopLeftRadius=55+'%'
+ tbl[3].style.borderTopRightRadius=55+'%'
  tbl[3].style.height=Math.random()*80+'%'
+ tbl[4].style.borderTopLeftRadius=55+'%'
+ tbl[4].style.borderTopRightRadius=55+'%'
  tbl[4].style.height=Math.random()*80+'%'
  tbl[5].style.opacity=1	 
 }
@@ -235,16 +249,20 @@ Im=setInterval(mvm,666)
  
 lctr[0].onmouseover=()=>
 { 
- lctr[0].style.background=
-  'radial-gradient(77px,#ffc,#f88)'
+ lctr[1].style.background=
+  'radial-gradient(#ffc,#f88)'
+ lctr[2].style.background=
+  'radial-gradient(#ffc,#f88)' 
  lctr[0].style.transform=
   'scale(1.1) translate(-14%)'
   tps[0].onmouseover()
 }
 lctr[0].onmouseout=()=>
 { 
- lctr[0].style.background=
-  'radial-gradient(#ffc,#f88)'
+ lctr[1].style.background=
+  'radial-gradient(#b99,#f88)'
+ lctr[2].style.background=
+  'radial-gradient(#b99,#f88)' 
  lctr[0].style.transform='scale(1)' 
   tps[0].onmouseout()
 }
@@ -259,12 +277,21 @@ tbl[0].onmouseover=()=>
   'scale(12,6) translate(0,-177%) skew(-13deg)'
  lctr[3].style.borderRadius='33%'
  lctr[4].style.color='#900' 
- 
- tbl[0].style.transform='skew(0deg)'			 
+ tbl[0].style.transform='skew(0deg)'
+ tbl[1].style.borderTopLeftRadius=0+'%'
+ tbl[1].style.borderTopRightRadius=0+'%'
  tbl[1].style.height=9+'%'
+ tbl[1].style.borderTopLeftRadius=0+'%'
+ tbl[1].style.borderTopRightRadius=0+'%'
  tbl[2].style.height=9+'%'
+ tbl[2].style.borderTopLeftRadius=0+'%'
+ tbl[2].style.borderTopRightRadius=0+'%'
  tbl[3].style.height=9+'%'
+ tbl[3].style.borderTopLeftRadius=0+'%'
+ tbl[3].style.borderTopRightRadius=0+'%'
  tbl[4].style.height=9+'%'
+ tbl[4].style.borderTopLeftRadius=0+'%'
+ tbl[4].style.borderTopRightRadius=0+'%'
  tbl[5].style.opacity=0
  zr[0].style.left=22+'%'
  zr[1].style.left=22+'%'
