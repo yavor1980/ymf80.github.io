@@ -238,13 +238,15 @@ frz[5].style.transform='scale(0)'
 	 
 o= 
 {
-  btr:1, intr:0, bs:0, 
+ btr:1, intr:0, bs:0, 
  cl:function()
  {  
+  v=Math.round(Math.random()*9)
   whl[0].style.transform=
    'scale('+(Math.random()+0.4)+') translate(0,11%)'+
    'rotate('+(Math.random()*22-11)+'deg)' 
-   
+  whl[3].style.background='radial-gradient(#'+
+   v+v+v+',#000)'  
  },
  clk:function()
  {  
