@@ -73,15 +73,7 @@
  border-top-right-radius:55%;
 }
 
-.agrss
-{
- position:absolute;   
- transition:1s;
- color:red;
- transform:scale(0);
-}
-
-.alg
+.ttagrss
 {
  position:absolute;   
  transition:1s;
@@ -107,34 +99,16 @@
     <div class=mth></div>
     <div class=mth></div>
    </div>
-  </div>
+  </div> 
  </div>
  <div class=pw></div>
  <div class=pw></div>
  <div class=pw></div>
  <div class=pw><div class=pw></div></div>
  
-<div class=agrss>Agressive one</div>
-<div class=agrss>Aggression is vectorless</div>
-<div class=agrss>Emotional<br> irritation</div>
-
-<div class=alg > 
- while(true)<br>
- {<br>
- &nbsp &nbsp atack()<br>
- }<br>
-</div>
-<div class=alg >
- function atack()<br>
- {<br>
-  &nbsp &nbsp s.style.transform='scale(5)'<br>
- }<br>
-</div>
-<div class=alg >
- ...transform='scale(4) skew(33deg)'
-</div>
-<div class=alg >
- Inserted blocks!
+ <div class=ttagrss>Agressive one</div>
+ <div class=ttagrss>Aggression is vectorless</div>
+ <div class=ttagrss>Emotional<br> irritation</div>
 </div>
 
 <script>
@@ -147,8 +121,7 @@ gl=document.getElementsByClassName('gl')
 zr=document.getElementsByClassName('zr')
 mth=document.getElementsByClassName('mth')
   
-agrss=document.getElementsByClassName('agrss')
-alg=document.getElementsByClassName('alg')
+ttagrss=document.getElementsByClassName('ttagrss')
 
 btn[0].style.left=76+'%'
 btn[0].style.top=4+'%'
@@ -227,20 +200,12 @@ inn(pw,3, 44,-1, 11,11,
  'radial-gradient(#f80,#555)',-77,-77,33,33)
 inn(pw,4, 33,1, 33,99,
  'radial-gradient(#f80,#555)',77,77,9,9)
-inn(agrss,0, 33,2)
- agrss[0].style.color='#009'
-inn(agrss,1, 33,7)
- agrss[1].style.color='#00b'
-inn(agrss,2, 11,19)
- agrss[2].style.color='#700'
-inn(alg,0, 11,44)
- alg[0].style.color='#800'
-inn(alg,1, 4,77)
- alg[1].style.color='#400'	
-inn(alg,2, 14,77)
- alg[2].style.color='#ff0'
-inn(alg,3, 35,33)
- alg[3].style.color='#f00'
+inn(ttagrss,0, 33,2)
+ ttagrss[0].style.color='#009'
+inn(ttagrss,1, 33,7)
+ ttagrss[1].style.color='#00b'
+inn(ttagrss,2, 11,19)
+ ttagrss[2].style.color='#700'
 		
  bd=0, bstp=0
 function stp()
@@ -248,9 +213,9 @@ function stp()
  if(bstp)
  {
   pw[0].style.transform='translate(0,-33%)'
+  pw[2].style.transform='translate(0,33%)'
   pw[1].style.transform=
    'translate(-144%,0) rotate(44deg)'
-  pw[2].style.transform='translate(0,33%)'
   pw[1].style.borderBottomRightRadius='55%'
   pw[1].style.borderBottomLeftRadius='0%'
   hd[1].style.transform=
@@ -260,9 +225,9 @@ function stp()
   else
  {
   pw[0].style.transform='translate(0,33%)'
+  pw[2].style.transform='translate(0,-33%)'
   pw[1].style.transform=
    'translate(144%,0) rotate(-44deg)'
-  pw[2].style.transform='translate(0,-33%)'
   pw[1].style.borderBottomRightRadius='0%'
   pw[1].style.borderBottomLeftRadius='55%'
   hd[1].style.transform='scale(1) translate(0%,0)'
@@ -274,18 +239,14 @@ function stp()
 		 
 function clk()
 {
- agrss[0].style.transform=
+ ttagrss[0].style.transform=
   'scale(3) translate(0,-199%) skew(22deg)'
- agrss[1].style.transform=
+ ttagrss[1].style.transform=
   'scale(3) translate(0,-177%) skew(-22deg)'
- agrss[2].style.transform=
-  'scale(3) translate(-37%,-77%) skew(-22deg)'  
+ ttagrss[2].style.transform=
+  'scale(3) translate(-37%,-77%) skew(-22deg)'
+  
  mth[0].style.height='22%'
- bd=Math.round(Math.random())	   
- if(bd)  
-  hd[2].style.transform='scale(2) translate(-44%,0)'
- else  
-  hd[2].style.transform='scale(2) translate(44%,0)'
  gl[0].style.transform='scale(2)'
  gl[1].style.transform='scale(2)'
  pw[0].style.transform='translate(0,0)'
@@ -295,14 +256,31 @@ function clk()
  pw[3].style.transform=
   'scale(1.4,2) translate(0,-44%)'
  pw[4].style.transform=
-  'scale(1.4,1.4) translate(0,-11%)'
- btn[0].innerHTML='quiet'
+  'scale(1.4,1.4) translate(0,-11%)' 
+  btn[0].innerHTML='quiet'
+ bd=Math.round(Math.random())
+ if(bd)
+ {
+  grnd[2].style.transform=
+   'scale(1,1.3) translate(0,-14%) skew(-22deg)'
+  grnd[3].style.transform=
+   'scale(1,1.3) translate(0,-14%) skew(22deg)' 
+  hd[2].style.transform='scale(2) translate(-44%,0)' 
+ }  
+ else  
+ {
+  grnd[2].style.transform=
+   'scale(1,1.3) translate(0,-14%) skew(22deg)'
+  grnd[3].style.transform=
+   'scale(1,1.3) translate(0,-14%) skew(-22deg)'  
+  hd[2].style.transform='scale(2) translate(44%,0)'  
+ } 
  setTimeout(()=>{
-  agrss[0].style.transform='scale(0)'
-  agrss[1].style.transform='scale(0)'
-  agrss[2].style.transform='scale(0)'
-  alg[0].style.transform='scale(0)'
-  alg[1].style.transform='scale(0)'
+  ttagrss[0].style.transform='scale(0)'
+  ttagrss[1].style.transform='scale(0)'
+  ttagrss[2].style.transform='scale(0)'
+  grnd[2].style.transform='scale(1)'
+  grnd[3].style.transform='scale(1)'
   mth[0].style.height='1%'
   hd[2].style.transform=
    'scale(1) translate(0%,0)'
@@ -328,7 +306,6 @@ hd[2].onmouseover=()=>
   clk() 
 }
 
-  
 </script>
 </body>
 
