@@ -262,6 +262,7 @@ o=
    clearInterval(o.intr)
   btn[0].style.opacity=0
   btn[1].style.opacity=0
+  btn[2].style.opacity=0
   whl[0].style.transform=
    'rotate(0deg) translate(-33%,0)'
   fr[0].style.background='#000'
@@ -274,6 +275,7 @@ o=
     o.intr=setInterval(()=>{o.cl();}, 222);
    btn[0].style.opacity=1
    btn[1].style.opacity=1
+   btn[2].style.opacity=1
    fr[0].style.background='#f00'
    fr[1].style.background='#f00'
 	frz[0].innerHTML='Racing 2s'
@@ -292,12 +294,14 @@ btn[1].onclick=()=>
 {
  btn[0].style.opacity=0
  btn[1].style.opacity=0
+ btn[2].style.opacity=0
  whl[0].style.transition='1s'
  whl[0].style.opacity=0.2
  setTimeout(()=>
  {
   btn[0].style.opacity=1
   btn[1].style.opacity=1
+  btn[2].style.opacity=1
   whl[0].style.transition='2s'
   whl[0].style.opacity=1
  }, 2222)
@@ -310,11 +314,17 @@ btn[2].onclick=()=>
   'radial-gradient(#ff0,#f00)'
  fr[1].style.background=
   'radial-gradient(#ff0,#f00)'
+ btn[0].style.opacity=0
+ btn[1].style.opacity=0 
+ btn[2].style.opacity=0 
  setTimeout(()=>
  {
   idbd.style.background='linear-gradient(#bb0,#0ff)'
   fr[0].style.background='#f00'
   fr[1].style.background='#f00'
+  btn[0].style.opacity=1
+  btn[1].style.opacity=1
+  btn[2].style.opacity=1
  }, 2222)
 }
 
