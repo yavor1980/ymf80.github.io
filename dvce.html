@@ -291,7 +291,7 @@ tst[0].onmouseover=()=>
   tst[1].style.fontSize='3em'
    dgt=Math.round(Math.random()*8)
   btn[dgt].style.boxShadow='none'
-  bldng[dgt+1].style.background='#ff0'
+  bldng[dgt+1].style.background='#ffd'
   tst[1].style.fontSize='4em'
    tst[1].innerHTML=dgt+1
    ldgt=dgt 
@@ -313,6 +313,24 @@ tst[0].onmouseout=()=>
   dgt=0
   clearInterval(Itst)
 } 
+
+bldng[0].onmouseover=()=>
+{ 
+ for(i=0;i<9;i++)
+ {
+  bldng[i+1].style.background='#f0f'
+  bldng[i+1].style.borderRadius='55%'
+ } 
+}
+bldng[0].onmouseout=()=>
+{ 
+ for(i=0;i<9;i++)
+ {
+  bldng[i+1].style.background='#222'
+  bldng[i+1].style.borderRadius='0%'
+ } 
+}
+
 
 </script>
 </body>
