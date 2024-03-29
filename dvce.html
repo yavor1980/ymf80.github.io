@@ -1,464 +1,319 @@
 
 <html>
-
-<head> </head>
+<head></head>
 <body>
 <style>
-
 body
 {
-background: linear-gradient(#550,#0ff);
+ background:linear-gradient(#550,#0ff);
 }
 
 .bgrnd
 {
-position: absolute;
-transition:1s;
-color:#fff;
-cursor:pointer;
-}
-
-.vlm
-{
-position: absolute;
-transition:1s;
-cursor:pointer;
-}
-
-.nrm
-{
-position: absolute;
-transition:1s;
-cursor:pointer;
+ position:absolute;
+ transition:1s;
+ color:#fff;
+ cursor:pointer;
+ font-size:0em;
+ text-align:center;
 }
 
 .tst
 {
-position: absolute;
-transition:1s;
-cursor:pointer;
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+}
+.btn
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ width:22%;
+ height:18%;
+ background:#990;
+ font-size:3em;
+ text-align:center;
 }
 
-.mltmtr
+.bldng
 {
-position: absolute;
-transition:1s;
-cursor:pointer;
-text-align:center;
-}
-
-.grps
-{
-position: absolute;
-transition:1s;
-cursor:pointer;
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ width:88%;
+ height:9%;
+ border-radius:6%;
 }
 
 </style>
          
- <div class=bgrnd ></div>
- <div class=bgrnd></div>
- <div class=bgrnd></div>
- <div class=bgrnd></div>
+<div class=bgrnd>#f00</div>
+<div class=bgrnd>#0f0</div>
+<div class=bgrnd>#00f</div>
+<div class=bgrnd>#fff</div>
  <div class=bgrnd>mix color</div>
-
- <div class=vlm >volume</div>
- <div class=vlm>units</div>
- <div class=vlm>enough type</div>
- <div class=vlm>is it really<br> for us?</div>
- 
- <div class=nrm>normal</div>
- <div class=nrm>any process...</div>
- <div class=nrm>ordrd prjct</div>
  
  <div class=tst>
   <div class=tst></div>
-  <div class=tst>rndm</div>
-  <div class=tst></div>
+  <div class=btn>1</div>
+  <div class=btn>2</div>
+  <div class=btn>3</div>
+  <div class=btn>4</div>
+  <div class=btn>5</div>
+  <div class=btn>6</div>
+  <div class=btn>7</div>
+  <div class=btn>8</div>
+  <div class=btn>9</div>
  </div>
  
- <div class=mltmtr>
-  <div class=mltmtr>
-   <div class=mltmtr></div>
-  </div>
-  <div class=mltmtr></div>
+ <div class=bldng>
+  <div class=bldng></div>
+  <div class=bldng></div>
+  <div class=bldng></div>
+  <div class=bldng></div>
+  <div class=bldng></div>
+  <div class=bldng></div>
+  <div class=bldng></div>
+  <div class=bldng></div>
+  <div class=bldng></div>
  </div>
- <div class=mltmtr>working...</div>
- 
- <button class=grps>grps</button>
- <div class=grps>switch</div>
- <div class=grps>by button</div>
- 
+
 <script>
-
 bgrnd=document.getElementsByClassName('bgrnd')
-vlm=document.getElementsByClassName('vlm')
-nrm=document.getElementsByClassName('nrm')
 tst=document.getElementsByClassName('tst')
-mltmtr=document.getElementsByClassName('mltmtr')
-grps=document.getElementsByClassName('grps')
+btn=document.getElementsByClassName('btn')
+bldng=document.getElementsByClassName('bldng')
 
+bgrnd[0].style.left=3+'%'
+bgrnd[0].style.top=4+'%'
+bgrnd[0].style.width=22+'%'
+bgrnd[0].style.height=12+'%'
+bgrnd[0].style.background='#f00'
+ 
+bgrnd[1].style.left=27+'%'
+bgrnd[1].style.top=4+'%'
+bgrnd[1].style.width=22+'%'
+bgrnd[1].style.height=12+'%'
+bgrnd[1].style.background='#0f0'
+ 
+bgrnd[2].style.left=51+'%'
+bgrnd[2].style.top=4+'%'
+bgrnd[2].style.width=22+'%'
+bgrnd[2].style.height=12+'%'
+bgrnd[2].style.background='#00f'
+ 
+bgrnd[3].style.left=75+'%'
+bgrnd[3].style.top=4+'%'
+bgrnd[3].style.width=22+'%'
+bgrnd[3].style.height=12+'%'
+bgrnd[3].style.background='#fff'
+bgrnd[3].style.color='#444'
 
-//for(i=1; i<6; i++)
- bgrnd[0].style.left=3+'%'
- bgrnd[0].style.top=4+'%'
- bgrnd[0].style.width=22+'%'
- bgrnd[0].style.height=12+'%'
- bgrnd[0].style.background='#f00'
+bgrnd[4].style.left=77+'%'
+bgrnd[4].style.top=11+'%'
+bgrnd[4].style.color='#000'
+bgrnd[4].style.fontSize='1em'
+bgrnd[4].style.transform='scale(0)'
  
- bgrnd[1].style.left=27+'%'
- bgrnd[1].style.top=4+'%'
- bgrnd[1].style.width=22+'%'
- bgrnd[1].style.height=12+'%'
- bgrnd[1].style.background='#0f0'
+tst[0].style.left=20+'%'
+tst[0].style.top=33+'%'
+tst[0].style.width=28+'%'
+tst[0].style.height=55+'%'
+tst[0].style.background=
+ 'radial-gradient(#f00,#e00)'
+tst[0].style.borderRadius='9%'
+tst[0].style.boxShadow='11px 11px 6px'
+tst[0].style.border='9px ridge #800'
  
- bgrnd[2].style.left=51+'%'
- bgrnd[2].style.top=4+'%'
- bgrnd[2].style.width=22+'%'
- bgrnd[2].style.height=12+'%'
- bgrnd[2].style.background='#00f'
+tst[1].style.left=6+'%'
+tst[1].style.top=6+'%'
+tst[1].style.width=88+'%'
+tst[1].style.height=20+'%'
+tst[1].style.background='#ff0'
+tst[1].style.textAlign='center'
+tst[1].style.fontSize='3em'
+tst[1].style.borderRadius='7%'
  
- bgrnd[3].style.left=75+'%'
- bgrnd[3].style.top=4+'%'
- bgrnd[3].style.width=22+'%'
- bgrnd[3].style.height=12+'%'
- bgrnd[3].style.background='#fff'
+btn[0].style.left=9+'%'
+btn[0].style.top=33+'%'
 
- bgrnd[4].style.left=75+'%'
- bgrnd[4].style.top=5+'%'
- bgrnd[4].style.zIndex=0
- bgrnd[4].style.transform='scale(0)'
+btn[1].style.left=39+'%'
+btn[1].style.top=33+'%'
 
- vlm[0].style.left=16+'%'
- vlm[0].style.top=22+'%'
- vlm[0].style.color='#ff0'
- vlm[0].style.transform='scale(3)'
- 
- vlm[1].style.left=16+'%'
- vlm[1].style.top=29+'%'
- vlm[1].style.color='#00f'
- vlm[1].style.transform='scale(0)'
- 
- vlm[2].style.left=16+'%'
- vlm[2].style.top=35+'%'
- vlm[2].style.color='#0ff'
- vlm[2].style.transform='scale(0)'
- 
- vlm[3].style.left=16+'%'
- vlm[3].style.top=44+'%'
- vlm[3].style.color='#0ff'
- vlm[3].style.transform='scale(0)'
- 
- nrm[0].style.left=16+'%'
- nrm[0].style.top=28+'%'
- nrm[0].style.color='#0ff'
- nrm[0].style.transform='scale(3)'
- 
- nrm[1].style.left=16+'%'
- nrm[1].style.top=33+'%'
- nrm[1].style.color='#0ff'
- nrm[1].style.transform='scale(0)'
- 
- nrm[2].style.left=16+'%'
- nrm[2].style.top=43+'%'
- nrm[2].style.color='#0ff'
- nrm[2].style.transform='scale(0)'
- 
- tst[0].style.left=16+'%'
- tst[0].style.top=43+'%'
- tst[0].style.width=22+'%'
- tst[0].style.height=33+'%'
- tst[0].style.background=
-  'radial-gradient(#f00,#000)'
- tst[0].style.borderRadius='9%'
- 
- dgt=0
- tst[1].style.left=6+'%'
- tst[1].style.top=13+'%'
- tst[1].style.width=88+'%'
- tst[1].style.height=22+'%'
- tst[1].style.background='#fff'
- tst[1].style.textAlign='center'
- tst[1].style.fontSize='3em'
- 
- tst[2].style.left=33+'%'
- tst[2].style.top=39+'%'
- tst[2].style.width=33+'%'
- tst[2].style.height=16+'%'
- tst[2].style.background='#ff0'
- tst[2].style.color='#f00'
- tst[2].style.textAlign='center'
- tst[2].style.fontSize='2em'
+btn[2].style.left=69+'%'
+btn[2].style.top=33+'%'
 
- tst[3].style.left=47+'%'
- tst[3].style.top=70+'%'
- tst[3].style.color='#fff'
+btn[3].style.left=9+'%'
+btn[3].style.top=55+'%'
+
+btn[4].style.left=39+'%'
+btn[4].style.top=55+'%'
+
+btn[5].style.left=69+'%'
+btn[5].style.top=55+'%'
+
+btn[6].style.left=9+'%'
+btn[6].style.top=77+'%'
+
+btn[7].style.left=39+'%'
+btn[7].style.top=77+'%'
+
+btn[8].style.left=69+'%'
+btn[8].style.top=77+'%'
+
+bldng[0].style.left=69+'%'
+bldng[0].style.top=33+'%'
+bldng[0].style.width=22+'%'
+bldng[0].style.height=56+'%'
+bldng[0].style.background='#000'
+bldng[0].style.opacity=0.6
  
- mltmtr[0].style.left=55+'%'
- mltmtr[0].style.top=43+'%'
- mltmtr[0].style.width=22+'%'
- mltmtr[0].style.height=33+'%'
- mltmtr[0].style.background=
-  'radial-gradient(#0f0,#000)'
- mltmtr[0].style.borderRadius='9%'
+bldng[1].style.left=6+'%'
+bldng[1].style.top=3+'%'
+bldng[1].style.background='#222'
+
+bldng[2].style.left=6+'%'
+bldng[2].style.top=13+'%'
+bldng[2].style.background='#222'
+
+bldng[3].style.left=6+'%'
+bldng[3].style.top=23+'%'
+bldng[3].style.background='#222'
  
- mltmtr[1].style.left=24+'%'
- mltmtr[1].style.top=24+'%'
- mltmtr[1].style.width=55+'%'
- mltmtr[1].style.height=55+'%'
- mltmtr[1].style.background='#ff0'
- mltmtr[1].style.borderRadius='55%'
+bldng[4].style.left=6+'%'
+bldng[4].style.top=33+'%'
+bldng[4].style.background='#222'
+
+bldng[5].style.left=6+'%'
+bldng[5].style.top=43+'%'
+bldng[5].style.background='#222'
+
+bldng[6].style.left=6+'%'
+bldng[6].style.top=53+'%'
+bldng[6].style.background='#222' 
  
- mltmtr[2].style.left=44+'%'
- mltmtr[2].style.top=11+'%'
- mltmtr[2].style.width=11+'%'
- mltmtr[2].style.height=77+'%'
- mltmtr[2].style.background=
-  'radial-gradient(#00f,#000)'
+bldng[7].style.left=6+'%'
+bldng[7].style.top=63+'%'
+bldng[7].style.background='#222'
+
+bldng[8].style.left=6+'%'
+bldng[8].style.top=73+'%'
+bldng[8].style.background='#222'
+
+bldng[9].style.left=6+'%'
+bldng[9].style.top=83+'%'
+bldng[9].style.background='#222'  
  
- mltmtr[3].style.left=49+'%'
- mltmtr[3].style.top=11+'%'
- mltmtr[3].style.transform='scale(0)'
- 
- mltmtr[4].style.left=55+'%'
- mltmtr[4].style.top=80+'%'
- mltmtr[4].style.width=22+'%'
- mltmtr[4].style.height=11+'%'
- mltmtr[4].style.borderRadius='9%'
- mltmtr[4].style.fontSize='0em'
- mltmtr[4].style.transform='scale(0)'
- mltmtr[4].style.background=
-  'radial-gradient(#ff0,#000)'
- 
- grps[0].style.left=45+'%'
- grps[0].style.top=55+'%'
- grps[0].style.transform='scale(2)'
- 
- grps[1].style.left=44+'%'
- grps[1].style.top=50+'%'
- grps[1].style.transform='scale(0)'
- 
- grps[2].style.left=44+'%'
- grps[2].style.top=50+'%'
- grps[2].style.transform='scale(0)'
- 
-//============================================= 
 bgrnd[0].onmouseover=()=>
 {
-  bgrnd[0].style.background='#d00'
-  bgrnd[0].innerHTML='#f00'
-  bgrnd[0].style.fontSize='4em'
-  bgrnd[0].style.textAlign='center'
-  bgrnd[0].style.height='17%'
+ bgrnd[0].style.background='#d00'
+ bgrnd[0].style.borderRadius='7%'
+ bgrnd[0].style.fontSize='4em'
+ bgrnd[0].style.transform='scale(1,1.2)'
 } 
 bgrnd[0].onmouseout=()=>
 {
-   bgrnd[0].style.background='#f00'
-   bgrnd[0].innerHTML=''
-   bgrnd[0].style.height='12%'
+ bgrnd[0].style.background='#f00'
+ bgrnd[0].style.borderRadius='0%'
+ bgrnd[0].style.fontSize='0em'
+ bgrnd[0].style.transform='scale(1)'
 } 
  
 bgrnd[1].onmouseover=()=>
 {
-  bgrnd[1].style.background='#0d0'
-  bgrnd[1].innerHTML='#0f0'
-  bgrnd[1].style.fontSize='4em'
-  bgrnd[1].style.textAlign='center'
-  bgrnd[1].style.height='17%'
+ bgrnd[1].style.background='#0d0'
+ bgrnd[1].style.borderRadius='7%'
+ bgrnd[1].style.fontSize='4em'
+ bgrnd[1].style.transform='scale(1,1.2)'
 } 
 bgrnd[1].onmouseout=()=>
 {
-   bgrnd[1].style.background='#0f0'
-   bgrnd[1].innerHTML=''
-   bgrnd[1].style.height='12%'
+ bgrnd[1].style.background='#0f0'
+ bgrnd[1].style.borderRadius='0%'
+ bgrnd[1].style.fontSize='0em'
+ bgrnd[1].style.transform='scale(1)'
 } 
  
 bgrnd[2].onmouseover=()=>
 {
-  bgrnd[2].style.background='#00d'
-  bgrnd[2].innerHTML='#00f'
-  bgrnd[2].style.fontSize='4em'
-  bgrnd[2].style.textAlign='center'
-  bgrnd[2].style.height='17%'
+ bgrnd[2].style.background='#00d'
+ bgrnd[2].style.borderRadius='7%'
+ bgrnd[2].style.fontSize='4em'
+ bgrnd[2].style.transform='scale(1,1.2)'
 } 
 bgrnd[2].onmouseout=()=>
 {
-  bgrnd[2].style.background='#00f'
-  bgrnd[2].innerHTML=''
-  bgrnd[2].style.height='12%'
+ bgrnd[2].style.background='#00f'
+ bgrnd[2].style.borderRadius='0%'
+ bgrnd[2].style.fontSize='0em'
+ bgrnd[2].style.transform='scale(1)'
 } 
 
 bgrnd[3].onmouseover=()=>
 {
-  bgrnd[3].style.background='#000'
-  bgrnd[3].innerHTML='#000'
-  bgrnd[3].style.fontSize='4em'
-  bgrnd[3].style.textAlign='center'
-  bgrnd[3].style.height='17%'
-  bgrnd[4].style.transform=
-   'scale(3) translate(-33%,188%)'
+ bgrnd[3].style.background='#ddd'
+ bgrnd[3].style.borderRadius='7%'
+ bgrnd[3].style.fontSize='4em'
+ bgrnd[3].style.transform='scale(1,1.2)'
+ bgrnd[4].style.color='#f00'
+ bgrnd[4].style.transform=
+  'scale(3) translate(-66%,166%) skew(22deg)'
 } 
 bgrnd[3].onmouseout=()=>
 {
-  bgrnd[3].style.background='#fff'
-  bgrnd[3].innerHTML=''
-  bgrnd[3].style.height='12%'
-  bgrnd[4].style.transform='scale(0)'
-  
+ bgrnd[3].style.background='#fff'
+ bgrnd[3].style.borderRadius='0%'
+ bgrnd[3].style.fontSize='0em'
+ bgrnd[3].style.transform='scale(1)'
+ bgrnd[4].style.color='#000'
+ bgrnd[4].style.transform='scale(0)'
 } 
 
-Ivlm0=0
-bvlm=0
-vlm[0].onmouseover=()=>
-{
-  vlm[0].innerHTML='multiple<br> category'
-  vlm[0].style.zIndex=1
-  vlm[0].style.color='#fff'
-  vlm[0].style.transform='scale(4) translate(22%,33%)'
-  vlm[1].style.transform='scale(4) translate(244%,-55%)'
-  vlm[2].style.transform=
-   'scale(4) translate(120%,-19%) skew(22deg)'
-  vlm[2].style.color='#808'
-  vlm[3].style.transform=
-   'scale(4) translate(204%,-11%) skew(-22deg)'
-  vlm[3].style.color='#880'
-} 
-vlm[0].onmouseout=()=>
-{
-  vlm[0].innerHTML='volume'
-  vlm[0].style.color='#ff0'
-  vlm[0].style.transform='scale(3)'
-  vlm[1].style.transform='scale(0) '
-  vlm[2].style.transform='scale(0) '
-  vlm[3].style.transform='scale(0) '
-} 
-
-nrm[0].onmouseover=()=>
-{
-  nrm[0].innerHTML='distrbtn'
-  nrm[0].style.color='#066'
-  nrm[0].style.transform='scale(4) skew(44deg)'
-  nrm[1].style.color='#660'
-  nrm[1].style.transform=
-   'scale(4) translate(100%,-66%) skew(22deg)'
-  nrm[2].style.color='#066'
-  nrm[2].style.transform=
-   'scale(4) translate(122%,-66%) skew(-22deg)'
-} 
-nrm[0].onmouseout=()=>
-{
-  nrm[0].innerHTML='normal'
-  nrm[0].style.color='#0ff'
-  nrm[0].style.transform='scale(3)'
-  nrm[1].style.color='#660'
-  nrm[1].style.transform='scale(0)'
-  nrm[2].style.color='#606'
-  nrm[2].style.transform='scale(0)'
-} 
-
-Itst=0
+Itst=0, dgt=0, ldgt=0
 tst[0].onmouseover=()=>
 {   
-  tst[0].style.transform='scale(1.2)'
-  Itst= setInterval(()=>{
-   tst[1].innerHTML=dgt
-    dgt++
-     },999) 
-  
+ tst[0].style.boxShadow='none'
+ tst[0].style.transform='scale(1.2) skew(22deg)'
+ tst[1].style.borderRadius='14%'
+ btn[0].style.boxShadow='11px 11px 6px'
+ btn[1].style.boxShadow='11px 11px 6px'
+ btn[2].style.boxShadow='11px 11px 6px'
+ btn[3].style.boxShadow='11px 11px 6px'
+ btn[4].style.boxShadow='11px 11px 6px'
+ btn[5].style.boxShadow='11px 11px 6px'
+ btn[6].style.boxShadow='11px 11px 6px'
+ btn[7].style.boxShadow='11px 11px 6px'
+ btn[8].style.boxShadow='11px 11px 6px'
+ Itst= setInterval(()=>{
+  btn[ldgt].style.boxShadow='11px 11px 6px'
+  bldng[ldgt+1].style.background='#222'
+  tst[1].style.fontSize='3em'
+   dgt=Math.round(Math.random()*8)
+  btn[dgt].style.boxShadow='none'
+  bldng[dgt+1].style.background='#ff0'
+  tst[1].style.fontSize='4em'
+   tst[1].innerHTML=dgt+1
+   ldgt=dgt 
+ }, 999) 
 } 
 tst[0].onmouseout=()=>
-{ dgt=0
-   tst[1].innerHTML=dgt
-  tst[0].style.transform='scale(1)'
-  clearInterval(Itst)
+{ 
+ tst[0].style.boxShadow='11px 11px 6px'
+ tst[0].style.transform='scale(1)'
+ tst[1].style.borderRadius='7%'
+ tst[1].style.boxShadow='none'
+ tst[1].style.fontSize='3em'
   tst[1].innerHTML=''
+ for(i=0;i<9;i++)
+ {
+  btn[i].style.boxShadow='none'
+  bldng[i+1].style.background='#222'
+ } 
+  dgt=0
+  clearInterval(Itst)
 } 
-
-tst[2].onmouseover=()=>
-{ 
-  dgt=Math.round(Math.random()*99)
- tst[2].style.transform='scale(1.2)'
-   tst[3].innerHTML=dgt
- tst[3].style.transform='scale(4)'
-} 
-tst[2].onmouseout=()=>
-{ 
- tst[2].style.transform='scale(1)'
- tst[3].style.transform='scale(0)'
-} 
-
-Imltmtr=0
-bmltmtr=0
-mltmtr[0].onmouseover=()=>
-{ 
- mltmtr[0].style.transform='scale(1.2) '
- mltmtr[1].style.background='#bb0'
- mltmtr[2].style.transform=
-  'scale(1.1,1.1) rotate(180deg) skew(0deg)'
- mltmtr[3].style.transform=
-  'scale(5) translate(0,-111%)'
- mltmtr[3].style.color='#f00'
-  mltmtr[3].innerHTML='on'
- mltmtr[4].style.transform=
-  'scale(1) translate(0,9%)'
- mltmtr[4].style.fontSize='3em'
- mltmtr[4].style.color='#f00'
- Imltmtr=setInterval(()=>{
-  if(bmltmtr)
-    mltmtr[4].innerHTML='counter'
-   else
-    mltmtr[4].innerHTML='working...'
-      bmltmtr=!bmltmtr	
-  },999) 
- 
- tst[0].onmouseover()
-} 
-mltmtr[0].onmouseout=()=>
-{ 
- mltmtr[0].style.transform='scale(1)'
- mltmtr[1].style.background='#ff0'
- mltmtr[2].style.transform='scale(1)'
- mltmtr[3].style.transform='scale(0) '
- mltmtr[3].style.color='#000'
-  mltmtr[3].innerHTML='off' 
- mltmtr[4].style.transform='scale(0)'
- mltmtr[4].style.fontSize='0em'
- mltmtr[4].style.color='#000'
-  clearInterval(Imltmtr)
-  mltmtr[4].innerHTML='working...'
-  tst[0].onmouseout()
-} 
-
-grps[0].onclick=()=>
-{ 
- mltmtr[0].onmouseover()
-  grps[0].innerHTML='rept'
- grps[1].style.color='#0f0'
- grps[1].style.transform=
-  'scale(4) translate(8%,-199%) skew(0deg)'
- grps[2].style.color='#f00'
- grps[2].style.transform=
-  'scale(3) translate(111%,-188%) skew(-35deg)' 
-} 
-grps[0].onmouseover=()=>
-{ 
-grps[0].style.transform='scale(2.6)'
-grps[0].style.color='#f00'
- grps[0].innerHTML='click!'
-}
-grps[0].onmouseout=()=>
-{ 
- mltmtr[0].onmouseout()
- grps[0].style.transform='scale(2)'
- grps[0].style.color='#000'
- grps[1].style.transform='scale(0)'
- grps[2].style.transform='scale(0)'
-  grps[0].innerHTML='grps'
-} 
-
-
 
 </script>
 </body>
-
 </html>
