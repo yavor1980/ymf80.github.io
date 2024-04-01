@@ -23,6 +23,11 @@ button:hover
  border-radius:55%;
 }
 
+.tbe
+{
+ transition:333ms;
+}
+
 </style>
 <body id=idbd>
 
@@ -176,9 +181,9 @@ tbe[2].style.borderBottomLeftRadius=0+'%'
 tbe[2].style.borderBottomRightRadius=0+'%' 
 
 tbe[3].style.left=9+'%'
-tbe[3].style.top=222+'%' 
+tbe[3].style.top=666+'%' 
 tbe[3].style.width=79+'%'
-tbe[3].style.height=33+'%'
+tbe[3].style.height=88+'%'
 tbe[3].style.borderTop='1px ridge transparent'
 tbe[3].style.borderBottom='3px solid #000'
 tbe[3].style.borderLeft='1px ridge transparent'
@@ -222,7 +227,7 @@ function cl()
   ') rotate('+(120+Math.random()*5)+'deg)'
   tbe[3].style.transition='0s'
   tbe[3].style.transform='translate(0,0)'
-  tbe[3].style.opacity=0
+  //tbe[3].style.opacity=0
  }
   else
  {
@@ -235,7 +240,7 @@ function cl()
   ') rotate('+(120+Math.random()*5)+'deg)'
   tbe[3].style.transition='1s'
   tbe[3].style.transform=
-   'scale(2,1) translate(0,1222%)'
+   'scale(2,1) rotate(3deg)'
   tbe[3].style.opacity=0.8
  } 
  bcl=!bcl
