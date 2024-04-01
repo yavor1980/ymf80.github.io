@@ -11,7 +11,6 @@
  position:absolute;
  cursor:pointer;
  transition:1s;
- text-align:center;
 }
 
 .lbrry
@@ -21,7 +20,7 @@
  transition:1s;
 }
 
-.srvr
+.prcptr
 {
  position:absolute;
  cursor:pointer;
@@ -45,9 +44,8 @@
  <div class=lbrry>state</div>
  <div class=lbrry>props</div>
 <script>
-dsply=document.getElementsByClassName('dsply');
-lbrry=document.getElementsByClassName("lbrry");
-srvr=document.getElementsByClassName("srvr");
+dsply=document.getElementsByClassName('dsply')
+lbrry=document.getElementsByClassName("lbrry")
  
 dsply[0].style.left=39+'%'
 dsply[0].style.top=45+'%'
@@ -99,12 +97,12 @@ lbrry[4].style.top=9+'%'
 lbrry[4].style.color='#900'
 lbrry[4].style.transform='scale(0)'
 
-Idsply=0; vdspl=9
+Idsply=0; vdspl=0
 dsply[0].onmouseover=()=>
 {
  dsply[0].style.transform='scale(3)'
  Idsply=setInterval(()=>{ 
-  vdspl+=3
+  vdspl=Math.random()*33+33
   dsply[1].style.background=
    'radial-gradient('+vdspl+'px,#f00,#bb0)'
  }, 999)
