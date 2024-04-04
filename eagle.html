@@ -5,7 +5,7 @@
 <style>
 #idbd
 {
- background: linear-gradient(9deg,#0a0,#a00);
+ background: linear-gradient(9deg,#0f0,#f00);
 }
 .btn
 {
@@ -48,35 +48,35 @@
 .hd
 {
  position:absolute;
+ transition:2s;
  background:blue;
  border-top-left-radius:55%;
  border-top-right-radius:55%;
  border-bottom-left-radius:55%;
  border-bottom-right-radius:55%;
  z-index:1;  
- transition:2s;
 }
 .lwng
 {
  position:absolute;
+ transition:2s;
+  width:55%;
+ height:122%; 
  border-top-left-radius:55%;
  border-top-right-radius:5%;
  border-bottom-left-radius:55%;
  border-bottom-right-radius:99%; 
- width:55%;
- height:122%; 
- transition:2s;
 }
 .rwng
 {
- position:absolute;   
+ position:absolute;  
+ transition:2s;
  width:55%;
  height:122%; 
  border-top-left-radius:5%;
  border-top-right-radius:55%;
  border-bottom-left-radius:99%;
- border-bottom-right-radius:55%;
- transition:2s;    
+ border-bottom-right-radius:55%; 
 }
 
 .wrd
@@ -117,22 +117,21 @@
  <div class=rwng ><div class=rwng ></div></div> 
 </div>
 
-<div class=wrd>AQUILA</div> 
-<div class=wrd>NON</div>  
-<div class=wrd>CAPTAT</div> 
-<div class=wrd>MUSCAS</div> 
+ <div class=wrd>AQUILA</div> 
+ <div class=wrd>NON</div>  
+ <div class=wrd>CAPTAT</div> 
+ <div class=wrd>MUSCAS</div> 
  
 <div class=flt>flight</div>
-<div class=flt></div>
-<div class=flt>transform any block</div>
+ <div class=flt></div>
+ <div class=flt>transform any block</div>
  
 <div class=gthb>GitHub</div> 
-<div class=gthb>Add server!</div>
-<div class=gthb>Control content</div>
-<div class=gthb>Instructns to client</div>
-<div class=gthb></div>
-<div class=gthb>LocalHost</div>
- 
+ <div class=gthb>Add server!</div>
+ <div class=gthb>Control content</div>
+ <div class=gthb>Instructns to client</div>
+ <div class=gthb></div>
+ <div class=gthb>LocalHost</div>
  
 <script>
 btn=document.getElementsByClassName('btn')
@@ -179,8 +178,7 @@ var eagl=
   rwng[0].style.top='6%'  
   rwng[0].style.width='99%'
   rwng[0].style.height='122%'
-  rwng[0].style.zIndex=-1
-	  
+  rwng[0].style.zIndex=-1	  
   rwng[1].style.background=
    'radial-gradient(#444,#000)';
   rwng[1].style.left='33%'
@@ -195,22 +193,19 @@ var eagl=
   hd[0].style.top='-11%' 	 
   hd[0].style.width='66%'
   hd[0].style.height='66%' 
-  hd[0].style.zIndex=1
-	 
+  hd[0].style.zIndex=1	 
   hd[1].style.background=
    'radial-gradient(#f60,#000)';
   hd[1].style.left='33%'
   hd[1].style.top='33%' 
   hd[1].style.width='44%'
   hd[1].style.height='44%' 
-	 
   hd[2].style.background=
 	  'radial-gradient(#f00,#ff0)'
   hd[2].style.left='20%'
   hd[2].style.top='17%' 
   hd[2].style.width='22%'
   hd[2].style.height='0%'
-	 
   hd[3].style.background=
    'radial-gradient(#f00,#ff0)'
   hd[3].style.left='62%'
@@ -223,38 +218,33 @@ var eagl=
   wrd[0].style.color='#ff0' 
   wrd[0].style.opacity=0
   wrd[0].style.fontSize='3em' 
-	  
   wrd[1].style.left='55%'
   wrd[1].style.top='17%'
   wrd[1].style.color='#f0f'
   wrd[1].style.opacity=0
   wrd[1].style.fontSize='3em' 
-	    
   wrd[2].style.left='66%' 
   wrd[2].style.top='26%'
   wrd[2].style.color='#0ff'
   wrd[2].style.opacity=0
   wrd[2].style.fontSize='3em' 
-	  
   wrd[3].style.left='71%' 
   wrd[3].style.top='36%'
   wrd[3].style.color='#f00'
   wrd[3].style.opacity=0	  
   wrd[3].style.fontSize='3em'
-
+  
   flt[0].style.left='6%' 
   flt[0].style.top='11%'
   flt[0].style.color='#f00'
   flt[0].style.opacity=1	  
   flt[0].style.fontSize='3em'
   flt[0].style.cursor='pointer'
-	  
   flt[1].style.left='16%' 
   flt[1].style.top='19%'
   flt[1].style.color='#f00'
   flt[1].style.opacity=1
   flt[1].style.transform='scale(0)'	  
-      
   flt[2].style.left='16%' 
   flt[2].style.top='19%'
   flt[2].style.color='#f00'
@@ -266,23 +256,18 @@ var eagl=
   gthb[0].style.color='#f00'
   gthb[0].style.cursor='pointer'
   gthb[0].style.transform='scale(3)'	
-	  
   gthb[1].style.left='58%' 
   gthb[1].style.top='57%'
   gthb[1].style.transform='scale(0)'	  
-	 
   gthb[2].style.left='64%' 
   gthb[2].style.top='55%'
   gthb[2].style.transform='scale(0)'
-	 
   gthb[3].style.left='70%' 
   gthb[3].style.top='74%'
   gthb[3].style.transform='scale(0)'
-	 
   gthb[4].style.left='70%' 
   gthb[4].style.top='76%'
   gthb[4].style.transform='scale(0)'
-	 
   gthb[5].style.left='70%' 
   gthb[5].style.top='46%'
   gthb[5].style.transform='scale(0)'	 
@@ -423,8 +408,6 @@ gthb[0].onmouseout=()=>
   clearInterval(Igthb)
   ialg=0   
 }       
-
-
 
 //eagl.intr= setInterval(()=>,2222	
 </script>
