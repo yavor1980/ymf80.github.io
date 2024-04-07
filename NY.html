@@ -84,22 +84,13 @@
  <div class=snwmn></div>
 </div>
 
-<script>
+<script> 
+'strict mode'
 bckrnd=document.getElementsByClassName('bckrnd')
 crstmtr=document.getElementsByClassName('crstmtr') 
 crstint=document.getElementsByClassName('crstint') 
 snwmn=document.getElementsByClassName('snwmn') 
 smint=document.getElementsByClassName('smint')
-
-bckrnd[0].style.left=0+'%'
-bckrnd[0].style.bottom=0+'%'
-bckrnd[0].style.width=100+'%'
-bckrnd[0].style.height=22+'%'
-bckrnd[0].style.background=
- 'radial-gradient(#099,#eee)'
-bckrnd[0].style.borderTopLeftRadius=29+'%'
-bckrnd[0].style.borderTopRightRadius=29+'%'
-bckrnd[0].style.opacity=0.2
 
 function finit(nm,i,l,t,w,h,bkgr)
 {
@@ -109,7 +100,12 @@ function finit(nm,i,l,t,w,h,bkgr)
  nm[i].style.height=h+'%'
  nm[i].style.background=bkgr
 }
-finit(bckrnd,1,45,33,1,2,'#ee0')
+finit(bckrnd,0,0,'',100,22,'radial-gradient(#099,#eee)')
+ bckrnd[0].style.bottom=0+'%'
+ bckrnd[0].style.borderTopLeftRadius=29+'%'
+ bckrnd[0].style.borderTopRightRadius=29+'%'
+ bckrnd[0].style.opacity=0.2
+finit(bckrnd,1,47,13,1,2,'#ee0')
  bckrnd[1].style.borderRadius=55+'%'
  bckrnd[1].style.opacity=0.8
  bckrnd[1].style.transform='scale(0.2)'
@@ -117,7 +113,7 @@ finit(bckrnd,2,55,16,1,2,'radial-gradient(#78a,#ee0)')
  bckrnd[2].style.borderRadius=55+'%'
  bckrnd[2].style.opacity=0.8
  bckrnd[2].style.transform='scale(5)'
-finit(bckrnd,3,75,14,1,2,'#ee0')
+finit(bckrnd,3,77,22,1,2,'#ee0')
  bckrnd[3].style.borderRadius=55+'%'
  bckrnd[3].style.opacity=0.8
  bckrnd[3].style.transform='scale(0.2)' 
@@ -306,12 +302,8 @@ smint[5].style.zIndex=3
 fcrtr=()=>
 {
  crstint[2].style.background=
-   'radial-gradient('+Math.round(Math.random()*44)+
-   'px,#eee,#b0b)' 
-}
-fsnmn=()=>
-{
- lvf=Math.round(Math.random()*(22))
+  'radial-gradient('+Math.round(Math.random()*44)+
+  'px,#ee0,#b0b)' 
 }
 
 snwmn[0].onmouseover=()=>
@@ -326,7 +318,6 @@ snwmn[0].onmouseover=()=>
  smint[5].style.color='#f0f' 
  smint[5].style.transform=
   'scale(2) translate(18%,-166%) skew(-12deg)' 
-  Ism=setInterval(fsnmn,999)
 } 
 snwmn[0].onmouseout=()=>
 {
@@ -337,12 +328,14 @@ snwmn[0].onmouseout=()=>
  smint[4].style.transform='rotate(8deg)'
  smint[5].style.color='#000'
  smint[5].style.transform='scale(0)'
-  clearInterval(Ism)
 }
 
 crstmtr[0].onmouseover=()=>
 {
  bckrnd[0].style.opacity=0.8
+ bckrnd[2].style.background=
+  'radial-gradient(5px,#78a,#ee0)'
+ bckrnd[2].style.transform='scale(8)'
  crstmtr[0].style.transform='scale(1.1)'
  crstmtr[6].style.background=
   'radial-gradient(#040,#0d0)'
@@ -357,13 +350,17 @@ crstmtr[0].onmouseover=()=>
  crstint[3].style.border='8px ridge #f0f' 
  crstint[4].style.color='#f00' 
  crstint[4].style.transform=
-  'scale(4) translate(88%,-66%) skew(11deg) '
+  'scale(4) translate(88%,-66%) skew(11deg)'
+  fcrtr()
   Itr=setInterval(fcrtr,999)
   snwmn[0].onmouseover()
 } 
 crstmtr[0].onmouseout=()=>
 {
  bckrnd[0].style.opacity=0.2
+ bckrnd[2].style.background=
+  'radial-gradient(#78a,#ee0)'
+ bckrnd[2].style.transform='scale(7)'  
  crstmtr[0].style.transform='scale(1)'
  crstmtr[6].style.background=
   'radial-gradient(#040,#090)'
