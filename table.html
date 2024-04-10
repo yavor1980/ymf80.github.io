@@ -5,7 +5,7 @@
 <style>
 #idbd
 {
- background: linear-gradient(#0ff,44%,#ff0);
+ background:linear-gradient(#0ff,44%,#ff0);
 }
 
 .btn
@@ -23,8 +23,8 @@
 #idfc
 {
  position:absolute;   
- left:33%;
- top:33%;
+ left:50%;
+ top:3%;
  width:55%;
  height:55%;
  transition:1s; 
@@ -38,15 +38,14 @@
 .zr
 {
  position:absolute;   
- border-radius:50%;
+ transition:1s;
  left:33%;
  top:33%;
  width:33%;
  height:33%;
  background:#000;
- transition:1s;
+  border-radius:50%;
 }
-
 .bd
 {
  position:absolute;   
@@ -62,59 +61,58 @@
  transition:1s; 
 }
 
-.dsprs
-{
- position:absolute;   
- transition:1s;
-}
-
-.mtrlgy
-{
- position:absolute;   
- transition:1s;
-}
-
-.mth
-{
- position:absolute;   
- transition:1s;
- text-align:center;
-}
-
 .tbl
 {
  position:absolute;   
  transition:1s;
 }
-
 td
 {
- border:5px ridge red;
+ transition:1s; 
  width:15%;
  background:#bbb;
- text-align:center; 
- transition:1s; 
- z-index:0;
+ text-align:center;
+ border:5px ridge red;
 }
 
- 
+.nrn
+{
+ position:absolute;
+ transition:1s; 
+ width:7%;
+ height:15%;
+ background:#bbb;
+ border-radius:51%;
+ text-align:center; 
+ font-size:5em;
+}
+.snpse
+{
+ position:absolute;
+ transition:1s; 
+ width:7%;
+ height:1%;
+ background:#b0b;
+ border-radius:51%;
+ text-align:center; 
+ font-size:5em;
+}
+
 </style>
 </head>
-
 <body id=idbd>
-
 <button class=btn>bclr</button>
 <button class=btn>clr</button>
  <div class=btn></div>
 
-<div id=idfc >
- <div class=fc >
-  <div class=fc ><div class=zr></div></div>
-  <div class=fc ><div class=zr></div></div>
-  <div class=fc ></div>
+<div id=idfc>
+ <div class=fc>
+  <div class=fc><div class=zr></div></div>
+  <div class=fc><div class=zr></div></div>
+  <div class=fc></div>
   <div class=zr></div>
  </div>
- <div class=bd >
+ <div class=bd>
   <div class=bd>
    <div class=bd></div> 
   </div>
@@ -147,7 +145,6 @@ td
   <td>0</td>
  </tr>
 </table>
-
 <div class=tbl>
  How to improve it?
 </div>
@@ -157,52 +154,10 @@ td
 <div class=tbl>
  to define dimentions
 </div>
-<div class=tbl>
- dimentions
-</div>
-
-<div class=dsprs>
- When iteratively dropping random values 
- the probability distribution 
- should tend to be uniform...
-</div>
-<div class=dsprs>
- Disperse evrthng!
-</div>
-
-<div class=mtrlgy>
- Metrology  
-</div>
-<div class=mtrlgy>
- error  
-</div>
-<div class=mtrlgy>
-</div>
-<div class=mtrlgy>
- Errors<br> &nbsp must be minimized
-</div>
-
-<div class=mth>
- algrthm
-</div>
-<div class=mth>
- Making<br> &nbsp decisions
-</div>
-<div class=mth>
- Try it!
-</div>
-<div  class=mth >
- Artificial<br> &nbsp intelligence
-</div>
-<div class=mth>
- 0
-</div>
-<div class=mth>
- random
-</div>
 
 <script>
 btn=document.getElementsByClassName('btn')
+
 fc=document.getElementsByClassName('fc')
 zr=document.getElementsByClassName('zr')
 bd=document.getElementsByClassName('bd')
@@ -210,11 +165,7 @@ lg=document.getElementsByClassName('lg')
   
 tbl=document.getElementsByClassName('tbl')
 td=document.getElementsByTagName('td')
-dsprs=document.getElementsByClassName('dsprs')
-mtrlgy=document.getElementsByClassName('mtrlgy')
-mth=document.getElementsByClassName('mth')
   
-
 btn[0].style.left=13+'%'
 btn[0].style.top=3+'%'  
 btn[0].style.width=9+'%'
@@ -231,70 +182,72 @@ btn[2].style.left=44+'%'
 btn[2].style.top=3+'%'  
 btn[2].style.transform='scale(0)'	
 	
-fc[0].style.background='radial-gradient(#ff0,#000)'
 fc[0].style.left=22+'%'
 fc[0].style.top=17+'%'  
 fc[0].style.width=22+'%'
-fc[0].style.height=44+'%'	         
+fc[0].style.height=44+'%'	
+fc[0].style.background=
+ 'radial-gradient(#ff0,#000)'         
 fc[0].style.cursor='pointer'
-	 
-fc[1].style.background='#fff'
+	
 fc[1].style.left=22+'%'
 fc[1].style.top=22+'%'  
 fc[1].style.width=22+'%'
 fc[1].style.height=22+'%'  
+fc[1].style.background='#fff'
 
-fc[2].style.background='#fff'
 fc[2].style.left=66+'%'
 fc[2].style.top=22+'%'  
 fc[2].style.width=22+'%'
 fc[2].style.height=22+'%'  
+fc[2].style.background='#fff'
 
-fc[3].style.background=
- 'radial-gradient(#ff0,#000)'
 fc[3].style.left=44+'%'
 fc[3].style.top=44+'%'  
 fc[3].style.width=22+'%'
 fc[3].style.height=22+'%' 
+fc[3].style.background=
+ 'radial-gradient(#ff0,#000)'
 	 
-zr[2].style.background='#f00'
 zr[2].style.left=33+'%'
 zr[2].style.top=77+'%'  
 zr[2].style.width=33+'%'
-zr[2].style.height=5+'%' 
+zr[2].style.height=5+'%'
+zr[2].style.background='#f00' 
 	 
-bd[0].style.background='radial-gradient(#ff0,#000)'
 bd[0].style.left=22+'%'
 bd[0].style.top=52+'%'  
 bd[0].style.width=22+'%'
 bd[0].style.height=33+'%' 
+bd[0].style.background=
+ 'radial-gradient(#ff0,#000)'
 bd[0].style.zIndex=-1
 bd[0].style.borderTopLeftRadius=5+'%'
 bd[0].style.borderTopRightRadius=5+'%'
 	 
-bd[1].style.background='#550'
 bd[1].style.top=4+'%'
 bd[1].style.left=-11+'%'
 bd[1].style.width=22+'%'
 bd[1].style.height=38+'%'
-	 
-bd[2].style.background='#770'
+bd[1].style.background='#550'
+
 bd[2].style.top=66+'%'
 bd[2].style.left=11+'%'
 bd[2].style.width=99+'%'
 bd[2].style.height=111+'%'
+bd[2].style.background='#770'
 	 	
-bd[3].style.background='#550'
 bd[3].style.top=4+'%'
 bd[3].style.left=88+'%'
 bd[3].style.width=22+'%'
 bd[3].style.height=38+'%'
+bd[3].style.background='#550'
 	 
-bd[4].style.background='#770'
 bd[4].style.top=66+'%'
 bd[4].style.left=11+'%'
 bd[4].style.width=99+'%'
 bd[4].style.height=111+'%'
+bd[4].style.background='#770'
 	
 lg[0].style.background='#990'
 lg[0].style.top=77+'%'
@@ -318,20 +271,10 @@ lg[3].style.top=77+'%'
 lg[3].style.left=0+'%'
 lg[3].style.width=99+'%'
 lg[3].style.height=155+'%'
-     
-dsprs[0].style.color='#f00'
-dsprs[0].style.left=77+'%'
-dsprs[0].style.top=9+'%' 
-dsprs[0].style.transform='scale(0)'
 	 
-dsprs[1].style.color='#f70'
-dsprs[1].style.left=77+'%'
-dsprs[1].style.top=9+'%' 
-dsprs[1].style.transform='scale(0)'
-	 
-tbl[0].style.border='5px ridge #00f'
 tbl[0].style.left=22+'%'
 tbl[0].style.top=22+'%' 
+tbl[0].style.border='5px ridge #00f'
 tbl[0].style.transform='scale(2)'
 	 
 tbl[1].style.color='#f00'
@@ -348,69 +291,57 @@ tbl[3].style.color='#777'
 tbl[3].style.left=7+'%'
 tbl[3].style.top=77+'%' 
 tbl[3].style.transform='scale(0)'
-	 
-tbl[4].style.color='#777'
-tbl[4].style.left=66+'%'
-tbl[4].style.top=33+'%' 
-tbl[4].style.transform='scale(2)'
-tbl[4].style.cursor='pointer'
-	 
-mtrlgy[0].style.color='#f06'
-mtrlgy[0].style.left=66+'%'
-mtrlgy[0].style.top=44+'%' 
-mtrlgy[0].style.transform='scale(2)'
-mtrlgy[0].style.cursor='pointer'
-	 
-mtrlgy[1].style.color='#fff'
-mtrlgy[1].style.left=66+'%'
-mtrlgy[1].style.top=53+'%' 
-mtrlgy[1].style.transform='scale(0)'
-	 
-mtrlgy[2].style.color='#fff'
-mtrlgy[2].style.left=66+'%'
-mtrlgy[2].style.top=59+'%' 
-mtrlgy[2].style.transform='scale(0)'
-	 
-mtrlgy[3].style.color='#fff'
-mtrlgy[3].style.left=66+'%'
-mtrlgy[3].style.top=22+'%' 
-mtrlgy[3].style.transform='scale(0)'
-
-mth[0].style.color='#f00'
-mth[0].style.left=66+'%'
-mth[0].style.top=66+'%' 
-mth[0].style.transform='scale(3)'
-mth[0].style.cursor='pointer'
 	
-mth[1].style.color='#880' 
-mth[1].style.left=72+'%'
-mth[1].style.top=61+'%' 
-mth[1].style.transform='scale(0)'
-	 
-mth[2].style.color='#339'
-mth[2].style.left=72+'%'
-mth[2].style.top=61+'%' 
-mth[2].style.transform='scale(0)'
-	 
-mth[3].style.color='#330'
-mth[3].style.left=72+'%'
-mth[3].style.top=61+'%' 
-mth[3].style.transform='scale(0)'
+nrn=[]	
+snpse=[]
+for(i=0;i<5;i++)	
+{
+ nrn[i]=document.createElement('div')
+ nrn[i].className='nrn'
+  idbd.appendChild(nrn[i])	
+ nrn[i].style.left=44+'%'
+ nrn[i].style.top=66+'%'
+ nrn[i].style.background='#f0f'
+  nrn[i].innerHTML='N'
+}	
+for(i=0;i<2;i++)	
+{
+ snpse[i]=document.createElement('div')
+ snpse[i].className='snpse'
+  idbd.appendChild(snpse[i])	
+ snpse[i].style.left=44+'%'
+ snpse[i].style.top=66+'%'
+ snpse[i].style.background='#f08'
+  snpse[i].style.transform='scale(0)'
+}	
 	
-mth[4].style.background='#ff0'
-mth[4].style.color='#330'
-mth[4].style.left=72+'%'
-mth[4].style.top=25+'%' 
-mth[4].style.width=7+'%'
-mth[4].style.height=5+'%' 
-mth[4].style.fontSize='2em'
-mth[4].style.border='9px #0ff ridge'
-mth[4].style.transform='scale(0)'
-	 
-mth[5].style.left=66+'%'
-mth[5].style.top=20+'%'
-mth[5].style.transform='scale(0)'
-	 
+b=0
+function cl()
+{       
+  vs=Math.random()*22-11
+ fc[0].style.transform='skew('+(vs)+'deg,0)'
+ if(b)
+ {
+  bd[0].style.transform='scale(1.1)'
+  lg[0].style.transform='rotate(33deg)'
+  lg[1].style.transform=
+   'rotate(-66deg) translate(44%,0)'
+  lg[2].style.transform='rotate(-33deg)'
+  lg[3].style.transform=	 
+   'rotate(66deg) translate(-44%,0)' 
+ }
+  else
+ {
+  bd[0].style.transform='scale(0.9)'
+  lg[0].style.transform='rotate(0deg)'
+  lg[1].style.transform='rotate(0deg)'
+  lg[2].style.transform='rotate(0deg)'
+  lg[3].style.transform='rotate(0deg)'
+ }
+   b=!b
+}
+   setInterval(()=>cl(),999)	  
+	  
 btn[0].onmouseover=()=>
 {
  btn[2].style.transform=
@@ -448,36 +379,12 @@ btn[1].onclick=()=>
   td[i].style.background='#bbb'
 } 	 
 	 
-b=0
-function cl()
-{       
-  vs=Math.random()*22-11
- fc[0].style.transform='skew('+(vs)+'deg,0)'
- if(b){
-  bd[0].style.transform='scale(1.1)'
-  lg[0].style.transform='rotate(33deg)'
-  lg[1].style.transform=
-   'rotate(-66deg) translate(44%,0)'
-  lg[2].style.transform='rotate(-33deg)'
-  lg[3].style.transform=	 
-   'rotate(66deg) translate(-44%,0)' 
- }else{
-  bd[0].style.transform='scale(0.9)'
-  lg[0].style.transform='rotate(0deg)'
-  lg[1].style.transform='rotate(0deg)'
-  lg[2].style.transform='rotate(0deg)'
-  lg[3].style.transform='rotate(0deg)'
- }
-   b=!b
-}
-   setInterval(()=>cl(),999)
-   
 fcI=0
 fc[0].onmouseover=()=>
 {
  bm=Math.random()-0.5
- if(bm<0) x=-33
-  else x=33
+ if(bm<0) 
+  x=-33; else x=33;
  fc[0].style.transform=
   'scale(1.5) translate('+x+'%,0)'
  fc[1].style.transform='scale(1.6)'
@@ -493,19 +400,20 @@ fc[0].onmouseover=()=>
  bd[3].style.transform=
   'scale(2) translate(0,-22%) rotate(-88deg)'
  bd[4].style.transform=
-  'translate(44%,-22%) rotate(88deg)' 
- mtrlgy[2].style.color='#f00'
- mtrlgy[2].style.transform=
-  'scale(3) translate(0,-33%)'
- mth[4].style.transform=
-  'scale(3) translate(22%,-22%)'
- mth[5].style.transform=
-  'scale(3) translate(-66%,-55%)'
- fcI= setInterval(()=>
- { 
-  mth[4].innerHTML=Math.round(Math.random()*99)  
- } 
-  ,555) 
+  'translate(44%,-22%) rotate(88deg)'  
+ nrn[0].style.transform='scale(1.1)'
+ nrn[1].style.transform=
+  'scale(1.1) translate(88%,-88%)'
+ nrn[2].style.transform=
+  'scale(1.1) translate(88%,88%)' 
+ nrn[3].style.transform=
+  'scale(1.1) translate(222%,-88%)'
+ nrn[4].style.transform=
+  'scale(1.1) translate(222%,88%)' 
+ snpse[0].style.transform=
+  'scale(1) translate(222%,8%) rotate(44deg)'  
+ snpse[1].style.transform=
+  'scale(1) translate(222%,8%) rotate(-44deg)' 
 } 
 fc[0].onmouseout=()=>
 {
@@ -520,11 +428,13 @@ fc[0].onmouseout=()=>
  bd[2].style.transform='rotate(0deg)'
  bd[3].style.transform='rotate(0deg)'
  bd[4].style.transform='rotate(0deg)'
- mtrlgy[2].style.color='#fff'
- mtrlgy[2].style.transform='scale(0)'
- mth[4].style.transform='scale(0)'
-  //mth[4].innerHTML=0
- mth[5].style.transform='scale(0) '
+ nrn[0].style.transform='scale(1)'
+ nrn[1].style.transform='scale(1)'
+ nrn[2].style.transform='scale(1)'
+ nrn[3].style.transform='scale(1)'
+ nrn[4].style.transform='scale(1)'
+ snpse[0].style.transform='scale(0)'
+ snpse[1].style.transform='scale(0)'
   clearInterval(fcI)
 } 
 
@@ -544,9 +454,40 @@ setInterval(()=>{
  td[itd].style.transform='scale(2)'
  td[itd].style.zIndex=1
   litd=itd
-}
- ,999) 
+} , 999) 
  
+Itbl0=0
+btbl0=0  
+tbl[0].onmouseover=()=>
+{
+ tbl[0].style.cursor='pointer'
+ tbl[1].style.transform=
+  'scale(2) skew(19deg) translate(33%,-177%)'
+ Itbl0=setInterval(()=>
+ {
+  if(btbl0){
+   tbl[2].style.transform=
+    'scale(2) skew(-19deg) translate(33%,-77%)'
+   tbl[3].style.transform=
+    'scale(3) skew(19deg) translate(33%,-77%)'
+  }
+  else
+  {
+   tbl[2].style.transform=
+    'scale(3) skew(19deg) translate(33%,-77%)'
+   tbl[3].style.transform=
+    'scale(2) skew(-19deg) translate(33%,-77%)'
+  }
+    btbl0=!btbl0
+ }, 999)
+}
+tbl[0].onmouseout=()=>
+{
+ tbl[1].style.transform='scale(0)'
+ tbl[2].style.transform='scale(0)'
+ tbl[3].style.transform='scale(0)'
+  clearInterval(Itbl0)
+} 
 tbl[0].onclick=()=>
 { 
  for(i=0;i<9;i++)  
@@ -555,138 +496,7 @@ tbl[0].onclick=()=>
    td[i].innerHTML=0
  } 
 }
-Itbl0=0
-btbl0=0  
-tbl[0].onmouseover=()=>
-{
- tbl[0].style.cursor='pointer'
- tbl[1].style.transform=
-  'scale(2) skew(19deg) translate(33%,-177%)'
- dsprs[0].style.transform=
-  'scale(2) skew(22deg) translate(-33%,0)'
- Itbl0=setInterval(()=>
- {
-  if(btbl0){
-   dsprs[1].style.transform=
-    'scale(2) translate(-9%,299%) skew(-33deg)'
-   tbl[2].style.transform=
-    'scale(2) skew(-19deg) translate(33%,-77%)'
-   tbl[3].style.transform=
-    'scale(3) skew(19deg) translate(33%,-77%)'
-  }else{
-   dsprs[1].style.transform=
-    'scale(2) translate(-9%,299%) skew(33deg)'
-   tbl[2].style.transform=
-    'scale(3) skew(19deg) translate(33%,-77%)'
-   tbl[3].style.transform=
-    'scale(2) skew(-19deg) translate(33%,-77%)'
-  }
-    btbl0=!btbl0
- },999)
-}
-tbl[0].onmouseout=()=>
-{
- dsprs[0].style.transform='scale(0)'
- dsprs[1].style.transform='scale(0)'
- tbl[1].style.transform='scale(0)'
- tbl[2].style.transform='scale(0)'
- tbl[3].style.transform='scale(0)'
-  clearInterval(Itbl0)
-}
 
-tbl[4].onmouseover=()=>
-{
- tbl[4].style.transform='scale(3) skew(22deg)'
- tbl[4].style.color='#f00'
-  tbl[4].innerHTML=
-   'can be<br>&nbsp divided and defined' 
-}
-tbl[4].onmouseout=()=>
-{
- tbl[4].style.transform='scale(2)' 
- tbl[4].style.color='#777'
- tbl[4].innerHTML='dimentions' 
-} 
-
-mtrI=0 
-amtr=
-['abs relative',
- 'multiplctv addtv',
- 'systmatc random',
- 'dynamic static',
-]
-arr=
-['notattn',
- 'value',
- 'occurrence',
- 'time',
-]
-var imtr=0
-mtrlgy[0].onmouseover=()=>
-{
- mtrlgy[0].style.transform='scale(3) skew(22deg)'
- mtrlgy[0].style.color='#600'
-  mtrlgy[0].innerHTML='measurement' 
- mtrlgy[1].style.transform=
-  'scale(3) skew(22deg) translate(22%,0)'
- mtrlgy[1].style.color='#f00'
- mtrlgy[3].style.color='#f00'
- mtrlgy[3].style.transform='scale(3) '
- mtrI=setInterval(()=>{
-  mtrlgy[0].innerHTML=arr[imtr]
-  mtrlgy[1].innerHTML=amtr[imtr]
-   imtr++
-  if(imtr==4) imtr=0
- },  1111)
-}
-mtrlgy[0].onmouseout=()=>
-{
- mtrlgy[0].style.transform='scale(2) '
- mtrlgy[0].style.color='#f06'
- mtrlgy[0].innerHTML='Metrology' 
- mtrlgy[1].style.transform='scale(0) '
- mtrlgy[1].style.color='#fff'
- mtrlgy[1].innerHTML='error '
- mtrlgy[3].style.color='#fff '
- mtrlgy[3].style.transform='scale(0) '
-  clearInterval(mtrI)
-  imtr=0
-}  
-
-Imth0=0
-bmth0=0
-mth[0].onmouseover=()=>
-{
- mth[0].style.transform=
-  'scale(4) translate(11%,-16%) skew(-15deg)' 
- mth[1].style.transform=
-  'scale(3) translate(-33%,-77%)'
- mth[3].style.transform=
-  'scale(3) translate(22%,-99%)'
- Imth0=setInterval(()=>
- { 
-  if(bmth0){ 
-   mth[2].style.transform=
-    'scale(3) translate(-33%,-222%)'
-  }else{
-   mth[2].style.transform=
-    'scale(4) translate(-33%,-222%)'
-  } 
-     bmth0=!bmth0
- },  999)
-}
-mth[0].onmouseout=()=>
-{
- mth[0].style.transform='scale(3) ' 
- mth[1].style.transform='scale(0) '
- mth[2].style.transform='scale(0) '
- mth[3].style.transform='scale(0) '
-  clearInterval(Imth0)
-  bmth0=0
-}
- 
 </script>
 </body>
-
 </html>
-
