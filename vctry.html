@@ -68,7 +68,7 @@ hd[2].style.top=18+'%'
 hd[2].style.width=76+'%'
 hd[2].style.height=48+'%'
 hd[2].style.background=
- 'linear-gradient(#f00,#ff0,#0f0,#00f,#0ff)'
+ 'linear-gradient(22deg,#f00,#ff0,#0f0,#00f,#0ff)'
 hd[2].style.borderRadius=5+'%'
 hd[2].style.transform='skew(11deg)'
 hd[2].style.opacity=0
@@ -110,8 +110,8 @@ slte[5].style.background=
  
 ppp[0].style.left=78+'%'
 ppp[0].style.bottom=22+'%'
-ppp[0].style.width=2+'%'
-ppp[0].style.height=3+'%'
+ppp[0].style.width=22+'px'
+ppp[0].style.height=22+'px'
 ppp[0].style.transform='scale(0)'
 ppp[0].style.opacity=0.8
 
@@ -215,7 +215,7 @@ function sltcl()
   slte[5].style.transform=
     'scale(0) translate(0%,0%)'	 	
  }	  
- bcl=!bcl
+  bcl=!bcl
 }  
 
 hd[0].onmouseover=()=>
@@ -226,7 +226,7 @@ hd[0].onmouseover=()=>
  hd[0].style.transform='scale(9) skew(-22deg)'
   hd[0].innerHTML='VICTORY!..'
  hd[1].style.transform='scale(0) translate(0,-88%)'
- hd[2].style.opacity=0.4
+ hd[2].style.opacity=0.2
   clearInterval(Icl)
   sltcl(); Icl=setInterval(()=>sltcl(),999)
 }
