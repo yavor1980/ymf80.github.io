@@ -14,8 +14,8 @@ body
  transition:2s;
  left:35%;
  top:10%;
- width:400px;
- height:400px; 
+ width:400;
+ height:400; 
  border:2px ridge #909;
  transform:skew(33deg); 
 }
@@ -27,11 +27,11 @@ body
 }
 .fgr
 {
- position: absolute;
+ position:absolute;
+ transition:1s;
  width: 50px;
  height: 50px;
  border-radius:50%;
- transition:1s;
  cursor:pointer;
  font-size:2em;
  text-align:center;
@@ -56,7 +56,8 @@ body
 dsk=document.getElementsByClassName("dsk")
 ttpl=document.getElementsByClassName("ttpl")
    
-cl=[]
+cl=[],icl=[]
+//alert(icl)
 for(j=0;j<8;j++)
  for(i=0;i<8;i++)
  {
@@ -76,22 +77,11 @@ for(j=0;j<8;j++)
   }  
  }
 wf=[]
-for(i=0; i<12; i++)    
+for(i=0;i<12;i++)    
 { 
  wf[i]=document.createElement("div")
  wf[i].className='fgr'
  dsk[0].appendChild(wf[i])
-}
-bf=[]
-for(i=0; i<12; i++)    
-{ 
- bf[i]=document.createElement("div")
- bf[i].className='fgr'  
- dsk[0].appendChild(bf[i])
-}
-    
-for(i=0;i<12;i++)    
-{   
  wf[i].style.left= i*50+'px'
  if(i%2==1)	
   wf[i].style.top= 1*50+'px'
@@ -103,8 +93,13 @@ for(i=0;i<12;i++)
   wf[i].style.background=
    'radial-gradient(14px,#999,#ccc)' 
 }
-for(i=0;i<12;i++)    
+
+bf=[]
+for(i=0; i<12; i++)    
 { 
+ bf[i]=document.createElement("div")
+ bf[i].className='fgr'  
+ dsk[0].appendChild(bf[i])
  bf[i].style.left= i*50+'px'
  bf[i].style.top= 6*50+'px'
  if(i%2==1)
@@ -116,7 +111,7 @@ for(i=0;i<12;i++)
  }
  bf[i].style.background=
   'radial-gradient(14px,#555,#222)'
-}
+}    
 
 ttpl[0].style.left=11+'%' 
 ttpl[0].style.top=19+'%' 
@@ -148,10 +143,9 @@ dsk[0].onmouseover=()=>
    clearInterval(Isi)
  dsk[0].style.border='5px ridge #909' 
  dsk[0].style.transform= 
-  'skew(0deg) scale(1.6) translate(11%,11%)'
+  'scale(1.6) translate(11%,11%)'
  ttpl[0].style.transform='scale(6) skew(-22deg)' 
- ttpl[1].style.transform='scale(6) skew(0deg)'
-   
+ ttpl[1].style.transform='scale(6) skew(0deg)'  
 }	
 dsk[0].onmouseout=()=>
 {
@@ -160,8 +154,8 @@ dsk[0].onmouseout=()=>
  dsk[0].style.border='2px ridge #909'  
  ttpl[0].style.transform='scale(0)'
  ttpl[1].style.transform='scale(0)' 	 
-}	 
-	 	
+}	  
+	
 function tchw(i)
 {
  wf[i].onmouseover=()=>
@@ -169,8 +163,7 @@ function tchw(i)
   wf[i].style.transform='scale(1.2)'
   wf[i].style.background=
    'radial-gradient(14px,#090,#0c0)'
-  wf[i].style.border='1px ridge #ff0'
-   wf[i].innerHTML=i   
+  wf[i].style.border='1px ridge #000'
   for(j=0;j<12;j++)   
    bf[j].style.transform='scale(1.1)'
  }	
@@ -180,11 +173,29 @@ function tchw(i)
   wf[i].style.background=
    'radial-gradient(14px,#999,#ccc)'
   wf[i].style.border='none'
-   wf[i].innerHTML=''
   for(j=0;j<12;j++) 
    bf[j].style.transform='scale(1)' 
  }	
 }
+tchw(0); tchw(1); tchw(2);
+tchw(3); tchw(4); tchw(5);
+tchw(6); tchw(7); tchw(8);
+tchw(9); tchw(10); tchw(11);
+
+function clw(i)
+{
+ wf[i].onclick=()=>
+ {
+  {
+  //wf[i].style.left=(0+'px')
+   wf[i].style.top=(0+'px')
+  } 
+ }
+}
+clw(0); clw(1); clw(2);
+clw(3); clw(4); clw(5);
+clw(6); clw(7); clw(8);
+clw(9); clw(10); clw(11);
 
 function tchb(i)
 {
@@ -194,7 +205,11 @@ function tchb(i)
    'radial-gradient(14px,#cc0,#ff0)'
   bf[i].style.border='1px ridge #222'
   bf[i].style.transform='scale(1.2)'
-   bf[i].innerHTML=i
+  if(bclb)
+  {
+   bf[i].style.left=event.clientX/3
+   bf[i].style.top=event.clientY/3
+  }
   for(j=0;j<12;j++) 
    wf[j].style.transform='scale(1.1)'   
  }	
@@ -204,22 +219,28 @@ function tchb(i)
    'radial-gradient(14px,#555,#222)'
   bf[i].style.border='none'
   bf[i].style.transform='scale(1)'
-   bf[i].innerHTML=''
   for(j=0;j<12;j++) 
    wf[j].style.transform='scale(1)'  
  }	
 }	
-
-tchw(0); tchw(1); tchw(2);
-tchw(3); tchw(4); tchw(5);
-tchw(6); tchw(7); tchw(8);
-tchw(9); tchw(10); tchw(11);
-
 tchb(0); tchb(1); tchb(2);
 tchb(3); tchb(4); tchb(5);
 tchb(6); tchb(7); tchb(8);
 tchb(9); tchb(10); tchb(11);	
-	
+
+bclb=0
+function clb(i)
+{
+ bf[i].onclick=()=>
+ { 
+  bclb=!bclb
+ }
+}
+clb(0); clb(1); clb(2);
+clb(3); clb(4); clb(5);
+clb(6); clb(7); clb(8);
+clb(9); clb(10); clb(11);	
+
 </script>
 </body>
 </html>
