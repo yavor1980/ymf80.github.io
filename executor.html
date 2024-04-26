@@ -57,6 +57,8 @@
  position:absolute;    
  transition:1s;
  cursor:pointer;
+ text-align:center;
+ padding-top:1;
 }
 
 .vctr
@@ -256,12 +258,14 @@ plh[2].style.background='#bbb'
 plh[2].style.borderRadius=9+'%'
 
 shrm[0].style.left=64+'%'
-shrm[0].style.top=64+'%' 
+shrm[0].style.top=33+'%' 
 shrm[0].style.width=22+'%'
-shrm[0].style.height=7+'%' 
+shrm[0].style.height=22+'%' 
 shrm[0].style.background='#f50'
 shrm[0].style.opacity=0.2
-shrm[0].style.borderRadius=55+'%'
+shrm[0].style.borderRadius=22+'%'
+shrm[0].style.fontSize=0
+ shrm[0].innerHTML='sentence'
 	
 exctr[0].style.left=62+'%'
 exctr[0].style.top=14+'%' 
@@ -339,8 +343,7 @@ function clk()
  
 function sto()
 {
- rwng[1].style.transform='rotate(0deg)' 
- 
+ rwng[1].style.transform='rotate(0deg)'  
 }           
 		
 btn[0].onmouseover=()=>
@@ -382,7 +385,8 @@ vctrI=0
 bth=0 
 jws[0].onmouseover=()=>
 { 
-   clearInterval(jwI)  
+  clearInterval(jwI)  
+  shrm[0].onmouseover()  
  vctrI=setInterval(()=>{
   if(bth)
   {
@@ -405,26 +409,32 @@ jws[0].onmouseout=()=>
 { 
   clearInterval(vctrI)
   jwI=setInterval(cl, 1000)
+  shrm[0].onmouseout()
  vctr[0].style.transform='scale(0)'
  vctr[1].style.transform='scale(0)'
  vctr[2].style.transform='scale(0)'
  vctr[3].style.transform='scale(0)'
 } 
-
+jws[0].onclick=()=>
+{ 
+  shrm[0].onclick()
+}
 shrm[0].onmouseover=()=>
 { 
  shrm[0].style.background='#f0f'
- shrm[0].style.borderRadius=3+'%'
+ shrm[0].style.borderRadius=9+'%'
  shrm[0].style.border='7px ridge #ff0'
  shrm[0].style.transform=
-  'scale(1,5.5) translate(-6%,-58%)'
+  'scale(1,1.5) translate(16%,-5%)'
+ shrm[0].style.fontSize=2+'em' 
 }
 shrm[0].onmouseout=()=>
 { 
- shrm[0].style.borderRadius=55+'%'
  shrm[0].style.background='#f50'
+ shrm[0].style.borderRadius=22+'%'
  shrm[0].style.border='none'
- shrm[0].style.transform=''
+ shrm[0].style.transform='scale(1)'
+  shrm[0].style.fontSize=0
   shrm[0].innerHTML=''
 }
 shrm[0].onclick=()=>
