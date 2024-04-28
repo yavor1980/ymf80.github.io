@@ -129,8 +129,8 @@ btn[1].style.left=4+'%'
 btn[1].style.top=13+'%'
 btn[1].style.width=9+'%'
 btn[1].style.height=5+'%'
-btn[1].style.background='#0cc'
-btn[1].style.color='#b00'
+btn[1].style.background='#909'
+btn[1].style.color='#0b0'
 btn[1].style.borderRadius=13+'%' 
  
 wrs[0].style.left=16+'%'
@@ -377,8 +377,6 @@ wrs[0].onmouseover=()=>
  drssl[2].style.borderRightColor='#f00'
  drssl[3].style.borderTopColor='#f00'
  drssl[3].style.borderRightColor='#f00'
- crrnt[0].style.background=
-  'radial-gradient(#022,#0bb)'
  crrnt[0].style.transform='scale(1.2)'
  Ielm=setInterval(()=>{
   elm[1].style.transform=
@@ -387,18 +385,20 @@ wrs[0].onmouseover=()=>
    'scale('+(3.8+Math.random()/2)+') rotate(90deg)' 
   drssl[0].style.transform=
    'scale('+(0.8+Math.random()/2)+')' 
+  crrnt[0].style.background=
+  'radial-gradient('+(Math.random()*33+66)+'px,#220,#0bb)' 
   crrnt[1].style.opacity=1
   crrnt[1].style.transform=
    'scale(2) translate('+(111*Math.random()/2)+'%,'+
     (88*Math.random()/2)+'%)'
   crrnt[2].style.opacity=1
   crrnt[2].style.transform=
-   'scale(2.5) translate('+(111*Math.random()/2)+'%,'+
+   'scale(2) translate('+(111*Math.random()/2)+'%,'+
     (88*Math.random()/2)+'%)'
   crrnt[3].style.opacity=1
   crrnt[3].style.transform=
-   'scale(2.6) translate('+(111*Math.random()/2)+'%,'+
-    (88*Math.random()/2)+'%)'
+   'scale(2) translate('+(111*Math.random()/2)+'%,'+
+    (88*Math.random()/2)+'%)' 
  }, 555)
 }
 wrs[0].onmouseout=()=>
@@ -435,8 +435,6 @@ telm[0].onmouseout=()=>
  telm[0].style.border='none'
 }
 
-
- 
 </script>
 </body>
 </html>
