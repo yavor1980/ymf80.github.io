@@ -4,7 +4,7 @@
 <style>
 body
 {  
- background:radial-gradient(#000,#00b);
+ background:linear-gradient(#00f,#003);
 }
 
 .sbmrne
@@ -156,12 +156,15 @@ prjctr[2].style.opacity=0
 bsmv=0
 function smv()
 {
- if(bsmv==0){
+ if(bsmv==0)
+ {
    rnd=Math.random()/2+1
   sbmrne[0].style.transform=
    'scale('+rnd+') rotate('+rnd+'deg)'
- }else{
-   rnd=Math.random()/2.5+0.5
+ }
+ else
+ {
+   if(Math.random()>0.5)rnd=1; else rnd=0
   apprts[0].style.transform='scale('+rnd+')'
   apprts[1].style.transform='scale('+rnd+')'
  }
@@ -176,11 +179,12 @@ function pmv()
   'translate('+tr+'%,33%) rotate(-28deg) skew(44deg)'+
   'scale('+sc+')' 
 }
-   Iprjctr=setInterval(pmv,666)
+   Iprjctr=setInterval(pmv, 666)
 
 sbmrne[0].onmouseover=()=>
 {
  sbmrne[0].style.transform='scale(1.2)'
+ sbmrne[1].style.background='#550'
  apprts[0].style.opacity=0.7
  apprts[1].style.opacity=0.7
   bsmv=1
@@ -191,6 +195,7 @@ sbmrne[0].onmouseover=()=>
 sbmrne[0].onmouseout=()=>
 {
  sbmrne[0].style.transform='scale(1)'
+ sbmrne[1].style.background='#050'
  apprts[0].style.opacity=0
  apprts[0].style.transform='scale(0)'
  apprts[1].style.opacity=0
