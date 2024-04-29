@@ -11,7 +11,7 @@
 #idgrd
 {
  position:absolute;
- transition:3s;
+ transition:2s;
  left:0%;
  top:69%;
  width:100%;
@@ -55,7 +55,7 @@
 #ids
 {
  position:absolute;
-  transition:2s;
+ transition:2s;
  left:39%;
  top:33%;
  width:24%;
@@ -203,8 +203,8 @@ inf=document.getElementsByClassName('inf')
 kr1=document.getElementsByClassName('kr1')
 kr2=document.getElementsByClassName('kr2')
 kr3=document.getElementsByClassName('kr3')
-frz=document.getElementsByClassName('frz')
 star=document.getElementsByClassName('star')
+frz=document.getElementsByClassName('frz')
    
 me[0].style.left='55%'
 me[0].style.top='33%'
@@ -302,6 +302,7 @@ grd=
  },   
 }
     grd.init()
+	 setInterval(()=>grd.cl(), 1111)
 
 ss=
 {
@@ -341,9 +342,9 @@ ss=
   llg[1].style.bottom=-2+'%'
   llg[1].style.width=104+'%'
   llg[1].style.height=14+'%'
-  llg[1].style.borderRadius=22+'%' 
   llg[1].style.background=
    'linear-gradient(#555,#000)'; 
+  llg[1].style.borderRadius=22+'%' 
   
   rlg[0].style.left=68+'%' 
   rlg[0].style.bottom=-33+'%'	
@@ -354,9 +355,9 @@ ss=
   rlg[1].style.bottom=-1+'%'
   rlg[1].style.width=104+'%'
   rlg[1].style.height=14+'%'
-  rlg[1].style.borderRadius=22+'%' 
   rlg[1].style.background=
    'linear-gradient(#555,#000)'
+  rlg[1].style.borderRadius=22+'%' 
   
   lhnd[0].style.left=-11+'%'
   lhnd[0].style.top=1+'%'
@@ -433,7 +434,9 @@ ss=
 	'translate(0%,-19%) scale(1, 0.7)' 
    rlg[0].style.transform= 
     'translate(0%,19%) scale(1, 1.3)' 	 
-  }else{
+  }
+   else
+  {
    hd[0].style.transform='rotate(-44deg)'
    llg[0].style.transform= 
 	'translate(0%,19%) scale(1,1.3)' 
@@ -444,13 +447,7 @@ ss=
  },
 } 
    ss.init()
-       
-function f()
-{
- ss.cl()
- grd.cl()
-}  
-    setInterval(()=>f(),999)
+    setInterval(()=>ss.cl(), 1000)
 
 fids=[0,0,0,0,0] 
 idsI=0
@@ -473,12 +470,15 @@ ids.onmouseover=()=>{
     me[2].style.transform=
      'scale(3)  skew(22deg)'
 	nkr=Math.round(Math.random()*3) 
-	switch(nkr){
+	switch(nkr)
+	{
      case 0: kr1[0].onmouseover(); break;
      case 1: kr2[0].onmouseover(); break;
      case 2: kr3[0].onmouseover(); break;
     } 
-   }else{
+   }
+    else
+   {
     me[0].style.transform=
      'scale(4) translate(44px,-33px) skew(11deg)'
     me[0].style.color='#ff0'
@@ -491,20 +491,26 @@ ids.onmouseover=()=>{
  }, 999)
  ids.style.cursor='pointer'
  ids.style.background=
-  'radial-gradient(#f00,#ff0)' 
+  'radial-gradient(#909,#ff0)' 
  rhnd[0].style.transform=
   'scale(1,0.5) rotate(22deg) translate(-66%,-33%)'
+ lhnd[1].style.background=
+  'radial-gradient(#909,#000)'
  lhnd[1].style.transform=
   'scale(2,2) rotate(-55deg)'
+ rhnd[1].style.background=
+  'radial-gradient(#909,#000)' 
  rhnd[1].style.transform=
   'scale(2,2) rotate(55deg)'
  hd[0].style.transform=
   'scale(3,3) translate(0%,0%)'
  hd[3].style.height='28%' 
  hd[1].style.transform='scale(2,2)'
- hd[1].style.background='#f00'
+ hd[1].style.background=
+  'radial-gradient(#303,#d00)'
  hd[2].style.transform='scale(2,2)'
- hd[2].style.background='#f00'
+ hd[2].style.background=
+  'radial-gradient(#303,#d00)'
 }   
 ids.onmouseout=()=>{
  for(i=0;i<5;i++)
@@ -517,7 +523,11 @@ ids.onmouseout=()=>{
  me[2].style.transform='scale(0) '
  lhnd[0].style.transform='scale(1,1) rotate(0deg)'
  rhnd[0].style.transform='scale(1,1) rotate(0deg)'
+ lhnd[1].style.background=
+  'linear-gradient(#444,#000)'
  lhnd[1].style.transform='scale(1,1) rotate(0deg)'
+ rhnd[1].style.background=
+  'linear-gradient(#444,#000)'
  rhnd[1].style.transform='scale(1,1) rotate(0deg)'
  hd[0].style.transform=
   'scale(1,1) translate(0%,0%)'
@@ -549,14 +559,13 @@ kr3[0].onmouseover=()=>
 
 inf[0].onmouseover=()=>
 {   
-  inf[0].innerHTML= 
-   '&nbsp martian<br> &nbsp &nbsp &nbsp landform '
   inf[0].style.fontSize='2em'
   inf[0].style.color='#f00'
   inf[0].style.opacity= 1 
   inf[0].style.height= 16+'%'
   inf[0].style.border='9px ridge #f0f'
-  
+   inf[0].innerHTML= 
+    '&nbsp martian<br> &nbsp &nbsp &nbsp landform '
 }     
 inf[0].onmouseout=()=>
 {   
@@ -698,5 +707,4 @@ frz[4].onmouseout=()=>
      
 </script>
 </body>
-
 </html>
