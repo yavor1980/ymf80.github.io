@@ -13,6 +13,22 @@
  background:linear-gradient(44deg,#330,#cc0);
 }
 
+#idb
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ left:87%;
+ top:45%;
+ background:#f00;
+ color:#ff0;
+ transform:scale(2);
+}
+#idb:hover
+{
+ transform:scale(2.2);
+}
+
 .coil
 {
  position:absolute;
@@ -24,14 +40,12 @@
  height:14%;
  transform:scale(2);
 }
-
 .fld
 {
  position:absolute;
  transition:333ms;
  transform:scale(0);
 }
-
 .ttl
 {
  position:absolute;
@@ -39,9 +53,17 @@
  cursor:pointer;
 }
 
+.cpcty
+{
+ position:absolute;
+ transition:333ms;
+ cursor:pointer;
+}
 
 </style>
 </head>
+
+<button id=idb>Change</button>
 
 <body id=idbd >
 <div class=ttl>Trotle</div>
@@ -63,10 +85,35 @@
  <div class=fld>alternative <br>&nbsp current</div>
 </div> 
 
+<div class=cpcty>
+ <div class=cpcty></div>
+ <div class=cpcty></div>
+ <div class=cpcty></div>
+ <div class=cpcty></div>
+ <div class=cpcty></div>
+ <div class=cpcty>Capacity</div>
+</div>
+
 <script>
+ttl=document.getElementsByClassName('ttl')
 coil=document.getElementsByClassName('coil')
 fld=document.getElementsByClassName('fld')
-ttl=document.getElementsByClassName('ttl')
+cpcty=document.getElementsByClassName('cpcty')
+
+ttl[0].style.left=55+'%'
+ttl[0].style.top=8+'%'
+ttl[0].style.color='#b00'
+ttl[0].style.transform='scale(4) skew(-33deg)'
+
+ttl[1].style.left=22+'%'
+ttl[1].style.top=8+'%'
+ttl[1].style.color='#900'
+ttl[1].style.transform='scale(3) skew(-22deg)'
+
+ttl[2].style.left=77+'%'
+ttl[2].style.top=8+'%'
+ttl[2].style.color='#700'
+ttl[2].style.transform='scale(3) skew(22deg)'
 
 coil[1].style.left=0+'%'
 coil[1].style.top=0+'%'
@@ -103,16 +150,16 @@ coil[5].style.height=64+'%'
 coil[5].style.border='11px ridge #333'
 coil[5].style.borderRadius='55%'
 
-coil[6].style.left=-8+'%'
+coil[6].style.left=-7+'%'
 coil[6].style.top=88+'%'
-coil[6].style.width=3+'%'
+coil[6].style.width=2.5+'%'
 coil[6].style.height=64+'%'
 coil[6].style.background='#333'
 coil[6].style.zIndex=-1
 
-coil[7].style.left=113+'%'
+coil[7].style.left=110+'%'
 coil[7].style.top=88+'%'
-coil[7].style.width=3+'%'
+coil[7].style.width=2.5+'%'
 coil[7].style.height=64+'%'
 coil[7].style.background='#333'
 coil[7].style.zIndex=-1
@@ -145,77 +192,81 @@ fld[4].style.left=66+'%'
 fld[4].style.top=79+'%'
 fld[4].style.color='#222'
 
-ttl[0].style.left=55+'%'
-ttl[0].style.top=8+'%'
-ttl[0].style.color='#b00'
-ttl[0].style.transform=
- 'scale(4) skew(-33deg)'
+cpcty[0].style.left=17+'%'
+cpcty[0].style.top=24+'%'
+cpcty[0].style.width=57+'%'
+cpcty[0].style.height=55+'%'
+cpcty[0].style.transform='scale(0)'
 
-ttl[1].style.left=22+'%'
-ttl[1].style.top=8+'%'
-ttl[1].style.color='#900'
-ttl[1].style.transform=
- 'scale(3) skew(-22deg)'
+cpcty[1].style.top=45+'%'
+cpcty[1].style.width=33+'%'
+cpcty[1].style.height=9+'%'
+cpcty[1].style.background='#777'
 
-ttl[2].style.left=77+'%'
-ttl[2].style.top=8+'%'
-ttl[2].style.color='#700'
-ttl[2].style.transform='scale(3) skew(22deg)'
+cpcty[2].style.left=18+'%'
+cpcty[2].style.width=25+'%'
+cpcty[2].style.height=100+'%'
+cpcty[2].style.background='#444'
 
-coilI=0
-coil[0].onmouseover=()=>
+cpcty[3].style.right=0+'%'
+cpcty[3].style.top=45+'%'
+cpcty[3].style.width=33+'%'
+cpcty[3].style.height=9+'%'
+cpcty[3].style.background='#777'
+
+cpcty[4].style.right=18+'%'
+cpcty[4].style.width=25+'%'
+cpcty[4].style.height=100+'%'
+cpcty[4].style.background='#444'
+
+cpcty[5].style.left=30+'%'
+cpcty[5].style.top=-7+'%'
+cpcty[5].style.width=38+'%'
+cpcty[5].style.height=111+'%'
+cpcty[5].style.border='7px ridge #dd0'
+cpcty[5].style.borderLeft='7px ridge transparent'
+cpcty[5].style.borderRight='7px ridge transparent'
+cpcty[5].style.borderRadius=55+'%'
+cpcty[5].style.transform='scale(0)'
+
+cpcty[6].style.left=66+'%'
+cpcty[6].style.top=7+'%'
+cpcty[6].style.color='#222'
+
+bbtn=0
+idb.onclick=()=>
 {
- ttl[0].style.transform='scale(0)'
- ttl[1].style.transform='scale(0)'
- ttl[2].style.transform='scale(0)'
- coil[0].style.transform='scale(2.1)'
- coil[1].style.border='11px ridge #900'
- coil[2].style.border='11px ridge #900'
- coil[3].style.border='11px ridge #900'
- coil[4].style.border='11px ridge #900'
- coil[5].style.border='11px ridge #900'
- coil[6].style.background='#900'
- coil[6].style.borderLeft='1px ridge #000'
- coil[6].style.borderRight='1px ridge #000'
- coil[7].style.background='#900'
- coil[7].style.borderLeft='1px ridge #000'
- coil[7].style.borderRight='1px ridge #000'
- coilI=setInterval(()=>{
-  p=1+Math.random()/11
-  fld[0].style.transform=
-   'scale('+p+')'
-  fld[1].style.transform=
-   'scale('+p+')'
-  fld[2].style.transform=
-   'scale('+(p+1)+') translate(15%,0)'
-  fld[3].style.transform=
-   'scale('+(p+1.4)+') translate(22%,0)'
-  fld[4].style.transform=
-   'scale('+(p+1.4)+') translate(-22%,55%) skew(-23deg)'
- }, 333)
-}  
-coil[0].onmouseout=()=>
-{
- ttl[0].style.transform='scale(4) skew(-33deg)'
- ttl[1].style.transform='scale(3) skew(-22deg)'
- ttl[2].style.transform='scale(3) skew(22deg)'
- coil[0].style.transform='scale(2)'
- coil[1].style.border='11px ridge #333'
- coil[2].style.border='11px ridge #333'
- coil[3].style.border='11px ridge #333'
- coil[4].style.border='11px ridge #333'
- coil[5].style.border='11px ridge #333'
- coil[6].style.background='#333'
- coil[6].style.border='none'
- coil[7].style.background='#333'
- coil[7].style.border='none'
- fld[0].style.transform='scale(0)'
- fld[1].style.transform='scale(0)'
- fld[2].style.transform='scale(0)'
- fld[3].style.transform='scale(0)'
- fld[4].style.transform='scale(0)'
-  clearInterval(coilI)
-}    
+ if(!bbtn)
+ {
+  coil[0].style.transform='scale(0)'
+  coil[0].style.opacity=0
+  ttl[0].style.transform='scale(0)'
+  ttl[0].style.opacity=0
+  ttl[1].style.transform='scale(0)'
+  ttl[1].style.opacity=0
+  ttl[2].style.transform='scale(0)'
+  ttl[2].style.opacity=0
+  cpcty[0].style.transform='scale(1)'
+  cpcty[0].style.opacity=1
+  cpcty[6].style.transform=
+   'scale(5) translate(77%,-111%) skew(-11deg)'
+ }
+ else
+ { 
+  coil[0].style.transform='scale(2)'
+  coil[0].style.opacity=1
+  ttl[0].style.transform='scale(4) skew(-33deg)'
+  ttl[0].style.opacity=1
+  ttl[1].style.transform='scale(3) skew(-22deg)'
+  ttl[1].style.opacity=1
+  ttl[2].style.transform='scale(3) skew(22deg)'
+  ttl[2].style.opacity=1
+  cpcty[0].style.transform='scale(0)'
+  cpcty[0].style.opacity=0
+  cpcty[6].style.transform='scale(0)'
+ }  
+  bbtn=!bbtn
+}
 
 ttl[0].onmouseover=()=>
 {
@@ -247,7 +298,86 @@ ttl[2].onmouseout=()=>
  ttl[2].style.transform=
   'scale(4) skew(-33deg)'
 } 
- 
+
+coilI=0
+coil[0].onmouseover=()=>
+{
+ ttl[0].style.transform='scale(0)'
+ ttl[1].style.transform='scale(0)'
+ ttl[2].style.transform='scale(0)'
+ coil[0].style.transform='scale(2.1)'
+ coil[1].style.border='11px ridge #900'
+ coil[2].style.border='11px ridge #900'
+ coil[3].style.border='11px ridge #900'
+ coil[4].style.border='11px ridge #900'
+ coil[5].style.border='11px ridge #900'
+ coil[6].style.background='#900'
+ coil[6].style.borderLeft='1px ridge #000'
+ coil[6].style.borderRight='1px ridge #000'
+ coil[7].style.background='#900'
+ coil[7].style.borderLeft='1px ridge #000'
+ coil[7].style.borderRight='1px ridge #000'
+ coilI=setInterval(()=>{
+   p=1+Math.random()/11
+  fld[0].style.transform='scale('+p+')'
+  fld[1].style.transform='scale('+p+')'
+  fld[2].style.transform=
+   'scale('+(p+1)+') translate(15%,0)'
+  fld[3].style.transform=
+   'scale('+(p+1.4)+') translate(22%,0)'
+  fld[4].style.transform=
+   'scale('+(p+1.4)+') translate(-22%,55%) skew(-23deg)'
+ }, 333)
+}  
+coil[0].onmouseout=()=>
+{
+ ttl[0].style.transform='scale(4) skew(-33deg)'
+ ttl[1].style.transform='scale(3) skew(-22deg)'
+ ttl[2].style.transform='scale(3) skew(22deg)'
+ coil[0].style.transform='scale(2)'
+ coil[1].style.border='11px ridge #333'
+ coil[2].style.border='11px ridge #333'
+ coil[3].style.border='11px ridge #333'
+ coil[4].style.border='11px ridge #333'
+ coil[5].style.border='11px ridge #333'
+ coil[6].style.background='#333'
+ coil[6].style.border='none'
+ coil[7].style.background='#333'
+ coil[7].style.border='none'
+ fld[0].style.transform='scale(0)'
+ fld[1].style.transform='scale(0)'
+ fld[2].style.transform='scale(0)'
+ fld[3].style.transform='scale(0)'
+ fld[4].style.transform='scale(0)'
+  clearInterval(coilI)
+}    
+
+cpctyI=0
+cpcty[0].onmouseover=()=>
+{
+ cpcty[1].style.background='#900'
+ cpcty[2].style.background='#c00'
+ cpcty[3].style.background='#900'
+ cpcty[4].style.background='#c00'
+ cpcty[6].style.transform='scale(0)'
+ cpctyI=setInterval(()=>{
+   p=1.2+Math.random()/11
+  cpcty[5].style.transform='scale('+p+')'
+ }, 333)
+}
+cpcty[0].onmouseout=()=>
+{
+ cpcty[1].style.background='#777'
+ cpcty[2].style.background='#444'
+ cpcty[3].style.background='#777'
+ cpcty[4].style.background='#444'
+ cpcty[5].style.transform='scale(0)'
+ cpcty[6].style.transform=
+  'scale(5) translate(77%,-111%) skew(-11deg)'
+  clearInterval(cpctyI)
+}
+
+
 </script>
 </body>
 </html>
