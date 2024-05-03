@@ -105,7 +105,7 @@ finit(bckrnd,0,0,'',100,22,'radial-gradient(#099,#eee)')
  bckrnd[0].style.borderTopLeftRadius=29+'%'
  bckrnd[0].style.borderTopRightRadius=29+'%'
  bckrnd[0].style.opacity=0.2
-finit(bckrnd,1,47,13,1,2,'#ee0')
+finit(bckrnd,1,85,7,1,2,'#ee0')
  bckrnd[1].style.borderRadius=55+'%'
  bckrnd[1].style.opacity=0.8
  bckrnd[1].style.transform='scale(0.2)'
@@ -299,13 +299,6 @@ smint[5].style.top=-45+'%'
 smint[5].style.transform='scale(0)'
 smint[5].style.zIndex=3
 
-fcrtr=()=>
-{
- crstint[2].style.background=
-  'radial-gradient('+Math.round(Math.random()*44)+
-  'px,#ee0,#b0b)' 
-}
-
 snwmn[0].onmouseover=()=>
 {
  snwmn[0].style.transform='scale(1.1)' 
@@ -330,6 +323,16 @@ snwmn[0].onmouseout=()=>
  smint[5].style.transform='scale(0)'
 }
 
+fcrtr=()=>
+{
+ crstint[2].style.background=
+  'radial-gradient('+Math.round(Math.random()*44)+
+  'px,#ee0,#b0b)'
+ bckrnd[1].style.transform=
+  'scale('+Math.random()+')' 
+ bckrnd[3].style.transform=
+  'scale('+Math.random()+')'
+}
 crstmtr[0].onmouseover=()=>
 {
  bckrnd[0].style.opacity=0.8
@@ -383,5 +386,4 @@ crstmtr[0].onmouseout=()=>
  
 </script>
 </body>
-
 </html>
