@@ -4,23 +4,19 @@
 <style>
 body
 {
- background:linear-gradient(-144deg,#ff0,#0ff)
+ background:linear-gradient(-144deg,#ff0,#0ff);
+ overflow:no-scroll;
 }
 
-#idbtn
+.btn
 {
  position:absolute;
- left:6%;
- top:6%;
  width:9%;
  height:5%;
- background:red;
- color:white;
  transition:1s;
  cursor:pointer;
- border-radius:22%;
 }
-#idbtn:hover
+.btn:hover
 {
  transform:scale(1.2);
 }
@@ -28,14 +24,12 @@ body
 .wtr
 {
  position:absolute;
- transition:3s;
+ transition:2s;
  left:0%;
  bottom:0%;
  width:100%;
  height:33%;
  background:#00b;
- font-size:3em;
- z-index:-2;
 }
 
 .sh
@@ -46,8 +40,6 @@ body
  top:44%;
  width:22%;
  height:33%;
- color:#fff;
- font-size:1em;
  cursor:pointer;
 }
 
@@ -78,7 +70,6 @@ body
  font-size:1em;
  color:#ff0;
  transition:1s;
- cursor:pointer;
 }
 
 .ttstte
@@ -101,7 +92,8 @@ body
 
 </style>
 
-<button id=idbtn>SALUTE</button>
+<button class=btn>SALUTE</button>
+<button class=btn>Launch</button>
 
 <div class=wtr>
  <div class=wtr></div>
@@ -162,29 +154,8 @@ body
  Danger!
 </div>
 
-<div class=ttgthb>
- GitHub
-</div>
-<div class=ttgthb>
- Pages
-</div>
-<div class=ttgthb>
- DeskTop
-</div>
-<div class=ttgthb>
- change repository
-</div>
-<div class=ttgthb>
-  Deploy branch
-</div>
-<div class=ttgthb>
-  Fetch origin
-</div>
-<div class=ttgthb>
-  Publish site!
-</div>
-
 <script>
+btn=document.getElementsByClassName('btn')
 wtr=document.getElementsByClassName('wtr')
 sh=document.getElementsByClassName('sh')
 slte=document.getElementsByClassName('slte')
@@ -195,7 +166,18 @@ ttmne=document.getElementsByClassName('ttmne')
 ttalgrt=document.getElementsByClassName('ttalgrt')
 ttcmnd=document.getElementsByClassName('ttcmnd')
 ttstte=document.getElementsByClassName('ttstte')
-ttgthb=document.getElementsByClassName('ttgthb')
+
+btn[0].style.left=5+'%'
+btn[0].style.top=4+'%' 
+btn[0].style.background='#00f'
+btn[0].style.color='#eee'
+btn[0].style.borderRadius=22+'%'
+
+btn[1].style.left=5+'%'
+btn[1].style.top=11+'%' 
+btn[1].style.background='#f00'
+btn[1].style.color='#fff'
+btn[1].style.borderRadius=33+'%'
 
 wtr[1].style.left=15+'%'
 wtr[1].style.top=0+'%'
@@ -324,7 +306,6 @@ ttmne[0].style.color='#b00'
 ttmne[0].style.transform='scale(0)'
 
 ttcmnd[0].style.left=66+'%'
-
 ttcmnd[0].style.top=27+'%'
 ttcmnd[0].style.color='#000'
 ttcmnd[0].style.opacity=0
@@ -333,42 +314,6 @@ ttcmnd[1].style.left=77+'%'
 ttcmnd[1].style.top=55+'%'
 ttcmnd[1].style.color='#f00'
 ttcmnd[1].style.transform='scale(0)'
-
-ttgthb[0].style.left=39+'%'
-ttgthb[0].style.top=18+'%'
-ttgthb[0].style.color='#f0f'
-ttgthb[0].style.cursor='pointer'
-ttgthb[0].style.transform='scale(2)'
- 
-ttgthb[1].style.left=66+'%'
-ttgthb[1].style.top=8+'%'
-ttgthb[1].style.color='#000'
-ttgthb[1].style.transform='scale(0)'
-
-ttgthb[2].style.left=63+'%'
-ttgthb[2].style.top=22+'%'
-ttgthb[2].style.color='#000'
-ttgthb[2].style.transform='scale(0)'
- 
-ttgthb[3].style.left=63+'%'
-ttgthb[3].style.top=29+'%'
-ttgthb[3].style.color='#000'
-ttgthb[3].style.transform='scale(0)'
- 
-ttgthb[4].style.left=63+'%'
-ttgthb[4].style.top=35+'%'
-ttgthb[4].style.color='#000'
-ttgthb[4].style.transform='scale(0)'
- 
-ttgthb[5].style.left=63+'%'
-ttgthb[5].style.top=27+'%'
-ttgthb[5].style.color='#000'
-ttgthb[5].style.transform='scale(0)'
-
-ttgthb[6].style.left=63+'%'
-ttgthb[6].style.top=46+'%'
-ttgthb[6].style.color='#000'
-ttgthb[6].style.transform='scale(0)'
 
 b=0
 function cl()
@@ -382,15 +327,17 @@ function cl()
   wtr[3].style.transform=
    'scale(1.3) translate(11%,0)'
   sh[0].style.transform=
-   'scale(1) rotate(11deg)'
+   'scale(1) rotate(3deg)'
   sh[1].style.transform='scale(1.1)'
   sh[2].style.transform='scale(1)'
   sh[5].style.transform='scale(1)'
   mne[0].style.transform=
    'scale(2) translate('+
-	Math.random()*44+'%,'+
-	Math.random()*44+'%)'
- }else{
+   Math.random()*44+'%,'+
+   Math.random()*44+'%)'
+ }
+ else
+ {
   wtr[1].style.transform=
    'scale(1) translate(-11%,0)'
   wtr[2].style.transform=
@@ -398,7 +345,7 @@ function cl()
   wtr[3].style.transform=
    'scale(1) translate(-11%,0)'
   sh[0].style.transform=
-   'scale(1) rotate(-11deg)'
+   'scale(1) rotate(-3deg)'
   sh[1].style.transform='scale(1)'
   sh[2].style.transform='scale(1.1)'
   sh[5].style.transform='scale(1.1)'
@@ -406,9 +353,9 @@ function cl()
  }  
     b=!b
 }
-   setInterval(cl, 999)
+  I= setInterval(cl, 999)
 	 
-idbtn.onclick=()=>
+btn[0].onclick=()=>
 {
   b=Math.round(Math.random())
  slte[0].style.background='radial-gradient(#ff0,#f00)'
@@ -433,6 +380,7 @@ idbtn.onclick=()=>
  ttcmnd[0].style.color='#f00'
  if(b)
  { 
+  sh[0].style.transform='translate(-22%,0)'
   slte[0].style.transform=
    ' translate('+Math.random()*2222+'%, -1111%) scale(3)'
   slte[1].style.transform=
@@ -442,6 +390,7 @@ idbtn.onclick=()=>
  } 
  else
  {
+  sh[0].style.transform='translate(22%,0)'
   slte[0].style.transform=
    ' translate(-'+Math.random()*2222+'%, -1111%) scale(3)'
   slte[1].style.transform=
@@ -469,7 +418,8 @@ idbtn.onclick=()=>
 	 
 sh[0].onmouseover=()=>
 {
- sh[0].style.transform='scale(1.3) '
+ sh[0].style.transform=
+  'scale(1.3) '
  sh[4].style.background='#bb0'
  slte[3].style.left=76+'%'
  slte[3].style.background='#333'
@@ -482,11 +432,10 @@ sh[0].onmouseover=()=>
   'scale(3) translate(366%,488%)'
   slte[3].style.opacity=0
  }, 999) 
- setTimeout(()=>{
- 
+ setTimeout(()=>{ 
+  slte[3].style.transition='0s'
   slte[3].style.transform='scale(0)'
-
- }, 1999)  
+ }, 2000)  
  ttnm[0].style.transform=
   'scale(1.5) skew(22deg)'
  ttnm[1].style.transform=
@@ -605,51 +554,6 @@ ttnm[7].onmouseout=()=>
  ttnm[7].innerHTML='corvette'
  ttnm[7].style.transform='scale(1)' 
  ttnm[7].style.color='#f00 ' 
-}
-
-If2=0
-bf2=0
-ttgthb[0].onmouseover=()=>
-{
-  ttgthb[0].innerHTML='404 not found'
- ttgthb[1].style.transform='scale(3) skew(22deg)'
- ttgthb[2].style.transform='scale(3) skew(-22deg)'
- ttgthb[3].style.transform='scale(3) skew(22deg)'
- ttgthb[3].style.color='#888'
- ttgthb[4].style.color='#080'
- ttgthb[5].style.transform='scale(3) translate(3%,99%)'
- ttgthb[5].style.color='#808'
- If2= setInterval(()=>{
-  if(bf2){ 
-   ttgthb[0].style.transform='scale(3) '
-   ttgthb[0].style.color='#500 '
-   ttgthb[6].style.transform='scale(4) '
-   ttgthb[6].style.color='#f00 '
-    }else{
-   ttgthb[0].style.transform='scale(4) '
-   ttgthb[0].style.color='#f00 '
-   ttgthb[6].style.transform='scale(3) '
-   ttgthb[6].style.color='#800 '
-     }
-  bf2=!bf2
- },999)
-}
-ttgthb[0].onmouseout=()=>
-{
- ttgthb[0].style.transform='scale(2)' 
-  ttgthb[0].innerHTML='GitHub'
- ttgthb[0].style.color='#f0f ' 
- ttgthb[1].style.transform='scale(0) '
- ttgthb[2].style.transform='scale(0) '
- ttgthb[3].style.transform='scale(0) '
- ttgthb[3].style.color='#0f0'
- ttgthb[4].style.transform='scale(0) '
- ttgthb[4].style.color='#888'
- ttgthb[5].style.transform='scale(0) '
- ttgthb[5].style.color='#888'
- ttgthb[6].style.transform='scale(0) '
- ttgthb[6].style.color='#000' 
-  clearInterval(If2) 
 }
 
 </script>
