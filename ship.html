@@ -110,6 +110,7 @@ body
  <div class=slte></div>
  <div class=slte></div> 
  <div class=slte></div> 
+ <div class=slte><div class=slte></div> </div>
 </div>
 
 <div class=mne>
@@ -243,6 +244,17 @@ sh[5].style.borderTopLeftRadius='5%'
 sh[5].style.borderTopRightRadius='5%'
 sh[5].style.zIndex=-2
 
+slte[4].style.left=77+'%'
+slte[4].style.top=44+'%'
+slte[4].style.height=11+'%'
+slte[4].style.borderBottomLeftRadius='5%'
+slte[4].style.borderBottomRightRadius='5%'
+
+slte[5].style.background=
+ 'radial-gradient(#b00,#f00)' 
+slte[5].style.zIndex=-1 
+slte[5].style.transform='scale(0)' 
+   
 ttnm[0].style.left='51%'
 ttnm[0].style.top='6%'
 
@@ -415,14 +427,37 @@ btn[0].onclick=()=>
   slte[2].style.transform='translate(0%,0%)' 
  }, 999)
 }	 
-	 
+
+btn[1].onclick=()=>
+{
+ slte[4].style.background=
+  'radial-gradient(#999,#555)' 
+ slte[4].style.transition='1s' 
+ slte[4].style.opacity=1
+ slte[4].style.transform=
+  'scale(3) translate(66%,-400%) rotate(88deg)'
+ slte[5].style.transition='1s' 
+ slte[5].style.opacity=1
+ slte[5].style.transform=
+  'scale(17) translate(14%,177%)' 
+ setTimeout(()=>{
+  slte[4].style.transition='0s'
+  slte[4].style.opacity=0
+  slte[4].style.transform=
+   'scale(1) translate(66%,-466%)'
+  slte[5].style.transition='0s' 
+ 
+ }, 1000)
+}
+ 
 sh[0].onmouseover=()=>
 {
  sh[0].style.transform=
   'scale(1.3) '
  sh[4].style.background='#bb0'
  slte[3].style.left=76+'%'
- slte[3].style.background='#333'
+ slte[3].style.background=
+  'radial-gradient(#bb0,#333)'
  slte[3].style.opacity=1
  slte[3].style.transition='1s'
  slte[3].style.transform=
