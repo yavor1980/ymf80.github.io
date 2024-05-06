@@ -30,7 +30,7 @@
 </style>
 <div class=hd>Waiting...</div>
 <div class=hd>When?..</div>
-<div class=hd></div>
+ <div class=hd></div>
 
 <div class=slte>
  <div class=slte></div>
@@ -68,7 +68,7 @@ hd[2].style.top=18+'%'
 hd[2].style.width=76+'%'
 hd[2].style.height=48+'%'
 hd[2].style.background=
- 'linear-gradient(22deg,#f00,#ff0,#0f0,#00f,#0ff)'
+ 'radial-gradient(#f00,#ff0,#0f0,#00f,#0ff)'
 hd[2].style.borderRadius=5+'%'
 hd[2].style.transform='skew(11deg)'
 hd[2].style.opacity=0
@@ -142,7 +142,7 @@ ppp[3].style.background=
 ppp[3].style.borderRadius=22+'%' 
 ppp[3].style.transform=
  'scale(1.8) rotate(45deg)'
-
+ 
 Icl=0
 bcl=0
 function cl()
@@ -195,7 +195,9 @@ function sltcl()
      (222+Math.random()*111)+'%)'	
 		
   }, 444)
- }else{
+ }
+ else
+ {
   slte[0].style.transition='0s'
   slte[0].style.transform=
    'scale(0) translate(0%,0%)'
@@ -226,9 +228,9 @@ hd[0].onmouseover=()=>
  hd[0].style.transform='scale(9) skew(-22deg)'
   hd[0].innerHTML='VICTORY!..'
  hd[1].style.transform='scale(0) translate(0,-88%)'
- hd[2].style.opacity=0.2
+ hd[2].style.opacity=0.5
   clearInterval(Icl)
-  sltcl(); Icl=setInterval(()=>sltcl(),999)
+  sltcl(); Icl=setInterval(()=>sltcl(), 999)
 }
 hd[0].onmouseout=()=>
 {
