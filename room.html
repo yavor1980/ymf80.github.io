@@ -60,7 +60,7 @@
  position:absolute;
  cursor:pointer; 
  transition:2s;
- opacity:0.8;
+ opacity:0.5;
 }
 
 .vctr
@@ -156,7 +156,7 @@ drn[3].style.top=33+'%'
 drn[3].style.width=22+'%'
 drn[3].style.height=22+'%'
 drn[3].style.background=
- 'radial-gradient(#505,#808)'
+ 'radial-gradient(5px,#000,#808)'
 drn[3].style.borderRadius='22%'
 drn[3].style.opacity=0
 drn[3].style.transform='scale(2)'
@@ -272,8 +272,6 @@ drn[0].onmouseover=()=>
 {
  drn[0].style.background='#600'
  drn[0].style.border='11px ridge #400'
- drn[0].style.transform=
-  'scale(1.5) translate(-11%,-11%)'
  drn[1].style.background='#400'
  drn[2].style.background='#300'
  drn[3].style.opacity=1
@@ -282,6 +280,10 @@ drn[0].onmouseover=()=>
  prplr[2].style.transform='scale(1)'
  prplr[3].style.transform='scale(1)'
  w=0,h=0,b=0
+ drn0I=setInterval(()=>{
+  drn[0].style.transform='scale(1.5) translate(-11%,'+
+  (Math.random()*27-13)+'%)'
+ }, 1111)
  drnI=setInterval(()=>{ 
    w-=1; h-=1
     b++   
@@ -316,6 +318,7 @@ drn[0].onmouseout=()=>
  prplr[1].style.transform='scale(0)'
  prplr[2].style.transform='scale(0)'
  prplr[3].style.transform='scale(0)'
+  clearInterval(drn0I)
   clearInterval(drnI)
 } 
 
