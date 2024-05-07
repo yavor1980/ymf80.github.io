@@ -95,10 +95,12 @@ button:hover
  <div class=telm>Resistor</div>
  <div class=telm>Capacity</div>
  <div class=telm>Trotle</div>
+ <div class=telm>Ground</div>
+ <div class=tprcss>Fluctuations...</div>
+ <div class=tprcss>pulse<br>&nbsp smoothing...</div>
 </div> 
 
-<div class=tprcss>cpctr charging...</div>
-<div class=tprcss>pulse<br>&nbsp smoothing</div>
+
 
 <div class=crrnt>
  <div class=crrnt></div>
@@ -186,7 +188,7 @@ elm[2].style.color='#777'
 elm[2].style.transform=
  'scale(4) rotate(90deg)'
 
-drssl[0].style.left=133+'%'
+drssl[0].style.left=299+'%'
 drssl[0].style.top=-9+'%'
 drssl[0].style.width=177+'%'
 drssl[0].style.height=5+'%'
@@ -202,7 +204,7 @@ drssl[1].style.borderTop='15px ridge #999'
 drssl[1].style.borderBottom='15px ridge transparent'
 drssl[1].style.transform='rotate(-45deg)'
 
-drssl[2].style.left=222+'%'
+drssl[2].style.left=135+'%'
 drssl[2].style.top=0+'%'
 drssl[2].style.width=44+'%'
 drssl[2].style.height=44+'%'
@@ -213,7 +215,7 @@ drssl[2].style.borderTop='15px ridge #999'
 drssl[2].style.borderBottom='15px ridge transparent'
 drssl[2].style.transform='rotate(-45deg)'
 
-drssl[3].style.left=444+'%'
+drssl[3].style.left=270+'%'
 drssl[3].style.top=0+'%'
 drssl[3].style.width=44+'%'
 drssl[3].style.height=44+'%'
@@ -260,13 +262,17 @@ telm[4].style.left=20+'%'
 telm[4].style.top=77+'%'
 telm[4].style.transform='scale(0)'
 
-tprcss[0].style.left=77+'%'
-tprcss[0].style.top=11+'%'
+telm[5].style.left=20+'%'
+telm[5].style.top=77+'%'
+telm[5].style.transform='scale(0)'
+
+tprcss[0].style.left=34+'%'
+tprcss[0].style.top=24+'%'
 tprcss[0].style.color='#00b'
 tprcss[0].style.transform='scale(0)'
 
-tprcss[1].style.left=77+'%'
-tprcss[1].style.top=11+'%'
+tprcss[1].style.left=34+'%'
+tprcss[1].style.top=24+'%'
 tprcss[1].style.color='#0b0'
 tprcss[1].style.transform='scale(0)'
 
@@ -349,6 +355,9 @@ btn[1].onmouseover=()=>
  telm[4].style.color='#d00'
  telm[4].style.transform=
   'scale(3) translate(179%,-455%) skew(-11deg)' 
+ telm[5].style.color='#d00'
+ telm[5].style.transform=
+  'scale(3) translate(-47%,188%) skew(-11deg)' 
 }
 btn[1].onmouseout=()=>
 {
@@ -360,6 +369,8 @@ btn[1].onmouseout=()=>
  telm[3].style.transform='scale(0)'
  telm[4].style.color='#000'
  telm[4].style.transform='scale(0)'
+ telm[5].style.color='#000'
+ telm[5].style.transform='scale(0)'
 }
 
 wrs[0].onmouseover=()=>
@@ -389,7 +400,8 @@ wrs[0].onmouseover=()=>
   'radial-gradient('+(Math.random()*33+66)+'px,#220,#0bb)' 
   crrnt[1].style.opacity=1
   crrnt[1].style.transform=
-   'scale(2) translate('+(111*Math.random()/2)+'%,'+
+   'scale(2) translate('+
+   (111*Math.random()/2)+'%,'+
     (88*Math.random()/2)+'%)'
   crrnt[2].style.opacity=1
   crrnt[2].style.transform=
@@ -400,6 +412,10 @@ wrs[0].onmouseover=()=>
    'scale(2) translate('+(111*Math.random()/2)+'%,'+
     (88*Math.random()/2)+'%)' 
  }, 555)
+ tprcss[0].style.transform=
+  'scale(3) translate(-44%,-99%) skew(11deg)'
+ tprcss[1].style.transform=
+  'scale(3) translate(44%,-99%) skew(-11deg)'
 }
 wrs[0].onmouseout=()=>
 {
@@ -422,6 +438,8 @@ wrs[0].onmouseout=()=>
  crrnt[1].style.opacity=0
  crrnt[2].style.opacity=0
  crrnt[3].style.opacity=0
+ tprcss[0].style.transform='scale(0)'
+ tprcss[1].style.transform='scale(0)'
 }
 
 telm[0].onmouseover=()=>
