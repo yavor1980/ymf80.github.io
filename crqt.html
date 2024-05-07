@@ -98,9 +98,8 @@ button:hover
  <div class=telm>Ground</div>
  <div class=tprcss>Fluctuations...</div>
  <div class=tprcss>pulse<br>&nbsp smoothing...</div>
+ <div class=tprcss>moving<br>&nbsp charged...</div>
 </div> 
-
-
 
 <div class=crrnt>
  <div class=crrnt></div>
@@ -276,6 +275,11 @@ tprcss[1].style.top=24+'%'
 tprcss[1].style.color='#0b0'
 tprcss[1].style.transform='scale(0)'
 
+tprcss[2].style.left=34+'%'
+tprcss[2].style.top=24+'%'
+tprcss[2].style.color='#b00'
+tprcss[2].style.transform='scale(0)'
+
 crrnt[0].style.left=67+'%'
 crrnt[0].style.top=36+'%'
 crrnt[0].style.width=16+'%'
@@ -416,6 +420,8 @@ wrs[0].onmouseover=()=>
   'scale(3) translate(-44%,-99%) skew(11deg)'
  tprcss[1].style.transform=
   'scale(3) translate(44%,-99%) skew(-11deg)'
+ tprcss[2].style.transform=
+  'scale(3) translate(133%,333%) skew(-8deg)'
 }
 wrs[0].onmouseout=()=>
 {
@@ -440,6 +446,7 @@ wrs[0].onmouseout=()=>
  crrnt[3].style.opacity=0
  tprcss[0].style.transform='scale(0)'
  tprcss[1].style.transform='scale(0)'
+ tprcss[2].style.transform='scale(0)'
 }
 
 telm[0].onmouseover=()=>
