@@ -47,13 +47,13 @@
 dsply=document.getElementsByClassName('dsply')
 lbrry=document.getElementsByClassName("lbrry")
  
-dsply[0].style.left=39+'%'
+dsply[0].style.left=29+'%'
 dsply[0].style.top=45+'%'
-dsply[0].style.width=20+'%'
+dsply[0].style.width=17+'%'
 dsply[0].style.height=22+'%'
 dsply[0].style.background='#909'
 dsply[0].style.borderRadius=5+'%'
-dsply[0].style.transform='scale(3) skew(11deg)'
+dsply[0].style.transform='scale(2) skew(11deg)'
 
 dsply[1].style.left=4+'%'
 dsply[1].style.top=4+'%'
@@ -104,7 +104,7 @@ dsply[0].onmouseover=()=>
  Idsply=setInterval(()=>{ 
   vdspl=Math.random()*33+33
   dsply[1].style.background=
-   'radial-gradient('+vdspl+'px,#700,#990)'
+   'radial-gradient('+vdspl+'px,#700,#0bb,#990)'
  }, 999)
  dsply[2].style.background=
   'radial-gradient(#0f0,#090)'
@@ -114,7 +114,7 @@ dsply[0].onmouseover=()=>
 }
 dsply[0].onmouseout=()=>
 {
- dsply[0].style.transform='scale(3) skew(11deg)'
+ dsply[0].style.transform='scale(2) skew(11deg)'
   clearInterval(Idsply); vdspl=9 
  dsply[1].style.background='#555'
  dsply[2].style.background='#222'
@@ -136,12 +136,15 @@ lbrry[0].onmouseover=()=>
   'scale(4) translate(77%,33%)'
  lbrry[2].style.color='#f07'
  Icmpnnt=setInterval(()=>{
-  if(bcmpnnt){
+  if(bcmpnnt)
+  {
    lbrry[3].style.transform=
     'scale(4) translate(177%,-22%) skew(-11deg)'
    lbrry[4].style.transform=
     'scale(4) translate(177%,88%) skew(11deg)'
-  }else{
+  }
+   else
+  {
    lbrry[3].style.transform=
     'scale(4) translate(177%,-22%) skew(11deg)'
    lbrry[4].style.transform=
