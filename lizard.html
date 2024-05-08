@@ -105,7 +105,8 @@
  <div class=pw></div>
  <div class=pw></div>
  <div class=pw><div class=pw></div></div>
- 
+ <div class=pw></div>
+ <div class=pw></div>
  <div class=ttagrss>Agressive one</div>
  <div class=ttagrss>Aggression is vectorless</div>
  <div class=ttagrss>Emotional<br> irritation</div>
@@ -139,7 +140,8 @@ grnd[1].style.height=100+'%'
 grnd[1].style.background=
  'radial-gradient(#622,#f22)'  
 grnd[1].style.borderTopLeftRadius=38+'%'	  
-grnd[1].style.borderTopRightRadius=44+'%'	  
+grnd[1].style.borderTopRightRadius=44+'%'	
+grnd[1].style.zIndex=-1
 	   
 grnd[2].style.left=4+'%'	  
 grnd[2].style.bottom=0+'%'
@@ -149,7 +151,7 @@ grnd[2].style.background=
  'radial-gradient(#122,#822)'  
 grnd[2].style.borderRadius=55+'%'	  
 grnd[2].style.borderTopRightRadius=44+'%'		  
-grnd[2].style.zIndex=-1
+grnd[2].style.zIndex=-2
 grnd[2].style.opacity=0.4
 	
 grnd[3].style.left=55+'%'	  
@@ -160,7 +162,7 @@ grnd[3].style.background=
  'radial-gradient(#222,#822)'  
 grnd[3].style.borderTopLeftRadius=38+'%'	  
 grnd[3].style.borderTopRightRadius=44+'%'		  
-grnd[3].style.zIndex=-1 
+grnd[3].style.zIndex=-2
 grnd[3].style.opacity=0.6
 	  
 function inn(nm,i, l,t, w,h, bkgrd, btlr,btrr,bblr,bbrr)
@@ -197,9 +199,15 @@ inn(pw,1, 33,48, 33,55,
 inn(pw,2, 66,88, 33,22,
  'radial-gradient(#330,#222)',55,55,5,5)
 inn(pw,3, 44,-1, 11,11,
- 'radial-gradient(#f80,#555)',-77,-77,33,33)
+ 'radial-gradient(#f80,#555)',55,55,33,33)
 inn(pw,4, 33,1, 33,99,
- 'radial-gradient(#f80,#555)',77,77,9,9)
+ 'radial-gradient(#f80,#555)',55,55,9,9)
+inn(pw,5, -12,27, 33,69,
+ 'radial-gradient(#330,#222)',55,55,55,55)
+ pw[5].style.zIndex=-1
+inn(pw,6, 79,27, 33,69,
+ 'radial-gradient(#330,#222)',55,55,55,55)
+ pw[6].style.zIndex=-1
 inn(ttagrss,0, 33,2)
  ttagrss[0].style.color='#009'
 inn(ttagrss,1, 33,7)
