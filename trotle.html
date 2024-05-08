@@ -81,7 +81,7 @@
  <div class=fld></div>
  <div class=fld></div>
  <div class=fld>U=</div>
- <div class=fld>-L*(dI/dt)</div>
+ <div class=fld>-1/L*<i id=idi>S</i>dIdt</div>
  <div class=fld>alternative <br>&nbsp current</div>
 </div> 
 
@@ -92,6 +92,7 @@
  <div class=cpcty></div>
  <div class=cpcty></div>
  <div class=cpcty>Capacity</div>
+ <div class=cpcty>I=CdU/dt</div>
 </div>
 
 <script>
@@ -99,6 +100,8 @@ ttl=document.getElementsByClassName('ttl')
 coil=document.getElementsByClassName('coil')
 fld=document.getElementsByClassName('fld')
 cpcty=document.getElementsByClassName('cpcty')
+
+idi.style.transform='scale(0,4)'
 
 ttl[0].style.left=55+'%'
 ttl[0].style.top=8+'%'
@@ -233,6 +236,10 @@ cpcty[6].style.left=66+'%'
 cpcty[6].style.top=7+'%'
 cpcty[6].style.color='#222'
 
+cpcty[7].style.left=6+'%'
+cpcty[7].style.top=7+'%'
+cpcty[7].style.transform='scale(0)'
+
 bbtn=0
 idb.onclick=()=>
 {
@@ -360,6 +367,9 @@ cpcty[0].onmouseover=()=>
  cpcty[3].style.background='#900'
  cpcty[4].style.background='#c00'
  cpcty[6].style.transform='scale(0)'
+  cpcty[7].style.color='#404'
+ cpcty[7].style.transform=
+  'scale(3) translate(-9%,-7%) skew(9deg)'
  cpctyI=setInterval(()=>{
    p=1.2+Math.random()/11
   cpcty[5].style.transform='scale('+p+')'
@@ -374,6 +384,8 @@ cpcty[0].onmouseout=()=>
  cpcty[5].style.transform='scale(0)'
  cpcty[6].style.transform=
   'scale(5) translate(77%,-111%) skew(-11deg)'
+ cpcty[7].style.color='#444' 
+ cpcty[7].style.transform='scale(0)' 
   clearInterval(cpctyI)
 }
 
