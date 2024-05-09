@@ -1,6 +1,5 @@
 <doctype html>
 
-
 <meta charset='utf-8'>
 <style>
 #idbd
@@ -10,15 +9,15 @@
 .btn
 {
  position:absolute;
- background:#300;
+ transition:1s;
  left:77%;
  top:9%;
  width:11%;
  height:11%;
- font-size:2em;
+ background:#300;
  color:#eee;
+ font-size:2em;
  text-align:center;
- transition:1s; 
  border-top-left-radius:22%;
  border-top-right-radius:22%;
  border-bottom-left-radius:55%;
@@ -33,12 +32,12 @@
 .eagle
 {
  position:absolute;   
- background:radial-gradient(#444,#000);
+ transition:2s; 
  left:33%;
  top:28%;
  width:11%;
  height:44%;
- transition:2s; 
+ background:radial-gradient(#444,#000);
  border-top-left-radius:66%;
  border-top-right-radius:66%;
  border-bottom-left-radius:55%;
@@ -49,18 +48,22 @@
 {
  position:absolute;
  transition:2s;
- background:blue;
  border-top-left-radius:55%;
  border-top-right-radius:55%;
  border-bottom-left-radius:55%;
  border-bottom-right-radius:55%;
- z-index:1;  
+}
+.mth
+{
+ position:absolute;
+ transition:2s;
+ border-radius:55%;
 }
 .lwng
 {
  position:absolute;
  transition:2s;
-  width:55%;
+ width:55%;
  height:122%; 
  border-top-left-radius:55%;
  border-top-right-radius:5%;
@@ -108,10 +111,12 @@
 
 <div class=eagle >
  <div class=hd >
-  <div class=eagle ></div>
   <div class=hd ></div>
   <div class=hd ></div> 
   <div class=hd ></div>
+  <div class=mth>
+   <div class=mth></div>
+  </div>
  </div>
  <div class=lwng ><div class=lwng ></div></div>
  <div class=rwng ><div class=rwng ></div></div> 
@@ -138,81 +143,84 @@ btn=document.getElementsByClassName('btn')
 
 eagle=document.getElementsByClassName('eagle')
 hd=document.getElementsByClassName('hd')
+mth=document.getElementsByClassName('mth')
 lwng=document.getElementsByClassName('lwng')
 rwng=document.getElementsByClassName('rwng')
   
 wrd=document.getElementsByClassName('wrd')
 flt=document.getElementsByClassName('flt')
 gthb=document.getElementsByClassName('gthb')
-
   
 var eagl= 
 {
  b:1,    
  init:function()
  {
-  eagle[1].style.left='-8%'
-  eagle[1].style.top='-22%'  
-  eagle[1].style.width='99%'
-  eagle[1].style.height='6%'  
-  eagle[1].style.background='none'
-  eagle[1].style.border='11px ridge #ff0'
-  eagle[1].style.transform='scale(0)'
+  hd[0].style.left=18+'%'
+  hd[0].style.top=-11+'%' 	 
+  hd[0].style.width=66+'%'
+  hd[0].style.height=66+'%' 
+  hd[0].style.background=
+   'radial-gradient(#444,#000)' 
+  hd[1].style.left=-8+'%'
+  hd[1].style.top=-22+'%'  
+  hd[1].style.width=99+'%'
+  hd[1].style.height=6+'%'  
+  hd[1].style.background='none'
+  hd[1].style.border='11px ridge #ff0'
+  hd[1].style.transform='scale(0)'
+  hd[2].style.left=20+'%'
+  hd[2].style.top=17+'%' 
+  hd[2].style.width=22+'%'
+  hd[2].style.height=0+'%'
+  hd[2].style.background=
+   'radial-gradient(#f00,#ff0)'
+  hd[3].style.left=62+'%'
+  hd[3].style.top=17+'%' 
+  hd[3].style.width=22+'%'
+  hd[3].style.height=0+'%'
+  hd[3].style.background=
+   'radial-gradient(#f00,#ff0)'	 
   
-  lwng[0].style.background=
-   'radial-gradient(#444,#000)';
+  mth[0].style.left=33+'%'
+  mth[0].style.top=33+'%' 
+  mth[0].style.width=44+'%'
+  mth[0].style.height=44+'%' 
+  mth[0].style.background=
+   'radial-gradient(#777,#000)'
+  mth[1].style.left=13+'%'
+  mth[1].style.top=55+'%' 
+  mth[1].style.width=70+'%'
+  mth[1].style.height=0+'%' 
+  mth[1].style.background=
+   'radial-gradient(#900,#d00)'
+  
   lwng[0].style.left='-89%'
   lwng[0].style.top='6%'  
   lwng[0].style.width='99%'
   lwng[0].style.height='122%'
-  lwng[1].style.background=
-   'radial-gradient(#444,#000)';
+  lwng[0].style.background=
+   'radial-gradient(#444,#000)'
   lwng[1].style.left='-33%'
   lwng[1].style.top='0%'  
   lwng[1].style.width='99%'
   lwng[1].style.height='99%'
-	  
-  rwng[0].style.background=
-   'radial-gradient(#444,#000)';
+  lwng[1].style.background=
+   'radial-gradient(#444,#000)'	  
+ 
   rwng[0].style.left='88%'
   rwng[0].style.top='6%'  
   rwng[0].style.width='99%'
   rwng[0].style.height='122%'
-  rwng[0].style.zIndex=-1	  
-  rwng[1].style.background=
-   'radial-gradient(#444,#000)';
+  rwng[0].style.background=
+   'radial-gradient(#444,#000)'
   rwng[1].style.left='33%'
   rwng[1].style.top='0%'  
   rwng[1].style.width='99%'
   rwng[1].style.height='99%'
-  rwng[1].style.zIndex=-2
-     	 
-  hd[0].style.background=
-   'radial-gradient(#444,#000)';
-  hd[0].style.left='18%'
-  hd[0].style.top='-11%' 	 
-  hd[0].style.width='66%'
-  hd[0].style.height='66%' 
-  hd[0].style.zIndex=1	 
-  hd[1].style.background=
-   'radial-gradient(#f60,#000)';
-  hd[1].style.left='33%'
-  hd[1].style.top='33%' 
-  hd[1].style.width='44%'
-  hd[1].style.height='44%' 
-  hd[2].style.background=
-	  'radial-gradient(#f00,#ff0)'
-  hd[2].style.left='20%'
-  hd[2].style.top='17%' 
-  hd[2].style.width='22%'
-  hd[2].style.height='0%'
-  hd[3].style.background=
-   'radial-gradient(#f00,#ff0)'
-  hd[3].style.left='62%'
-  hd[3].style.top='17%' 
-  hd[3].style.width='22%'
-  hd[3].style.height='0%'
-	 
+  rwng[1].style.background=
+   'radial-gradient(#444,#000)'
+  
   wrd[0].style.left='44%' 
   wrd[0].style.top='6%'  
   wrd[0].style.color='#ff0' 
@@ -234,7 +242,8 @@ var eagl=
   wrd[3].style.opacity=0	  
   wrd[3].style.fontSize='3em'
   
-  flt[0].style.left='6%' 
+  flt[0].style.left='6%'
+  
   flt[0].style.top='11%'
   flt[0].style.color='#f00'
   flt[0].style.opacity=1	  
@@ -285,14 +294,16 @@ var eagl=
    v=Math.random()*11
   eagle[0].style.transform=
    'skew('+(Math.random()*44-22)+'deg)'
-  eagle[1].style.transform=
+  hd[1].style.transform=
    'scale(2) translate(0,-66%)'
+  hd[2].style.height=18+'%'
+  hd[3].style.height=18+'%' 
+  mth[1].style.width=88+'%'
+  mth[1].style.height=33+'%'
   lwng[1].style.transform=
    'translate(-33%,-11%) scale('+(1+v/11)+',1)'
   rwng[1].style.transform=
    'translate(33%,-11%) scale('+(1+v/11)+',1)'
-  hd[2].style.height=18+'%'
-  hd[3].style.height=18+'%'
   wrd[0].style.opacity=1
   wrd[1].style.opacity=1
   wrd[2].style.opacity=1
@@ -300,16 +311,18 @@ var eagl=
   btn[0].style.opacity=0 
    setTimeout(eagl.re, 2222)     	  	
  },	
-  re:function()
+ re:function()
  {
   eagle[0].style.transform='skew(0deg)'
-  eagle[1].style.transform='scale(0)'
+  hd[1].style.transform='scale(0)'
+  hd[2].style.height=0+'%'
+  hd[3].style.height=0+'%'
+  mth[1].style.width=70+'%'
+  mth[1].style.height=0+'%'
   lwng[1].style.transform=
    'translate(0%,0%) scale(1)'
   rwng[1].style.transform=
    'translate(0%,0%) scale(1)'
-  hd[2].style.height=0+'%'
-  hd[3].style.height=0+'%'
   btn[0].style.opacity=1   
   wrd[0].style.opacity=0
   wrd[1].style.opacity=0
@@ -369,15 +382,14 @@ gthb[0].onmouseover=()=>
  gthb[0].style.transform='scale(4)'
   gthb[0].innerHTML='static hosting'
  gthb[1].style.transform=
-   'scale(3) translate(-11%,-99%)'
+   'scale(3) translate(-11%,-99%) skew(12deg)'
  gthb[1].style.color='#f00'
  gthb[2].style.transform=
-  'scale(3) translate(-11%,-222%)'
+  'scale(3) translate(-11%,-222%) skew(12deg)'
  gthb[2].style.color='#f0f'
  gthb[3].style.transform=
-  'scale(3) translate(-11%,33%)'
+  'scale(3) translate(-11%,33%) skew(12deg)'
  gthb[3].style.color='#ff0'
-  
  Igthb= setInterval(()=>{
   gthb[4].innerHTML=alg[ialg]
    ialg++ 
@@ -412,7 +424,4 @@ gthb[0].onmouseout=()=>
 //eagl.intr= setInterval(()=>,2222	
 </script>
 </body>
-
 </html>
-
-
