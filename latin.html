@@ -46,78 +46,24 @@ button:hover
  color:#f00;
  transform:scale(0);
 }
-.bfrz
-{
- color:#e0e;
-}
-.cfrz
-{
- color:#f00;
-}
-.dfrz
-{
- color:#e00;
-}
-.efrz
-{
- color:#d0d;
-}
-.ffrz
-{
- color:#330;
-}
-.hfrz
-{
- color:#f00;
-}
-.ifrz
-{
- color:#e00;
-}
-.lfrz
-{
- color:#d00;
-}
-.mfrz
-{
- color:#d00;
-}
-.nfrz
-{
- color:#d00;
-}
-.ofrz
-{
- color:#d00;
-}
-.pfrz
-{
- color:#d00;
-}
-.qfrz
-{
- color:#900;
-}
-.rfrz
-{
- color:#f00;
-}
-.sfrz
-{
- color:#e00;
-}
-.tfrz
-{
- color:#a00;
-}
-.ufrz
-{
- color:#f00;
-}
-.vfrz
-{
- color:#d00;
-}
+.bfrz{color:#e0e;}
+.cfrz{color:#f00;}
+.dfrz{color:#e00;}
+.efrz{color:#d0d;}
+.ffrz{color:#330;}
+.hfrz{color:#f00;}
+.ifrz{color:#e00;}
+.lfrz{color:#d00;}
+.mfrz{color:#d00;}
+.nfrz{color:#d00;}
+.ofrz{color:#d00;}
+.pfrz{color:#d00;}
+.qfrz{color:#900;}
+.rfrz{color:#f00;}
+.sfrz{color:#e00;}
+.tfrz{color:#a00;}
+.ufrz{color:#f00;}
+.vfrz{color:#d00;}
 
 </style>
 
@@ -160,6 +106,7 @@ button:hover
 <div class=bfrz>Bonum publicum </div>
 <div class=bfrz>Bonus ordo</div>
 
+<div class=cfrz>Cave amantem</div>
 <div class=cfrz>Compos mentis</div>
 <div class=cfrz>Cum Deo</div>
 <div class=cfrz>Causa justa</div>
@@ -196,10 +143,10 @@ button:hover
 <div class=ffrz>Fortiter in re, suaviter in modo</div>
 <div class=ffrz>Fortuna caeca est</div>
 
-<div class=hfrz>Historia est magistra vitae</div>
 <div class=hfrz>Hic sunt leones</div>
 <div class=hfrz>Hic portus salutis</div>
 <div class=hfrz>Historia est magistra vitae</div>
+<div class=hfrz>Hoc unum scio, quod nihil scio</div>
 <div class=hfrz>Homo homini lupus est</div>
 <div class=hfrz>Homo proponit, sed Deus disponit</div>
 <div class=hfrz>Honores mutant mores, sed raro in
@@ -212,9 +159,9 @@ button:hover
 <div class=ifrz>Imperare sibi maximum imperium est.</div>
 <div class=ifrz>Injuria realis</div>
 <div class=ifrz>Injuria verbalis </div>
-<div class=ifrz>Iners negotium.</div>
+<div class=ifrz>Iners negotium</div>
 <div class=ifrz>Inter arma tacent musae</div>
-<div class=ifrz>In dubio pro reo.</div>
+<div class=ifrz>In dubio pro reo</div>
 <div class=ifrz>In infinitum</div>
 <div class=ifrz>In Hoc Signo Vinces</div>
 <div class=ifrz>In memoriam</div>
@@ -318,6 +265,7 @@ button:hover
 
 <script>
 btn=document.getElementsByTagName('button')
+
 dv=document.getElementsByTagName('div')
 
 ltra=document.getElementsByClassName('ltra')
@@ -366,11 +314,12 @@ function init()
   ltra[i].style.top=(stp+i)+'%'
   if(i==7) stp=22
   ltra[i].style.color='#'+
-  Math.round(Math.random()*9)+
-  Math.round(Math.random()*9)+
-  Math.round(Math.random()*9)
+   Math.round(Math.random()*9)+
+   Math.round(Math.random()*9)+
+   Math.round(Math.random()*9)
  }
 }
+init()
 function initrnd()
 {
  for(i=0;i<ltra.length;i++)
@@ -378,12 +327,12 @@ function initrnd()
   ltra[i].style.left=22+Math.random()*66+'%'
   ltra[i].style.top=4+Math.random()*85+'%'
   ltra[i].style.color='#'+
-  Math.round(Math.random()*9)+
-  Math.round(Math.random()*9)+
-  Math.round(Math.random()*9)
+   Math.round(Math.random()*9)+
+   Math.round(Math.random()*9)+
+   Math.round(Math.random()*9)
  }
 }
- init()
+ 
 function initt(arr)
 {
  for(i=0;i<arr.length;i++)
@@ -428,9 +377,9 @@ function mv(n)
 {
  ltra[n].onmouseover=()=>
  { 
+  clearInterval(Ifrz)
   for(i=0;i<ltra.length;i++)
   {
-   clearInterval(Ifrz)
    ltra[i].style.opacity=0
    for(j=0;j<frz[n].length;j++)
     frz[n][j].style.transform='scale(2)'
@@ -448,6 +397,9 @@ function mv(n)
   dv[0].style.opacity=0.4
  }
 }
+mv(0), mv(1), mv(2), mv(3), mv(4), mv(5), mv(6),
+mv(7), mv(8), mv(9), mv(10), mv(11), mv(12), mv(13),
+mv(14), mv(15), mv(16), mv(17), mv(18)
 
 dv[0].onmouseover=()=>
 {
@@ -459,10 +411,6 @@ dv[0].onmouseout=()=>
  dv[0].style.transform='scale(8) skew(15deg)'
   dv[0].innerHTML='LATIN'
 } 
-
- mv(0), mv(1), mv(2), mv(3), mv(4), mv(5), mv(6),
- mv(7), mv(8), mv(9), mv(10), mv(11), mv(12), mv(13),
- mv(14), mv(15), mv(16), mv(17), mv(18)
 
 </script>
 </body>
