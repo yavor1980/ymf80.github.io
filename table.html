@@ -11,29 +11,34 @@
 .btn
 {
  position:absolute;
- cursor:pointer;
- font-size:1.6em;
  transition:1s;
+ cursor:pointer;
+ width:7%;
+ height:5%;
+ border-radius:22%;
+ font-size:1.6em;
 }
-.btn:hover
+.tbtn
 {
- transform:scale(1.2);
+ position:absolute;
+ transition:1s;
+ transform:scale(2);
 }
 
 #idfc
 {
- position:absolute;   
- left:50%;
- top:3%;
+ position:absolute;  
+ transition:1s;
+ left:5%;
+ top:33%;
  width:55%;
  height:55%;
- transition:1s; 
 }
 .fc
 {
- position:absolute;   
+ position:absolute; 
+ transition:1s;
  border-radius:50%;
- transition:1s; 
 }
 .zr
 {
@@ -44,21 +49,22 @@
  width:33%;
  height:33%;
  background:#000;
-  border-radius:50%;
+ border-radius:50%;
 }
 .bd
 {
  position:absolute;   
+ transition:1s;
  border-radius:50%;
- transition:1s; 
+  
 }
 .lg
 {
- position:absolute;   
+ position:absolute;  
+ transition:1s;
  width:22%;
  height:33%;
  border-radius:50%;
- transition:1s; 
 }
 
 .tbl
@@ -79,9 +85,6 @@ td
 {
  position:absolute;
  transition:1s; 
- width:7%;
- height:15%;
- background:#bbb;
  border-radius:51%;
  text-align:center; 
  font-size:5em;
@@ -90,20 +93,23 @@ td
 {
  position:absolute;
  transition:1s; 
- width:7%;
- height:1%;
- background:#b0b;
- border-radius:51%;
- text-align:center; 
- font-size:5em;
+ width:22%;
+ height:3%;
+ background:#b00;
+ border-top-right-radius:51%;
+ border-bottom-right-radius:51%;
+ transform:scale(0);
 }
 
 </style>
 </head>
+
 <body id=idbd>
 <button class=btn>bclr</button>
+ <div class=tbtn>change td bckgrnd...</div>
 <button class=btn>clr</button>
- <div class=btn></div>
+ <div class=tbtn>clear td bckgrnd...</div>
+<button class=btn>neiro</button>
 
 <div id=idfc>
  <div class=fc>
@@ -157,6 +163,7 @@ td
 
 <script>
 btn=document.getElementsByClassName('btn')
+tbtn=document.getElementsByClassName('tbtn')
 
 fc=document.getElementsByClassName('fc')
 zr=document.getElementsByClassName('zr')
@@ -166,22 +173,30 @@ lg=document.getElementsByClassName('lg')
 tbl=document.getElementsByClassName('tbl')
 td=document.getElementsByTagName('td')
   
-btn[0].style.left=13+'%'
+btn[0].style.left=3+'%'
 btn[0].style.top=3+'%'  
-btn[0].style.width=9+'%'
-btn[0].style.height=7+'%'  
 btn[0].style.color='#f00'
 	 
-btn[1].style.left=26+'%'
+btn[1].style.left=14+'%'
 btn[1].style.top=3+'%'  
-btn[1].style.width=9+'%'
-btn[1].style.height=7+'%'  
 btn[1].style.color='#00f'
+
+btn[2].style.left=27+'%'
+btn[2].style.top=5+'%'  
+btn[2].style.background='#f0f'
+btn[2].style.color='#fff'
+btn[2].style.transform='scale(1.4)'
     
-btn[2].style.left=44+'%'
-btn[2].style.top=3+'%'  
-btn[2].style.transform='scale(0)'	
+tbtn[0].style.left=44+'%'
+tbtn[0].style.top=3+'%' 
+tbtn[0].style.color='#f00'
+tbtn[0].style.transform='scale(0)'
 	
+tbtn[1].style.left=44+'%'
+tbtn[1].style.top=3+'%'  
+tbtn[1].style.color='#00f'
+tbtn[1].style.transform='scale(0)'
+
 fc[0].style.left=22+'%'
 fc[0].style.top=17+'%'  
 fc[0].style.width=22+'%'
@@ -249,34 +264,35 @@ bd[4].style.width=99+'%'
 bd[4].style.height=111+'%'
 bd[4].style.background='#770'
 	
-lg[0].style.background='#990'
 lg[0].style.top=77+'%'
 lg[0].style.left=11+'%'
 lg[0].style.zIndex=-1
-	 
-lg[1].style.background='#bb0'
+lg[0].style.background='#990'	 
+
 lg[1].style.top=77+'%'
 lg[1].style.left=0+'%'
 lg[1].style.width=99+'%'
 lg[1].style.height=155+'%'
+lg[1].style.background='#bb0'
 lg[1].style.zIndex=-1
 	 
-lg[2].style.background='#990'
 lg[2].style.top=77+'%'
 lg[2].style.left=72+'%'
 lg[2].style.zIndex=-1
-	 
-lg[3].style.background='#bb0'
+lg[2].style.background='#990' 
+
 lg[3].style.top=77+'%'
 lg[3].style.left=0+'%'
 lg[3].style.width=99+'%'
 lg[3].style.height=155+'%'
+lg[3].style.background='#bb0'
 	 
-tbl[0].style.left=22+'%'
+tbl[0].style.cursor='pointer'	 
+tbl[0].style.left=12+'%'
 tbl[0].style.top=22+'%' 
 tbl[0].style.border='5px ridge #00f'
 tbl[0].style.transform='scale(2)'
-	 
+	
 tbl[1].style.color='#f00'
 tbl[1].style.left=7+'%'
 tbl[1].style.top=66+'%' 
@@ -293,33 +309,29 @@ tbl[3].style.top=77+'%'
 tbl[3].style.transform='scale(0)'
 	
 nrn=[]	
-snpse=[]
 for(i=0;i<5;i++)	
 {
  nrn[i]=document.createElement('div')
  nrn[i].className='nrn'
   idbd.appendChild(nrn[i])	
  nrn[i].style.left=44+'%'
- nrn[i].style.top=66+'%'
+ nrn[i].style.top=33+'%'
  nrn[i].style.background='#f0f'
   nrn[i].innerHTML='N'
-}	
-for(i=0;i<2;i++)	
-{
- snpse[i]=document.createElement('div')
- snpse[i].className='snpse'
-  idbd.appendChild(snpse[i])	
- snpse[i].style.left=44+'%'
- snpse[i].style.top=66+'%'
- snpse[i].style.background='#f08'
-  snpse[i].style.transform='scale(0)'
+  snpse=[]
+ for(j=0;j<2;j++)	
+ {
+  snpse[j]=document.createElement('div')
+  snpse[j].className='snpse'
+   nrn[i].appendChild(snpse[j])	
+ }	 
 }	
 	
 b=0
 function cl()
 {       
   vs=Math.random()*22-11
- fc[0].style.transform='skew('+(vs)+'deg,0)'
+ fc[0].style.transform='skew('+(vs)+'deg)'
  if(b)
  {
   bd[0].style.transform='scale(1.1)'
@@ -338,20 +350,20 @@ function cl()
   lg[2].style.transform='rotate(0deg)'
   lg[3].style.transform='rotate(0deg)'
  }
-   b=!b
+  b=!b
 }
-   setInterval(()=>cl(),999)	  
+   setInterval(()=>cl(), 999)	  
 	  
 btn[0].onmouseover=()=>
 {
- btn[2].style.transform=
-  'scale(2) translate(12%,0) skew(22deg)'
- btn[2].style.color='#f00'
-  btn[2].innerHTML='change td bckgrnd...'
+ btn[0].style.transform='scale(1.2)'
+ tbtn[0].style.transform=
+  'scale(2) translate(22%,99%) skew(22deg)'
 }
 btn[0].onmouseout=()=>
 {
- btn[2].style.transform='scale(0)'
+ btn[0].style.transform='scale(1)'
+ tbtn[0].style.transform='scale(0)'
 }
 btn[0].onclick=()=>
 {
@@ -364,19 +376,59 @@ for(i=0;i<9;i++)
 
 btn[1].onmouseover=()=>
 {
- btn[2].style.transform=
-  'scale(2) translate(12%,0) skew(-22deg)'
- btn[2].style.color='#900'
-  btn[2].innerHTML='clear td bckgrnd...'
+ btn[1].style.transform='scale(1.2)'
+ tbtn[1].style.transform=
+  'scale(2) translate(22%,99%) skew(-22deg)'
 }
 btn[1].onmouseout=()=>
 {
- btn[2].style.transform='scale(0)'
+ btn[1].style.transform='scale(1)'
+ tbtn[1].style.transform='scale(0)'
 }
 btn[1].onclick=()=>
 {
  for(i=0;i<9;i++)
   td[i].style.background='#bbb'
+} 	 
+
+bbtn2=1
+btn[2].onmouseover=()=>
+{
+ btn[2].style.transform='scale(1.6)'
+}
+btn[2].onmouseout=()=>
+{
+ btn[2].style.transform='scale(1.4)'
+}
+btn[2].onclick=()=>
+{
+ if(bbtn2)
+ {
+  nrn[0].style.transform='scale(1.1)'
+  nrn[1].style.transform=
+   'scale(1.1) translate(88%,-88%)'
+  nrn[2].style.transform=
+   'scale(1.1) translate(88%,88%)' 
+  nrn[3].style.transform=
+   'scale(1.1) translate(222%,-88%)'
+  nrn[4].style.transform=
+   'scale(1.1) translate(222%,88%)' 
+  snpse[0].style.transform=
+   'scale(4) translate(55%,111%) rotate(44deg)'  
+  snpse[1].style.transform=
+   'scale(4) translate(55%,-111%) rotate(-44deg)' 
+ }
+  else
+ {
+  nrn[0].style.transform='scale(1)'
+  nrn[1].style.transform='scale(1)'
+  nrn[2].style.transform='scale(1)'
+  nrn[3].style.transform='scale(1)'
+  nrn[4].style.transform='scale(1)'
+  snpse[0].style.transform='scale(0)'
+  snpse[1].style.transform='scale(0)'
+ } 
+  bbtn2=!bbtn2
 } 	 
 	 
 fcI=0
@@ -401,19 +453,6 @@ fc[0].onmouseover=()=>
   'scale(2) translate(0,-22%) rotate(-88deg)'
  bd[4].style.transform=
   'translate(44%,-22%) rotate(88deg)'  
- nrn[0].style.transform='scale(1.1)'
- nrn[1].style.transform=
-  'scale(1.1) translate(88%,-88%)'
- nrn[2].style.transform=
-  'scale(1.1) translate(88%,88%)' 
- nrn[3].style.transform=
-  'scale(1.1) translate(222%,-88%)'
- nrn[4].style.transform=
-  'scale(1.1) translate(222%,88%)' 
- snpse[0].style.transform=
-  'scale(1) translate(222%,8%) rotate(44deg)'  
- snpse[1].style.transform=
-  'scale(1) translate(222%,8%) rotate(-44deg)' 
 } 
 fc[0].onmouseout=()=>
 {
@@ -428,13 +467,6 @@ fc[0].onmouseout=()=>
  bd[2].style.transform='rotate(0deg)'
  bd[3].style.transform='rotate(0deg)'
  bd[4].style.transform='rotate(0deg)'
- nrn[0].style.transform='scale(1)'
- nrn[1].style.transform='scale(1)'
- nrn[2].style.transform='scale(1)'
- nrn[3].style.transform='scale(1)'
- nrn[4].style.transform='scale(1)'
- snpse[0].style.transform='scale(0)'
- snpse[1].style.transform='scale(0)'
   clearInterval(fcI)
 } 
 
@@ -454,13 +486,12 @@ setInterval(()=>{
  td[itd].style.transform='scale(2)'
  td[itd].style.zIndex=1
   litd=itd
-} , 999) 
+}, 999) 
  
 Itbl0=0
 btbl0=0  
 tbl[0].onmouseover=()=>
 {
- tbl[0].style.cursor='pointer'
  tbl[1].style.transform=
   'scale(2) skew(19deg) translate(33%,-177%)'
  Itbl0=setInterval(()=>
