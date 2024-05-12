@@ -25,45 +25,44 @@ body
 {
  position:absolute;
  transition:1s;
+ cursor:pointer;
  left:22%;
  top:22%;
  width:17%;
  height:29%;
- background: radial-gradient(#ff0,#550);
+ background:radial-gradient(#ff0,#550);
  border-radius:5%;
- box-shadow: 9px 9px;
- cursor:pointer;
+ box-shadow:9px 9px;
+}
+.fre
+{
+ position:absolute;
+ transition:1s;
+ border-radius:50%;
+ z-index:1;
 }
 
 .md
 {
  position:absolute;
  transition:1s;
- z-index:1;
  cursor:pointer;
-}
-.nndrn
-{
- position:absolute;
- transition:1s;
  z-index:1;
- cursor:pointer;
 }
 .vctr
 {
  position:absolute;
  transition:1s;
- z-index:1;
  cursor:pointer;
+ z-index:1;
 }
 .dly
 {
  position:absolute;
  transition:1s;
- z-index:1;
  cursor:pointer;
+ z-index:1;
 }
-
 
 </style>
 
@@ -76,32 +75,34 @@ body
 <div class=rd>
  <div class=rd></div>
  <div class=cr>
-  <div class=cr>
-   <div class=fre></div>
-   <div class=fre></div>
-  </div>
   <div class=cr></div>
+  <div class=cr> 
+   <div class=fre>
+    <div class=fre></div>
+   </div>
+  </div>
  </div>
 </div>
 
 <div class=md>speed mode</div>
-<div class=md>Overtaking according to rules!</div>
-<div class=md>traffic light</div>
-<div class=md>safe driving</div>
+ <div class=md>Overtaking according to rules!</div>
+ <div class=md>traffic light</div>
+ <div class=md>safe driving</div>
 
 <div class=vctr>VCTR idea</div>
-<div class=vctr>interactive<br>education</div>
-<div class=vctr>to create patterns</div>
-<div class=vctr>for social network</div>
+ <div class=vctr>interactive<br>education</div>
+ <div class=vctr>to create patterns</div>
+ <div class=vctr>for social network</div>
 
-<div class=dly>vector modelling</div>
-<div class=dly>use browser resource</div>
-<div class=dly>free phantesy</div>
+ <div class=dly>vector modelling</div>
+ <div class=dly>use browser resource</div>
+ <div class=dly>free phantesy</div>
 
 <script>
 tl=document.getElementsByClassName('tl')
 rd=document.getElementsByClassName('rd')
 cr=document.getElementsByClassName('cr')
+fre=document.getElementsByClassName('fre')
 
 md=document.getElementsByClassName('md')
 vctr=document.getElementsByClassName('vctr')
@@ -124,33 +125,30 @@ inn(tl,2, 7,33, 88,22, '#ff0')
  tl[2].style.borderRadius='55%'
 inn(tl,3, 7,58, 88,22, '#0f0')
  tl[3].style.borderRadius='55%'
- 
-  
+   
 inn(rd,0, 15,1, 77,99, '#777')
  rd[0].style.borderRadius='5%'
  rd[0].style.transform='skew(-22deg)'
 inn(rd,1, 44,77, 9,22, '#fff')
-  
 inn(cr,1, 2,11, 88,66, 'radial-gradient(#ff0,#550)')
  cr[1].style.borderBottomLeftRadius='55%'
  cr[1].style.borderBottomRightRadius='55%'
 inn(cr,2, 3,11, 88,66, 'radial-gradient(#ff0,#550)')
  cr[2].style.borderRadius='5%'
+inn(fre,0, 40,40, 29,17, '#f00') 
+ fre[0].style.opacity=0
    
 md[0].style.left='22%'
 md[0].style.top='3%'
 md[0].style.transform='scale(2)'
- 
 md[1].style.left='55%'
 md[1].style.top='66%'
 md[1].style.transform='scale(0)'
 md[1].style.color='#f00'
- 
 md[2].style.left='11%'
 md[2].style.top='11%'
 md[2].style.transform='scale(0)'
 md[2].style.color='#66a'
- 
 md[3].style.left='11%'
 md[3].style.top='19%'
 md[3].style.transform='scale(0)'
@@ -160,12 +158,10 @@ vctr[0].style.left='11%'
 vctr[0].style.top='66%'
 vctr[0].style.transform='scale(2)'
 vctr[0].style.color='#809'
-
 vctr[1].style.left='33%'
 vctr[1].style.top='88%'
 vctr[1].style.color='#ff7'
 vctr[1].style.transform='scale(0)'
- 
 vctr[2].style.left='33%'
 vctr[2].style.top='92%'
 vctr[2].style.color='#000'
@@ -179,13 +175,11 @@ vctr[3].style.transform='scale(0)'
 dly[0].style.left='66%'
 dly[0].style.top='11%'
 dly[0].style.color='#0ff'
-dly[0].style.transform='scale(0)'
- 
+dly[0].style.transform='scale(0)' 
 dly[1].style.left='66%'
 dly[1].style.top='19%'
 dly[1].style.color='#f0f'
 dly[1].style.transform='scale(0)'
-
 dly[2].style.left='66%'
 dly[2].style.top='29%'
 dly[2].style.color='#f00'
@@ -250,17 +244,20 @@ cr[0].onmouseover=()=>
  {
   if(bdly)
   {
+   fre[0].style.opacity=1
+   fre[0].style.transform='scale(1.2)'
    dly[0].style.transform='scale(3,5) skew(-33deg)'
    dly[1].style.transform='scale(3,3) skew(33deg)'
    dly[2].style.transform='scale(3,5) skew(-33deg)'
   }else{
+   fre[0].style.opacity=0.9
+   fre[0].style.transform='scale(1)'
    dly[0].style.transform='scale(3,3) skew(33deg)'
    dly[1].style.transform='scale(3,5) skew(-33deg)'
    dly[2].style.transform='scale(3,3) skew(33deg)'
   }
      bdly=!bdly
- }
-    ,999)	
+ }, 999)	
 }
 cr[0].onmouseout=()=>
 {
@@ -268,6 +265,7 @@ cr[0].onmouseout=()=>
  cr[0].style.boxShadow='9px 9px'
  cr[1].style.transform='scale(0.1)'
  cr[2].style.borderRadius='5%'
+ fre[0].style.opacity=0
  md[1].style.transform='scale(0) '
  dly[0].style.transform='scale(0) skew(0deg)'
  dly[1].style.transform='scale(0) skew(0deg)'
