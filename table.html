@@ -309,7 +309,7 @@ tbl[3].style.top=77+'%'
 tbl[3].style.transform='scale(0)'
 	
 nrn=[]	
-for(i=0;i<5;i++)	
+for(i=0;i<7;i++)	
 {
  nrn[i]=document.createElement('div')
  nrn[i].className='nrn'
@@ -324,7 +324,13 @@ for(i=0;i<5;i++)
   snpse[j]=document.createElement('div')
   snpse[j].className='snpse'
    nrn[i].appendChild(snpse[j])	
+   snpse[j].style.left=44+'%'   
+   snpse[j].style.top=33+'%'
  }	 
+ snpse[0].style.transform=
+    'scale(3) translate(133%,-111%) rotate(-22deg)'
+   snpse[1].style.transform=
+    'scale(3) translate(133%,444%) rotate(22deg)'
 }	
 	
 b=0
@@ -412,11 +418,12 @@ btn[2].onclick=()=>
   nrn[3].style.transform=
    'scale(1.1) translate(222%,-88%)'
   nrn[4].style.transform=
-   'scale(1.1) translate(222%,88%)' 
-  snpse[0].style.transform=
-   'scale(4) translate(55%,111%) rotate(44deg)'  
-  snpse[1].style.transform=
-   'scale(4) translate(55%,-111%) rotate(-44deg)' 
+   'scale(1.1) translate(299%,88%)' 
+  nrn[5].style.transform=
+   'scale(1.1) translate(333%,-88%)'
+  nrn[6].style.transform=
+   'scale(1.1) translate(333%,88%)'  
+  
  }
   else
  {
@@ -425,8 +432,9 @@ btn[2].onclick=()=>
   nrn[2].style.transform='scale(1)'
   nrn[3].style.transform='scale(1)'
   nrn[4].style.transform='scale(1)'
-  snpse[0].style.transform='scale(0)'
-  snpse[1].style.transform='scale(0)'
+  nrn[5].style.transform='scale(1)'
+  nrn[6].style.transform='scale(1)'
+  
  } 
   bbtn2=!bbtn2
 } 	 
