@@ -5,52 +5,55 @@
 
 #idbd
 {
-background:linear-gradient(-144deg,#ff0,#0bb)
+ background:linear-gradient(-144deg,#ff0,#0bb)
 }
 
 .btn
 {
-position:absolute;
-cursor:pointer;
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+
 }
 .btn:hover
 {
-transform:scale(1.3);
+ transform:scale(1.3);
 }
 .tbtn
 {
-position:absolute;
-transition:1s;
+ position:absolute;
+ transition:1s;
 }
 
 .cld
 {
-position:absolute;
-cursor:pointer;
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
 }
 .tcld
 {
-position:absolute;
-transition:1s;
+ position:absolute;
+ transition:1s;
 }
 
 .rckt
 {
-position:absolute;
-cursor:pointer;
-transition:222ms;
+ position:absolute;
+ transition:222ms;
+ cursor:pointer;
 }
 .trckt
 {
-position:absolute;
-transition:1s;
+ position:absolute;
+ transition:1s;
 }
 
 .shtl
 {
  position:absolute;
- cursor:pointer;
  transition:1111ms;
+ cursor:pointer;
 }
 .tshtl
 {
@@ -98,7 +101,6 @@ transition:1s;
  </div>
 </div>
 
-
 <script>
 btn=document.getElementsByClassName('btn')
 tbtn=document.getElementsByClassName('tbtn')
@@ -109,7 +111,6 @@ trckt=document.getElementsByClassName('trckt')
 shtl=document.getElementsByClassName('shtl')
 tshtl=document.getElementsByClassName('tshtl')
 
-
 btn[0].style.left='77%'
 btn[0].style.top='5%'
 btn[0].style.width='11%'
@@ -118,7 +119,6 @@ btn[0].style.background='#bbb'
 btn[0].style.color='#b80'
 btn[0].style.borderRadius='44%'
 btn[0].style.fontSize='2em'
-btn[0].style.transition='1s'
 
 tbtn[0].style.left='77%'
 tbtn[0].style.top='15%'
@@ -127,29 +127,29 @@ tbtn[0].style.transform='scale(0)'
 cld[0].style.left='15%'
 cld[0].style.top='7%'
 cld[0].style.width='15%'
-cld[0].style.height='11%' 
-cld[0].style.background='radial-gradient(#0f0,#00f)'
+cld[0].style.height='19%' 
+cld[0].style.background=
+ 'radial-gradient(#009,#00f)'
 cld[0].style.borderRadius='55%'
-cld[0].style.opacity=0.5
-cld[0].style.transition='333ms'
+cld[0].style.opacity=0.3
  
-cld[1].style.left='55%'
+cld[1].style.left='46%'
 cld[1].style.top='11%'
 cld[1].style.width='18%'
-cld[1].style.height='13%' 
-cld[1].style.background='radial-gradient(#0f0,#00f)'
+cld[1].style.height='19%' 
+cld[1].style.background=
+ 'radial-gradient(#009,#00f)'
 cld[1].style.borderRadius='55%'
 cld[1].style.opacity=0.4
-cld[1].style.transition='444ms'
  
-cld[2].style.left='77%'
+cld[2].style.left='66%'
 cld[2].style.top='34%'
 cld[2].style.width='16%'
-cld[2].style.height='11%' 
-cld[2].style.background='radial-gradient(#0f0,#00f)'
+cld[2].style.height='19%' 
+cld[2].style.background=
+ 'radial-gradient(#008,#00f)'
 cld[2].style.borderRadius='55%'
 cld[2].style.opacity=0.3
-cld[2].style.transition='555ms'
 
 tcld[0].style.left='11%'
 tcld[0].style.top='22%'
@@ -163,7 +163,7 @@ tcld[1].style.transform='scale(0)'
 
 rckt[0].style.left='33%'
 rckt[0].style.bottom='17%'
-rckt[0].style.width='16%'
+rckt[0].style.width='11%'
 rckt[0].style.height='44%' 
 rckt[0].style.background='#990'
 rckt[0].style.borderTopLeftRadius='55%'
@@ -174,22 +174,22 @@ rckt[1].style.top='66%'
 rckt[1].style.width='66%'
 rckt[1].style.height='44%' 
 rckt[1].style.background='#660'
-rckt[1].style.borderTopLeftRadius='55%'
-rckt[1].style.borderBottomRightRadius='55%'
+rckt[1].style.borderTopLeftRadius='30%'
+rckt[1].style.borderBottomRightRadius='30%'
 
 rckt[2].style.left='67%'
 rckt[2].style.top='66%'
 rckt[2].style.width='66%'
 rckt[2].style.height='44%' 
 rckt[2].style.background='#660'
-rckt[2].style.borderTopRightRadius='55%'
-rckt[2].style.borderBottomLeftRadius='55%'
+rckt[2].style.borderTopRightRadius='30%'
+rckt[2].style.borderBottomLeftRadius='30%'
 
 rckt[3].style.left='29%'
 rckt[3].style.top='33%'
 rckt[3].style.width='44%'
 rckt[3].style.height='22%' 
-rckt[3].style.background='#f00'
+rckt[3].style.background='#900'
 rckt[3].style.borderRadius='55%'
 
 rckt[4].style.left='20%'
@@ -219,7 +219,7 @@ trckt[2].style.cursor='pointer'
 
 shtl[0].style.left='44%'
 shtl[0].style.top='33%'
-shtl[0].style.width='22%'
+shtl[0].style.width='12%'
 shtl[0].style.height='8%'
 shtl[0].style.background=
  'radial-gradient(#444,#b80)'
@@ -239,7 +239,6 @@ tshtl[0].style.top='33%'
 tshtl[0].style.color='#f00'
 tshtl[0].style.transform='scale(0)'
 
-
 Ibtn0=0
 bbtn0=0
 btn[0].onmouseover=()=>
@@ -255,47 +254,44 @@ sclbtn0=0
 btn[0].onclick=()=>
 {
 if(bbtn0==0){ 
- btn[0].innerHTML='hide'
- shtl[0].style.transform='scale(1)'
- Ibtn0=setInterval(()=>{
-  sclbtn0=Math.random()/2+0.7
-  shtl[0].style.transform=
-   'translate('+(Math.random()*222-111)+'%,'+
-   (Math.random()*222-111)+'%) scale('+sclbtn0+')'
-  shtl[1].style.transform=
-   'scale('+sclbtn0+')'
- },1111)
+   btn[0].innerHTML='hide'
+  shtl[0].style.transform='scale(1)'
+  Ibtn0=setInterval(()=>{
+   sclbtn0=Math.random()/2+0.7
+   shtl[0].style.transform=
+    'translate('+(Math.random()*222-111)+'%,'+
+    (Math.random()*222-111)+'%) scale('+sclbtn0+')'
+   shtl[1].style.transform=
+    'scale('+sclbtn0+')'
+  }, 1111)
  }
  else
  {
-  btn[0].innerHTML='UFO'
+   btn[0].innerHTML='UFO'
   shtl[0].style.transform='scale(0.01)'
-  clearInterval(Ibtn0)
+   clearInterval(Ibtn0)
  }
   bbtn0=!bbtn0
 }
 
-Icld0=0
-Icld1=0
-Icld2=0
+setInterval(()=>{
+ cld[0].style.transform=
+    'scale('+(Math.random()/3+0.7)+')'
+}, 999)
+setInterval(()=>{
+   cld[1].style.transform=
+    'scale('+(Math.random()/3+0.7)+')'
+}, 999)
+setInterval(()=>{
+   cld[2].style.transform=
+    'scale('+(Math.random()/3+0.7)+')'
+},999)
 cld[0].onmouseover=()=>
 {
  tcld[0].style.transform=
   'scale(3) translate(33%,99%)'
  tcld[1].style.transform=
-  'scale(3) translate(18%,222%)'
-Icld0=setInterval(()=>{
- cld[0].style.transform=
-    'scale('+(Math.random()+0.7)+')'
-  },333)
-Icld1=setInterval(()=>{
-   cld[1].style.transform=
-    'scale('+(Math.random()+0.7)+')'
-  },444)
-Icld2=setInterval(()=>{
-   cld[2].style.transform=
-    'scale('+(Math.random()+0.7)+')'
-  },555)
+  'scale(3) translate(18%,222%)' 
 }
 cld[0].onmouseout=()=>
 {
@@ -304,70 +300,47 @@ cld[0].onmouseout=()=>
  cld[0].style.transform='scale(1)'
  cld[1].style.transform='scale(1)'
  cld[2].style.transform='scale(1)'
- clearInterval(Icld0)
- clearInterval(Icld1)
- clearInterval(Icld2)
 }
 
-cld[1].onmouseover=()=>
-{
- cld[0].onmouseover()
-}
-cld[1].onmouseout=()=>
-{
- cld[0].onmouseout()
-}
-
-cld[2].onmouseover=()=>
-{
-  cld[0].onmouseover()
-}
-cld[2].onmouseout=()=>
-{
-  cld[0].onmouseout()
-}
-
-nrckt=0
+Irckt=0
 rckt[0].onmouseover=()=>
 {
- Icld0=setInterval(()=>{
-   rckt[0].style.transform=
-    'rotate('+(Math.random()*33-16)+'deg)'
-   rckt[3].style.transform=
-    'scale('+(Math.random()/2+0.7)+')'
-   trckt[1].style.transform=
-    'scale('+(Math.random()*2+2)+
-	') translate(3%,-200%)'
+ Irckt=setInterval(()=>{
+  rckt[0].style.transform=
+   'scale('+(Math.random()/9+1)+')'
+  trckt[1].style.transform=
+   'scale('+(Math.random()*2+2)+
+   ') translate(3%,-200%)'
   },222) 
-  rckt[3].style.background='#'+
-       Math.round(Math.random()*9)+'00'
+  rckt[3].style.background='#d00'
   trckt[0].style.transform=
    'scale(3) translate(33%,-144%)'
 }
 rckt[0].onmouseout=()=>
 {
- clearInterval(Icld0)
  rckt[0].style.transform='scale(1)'
- rckt[3].style.background='#f00'
+ rckt[3].style.background='#900'
  rckt[3].style.transform='scale(1)'
  trckt[0].style.transform='scale(0)'
  trckt[1].style.transform='scale(0)'
+  clearInterval(Irckt)
 }
 rckt[0].onclick=()=>
 {
+  clearInterval(Irckt)
  rckt[0].style.transform=
-  'rotate(55deg) translate(0,-22%)'
+  'rotate('+(22+Math.random()*33)+
+  'deg) translate(0,-22%)'
  rckt[4].style.transform=
   'translate(0,99%) scale(1,2)'
  rckt[4].style.opacity=0.5
  trckt[0].style.transform='scale(0)'
  trckt[1].style.transform='scale(0)'
- clearInterval(Icld0)
  setTimeout(()=>{
    rckt[0].style.transform=
     'translate(222%,-55%) rotate(55deg)'
    rckt[0].style.opacity=0
- },444)
+ }, 444)
  setTimeout(()=>{
    rckt[0].style.transform=
     'translate(0%,0%) rotate(0deg)'
@@ -398,8 +371,6 @@ shtl[0].onmouseout=()=>
 {
  tshtl[0].style.transform='scale(0)'
 } 
-
-
 
 </script>
 </body>
