@@ -275,17 +275,20 @@ if(bbtn0==0){
 }
 
 setInterval(()=>{
+ cld[0].style.opacity=(Math.random()+0.2)
  cld[0].style.transform=
     'scale('+(Math.random()/3+0.7)+')'
 }, 999)
 setInterval(()=>{
-   cld[1].style.transform=
-    'scale('+(Math.random()/3+0.7)+')'
+  cld[1].style.opacity=(Math.random()+0.2)
+  cld[1].style.transform=
+   'scale('+(Math.random()/3+0.7)+')'
 }, 999)
 setInterval(()=>{
-   cld[2].style.transform=
+  cld[2].style.opacity=(Math.random()+0.2)
+  cld[2].style.transform=
     'scale('+(Math.random()/3+0.7)+')'
-},999)
+}, 999)
 cld[0].onmouseover=()=>
 {
  tcld[0].style.transform=
@@ -346,12 +349,12 @@ rckt[0].onclick=()=>
     'translate(0%,0%) rotate(0deg)'
    rckt[4].style.opacity=0
    rckt[4].style.transform='scale(1)'
- },888)
+ }, 888)
  setTimeout(()=>{
    rckt[0].style.opacity=1
    nrckt++
    trckt[2].innerHTML='score: '+nrckt
- },1111)
+ }, 1111)
 }  
 trckt[2].onmouseover=()=>
 {
