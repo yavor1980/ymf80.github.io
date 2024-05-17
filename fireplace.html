@@ -12,13 +12,13 @@
 {
  position:absolute;
  transition:1s;
+ cursor:pointer;
  left:88%;
  top:9%;
  width:7%;
  height:5%;
  background:#f00;
  color:#fff;
- cursor:pointer;
  border-radius:55%;
  font-size:1.2em;
 }
@@ -31,8 +31,8 @@
 {
  position:absolute;
  transition:999ms;
- transform:scale(1.2);
  cursor:pointer;
+ transform:scale(1.2);
 }
 .drv
 {
@@ -42,14 +42,20 @@
  z-index:0;
 }
 
+.drts
+{
+ position:absolute;
+ transition:1s;
+}
+
 .frz
 {
  position:absolute;
  transition:1s;
- transform:scale(2);
- font-size:1.2em;
  cursor: pointer;
  color:#00f;
+ transform:scale(2);
+ font-size:1.2em;
  z-index:1;
 }
 .frz:hover
@@ -79,6 +85,8 @@
  <div class=drv></div>
 </div>
 
+<div class=drts></div>
+
 <div class=frz>White</div>
 <div class=frz>Yellow</div>
 <div class=frz>Orange</div> 
@@ -95,19 +103,21 @@
 <script>
 drv=document.getElementsByClassName('drv')
 flme=document.getElementsByClassName('flme')
+drts=document.getElementsByClassName('drts')
+
 frz=document.getElementsByClassName('frz')
 hdd=document.getElementsByClassName('hdd')
  	    
+flme[0].style.cursor='pointer'
 flme[0].style.left='11%'
 flme[0].style.bottom='11%'
-flme[0].style.width='66%'
+flme[0].style.width='55%'
 flme[0].style.height='69%'
 flme[0].style.background='#000'
 flme[0].style.border='15px ridge #404'
 flme[0].style.borderTopLeftRadius='55%'
 flme[0].style.borderTopRightRadius='55%'
 flme[0].style.opacity=0.7
-flme[0].style.cursor='pointer'
 
 flme[1].style.left='38%'
 flme[1].style.top='50%'
@@ -117,7 +127,6 @@ flme[1].style.background=
  'radial-gradient(44px,#f0f,#f00)'
 flme[1].style.borderRadius='55%'
 flme[1].style.opacity=0.6
-flme[1].style.zIndex=22
 flme[1].style.transform='scale(0) translate(0,55%)'
 
 flme[2].style.left='38%'
@@ -128,7 +137,6 @@ flme[2].style.background=
  'radial-gradient(88px,#f0f,#f00)'
 flme[2].style.borderRadius='55%'
 flme[2].style.opacity=0.6
-flme[2].style.zIndex=1
 flme[2].style.transform='scale(0) translate(0,55%)'
  
 flme[3].style.left='15%'
@@ -158,7 +166,6 @@ flme[5].style.background=
 flme[5].style.borderTopLeftRadius='55%' 
 flme[5].style.borderTopRightRadius='55%' 
 flme[5].style.opacity=0
-flme[5].style.zIndex=-1
 
 drv[0].style.top='64%'
 drv[0].style.width='4%'
@@ -171,8 +178,8 @@ drv[1].style.top='64%'
 drv[1].style.width='4%'
 drv[1].style.height='44%'
 drv[1].style.background='#660'
-drv[1].style.transform='rotate(-77deg)'
 drv[1].style.borderRadius='22%'
+drv[1].style.transform='rotate(-77deg)'
 
 drv[2].style.top='77%'
 drv[2].style.width='4%'
@@ -186,7 +193,7 @@ hdd[0].style.top=18+'%'
 hdd[0].style.transform=
  'scale(3) rotate(-33deg)'
  
-hdd[1].style.left=73+'%'
+hdd[1].style.left=65+'%'
 hdd[1].style.top=16+'%'
 hdd[1].style.transform=
  'scale(3) rotate(33deg)'
@@ -218,10 +225,20 @@ frz[7].style.top=77+'%'
 frz[8].style.left=58+Math.random()*7+'%'
 frz[8].style.top=47+'%'
 
+drts[0].style.left='79%'
+drts[0].style.top='22%'
+drts[0].style.width='12%'
+drts[0].style.height='32%'
+drts[0].style.background='#bbb'
+drts[0].style.borderRadius='55%'
+drts[0].style.border='15px ridge #704'
+drts[0].style.transform='skew(-16deg)'
+
 b=0
 function cld()
 {
- if(b){
+ if(b)
+ {
   drv[0].style.transform='rotate(69deg)'
   drv[1].style.transform='rotate(-69deg)'
   flme[0].style.background='#fa0' 
@@ -236,7 +253,9 @@ function cld()
   flme[3].style.transform='scale(1.2,1.5)'
   flme[3].style.borderTopLeftRadius=33+'%'
   flme[3].style.borderTopRightRadius=33+'%'
- }else{
+ }
+  else
+ {
   drv[1].style.transform='rotate(-77deg)'
   drv[0].style.transform='rotate(77deg)'
   flme[0].style.background='#f70' 
@@ -283,6 +302,8 @@ flme[0].onmouseover=()=>
   'radial-gradient(#f0f,#f00)'
  flme[4].style.opacity=0.7
  flme[5].style.opacity=0.7
+ drts[0].style.transform='skew(0deg)'
+ drts[0].style.background='#f00'
  hdd[0].style.transform=
   'scale(4) rotate(-33deg) skew(-33deg)'
  hdd[0].style.color='#f00' 
@@ -299,6 +320,8 @@ flme[0].onmouseout=()=>
   'radial-gradient(44px,#f0f,#f00)'
  flme[4].style.opacity=0
  flme[5].style.opacity=0
+ drts[0].style.transform='skew(-16deg)'
+ drts[0].style.background='#fff'
  hdd[0].style.transform=
   'scale(3) rotate(-33deg)'
  hdd[0].style.color='#000' 
@@ -341,16 +364,16 @@ function act(nm,i,clrr,clrrr)
 {
  nm[i].onmouseover=()=>
  {    
-  frz[i].style.transform='scale(2.3) skew(-5deg)'
   frz[i].style.color='#006'
+  frz[i].style.transform='scale(2.3) skew(-5deg)'
    frz[i].innerHTML=clr[i]
   flme[1].style.background=clrr
   flme[2].style.background=clrr
  } 
  nm[i].onmouseout=()=>
  {    
-  frz[i].style.transform='scale(2)'
   frz[i].style.color='#00f'
+  frz[i].style.transform='scale(2)'
    frz[i].innerHTML=clrrr
   flme[1].style.background=
    'radial-gradient(44px,#f0f,#f00)'
