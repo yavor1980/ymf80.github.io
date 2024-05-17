@@ -204,10 +204,8 @@ rckt[4].style.left='20%'
 rckt[4].style.top='92%'
 rckt[4].style.width='66%'
 rckt[4].style.height='22%' 
-
-rckt[4].style.opacity=0
 rckt[4].style.zIndex=-1
-rckt[4].style.borderRadius='55%'
+
 
 trckt[0].style.left='22%'
 trckt[0].style.top='33%'
@@ -353,6 +351,7 @@ rckt[0].onmouseover=()=>
   rckt[0].style.transform=
    'scale('+(Math.random()/9+1)+')'
   rckt[4].style.background='#555' 
+  rckt[4].style.borderRadius='55%'
   rckt[4].style.opacity=0.6
   rckt[4].style.transform=
    'scale('+(Math.random()*3+1)+
@@ -384,9 +383,11 @@ rckt[0].onclick=()=>
   'rotate('+(22+Math.random()*33)+
   'deg) translate(0,-22%)'
  rckt[4].style.background='#f00'
+ rckt[4].style.borderBottomLeftRadius='14%'
+ rckt[4].style.borderBottomRightRadius='14%'
+ rckt[4].style.opacity=0.5
  rckt[4].style.transform=
   'translate(0,99%) scale(1,2)'
- rckt[4].style.opacity=0.5
  trckt[0].style.transform='scale(0)'
  trckt[1].style.transform='scale(0)'
  setTimeout(()=>{
