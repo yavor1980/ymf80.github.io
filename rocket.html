@@ -172,7 +172,8 @@ rckt[0].style.left='33%'
 rckt[0].style.bottom='17%'
 rckt[0].style.width='11%'
 rckt[0].style.height='44%' 
-rckt[0].style.background='#990'
+rckt[0].style.background=
+ 'radial-gradient(#440,#990)'
 rckt[0].style.borderTopLeftRadius='55%'
 rckt[0].style.borderTopRightRadius='55%'
 
@@ -180,7 +181,7 @@ rckt[1].style.left='-33%'
 rckt[1].style.top='66%'
 rckt[1].style.width='66%'
 rckt[1].style.height='44%' 
-rckt[1].style.background='#660'
+rckt[1].style.background='#440'
 rckt[1].style.borderTopLeftRadius='30%'
 rckt[1].style.borderBottomRightRadius='30%'
 
@@ -188,7 +189,7 @@ rckt[2].style.left='67%'
 rckt[2].style.top='66%'
 rckt[2].style.width='66%'
 rckt[2].style.height='44%' 
-rckt[2].style.background='#660'
+rckt[2].style.background='#440'
 rckt[2].style.borderTopRightRadius='30%'
 rckt[2].style.borderBottomLeftRadius='30%'
 
@@ -203,7 +204,7 @@ rckt[4].style.left='20%'
 rckt[4].style.top='92%'
 rckt[4].style.width='66%'
 rckt[4].style.height='22%' 
-rckt[4].style.background='#f00'
+
 rckt[4].style.opacity=0
 rckt[4].style.zIndex=-1
 rckt[4].style.borderRadius='55%'
@@ -273,9 +274,9 @@ if(bbtn0==0){
   }, 1111)
  }
  else
- {
-   btn[0].innerHTML='UFO'
+ {  
   shtl[0].style.transform='scale(0.01)'
+   btn[0].innerHTML='UFO'
    clearInterval(Ibtn0)
  }
   bbtn0=!bbtn0
@@ -351,6 +352,11 @@ rckt[0].onmouseover=()=>
  Irckt=setInterval(()=>{
   rckt[0].style.transform=
    'scale('+(Math.random()/9+1)+')'
+  rckt[4].style.background='#555' 
+  rckt[4].style.opacity=0.6
+  rckt[4].style.transform=
+   'scale('+(Math.random()*3+1)+
+   ',1) translate(0,44%)' 
   trckt[1].style.transform=
    'scale('+(Math.random()*2+2)+
    ') translate(3%,-200%)'
@@ -362,6 +368,9 @@ rckt[0].onmouseover=()=>
 rckt[0].onmouseout=()=>
 {
  rckt[0].style.transform='scale(1)'
+ rckt[4].style.background='none'
+ rckt[4].style.opacity=0
+ rckt[4].style.transform='scale(1)' 
  rckt[3].style.background='#900'
  rckt[3].style.transform='scale(1)'
  trckt[0].style.transform='scale(0)'
@@ -374,6 +383,7 @@ rckt[0].onclick=()=>
  rckt[0].style.transform=
   'rotate('+(22+Math.random()*33)+
   'deg) translate(0,-22%)'
+ rckt[4].style.background='#f00'
  rckt[4].style.transform=
   'translate(0,99%) scale(1,2)'
  rckt[4].style.opacity=0.5
