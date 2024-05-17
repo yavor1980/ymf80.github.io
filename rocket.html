@@ -96,9 +96,7 @@
 
 <div class=shtl> 
  <div class=shtl></div>
- <div class=tshtl>
-  undefined
- </div>
+ <div class=tshtl>undefined</div>
 </div>
 
 <script>
@@ -113,7 +111,7 @@ tshtl=document.getElementsByClassName('tshtl')
 
 btn[0].style.left='77%'
 btn[0].style.top='5%'
-btn[0].style.width='11%'
+btn[0].style.width='8%'
 btn[0].style.height='7%' 
 btn[0].style.background='#bbb'
 btn[0].style.color='#b80'
@@ -124,8 +122,8 @@ tbtn[0].style.left='77%'
 tbtn[0].style.top='15%'
 tbtn[0].style.transform='scale(0)'
 
-cld[0].style.left='15%'
-cld[0].style.top='7%'
+cld[0].style.left='9%'
+cld[0].style.top='27%'
 cld[0].style.width='15%'
 cld[0].style.height='19%' 
 cld[0].style.background=
@@ -133,23 +131,32 @@ cld[0].style.background=
 cld[0].style.borderRadius='55%'
 cld[0].style.opacity=0.3
  
-cld[1].style.left='46%'
+cld[1].style.left='27%'
 cld[1].style.top='11%'
 cld[1].style.width='18%'
-cld[1].style.height='19%' 
+cld[1].style.height='22%' 
 cld[1].style.background=
  'radial-gradient(#009,#00f)'
 cld[1].style.borderRadius='55%'
 cld[1].style.opacity=0.4
  
-cld[2].style.left='66%'
-cld[2].style.top='34%'
+cld[2].style.left='49%'
+cld[2].style.top='24%'
 cld[2].style.width='16%'
 cld[2].style.height='19%' 
 cld[2].style.background=
  'radial-gradient(#008,#00f)'
 cld[2].style.borderRadius='55%'
 cld[2].style.opacity=0.3
+
+cld[3].style.left='77%'
+cld[3].style.top='22%'
+cld[3].style.width='16%'
+cld[3].style.height='19%' 
+cld[3].style.background=
+ 'radial-gradient(#008,#00f)'
+cld[3].style.borderRadius='55%'
+cld[3].style.opacity=0.3
 
 tcld[0].style.left='11%'
 tcld[0].style.top='22%'
@@ -222,7 +229,7 @@ shtl[0].style.top='33%'
 shtl[0].style.width='12%'
 shtl[0].style.height='8%'
 shtl[0].style.background=
- 'radial-gradient(#444,#b80)'
+ 'radial-gradient(#444,#660)'
 shtl[0].style.borderRadius='55%'
 shtl[0].style.transform='scale(0.01)'
 
@@ -231,7 +238,7 @@ shtl[1].style.top='8%'
 shtl[1].style.width='66%'
 shtl[1].style.height='66%'
 shtl[1].style.background=
- 'radial-gradient(#f00,#840)'
+ 'radial-gradient(#f0f,#808)'
 shtl[1].style.borderRadius='55%'
 
 tshtl[0].style.left='44%'
@@ -275,26 +282,32 @@ if(bbtn0==0){
 }
 
 setInterval(()=>{
- cld[0].style.opacity=(Math.random()+0.2)
+ cld[0].style.opacity=(Math.random()/6+0.2)
  cld[0].style.transform=
     'scale('+(Math.random()/3+0.7)+')'
 }, 999)
 setInterval(()=>{
-  cld[1].style.opacity=(Math.random()+0.2)
+  cld[1].style.opacity=(Math.random()/6+0.2)
   cld[1].style.transform=
    'scale('+(Math.random()/3+0.7)+')'
 }, 999)
 setInterval(()=>{
-  cld[2].style.opacity=(Math.random()+0.2)
+  cld[2].style.opacity=(Math.random()/6+0.2)
   cld[2].style.transform=
     'scale('+(Math.random()/3+0.7)+')'
 }, 999)
+setInterval(()=>{
+  cld[3].style.opacity=(Math.random()/6+0.2)
+  cld[3].style.transform=
+    'scale('+(Math.random()/3+0.7)+')'
+}, 999)
+
 cld[0].onmouseover=()=>
 {
  tcld[0].style.transform=
   'scale(3) translate(33%,99%)'
  tcld[1].style.transform=
-  'scale(3) translate(18%,222%)' 
+  'scale(3) translate(18%,122%)' 
 }
 cld[0].onmouseout=()=>
 {
@@ -303,6 +316,33 @@ cld[0].onmouseout=()=>
  cld[0].style.transform='scale(1)'
  cld[1].style.transform='scale(1)'
  cld[2].style.transform='scale(1)'
+}
+
+cld[1].onmouseover=()=>
+{
+ cld[0].onmouseover()
+}
+cld[1].onmouseout=()=>
+{
+ cld[0].onmouseout()
+}
+
+cld[2].onmouseover=()=>
+{
+ cld[0].onmouseover()
+}
+cld[2].onmouseout=()=>
+{
+ cld[0].onmouseout()
+}
+
+cld[3].onmouseover=()=>
+{
+ cld[0].onmouseover()
+}
+cld[3].onmouseout=()=>
+{
+ cld[0].onmouseout()
 }
 
 Irckt=0
@@ -314,7 +354,7 @@ rckt[0].onmouseover=()=>
   trckt[1].style.transform=
    'scale('+(Math.random()*2+2)+
    ') translate(3%,-200%)'
-  },222) 
+  }, 222) 
   rckt[3].style.background='#d00'
   trckt[0].style.transform=
    'scale(3) translate(33%,-144%)'
@@ -356,6 +396,7 @@ rckt[0].onclick=()=>
    trckt[2].innerHTML='score: '+nrckt
  }, 1111)
 }  
+
 trckt[2].onmouseover=()=>
 {
  trckt[2].style.transform='scale(3)'
