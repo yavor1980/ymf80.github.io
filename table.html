@@ -328,9 +328,9 @@ for(i=0;i<7;i++)
    snpse[j].style.top=33+'%'
  }	 
  snpse[0].style.transform=
-    'scale(3) translate(133%,-111%) rotate(-22deg)'
-   snpse[1].style.transform=
-    'scale(3) translate(133%,444%) rotate(22deg)'
+  'scale(3) translate(133%,-111%) rotate(-22deg)'
+ snpse[1].style.transform=
+  'scale(3) translate(133%,444%) rotate(22deg)'
 }	
 	
 b=0
@@ -412,18 +412,17 @@ btn[2].onclick=()=>
  {
   nrn[0].style.transform='scale(1.1)'
   nrn[1].style.transform=
-   'scale(1.1) translate(88%,-88%)'
+   'scale(1.1) translate(111%,-111%)'
   nrn[2].style.transform=
-   'scale(1.1) translate(88%,88%)' 
+   'scale(1.1) translate(111%,111%)' 
   nrn[3].style.transform=
-   'scale(1.1) translate(222%,-88%)'
+   'scale(1.1) translate(266%,-188%)'
   nrn[4].style.transform=
-   'scale(1.1) translate(299%,88%)' 
+   'scale(1.1) translate(299%,188%)' 
   nrn[5].style.transform=
    'scale(1.1) translate(333%,-88%)'
   nrn[6].style.transform=
-   'scale(1.1) translate(333%,88%)'  
-  
+   'scale(1.1) translate(333%,88%)'   
  }
   else
  {
@@ -488,7 +487,7 @@ setInterval(()=>{
  td[litd].style.zIndex=0
   itd=Math.round(Math.random()*8)
  vtbl[itd]=Math.round(Math.random()*8)
- td[itd].innerHTML=vtbl[itd]
+  td[itd].innerHTML=vtbl[itd]
  td[itd].style.border='none'
  td[itd].style.background='none'
  td[itd].style.transform='scale(2)'
@@ -501,21 +500,21 @@ btbl0=0
 tbl[0].onmouseover=()=>
 {
  tbl[1].style.transform=
-  'scale(2) skew(19deg) translate(33%,-177%)'
+  'scale(2) translate(33%,-177%) skew(19deg)'
  Itbl0=setInterval(()=>
  {
   if(btbl0){
    tbl[2].style.transform=
-    'scale(2) skew(-19deg) translate(33%,-77%)'
+    'scale(2) translate(33%,-77%) skew(-19deg)'
    tbl[3].style.transform=
-    'scale(3) skew(19deg) translate(33%,-77%)'
+    'scale(3) translate(33%,-77%) skew(19deg)'
   }
   else
   {
    tbl[2].style.transform=
-    'scale(3) skew(19deg) translate(33%,-77%)'
+    'scale(3) translate(33%,-77%) skew(19deg) '
    tbl[3].style.transform=
-    'scale(2) skew(-19deg) translate(33%,-77%)'
+    'scale(2) translate(33%,-77%) skew(-19deg)'
   }
     btbl0=!btbl0
  }, 999)
