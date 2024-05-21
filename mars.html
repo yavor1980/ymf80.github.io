@@ -55,7 +55,8 @@
 #ids
 {
  position:absolute;
- transition:2s;
+ transition:1s;
+ cursor:pointer;
  left:39%;
  top:33%;
  width:24%;
@@ -78,7 +79,7 @@
 .lhnd
 {
  position:absolute;
- transition:2s;
+ transition:1s;
  width:22%;
  height:88%; 
  background:linear-gradient(-88deg,#555,#ff0);
@@ -87,7 +88,7 @@
 .rhnd
 {
  position:absolute;
- transition:2s;
+ transition:1s;
  width:22%;
  height:88%; 
  background:linear-gradient(-88deg,#555,#ff0);
@@ -96,7 +97,7 @@
 .llg
 {
  position:absolute;
- transition:3s;
+ transition:1s;
  width:18%;
  height:55%; 
  background:linear-gradient(-66deg,#555,#ff0);
@@ -110,14 +111,6 @@
  height:55%; 
  background:linear-gradient(-66deg,#555,#ff0);
  z-index:1;
-}
-.frz
-{
- position:absolute;
- transition:1s;
- z-index:3;
- transform:scale(1.4);
- cursor:pointer;
 }
 .me
 {
@@ -148,12 +141,6 @@
 <div class=star></div>
 <div class=star></div>
 <div class=star></div>
-
-<div class=frz>Mass</div>
-<div class=frz>Square</div>
-<div class=frz>Acceleration of gravity</div>
-<div class=frz>Satellite</div>
-<div class=frz>Tallest mountain SS</div>
 
 <div class=inf>what?</div>
 <div class=inf>how?</div>
@@ -204,7 +191,6 @@ kr1=document.getElementsByClassName('kr1')
 kr2=document.getElementsByClassName('kr2')
 kr3=document.getElementsByClassName('kr3')
 star=document.getElementsByClassName('star')
-frz=document.getElementsByClassName('frz')
    
 me[0].style.left='55%'
 me[0].style.top='33%'
@@ -270,24 +256,6 @@ grd=
   star[3].style.top=Math.random()*44+'%'
   star[4].style.left=Math.random()*88+'%' 
   star[4].style.top=Math.random()*44+'%'
-  
-  frz[0].style.left='6%'
-  frz[0].style.top='11%'  
-  frz[0].style.color='#f0f'
-  frz[1].style.left='6%'
-  frz[1].style.top='17%'
-  frz[1].style.color='#ff0'
-  frz[2].style.left='8%'
-  frz[2].style.top='23%'
-  frz[2].style.width='16%'
-  frz[2].style.color='#0ff'
-  frz[3].style.left='6%'
-  frz[3].style.top='29%'
-  frz[3].style.color='#ddd'
-  frz[4].style.left='8%'
-  frz[4].style.top='35%'
-  frz[4].style.width='14%'
-  frz[4].style.color='#099'
  },
  cl:function()
  {
@@ -323,7 +291,7 @@ ss=
   hd[2].style.width=11+'%'  
   hd[2].style.height=11+'%'
   hd[2].style.background='#900'
-  hd[3].style.left=33+'%'
+  hd[3].style.left=38+'%'
   hd[3].style.top=71+'%'
   hd[3].style.width=33+'%'
   hd[3].style.height=11+'%'
@@ -424,24 +392,23 @@ ss=
   inf[4].style.height=11+'%'
   inf[4].style.transform='scale(0)'
  },
- 
  cl:function()
  {  
   if(!ss.b) 
   {
    hd[0].style.transform='rotate(44deg)'
    llg[0].style.transform= 
-	'translate(0%,-19%) scale(1, 0.7)' 
+	'translate(0%,-19%) scale(1.6, 0.9)' 
    rlg[0].style.transform= 
-    'translate(0%,19%) scale(1, 1.3)' 	 
+    'translate(0%,19%) scale(1, 1.1)' 	 
   }
    else
   {
    hd[0].style.transform='rotate(-44deg)'
    llg[0].style.transform= 
-	'translate(0%,19%) scale(1,1.3)' 
+	'translate(0%,19%) scale(1,1.1)' 
    rlg[0].style.transform= 
-	'translate(0%,-19%) scale(1,0.7)' 	
+	'translate(0%,-19%) scale(1.6,0.9)' 	
   }	
     ss.b=!ss.b
  },
@@ -452,44 +419,41 @@ ss=
 fids=[0,0,0,0,0] 
 idsI=0
 bids=0
-ids.onmouseover=()=>{
+ids.onmouseover=()=>
+{
  me[1].innerHTML='Hi!'
  me[1].style.transform=
   'scale(3) translate(4px,-66px) skew(22deg)'
  idsI=setInterval(()=>{
   for(i=0;i<5;i++)
    fids[i]=Math.round(Math.random())   
-   me[0].innerHTML=fids[0]+''+fids[1]+''+fids[2]+''+
-    fids[3]+''+fids[4]   
-   if(bids){
-    me[0].style.transform=
-     'scale(3) translate(44px,-33px) skew(-11deg)'
-    me[0].style.color='#bb0'
-    me[1].style.transform=
-     'scale(3) translate(4px,-66px) skew(22deg)'
-    me[2].style.transform=
-     'scale(3)  skew(22deg)'
-	nkr=Math.round(Math.random()*3) 
-	switch(nkr)
-	{
-     case 0: kr1[0].onmouseover(); break;
-     case 1: kr2[0].onmouseover(); break;
-     case 2: kr3[0].onmouseover(); break;
-    } 
-   }
-    else
-   {
-    me[0].style.transform=
-     'scale(4) translate(44px,-33px) skew(11deg)'
-    me[0].style.color='#ff0'
-    me[1].style.transform=
-     'scale(3) translate(4px,-66px)  skew(-22deg)'
-    me[2].style.transform=
-     'scale(3) skew(-22deg)'
-   }
+  me[0].innerHTML=fids[0]+''+fids[1]+''+fids[2]+''+
+   fids[3]+''+fids[4]   
+  if(bids)
+  {
+   me[0].style.transform=
+    'scale(3) translate(44px,-33px) skew(-11deg)'
+   me[0].style.color='#bb0'
+   me[1].style.transform=
+    'scale(3) translate(4px,-66px) skew(22deg)'
+   me[2].style.transform=
+    'scale(3)  skew(22deg)'
+    kr1[0].onmouseover(); 
+    kr2[0].onmouseover();
+    kr3[0].onmouseover();
+  }
+   else
+  {
+   me[0].style.transform=
+    'scale(4) translate(44px,-33px) skew(11deg)'
+   me[0].style.color='#ff0'
+   me[1].style.transform=
+    'scale(3) translate(4px,-66px)  skew(-22deg)'
+   me[2].style.transform=
+    'scale(3) skew(-22deg)'
+  }
       bids=!bids
  }, 999)
- ids.style.cursor='pointer'
  ids.style.background=
   'radial-gradient(#909,#ff0)' 
  rhnd[0].style.transform=
@@ -542,19 +506,19 @@ ids.onmouseout=()=>{
 kr1[0].onmouseover=()=>
 {   
  kr1[1].style.transform=
-  'scale(1,3) translate(0,-66%)'
+  'scale(1,5) translate(0,-66%)'
 }
 
 kr2[0].onmouseover=()=>
 {   
  kr2[1].style.transform=
-  'scale(1,3) translate(0,-66%)'
+  'scale(1,5) translate(0,-66%)'
 }
 
 kr3[0].onmouseover=()=>
 {   
  kr3[1].style.transform=
-  'scale(1,3) translate(0,-66%)'
+  'scale(1,5) translate(0,-66%)'
 }
 
 inf[0].onmouseover=()=>
@@ -634,76 +598,6 @@ inf[2].onmouseout=()=>
   clearInterval(inf2I)
   binf2=1
 } 
-
-frz[0].onmouseover=()=>
-{   
- frz[0].style.color= '#ff0'
- frz[0].style.transform= 
-  'scale(2) translate(15%,-22%)'
-  frz[0].innerHTML= '10.7 % masses of the earth'
-}     
-frz[0].onmouseout=()=>
-{   
- frz[0].style.color= '#f0f'
- frz[0].style.transform= 'scale(1.4)'
-  frz[0].innerHTML= 'Mass'
-} 
-
-frz[1].onmouseover=()=>
-{   
- frz[1].style.color= '#0dd'
- frz[1].style.transform= 
-  'scale(2) translate(15%,-22%)'
-  frz[1].innerHTML= '144 800 000 km²'
-}
-frz[1].onmouseout=()=>
-{   
- frz[1].style.color= '#ff0'
- frz[1].style.transform= 'scale(1.4)'
-  frz[1].innerHTML= 'Square'
-}
-   
-frz[2].onmouseover=()=>
-{   
- frz[2].style.color= '#990'
- frz[2].style.transform= 
-  'scale(2) translate(15%,-22%)'
-  frz[2].innerHTML= '3,721 m/s²'
-} 
-frz[2].onmouseout=()=>
-{   
- frz[2].style.color= '#0ff'
- frz[2].style.transform= 'scale(1.4)'
-  frz[2].innerHTML= 'Acceleration of gravity'
-} 
-
-frz[3].onmouseover=()=>
-{   
- frz[3].style.color= '#0dd'
- frz[3].style.transform= 
-  'scale(2) translate(15%,-22%)'
-  frz[3].innerHTML= 'Phobos Deimos'
-} 
-frz[3].onmouseout=()=>
-{   
- frz[3].style.color= '#ddd'
- frz[3].style.transform= 'scale(1.4)'
-  frz[3].innerHTML= 'Satellite'
-} 
-  
-frz[4].onmouseover=()=>
-{   
-  frz[4].style.color= '#099'
-  frz[4].style.transform= 
-   'scale(2) translate(15%,-22%)'
-   frz[4].innerHTML= 'Olimp'
-} 
-frz[4].onmouseout=()=>
-{   
- frz[4].style.color= '#099'
- frz[4].style.transform= 'scale(1.4)'
-  frz[4].innerHTML= 'Tallest mountain SS'
-}   
      
 </script>
 </body>
