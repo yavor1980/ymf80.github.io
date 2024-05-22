@@ -242,14 +242,14 @@ cr[0].onmouseover=()=>
  {
   if(bdly)
   {
-   fre[0].style.opacity=1
-   fre[0].style.transform='scale(1.2)'
+   fre[0].style.opacity=0.4
+   fre[0].style.transform='scale(2.6)'
    dly[0].style.transform='scale(3,5) skew(-33deg)'
    dly[1].style.transform='scale(3,3) skew(33deg)'
    dly[2].style.transform='scale(3,5) skew(-33deg)'
   }else{
    fre[0].style.opacity=0.9
-   fre[0].style.transform='scale(1)'
+   fre[0].style.transform='scale(1.6)'
    dly[0].style.transform='scale(3,3) skew(33deg)'
    dly[1].style.transform='scale(3,5) skew(-33deg)'
    dly[2].style.transform='scale(3,3) skew(33deg)'
@@ -264,7 +264,8 @@ cr[0].onmouseout=()=>
  cr[1].style.transform='scale(0.1)'
  cr[2].style.borderRadius='5%'
  fre[0].style.opacity=0
- md[1].style.transform='scale(0) '
+ fre[0].style.transform='scale(1)'
+ md[1].style.transform='scale(0)'
  dly[0].style.transform='scale(0) skew(0deg)'
  dly[1].style.transform='scale(0) skew(0deg)'
  dly[2].style.transform='scale(0) skew(0deg)'
