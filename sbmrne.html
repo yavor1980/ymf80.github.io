@@ -15,7 +15,7 @@ body
  bottom:0%;
  width:100%;
  height:8%;
- background:radial-gradient(#333,#777);
+ background:radial-gradient(#333,#505);
  border-top-left-radius:12%;
  border-top-right-radius:22%;
  opacity:0.6;
@@ -74,6 +74,7 @@ body
   <div class=prjctr></div>
  </div>
 <script> 
+grnd=document.getElementsByClassName('grnd')
 sbmrne=document.getElementsByClassName('sbmrne')
 apprts=document.getElementsByClassName('apprts')
 tsbmrne=document.getElementsByClassName('tsbmrne')
@@ -154,7 +155,7 @@ prjctr[1].style.height=13+'%'
 prjctr[1].style.background=
  'radial-gradient(33px,#ff0,#f00)'
 prjctr[1].style.borderRadius='55%'
-prjctr[1].style.opacity=0.3
+prjctr[1].style.opacity=0.5
 prjctr[1].style.cursor='pointer'
 prjctr[1].style.transform=
  'rotate(-28deg) skew(44deg)'
@@ -174,7 +175,9 @@ function smv()
  {
    rnd=Math.random()/2+1
   sbmrne[0].style.transform=
-   'scale('+rnd+') rotate('+rnd+'deg)'
+   'scale('+rnd+')'
+  grnd[0].style.transform=
+  'scale(1,'+rnd/2+') translate(0%,'+(-rnd/2)+'%)' 
  }
  else
  {
@@ -183,7 +186,7 @@ function smv()
   apprts[1].style.transform='scale('+rnd+')'
  }
 }
-   Isbmrne=setInterval(smv,999)
+   Isbmrne=setInterval(smv, 999)
 
 function pmv()
 {
@@ -244,15 +247,15 @@ prjctr[1].onmouseover=()=>
   'scale(3) translate(88%,88%) skew(-12deg)'
  prjctr[1].style.background=
   'radial-gradient(66px,#ff0,#f00)'
- prjctr[1].style.opacity=0.4
- prjctr[2].style.opacity=0.4
+ prjctr[1].style.opacity=0.8
+ prjctr[2].style.opacity=0.8
 }
 prjctr[1].onmouseout=()=>
 {
  prjctr[0].style.transform='scale(0)'
  prjctr[1].style.background=
   'radial-gradient(33px,#ff0,#f00)'
- prjctr[1].style.opacity=0.3
+ prjctr[1].style.opacity=0.5
  prjctr[2].style.opacity=0
 }
 
