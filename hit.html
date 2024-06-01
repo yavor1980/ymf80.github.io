@@ -10,17 +10,19 @@
 #idsw
 {
  position:absolute;
+ transition:1s;
  left:65%;
  top:54%; 
  width:11%;
  height:22%;
  transform:scale(2);
- transition:1s;
+ cursor:pointer;
 }
 
 .btn
 {
  position:absolute;
+ transition:1s;
  left:77%;
  top:8%;
  width:9%;
@@ -29,7 +31,6 @@
  color:white;
  border-radius:33%;
  font-size:3em;
- transition:1s;
  cursor:pointer;
 }
 
@@ -39,6 +40,8 @@
  transition:0.2s;
  cursor:pointer;
 }
+
+
 
 </style>
 
@@ -113,8 +116,12 @@ btn[0].onmouseout=()=>
 }
 btn[0].onclick=()=>
 {
+  clearInterval(Icl)
  idsw.style.transform=
-  'rotate(88deg) translate(-18%,211%) scale(1)'
+  'rotate(48deg) translate(-222%,111%)'
+ s[0].style.transition='1s' 
+ s[0].style.transform=
+  'scale(1,1.2) translate(-28%,0%)' 
  s[2].style.background='#f00'
  s[2].style.transform=
   'scale(2) translate(68%,0%)'
@@ -125,11 +132,24 @@ btn[0].onclick=()=>
  {
   idsw.style.transform='scale(2)';
   btn[0].style.transform='scale(1)'
+  s[0].style.transition='0.2s'
   s[2].style.background='#000'
   s[2].style.transform='scale(1)'
   s[4].style.background='#000'
   s[4].style.transform='scale(1)'
+   Icl=setInterval(cl, 222)
  }, 1111)
+}
+
+idsw.onmouseover=()=>
+{
+ idsw.style.transform='scale(2.3) rotate(23deg)'
+  s[0].onmouseover()
+}
+idsw.onmouseout=()=>
+{
+ idsw.style.transform='scale(2)'
+  s[0].onmouseout()
 }
 
 Is=0
@@ -153,7 +173,7 @@ s[0].onmouseover=()=>
   {
    s[2].style.background='#f00'
    s[2].style.transform=
-    'scale(1.6) translate(34%,23%)'
+    'scale(1.6) translate(3%,23%)'
    s[4].style.background='#800'
    s[4].style.transform=
     'scale(1.2) translate(3%,2%)'
@@ -171,11 +191,11 @@ s[0].onmouseout=()=>
  s[4].style.transform='scale(1)'
   bs=1
   clearInterval(Is)
- Icl=setInterval(cl, 222)
+  Icl=setInterval(cl, 222)
 }
 s[0].onclick=()=>
 {
- s[0].style.background='#800'
+ s[0].style.background='#870'
 }
 
 </script>
