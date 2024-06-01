@@ -11,18 +11,20 @@
 {
  position:absolute;
  transition:1s;
+ cursor:pointer;
  left:65%;
  top:54%; 
  width:11%;
  height:22%;
  transform:scale(2);
- cursor:pointer;
+ z-index:1;
 }
 
 .btn
 {
  position:absolute;
  transition:1s;
+ cursor:pointer;
  left:77%;
  top:8%;
  width:9%;
@@ -31,7 +33,6 @@
  color:white;
  border-radius:33%;
  font-size:3em;
- cursor:pointer;
 }
 
 .s
@@ -41,7 +42,13 @@
  cursor:pointer;
 }
 
-
+.shld
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ border-radius:55%;
+}
 
 </style>
 
@@ -53,17 +60,23 @@
  <div class=s><div class=s></div></div>
  <div class=s><div class=s></div></div> 
 </div>
+<div class=shld>
+ <div class=shld></div>
+ <div class=shld>Shield</div>
+ <div class=shld></div>
+</div> 
 
 <script>
 btn=document.getElementsByClassName('btn')
 s=document.getElementsByClassName('s')
+shld=document.getElementsByClassName('shld')
    
 s[0].style.left='11%'
 s[0].style.top='22%'
 s[0].style.width='11%'
 s[0].style.height='33%'
 s[0].style.background=
- 'radial-gradient(#555, #999)'
+ 'radial-gradient(#555,#999)'
 s[0].style.borderRadius='55%'
 
 s[1].style.left='55%'
@@ -93,6 +106,25 @@ s[4].style.width='55%'
 s[4].style.height='33%'
 s[4].style.background='#000'
 s[4].style.borderRadius='55%'
+
+shld[0].style.left='33%'
+shld[0].style.top='12%'
+shld[0].style.width='18%'
+shld[0].style.height='33%'
+shld[0].style.background='#a0a'
+
+shld[1].style.left='34%'
+shld[1].style.top='33%'
+shld[1].style.width='33%'
+shld[1].style.height='33%'
+shld[1].style.background=
+ 'radial-gradient(#505,#909)'
+shld[1].style.transform='scale(2.2)'
+
+shld[2].style.left='34%'
+shld[2].style.top='23%'
+shld[2].style.color='#ff0'
+shld[2].style.transform='scale(0)'
 
 b=0
 Icl=0
@@ -154,41 +186,47 @@ idsw.onmouseout=()=>
 
 Is=0
 bs=1
+function smo()
+{
+ if(bs)
+ { 
+  s[2].style.background='#f00'
+  s[2].style.transform=
+   'scale(1.6) translate(3%,23%)'
+  s[4].style.background='#f00'
+  s[4].style.transform=
+   'scale(1.6) translate(3%,23%)'
+ }
+ else
+ {
+  s[2].style.background='#800'
+  s[2].style.transform=
+   'scale(1.2) translate(3%,2%)'
+  s[4].style.background='#800'
+  s[4].style.transform=
+   'scale(1.2) translate(3%,2%)'
+ }
+   bs=!bs
+}
 s[0].onmouseover=()=>
 {
  s[0].style.background='#666'
  s[0].style.transform='scale(1.1)'
+ shld[0].style.transform=
+  'scale(0.7,1) translate(-77%,77%) rotate(33deg)'
   clearInterval(Icl)
- Is=setInterval(()=>{
-  if(bs)
-  { 
-   s[2].style.background='#800'
-   s[2].style.transform=
-    'scale(1.2) translate(3%,2%)'
-   s[4].style.background='#f00'
-   s[4].style.transform=
-    'scale(1.6) translate(3%,2%)'
-  }
-  else
-  {
-   s[2].style.background='#f00'
-   s[2].style.transform=
-    'scale(1.6) translate(3%,23%)'
-   s[4].style.background='#800'
-   s[4].style.transform=
-    'scale(1.2) translate(3%,2%)'
-  }
-     bs=!bs
- }, 1111)
+  smo()
+  Is=setInterval(smo, 1111)
 }
 s[0].onmouseout=()=>
 {
  s[0].style.background=
-   'radial-gradient(#555, #999)'
+  'radial-gradient(#555, #999)'
  s[2].style.background='#000'
  s[2].style.transform='scale(1)'
  s[4].style.background='#000'
  s[4].style.transform='scale(1)'
+ shld[0].style.transform='scale(1)'
   bs=1
   clearInterval(Is)
   Icl=setInterval(cl, 222)
@@ -197,6 +235,19 @@ s[0].onclick=()=>
 {
  s[0].style.background='#870'
 }
+
+shld[0].onmouseover=()=>
+{
+ shld[0].style.transform='scale(1.2)'
+ shld[2].style.transform=
+  'scale(2) translate(200%,-88%) skew(-24deg)'
+}
+shld[0].onmouseout=()=>
+{
+ shld[0].style.transform='scale(1)'
+ shld[2].style.transform='scale(0)'
+}
+
 
 </script>
 </body>
