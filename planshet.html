@@ -13,19 +13,11 @@
  transition:1s;
 }
 
-.lbrry
+.pnel
 {
  position:absolute;
  cursor:pointer;
  transition:1s;
-}
-
-.prcptr
-{
- position:absolute;
- cursor:pointer;
- transition:1s;
- z-index:1;
 }
 
 </style>
@@ -37,17 +29,21 @@
  <div class=dsply></div>
  <div class=dsply></div>
 </div>
-
-<div class=lbrry>react</div>
- <div class=lbrry>JS</div>
- <div class=lbrry>native</div> 
- <div class=lbrry>state</div>
- <div class=lbrry>props</div>
+ 
+<div class=pnel>
+ <div class=pnel></div>
+ <div class=pnel></div>
+ <div class=pnel></div>
+ <div class=pnel></div>
+ <div class=pnel></div>
+ <div class=pnel></div>
+</div> 
+ 
 <script>
 dsply=document.getElementsByClassName('dsply')
-lbrry=document.getElementsByClassName("lbrry")
+pnel=document.getElementsByClassName("pnel") 
  
-dsply[0].style.left=29+'%'
+dsply[0].style.left=19+'%'
 dsply[0].style.top=45+'%'
 dsply[0].style.width=17+'%'
 dsply[0].style.height=22+'%'
@@ -66,6 +62,7 @@ dsply[2].style.bottom=2+'%'
 dsply[2].style.width=14+'%'
 dsply[2].style.height=10+'%'
 dsply[2].style.background='#222'
+dsply[2].style.color='#fff'
 dsply[2].style.borderRadius=50+'%'
 
 dsply[3].style.left=7+'%'
@@ -75,43 +72,57 @@ dsply[3].style.height=9+'%'
 dsply[3].style.background='#022'
 dsply[3].style.borderRadius=15+'%'
 
-lbrry[0].style.left=61+'%'
-lbrry[0].style.top=4+'%'
-lbrry[0].style.transform='scale(3)'
+pnel[0].style.left=9+'%'
+pnel[0].style.top=4+'%'
+pnel[0].style.width=30+'%'
+pnel[0].style.height=22+'%'
+pnel[0].style.background='#bbb'
+pnel[0].style.borderRadius=15+'%'
+pnel[0].style.border='9px ridge #990'
 
-lbrry[1].style.left=61+'%'
-lbrry[1].style.top=9+'%'
-lbrry[1].style.transform='scale(0)'
-
-lbrry[2].style.left=61+'%'
-lbrry[2].style.top=9+'%'
-lbrry[2].style.transform='scale(0)'
-
-lbrry[3].style.left=61+'%'
-lbrry[3].style.top=9+'%'
-lbrry[3].style.color='#900'
-lbrry[3].style.transform='scale(0)'
-
-lbrry[4].style.left=61+'%'
-lbrry[4].style.top=9+'%'
-lbrry[4].style.color='#900'
-lbrry[4].style.transform='scale(0)'
+function inp(i,l,t,w,h,bkgr)
+{
+ pnel[i].style.left=l+'%'
+ pnel[i].style.top=t+'%'
+ pnel[i].style.width=w+'%'
+ pnel[i].style.height=h+'%'
+ pnel[i].style.background=bkgr
+}
+inp(1,2,2,26,44,'#333')
+inp(2,31,2,37,44,'#333')
+inp(3,72,2,26,44,'#333')
+inp(4,2,50,26,44,'#333')
+inp(5,31,50,37,44,'#333')
+inp(6,72,50,26,44,'#333')
 
 Idsply=0; vdspl=0
 dsply[0].onmouseover=()=>
 {
- dsply[0].style.transform='scale(3)'
+ dsply[0].style.transform='scale(2)'
  Idsply=setInterval(()=>{ 
   vdspl=Math.random()*33+33
   dsply[1].style.background=
    'radial-gradient('+vdspl+
-   'px,#f00,#ff0,#0f0,#666)'
+   'px,#f00,#ff0,#00b,#666)'
+  pnel[1].style.background=
+   '#'+Math.round(Math.random()*9)+'00'
+  pnel[2].style.background=
+   '#'+Math.round(Math.random()*9)+'00'
+  pnel[3].style.background=
+   '#'+Math.round(Math.random()*9)+'00'
+  pnel[4].style.background=
+   '#'+Math.round(Math.random()*9)+'00'
+  pnel[5].style.background=
+   '#'+Math.round(Math.random()*9)+'00'
+  pnel[6].style.background=
+   '#'+Math.round(Math.random()*9)+'00' 
  }, 999)
  dsply[2].style.background=
   'radial-gradient(#0f0,#090)'
  dsply[3].style.background=
   'linear-gradient(90deg,#055,#111,#555,#111,#055)'
-  lbrry[0].onmouseover()
+ pnel[0].style.transform='scale(1.1)'
+ 
 }
 dsply[0].onmouseout=()=>
 {
@@ -120,52 +131,23 @@ dsply[0].onmouseout=()=>
  dsply[1].style.background='#555'
  dsply[2].style.background='#222'
  dsply[3].style.background='#111'
-  lbrry[0].onmouseout()
+ pnel[0].style.transform='scale(1)'
+ pnel[1].style.background='#000'
+ pnel[2].style.background='#000'
+ pnel[3].style.background='#000'
+ pnel[4].style.background='#000'
+ pnel[5].style.background='#000'
+ pnel[6].style.background='#000'
 }
 
-Icmpnnt=0
-bcmpnnt=0
-lbrry[0].onmouseover=()=>
+pnel[0].onmouseover=()=>
 {
- lbrry[0].style.transform=
-  'scale(4) skew(-22deg)'
- lbrry[0].style.color='#666'
- lbrry[1].style.transform=
-  'scale(4) translate(-88%,33%)'
- lbrry[1].style.color='#f00'
- lbrry[2].style.transform=
-  'scale(4) translate(77%,33%)'
- lbrry[2].style.color='#f07'
- Icmpnnt=setInterval(()=>{
-  if(bcmpnnt)
-  {
-   lbrry[3].style.transform=
-    'scale(4) translate(177%,-22%) skew(-11deg)'
-   lbrry[4].style.transform=
-    'scale(4) translate(177%,88%) skew(11deg)'
-  }
-   else
-  {
-   lbrry[3].style.transform=
-    'scale(4) translate(177%,-22%) skew(11deg)'
-   lbrry[4].style.transform=
-    'scale(4) translate(177%,88%) skew(-11deg)'
-  }
-   bcmpnnt=!bcmpnnt
- }, 999)	
+ pnel[0].style.transform='scale(1.2)'
 }
-lbrry[0].onmouseout=()=>
+pnel[0].onmouseout=()=>
 {
- lbrry[0].style.transform='scale(3)'
- lbrry[0].style.color='#000'
- lbrry[1].style.transform='scale(0)'
- lbrry[1].style.color='#000'
- lbrry[2].style.transform='scale(0)'
- lbrry[2].style.color='#000'
- lbrry[3].style.transform='scale(0)'
- lbrry[4].style.transform='scale(0)'
-  clearInterval(Icmpnnt)
-}
+ pnel[0].style.transform='scale(1)'
+} 
  
 </script>
 </body>
