@@ -56,6 +56,7 @@
  <div class=fld>-1/L*<i id=idi>S</i>dIdt</div>
  <div class=fld>alternative <br>&nbsp current</div>
  <div class=fld>Inductivity</div>
+ <div class=fld></div>
 </div> 
 
 <div class=cpcty>
@@ -66,6 +67,7 @@
  <div class=cpcty></div>
  <div class=cpcty>Capacity</div>
  <div class=cpcty>I=CdU/dt</div>
+ <div class=cpcty></div>
 </div>
 
 <script>
@@ -155,6 +157,16 @@ fld[4].style.color='#222'
 fld[5].style.color='#00b'
 fld[5].style.transform=
  'scale(2) translate(0,-222%)'
+ 
+fld[6].style.left=2+'%'
+fld[6].style.top=5+'%'
+fld[6].style.width=122+'%'
+fld[6].style.height=66+'%'
+fld[6].style.background='#777'
+fld[6].style.opacity=0
+fld[6].style.borderRadius=22+'%'
+fld[6].style.transform='scale(1)'
+fld[6].style.zIndex=-1
 
 cpcty[0].style.left=57+'%'
 cpcty[0].style.top=24+'%'
@@ -200,6 +212,14 @@ cpcty[7].style.left=6+'%'
 cpcty[7].style.top=7+'%'
 cpcty[7].style.transform='scale(0)'
 
+cpcty[8].style.left=45+'%'
+cpcty[8].style.top=0+'%'
+cpcty[8].style.width=11+'%'
+cpcty[8].style.height=100+'%'
+cpcty[8].style.background='#777'
+cpcty[8].style.opacity=0
+cpcty[8].style.borderRadius=22+'%'
+
 coilI=0
 coil[0].onmouseover=()=>
 {
@@ -217,6 +237,8 @@ coil[0].onmouseover=()=>
  coil[7].style.borderRight='1px ridge #000'
  fld[5].style.transform=
   'scale(2) translate(0,-222%) skew(-11deg)'
+ fld[6].style.opacity=0.8 
+ fld[6].style.transform='translate(-25%,0)' 
  coilI=setInterval(()=>{
    p=1+Math.random()/11
   fld[0].style.transform='scale('+p+')'
@@ -248,6 +270,8 @@ coil[0].onmouseout=()=>
  fld[4].style.transform='scale(0)'
  fld[5].style.transform=
   'scale(2) translate(0,-222%)'
+ fld[6].style.opacity=0
+ fld[6].style.transform='translate(0%,0)'
   clearInterval(coilI)
 }    
 
@@ -265,6 +289,7 @@ cpcty[0].onmouseover=()=>
  cpcty[7].style.color='#404'
  cpcty[7].style.transform=
   'scale(3) translate(-19%,-22%) skew(9deg)'
+ cpcty[8].style.opacity=0.8
  cpctyI=setInterval(()=>{
    p=1.2+Math.random()/11
   cpcty[5].style.transform='scale('+p+')'
@@ -283,6 +308,7 @@ cpcty[0].onmouseout=()=>
   'scale(3) translate(0,-222%)'
  cpcty[7].style.color='#444' 
  cpcty[7].style.transform='scale(0)' 
+ cpcty[8].style.opacity=0
   clearInterval(cpctyI)
 }
 
