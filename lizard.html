@@ -90,7 +90,7 @@
 <div class=grnd>
  <div class=grnd></div>
  <div class=grnd></div>
- <div class=grnd></div>
+ <div class=grnd><div class=grnd></div></div>
 </div>
 
 <div class=hd>
@@ -152,22 +152,31 @@ grnd[2].style.bottom=0+'%'
 grnd[2].style.width=39+'%'
 grnd[2].style.height=233+'%'
 grnd[2].style.background=
- 'radial-gradient(#122,#822)'  
+ 'radial-gradient(#122,#822)' 
+grnd[2].style.opacity=0.4
 grnd[2].style.borderTopLeftRadius=44+'%'	  
 grnd[2].style.borderTopRightRadius=44+'%'		  
 grnd[2].style.zIndex=-2
-grnd[2].style.opacity=0.4
-	
+
 grnd[3].style.left=55+'%'	  
 grnd[3].style.bottom=0+'%'
 grnd[3].style.width=35+'%'
 grnd[3].style.height=294+'%'
 grnd[3].style.background=
- 'radial-gradient(#222,#822)'  
+ 'radial-gradient(#222,#822)' 
+grnd[3].style.opacity=0.6
 grnd[3].style.borderTopLeftRadius=38+'%'	  
 grnd[3].style.borderTopRightRadius=44+'%'		  
 grnd[3].style.zIndex=-2
-grnd[3].style.opacity=0.6
+
+grnd[4].style.left=75+'%'	  
+grnd[4].style.bottom=75+'%'
+grnd[4].style.width=9+'%'
+grnd[4].style.height=11+'%'
+grnd[4].style.background=
+ 'radial-gradient(#222,#822)' 
+grnd[4].style.opacity=0.9
+grnd[4].style.borderRadius=55+'%'	  		  
 	  
 function inn(nm,i, l,t, w,h, bkgrd, btlr,btrr,bblr,bbrr)
 {
@@ -260,12 +269,8 @@ function stp()
 		 
 function clk()
 {
- ttagrss[0].style.transform=
-  'scale(3) translate(0,-199%) skew(22deg)'
- ttagrss[1].style.transform=
-  'scale(3) translate(0,-177%) skew(-22deg)'
- ttagrss[2].style.transform=
-  'scale(3) translate(-37%,-77%) skew(-22deg)' 
+ grnd[4].style.transform=
+  'scale(3,7) translate(0,-14%)'
  mth[0].style.height='22%'
  gl[0].style.transform='scale(2)'
  gl[1].style.transform='scale(2)'
@@ -279,6 +284,12 @@ function clk()
   'scale(1.4,1.4) translate(0,-11%)' 
  pw[5].style.transform='scale(1.3,1)'  
  pw[6].style.transform='scale(1.3,1)'
+ ttagrss[0].style.transform=
+  'scale(3) translate(0,-199%) skew(22deg)'
+ ttagrss[1].style.transform=
+  'scale(3) translate(0,-177%) skew(-22deg)'
+ ttagrss[2].style.transform=
+  'scale(3) translate(-37%,-77%) skew(-22deg)' 
   btn[0].innerHTML='quiet'
  bd=Math.round(Math.random())
  if(bd)
@@ -294,7 +305,7 @@ function clk()
   grnd[2].style.transform=
    'scale(1,1.3) translate(0,-14%) skew(22deg)'
   grnd[3].style.transform=
-   'scale(1,1.3) translate(0,-14%) skew(-22deg)'  
+   'scale(1,1.3) translate(0,-14%) skew(-22deg)'    
   hd[2].style.transform='scale(2) translate(44%,0)'  
  } 
  setTimeout(()=>{
@@ -303,6 +314,7 @@ function clk()
   ttagrss[2].style.transform='scale(0)'
   grnd[2].style.transform='scale(1)'
   grnd[3].style.transform='scale(1)'
+  grnd[4].style.transform='scale(1)'
   mth[0].style.height='1%'
   hd[2].style.transform=
    'scale(1) translate(0%,0)'
