@@ -4,7 +4,7 @@
 <style>
 body
 {  
- background:linear-gradient(#00f,#003);
+ background:linear-gradient(#00f,#009);
 }
 
 .grnd
@@ -19,7 +19,6 @@ body
  border-top-left-radius:12%;
  border-top-right-radius:22%;
  opacity:0.6;
- z-index:-1;
 }
 
 .sbmrne
@@ -40,7 +39,6 @@ body
  height:33%;
  background:radial-gradient(#000,#f00,#ff0);
  border-radius:55%;
- transform:scale(0);
 }
 .tsbmrne
 {   
@@ -61,16 +59,19 @@ body
 </div>
 
 <div class=sbmrne>
+ <div class=sbmrne>
+  <div class=sbmrne>
+   <div class=apprts></div>
+   <div class=apprts></div>
+  </div>
+ </div>
  <div class=sbmrne></div>
  <div class=sbmrne>
   <div class=apprts></div>
   <div class=apprts></div>
  </div>
- <div class=sbmrne></div>
- <div class=sbmrne></div>
 </div>
 <div class=tsbmrne>submurrine</div>
- <div class=tsbmrne>very deepthy!</div>
  <div class=tsbmrne>torpedo atack...</div>
 
 <div class=prjctr>projector</div>
@@ -82,9 +83,10 @@ grnd=document.getElementsByClassName('grnd')
 sbmrne=document.getElementsByClassName('sbmrne')
 apprts=document.getElementsByClassName('apprts')
 tsbmrne=document.getElementsByClassName('tsbmrne')
- 
+
 prjctr=document.getElementsByClassName('prjctr')
  
+grnd[1].style.cursor='pointer' 
 grnd[1].style.left=56+'%'
 grnd[1].style.bottom=5+'%'
 grnd[1].style.width=34+'%'
@@ -109,8 +111,8 @@ sbmrne[1].style.background='#050'
 sbmrne[1].style.borderRadius=55+'%'
 sbmrne[1].style.opacity=0.9
 
-sbmrne[2].style.left=6+'%'
-sbmrne[2].style.top=4+'%'
+sbmrne[2].style.left=12+'%'
+sbmrne[2].style.top=5+'%'
 sbmrne[2].style.width=88+'%'
 sbmrne[2].style.height=88+'%'
 sbmrne[2].style.background=
@@ -128,14 +130,13 @@ sbmrne[3].style.borderRadius=55+'%'
 sbmrne[3].style.opacity=0.8
 sbmrne[3].style.zIndex=-1
 
-sbmrne[4].style.left=22+'%'
-sbmrne[4].style.top=-22+'%'
-sbmrne[4].style.width=44+'%'
-sbmrne[4].style.height=66+'%'
+sbmrne[4].style.left=17+'%'
+sbmrne[4].style.top=-19+'%'
+sbmrne[4].style.width=55+'%'
+sbmrne[4].style.height=45+'%'
 sbmrne[4].style.background='#050'
-sbmrne[4].style.borderTopLeftRadius=22+'%'
-sbmrne[4].style.borderTopRightRadius=22+'%'
-sbmrne[4].style.opacity=0.6
+sbmrne[4].style.borderRadius=25+'%'
+sbmrne[4].style.opacity=0.8
 sbmrne[4].style.zIndex=-1
 
 apprts[0].style.left=17+'%'
@@ -145,6 +146,18 @@ apprts[0].style.opacity=0
 apprts[1].style.left=55+'%'
 apprts[1].style.top=58+'%'
 apprts[1].style.opacity=0
+
+apprts[2].style.left=38+'%'
+apprts[2].style.top=12+'%'
+apprts[2].style.height=32+'%'
+apprts[2].style.background='#000'
+
+apprts[3].style.zIndex=33
+apprts[3].style.left=36+'%'
+apprts[3].style.top=26+'%'
+apprts[3].style.height=2+'%'
+apprts[3].style.background='#ff0'
+apprts[3].style.opacity=0
 
 tsbmrne[0].style.left=27+'%'
 tsbmrne[0].style.top=18+'%'
@@ -158,11 +171,6 @@ tsbmrne[1].style.top=11+'%'
 tsbmrne[1].style.color='#bb0'
 tsbmrne[1].style.transform='scale(0)'
 
-tsbmrne[2].style.left=27+'%'
-tsbmrne[2].style.top=22+'%'
-tsbmrne[2].style.color='#b0b'
-tsbmrne[2].style.transform='scale(0)'
-
 prjctr[0].style.left=55+'%'
 prjctr[0].style.top=9+'%'
 prjctr[0].style.color='#bbb'
@@ -172,21 +180,12 @@ prjctr[1].style.left=55+'%'
 prjctr[1].style.top=22+'%'
 prjctr[1].style.width=11+'%'
 prjctr[1].style.height=13+'%'
-prjctr[1].style.background=
- 'radial-gradient(33px,#ff0,#f00)'
+prjctr[1].style.background='#ddd'
 prjctr[1].style.borderRadius='55%'
 prjctr[1].style.opacity=0.3
 prjctr[1].style.cursor='pointer'
 prjctr[1].style.transform=
  'rotate(-28deg) skew(44deg)'
- 
-prjctr[2].style.left=-25+'%'
-prjctr[2].style.top=-16+'%'
-prjctr[2].style.width=144+'%'
-prjctr[2].style.height=144+'%'
-prjctr[2].style.background='#bb0'
-prjctr[2].style.borderRadius='55%'
-prjctr[2].style.opacity=0
 
 bsmv=0
 function smv()
@@ -218,6 +217,17 @@ function pmv()
 }
    Iprjctr=setInterval(pmv, 666)
 
+grnd[1].onmouseover=()=>
+{
+ grnd[2].style.background='#ee0'
+ grnd[2].style.transform='scale(1.2)'
+}
+grnd[1].onmouseout=()=>
+{
+ grnd[2].style.background='#444'
+ grnd[2].style.transform='scale(1)'
+}
+
 sbmrne[0].onmouseover=()=>
 {
  grnd[1].style.transform=
@@ -229,12 +239,16 @@ sbmrne[0].onmouseover=()=>
  sbmrne[0].style.transform='scale(1.2)'
  sbmrne[1].style.background='#550'
  sbmrne[3].style.background='#550'
+ sbmrne[3].style.transform='scale(1.2,1)'
  sbmrne[4].style.background='#550'
  apprts[0].style.opacity=0.7
  apprts[1].style.opacity=0.7
+ apprts[2].style.background='#ff0'
+ apprts[2].style.transform='scale(1.2)'
+ apprts[3].style.opacity=0.7
+ apprts[3].style.transform=
+  'scale(8,24) translate(0,-77%)'
   bsmv=1
- tsbmrne[2].style.transform=
-  'scale(4) skew(9deg) translate(-6%,55%)' 
   prjctr[1].onmouseover()
 }
 sbmrne[0].onmouseout=()=>
@@ -246,13 +260,17 @@ sbmrne[0].onmouseout=()=>
  sbmrne[0].style.transform='scale(1)'
  sbmrne[1].style.background='#050'
  sbmrne[3].style.background='#050'
+ sbmrne[3].style.transform='scale(1)'
  sbmrne[4].style.background='#050'
  apprts[0].style.opacity=0
  apprts[0].style.transform='scale(0)'
  apprts[1].style.opacity=0
  apprts[1].style.transform='scale(0)'
+ apprts[2].style.background='#000'
+ apprts[2].style.transform='scale(1)'
+ apprts[3].style.opacity=0
+ apprts[3].style.transform='scale(1)'
   bsmv=0
- tsbmrne[2].style.transform='scale(0)' 
   prjctr[1].onmouseout()
 }
 
@@ -268,25 +286,20 @@ tsbmrne[0].onmouseout=()=>
  tsbmrne[0].style.transform=
   'scale(4,6) skew(-22deg)'
  tsbmrne[1].style.transform='scale(0)' 
- tsbmrne[2].style.transform='scale(0)'
 }
 
 prjctr[1].onmouseover=()=>
 {
  prjctr[0].style.transform=
   'scale(3) translate(88%,88%) skew(-12deg)'
- prjctr[1].style.background=
-  'radial-gradient(66px,#ff0,#f00)'
- prjctr[1].style.opacity=0.5
- prjctr[2].style.opacity=0.5
+ prjctr[1].style.background='#fff'
+ prjctr[1].style.opacity=0.4
 }
 prjctr[1].onmouseout=()=>
 {
  prjctr[0].style.transform='scale(0)'
- prjctr[1].style.background=
-  'radial-gradient(33px,#ff0,#f00)'
+ prjctr[1].style.background='#ddd'
  prjctr[1].style.opacity=0.3
- prjctr[2].style.opacity=0
 }
 
 </script>
