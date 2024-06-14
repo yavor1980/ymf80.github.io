@@ -56,6 +56,7 @@ body
 <div class=grnd></div>
 <div class=grnd>
  <div class=grnd></div>
+ <div class=grnd></div>
 </div>
 
 <div class=sbmrne>
@@ -102,6 +103,14 @@ grnd[2].style.width=18+'%'
 grnd[2].style.height=33+'%'
 grnd[2].style.background='#444'
 grnd[2].style.borderRadius=55+'%' 
+
+grnd[3].style.left=39+'%'
+grnd[3].style.top=25+'%'
+grnd[3].style.width=18+'%'
+grnd[3].style.height=33+'%'
+grnd[3].style.background='#f0f'
+grnd[3].style.opacity=0
+grnd[3].style.borderRadius=55+'%' 
  
 sbmrne[1].style.left=6+'%'
 sbmrne[1].style.top=4+'%'
@@ -219,23 +228,30 @@ function pmv()
 
 grnd[1].onmouseover=()=>
 {
- grnd[2].style.background='#ee0'
+ grnd[2].style.background='#e0e'
  grnd[2].style.transform='scale(1.2)'
+ grnd[3].style.opacity=0.3
+ grnd[3].style.transform='scale(1.7)'
 }
 grnd[1].onmouseout=()=>
 {
  grnd[2].style.background='#444'
  grnd[2].style.transform='scale(1)'
+ grnd[3].style.opacity=0
+ grnd[3].style.transform='scale(1)'
 }
 
 sbmrne[0].onmouseover=()=>
 {
  grnd[1].style.transform=
   'scale(1) translate(0%,-28%)' 
- grnd[2].style.background='#ee0'
+ grnd[2].style.background='#e0e'
  grnd[2].style.opacity=1
  grnd[2].style.transform=
   'scale(0.9,1.2) translate(-88%,0%)' 
+ grnd[3].style.opacity=0.4
+ grnd[3].style.transform=
+  'scale(0.9,2.2) translate(-188%,0%)'  
  sbmrne[0].style.transform='scale(1.2)'
  sbmrne[1].style.background='#550'
  sbmrne[3].style.background='#550'
@@ -257,6 +273,8 @@ sbmrne[0].onmouseout=()=>
  grnd[2].style.background='#444'
  grnd[2].style.opacity=0.7
  grnd[2].style.transform='scale(1)' 
+ grnd[3].style.opacity=0
+ grnd[3].style.transform='scale(1)' 
  sbmrne[0].style.transform='scale(1)'
  sbmrne[1].style.background='#050'
  sbmrne[3].style.background='#050'
