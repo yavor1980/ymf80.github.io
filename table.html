@@ -401,42 +401,31 @@ bbtn2=1
 btn[2].onmouseover=()=>
 {
  btn[2].style.transform='scale(1.6)'
+ nrn[0].style.transform='scale(1.1)'
+ nrn[1].style.transform=
+  'scale(1.1) translate(111%,-111%)'
+ nrn[2].style.transform=
+  'scale(1.1) translate(111%,111%)' 
+ nrn[3].style.transform=
+  'scale(1.1) translate(266%,-188%)'
+ nrn[4].style.transform=
+  'scale(1.1) translate(299%,188%)' 
+ nrn[5].style.transform=
+  'scale(1.1) translate(333%,-88%)'
+ nrn[6].style.transform=
+  'scale(1.1) translate(333%,88%)'   
 }
 btn[2].onmouseout=()=>
 {
  btn[2].style.transform='scale(1.4)'
+ nrn[0].style.transform='scale(1)'
+ nrn[1].style.transform='scale(1)'
+ nrn[2].style.transform='scale(1)'
+ nrn[3].style.transform='scale(1)'
+ nrn[4].style.transform='scale(1)'
+ nrn[5].style.transform='scale(1)'
+ nrn[6].style.transform='scale(1)'
 }
-btn[2].onclick=()=>
-{
- if(bbtn2)
- {
-  nrn[0].style.transform='scale(1.1)'
-  nrn[1].style.transform=
-   'scale(1.1) translate(111%,-111%)'
-  nrn[2].style.transform=
-   'scale(1.1) translate(111%,111%)' 
-  nrn[3].style.transform=
-   'scale(1.1) translate(266%,-188%)'
-  nrn[4].style.transform=
-   'scale(1.1) translate(299%,188%)' 
-  nrn[5].style.transform=
-   'scale(1.1) translate(333%,-88%)'
-  nrn[6].style.transform=
-   'scale(1.1) translate(333%,88%)'   
- }
-  else
- {
-  nrn[0].style.transform='scale(1)'
-  nrn[1].style.transform='scale(1)'
-  nrn[2].style.transform='scale(1)'
-  nrn[3].style.transform='scale(1)'
-  nrn[4].style.transform='scale(1)'
-  nrn[5].style.transform='scale(1)'
-  nrn[6].style.transform='scale(1)'
-  
- } 
-  bbtn2=!bbtn2
-} 	 
 	 
 fcI=0
 fc[0].onmouseover=()=>
@@ -481,6 +470,12 @@ vtbl=[0,0,0,0,0,0,0,0,0]
 litd=0; itd=0 
 i=0
 setInterval(()=>{
+ snpse[0].style.transform=
+  'scale('+(3+Math.random()*2)+
+  ') translate(133%,-111%) rotate(-22deg)'
+ snpse[1].style.transform=
+  'scale('+(3+Math.random()*2)+
+  ') translate(133%,444%) rotate(22deg)'
  td[litd].style.transform='scale(1)'
  td[litd].style.border='5px ridge #f00'
  td[litd].style.background='#bbb'
