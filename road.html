@@ -78,6 +78,7 @@ body
   <div class=cr></div>
   <div class=cr> 
    <div class=fre></div>
+   <div class=fre></div>
   </div>
  </div>
 </div>
@@ -133,9 +134,8 @@ inn(cr,1, 2,11, 88,66, 'radial-gradient(#ff0,#550)')
  cr[1].style.borderBottomRightRadius='55%'
 inn(cr,2, 3,11, 88,66, 'radial-gradient(#ff0,#550)')
  cr[2].style.borderRadius='5%'
-inn(fre,0, 40,40, 29,17, 'radial-gradient(12px,#f00,#f0f)') 
- fre[0].style.opacity=0
-   
+inn(fre,0, 40,40, 29,17,'#000')  
+ 
 md[0].style.left='22%'
 md[0].style.top='3%'
 md[0].style.transform='scale(2)'
@@ -164,7 +164,6 @@ vctr[2].style.left='33%'
 vctr[2].style.top='92%'
 vctr[2].style.color='#000'
 vctr[2].style.transform='scale(0)'
- 
 vctr[3].style.left='33%'
 vctr[3].style.top='92%'
 vctr[3].style.color='#0ff'
@@ -237,18 +236,18 @@ cr[0].onmouseover=()=>
   'scale(2,1) translate(2%, 5%)'
  cr[2].style.borderBottomLeftRadius='44%'
  cr[2].style.borderBottomRightRadius='44%'
+ fre[0].style.background=
+    'radial-gradient(12px,#f00,#f0f)'
  md[1].style.transform='scale(3) '
  dlyI=setInterval(()=>
  {
   if(bdly)
   {
-   fre[0].style.opacity=0.4
    fre[0].style.transform='scale(2.6)'
    dly[0].style.transform='scale(3,5) skew(-33deg)'
    dly[1].style.transform='scale(3,3) skew(33deg)'
    dly[2].style.transform='scale(3,5) skew(-33deg)'
   }else{
-   fre[0].style.opacity=0.9
    fre[0].style.transform='scale(1.6)'
    dly[0].style.transform='scale(3,3) skew(33deg)'
    dly[1].style.transform='scale(3,5) skew(-33deg)'
@@ -263,7 +262,7 @@ cr[0].onmouseout=()=>
  cr[0].style.boxShadow='9px 9px'
  cr[1].style.transform='scale(0.1)'
  cr[2].style.borderRadius='5%'
- fre[0].style.opacity=0
+ fre[0].style.background='#000'
  fre[0].style.transform='scale(1)'
  md[1].style.transform='scale(0)'
  dly[0].style.transform='scale(0) skew(0deg)'
