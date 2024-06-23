@@ -71,6 +71,7 @@
 {
  position:absolute;
  transition:1s; 
+ cursor:pointer;
 }
 td
 {
@@ -305,7 +306,7 @@ dgrm[3].style.borderRadius=55+'%'
 dgrm[3].style.opacity=0
 	 
 dgrm[4].style.left=4+'%'
-dgrm[4].style.top=41+'%' 
+dgrm[4].style.top=38+'%' 
 dgrm[4].style.width=16+'%' 
 dgrm[4].style.height=23+'%'
 dgrm[4].style.background='#b00'
@@ -313,7 +314,7 @@ dgrm[4].style.borderRadius=55+'%'
 dgrm[4].style.opacity=0	
 
 dgrm[5].style.left=36+'%'
-dgrm[5].style.top=41+'%' 
+dgrm[5].style.top=38+'%' 
 dgrm[5].style.width=16+'%' 
 dgrm[5].style.height=23+'%' 
 dgrm[5].style.background='#b00'
@@ -321,7 +322,7 @@ dgrm[5].style.borderRadius=55+'%'
 dgrm[5].style.opacity=0
  
 dgrm[6].style.left=67+'%'
-dgrm[6].style.top=41+'%' 
+dgrm[6].style.top=38+'%' 
 dgrm[6].style.width=16+'%' 
 dgrm[6].style.height=23+'%' 
 dgrm[6].style.background='#b00'
@@ -329,7 +330,7 @@ dgrm[6].style.borderRadius=55+'%'
 dgrm[6].style.opacity=0	 
 
 dgrm[7].style.left=4+'%'
-dgrm[7].style.top=78+'%' 
+dgrm[7].style.bottom=4+'%' 
 dgrm[7].style.width=16+'%' 
 dgrm[7].style.height=23+'%'
 dgrm[7].style.background='#b00'
@@ -337,7 +338,7 @@ dgrm[7].style.borderRadius=55+'%'
 dgrm[7].style.opacity=0	
 
 dgrm[8].style.left=36+'%'
-dgrm[8].style.top=78+'%' 
+dgrm[8].style.bottom=4+'%'
 dgrm[8].style.width=16+'%' 
 dgrm[8].style.height=23+'%' 
 dgrm[8].style.background='#b00'
@@ -345,7 +346,7 @@ dgrm[8].style.borderRadius=55+'%'
 dgrm[8].style.opacity=0
  
 dgrm[9].style.left=67+'%'
-dgrm[9].style.top=78+'%' 
+dgrm[9].style.bottom=4+'%' 
 dgrm[9].style.width=16+'%' 
 dgrm[9].style.height=23+'%' 
 dgrm[9].style.background='#b00'
@@ -520,6 +521,9 @@ tbl[0].onmouseover=()=>
   dgrm[4].style.opacity=Math.random()
   dgrm[5].style.opacity=Math.random()
   dgrm[6].style.opacity=Math.random()
+  dgrm[7].style.opacity=Math.random()
+  dgrm[8].style.opacity=Math.random()
+  dgrm[9].style.opacity=Math.random()
   if(btbl0){
    tbl[2].style.transform=
     'scale(2) translate(33%,-77%) skew(-19deg)'
@@ -546,6 +550,9 @@ tbl[0].onmouseout=()=>
  dgrm[4].style.opacity=0
  dgrm[5].style.opacity=0
  dgrm[6].style.opacity=0
+ dgrm[7].style.opacity=0
+ dgrm[8].style.opacity=0
+ dgrm[9].style.opacity=0
  tbl[1].style.transform='scale(0)'
  tbl[2].style.transform='scale(0)'
  tbl[3].style.transform='scale(0)'
@@ -558,6 +565,15 @@ tbl[0].onclick=()=>
   vtbl[i]=0
    td[i].innerHTML=0
  } 
+}
+
+dgrm[0].onmouseover=()=>
+{
+ fc[0].onmouseover()
+}
+dgrm[0].onmouseout=()=>
+{
+ fc[0].onmouseout()
 }
 
 </script>
