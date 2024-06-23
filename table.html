@@ -67,10 +67,10 @@
  border-radius:50%;
 }
 
-.tbl
+.dgrm,.tbl
 {
- position:absolute;   
- transition:1s;
+ position:absolute;
+ transition:1s; 
 }
 td
 {
@@ -81,26 +81,6 @@ td
  border:5px ridge red;
 }
 
-.nrn
-{
- position:absolute;
- transition:1s; 
- border-radius:51%;
- text-align:center; 
- font-size:5em;
-}
-.snpse
-{
- position:absolute;
- transition:1s; 
- width:22%;
- height:3%;
- background:#b00;
- border-top-right-radius:51%;
- border-bottom-right-radius:51%;
- transform:scale(0);
-}
-
 </style>
 </head>
 
@@ -109,7 +89,6 @@ td
  <div class=tbtn>change td bckgrnd...</div>
 <button class=btn>clr</button>
  <div class=tbtn>clear td bckgrnd...</div>
-<button class=btn>neiro</button>
 
 <div id=idfc>
  <div class=fc>
@@ -161,6 +140,18 @@ td
  to define dimentions
 </div>
 
+<div class=dgrm>
+ <div class=dgrm></div>
+ <div class=dgrm></div>
+ <div class=dgrm></div>
+ <div class=dgrm></div>
+ <div class=dgrm></div>
+ <div class=dgrm></div>
+ <div class=dgrm></div>
+ <div class=dgrm></div>
+ <div class=dgrm></div>
+</div>
+
 <script>
 btn=document.getElementsByClassName('btn')
 tbtn=document.getElementsByClassName('tbtn')
@@ -170,6 +161,7 @@ zr=document.getElementsByClassName('zr')
 bd=document.getElementsByClassName('bd')
 lg=document.getElementsByClassName('lg')
   
+dgrm=document.getElementsByClassName('dgrm')  
 tbl=document.getElementsByClassName('tbl')
 td=document.getElementsByTagName('td')
   
@@ -180,12 +172,6 @@ btn[0].style.color='#f00'
 btn[1].style.left=14+'%'
 btn[1].style.top=3+'%'  
 btn[1].style.color='#00f'
-
-btn[2].style.left=27+'%'
-btn[2].style.top=5+'%'  
-btn[2].style.background='#f0f'
-btn[2].style.color='#fff'
-btn[2].style.transform='scale(1.4)'
     
 tbtn[0].style.left=44+'%'
 tbtn[0].style.top=3+'%' 
@@ -240,98 +226,152 @@ bd[0].style.zIndex=-1
 bd[0].style.borderTopLeftRadius=5+'%'
 bd[0].style.borderTopRightRadius=5+'%'
 	 
+bd[1].style.left=-11+'%'	 
 bd[1].style.top=4+'%'
-bd[1].style.left=-11+'%'
 bd[1].style.width=22+'%'
 bd[1].style.height=38+'%'
 bd[1].style.background='#550'
 
-bd[2].style.top=66+'%'
 bd[2].style.left=11+'%'
+bd[2].style.top=66+'%'
 bd[2].style.width=99+'%'
 bd[2].style.height=111+'%'
 bd[2].style.background='#770'
 	 	
+bd[3].style.left=88+'%'		
 bd[3].style.top=4+'%'
-bd[3].style.left=88+'%'
 bd[3].style.width=22+'%'
 bd[3].style.height=38+'%'
 bd[3].style.background='#550'
 	 
+bd[4].style.left=11+'%'	 
 bd[4].style.top=66+'%'
-bd[4].style.left=11+'%'
 bd[4].style.width=99+'%'
 bd[4].style.height=111+'%'
 bd[4].style.background='#770'
 	
-lg[0].style.top=77+'%'
 lg[0].style.left=11+'%'
-lg[0].style.zIndex=-1
+lg[0].style.top=77+'%'
 lg[0].style.background='#990'	 
+lg[0].style.zIndex=-1
 
-lg[1].style.top=77+'%'
 lg[1].style.left=0+'%'
+lg[1].style.top=77+'%'
 lg[1].style.width=99+'%'
 lg[1].style.height=155+'%'
 lg[1].style.background='#bb0'
 lg[1].style.zIndex=-1
 	 
+lg[2].style.left=72+'%' 
 lg[2].style.top=77+'%'
-lg[2].style.left=72+'%'
-lg[2].style.zIndex=-1
 lg[2].style.background='#990' 
+lg[2].style.zIndex=-1
 
-lg[3].style.top=77+'%'
 lg[3].style.left=0+'%'
+lg[3].style.top=77+'%'
 lg[3].style.width=99+'%'
 lg[3].style.height=155+'%'
 lg[3].style.background='#bb0'
 	 
-tbl[0].style.cursor='pointer'	 
-tbl[0].style.left=12+'%'
+dgrm[0].style.left=44+'%'
+dgrm[0].style.top=33+'%' 
+dgrm[0].style.width=33+'%' 
+dgrm[0].style.height=44+'%' 
+dgrm[0].style.background='#0bb'
+dgrm[0].style.borderRadius=11+'%'
+
+dgrm[1].style.left=4+'%'
+dgrm[1].style.top=4+'%' 
+dgrm[1].style.width=16+'%' 
+dgrm[1].style.height=23+'%'
+dgrm[1].style.background='#b00'
+dgrm[1].style.borderRadius=55+'%'
+dgrm[1].style.opacity=0	
+
+dgrm[2].style.left=36+'%'
+dgrm[2].style.top=4+'%' 
+dgrm[2].style.width=16+'%' 
+dgrm[2].style.height=23+'%' 
+dgrm[2].style.background='#b00'
+dgrm[2].style.borderRadius=55+'%'
+dgrm[2].style.opacity=0
+ 
+dgrm[3].style.left=67+'%'
+dgrm[3].style.top=4+'%' 
+dgrm[3].style.width=16+'%' 
+dgrm[3].style.height=23+'%' 
+dgrm[3].style.background='#b00'
+dgrm[3].style.borderRadius=55+'%' 
+dgrm[3].style.opacity=0
+	 
+dgrm[4].style.left=4+'%'
+dgrm[4].style.top=41+'%' 
+dgrm[4].style.width=16+'%' 
+dgrm[4].style.height=23+'%'
+dgrm[4].style.background='#b00'
+dgrm[4].style.borderRadius=55+'%'
+dgrm[4].style.opacity=0	
+
+dgrm[5].style.left=36+'%'
+dgrm[5].style.top=41+'%' 
+dgrm[5].style.width=16+'%' 
+dgrm[5].style.height=23+'%' 
+dgrm[5].style.background='#b00'
+dgrm[5].style.borderRadius=55+'%'
+dgrm[5].style.opacity=0
+ 
+dgrm[6].style.left=67+'%'
+dgrm[6].style.top=41+'%' 
+dgrm[6].style.width=16+'%' 
+dgrm[6].style.height=23+'%' 
+dgrm[6].style.background='#b00'
+dgrm[6].style.borderRadius=55+'%' 
+dgrm[6].style.opacity=0	 
+
+dgrm[7].style.left=4+'%'
+dgrm[7].style.top=78+'%' 
+dgrm[7].style.width=16+'%' 
+dgrm[7].style.height=23+'%'
+dgrm[7].style.background='#b00'
+dgrm[7].style.borderRadius=55+'%'
+dgrm[7].style.opacity=0	
+
+dgrm[8].style.left=36+'%'
+dgrm[8].style.top=78+'%' 
+dgrm[8].style.width=16+'%' 
+dgrm[8].style.height=23+'%' 
+dgrm[8].style.background='#b00'
+dgrm[8].style.borderRadius=55+'%'
+dgrm[8].style.opacity=0
+ 
+dgrm[9].style.left=67+'%'
+dgrm[9].style.top=78+'%' 
+dgrm[9].style.width=16+'%' 
+dgrm[9].style.height=23+'%' 
+dgrm[9].style.background='#b00'
+dgrm[9].style.borderRadius=55+'%' 
+dgrm[9].style.opacity=0	 
+
+tbl[0].style.left=13+'%'
 tbl[0].style.top=22+'%' 
 tbl[0].style.border='5px ridge #00f'
+tbl[0].style.cursor='pointer'
 tbl[0].style.transform='scale(2)'
 	
-tbl[1].style.color='#f00'
 tbl[1].style.left=7+'%'
 tbl[1].style.top=66+'%' 
+tbl[1].style.color='#f00'
 tbl[1].style.transform='scale(0)'
 	 
-tbl[2].style.color='#f0f'
 tbl[2].style.left=7+'%'
 tbl[2].style.top=69+'%' 
+tbl[2].style.color='#f0f'
 tbl[2].style.transform='scale(0)'
 	
-tbl[3].style.color='#777'
 tbl[3].style.left=7+'%'
 tbl[3].style.top=77+'%' 
+tbl[3].style.color='#777'
 tbl[3].style.transform='scale(0)'
-	
-nrn=[]	
-for(i=0;i<7;i++)	
-{
- nrn[i]=document.createElement('div')
- nrn[i].className='nrn'
-  idbd.appendChild(nrn[i])	
- nrn[i].style.left=44+'%'
- nrn[i].style.top=33+'%'
- nrn[i].style.background='#f0f'
-  nrn[i].innerHTML='N'
-  snpse=[]
- for(j=0;j<2;j++)	
- {
-  snpse[j]=document.createElement('div')
-  snpse[j].className='snpse'
-   nrn[i].appendChild(snpse[j])	
-   snpse[j].style.left=44+'%'   
-   snpse[j].style.top=33+'%'
- }	 
- snpse[0].style.transform=
-  'scale(3) translate(133%,-111%) rotate(-22deg)'
- snpse[1].style.transform=
-  'scale(3) translate(133%,444%) rotate(22deg)'
-}	
 	
 b=0
 function cl()
@@ -396,36 +436,6 @@ btn[1].onclick=()=>
  for(i=0;i<9;i++)
   td[i].style.background='#bbb'
 } 	 
-
-bbtn2=1
-btn[2].onmouseover=()=>
-{
- btn[2].style.transform='scale(1.6)'
- nrn[0].style.transform='scale(1.1)'
- nrn[1].style.transform=
-  'scale(1.1) translate(111%,-111%)'
- nrn[2].style.transform=
-  'scale(1.1) translate(111%,111%)' 
- nrn[3].style.transform=
-  'scale(1.1) translate(266%,-188%)'
- nrn[4].style.transform=
-  'scale(1.1) translate(299%,188%)' 
- nrn[5].style.transform=
-  'scale(1.1) translate(333%,-88%)'
- nrn[6].style.transform=
-  'scale(1.1) translate(333%,88%)'   
-}
-btn[2].onmouseout=()=>
-{
- btn[2].style.transform='scale(1.4)'
- nrn[0].style.transform='scale(1)'
- nrn[1].style.transform='scale(1)'
- nrn[2].style.transform='scale(1)'
- nrn[3].style.transform='scale(1)'
- nrn[4].style.transform='scale(1)'
- nrn[5].style.transform='scale(1)'
- nrn[6].style.transform='scale(1)'
-}
 	 
 fcI=0
 fc[0].onmouseover=()=>
@@ -470,12 +480,6 @@ vtbl=[0,0,0,0,0,0,0,0,0]
 litd=0; itd=0 
 i=0
 setInterval(()=>{
- snpse[0].style.transform=
-  'scale('+(3+Math.random()*2)+
-  ') translate(133%,-111%) rotate(-22deg)'
- snpse[1].style.transform=
-  'scale('+(3+Math.random()*2)+
-  ') translate(133%,444%) rotate(22deg)'
  td[litd].style.transform='scale(1)'
  td[litd].style.border='5px ridge #f00'
  td[litd].style.background='#bbb'
@@ -494,10 +498,28 @@ Itbl0=0
 btbl0=0  
 tbl[0].onmouseover=()=>
 {
+ dgrm[0].style.border='12px ridge #ff0'
+ dgrm[0].style.transform=
+  'scale(1.2) translate(9%,0%)'
+ dgrm[1].style.opacity=0.2
+ dgrm[2].style.opacity=0.2
+ dgrm[3].style.opacity=0.2
+ dgrm[4].style.opacity=0.2
+ dgrm[5].style.opacity=0.2
+ dgrm[6].style.opacity=0.2
+ dgrm[7].style.opacity=0.2
+ dgrm[8].style.opacity=0.2
+ dgrm[9].style.opacity=0.2
  tbl[1].style.transform=
   'scale(2) translate(33%,-177%) skew(19deg)'
  Itbl0=setInterval(()=>
  {
+  dgrm[1].style.opacity=Math.random()
+  dgrm[2].style.opacity=Math.random()
+  dgrm[3].style.opacity=Math.random()
+  dgrm[4].style.opacity=Math.random()
+  dgrm[5].style.opacity=Math.random()
+  dgrm[6].style.opacity=Math.random()
   if(btbl0){
    tbl[2].style.transform=
     'scale(2) translate(33%,-77%) skew(-19deg)'
@@ -516,6 +538,14 @@ tbl[0].onmouseover=()=>
 }
 tbl[0].onmouseout=()=>
 {
+ dgrm[0].style.border='none'
+ dgrm[0].style.transform='scale(1)'
+ dgrm[1].style.opacity=0
+ dgrm[2].style.opacity=0
+ dgrm[3].style.opacity=0
+ dgrm[4].style.opacity=0
+ dgrm[5].style.opacity=0
+ dgrm[6].style.opacity=0
  tbl[1].style.transform='scale(0)'
  tbl[2].style.transform='scale(0)'
  tbl[3].style.transform='scale(0)'
