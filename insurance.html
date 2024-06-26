@@ -9,6 +9,10 @@
 {
  background:linear-gradient(0deg,#0b0,#0bb);
 }
+input
+{
+ border-radius:21%;   
+}
 
 .btn
 {
@@ -21,46 +25,45 @@
 </style>
 <div class=btn>
  <div class=btn>Insurance</div>
- <input type=button class=btn value >
- <input type=button class=btn value=''>
+ <input type=submit class=btn value='auto' >
+ <input type=submit class=btn value='health'>
 </div>
 <script>
 btn=document.getElementsByClassName('btn')
 	
 	
-btn[0].style.left=5+'%'
+btn[0].style.left=15+'%'
 btn[0].style.top=11+'%'  
 btn[0].style.width=34+'%'
 btn[0].style.height=18+'%'
 btn[0].style.background='#f0f'
 btn[0].style.borderRadius=12+'%'
+btn[0].style.transform='scale(1.2)'
 
-btn[1].style.left=5+'%'
-btn[1].style.top=33+'%'
-btn[1].style.width=48+'%'
-btn[1].style.height=44+'%'
+btn[1].style.left=33+'%'
+btn[1].style.top=6+'%'
+btn[1].style.transform='scale(3) skew(12deg)'
 
-btn[2].style.right=2+'%'
-btn[2].style.top=1+'%'
-btn[2].style.width=48+'%'
-btn[2].style.height=44+'%'
+btn[2].style.left=11+'%'
+btn[2].style.top=55+'%'
+btn[2].style.transform='scale(2)'
+
+btn[3].style.left=39+'%'
+btn[3].style.top=55+'%'
+btn[3].style.transform='scale(2)'
   
 bbtn2=0  
-btn[2].onmouseover=()=>
+btn[0].onmouseover=()=>
 { 
- 
+ btn[0].style.transform='scale(1.4)'
+ btn[1].style.transform='scale(3.4)'
 }
 btn[0].onmouseout=()=>
 { 
- if(bbtn2!=0)
- {
-  btn[0].style.transform='scale(1)'
- } 
+ btn[0].style.transform='scale(1.2)'
+ btn[1].style.transform='scale(3) skew(12deg)'
 } 
-btn[0].onclick=()=>
-{ 
- bbtn2=!bbtn2
-}
+
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
