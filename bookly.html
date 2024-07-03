@@ -10,6 +10,11 @@
  background:radial-gradient(#066,#0bb);
 }
 
+li
+{
+ opacity:0;   
+}
+
 .btn
 {
  position:absolute;   
@@ -18,6 +23,25 @@
 }
 
 .bdy
+{
+ position:absolute;   
+ transition:1s;
+ font-size:1.7em;
+}
+
+.oftm
+{
+ position:absolute;   
+ transition:1s;
+ font-size:1.7em;
+}
+.chftm
+{
+ position:absolute;   
+ transition:1s;
+ font-size:1.7em;
+}
+.tftm
 {
  position:absolute;   
  transition:1s;
@@ -35,7 +59,11 @@
 </div>
 
 <div class=bdy>
- <textarea class=bdy value></textarea>
+ <div class=bdy>
+  <li>meeting</li>
+  <li>seminar</li>
+  <li>exposition</li>
+ </div>
  <input type='submit' class=bdy value='order'>
  <input type='submit' class=bdy value='change'>
  <input type='submit' class=bdy value='turn'>
@@ -43,6 +71,7 @@
 </div>  
 
 <script>
+li=document.getElementsByTagName('li')
 btn=document.getElementsByClassName('btn')
 bdy=document.getElementsByClassName('bdy')
 
@@ -94,24 +123,36 @@ bdy[0].style.zIndex=-1
 bdy[1].style.left=5+'%'
 bdy[1].style.top=13+'%'  
 bdy[1].style.width=33+'%'
+bdy[1].style.background='#ff0'
 bdy[1].style.cursor='pointer'
 
 bdy[2].style.left=40+'%'
 bdy[2].style.top=13+'%'
+bdy[2].style.color='#00f'
 bdy[2].style.borderRadius=12+'%'
 bdy[2].style.cursor='pointer'
   
 bdy[3].style.left=55+'%'
 bdy[3].style.top=13+'%'
+bdy[3].style.color='#080'
 bdy[3].style.borderRadius=12+'%'
 bdy[3].style.cursor='pointer'
   
 bdy[4].style.left=75+'%'
 bdy[4].style.top=13+'%' 
+bdy[4].style.color='#090'
 bdy[4].style.borderRadius=12+'%'
 bdy[4].style.cursor='pointer'
+
+bdy[5].style.left=87+'%'
+bdy[5].style.top=13+'%' 
+bdy[5].style.background='#f00'
+bdy[5].style.color='#fff'
+bdy[5].style.borderRadius=12+'%'
+bdy[5].style.cursor='pointer'
   
-//bbtn2=  
+
+
 btn[0].onmouseover=()=>
 { 
  btn[0].style.height=39+'%'
@@ -135,21 +176,43 @@ btn[3].onclick=()=>
 { 
  btn[0].style.opacity=0
  btn[0].style.zIndex=-1
+ btn[1].style.opacity=1
  bdy[0].style.height=37+'%'
  bdy[0].style.opacity=1
  bdy[0].style.transform='translate(0,-23%)'
  bdy[0].style.zIndex=1
+  bdy[1].value='jio'
+ li[0].style.opacity=1
+ li[1].style.opacity=1
+ li[2].style.opacity=1
 }
 
-bdy[2].onclick=()=>
+bdy[5].onclick=()=>
 { 
  btn[0].style.opacity=1
  btn[0].style.zIndex=1
+ btn[1].style.opacity=0
  bdy[0].style.zIndex=-1
   bdy[0].style.height=22+'%'
  bdy[0].style.opacity=0.3
  bdy[0].style.transform='scale(1)'
+ li[0].style.opacity=0
+ li[1].style.opacity=0
+ li[2].style.opacity=0
 }
+
+function fli(nm,i)
+{
+ nm[i].onmouseover=()=>
+ { 
+  nm[i].style.color='#f00'
+ } 
+ nm[i].onmouseout=()=>
+ {  
+  nm[i].style.color='#000'
+ } 
+}
+ fli(li,0),fli(li,1),fli(li,2)
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
