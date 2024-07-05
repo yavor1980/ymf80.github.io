@@ -15,39 +15,18 @@ li
  opacity:0;   
 }
 
-.btn
+.btn,.bdy
 {
  position:absolute;   
  transition:1s;
  font-size:1.7em;
 }
 
-.bdy
+.oftm,.chftm,.tftm
 {
  position:absolute;   
  transition:1s;
- font-size:1.7em;
 }
-
-.oftm
-{
- position:absolute;   
- transition:1s;
- font-size:1.7em;
-}
-.chftm
-{
- position:absolute;   
- transition:1s;
- font-size:1.7em;
-}
-.tftm
-{
- position:absolute;   
- transition:1s;
- font-size:1.7em;
-}
-
 
 </style>
 <div class=btn>
@@ -67,13 +46,26 @@ li
  <input type='submit' class=bdy value='order'>
  <input type='submit' class=bdy value='change'>
  <input type='submit' class=bdy value='turn'>
- <input type='submit' class=bdy value='start'>
+ <input type='submit' class=bdy value='send'>
+ <div class=oftm>
+  <input class=oftm value>
+  <input type='submit' class=oftm value='on'>
+ </div>
+ <div class=chftm>
+  <div class=chftm></div>
+ </div>
+ <div class=tftm>
+  <div class=tftm></div>
+ </div>
 </div>  
 
 <script>
 li=document.getElementsByTagName('li')
 btn=document.getElementsByClassName('btn')
 bdy=document.getElementsByClassName('bdy')
+oftm=document.getElementsByClassName('oftm')
+chftm=document.getElementsByClassName('chftm')
+tftm=document.getElementsByClassName('tftm')
 
 btn[0].style.left=5+'%'
 btn[0].style.top=4+'%'  
@@ -124,6 +116,7 @@ bdy[1].style.left=5+'%'
 bdy[1].style.top=13+'%'  
 bdy[1].style.width=33+'%'
 bdy[1].style.background='#ff0'
+bdy[1].style.transform='scale(1,0)'
 bdy[1].style.cursor='pointer'
 
 bdy[2].style.left=40+'%'
@@ -151,7 +144,28 @@ bdy[5].style.color='#fff'
 bdy[5].style.borderRadius=12+'%'
 bdy[5].style.cursor='pointer'
   
-
+function innf(nm,i,l,t,w,h,bck)
+{
+ nm[i].style.left=l+'%'
+ nm[i].style.top=t+'%'  
+ nm[i].style.width=w+'%'
+ nm[i].style.height=h+'%'
+ nm[i].style.background=bck
+ nm[i].style.borderRadius=12+'%'
+}
+ innf(oftm,0,48,53,7,18,'#00f') 
+  oftm[0].style.transform='scale(0)'
+ innf(oftm,1,4,4,94,'','#fff')
+ innf(oftm,2,46,48,'','','#888')
+  oftm[2].style.transform='scale(0.7)'
+ 
+ innf(chftm,0,55,55,7,8,'#00b')
+  chftm[0].style.transform='scale(0)'
+ innf(chftm,1,44,44,44,44,'#900')
+ 
+ innf(tftm,0,75,75,7,8,'#009')
+  tftm[0].style.transform='scale(0)'
+ innf(tftm,1,44,44,44,44,'#b00')
 
 btn[0].onmouseover=()=>
 { 
@@ -176,43 +190,81 @@ btn[3].onclick=()=>
 { 
  btn[0].style.opacity=0
  btn[0].style.zIndex=-1
- btn[1].style.opacity=1
  bdy[0].style.height=37+'%'
  bdy[0].style.opacity=1
  bdy[0].style.transform='translate(0,-23%)'
  bdy[0].style.zIndex=1
-  bdy[1].value='jio'
+ bdy[1].style.transform='scale(1)'
  li[0].style.opacity=1
  li[1].style.opacity=1
  li[2].style.opacity=1
 }
 
+bdy[2].onclick=()=>
+{ 
+ oftm[0].style.transform='scale(4)'
+ chftm[0].style.transform='scale(0)'
+ tftm[0].style.transform='scale(0)'
+} 
+bdy[3].onclick=()=>
+{ 
+ oftm[0].style.transform='scale(0)'
+ chftm[0].style.transform='scale(4)'
+ tftm[0].style.transform='scale(0)'
+} 
+bdy[4].onclick=()=>
+{ 
+ oftm[0].style.transform='scale(0)'
+ chftm[0].style.transform='scale(0)'
+ tftm[0].style.transform='scale(4)'
+} 
+
+oftm[0].onclick=()=>
+{ 
+ oftm[0].style.transform='scale(0)'
+} 
+chftm[0].onclick=()=>
+{ 
+ chftm[0].style.transform='scale(0)'
+} 
+tftm[0].onclick=()=>
+{ 
+ tftm[0].style.transform='scale(0)'
+} 
+
 bdy[5].onclick=()=>
 { 
  btn[0].style.opacity=1
  btn[0].style.zIndex=1
- btn[1].style.opacity=0
  bdy[0].style.zIndex=-1
   bdy[0].style.height=22+'%'
  bdy[0].style.opacity=0.3
- bdy[0].style.transform='scale(1)'
+ bdy[1].style.transform='scale(1,0)'
  li[0].style.opacity=0
  li[1].style.opacity=0
  li[2].style.opacity=0
+ oftm[0].style.transform='scale(0)'
+ chftm[0].style.transform='scale(0)'
+ tftm[0].style.transform='scale(0)'
 }
 
-function fli(nm,i)
-{
+
+function actli(nm,i)
+{bli=0
  nm[i].onmouseover=()=>
  { 
   nm[i].style.color='#f00'
  } 
  nm[i].onmouseout=()=>
  {  
-  nm[i].style.color='#000'
+  if(!bli) nm[i].style.color='#000'
+ } 
+ nm[i].onclick=()=>
+ { 
+  oftm[1].value=li[i].innerHTML
  } 
 }
- fli(li,0),fli(li,1),fli(li,2)
+ actli(li,0), actli(li,1), actli(li,2)
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
