@@ -49,10 +49,12 @@ li
  <input type='submit' class=bdy value='send'>
  <div class=oftm>
   <input class=oftm value>
-  <input type='submit' class=oftm value='on'>
+  <input type='submit' class=oftm value='ok'>
  </div>
  <div class=chftm>
-  <div class=chftm></div>
+  <input class=chftm value>
+  <input class=chftm value>
+  <input type='submit' class=chftm value='ok'>
  </div>
  <div class=tftm>
   <div class=tftm></div>
@@ -74,30 +76,25 @@ btn[0].style.height=22+'%'
 btn[0].style.background='#f0f'
 btn[0].style.borderRadius=12+'%'
 btn[0].style.zIndex=1
-
 btn[1].style.left=5+'%'
 btn[1].style.top=8+'%'
 btn[1].style.width=8+'px'
 btn[1].style.transform=
  'scale(1.2) skew(-11deg)'
-
 btn[2].style.left=30+'%'
 btn[2].style.top=8+'%'
 btn[2].style.width=288+'px'
-
 btn[3].style.left=74+'%'
 btn[3].style.top=8+'%'
 btn[3].style.background='#888'
 btn[3].style.borderRadius=22+'%'
 btn[3].style.cursor='pointer'
-
 btn[4].style.left=5+'%'
 btn[4].style.top=48+'%'
 btn[4].style.width=8+'px'
 btn[4].style.transform=
  'scale(1.2) skew(-11deg)'
 btn[4].style.opacity=0
-
 btn[5].style.left=27+'%'
 btn[5].style.top=48+'%'
 btn[5].style.width=188+'px'
@@ -111,32 +108,27 @@ bdy[0].style.background='#880'
 bdy[0].style.borderRadius=12+'%'
 bdy[0].style.opacity=0.3
 bdy[0].style.zIndex=-1
-
 bdy[1].style.left=5+'%'
 bdy[1].style.top=13+'%'  
 bdy[1].style.width=33+'%'
 bdy[1].style.background='#ff0'
 bdy[1].style.transform='scale(1,0)'
 bdy[1].style.cursor='pointer'
-
 bdy[2].style.left=40+'%'
 bdy[2].style.top=13+'%'
 bdy[2].style.color='#00f'
 bdy[2].style.borderRadius=12+'%'
 bdy[2].style.cursor='pointer'
-  
 bdy[3].style.left=55+'%'
 bdy[3].style.top=13+'%'
 bdy[3].style.color='#080'
 bdy[3].style.borderRadius=12+'%'
 bdy[3].style.cursor='pointer'
-  
 bdy[4].style.left=75+'%'
 bdy[4].style.top=13+'%' 
 bdy[4].style.color='#090'
 bdy[4].style.borderRadius=12+'%'
 bdy[4].style.cursor='pointer'
-
 bdy[5].style.left=87+'%'
 bdy[5].style.top=13+'%' 
 bdy[5].style.background='#f00'
@@ -144,28 +136,53 @@ bdy[5].style.color='#fff'
 bdy[5].style.borderRadius=12+'%'
 bdy[5].style.cursor='pointer'
   
-function innf(nm,i,l,t,w,h,bck)
-{
- nm[i].style.left=l+'%'
- nm[i].style.top=t+'%'  
- nm[i].style.width=w+'%'
- nm[i].style.height=h+'%'
- nm[i].style.background=bck
- nm[i].style.borderRadius=12+'%'
-}
- innf(oftm,0,48,53,7,18,'#00f') 
-  oftm[0].style.transform='scale(0)'
- innf(oftm,1,4,4,94,'','#fff')
- innf(oftm,2,46,48,'','','#888')
-  oftm[2].style.transform='scale(0.7)'
- 
- innf(chftm,0,55,55,7,8,'#00b')
-  chftm[0].style.transform='scale(0)'
- innf(chftm,1,44,44,44,44,'#900')
- 
- innf(tftm,0,75,75,7,8,'#009')
-  tftm[0].style.transform='scale(0)'
- innf(tftm,1,44,44,44,44,'#b00')
+oftm[0].style.left=48+'%'
+oftm[0].style.top=53+'%'  
+oftm[0].style.width=7+'%'
+oftm[0].style.height=18+'%'
+oftm[0].style.background='#00f'
+oftm[0].style.borderRadius=12+'%'
+oftm[0].style.transform='scale(0)'
+oftm[1].style.left=4+'%'
+oftm[1].style.top=4+'%'  
+oftm[1].style.width=94+'%'
+oftm[1].style.background='#fff'
+oftm[1].style.borderRadius=12+'%'
+oftm[2].style.left=36+'%'
+oftm[2].style.top=48+'%'  
+oftm[2].style.background='#888'
+oftm[2].style.borderRadius=12+'%'
+oftm[2].style.transform='scale(0.7)'
+oftm[2].style.cursor='pointer'
+
+chftm[0].style.left=55+'%'
+chftm[0].style.top=55+'%' 
+chftm[0].style.width=7+'%'
+chftm[0].style.height=8+'%' 
+chftm[0].style.background='#00b'
+chftm[0].style.transform='scale(0)'
+chftm[0].style.transform='scale(0)'
+chftm[1].style.left=19+'%'
+chftm[1].style.width=9+'%'
+chftm[1].style.height=9+'%'
+chftm[2].style.left=19+'%'
+chftm[2].style.width=19+'%'
+chftm[2].style.height=9+'%'
+chftm[3].style.width=9+'%'
+chftm[3].style.height=39+'%'
+
+tftm[0].style.left=75+'%'
+tftm[0].style.top=75+'%' 
+tftm[0].style.width=7+'%'
+tftm[0].style.height=8+'%' 
+tftm[0].style.background='#009' 
+tftm[0].style.transform='scale(0)'
+tftm[1].style.left=+'%'
+tftm[1].style.top=+'%' 
+tftm[1].style.width=+'%'
+tftm[1].style.height=+'%' 
+tftm[1].style.background='#b00' 
+tftm[1].style.transform='scale(0)'
 
 btn[0].onmouseover=()=>
 { 
@@ -219,7 +236,7 @@ bdy[4].onclick=()=>
  tftm[0].style.transform='scale(4)'
 } 
 
-oftm[0].onclick=()=>
+oftm[2].onclick=()=>
 { 
  oftm[0].style.transform='scale(0)'
 } 
