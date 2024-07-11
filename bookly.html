@@ -28,13 +28,20 @@ li
  transition:1s;
 }
 
+.lst
+{
+ position:absolute;   
+ transition:1s;
+}
+
 </style>
+
 <div class=btn>
  <div class=btn> name:</div>
  <input type class=btn value='' >
  <input type=submit class=btn value='send'>
   <div class=btn> PW:</div>
-  <input type='number' class=btn value='' >
+  <input type class=btn value='' >
 </div>
 
 <div class=bdy>
@@ -60,8 +67,11 @@ li
    <input class=tftm>
    <input type='submit' class=tftm value='ok'>
   </div>
+  <div class=lst>
+   <div class=lst></div> 
+  </div>
 </div>  
-
+ 
 <script>
 li=document.getElementsByTagName('li')
 btn=document.getElementsByClassName('btn')
@@ -69,6 +79,7 @@ bdy=document.getElementsByClassName('bdy')
  oftm=document.getElementsByClassName('oftm')
  chftm=document.getElementsByClassName('chftm')
  tftm=document.getElementsByClassName('tftm')
+lst=document.getElementsByClassName('lst') 
 
 btn[0].style.left=5+'%'
 btn[0].style.top=4+'%'  
@@ -104,7 +115,7 @@ btn[5].style.opacity=0
 bdy[0].style.left=5+'%'
 bdy[0].style.top=34+'%'  
 bdy[0].style.width=88+'%'
-bdy[0].style.height=22+'%'
+bdy[0].style.height=55+'%'
 bdy[0].style.background='#880'
 bdy[0].style.borderRadius=12+'%'
 bdy[0].style.opacity=0.3
@@ -147,7 +158,6 @@ oftm[0].style.transform='scale(0)'
 oftm[1].style.left=4+'%'
 oftm[1].style.top=4+'%'  
 oftm[1].style.width=94+'%'
-oftm[1].style.background='#fff'
 oftm[1].style.borderRadius=12+'%'
 oftm[2].style.left=36+'%'
 oftm[2].style.top=48+'%'  
@@ -173,8 +183,7 @@ chftm[2].style.width=77+'%'
 chftm[2].style.height=23+'%'
 chftm[3].style.left=33+'%'
 chftm[3].style.bottom=1+'%'
-chftm[3].style.background='#c00'
-chftm[3].style.color='#0f0'
+chftm[3].style.background='#bb0'
 chftm[3].style.pedding=0
 chftm[3].style.cursor='pointer'
 chftm[3].style.transform='scale(0.7)'
@@ -182,7 +191,7 @@ chftm[3].style.transform='scale(0.7)'
 tftm[0].style.left=75+'%'
 tftm[0].style.top=75+'%' 
 tftm[0].style.width=7+'%'
-tftm[0].style.height=18+'%' 
+tftm[0].style.height=8+'%' 
 tftm[0].style.background='#009' 
 tftm[0].style.borderRadius=12+'%'
 tftm[0].style.transform='scale(0)'
@@ -192,6 +201,19 @@ tftm[1].style.width=77+'%'
 tftm[1].style.height=23+'%'
 tftm[2].style.left=33+'%'
 tftm[2].style.top=44+'%' 
+tftm[2].style.background='#f0f'
+tftm[2].style.cursor='pointer'
+tftm[2].style.transform='scale(0.7)'
+
+lst[0].style.left=58+'%'
+lst[0].style.top=35+'%' 
+lst[0].style.width=33+'%'
+lst[0].style.height=33+'%' 
+lst[0].style.background='#979'
+lst[0].style.borderRadius=8+'%'
+lst[0].style.cursor='pointer'
+lst[0].style.zIndex=-1
+lst[0].style.transform='scale(1,0)'
 
 
 btn[0].onmouseover=()=>
@@ -201,7 +223,7 @@ btn[0].onmouseover=()=>
   btn[2].value='&&&&&'
  btn[4].style.opacity=1
  btn[5].style.opacity=1
-  btn[5].value='0000'
+  btn[5].value='****'
 }
 btn[0].onmouseout=()=>
 {  
@@ -217,11 +239,12 @@ btn[3].onclick=()=>
 { 
  btn[0].style.opacity=0
  btn[0].style.zIndex=-1
- bdy[0].style.height=37+'%'
+ bdy[0].style.height=66+'%'
  bdy[0].style.opacity=1
  bdy[0].style.transform='translate(0,-23%)'
  bdy[0].style.zIndex=1
  bdy[1].style.transform='scale(1)'
+ lst[0].style.transform='scale(1)'
  li[0].style.opacity=1
  li[1].style.opacity=1
  li[2].style.opacity=1
@@ -264,9 +287,10 @@ bdy[5].onclick=()=>
  btn[0].style.opacity=1
  btn[0].style.zIndex=1
  bdy[0].style.zIndex=-1
-  bdy[0].style.height=22+'%'
+ bdy[0].style.height=55+'%'
  bdy[0].style.opacity=0.3
  bdy[1].style.transform='scale(1,0)'
+ lst[0].style.transform='scale(1,0)'
  li[0].style.opacity=0
  li[1].style.opacity=0
  li[2].style.opacity=0
@@ -274,7 +298,6 @@ bdy[5].onclick=()=>
  chftm[0].style.transform='scale(0)'
  tftm[0].style.transform='scale(0)'
 }
-
 
 function actli(nm,i)
 {bli=0
@@ -289,7 +312,6 @@ function actli(nm,i)
  nm[i].onclick=()=>
  { 
   oftm[1].value=li[i].innerHTML
-  chftm[1].value=li[i].innerHTML
  } 
 }
  actli(li,0), actli(li,1), actli(li,2)
