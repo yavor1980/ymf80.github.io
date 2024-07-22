@@ -37,6 +37,7 @@
  <div class=pnel></div>
  <div class=pnel></div>
  <div class=pnel></div>
+  <div class=pnel>solar<br> panel...</div>
 </div> 
  
 <script>
@@ -94,6 +95,9 @@ inp(3,72,2,26,44,'#333')
 inp(4,2,50,26,44,'#333')
 inp(5,31,50,37,44,'#333')
 inp(6,72,50,26,44,'#333')
+inp(7,99,44,'','','')
+ pnel[7].style.color='#f00'
+ pnel[7].style.transform='scale(0)'
 
 Idsply=0; vdspl=0
 dsply[0].onmouseover=()=>
@@ -143,10 +147,13 @@ dsply[0].onmouseout=()=>
 pnel[0].onmouseover=()=>
 {
  pnel[0].style.transform='scale(1.2)'
+ pnel[7].style.transform=
+  'scale(4) translate(88%,-11%) skew(22deg)'
 }
 pnel[0].onmouseout=()=>
 {
  pnel[0].style.transform='scale(1)'
+ pnel[7].style.transform='scale(0)'
 } 
  
 </script>

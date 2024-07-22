@@ -47,12 +47,13 @@ li
 <div class=bdy>
  <div class=bdy>
   <li>meeting</li>
+  <li>expo1</li>
   <li>seminar</li>
   <li>exposition</li>
  </div>
  <input type='submit' class=bdy value='order'>
  <input type='submit' class=bdy value='change'>
- <input type='submit' class=bdy value='turn'>
+ <input type='submit' class=bdy value='off'>
  <input type='submit' class=bdy value='OK'>
   <div class=oftm>
    <input class=oftm value>
@@ -270,6 +271,7 @@ btn[3].onclick=()=>
  li[0].style.opacity=1
  li[1].style.opacity=1
  li[2].style.opacity=1
+ li[3].style.opacity=1
 }
 
 bdy[2].onclick=()=>
@@ -292,6 +294,7 @@ bdy[4].onclick=()=>
 } 
 
 ili=1
+ilst=1
 oftm[2].onclick=()=>
 { 
  oftm[0].style.transform='scale(0)'
@@ -301,7 +304,7 @@ oftm[2].onclick=()=>
 chftm[3].onclick=()=>
 { 
  chftm[0].style.transform='scale(0)'
-  lst[ili].innerHTML=oftm[1].value
+  lst[--ili].innerHTML=chftm[2].value
 } 
 tftm[2].onclick=()=>
 { 
@@ -320,9 +323,6 @@ bdy[5].onclick=()=>
  oftm[0].style.transform='scale(0)'
  chftm[0].style.transform='scale(0)'
  tftm[0].style.transform='scale(0)'
- //for(i=1;i<lst.length;i++)
-  //lst[i].innerHTML=''
-  //ili=1
 }
 
 function actli(nm,i)
@@ -338,11 +338,12 @@ function actli(nm,i)
  nm[i].onclick=()=>
  { 
    if(ili>4) ili=1
+  oftm[0].style.transform='scale(4)'
   oftm[1].value=nm[i].innerHTML
- 
  } 
 }
  actli(li,0), actli(li,1), actli(li,2)
+ actli(li,3)
  
 function actlst(nm,i)
 {
@@ -356,7 +357,9 @@ function actlst(nm,i)
  } 
  nm[i].onclick=()=>
  { 
-  nm[i].innerHTML=''
+  chftm[1].value=nm[i].innerHTML
+  chftm[0].style.transform=
+   'scale(4) translate(-22%,0)'
  } 
 }
  actlst(lst,1), actlst(lst,2), actlst(lst,3) 
