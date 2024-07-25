@@ -10,11 +10,6 @@
  background:radial-gradient(#066,#0bb);
 }
 
-li
-{
- opacity:0;   
-}
-
 .btn,.bdy
 {
  position:absolute;   
@@ -58,15 +53,18 @@ li
   <div class=oftm>
    <input class=oftm value>
    <input type='submit' class=oftm value='ok'>
+   <input type='submit' class=oftm value='c'>
   </div>
   <div class=chftm>
    <input class=chftm value>
    <input class=chftm value>
    <input type='submit' class=chftm value='ok'>
+   <input type='submit' class=chftm value='c'>
   </div>
   <div class=tftm>
    <input class=tftm>
    <input type='submit' class=tftm value='ok'>
+   <input type='submit' class=tftm value='c'>
   </div>
   <div class=lst>
    <div class=lst></div> 
@@ -164,12 +162,18 @@ oftm[1].style.left=4+'%'
 oftm[1].style.top=4+'%'  
 oftm[1].style.width=94+'%'
 oftm[1].style.borderRadius=12+'%'
-oftm[2].style.left=36+'%'
+oftm[2].style.left=6+'%'
 oftm[2].style.top=48+'%'  
 oftm[2].style.background='#888'
 oftm[2].style.borderRadius=12+'%'
 oftm[2].style.transform='scale(0.7)'
 oftm[2].style.cursor='pointer'
+oftm[3].style.left=52+'%'
+oftm[3].style.top=48+'%'  
+oftm[3].style.background='#888'
+oftm[3].style.borderRadius=12+'%'
+oftm[3].style.transform='scale(0.7)'
+oftm[3].style.cursor='pointer'
 
 chftm[0].style.left=55+'%'
 chftm[0].style.top=55+'%' 
@@ -186,12 +190,18 @@ chftm[2].style.left=4+'%'
 chftm[2].style.top=34+'%'
 chftm[2].style.width=77+'%'
 chftm[2].style.height=23+'%'
-chftm[3].style.left=33+'%'
+chftm[3].style.left=4+'%'
 chftm[3].style.bottom=1+'%'
 chftm[3].style.background='#bb0'
 chftm[3].style.pedding=0
 chftm[3].style.cursor='pointer'
 chftm[3].style.transform='scale(0.7)'
+chftm[4].style.left=53+'%'
+chftm[4].style.bottom=1+'%'
+chftm[4].style.background='#bb0'
+chftm[4].style.pedding=0
+chftm[4].style.cursor='pointer'
+chftm[4].style.transform='scale(0.7)'
 
 tftm[0].style.left=75+'%'
 tftm[0].style.top=75+'%' 
@@ -204,11 +214,16 @@ tftm[1].style.left=6+'%'
 tftm[1].style.top=6+'%' 
 tftm[1].style.width=77+'%'
 tftm[1].style.height=23+'%'
-tftm[2].style.left=33+'%'
+tftm[2].style.left=5+'%'
 tftm[2].style.top=40+'%' 
 tftm[2].style.background='#f0f'
 tftm[2].style.cursor='pointer'
 tftm[2].style.transform='scale(0.7)'
+tftm[3].style.left=53+'%'
+tftm[3].style.top=40+'%' 
+tftm[3].style.background='#f0f'
+tftm[3].style.cursor='pointer'
+tftm[3].style.transform='scale(0.7)'
 
 lst[0].style.left=58+'%'
 lst[0].style.top=35+'%' 
@@ -268,10 +283,6 @@ btn[3].onclick=()=>
  bdy[0].style.zIndex=1
  bdy[1].style.transform='scale(1)'
  lst[0].style.transform='scale(1)'
- li[0].style.opacity=1
- li[1].style.opacity=1
- li[2].style.opacity=1
- li[3].style.opacity=1
 }
 
 bdy[2].onclick=()=>
@@ -301,12 +312,26 @@ oftm[2].onclick=()=>
   lst[ili].innerHTML=oftm[1].value
   ili++
 } 
+oftm[3].onclick=()=>
+{ 
+ oftm[0].style.transform='scale(0)'
+} 
+
 chftm[3].onclick=()=>
 { 
  chftm[0].style.transform='scale(0)'
   lst[--ili].innerHTML=chftm[2].value
 } 
+chftm[4].onclick=()=>
+{ 
+ chftm[0].style.transform='scale(0)'
+} 
+
 tftm[2].onclick=()=>
+{ 
+ tftm[0].style.transform='scale(0)'
+} 
+tftm[3].onclick=()=>
 { 
  tftm[0].style.transform='scale(0)'
 } 
@@ -339,11 +364,12 @@ function actli(nm,i)
  { 
    if(ili>4) ili=1
   oftm[0].style.transform='scale(4)'
-  oftm[1].value=nm[i].innerHTML
+   oftm[1].value=nm[i].innerHTML
  } 
 }
  actli(li,0), actli(li,1), actli(li,2)
  actli(li,3)
+ 
  
 function actlst(nm,i)
 {
