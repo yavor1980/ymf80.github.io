@@ -121,7 +121,7 @@ bdy[0].style.width=88+'%'
 bdy[0].style.height=55+'%'
 bdy[0].style.background='#880'
 bdy[0].style.borderRadius=12+'%'
-bdy[0].style.opacity=0.3
+bdy[0].style.opacity=0//.3
 bdy[0].style.zIndex=-1
 bdy[1].style.left=5+'%'
 bdy[1].style.top=13+'%'  
@@ -310,11 +310,13 @@ oftm[2].onclick=()=>
 { 
  oftm[0].style.transform='scale(0)'
   lst[ili].innerHTML=oftm[1].value
+  oftm[1].value=''
   ili++
 } 
 oftm[3].onclick=()=>
 { 
  oftm[0].style.transform='scale(0)'
+  oftm[1].value=''
 } 
 
 chftm[3].onclick=()=>
@@ -325,15 +327,20 @@ chftm[3].onclick=()=>
 chftm[4].onclick=()=>
 { 
  chftm[0].style.transform='scale(0)'
+  chftm[1].value=''
+  chftm[2].value=''
 } 
 
 tftm[2].onclick=()=>
 { 
  tftm[0].style.transform='scale(0)'
+  lst[--ili].innerHTML=chftm[2].value
 } 
 tftm[3].onclick=()=>
 { 
  tftm[0].style.transform='scale(0)'
+ 
+  tftm[1].value=''
 } 
 
 bdy[5].onclick=()=>
@@ -342,7 +349,7 @@ bdy[5].onclick=()=>
  btn[0].style.zIndex=1
  bdy[0].style.zIndex=-1
  bdy[0].style.height=55+'%'
- bdy[0].style.opacity=0.3
+ bdy[0].style.opacity=0
  bdy[1].style.transform='scale(1,0)'
  lst[0].style.transform='scale(1,0)'
  oftm[0].style.transform='scale(0)'
@@ -384,8 +391,7 @@ function actlst(nm,i)
  nm[i].onclick=()=>
  { 
   chftm[1].value=nm[i].innerHTML
-  chftm[0].style.transform=
-   'scale(4) translate(-22%,0)'
+  tftm[1].value=nm[i].innerHTML
  } 
 }
  actlst(lst,1), actlst(lst,2), actlst(lst,3) 
