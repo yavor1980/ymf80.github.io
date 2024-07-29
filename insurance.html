@@ -29,7 +29,6 @@ input
  font-size:0em;
 }
 
-
 </style>
 <div class=btn>
  <div class=btn>Insurance</div>
@@ -40,9 +39,9 @@ input
  <input type=submit class=btn value='ownership'>
 </div>
 <div class=bdy>
- <div class=bdy></div>
+ <div class=bdy>Insred</div>
+ 
 </div>
-
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -56,44 +55,40 @@ btn[0].style.background='#f0f'
 btn[0].style.borderRadius=12+'%'
 btn[0].style.border='4px ridge #bb0'
 btn[0].style.transform='scale(1.4)'
-
 btn[1].style.left=33+'%'
 btn[1].style.top=9+'%'
 btn[1].style.color='#b0b'
 btn[1].style.transform='scale(3) skew(-12deg)'
-
 btn[2].style.left=11+'%'
 btn[2].style.top=55+'%'
 btn[2].style.cursor='pointer'
 btn[2].style.transform='scale(2)'
-
 btn[3].style.left=25+'%'
 btn[3].style.top=55+'%'
 btn[3].style.cursor='pointer'
 btn[3].style.transform='scale(2)'
-  
 btn[4].style.left=40+'%'
 btn[4].style.top=55+'%'
 btn[4].style.cursor='pointer'
 btn[4].style.transform='scale(2)'
-
 btn[5].style.left=53+'%'
 btn[5].style.top=55+'%'
 btn[5].style.cursor='pointer'
-btn[5].style.transform='scale(2)'  
-  
+btn[5].style.transform='scale(2)'    
 btn[6].style.left=73+'%'
 btn[6].style.top=55+'%'
 btn[6].style.cursor='pointer'
 btn[6].style.transform='scale(2)'  
   
 bdy[0].style.left=3+'%'
-bdy[0].style.top=28+'%'  
+bdy[0].style.top=27+'%'  
 bdy[0].style.width=94+'%'
-bdy[0].style.height=67+'%'
+bdy[0].style.height=70+'%'
 bdy[0].style.background='#b0b'
 bdy[0].style.borderRadius=12+'%'  
-bdy[0].style.border='6px ridge #ff8' 
+bdy[0].style.border='6px ridge #ff8'
+
+ 
    
 bbtn2=0  
 btn[0].onmouseover=()=>
@@ -163,6 +158,16 @@ btn[6].onmouseout=()=>
 { 
  bdy[0].style.fontSize='0em'
 }
+
+function clk(i)
+{
+ btn[i].onclick=()=>
+ { 
+  bdy[0].style.fontSize='0em'
+  
+ }
+}
+ clk(2), clk(3), clk(4), clk(5), clk(6)
 
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
