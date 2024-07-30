@@ -26,7 +26,7 @@ input
  position:absolute;   
  transition:1s;
  text-align:center;
- font-size:0em;
+ font-size:2em;
 }
 
 </style>
@@ -39,8 +39,11 @@ input
  <input type=submit class=btn value='ownership'>
 </div>
 <div class=bdy>
- <div class=bdy>Insred</div>
- 
+ <div class=bdy>Insred 1</div>
+ <div class=bdy>Insred 2</div>
+ <div class=bdy>Insred 3</div>
+ <div class=bdy>Insred 4</div>
+ <div class=bdy>Insred 5</div>
 </div>
 
 <script>
@@ -88,7 +91,45 @@ bdy[0].style.background='#b0b'
 bdy[0].style.borderRadius=12+'%'  
 bdy[0].style.border='6px ridge #ff8'
 
- 
+bdy[1].style.left=23+'%'
+bdy[1].style.top=27+'%'  
+bdy[1].style.width=33+'%'
+bdy[1].style.height=33+'%'
+bdy[1].style.background='#0bb'
+bdy[1].style.borderRadius=22+'%'  
+bdy[1].style.transform='scale(0)' 
+
+bdy[2].style.left=37+'%'
+bdy[2].style.top=27+'%'  
+bdy[2].style.width=33+'%'
+bdy[2].style.height=33+'%'
+bdy[2].style.background='#0dd'
+bdy[2].style.borderRadius=22+'%'  
+bdy[2].style.transform='scale(0)' 
+
+bdy[3].style.left=53+'%'
+bdy[3].style.top=27+'%'  
+bdy[3].style.width=33+'%'
+bdy[3].style.height=33+'%'
+bdy[3].style.background='#0ba'
+bdy[3].style.borderRadius=22+'%'  
+bdy[3].style.transform='scale(0)' 
+
+bdy[4].style.left=53+'%'
+bdy[4].style.top=27+'%'  
+bdy[4].style.width=33+'%'
+bdy[4].style.height=33+'%'
+bdy[4].style.background='#099'
+bdy[4].style.borderRadius=22+'%'  
+bdy[4].style.transform='scale(0)' 
+
+bdy[5].style.left=63+'%'
+bdy[5].style.top=27+'%'  
+bdy[5].style.width=33+'%'
+bdy[5].style.height=33+'%'
+bdy[5].style.background='#066'
+bdy[5].style.borderRadius=22+'%'  
+bdy[5].style.transform='scale(0)' 
    
 bbtn2=0  
 btn[0].onmouseover=()=>
@@ -109,65 +150,60 @@ btn[0].onmouseout=()=>
  btn[1].style.transform='scale(3) skew(-12deg)'
 } 
 
-btn[2].onmouseover=()=>
+btn[2].onclick=()=>
 { 
- bdy[0].style.fontSize='6em'
-  bdy[0].innerHTML='for any auto...'
+ bdy[1].style.transform='scale(1)'
 }
 btn[2].onmouseout=()=>
 { 
- bdy[0].style.fontSize='0em'
+ bdy[1].style.transform='scale(0)'
 } 
 
-btn[3].onmouseover=()=>
+btn[3].onclick=()=>
 { 
- bdy[0].style.fontSize='6em'
-  bdy[0].innerHTML='for health problems...'
+ bdy[2].style.transform='scale(1)'
 }
 btn[3].onmouseout=()=>
 { 
- bdy[0].style.fontSize='0em'
+ bdy[2].style.transform='scale(0)'
 } 
 
-btn[4].onmouseover=()=>
+btn[4].onclick=()=>
 { 
- bdy[0].style.fontSize='6em'
-  bdy[0].innerHTML='for lifestyle...'
+ bdy[3].style.transform='scale(1)'
 }
 btn[4].onmouseout=()=>
 { 
- bdy[0].style.fontSize='0em'
+ bdy[3].style.transform='scale(0)'
 } 
 
-btn[5].onmouseover=()=>
+btn[5].onclick=()=>
 { 
- bdy[0].style.fontSize='6em'
-  bdy[0].innerHTML='for touristic occasions...'
+ bdy[4].style.transform='scale(1)'
 }  
 btn[5].onmouseout=()=>
 { 
- bdy[0].style.fontSize='0em'
+ bdy[4].style.transform='scale(0)'
 }
 
-btn[6].onmouseover=()=>
+btn[6].onclick=()=>
 { 
- bdy[0].style.fontSize='6em'
-  bdy[0].innerHTML='for ownership<br> garantie...'
+ bdy[5].style.transform='scale(1)'
 }
 btn[6].onmouseout=()=>
 { 
- bdy[0].style.fontSize='0em'
+ bdy[5].style.transform='scale(0)'
 }
 
-function clk(i)
+//function clk(i)
 {
- btn[i].onclick=()=>
+ //btn[i].onclick=()=>
  { 
-  bdy[0].style.fontSize='0em'
-  
+ // bdy[0].style.fontSize='0em'
+  //bdy[1].style.transform='scale(1)'
  }
 }
- clk(2), clk(3), clk(4), clk(5), clk(6)
+// clk(2), clk(3), clk(4), clk(5), clk(6)
 
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
