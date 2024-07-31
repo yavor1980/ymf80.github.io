@@ -67,9 +67,9 @@
    <input type='submit' class=tftm value='c'>
   </div>
   <div class=lst>
-   <div class=lst></div> 
-   <div class=lst></div> 
    <div class=lst>seminar</div> 
+   <div class=lst></div> 
+   <div class=lst></div> 
    <div class=lst></div> 
    <div class=lst></div> 
   </div>
@@ -87,7 +87,7 @@ lst=document.getElementsByClassName('lst')
 btn[0].style.left=5+'%'
 btn[0].style.top=4+'%'  
 btn[0].style.width=77+'%'
-btn[0].style.height=22+'%'
+btn[0].style.height=39+'%'
 btn[0].style.background='#f0f'
 btn[0].style.borderRadius=12+'%'
 btn[0].style.zIndex=1
@@ -109,11 +109,11 @@ btn[4].style.top=48+'%'
 btn[4].style.width=8+'px'
 btn[4].style.transform=
  'scale(1.2) skew(-11deg)'
-btn[4].style.opacity=0
+btn[4].style.opacity=0.5
 btn[5].style.left=27+'%'
 btn[5].style.top=48+'%'
 btn[5].style.width=188+'px'
-btn[5].style.opacity=0
+btn[5].style.opacity=0.5
   
 bdy[0].style.left=5+'%'
 bdy[0].style.top=34+'%'  
@@ -265,11 +265,11 @@ btn[0].onmouseover=()=>
 }
 btn[0].onmouseout=()=>
 {  
- btn[0].style.height=22+'%'
+ btn[0].style.height=37+'%'
  btn[0].style.border='none'
   btn[2].value=''
- btn[4].style.opacity=0
- btn[5].style.opacity=0
+ btn[4].style.opacity=0.5
+ btn[5].style.opacity=0.5
   btn[5].value=''
 } 
 
@@ -304,7 +304,7 @@ bdy[4].onclick=()=>
  tftm[0].style.transform='scale(4)'
 } 
 
-ili=1
+ili=2
 ilst=1
 oftm[2].onclick=()=>
 { 
@@ -312,7 +312,7 @@ oftm[2].onclick=()=>
   lst[ili].innerHTML=oftm[1].value
   oftm[1].value=''
   ili++
-  if(ili==5)ili=1
+  if(ili==2)ili=1
 } 
 oftm[3].onclick=()=>
 { 
@@ -323,7 +323,7 @@ oftm[3].onclick=()=>
 chftm[3].onclick=()=>
 { 
  chftm[0].style.transform='scale(0)'
-  lst[--ili].innerHTML=chftm[2].value
+  lst[ili].innerHTML=chftm[2].value
 } 
 chftm[4].onclick=()=>
 { 
@@ -335,7 +335,7 @@ chftm[4].onclick=()=>
 tftm[2].onclick=()=>
 { 
  tftm[0].style.transform='scale(0)'
-  lst[--ili].innerHTML=chftm[2].value
+ if(ili>0) lst[--ili].innerHTML=chftm[2].value
 } 
 tftm[3].onclick=()=>
 { 
