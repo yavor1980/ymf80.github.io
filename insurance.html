@@ -29,8 +29,11 @@ input,button
  transition:1s;
  text-align:center;
 }
-
-
+.iauto:hover,.ihlth:hover,.ilf:hover,
+.iownrshp:hover,.itrsm:hover
+{
+ z-index:1;   
+}
 
 </style>
 <div class=btn>
@@ -44,18 +47,33 @@ input,button
 <div class=bdy>
  <div class=ilf>
   <button class=ilf>OK</button>
+  <button class=ilf>C</button>
+  <div class=ilf>Sum</div>
+  <input class=ilf>
  </div>
  <div class=ihlth>
   <button class=ihlth>OK</button>
+  <button class=ihlth>C</button>
+  <div class=ihlth>Sum</div>
+  <input class=ihlth>
  </div>
  <div class=iownrshp>
   <button class=iownrshp>OK</button>
+  <button class=iownrshp>C</button>
+  <div class=iownrshp>Sum</div>
+  <input class=iownrshp>
  </div>
  <div class=iauto>
   <button class=iauto>OK</button>
+  <button class=iauto>C</button>
+  <div class=iauto>Sum</div>
+  <input class=iauto>
  </div>
  <div class=itrsm>
   <button class=itrsm>OK</button>
+  <button class=itrsm>C</button>
+  <div class=itrsm>Sum</div>
+  <input class=itrsm>
  </div>
 </div>
 
@@ -119,6 +137,14 @@ ilf[0].style.borderRadius=22+'%'
 ilf[0].style.transform='scale(0)' 
 ilf[1].style.left=33+'%'
 ilf[1].style.top=77+'%'
+ilf[2].style.left=56+'%'
+ilf[2].style.top=77+'%'
+ilf[3].style.left=55+'%'
+ilf[3].style.top=7+'%'
+ilf[3].style.fontSize=2+'em'
+ilf[4].style.left=29+'%'
+ilf[4].style.top=38+'%'
+ilf[4].style.width=33+'%'
 
 ihlth[0].style.left=33+'%'
 ihlth[0].style.top=27+'%'  
@@ -129,6 +155,14 @@ ihlth[0].style.borderRadius=22+'%'
 ihlth[0].style.transform='scale(0)' 
 ihlth[1].style.left=33+'%'
 ihlth[1].style.top=77+'%'
+ihlth[2].style.left=56+'%'
+ihlth[2].style.top=77+'%'
+ihlth[3].style.left=55+'%'
+ihlth[3].style.top=7+'%'
+ihlth[3].style.fontSize=2+'em'
+ihlth[4].style.left=29+'%'
+ihlth[4].style.top=38+'%'
+ihlth[4].style.width=33+'%'
 
 iownrshp[0].style.left=33+'%'
 iownrshp[0].style.top=27+'%'  
@@ -139,6 +173,14 @@ iownrshp[0].style.borderRadius=22+'%'
 iownrshp[0].style.transform='scale(0)' 
 iownrshp[1].style.left=33+'%'
 iownrshp[1].style.top=77+'%'
+iownrshp[2].style.left=56+'%'
+iownrshp[2].style.top=77+'%'
+iownrshp[3].style.left=55+'%'
+iownrshp[3].style.top=7+'%'
+iownrshp[3].style.fontSize=2+'em'
+iownrshp[4].style.left=29+'%'
+iownrshp[4].style.top=38+'%'
+iownrshp[4].style.width=33+'%'
 
 iauto[0].style.left=33+'%'
 iauto[0].style.top=27+'%'  
@@ -148,7 +190,15 @@ iauto[0].style.background='#0bb'
 iauto[0].style.borderRadius=22+'%'  
 iauto[0].style.transform='scale(0)' 
 iauto[1].style.left=33+'%'
-iauto[1].style.top=77+'%'  
+iauto[1].style.top=77+'%' 
+iauto[2].style.left=56+'%'
+iauto[2].style.top=77+'%'
+iauto[3].style.left=55+'%'
+iauto[3].style.top=7+'%'
+iauto[3].style.fontSize=2+'em'
+iauto[4].style.left=29+'%'
+iauto[4].style.top=38+'%'
+iauto[4].style.width=33+'%'
 
 itrsm[0].style.left=33+'%'
 itrsm[0].style.top=27+'%'  
@@ -159,6 +209,14 @@ itrsm[0].style.borderRadius=22+'%'
 itrsm[0].style.transform='scale(0)' 
 itrsm[1].style.left=33+'%'
 itrsm[1].style.top=77+'%'
+itrsm[2].style.left=56+'%'
+itrsm[2].style.top=77+'%'
+itrsm[3].style.left=55+'%'
+itrsm[3].style.top=7+'%'
+itrsm[3].style.fontSize=2+'em'
+itrsm[4].style.left=29+'%'
+itrsm[4].style.top=38+'%'
+itrsm[4].style.width=33+'%'
    
 bbtn2=0  
 btn[0].onmouseover=()=>
@@ -203,51 +261,50 @@ btn[6].onclick=()=>
   (Math.random()*44-22)+'%)'
 }
 
-ilf[0].onmouseover=()=>
-{ 
- ilf[0].style.zIndex=1
-}
 ilf[1].onclick=()=>
 { 
  ilf[0].style.transform='scale(0)'
 }
-
-ihlth[0].onmouseover=()=>
+ilf[2].onclick=()=>
 { 
- ihlth[0].style.zIndex=1
+ ilf[0].style.transform='scale(0)'
 }
+
 ihlth[1].onclick=()=>
 { 
  ihlth[0].style.transform='scale(0)'
 }
-
-iownrshp[0].onmouseover=()=>
+ihlth[2].onclick=()=>
 { 
- iownrshp[0].style.zIndex=1
+ ihlth[0].style.transform='scale(0)'
 }
+
 iownrshp[1].onclick=()=>
 { 
  iownrshp[0].style.transform='scale(0)'
 }
-
-iauto[0].onmouseover=()=>
+iownrshp[2].onclick=()=>
 { 
- iauto[0].style.zIndex=1
+ iownrshp[0].style.transform='scale(0)'
 }
+
 iauto[1].onclick=()=>
 { 
  iauto[0].style.transform='scale(0)'
 }
-
-itrsm[0].onmouseover=()=>
+iauto[2].onclick=()=>
 { 
- itrsm[0].style.zIndex=1
+ iauto[0].style.transform='scale(0)'
 }
+
 itrsm[1].onclick=()=>
 { 
  itrsm[0].style.transform='scale(0)'
 }
-
+itrsm[2].onclick=()=>
+{ 
+ itrsm[0].style.transform='scale(0)'
+}
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
