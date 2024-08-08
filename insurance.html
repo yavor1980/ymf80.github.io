@@ -27,7 +27,7 @@ input,button
 {
  position:absolute;   
  transition:1s;
- text-align:center;
+ //text-align:center;
 }
 .iauto:hover,.ihlth:hover,.ilf:hover,
 .iownrshp:hover,.itrsm:hover
@@ -128,13 +128,15 @@ bdy[0].style.background='#b0b'
 bdy[0].style.borderRadius=12+'%'  
 bdy[0].style.border='6px ridge #ff8'
 
-ilf[0].style.left=33+'%'
-ilf[0].style.top=27+'%'  
-ilf[0].style.width=33+'%'
-ilf[0].style.height=33+'%'
+ilf[0].style.left=0+'%'
+ilf[0].style.top=0+'%'  
+ilf[0].style.width=100+'%'
+ilf[0].style.height=100+'%'
 ilf[0].style.background='#0ba'
 ilf[0].style.borderRadius=22+'%'  
-ilf[0].style.transform='scale(0)' 
+ilf[0].style.transform=
+ 'scale(0.3) translate('+Math.random()*44+'%,'+
+  Math.random()*44+'%)' 
 ilf[1].style.left=33+'%'
 ilf[1].style.top=77+'%'
 ilf[2].style.left=56+'%'
@@ -146,13 +148,15 @@ ilf[4].style.left=29+'%'
 ilf[4].style.top=38+'%'
 ilf[4].style.width=33+'%'
 
-ihlth[0].style.left=33+'%'
-ihlth[0].style.top=27+'%'  
-ihlth[0].style.width=33+'%'
-ihlth[0].style.height=33+'%'
+ihlth[0].style.left=0+'%'
+ihlth[0].style.top=0+'%'
+ihlth[0].style.width=100+'%'
+ihlth[0].style.height=100+'%'
 ihlth[0].style.background='#0dd'
 ihlth[0].style.borderRadius=22+'%'  
-ihlth[0].style.transform='scale(0)' 
+ihlth[0].style.transform=
+ 'scale(0.3) translate('+Math.random()*44+'%,'+
+  Math.random()*44+'%)'
 ihlth[1].style.left=33+'%'
 ihlth[1].style.top=77+'%'
 ihlth[2].style.left=56+'%'
@@ -164,13 +168,15 @@ ihlth[4].style.left=29+'%'
 ihlth[4].style.top=38+'%'
 ihlth[4].style.width=33+'%'
 
-iownrshp[0].style.left=33+'%'
-iownrshp[0].style.top=27+'%'  
-iownrshp[0].style.width=33+'%'
-iownrshp[0].style.height=33+'%'
+iownrshp[0].style.left=0+'%'
+iownrshp[0].style.top=0+'%'  
+iownrshp[0].style.width=100+'%'
+iownrshp[0].style.height=100+'%'
 iownrshp[0].style.background='#099'
 iownrshp[0].style.borderRadius=22+'%'  
-iownrshp[0].style.transform='scale(0)' 
+iownrshp[0].style.transform=
+ 'scale(0.3) translate('+Math.random()*44+'%,'+
+  Math.random()*44+'%)'
 iownrshp[1].style.left=33+'%'
 iownrshp[1].style.top=77+'%'
 iownrshp[2].style.left=56+'%'
@@ -182,13 +188,15 @@ iownrshp[4].style.left=29+'%'
 iownrshp[4].style.top=38+'%'
 iownrshp[4].style.width=33+'%'
 
-iauto[0].style.left=33+'%'
-iauto[0].style.top=27+'%'  
-iauto[0].style.width=33+'%'
-iauto[0].style.height=33+'%'
+iauto[0].style.left=0+'%'
+iauto[0].style.top=0+'%'  
+iauto[0].style.width=100+'%'
+iauto[0].style.height=100+'%'
 iauto[0].style.background='#0bb'
 iauto[0].style.borderRadius=22+'%'  
-iauto[0].style.transform='scale(0)' 
+iauto[0].style.transform=
+ 'scale(0.3) translate('+Math.random()*44+'%,'+
+  Math.random()*44+'%)'
 iauto[1].style.left=33+'%'
 iauto[1].style.top=77+'%' 
 iauto[2].style.left=56+'%'
@@ -200,13 +208,15 @@ iauto[4].style.left=29+'%'
 iauto[4].style.top=38+'%'
 iauto[4].style.width=33+'%'
 
-itrsm[0].style.left=33+'%'
-itrsm[0].style.top=27+'%'  
-itrsm[0].style.width=33+'%'
-itrsm[0].style.height=33+'%'
+itrsm[0].style.left=0+'%'
+itrsm[0].style.top=0+'%'  
+itrsm[0].style.width=100+'%'
+itrsm[0].style.height=100+'%'
 itrsm[0].style.background='#066'
 itrsm[0].style.borderRadius=22+'%'  
-itrsm[0].style.transform='scale(0)' 
+itrsm[0].style.transform=
+ 'scale(0.3)  translate('+Math.random()*44+'%,'+
+  Math.random()*44+'%)'
 itrsm[1].style.left=33+'%'
 itrsm[1].style.top=77+'%'
 itrsm[2].style.left=56+'%'
@@ -231,79 +241,43 @@ btn[0].onmouseout=()=>
 
 btn[2].onclick=()=>
 { 
- ilf[0].style.transform=
-  'scale(1) translate('+Math.random()*44+'%,'+
-  Math.random()*44+'%)'
+ ilf[0].style.transform='scale(1) '
+ ilf[0].style.zIndex=1
 }
 btn[3].onclick=()=>
 { 
- ihlth[0].style.transform=
-  'scale(1) translate('+(Math.random()*44-22)+'%,'+
-  (Math.random()*44-22)+'%)'
+ ihlth[0].style.transform='scale(1) '
+ ihlth[0].style.zIndex=1
 }
 btn[4].onclick=()=>
 { 
- iownrshp[0].style.transform=
- 'scale(1) translate('+(Math.random()*44-22)+'%,'+
-  (Math.random()*44-22)+'%)'
+ iownrshp[0].style.transform='scale(1) '
+ iownrshp[0].style.zIndex=1
 }
 btn[5].onclick=()=>
 { 
- iauto[0].style.transform=
-  'scale(1) translate('+(Math.random()*44-22)+'%,'+
-  (Math.random()*44-22)+'%)'
-}  
+ iauto[0].style.transform='scale(1) '
+ iauto[0].style.zIndex=1
+}
 btn[6].onclick=()=>
 { 
- itrsm[0].style.transform=
-  'scale(1) translate('+(Math.random()*44-22)+'%,'+
-  (Math.random()*44-22)+'%)'
+ itrsm[0].style.transform='scale(1) '
+ itrsm[0].style.zIndex=1
 }
 
-ilf[1].onclick=()=>
-{ 
- ilf[0].style.transform='scale(0)'
+function aok(nm)
+{
+ nm[1].onclick=()=>
+ { 
+  nm[0].style.transform='scale(0.3) translate('+
+   Math.random()*44+'%,'+Math.random()*44+'%)' 
+  nm[0].style.zIndex=0
+ }
 }
-ilf[2].onclick=()=>
-{ 
- ilf[0].style.transform='scale(0)'
-}
+ aok(ilf),aok(ihlth),aok(iownrshp),
+ aok(iauto),aok(itrsm)
 
-ihlth[1].onclick=()=>
-{ 
- ihlth[0].style.transform='scale(0)'
-}
-ihlth[2].onclick=()=>
-{ 
- ihlth[0].style.transform='scale(0)'
-}
 
-iownrshp[1].onclick=()=>
-{ 
- iownrshp[0].style.transform='scale(0)'
-}
-iownrshp[2].onclick=()=>
-{ 
- iownrshp[0].style.transform='scale(0)'
-}
-
-iauto[1].onclick=()=>
-{ 
- iauto[0].style.transform='scale(0)'
-}
-iauto[2].onclick=()=>
-{ 
- iauto[0].style.transform='scale(0)'
-}
-
-itrsm[1].onclick=()=>
-{ 
- itrsm[0].style.transform='scale(0)'
-}
-itrsm[2].onclick=()=>
-{ 
- itrsm[0].style.transform='scale(0)'
-}
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
