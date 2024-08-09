@@ -75,6 +75,9 @@ input,button
   <div class=itrsm>Sum</div>
   <input class=itrsm>
  </div>
+ <div class=bdy>
+  You're<br> insured!
+ </div>
 </div>
 
 <script>
@@ -127,6 +130,12 @@ bdy[0].style.height=70+'%'
 bdy[0].style.background='#b0b'
 bdy[0].style.borderRadius=12+'%'  
 bdy[0].style.border='6px ridge #ff8'
+
+bdy[1].style.left=13+'%'
+bdy[1].style.top=17+'%'  
+bdy[1].style.background='#b0b'
+bdy[1].style.borderRadius=12+'%' 
+bdy[1].style.transform='scale(0)'
 
 ilf[0].style.left=0+'%'
 ilf[0].style.top=0+'%'  
@@ -269,15 +278,31 @@ function aok(nm)
 {
  nm[1].onclick=()=>
  { 
+  bdy[1].style.color='#ff0'
+  bdy[1].style.transform='scale(5) skew(11deg)'
   nm[0].style.transform='scale(0.3) translate('+
    Math.random()*44+'%,'+Math.random()*44+'%)' 
   nm[0].style.zIndex=0
+  setTimeout(()=>{
+    bdy[1].style.color='#000'
+    bdy[1].style.transform='scale(0)'
+   }, 999)
  }
 }
  aok(ilf),aok(ihlth),aok(iownrshp),
  aok(iauto),aok(itrsm)
 
-
+function ao(nm)
+{
+ nm[2].onclick=()=>
+ { 
+  nm[0].style.transform='scale(0.3) translate('+
+   Math.random()*44+'%,'+Math.random()*44+'%)' 
+  nm[0].style.zIndex=0
+ }
+}
+ ao(ilf),ao(ihlth),ao(iownrshp),
+ ao(iauto),ao(itrsm)
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
