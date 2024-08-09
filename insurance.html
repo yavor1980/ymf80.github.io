@@ -29,11 +29,6 @@ input,button
  transition:1s;
  //text-align:center;
 }
-.iauto:hover,.ihlth:hover,.ilf:hover,
-.iownrshp:hover,.itrsm:hover
-{
- z-index:1;   
-}
 
 </style>
 <div class=btn>
@@ -48,31 +43,31 @@ input,button
  <div class=ilf>
   <button class=ilf>OK</button>
   <button class=ilf>C</button>
-  <div class=ilf>Sum</div>
+  <div class=ilf>life</div>
   <input class=ilf onclick=disabled>
  </div>
  <div class=ihlth>
   <button class=ihlth>OK</button>
   <button class=ihlth>C</button>
-  <div class=ihlth>Sum</div>
+  <div class=ihlth>health</div>
   <input class=ihlth>
  </div>
  <div class=iownrshp>
   <button class=iownrshp>OK</button>
   <button class=iownrshp>C</button>
-  <div class=iownrshp>Sum</div>
+  <div class=iownrshp>ownership</div>
   <input class=iownrshp>
  </div>
  <div class=iauto>
   <button class=iauto>OK</button>
   <button class=iauto>C</button>
-  <div class=iauto>Sum</div>
+  <div class=iauto>auto</div>
   <input class=iauto>
  </div>
  <div class=itrsm>
   <button class=itrsm>OK</button>
   <button class=itrsm>C</button>
-  <div class=itrsm>Sum</div>
+  <div class=itrsm>tourism</div>
   <input class=itrsm>
  </div>
  <div class=bdy>
@@ -130,10 +125,8 @@ bdy[0].style.height=70+'%'
 bdy[0].style.background='#b0b'
 bdy[0].style.borderRadius=12+'%'  
 bdy[0].style.border='6px ridge #ff8'
-
 bdy[1].style.left=13+'%'
 bdy[1].style.top=17+'%'  
-bdy[1].style.background='#b0b'
 bdy[1].style.borderRadius=12+'%' 
 bdy[1].style.transform='scale(0)'
 
@@ -141,11 +134,11 @@ ilf[0].style.left=0+'%'
 ilf[0].style.top=0+'%'  
 ilf[0].style.width=100+'%'
 ilf[0].style.height=100+'%'
-ilf[0].style.background='#0ba'
+ilf[0].style.background='#909'
 ilf[0].style.borderRadius=22+'%'  
 ilf[0].style.transform=
  'scale(0.3) translate('+Math.random()*44+'%,'+
-  Math.random()*44+'%)' 
+ Math.random()*44+'%)' 
 ilf[1].style.left=33+'%'
 ilf[1].style.top=77+'%'
 ilf[2].style.left=56+'%'
@@ -161,11 +154,11 @@ ihlth[0].style.left=0+'%'
 ihlth[0].style.top=0+'%'
 ihlth[0].style.width=100+'%'
 ihlth[0].style.height=100+'%'
-ihlth[0].style.background='#0dd'
+ihlth[0].style.background='#d0d'
 ihlth[0].style.borderRadius=22+'%'  
 ihlth[0].style.transform=
  'scale(0.3) translate('+Math.random()*44+'%,'+
-  Math.random()*44+'%)'
+ Math.random()*44+'%)'
 ihlth[1].style.left=33+'%'
 ihlth[1].style.top=77+'%'
 ihlth[2].style.left=56+'%'
@@ -185,7 +178,7 @@ iownrshp[0].style.background='#099'
 iownrshp[0].style.borderRadius=22+'%'  
 iownrshp[0].style.transform=
  'scale(0.3) translate('+Math.random()*44+'%,'+
-  Math.random()*44+'%)'
+ Math.random()*44+'%)'
 iownrshp[1].style.left=33+'%'
 iownrshp[1].style.top=77+'%'
 iownrshp[2].style.left=56+'%'
@@ -201,7 +194,7 @@ iauto[0].style.left=0+'%'
 iauto[0].style.top=0+'%'  
 iauto[0].style.width=100+'%'
 iauto[0].style.height=100+'%'
-iauto[0].style.background='#0bb'
+iauto[0].style.background='#8bb'
 iauto[0].style.borderRadius=22+'%'  
 iauto[0].style.transform=
  'scale(0.3) translate('+Math.random()*44+'%,'+
@@ -221,7 +214,7 @@ itrsm[0].style.left=0+'%'
 itrsm[0].style.top=0+'%'  
 itrsm[0].style.width=100+'%'
 itrsm[0].style.height=100+'%'
-itrsm[0].style.background='#066'
+itrsm[0].style.background='#899'
 itrsm[0].style.borderRadius=22+'%'  
 itrsm[0].style.transform=
  'scale(0.3)  translate('+Math.random()*44+'%,'+
@@ -248,28 +241,47 @@ btn[0].onmouseout=()=>
   'scale(3) skew(-12deg)'
 } 
 
+function zI0()
+{
+ ilf[0].style.zIndex=0
+ ilf[0].style.transform='scale(0.3)'
+ ihlth[0].style.zIndex=0
+ ihlth[0].style.transform='scale(0.3)'
+ iownrshp[0].style.zIndex=0
+ iownrshp[0].style.transform='scale(0.3)'
+ iauto[0].style.zIndex=0
+ iauto[0].style.transform='scale(0.3)'
+ itrsm[0].style.zIndex=0
+ itrsm[0].style.transform='scale(0.3)'
+}
+
 btn[2].onclick=()=>
 { 
- ilf[0].style.transform='scale(1) '
+  zI0()
+ ilf[0].style.transform='scale(1)'
  ilf[0].style.zIndex=1
 }
 btn[3].onclick=()=>
 { 
+  zI0()
  ihlth[0].style.transform='scale(1) '
  ihlth[0].style.zIndex=1
 }
 btn[4].onclick=()=>
 { 
- iownrshp[0].style.transform='scale(1) '
+  zI0()
+ iownrshp[0].style.transform='scale(1)'
  iownrshp[0].style.zIndex=1
 }
 btn[5].onclick=()=>
 { 
+  zI0()
  iauto[0].style.transform='scale(1) '
  iauto[0].style.zIndex=1
 }
 btn[6].onclick=()=>
 { 
+  zI0()  
  itrsm[0].style.transform='scale(1) '
  itrsm[0].style.zIndex=1
 }
@@ -279,12 +291,14 @@ function aok(nm)
  nm[1].onclick=()=>
  { 
   bdy[1].style.color='#ff0'
+  bdy[1].style.zIndex=1
   bdy[1].style.transform='scale(5) skew(11deg)'
   nm[0].style.transform='scale(0.3) translate('+
    Math.random()*44+'%,'+Math.random()*44+'%)' 
   nm[0].style.zIndex=0
   setTimeout(()=>{
     bdy[1].style.color='#000'
+	bdy[1].style.zIndex=0
     bdy[1].style.transform='scale(0)'
    }, 999)
  }
