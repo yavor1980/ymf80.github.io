@@ -13,7 +13,7 @@ input
 {
  border-radius:21%; 
  cursor:pointer; 
- transform:scale(2); 
+ transform:scale(1,2); 
 }
 button
 {
@@ -50,7 +50,12 @@ button
   <button class=ilf>OK</button>
   <button class=ilf>C</button>
   <div class=ilf>life</div>
-  <input class=ilf onclick=disabled>
+  <select class=ilf>
+    <option class=ilf>1 year</option>
+	<option class=ilf>2 years</option>
+	<option class=ilf>3 years</option>
+	<option class=ilf>4 years</option>
+  <select>
  </div>
  <div class=ihlth>
   <button class=ihlth>OK</button>
@@ -151,10 +156,11 @@ ilf[2].style.left=56+'%'
 ilf[2].style.top=77+'%'
 ilf[3].style.left=55+'%'
 ilf[3].style.top=7+'%'
-ilf[3].style.fontSize=2+'em'
+ilf[3].style.fontSize=4+'em'
 ilf[4].style.left=29+'%'
 ilf[4].style.top=38+'%'
 ilf[4].style.width=33+'%'
+//ilf[4].style.fontSize=2+'em'
 
 ihlth[0].style.left=0+'%'
 ihlth[0].style.top=0+'%'
@@ -171,7 +177,7 @@ ihlth[2].style.left=56+'%'
 ihlth[2].style.top=77+'%'
 ihlth[3].style.left=55+'%'
 ihlth[3].style.top=7+'%'
-ihlth[3].style.fontSize=2+'em'
+ihlth[3].style.fontSize=4+'em'
 ihlth[4].style.left=29+'%'
 ihlth[4].style.top=38+'%'
 ihlth[4].style.width=33+'%'
@@ -191,7 +197,7 @@ iownrshp[2].style.left=56+'%'
 iownrshp[2].style.top=77+'%'
 iownrshp[3].style.left=55+'%'
 iownrshp[3].style.top=7+'%'
-iownrshp[3].style.fontSize=2+'em'
+iownrshp[3].style.fontSize=4+'em'
 iownrshp[4].style.left=29+'%'
 iownrshp[4].style.top=38+'%'
 iownrshp[4].style.width=33+'%'
@@ -211,7 +217,7 @@ iauto[2].style.left=56+'%'
 iauto[2].style.top=77+'%'
 iauto[3].style.left=55+'%'
 iauto[3].style.top=7+'%'
-iauto[3].style.fontSize=2+'em'
+iauto[3].style.fontSize=4+'em'
 iauto[4].style.left=29+'%'
 iauto[4].style.top=38+'%'
 iauto[4].style.width=33+'%'
@@ -231,7 +237,7 @@ itrsm[2].style.left=56+'%'
 itrsm[2].style.top=77+'%'
 itrsm[3].style.left=55+'%'
 itrsm[3].style.top=7+'%'
-itrsm[3].style.fontSize=2+'em'
+itrsm[3].style.fontSize=4+'em'
 itrsm[4].style.left=29+'%'
 itrsm[4].style.top=38+'%'
 itrsm[4].style.width=33+'%'
@@ -264,32 +270,58 @@ function zI0()
 btn[2].onclick=()=>
 { 
   zI0()
- ilf[0].style.transform='scale(1)'
  ilf[0].style.zIndex=1
+ ilf[0].style.transform='scale(1)'
+ ilf[3].style.transform='skew(-11deg)'
 }
 btn[3].onclick=()=>
 { 
   zI0()
+ ihlth[0].style.zIndex=1 
  ihlth[0].style.transform='scale(1) '
- ihlth[0].style.zIndex=1
+ ihlth[3].style.transform='skew(-11deg)'
 }
 btn[4].onclick=()=>
 { 
   zI0()
- iownrshp[0].style.transform='scale(1)'
  iownrshp[0].style.zIndex=1
+ iownrshp[0].style.transform='scale(1)'
+ iownrshp[3].style.transform='skew(-11deg)'
 }
 btn[5].onclick=()=>
 { 
   zI0()
- iauto[0].style.transform='scale(1) '
  iauto[0].style.zIndex=1
+ iauto[0].style.transform='scale(1) '
+ iauto[3].style.transform='skew(-11deg)'
 }
 btn[6].onclick=()=>
 { 
   zI0()  
- itrsm[0].style.transform='scale(1) '
  itrsm[0].style.zIndex=1
+ itrsm[0].style.transform='scale(1) '
+ itrsm[3].style.transform='skew(-11deg)'
+}
+
+ilf[0].onclick=()=>
+{ 
+ ilf[4].value='bad'
+}
+ihlth[0].onclick=()=>
+{ 
+ ihlth[4].value='Asthma'
+}
+iownrshp[0].onclick=()=>
+{ 
+ iownrshp[4].value='house'
+}
+iauto[0].onclick=()=>
+{ 
+ iauto[4].value='BMW'
+}
+itrsm[0].onclick=()=>
+{ 
+ itrsm[4].value='Egypt'
 }
 
 function aok(nm)
@@ -298,7 +330,8 @@ function aok(nm)
  { 
   bdy[1].style.color='#ff0'
   bdy[1].style.zIndex=1
-  bdy[1].style.transform='scale(5) skew(11deg)'
+  bdy[1].style.transform=
+   'scale(7) translate(44%,22%) skew(11deg)'
   nm[0].style.transform='scale(0.3) translate('+
    Math.random()*44+'%,'+Math.random()*44+'%)' 
   nm[0].style.zIndex=0
