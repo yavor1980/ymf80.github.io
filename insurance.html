@@ -21,6 +21,11 @@ button
  cursor:pointer; 
  transform:scale(3); 
 }
+select
+{
+ cursor:pointer; 
+ transform:scale(1,2); 
+}
 
 .btn,.bdy
 {
@@ -51,17 +56,22 @@ button
   <button class=ilf>C</button>
   <div class=ilf>life</div>
   <select class=ilf>
-    <option class=ilf>1 year</option>
-	<option class=ilf>2 years</option>
-	<option class=ilf>3 years</option>
-	<option class=ilf>4 years</option>
+    <option >1 year</option>
+	<option >2 years</option>
+	<option >3 years</option>
+	<option >4 years</option>
   <select>
  </div>
  <div class=ihlth>
   <button class=ihlth>OK</button>
   <button class=ihlth>C</button>
   <div class=ihlth>health</div>
-  <input class=ihlth>
+  <select class=ihlth>
+    <option >1 year</option>
+	<option >2 years</option>
+	<option >3 years</option>
+	<option >4 years</option>
+  <select>
  </div>
  <div class=iownrshp>
   <button class=iownrshp>OK</button>
@@ -303,14 +313,6 @@ btn[6].onclick=()=>
  itrsm[3].style.transform='skew(-11deg)'
 }
 
-ilf[0].onclick=()=>
-{ 
- ilf[4].value='bad'
-}
-ihlth[0].onclick=()=>
-{ 
- ihlth[4].value='Asthma'
-}
 iownrshp[0].onclick=()=>
 { 
  iownrshp[4].value='house'
