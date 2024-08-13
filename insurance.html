@@ -61,6 +61,7 @@ select
 	<option >3 years</option>
 	<option >4 years</option>
   <select>
+  <input class=ilf value >
  </div>
  <div class=ihlth>
   <button class=ihlth>OK</button>
@@ -156,7 +157,7 @@ ilf[0].style.left=0+'%'
 ilf[0].style.top=0+'%'  
 ilf[0].style.width=100+'%'
 ilf[0].style.height=100+'%'
-ilf[0].style.background='#909'
+ilf[0].style.background='#990'
 ilf[0].style.borderRadius=22+'%'  
 ilf[0].style.transform=
  'scale(0.3) translate('+Math.random()*44+'%,'+
@@ -169,16 +170,18 @@ ilf[3].style.left=55+'%'
 ilf[3].style.top=7+'%'
 ilf[3].style.fontSize=4+'em'
 ilf[3].style.cursor='pointer'
-ilf[4].style.left=29+'%'
+ilf[4].style.left=57+'%'
 ilf[4].style.top=38+'%'
 ilf[4].style.width=23+'%'
-//ilf[4].style.fontSize=2+'em'
+ilf[5].style.left=20+'%'
+ilf[5].style.top=38+'%'
+ilf[5].style.width=23+'%'
 
 ihlth[0].style.left=0+'%'
 ihlth[0].style.top=0+'%'
 ihlth[0].style.width=100+'%'
 ihlth[0].style.height=100+'%'
-ihlth[0].style.background='#d0d'
+ihlth[0].style.background='#dd0'
 ihlth[0].style.borderRadius=22+'%'  
 ihlth[0].style.transform=
  'scale(0.3) translate('+Math.random()*44+'%,'+
@@ -339,6 +342,7 @@ ilf[1].onclick=()=>
  ilf[0].style.transform='scale(0.3) translate('+
   Math.random()*44+'%,'+Math.random()*44+'%)'  
  ilf[0].style.zIndex=0
+  ilf[5].value=''
   insrd()
 } 
 ilf[2].onclick=()=>
@@ -346,6 +350,11 @@ ilf[2].onclick=()=>
  ilf[0].style.transform='scale(0.3) translate('+
   Math.random()*44+'%,'+Math.random()*44+'%)' 
  ilf[0].style.zIndex=0
+  ilf[5].value=''
+}
+ilf[3].onclick=()=>
+{ 
+ ilf[5].value='888$'
 }
 
 ihlth[1].onclick=()=>
@@ -398,6 +407,7 @@ iauto[2].onclick=()=>
  iauto[0].style.transform='scale(0.3) translate('+
   Math.random()*44+'%,'+Math.random()*44+'%)' 
  iauto[0].style.zIndex=0
+  iauto[4].value=''
 }
 iauto[3].onclick=()=>
 { 
