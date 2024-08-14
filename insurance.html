@@ -80,7 +80,9 @@ select
   <button class=iownrshp>C</button>
   <div class=iownrshp>ownership</div>
   <input class=iownrshp>
+  <div class=iownrshp></div>
  </div>
+
  <div class=iauto>
   <button class=iauto>OK</button>
   <button class=iauto>C</button>
@@ -181,7 +183,7 @@ ihlth[0].style.left=0+'%'
 ihlth[0].style.top=0+'%'
 ihlth[0].style.width=100+'%'
 ihlth[0].style.height=100+'%'
-ihlth[0].style.background='#dd0'
+ihlth[0].style.background='#bb4'
 ihlth[0].style.borderRadius=22+'%'  
 ihlth[0].style.transform=
  'scale(0.3) translate('+Math.random()*44+'%,'+
@@ -194,7 +196,7 @@ ihlth[3].style.left=55+'%'
 ihlth[3].style.top=7+'%'
 ihlth[3].style.fontSize=4+'em'
 ihlth[3].style.cursor='pointer'
-ihlth[4].style.left=29+'%'
+ihlth[4].style.left=24+'%'
 ihlth[4].style.top=30+'%'
 ihlth[5].style.left=59+'%'
 ihlth[5].style.top=30+'%'
@@ -217,9 +219,16 @@ iownrshp[3].style.left=55+'%'
 iownrshp[3].style.top=7+'%'
 iownrshp[3].style.fontSize=4+'em'
 iownrshp[3].style.cursor='pointer'
-iownrshp[4].style.left=29+'%'
+iownrshp[4].style.left=22+'%'
 iownrshp[4].style.top=38+'%'
 iownrshp[4].style.width=23+'%'
+iownrshp[5].style.left=62+'%'
+iownrshp[5].style.top=34+'%'
+iownrshp[5].style.width=23+'%'
+iownrshp[5].style.height=18+'%'
+iownrshp[5].style.background='#f00'
+iownrshp[5].style.borderRadius=14+'%'
+iownrshp[5].style.opacity=0.3
 
 iauto[0].style.left=0+'%'
 iauto[0].style.top=0+'%'  
@@ -308,6 +317,7 @@ btn[4].onclick=()=>
  iownrshp[0].style.zIndex=1
  iownrshp[0].style.transform='scale(1)'
  iownrshp[3].style.transform='skew(-11deg)'
+ iownrshp[5].style.opacity=1
 }
 btn[5].onclick=()=>
 { 
@@ -370,6 +380,7 @@ ihlth[2].onclick=()=>
  ihlth[0].style.transform='scale(0.3) translate('+
   Math.random()*44+'%,'+Math.random()*44+'%)' 
  ihlth[0].style.zIndex=0
+  ihlth[4].value=''
 }
 ihlth[3].onclick=()=>
 { 
@@ -381,6 +392,7 @@ iownrshp[1].onclick=()=>
  iownrshp[0].style.transform='scale(0.3) translate('+
   Math.random()*44+'%,'+Math.random()*44+'%)'  
  iownrshp[0].style.zIndex=0
+ iownrshp[5].style.opacity=0.3
   insrd()
 }
 iownrshp[2].onclick=()=>
@@ -388,6 +400,7 @@ iownrshp[2].onclick=()=>
  iownrshp[0].style.transform='scale(0.3) translate('+
   Math.random()*44+'%,'+Math.random()*44+'%)' 
  iownrshp[0].style.zIndex=0
+ iownrshp[5].style.opacity=0.3
 }
 iownrshp[3].onclick=()=>
 { 
@@ -413,7 +426,7 @@ iauto[3].onclick=()=>
 { 
  iauto[4].value='BMW'
 }
- 
+
 itrsm[1].onclick=()=>
 { 
  itrsm[0].style.transform='scale(0.3) translate('+
