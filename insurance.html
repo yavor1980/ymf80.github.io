@@ -11,8 +11,9 @@
 }
 input
 {
+ cursor:pointer;
  border-radius:21%; 
- cursor:pointer; 
+:text-align:center;
  transform:scale(1,2); 
 }
 button
@@ -29,7 +30,7 @@ select
 li
 {
  text-decoration:none; 
- transform:scale(2); 
+ font-size:2em; 
 }
 
 .btn,.bdy
@@ -90,6 +91,12 @@ li
    <li></li>
    <li></li>
   </div>
+  <select class=iownrshp>
+    <option >1 year</option>
+	<option >2 years</option>
+	<option >3 years</option>
+	<option >4 years</option>
+  <select>
  </div>
 
  <div class=iauto>
@@ -97,11 +104,19 @@ li
   <button class=iauto>C</button>
   <div class=iauto>auto</div>
   <input class=iauto>
+  <input class=iauto>
+  <select class=iauto>
+    <option >1 year</option>
+	<option >2 years</option>
+	<option >3 years</option>
+	<option >4 years</option>
+  <select>
  </div>
  <div class=itrsm>
   <button class=itrsm>OK</button>
   <button class=itrsm>C</button>
   <div class=itrsm>tourism</div>
+  <input class=itrsm>
   <input class=itrsm>
  </div>
  <div class=bdy>
@@ -231,15 +246,18 @@ iownrshp[3].style.top=7+'%'
 iownrshp[3].style.fontSize=4+'em'
 iownrshp[3].style.cursor='pointer'
 iownrshp[4].style.left=22+'%'
-iownrshp[4].style.top=38+'%'
+iownrshp[4].style.top=23+'%'
 iownrshp[4].style.width=23+'%'
 iownrshp[5].style.left=62+'%'
 iownrshp[5].style.top=34+'%'
 iownrshp[5].style.width=23+'%'
-iownrshp[5].style.height=18+'%'
+iownrshp[5].style.height=23+'%'
 iownrshp[5].style.background='#f00'
 iownrshp[5].style.borderRadius=14+'%'
 iownrshp[5].style.opacity=0.3
+iownrshp[6].style.left=22+'%'
+iownrshp[6].style.top=34+'%'
+iownrshp[6].style.width=23+'%'
 
 iauto[0].style.left=0+'%'
 iauto[0].style.top=0+'%'  
@@ -258,9 +276,15 @@ iauto[3].style.left=55+'%'
 iauto[3].style.top=7+'%'
 iauto[3].style.fontSize=4+'em'
 iauto[3].style.cursor='pointer'
-iauto[4].style.left=29+'%'
-iauto[4].style.top=38+'%'
+iauto[4].style.left=22+'%'
+iauto[4].style.top=32+'%'
 iauto[4].style.width=23+'%'
+iauto[5].style.left=22+'%'
+iauto[5].style.top=45+'%'
+iauto[5].style.width=23+'%'
+iauto[6].style.left=59+'%'
+iauto[6].style.top=33+'%'
+iauto[6].style.width=23+'%'
 
 itrsm[0].style.left=0+'%'
 itrsm[0].style.top=0+'%'  
@@ -271,7 +295,7 @@ itrsm[0].style.borderRadius=22+'%'
 itrsm[0].style.transform=
  'scale(0.3)  translate('+Math.random()*44+'%,'+
   Math.random()*44+'%)'
-itrsm[1].style.left=33+'%'
+itrsm[1].style.left=30+'%'
 itrsm[1].style.top=77+'%'
 itrsm[2].style.left=56+'%'
 itrsm[2].style.top=77+'%'
@@ -279,9 +303,12 @@ itrsm[3].style.left=55+'%'
 itrsm[3].style.top=7+'%'
 itrsm[3].style.fontSize=4+'em'
 itrsm[3].style.cursor='pointer'
-itrsm[4].style.left=29+'%'
-itrsm[4].style.top=38+'%'
+itrsm[4].style.left=25+'%'
+itrsm[4].style.top=30+'%'
 itrsm[4].style.width=23+'%'
+itrsm[5].style.left=25+'%'
+itrsm[5].style.top=42+'%'
+itrsm[5].style.width=23+'%'
    
 bbtn2=0  
 btn[0].onmouseover=()=>
@@ -405,6 +432,10 @@ iownrshp[1].onclick=()=>
   Math.random()*44+'%,'+Math.random()*44+'%)'  
  iownrshp[0].style.zIndex=0
  iownrshp[5].style.opacity=0.3
+  i=0 
+ li[0].innerHTML=''
+ li[1].innerHTML=''
+ li[2].innerHTML=''
   insrd()
 }
 iownrshp[2].onclick=()=>
@@ -413,14 +444,20 @@ iownrshp[2].onclick=()=>
   Math.random()*44+'%,'+Math.random()*44+'%)' 
  iownrshp[0].style.zIndex=0
  iownrshp[5].style.opacity=0.3
+  i=0 
+ li[0].innerHTML=''
+ li[1].innerHTML=''
+ li[2].innerHTML=''
 }
 iownrshp[3].onclick=()=>
 { 
  iownrshp[4].value=osh[i]
  li[i].innerHTML=iownrshp[4].value
- //li[i].
   i++
- if(i>2)i=0 
+ if(i>2)
+ {
+  i=0
+ }
 } 
 
 iauto[1].onclick=()=>
@@ -429,6 +466,7 @@ iauto[1].onclick=()=>
   Math.random()*44+'%,'+Math.random()*44+'%)'  
  iauto[0].style.zIndex=0
   iauto[4].value=''
+  iauto[5].value=''
   insrd()
 }
 iauto[2].onclick=()=>
@@ -437,10 +475,12 @@ iauto[2].onclick=()=>
   Math.random()*44+'%,'+Math.random()*44+'%)' 
  iauto[0].style.zIndex=0
   iauto[4].value=''
+  iauto[5].value=''
 }
 iauto[3].onclick=()=>
 { 
  iauto[4].value='BMW'
+ iauto[5].value='2003'
 }
 
 itrsm[1].onclick=()=>
@@ -449,6 +489,7 @@ itrsm[1].onclick=()=>
   Math.random()*44+'%,'+Math.random()*44+'%)'  
  itrsm[0].style.zIndex=0
   itrsm[4].value=''
+  itrsm[5].value=''
   insrd()
 } 
 itrsm[2].onclick=()=>
@@ -457,10 +498,12 @@ itrsm[2].onclick=()=>
   Math.random()*44+'%,'+Math.random()*44+'%)' 
  itrsm[0].style.zIndex=0
   itrsm[4].value=''
+  itrsm[5].value=''
 }
 itrsm[3].onclick=()=>
 { 
  itrsm[4].value='Egypt'
+ itrsm[5].value='21 day'
 }
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
