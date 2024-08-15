@@ -26,6 +26,11 @@ select
  cursor:pointer; 
  transform:scale(1,2); 
 }
+li
+{
+ text-decoration:none; 
+ transform:scale(2); 
+}
 
 .btn,.bdy
 {
@@ -80,7 +85,11 @@ select
   <button class=iownrshp>C</button>
   <div class=iownrshp>ownership</div>
   <input class=iownrshp>
-  <div class=iownrshp></div>
+  <div class=iownrshp>
+   <li></li>
+   <li></li>
+   <li></li>
+  </div>
  </div>
 
  <div class=iauto>
@@ -101,6 +110,8 @@ select
 </div>
 
 <script>
+li=document.getElementsByTagName('li')
+
 btn=document.getElementsByClassName('btn')
 bdy=document.getElementsByClassName('bdy')	
 
@@ -255,7 +266,7 @@ itrsm[0].style.left=0+'%'
 itrsm[0].style.top=0+'%'  
 itrsm[0].style.width=100+'%'
 itrsm[0].style.height=100+'%'
-itrsm[0].style.background='#899'
+itrsm[0].style.background='#090'
 itrsm[0].style.borderRadius=22+'%'  
 itrsm[0].style.transform=
  'scale(0.3)  translate('+Math.random()*44+'%,'+
@@ -387,6 +398,7 @@ ihlth[3].onclick=()=>
  ihlth[4].value='1000$'
 }
  
+osh=['house','auto','land'], i=0 
 iownrshp[1].onclick=()=>
 { 
  iownrshp[0].style.transform='scale(0.3) translate('+
@@ -404,7 +416,11 @@ iownrshp[2].onclick=()=>
 }
 iownrshp[3].onclick=()=>
 { 
- iownrshp[4].value='house'
+ iownrshp[4].value=osh[i]
+ li[i].innerHTML=iownrshp[4].value
+ //li[i].
+  i++
+ if(i>2)i=0 
 } 
 
 iauto[1].onclick=()=>
