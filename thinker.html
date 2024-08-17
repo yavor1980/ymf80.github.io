@@ -9,23 +9,11 @@ body
 .d
 {
  position:absolute;
- border-radius:55%;
  transition:1s;
-}
-
-.lzr
-{
- position:absolute;
- transition:1s;
- left:39%;
- top:39%;
- width:22%;
- height:22%;
- background:#000;
  border-radius:55%;
 }
 
-.rzr
+.lzr,.rzr
 {
  position:absolute;
  transition:1s;
@@ -40,25 +28,17 @@ body
 .nme
 {
  position:absolute;
- font-size:2em;
- color:#fff;
  transition:2s;
+ color:#fff;
+ font-size:2em;
  cursor:pointer;
 }
 
-.crss
+.crss,.fnd
 {
  position:absolute;
- font-size:2em;
  transition:1s;
- cursor:pointer;
-}
-
-.fnd
-{
- position:absolute;
  font-size:2em;
- transition:1s; 
  cursor:pointer;
 }
 
@@ -113,7 +93,7 @@ body
  <div class=dvce>debet </div>
  <div class=dvce>credit </div>
  <div class=dvce></div>
- <div class=dvce>S</div>
+ <div class=dvce>$</div>
 </div> 
   
 <script>
@@ -127,13 +107,12 @@ dvce=document.getElementsByClassName('dvce')
   
 d[0].style.left='11%'
 d[0].style.top='22%'
-d[0].style.width='44%'
+d[0].style.width='32%'
 d[0].style.height='55%'
 d[0].style.background=
  'radial-gradient(#fff,#f7f)'
 d[0].style.borderTopLeftRadius='33%' 
 d[0].style.borderTopRightRadius='33%'
-d[0].style.borderBottomRadius='33%'
 d[0].style.cursor='pointer'
 
 d[1].style.left='14%'
@@ -185,18 +164,12 @@ lzr[1].style.border='8px ridge #000'
 lzr[1].style.zIndex=1
 lzr[1].style.opacity=0
   
-lzr[2].style.background='#fff'  
-lzr[2].style.opacity=0
-  
 rzr[1].style.background='none'
 rzr[1].style.transform=
  'scale(5) translate(-6%,-5%)'
 rzr[1].style.border='8px ridge #000'
 rzr[1].style.zIndex=1
-rzr[1].style.opacity=0  
-  
-rzr[2].style.background='#fff'  
-rzr[2].style.opacity=0  
+rzr[1].style.opacity=0   
   
 nme[0].style.left='66%'
 nme[0].style.top='11%'
@@ -299,9 +272,7 @@ function clk()
    (0.4+Math.random())+')'
  d[6].style.opacity=1  
  lzr[1].style.opacity=1
- lzr[2].style.opacity=0.6
  rzr[1].style.opacity=1
- rzr[2].style.opacity=0.6
  if(b)
  {
   d[0].style.transform='scale(1.2)'
@@ -332,6 +303,8 @@ d[0].onmouseover=()=>
 {
  clk()
  Id0=setInterval(()=>clk(),999)
+ fnd[0].onmouseover()
+ nme[0].onmouseover()
  dvce[0].onmouseover()
 }	
 d[0].onmouseout=()=>
@@ -342,14 +315,14 @@ d[0].onmouseout=()=>
  lzr[0].style.transform='scale(1)'
  lzr[0].style.background='#000'
  lzr[1].style.opacity=0
- lzr[2].style.opacity=0
  rzr[0].style.transform='scale(1)'
  rzr[0].style.background='#000'
  rzr[1].style.opacity=0
- rzr[2].style.opacity=0
  fnd[4].style.color='#fff'
  fnd[4].style.transform='scale(0)'	
   clearInterval(Id0)
+  fnd[0].onmouseout()
+  nme[0].onmouseout()
   dvce[0].onmouseout()
 }
 
@@ -465,16 +438,19 @@ dvce[0].onmouseover=()=>
   'scale(1.4) translate(-22%,-22%) skew(22deg)' 
  dvce[3].style.opacity=1
  Idvs=setInterval(()=>{
-  if(bdvs){
+  if(bdvs)
+  {
    dvce[1].style.fontSize='2em'
    dvce[2].style.fontSize='1.5em'
    dvce[4].style.transform=
-    'scale(4)'
-  }else{
+    'scale(4) translate(0,-99%)'
+  }
+   else
+  {
    dvce[1].style.fontSize='1.5em'
    dvce[2].style.fontSize='2em'	
    dvce[4].style.transform=
-    'scale(5)'
+    'scale(5) translate(0,-99%)'
   }	
    bdvs=!bdvs
  }, 888)
