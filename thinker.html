@@ -12,6 +12,17 @@ body
  transition:1s;
  border-radius:55%;
 }
+.glss
+{
+ position:absolute;
+ transition:1s;
+ left:37%;
+ top:22%;
+ width:22%;
+ height:22%;
+ border-radius:55%;
+
+}
 
 .lzr,.rzr
 {
@@ -67,6 +78,11 @@ body
   <div class=d></div>
   <div class=d></div>
  </div> 
+ <div class=glss>
+  <div class=glss></div>
+  <div class=glss></div>
+  <div class=glss></div>
+ </div>
 </div> 
 
 <div class=nme>Market</div> 
@@ -100,168 +116,175 @@ body
 d=document.getElementsByClassName('d')
 lzr=document.getElementsByClassName('lzr')
 rzr=document.getElementsByClassName('rzr')
+glss=document.getElementsByClassName('glss')
+
 nme=document.getElementsByClassName('nme')
 crss=document.getElementsByClassName('crss')
 fnd=document.getElementsByClassName('fnd')
 dvce=document.getElementsByClassName('dvce')
   
-d[0].style.left='11%'
-d[0].style.top='22%'
-d[0].style.width='32%'
-d[0].style.height='55%'
+d[0].style.left=11+'%'
+d[0].style.top=22+'%'
+d[0].style.width=32+'%'
+d[0].style.height=55+'%'
 d[0].style.background=
  'radial-gradient(#fff,#f7f)'
-d[0].style.borderTopLeftRadius='33%' 
-d[0].style.borderTopRightRadius='33%'
+d[0].style.borderTopLeftRadius=33+'%' 
+d[0].style.borderTopRightRadius=33+'%'
 d[0].style.cursor='pointer'
 
-d[1].style.left='14%'
-d[1].style.top='2%'
-d[1].style.width='22%'
-d[1].style.height='33%'
+d[1].style.left=14+'%'
+d[1].style.top=2+'%'
+d[1].style.width=22+'%'
+d[1].style.height=33+'%'
 d[1].style.background='#fff'
 
-d[2].style.left='66%'
-d[2].style.top='2%'
-d[2].style.width='22%'
-d[2].style.height='33%'
+d[2].style.left=66+'%'
+d[2].style.top=2+'%'
+d[2].style.width=22+'%'
+d[2].style.height=33+'%'
 d[2].style.background='#fff'
 
-d[3].style.left='29%';
-d[3].style.top='72%';
-d[3].style.width='44%';
-d[3].style.height='11%';
+d[3].style.left=29+'%';
+d[3].style.top=72+'%';
+d[3].style.width=44+'%';
+d[3].style.height=11+'%';
 d[3].style.background=
  'radial-gradient(#000,#f00)'
 
-d[4].style.left='39%'
-d[4].style.top='24%'
-d[4].style.width='22%'
-d[4].style.height='33%'
+d[4].style.left=39+'%'
+d[4].style.top=24+'%'
+d[4].style.width=22+'%'
+d[4].style.height=33+'%'
 d[4].style.background=
  'radial-gradient(#bbb,#f4f)'
-d[4].style.borderBottomLeftRadius='10%' 
-d[4].style.borderBottomRightRadius='10%'
+d[4].style.borderBottomLeftRadius=10+'%' 
+d[4].style.borderBottomRightRadius=10+'%'
 
-d[5].style.left='-22%'
-d[5].style.top='88%'
-d[5].style.width='144%'
-d[5].style.height='33%'
+d[5].style.left=-22+'%'
+d[5].style.top=88+'%'
+d[5].style.width=144+'%'
+d[5].style.height=33+'%'
 d[5].style.background=
  'radial-gradient(#bbb,#f4f)'
+ 
+glss[0].style.opacity=0
+glss[0].style.transform='translate(333%,-66%)' 
+	 
+glss[1].style.left=-11+'%'
+glss[1].style.top=2+'%'
+glss[1].style.width=131+'%'
+glss[1].style.height=22+'%'
+glss[1].style.borderRadius=
+glss[1].style.borderTop='44px ridge #000'
 
-d[6].style.left='1%'
-d[6].style.top='-22%'
-d[6].style.width='99%'
-d[6].style.height='33%'
-d[6].style.borderTop='44px ridge #000'
-d[6].style.opacity=0
+glss[2].style.left=-81+'%'
+glss[2].style.top=-22+'%'
+glss[2].style.width=21+'%'
+glss[2].style.height=22+'%'
+glss[2].style.border='8px ridge #000'
+glss[2].style.transform=
+ 'scale(5) translate(-6%,-5%)'
 
-lzr[1].style.background='none'
-lzr[1].style.transform=
- 'scale(5) translate(-6%,-5%)'
-lzr[1].style.border='8px ridge #000'
-lzr[1].style.zIndex=1
-lzr[1].style.opacity=0
+glss[3].style.left=181+'%'
+glss[3].style.top=-22+'%'    
+glss[3].style.width=21+'%'
+glss[3].style.height=22+'%'
+glss[3].style.border='8px ridge #000'
+glss[3].style.transform=
+ 'scale(5) translate(-6%,-5%)'  
   
-rzr[1].style.background='none'
-rzr[1].style.transform=
- 'scale(5) translate(-6%,-5%)'
-rzr[1].style.border='8px ridge #000'
-rzr[1].style.zIndex=1
-rzr[1].style.opacity=0   
-  
-nme[0].style.left='66%'
-nme[0].style.top='11%'
+nme[0].style.left=66+'%'
+nme[0].style.top=11+'%'
 nme[0].style.color='#000'
 
-nme[1].style.left='55%'
-nme[1].style.top='22%'
+nme[1].style.left=55+'%'
+nme[1].style.top=22+'%'
 nme[1].style.color='#800'
 nme[1].style.transform='scale(0)'
 
-nme[2].style.left='66%';
-nme[2].style.top='22%';
+nme[2].style.left=66+'%';
+nme[2].style.top=22+'%';
 nme[2].style.color='#0f0';
 nme[2].style.transform='scale(0)'
 
-nme[3].style.left='77%';
-nme[3].style.top='22%';
+nme[3].style.left=77+'%';
+nme[3].style.top=22+'%';
 nme[3].style.color='#990';
 nme[3].style.transform='scale(0)'
 
-nme[4].style.left='66%';
-nme[4].style.top='33%';
+nme[4].style.left=66+'%';
+nme[4].style.top=33+'%';
 nme[4].style.color='#909';
 nme[4].style.transform='scale(0)'
 
-nme[5].style.left='77%';
-nme[5].style.top='30%';
+nme[5].style.left=77+'%';
+nme[5].style.top=30+'%';
 nme[5].style.color='#0bb';
 nme[5].style.transform='scale(0)'
 
-crss[0].style.left='33%';
-crss[0].style.top='6%';
+crss[0].style.left=33+'%';
+crss[0].style.top=6+'%';
 crss[0].style.color='#900';
 
-crss[1].style.left='66%';
-crss[1].style.top='2%';
+crss[1].style.left=66+'%';
+crss[1].style.top=2+'%';
 
-crss[2].style.left='66%';
-crss[2].style.top='22%';
+crss[2].style.left=66+'%';
+crss[2].style.top=22+'%';
 crss[2].style.transform='scale(0)';
 
-fnd[0].style.left='6%';
-fnd[0].style.top='88%';
+fnd[0].style.left=6+'%';
+fnd[0].style.top=88+'%';
 fnd[0].style.color='#770';
 fnd[0].style.transform='scale(1.2)';
 
-fnd[1].style.left='33%';
-fnd[1].style.top='85%';
+fnd[1].style.left=33+'%';
+fnd[1].style.top=85+'%';
 fnd[1].style.color='#bb0';
 fnd[1].style.transform='scale(0)';
 
-fnd[2].style.left='33%';
-fnd[2].style.top='89%';
+fnd[2].style.left=33+'%';
+fnd[2].style.top=89+'%';
 fnd[2].style.color='#880'
 fnd[2].style.transform='scale(0)';
 
-fnd[3].style.left='22%';
-fnd[3].style.top='14%';
+fnd[3].style.left=22+'%';
+fnd[3].style.top=14+'%';
 fnd[3].style.color='#99f';
 
-fnd[4].style.left='55%';
-fnd[4].style.top='11%';
+fnd[4].style.left=55+'%';
+fnd[4].style.top=11+'%';
 fnd[4].style.color='#880';
 fnd[4].style.transform='scale(0)';
 
-dvce[0].style.left='60%';
-dvce[0].style.top='66%';
-dvce[0].style.width='24%';
-dvce[0].style.height='18%';
+dvce[0].style.left=60+'%';
+dvce[0].style.top=66+'%';
+dvce[0].style.width=24+'%';
+dvce[0].style.height=18+'%';
 dvce[0].style.background='#0ff';
 dvce[0].style.border='3px ridge #f00';
 
-dvce[1].style.left='6%';
-dvce[1].style.top='6%';
+dvce[1].style.left=6+'%';
+dvce[1].style.top=6+'%';
 dvce[1].style.color='#f00';
-dvce[1].style.fontSize='0em';
+dvce[1].style.fontSize=0+'em';
 
-dvce[2].style.left='55%'
-dvce[2].style.top='6%'
+dvce[2].style.left=55+'%'
+dvce[2].style.top=6+'%'
 dvce[2].style.color='#f09';
-dvce[2].style.fontSize='0em'
+dvce[2].style.fontSize=0+'em'
 
-dvce[3].style.left='45%'
-dvce[3].style.top='6%'
-dvce[3].style.width='4%'
-dvce[3].style.height='88%'
+dvce[3].style.left=45+'%'
+dvce[3].style.top=6+'%'
+dvce[3].style.width=4+'%'
+dvce[3].style.height=88+'%'
 dvce[3].style.background='#f0f'
 dvce[3].style.borderRadius=55+'%'
 dvce[3].style.opacity=0
 
-dvce[4].style.left='44%'
-dvce[4].style.top='44%'
+dvce[4].style.left=44+'%'
+dvce[4].style.top=44+'%'
 dvce[4].style.color='#f99';
 dvce[4].style.transform='scale(0)'
 
@@ -270,9 +293,8 @@ function clk()
 { 
  d[3].style.transform='scale(1,'+
    (0.4+Math.random())+')'
- d[6].style.opacity=1  
- lzr[1].style.opacity=1
- rzr[1].style.opacity=1
+ glss[0].style.opacity=1  
+ glss[0].style.transform='scale(1)'
  if(b)
  {
   d[0].style.transform='scale(1.2)'
@@ -284,7 +306,7 @@ function clk()
   fnd[4].style.transform=
    'scale(2) skew(-22deg)'
  }
- else
+  else
  { 
   d[0].style.transform='scale(1)'
   lzr[0].style.transform='scale(1)'
@@ -305,24 +327,24 @@ d[0].onmouseover=()=>
  Id0=setInterval(()=>clk(),999)
  fnd[0].onmouseover()
  nme[0].onmouseover()
+ fnd[3].onmouseover()
  dvce[0].onmouseover()
 }	
 d[0].onmouseout=()=>
 {
  d[0].style.transform='scale(1)'
- d[3].style.transform='scale(1)'
- d[6].style.opacity=0
+ glss[0].style.opacity=0
+ glss[0].style.transform='translate(333%,-66%)'
  lzr[0].style.transform='scale(1)'
  lzr[0].style.background='#000'
- lzr[1].style.opacity=0
  rzr[0].style.transform='scale(1)'
  rzr[0].style.background='#000'
- rzr[1].style.opacity=0
  fnd[4].style.color='#fff'
  fnd[4].style.transform='scale(0)'	
   clearInterval(Id0)
   fnd[0].onmouseout()
   nme[0].onmouseout()
+  fnd[3].onmouseout()
   dvce[0].onmouseout()
 }
 
