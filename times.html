@@ -17,7 +17,7 @@ select
  position:absolute;
  transition:1s;
  text-align:center;
- font-size: 1.4em;
+ font-size:1.4em;
  padding-top: 11px;
 }
 
@@ -39,23 +39,22 @@ select
  position:absolute;
  transition: 1s;
  text-align:center;
- font-size: 1.5em;
+ font-size:1.5em;
 }
 
 .srvr
 {
  position:absolute;
  transition:1s;
- font-size: 1.5em;
+ font-size:1.5em;
 }
 
 .vctr
 {
  position:absolute;
  transition:1s;
- font-size: 1.5em;
+ font-size:1.5em;
 }
-
 
 </style>
 
@@ -64,7 +63,7 @@ select
  <div class=hd>present</div>
  <div class=hd>future</div>
  
- <div class=prjct>prjct</div>
+ <div class=prjct>project</div>
   <div class=prjct></div>
  <div class=drns>drones</div>
  <div class=drns>operate</div>
@@ -96,8 +95,6 @@ drns=document.getElementsByClassName('drns')
 tms=document.getElementsByClassName('tms')
 srvr=document.getElementsByClassName('srvr')
 vctr=document.getElementsByClassName('vctr')
-frz=document.getElementsByClassName('frz')
-  
  
 function inn(nm,i,l,t,w,h,bkgr) 
 {
@@ -115,6 +112,7 @@ inn(hd,2, 37,22, 22,22,'#0ff')
  hd[2].style.cursor='pointer'
 inn(hd,3, 65,22, 22,22,'#ff0')
  hd[3].style.cursor='pointer'
+ 
 inn(prjct,0, 11,55, 0,0,'')
  prjct[0].style.color='#ff0'
  prjct[0].style.transform='scale(1.4)'
@@ -123,6 +121,7 @@ inn(prjct,1, 30,55, 0,0,'')
  prjct[1].style.color='#0ff'
  prjct[1].style.transform='scale(0)'
  prjct[1].style.cursor='pointer'
+ 
 inn(drns,0, 55,77, 0,0,'')
  drns[0].style.color='#f0f'
  drns[0].style.transform='scale(1.4)'
@@ -132,13 +131,15 @@ inn(drns,1, 66,77, 0,0,'')
  drns[1].style.transform='scale(0)'
 inn(drns,2, 72,77, 0,0,'')
  drns[2].style.color='#f0f'
- drns[2].style.transform='scale(0)'    
+ drns[2].style.transform='scale(0)'  
+ 
 inn(tms,0, 1,37, 98,62,'radial-gradient(#0f0,#000)')
  tms[0].style.zIndex=0
 inn(tms,1, 33,11, 44,22,'#777')
  tms[1].style.cursor='pointer'
 inn(tms,2, 3,11, 22,33,'#f00')
  tms[2].style.cursor='pointer'
+ 
 inn(srvr,0, 11,44,0,0,'')
  srvr[0].style.cursor='pointer'
  srvr[0].style.color='#900'
@@ -148,6 +149,7 @@ inn(srvr,1, 22,55,0,0,'')
 inn(srvr,2, 22,66,0,0,'')
  srvr[2].style.color='#ff0'
  srvr[2].style.transform='scale(0)'
+ 
 inn(vctr,0, 44,55,0,0,'')
  vctr[0].style.cursor='pointer'
  vctr[0].style.color='#908'  
@@ -265,13 +267,16 @@ function act(i,l)
 		
 bpr4=0	
 setInterval(()=>{
- if(bpr4){
+ if(bpr4)
+ {
   prjct[0].style.transform='scale(1.6) '
- }else{
+ }
+ else
+ {
   prjct[0].style.transform='scale(2.0)'
  }
   bpr4=!bpr4
-},999)
+}, 999)
 	
 pr1I=0		
 bpr1=0	
@@ -297,7 +302,7 @@ prjct[0].onmouseover=()=>
 prjct[0].onmouseout=()=>
 {
  prjct[0].style.transform='scale(1.4)'
-  prjct[0].innerHTML='prjct'
+  prjct[0].innerHTML='project'
  prjct[1].style.transform='scale(0)'
   clearInterval(pr1I)
 }      
@@ -389,21 +394,21 @@ vctr[0].onmouseover=()=>
  vctr[0].style.transform=
   'scale(2) translate(-22px,-33px)'
  vctr[0].style.color='#f07'
-  vctr[0].innerHTML='vector modelling'
+  vctr[0].innerHTML='vector modeling'
  vctr[1].style.transform=
   'scale(2) translate(22px,-33px)'
  vctr[1].style.color='#fff'
-Ivctr0=setInterval(()=>{
- if(bvctr0){
-  vctr[2].style.transform=
-   'scale(2) translate(22px,-33px)'
-  vctr[2].style.color='#f0f'
- }else{
-  vctr[2].style.transform=
-   'scale(1) translate(22px,-33px)'
-  vctr[2].style.color='#f07'
-}
- bvctr0=!bvctr0
+ Ivctr0=setInterval(()=>{
+  if(bvctr0){
+   vctr[2].style.transform=
+    'scale(2) translate(22px,-33px)'
+   vctr[2].style.color='#f0f'
+  }else{
+   vctr[2].style.transform=
+    'scale(1) translate(22px,-33px)'
+   vctr[2].style.color='#f07'
+ }
+  bvctr0=!bvctr0
 }, 999)
 }
 vctr[0].onmouseout=()=>
@@ -417,16 +422,9 @@ vctr[0].onmouseout=()=>
  vctr[2].style.color='#000'
   clearInterval(Ivctr0)
   bvctr0=1
-}   
-vctr[0].onclick=()=>
-{
- vctr[0].style.width='22%'
- vctr[0].style.color='#990'
-  vctr[0].innerHTML='create it!'
 }                 
 					
  // Math.round(Math.random())
 </script>
 </body>
-
 </html>
