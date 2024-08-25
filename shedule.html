@@ -101,6 +101,7 @@ inn(hd,9, 66,67, '','', 'none')
 
  hd[9].style.cursor='pointer'
  hd[9].style.transform='scale(3)'
+ 
 inn(ftr,1, 44,22, 44,44, '#555')
  ftr[1].style.cursor='pointer'
 inn(ftr,2, 50,5, 44,44, 'none')
@@ -141,41 +142,45 @@ function act(i)
 { 
  hd[i].onmouseover=()=>
  {  
-  ftr[1].style.color='#b00' 
+  ftr[1].style.color='#f00' 
+  ftr[1].style.background='none'
+  ftr[1].style.transform=
+   'scale(1.4) translate(-12%,0) skew(15deg)'
+   clearInterval(Icl)
   switch(i){ 
    case 1: 
-	ftr[1].innerHTML='preparing'
-	hd[i].innerHTML='new deal'
+	 hd[i].innerHTML='new deal'
+	 ftr[1].innerHTML='preparing'
 	hd[i].style.color='#bbf'
 	hd[i].style.transform='scale(1.2)'
 	hd[i].style.zIndex=1
    break
    case 2: 
-	ftr[1].innerHTML='task definition'
-    hd[i].innerHTML='continue...'
+     hd[i].innerHTML='continue...'
+	 ftr[1].innerHTML='task definition'
 	hd[i].style.color='#78f'
 	hd[i].style.transform='scale(1.2)'
 	hd[i].style.zIndex=1
    break
    case 3: 
-	ftr[1].innerHTML='working'
-    hd[i].innerHTML='midweek'
+     hd[i].innerHTML='midweek'
+	 ftr[1].innerHTML='working'
 	hd[i].style.color='#f78'
 	hd[i].style.transform='scale(1.2)'
     hd[i].style.zIndex=1
    break
    case 4: 
-	ftr[1].innerHTML='summarizing'
-    hd[i].innerHTML='evnng'
+     hd[i].innerHTML='evnng'
+	 ftr[1].innerHTML='summarizing'
 	hd[i].style.color='#ff8'
 	hd[i].style.transform='scale(1.2)'
 	hd[i].style.zIndex=1
    break
    case 5: 
-	ftr[1].innerHTML='cleaning'
-	hd[i].innerHTML='finito'
+	 hd[i].innerHTML='finito'
+	 ftr[1].innerHTML='cleaning'
     hd[i].style.transform=
-	'scale(1.2) translate(-7%,8%)'
+	 'scale(1.2) translate(-7%,8%)'
     hd[i].style.color='#088'
 	hd[i].style.zIndex=1
    break
@@ -184,7 +189,9 @@ function act(i)
  }		  
  hd[i].onmouseout=()=>
  {
+   Icl=setInterval(()=>cl(),999)
   ftr[1].style.color='#000' 
+  ftr[1].style.background='#555' 
    ftr[1].innerHTML='choose any day'
   hd[i].style.fontSize='1.2em'
   hd[i].style.transform='scale(1)'
