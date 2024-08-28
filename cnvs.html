@@ -1,8 +1,6 @@
 <DOCTYPE html>
 <html>
-
 <head>
-
 <style>
 body
 {
@@ -16,14 +14,7 @@ canvas
  background:#0f0;
 }
 
-.btn
-{
- position:absolute;
- transition:1s;
- cursor:pointer;
-}
-
-.cmmnt
+.btn,.cmmnt
 {
  position:absolute;
  transition:1s;
@@ -34,12 +25,10 @@ canvas
 </head>
 
 <body>
-
 <canvas></canvas> 
-
 <input type=button class=btn value='round'>
 <input type=button class=btn value='clear'>
-<input type=button class=btn value='rnge'>
+<input type=button class=btn value='range'>
 <input type=range class=btn min=0 max=9>
 <input type=range class=btn min=0 max=9>
 <input type=range class=btn min=0 max=9>
@@ -62,6 +51,7 @@ cnv[0].style.width=77+'%'
 cnv[0].style.height=77+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
+cnv[0].style.zIndex=1
  cntxt=cnv[0].getContext('2d')
 
 btn[0].style.left=85+'%'
@@ -76,17 +66,17 @@ btn[1].style.left=85+'%'
 btn[1].style.top=14+'%'
 btn[1].style.width=7+'%'
 btn[1].style.height=4+'%'
-btn[1].style.fontSize='0em'
 btn[1].style.background='#0f0'
+btn[1].style.fontSize=0+'em'
 btn[1].style.transform='scale(1.5)'
 
 btn[2].style.left=85+'%'
 btn[2].style.top=24+'%'
 btn[2].style.width=7+'%'
 btn[2].style.height=4+'%'
-btn[2].style.fontSize='0em'
 btn[2].style.background='#00f'
 btn[2].style.color='#ff0'
+btn[2].style.fontSize=0+'em'
 btn[2].style.transform='scale(1.5)'
 
 btn[3].style.left=85+'%'
@@ -94,25 +84,24 @@ btn[3].style.top=33+'%'
 btn[3].style.width=7+'%'
 btn[3].style.height=4+'%'
 btn[3].style.transform='scale(1.5)'
-btn[3].value=Math.random()*99
+ btn[3].value=Math.random()*99
 
 btn[4].style.left=85+'%'
 btn[4].style.top=40+'%'
 btn[4].style.width=7+'%'
 btn[4].style.height=4+'%'
 btn[4].style.transform='scale(1.5)'
-btn[4].value=Math.random()*99
+ btn[4].value=Math.random()*99
 
 btn[5].style.left=85+'%'
 btn[5].style.top=47+'%'
 btn[5].style.width=7+'%'
 btn[5].style.height=4+'%'
 btn[5].style.transform='scale(1.5)'
-btn[5].value=Math.random()*99
+ btn[5].value=Math.random()*99
 
 cmmnt[0].style.left=55+'%'
 cmmnt[0].style.top=11+'%'
-cmmnt[0].style.fontSize='1em'
 cmmnt[0].style.textArea='center'
 cmmnt[0].style.transform='scale(0)'
 
@@ -154,36 +143,57 @@ cmmnt[5].style.top=56+'%'
 cmmnt[5].style.color='#900'
 cmmnt[5].style.transform='scale(0)'
 
+bcnvs=0
+nrnd=0, nln=0
+function fline()
+{
+  if(bcnvs)
+   cntxt.moveTo(0,0)
+  else
+  {
+   cntxt.lineTo(event.clientX/4+28,event.clientY/4+8)
+   cntxt.stroke()
+    nln++ 
+  }
+  bcnvs=!bcnvs
+}
 cnv[0].onmouseover=()=>
 {
+ cnv[0].style.left=1+'%'
+ cnv[0].style.top=1+'%'
+ cnv[0].style.width=96+'%'
+ cnv[0].style.height=95+'%'
  cnv[0].style.border='11px ridge #ee0'
 }
 cnv[0].onmouseout=()=>
 {
+ cnv[0].style.left=1+'%'
+ cnv[0].style.top=1+'%'
+ cnv[0].style.width=77+'%'
+ cnv[0].style.height=77+'%'
  cnv[0].style.border='11px ridge #ff0'
  cmmnt[5].style.transform='scale(0)'
 }
-nrnd=0, nln=0
 cnv[0].onclick=()=>
 {
- if(bbtn0){
+ if(bbtn0)
+ {
   cntxt.beginPath()
-  cntxt.arc(event.clientX/4+28,event.clientY/4+8,
+  cntxt.arc(event.clientX/4+2,event.clientY/4+8,
     9,0,2*Math.PI)
   cntxt.stroke()
   cmmnt[5].style.transform=
    'scale(2.5) translate(0,88%) skew(-9deg)'
    cmmnt[5].innerHTML='round'
    nrnd++
- }else{
+ }
+ else
+ {
   cntxt.beginPath()
-  cntxt.moveTo(0,0)
-  cntxt.lineTo(event.clientX/4+28,event.clientY/4+8)
+   fline()
   cmmnt[5].style.transform=
    'scale(2.5) translate(0,88%) skew(-9deg)'
    cmmnt[5].innerHTML='line'
-  cntxt.stroke()
-   nln++  
  } 
  cmmnt[0].style.color='#a00' 
  cmmnt[0].style.transform='scale(3.4) '
@@ -207,9 +217,12 @@ btn[0].onmouseout=()=>
 bbtn0=1
 btn[0].onclick=()=>
 {   
- if(bbtn0){
+ if(bbtn0)
+ {
   btn[0].value='line'
- }else{
+ }
+ else
+ {
   btn[0].value='round'
  } 
     bbtn0=!bbtn0
@@ -232,10 +245,10 @@ btn[1].onclick=()=>
   nln=0
  cmmnt[0].style.color='#f00' 
  cmmnt[0].style.transform= 'scale(4) '
- cmmnt[0].innerHTML=nrnd+' '+nln
+  cmmnt[0].innerHTML=nrnd+' '+nln
  setTimeout(()=>{
   cmmnt[0].style.transform='scale(0) '
- },999)
+ }, 999)
 }
 
 btn[2].onmouseover=()=>
@@ -300,18 +313,18 @@ cmmnt[2].onmouseout=()=>
 
 cmmnt[3].onmouseover=()=>
 {  
+ cmmnt[1].style.transform='scale(0)'
+ cmmnt[2].style.transform='scale(0)'
  cmmnt[3].style.transform='scale(1.2)'
  cmmnt[3].style.fontSize='3em'
   cmmnt[3].innerHTML=tc
- cmmnt[1].style.transform='scale(0)'
- cmmnt[2].style.transform='scale(0)'
 }
 cmmnt[3].onmouseout=()=>
 {  
- cmmnt[3].style.transform='scale(1)'  
- cmmnt[3].style.fontSize='0em'
  cmmnt[1].style.transform='scale(1)'  
  cmmnt[2].style.transform='scale(1)'
+ cmmnt[3].style.transform='scale(1)'  
+ cmmnt[3].style.fontSize='0em'
 }
 
 cmmnt[4].onmouseover=()=>
@@ -326,5 +339,3 @@ cmmnt[4].onmouseout=()=>
 //for(var i=0;i<n;i++) 
 </script> 
 </html>
-
-
