@@ -11,6 +11,8 @@ canvas
 {
  position:absolute;
  transition:1s;
+ left:0%;
+ top:0%;
  background:#0f0;
 }
 
@@ -27,16 +29,13 @@ canvas
 <body>
 <canvas></canvas> 
 <input type=button class=btn value='round'>
+<input type=button class=btn value='line'>
 <input type=button class=btn value='clear'>
 <input type=button class=btn value='range'>
 <input type=range class=btn min=0 max=9>
 <input type=range class=btn min=0 max=9>
 <input type=range class=btn min=0 max=9>
 
-<div class=cmmnt></div>
-
-<div class=cmmnt></div>
-<div class=cmmnt></div>
 <div class=cmmnt></div>
 
 <div class=cmmnt>drawing...</div>
@@ -48,7 +47,7 @@ btn=document.getElementsByClassName('btn')
 cmmnt=document.getElementsByClassName('cmmnt')
 
 cnv[0].style.width=77+'%'
-cnv[0].style.height=77+'%'
+cnv[0].style.height=96+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
 cnv[0].style.zIndex=1
@@ -100,49 +99,6 @@ btn[5].style.height=4+'%'
 btn[5].style.transform='scale(1.5)'
  btn[5].value=Math.random()*99
 
-cmmnt[0].style.left=55+'%'
-cmmnt[0].style.top=11+'%'
-cmmnt[0].style.textArea='center'
-cmmnt[0].style.transform='scale(0)'
-
-cmmnt[1].style.left=4+'%'
-cmmnt[1].style.top=84+'%'
-cmmnt[1].style.width='19%'
-cmmnt[1].style.height='11%'
-cmmnt[1].style.background='#f00'
-cmmnt[1].style.color='#fff'
-cmmnt[1].style.textAlign='center'
-cmmnt[1].style.fontSize='0em'
-
-cmmnt[2].style.left=27+'%'
-cmmnt[2].style.top=84+'%'
-cmmnt[2].style.width='19%'
-cmmnt[2].style.height='11%'
-cmmnt[2].style.background='#f0f'
-cmmnt[2].style.color='#fff'
-cmmnt[2].style.textAlign='center'
-cmmnt[2].style.fontSize='0em'
-
-cmmnt[3].style.left=49+'%'
-cmmnt[3].style.top=84+'%'
-cmmnt[3].style.width='19%'
-cmmnt[3].style.height='11%'
-cmmnt[3].style.background='#00f'
-cmmnt[3].style.color='#fff'
-cmmnt[3].style.textAlign='center'
-cmmnt[3].style.fontSize='0em'
-
-cmmnt[4].style.left=85+'%'
-cmmnt[4].style.top=56+'%'
-cmmnt[4].style.color='#900'
-cmmnt[4].style.transform=
- 'scale(2.4) skew(21deg)'
-
-cmmnt[5].style.left=85+'%'
-cmmnt[5].style.top=56+'%'
-cmmnt[5].style.color='#900'
-cmmnt[5].style.transform='scale(0)'
-
 bcnvs=0
 nrnd=0, nln=0
 function fline()
@@ -159,18 +115,10 @@ function fline()
 }
 cnv[0].onmouseover=()=>
 {
- cnv[0].style.left=1+'%'
- cnv[0].style.top=1+'%'
- cnv[0].style.width=96+'%'
- cnv[0].style.height=95+'%'
  cnv[0].style.border='11px ridge #ee0'
 }
 cnv[0].onmouseout=()=>
 {
- cnv[0].style.left=1+'%'
- cnv[0].style.top=1+'%'
- cnv[0].style.width=77+'%'
- cnv[0].style.height=77+'%'
  cnv[0].style.border='11px ridge #ff0'
  cmmnt[5].style.transform='scale(0)'
 }
@@ -279,62 +227,6 @@ btn[2].onclick=()=>
  cmmnt[3].style.background=tc
 }   
 
-cmmnt[1].onmouseover=()=>
-{  
- cmmnt[1].style.transform='scale(1.2)'
- cmmnt[1].style.fontSize='3em'
-  cmmnt[1].innerHTML=fc
- cmmnt[2].style.transform='scale(0)'
- cmmnt[3].style.transform='scale(0)'
-}
-cmmnt[1].onmouseout=()=>
-{  
- cmmnt[1].style.transform='scale(1)' 
- cmmnt[1].style.fontSize='0em'
- cmmnt[2].style.transform='scale(1)'
- cmmnt[3].style.transform='scale(1)'
-}
-
-cmmnt[2].onmouseover=()=>
-{  
- cmmnt[2].style.transform='scale(1.2)'
- cmmnt[2].style.fontSize='3em'
-  cmmnt[2].innerHTML=sc
- cmmnt[1].style.transform='scale(0)'
- cmmnt[3].style.transform='scale(0)'
-}
-cmmnt[2].onmouseout=()=>
-{  
- cmmnt[2].style.transform='scale(1)' 
- cmmnt[2].style.fontSize='0em'
- cmmnt[1].style.transform='scale(1)'  
- cmmnt[3].style.transform='scale(1)'
-}
-
-cmmnt[3].onmouseover=()=>
-{  
- cmmnt[1].style.transform='scale(0)'
- cmmnt[2].style.transform='scale(0)'
- cmmnt[3].style.transform='scale(1.2)'
- cmmnt[3].style.fontSize='3em'
-  cmmnt[3].innerHTML=tc
-}
-cmmnt[3].onmouseout=()=>
-{  
- cmmnt[1].style.transform='scale(1)'  
- cmmnt[2].style.transform='scale(1)'
- cmmnt[3].style.transform='scale(1)'  
- cmmnt[3].style.fontSize='0em'
-}
-
-cmmnt[4].onmouseover=()=>
-{  
- cmmnt[4].style.transform='scale(3) skew(11deg)'
-}
-cmmnt[4].onmouseout=()=>
-{  
- cmmnt[4].style.transform='scale(2.4) skew(21deg)'  
-}
 
 //for(var i=0;i<n;i++) 
 </script> 
