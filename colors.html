@@ -13,6 +13,7 @@ body
  transition:1s;
  cursor:pointer;
  border-radius:23%;
+ font-size:2em;
 }
 .rnge
 {
@@ -35,14 +36,15 @@ body
  width:74%;
  height:22%;
  background:#f0f;
- opacity:0.3;
+ border-radius:7%;
+ //opacity:0.3;
 }
 
 </style>
 </head>
 <body>
-<input type=button class=btn>
-<input type=button class=btn>
+<input type=button class=btn value='change'>
+<input type=button class=btn value='reset'>
 
 <div class=rnge>
  <input type=range class=rnge min=0 max=9>
@@ -51,8 +53,7 @@ body
 </div>
 
 <div class=cmmnt>
- <div class=cmmnt><
- /div>
+ <div class=cmmnt></div>
  <div class=cmmnt></div>
  <div class=cmmnt></div>
 </div>
@@ -73,31 +74,37 @@ btn[1].style.width=11+'%'
 btn[1].style.height=11+'%'
 btn[1].style.background='#f0f'
 
-rnge[1].style.left=35+'%'
-rnge[1].style.top=5+'%'
-rnge[1].style.width=28+'%'
+rnge[1].style.left=15+'%'
+rnge[1].style.top=8+'%'
+rnge[1].style.width=77+'%'
 rnge[1].style.height=7+'%'
 rnge[1].style.background='#ff0'
  rnge[1].value=Math.random()*9
-rnge[2].style.left=65+'%'
-rnge[2].style.top=36+'%'
-rnge[2].style.width=28+'%'
+rnge[2].style.left=15+'%'
+rnge[2].style.top=28+'%'
+rnge[2].style.width=77+'%'
 rnge[2].style.height=7+'%'
 rnge[2].style.background='#0ff'
  rnge[2].value=Math.random()*9
-rnge[3].style.left=5+'%'
-rnge[3].style.top=6+'%'
-rnge[3].style.width=28+'%'
+rnge[3].style.left=15+'%'
+rnge[3].style.top=48+'%'
+rnge[3].style.width=77+'%'
 rnge[3].style.height=7+'%'
 rnge[3].style.background='#707'
  rnge[3].value=Math.random()*9 
  
 cmmnt[1].style.left=5+'%'
-cmmnt[1].style.top=77+'%'
-cmmnt[2].style.left=25+'%'
-cmmnt[2].style.top=77+'%'
-cmmnt[3].style.left=56+'%'
-cmmnt[3].style.top=77+'%'
+cmmnt[1].style.top=5+'%'
+cmmnt[1].style.width=23+'%'
+cmmnt[1].style.height=78+'%'
+cmmnt[2].style.left=35+'%'
+cmmnt[2].style.top=5+'%'
+cmmnt[2].style.width=23+'%'
+cmmnt[2].style.height=78+'%'
+cmmnt[3].style.left=65+'%'
+cmmnt[3].style.top=5+'%'
+cmmnt[3].style.width=23+'%'
+cmmnt[3].style.height=78+'%'
 
 nbtn2=0
 fc='#f00', sc='#f0f', tc='#00f'
@@ -123,6 +130,23 @@ btn[0].onclick=()=>
  cmmnt[0].style.background=fc
  cmmnt[1].style.background=sc
  cmmnt[2].style.background=tc
+}   
+btn[1].onmouseover=()=>
+{
+ btn[1].style.transform='scale(1.2)'
+}
+btn[1].onmouseout=()=>
+{
+ btn[1].style.transform='scale(1)'
+}
+btn[1].onclick=()=>
+{  
+  rnge[1].value=0
+  rnge[2].value=0
+  rnge[3].value=0
+ cmmnt[0].style.background='#f00'
+ cmmnt[1].style.background='#0f0'
+ cmmnt[2].style.background='#00f'
 }   
 
 cmmnt[1].onmouseover=()=>
