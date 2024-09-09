@@ -29,22 +29,11 @@ canvas
 <body>
 <canvas></canvas> 
 <input type=button class=btn value='round'>
-<input type=button class=btn value='line'>
 <input type=button class=btn value='clear'>
-<input type=button class=btn value='range'>
-<input type=range class=btn min=0 max=9>
-<input type=range class=btn min=0 max=9>
-<input type=range class=btn min=0 max=9>
-
-<div class=cmmnt></div>
-
-<div class=cmmnt>drawing...</div>
- <div class=cmmnt></div>
 
 <script>
 cnv=document.getElementsByTagName('canvas')
 btn=document.getElementsByClassName('btn')
-cmmnt=document.getElementsByClassName('cmmnt')
 
 cnv[0].style.width=77+'%'
 cnv[0].style.height=96+'%'
@@ -69,36 +58,6 @@ btn[1].style.background='#0f0'
 btn[1].style.fontSize=0+'em'
 btn[1].style.transform='scale(1.5)'
 
-btn[2].style.left=85+'%'
-btn[2].style.top=24+'%'
-btn[2].style.width=7+'%'
-btn[2].style.height=4+'%'
-btn[2].style.background='#00f'
-btn[2].style.color='#ff0'
-btn[2].style.fontSize=0+'em'
-btn[2].style.transform='scale(1.5)'
-
-btn[3].style.left=85+'%'
-btn[3].style.top=33+'%'
-btn[3].style.width=7+'%'
-btn[3].style.height=4+'%'
-btn[3].style.transform='scale(1.5)'
- btn[3].value=Math.random()*99
-
-btn[4].style.left=85+'%'
-btn[4].style.top=40+'%'
-btn[4].style.width=7+'%'
-btn[4].style.height=4+'%'
-btn[4].style.transform='scale(1.5)'
- btn[4].value=Math.random()*99
-
-btn[5].style.left=85+'%'
-btn[5].style.top=47+'%'
-btn[5].style.width=7+'%'
-btn[5].style.height=4+'%'
-btn[5].style.transform='scale(1.5)'
- btn[5].value=Math.random()*99
-
 bcnvs=0
 nrnd=0, nln=0
 function fline()
@@ -120,7 +79,6 @@ cnv[0].onmouseover=()=>
 cnv[0].onmouseout=()=>
 {
  cnv[0].style.border='11px ridge #ff0'
- cmmnt[5].style.transform='scale(0)'
 }
 cnv[0].onclick=()=>
 {
@@ -130,26 +88,13 @@ cnv[0].onclick=()=>
   cntxt.arc(event.clientX/4+2,event.clientY/4+8,
     9,0,2*Math.PI)
   cntxt.stroke()
-  cmmnt[5].style.transform=
-   'scale(2.5) translate(0,88%) skew(-9deg)'
-   cmmnt[5].innerHTML='round'
    nrnd++
  }
  else
  {
   cntxt.beginPath()
    fline()
-  cmmnt[5].style.transform=
-   'scale(2.5) translate(0,88%) skew(-9deg)'
-   cmmnt[5].innerHTML='line'
  } 
- cmmnt[0].style.color='#a00' 
- cmmnt[0].style.transform='scale(3.4) '
-  cmmnt[0].innerHTML='rnds: '+nrnd+'<br>'+
-     'lns: '+nln
- setTimeout(()=>{
-  cmmnt[0].style.transform='scale(0) '
- },  999)
 }
 
 btn[0].onmouseover=()=>
@@ -191,42 +136,7 @@ btn[1].onclick=()=>
  cntxt.clearRect(0,0,999,999)
   nrnd=0
   nln=0
- cmmnt[0].style.color='#f00' 
- cmmnt[0].style.transform= 'scale(4) '
-  cmmnt[0].innerHTML=nrnd+' '+nln
- setTimeout(()=>{
-  cmmnt[0].style.transform='scale(0) '
- }, 999)
 }
-
-btn[2].onmouseover=()=>
-{
- btn[2].style.transform='scale(1.7)'
- btn[2].style.fontSize='1em'
-}
-btn[2].onmouseout=()=>
-{
- btn[2].style.transform='scale(1.5)'
- btn[2].style.fontSize='0em'
-}
-nbtn2=0
-fc='#f00', sc='#f0f', tc='#00f'
-btn[2].onclick=()=>
-{  
- fc=Math.round(Math.random()*9)
- sc=Math.round(Math.random()*9)
- tc=Math.round(Math.random()*9)
-  btn[3].value=fc
-  btn[4].value=sc
-  btn[5].value=tc
- fc='#'+fc+'00'
- sc='#0'+sc+'0'
- tc='#00'+tc
- cmmnt[1].style.background=fc
- cmmnt[2].style.background=sc
- cmmnt[3].style.background=tc
-}   
-
 
 //for(var i=0;i<n;i++) 
 </script> 
