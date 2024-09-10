@@ -1,0 +1,125 @@
+<DOCTYPE html>
+<html>
+<head>
+<style>
+body
+{
+ background:radial-gradient(#555,#999);
+}
+
+.trdnt
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+<div class=trdnt>
+ <div class=trdnt></div> 
+ <div class=trdnt></div> 
+ <div class=trdnt></div> 
+ <div class=trdnt></div> 
+ <div class=trdnt></div> 
+</div> 
+
+
+<script>
+trdnt=document.getElementsByClassName('trdnt')
+
+trdnt[0].style.left=16+'%'
+trdnt[0].style.top=6+'%'
+trdnt[0].style.width=46+'%'
+trdnt[0].style.height=77+'%'
+trdnt[0].style.border='11px ridge #fff'
+trdnt[0].style.borderRadius=55+'%'
+trdnt[0].style.cursor='pointer'
+
+trdnt[1].style.left=11+'%'
+trdnt[1].style.top=77+'%'
+trdnt[1].style.width=78+'%'
+trdnt[1].style.height=14+'%'
+trdnt[1].style.background='#fff'
+trdnt[1].style.borderBottomLeftRadius=55+'%'
+trdnt[1].style.borderBottomRightRadius=55+'%'
+
+trdnt[2].style.left=44+'%'
+trdnt[2].style.top=7+'%'
+trdnt[2].style.width=14+'%'
+trdnt[2].style.height=78+'%'
+trdnt[2].style.background='#fff'
+trdnt[2].style.borderTopLeftRadius=55+'%'
+trdnt[2].style.borderTopRightRadius=55+'%'
+trdnt[2].style.borderBottomLeftRadius=35+'%'
+trdnt[2].style.borderBottomRightRadius=35+'%'
+
+trdnt[3].style.left=10+'%'
+trdnt[3].style.top=17+'%'
+trdnt[3].style.width=14+'%'
+trdnt[3].style.height=68+'%'
+trdnt[3].style.background='#fff'
+trdnt[3].style.borderTopLeftRadius=55+'%'
+trdnt[3].style.borderTopRightRadius=55+'%'
+trdnt[3].style.borderBottomLeftRadius=35+'%'
+trdnt[3].style.borderBottomRightRadius=35+'%'
+
+trdnt[4].style.left=76+'%'
+trdnt[4].style.top=17+'%'
+trdnt[4].style.width=14+'%'
+trdnt[4].style.height=68+'%'
+trdnt[4].style.background='#fff'
+trdnt[4].style.borderTopLeftRadius=55+'%'
+trdnt[4].style.borderTopRightRadius=55+'%'
+trdnt[4].style.borderBottomLeftRadius=35+'%'
+trdnt[4].style.borderBottomRightRadius=35+'%'
+
+function fline()
+{
+ 
+}
+cnv[0].onmouseover=()=>
+{
+ cnv[0].style.border='11px ridge #ee0'
+}
+cnv[0].onmouseout=()=>
+{
+ cnv[0].style.border='11px ridge #ff0'
+}
+cnv[0].onclick=()=>
+{
+ if(bbtn0)
+ {
+  cntxt.beginPath()
+  cntxt.arc(event.clientX/4+2,event.clientY/4+8,
+    9,0,2*Math.PI)
+  cntxt.stroke()
+   nrnd++
+ }
+ else
+ {
+  cntxt.beginPath()
+   fline()
+ } 
+}
+
+btn[0].onmouseover=()=>
+{
+ btn[0].style.transform='scale(1.7)'
+ btn[0].style.fontSize='1.2em'
+}
+btn[0].onmouseout=()=>
+{
+ btn[0].style.transform='scale(1.5)'
+ btn[0].style.fontSize='1em'
+}
+bbtn0=1
+btn[0].onclick=()=>
+{   
+
+}
+
+//for(var i=0;i<n;i++) 
+</script> 
+</html>
