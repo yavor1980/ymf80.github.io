@@ -13,6 +13,16 @@ body
  transition:1s;
  cursor:pointer;
 }
+.ltra
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ left:84%;
+ top:44%;
+ opacity:0;
+ transform:scale(0);
+}
 
 </style>
 </head>
@@ -23,11 +33,19 @@ body
  <div class=trdnt></div> 
  <div class=trdnt></div> 
  <div class=trdnt></div> 
+ <div class=ltra>L</div> 
+ <div class=ltra>I</div> 
+ <div class=ltra>B</div> 
+ <div class=ltra>E</div> 
+ <div class=ltra>R</div> 
+ <div class=ltra>T</div> 
+ <div class=ltra>Y</div> 
 </div> 
 
 
 <script>
 trdnt=document.getElementsByClassName('trdnt')
+ltra=document.getElementsByClassName('ltra')
 
 trdnt[0].style.left=16+'%'
 trdnt[0].style.top=6+'%'
@@ -35,7 +53,6 @@ trdnt[0].style.width=46+'%'
 trdnt[0].style.height=77+'%'
 trdnt[0].style.border='11px ridge #fff'
 trdnt[0].style.borderRadius=55+'%'
-trdnt[0].style.cursor='pointer'
 
 trdnt[1].style.left=11+'%'
 trdnt[1].style.top=77+'%'
@@ -75,49 +92,60 @@ trdnt[4].style.borderTopRightRadius=55+'%'
 trdnt[4].style.borderBottomLeftRadius=35+'%'
 trdnt[4].style.borderBottomRightRadius=35+'%'
 
-function fline()
+function f()
 {
+}
+trdnt[0].onmouseover=()=>
+{
+ trdnt[0].style.border='11px ridge #990'
+ trdnt[1].style.background='#ff0'
+ trdnt[2].style.background='#ff0'
+ trdnt[3].style.background='#ff0'
+ trdnt[4].style.background='#ff0'
+ ltra[0].style.opacity=1
+ ltra[0].style.transform=
+  'scale(9) translate(122%,-98%)'
+ ltra[1].style.opacity=1
+ ltra[1].style.transform=
+  'scale(9) translate(144%,-78%)'
+ ltra[2].style.opacity=1
+ ltra[2].style.transform=
+  'scale(9) translate(166%,-58%)'
+ ltra[3].style.opacity=1
+ ltra[3].style.transform=
+  'scale(9) translate(188%,-38%) '
+ ltra[4].style.opacity=1
+ ltra[4].style.transform=
+  'scale(9) translate(208%,-18%)'
+ ltra[5].style.opacity=1
+ ltra[5].style.transform=
+  'scale(9) translate(228%,8%)'
+ ltra[6].style.opacity=1
+ ltra[6].style.transform=
+  'scale(9) translate(248%,28%)'
+}
+trdnt[0].onmouseout=()=>
+{
+ trdnt[0].style.border='11px ridge #fff'
+ trdnt[1].style.background='#fff'
+ trdnt[2].style.background='#fff'
+ trdnt[3].style.background='#fff'
+ trdnt[4].style.background='#fff'
+ ltra[0].style.opacity=0
+ ltra[0].style.transform='scale(0)'
+ ltra[1].style.opacity=0
+ ltra[1].style.transform='scale(0)'
+ ltra[2].style.opacity=0
+ ltra[2].style.transform='scale(0)'
+ ltra[3].style.opacity=0
+ ltra[3].style.transform='scale(0)'
+ ltra[4].style.opacity=0
+ ltra[4].style.transform='scale(0)'
+ ltra[5].style.opacity=0
+ ltra[5].style.transform='scale(0)'
+ ltra[6].style.opacity=0
+ ltra[6].style.transform='scale(0)'
  
-}
-cnv[0].onmouseover=()=>
-{
- cnv[0].style.border='11px ridge #ee0'
-}
-cnv[0].onmouseout=()=>
-{
- cnv[0].style.border='11px ridge #ff0'
-}
-cnv[0].onclick=()=>
-{
- if(bbtn0)
- {
-  cntxt.beginPath()
-  cntxt.arc(event.clientX/4+2,event.clientY/4+8,
-    9,0,2*Math.PI)
-  cntxt.stroke()
-   nrnd++
- }
- else
- {
-  cntxt.beginPath()
-   fline()
- } 
-}
-
-btn[0].onmouseover=()=>
-{
- btn[0].style.transform='scale(1.7)'
- btn[0].style.fontSize='1.2em'
-}
-btn[0].onmouseout=()=>
-{
- btn[0].style.transform='scale(1.5)'
- btn[0].style.fontSize='1em'
-}
-bbtn0=1
-btn[0].onclick=()=>
-{   
-
 }
 
 //for(var i=0;i<n;i++) 
