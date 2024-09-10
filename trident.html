@@ -2,9 +2,9 @@
 <html>
 <head>
 <style>
-body
+#idb
 {
- background:radial-gradient(#555,#999);
+ background:#999;
 }
 
 .trdnt
@@ -26,7 +26,8 @@ body
 
 </style>
 </head>
-<body>
+<body id=idb>
+
 <div class=trdnt>
  <div class=trdnt></div> 
  <div class=trdnt></div> 
@@ -41,7 +42,6 @@ body
  <div class=ltra>T</div> 
  <div class=ltra>Y</div> 
 </div> 
-
 
 <script>
 trdnt=document.getElementsByClassName('trdnt')
@@ -97,6 +97,7 @@ function f()
 }
 trdnt[0].onmouseover=()=>
 {
+ idb.style.background='#00f'
  trdnt[0].style.border='11px ridge #990'
  trdnt[1].style.background='#ff0'
  trdnt[2].style.background='#ff0'
@@ -107,25 +108,26 @@ trdnt[0].onmouseover=()=>
   'scale(9) translate(122%,-98%)'
  ltra[1].style.opacity=1
  ltra[1].style.transform=
-  'scale(9) translate(144%,-78%)'
+  'scale(9) translate(233%,-44%)'
  ltra[2].style.opacity=1
  ltra[2].style.transform=
-  'scale(9) translate(166%,-58%)'
+  'scale(9) translate(166%,-1%)'
  ltra[3].style.opacity=1
  ltra[3].style.transform=
-  'scale(9) translate(188%,-38%) '
+  'scale(9) translate(188%,44%) '
  ltra[4].style.opacity=1
  ltra[4].style.transform=
-  'scale(9) translate(208%,-18%)'
+  'scale(9) translate(208%,88%)'
  ltra[5].style.opacity=1
  ltra[5].style.transform=
-  'scale(9) translate(228%,8%)'
+  'scale(9) translate(228%,133%)'
  ltra[6].style.opacity=1
  ltra[6].style.transform=
-  'scale(9) translate(248%,28%)'
+  'scale(9) translate(248%,178%)'
 }
 trdnt[0].onmouseout=()=>
 {
+ idb.style.background='#999'
  trdnt[0].style.border='11px ridge #fff'
  trdnt[1].style.background='#fff'
  trdnt[2].style.background='#fff'
@@ -148,6 +150,7 @@ trdnt[0].onmouseout=()=>
  
 }
 
-//for(var i=0;i<n;i++) 
+//for(var i=0;i<n;i++
 </script> 
+</body>
 </html>
