@@ -78,17 +78,17 @@ rnge[1].style.left=15+'%'
 rnge[1].style.top=8+'%'
 rnge[1].style.width=77+'%'
 rnge[1].style.height=7+'%'
- rnge[1].value=Math.random()*9
+ rnge[1].value=9
 rnge[2].style.left=15+'%'
 rnge[2].style.top=28+'%'
 rnge[2].style.width=77+'%'
 rnge[2].style.height=7+'%'
- rnge[2].value=Math.random()*9
+ rnge[2].value=9
 rnge[3].style.left=15+'%'
 rnge[3].style.top=48+'%'
 rnge[3].style.width=77+'%'
 rnge[3].style.height=7+'%'
- rnge[3].value=Math.random()*9 
+ rnge[3].value=9 
  
 cmmnt[1].style.left=5+'%'
 cmmnt[1].style.top=5+'%'
@@ -96,18 +96,24 @@ cmmnt[1].style.width=23+'%'
 cmmnt[1].style.height=78+'%'
 cmmnt[1].style.background='#f00'
 cmmnt[1].style.cursor='pointer'
+cmmnt[1].style.fontSize=0+'em'
+ cmmnt[1].innerHTML='#f00'
 cmmnt[2].style.left=35+'%'
 cmmnt[2].style.top=5+'%'
 cmmnt[2].style.width=23+'%'
 cmmnt[2].style.height=78+'%'
 cmmnt[2].style.background='#0f0'
 cmmnt[2].style.cursor='pointer'
+cmmnt[2].style.fontSize=0+'em'
+ cmmnt[2].innerHTML='#0f0'
 cmmnt[3].style.left=65+'%'
 cmmnt[3].style.top=5+'%'
 cmmnt[3].style.width=23+'%'
 cmmnt[3].style.height=78+'%'
 cmmnt[3].style.background='#00f'
 cmmnt[3].style.cursor='pointer'
+cmmnt[3].style.fontSize=0+'em'
+  cmmnt[3].innerHTML='#00f'
 
 nbtn2=0
 fc='#f00', sc='#f0f', tc='#00f'
@@ -131,8 +137,11 @@ btn[0].onclick=()=>
  sc='#0'+sc+'0'
  tc='#00'+tc
  cmmnt[1].style.background=fc
+  cmmnt[1].innerHTML=fc
  cmmnt[2].style.background=sc
+  cmmnt[2].innerHTML=sc
  cmmnt[3].style.background=tc
+  cmmnt[3].innerHTML=tc
 }   
 btn[1].onmouseover=()=>
 {
@@ -144,12 +153,15 @@ btn[1].onmouseout=()=>
 }
 btn[1].onclick=()=>
 {  
-  rnge[1].value=0
-  rnge[2].value=0
-  rnge[3].value=0
+  rnge[1].value=9
+  rnge[2].value=9
+  rnge[3].value=9
  cmmnt[1].style.background='#f00'
+  cmmnt[1].innerHTML='#f00'
  cmmnt[2].style.background='#0f0'
+  cmmnt[2].innerHTML='#0f0'
  cmmnt[3].style.background='#00f'
+  cmmnt[3].innerHTML='#00f'
 }   
 
 cmmnt[1].onmouseover=()=>
@@ -157,7 +169,6 @@ cmmnt[1].onmouseover=()=>
  cmmnt[1].style.transform='scale(1.2)'
  cmmnt[1].style.color='#fff'
  cmmnt[1].style.fontSize='3em'
-  cmmnt[1].innerHTML=fc
  cmmnt[2].style.transform='scale(0)'
  cmmnt[3].style.transform='scale(0)'
 }
@@ -175,7 +186,6 @@ cmmnt[2].onmouseover=()=>
  cmmnt[2].style.transform='scale(1.2)'
  cmmnt[2].style.color='#fff'
  cmmnt[2].style.fontSize='3em'
-  cmmnt[2].innerHTML=sc
  cmmnt[1].style.transform='scale(0)'
  cmmnt[3].style.transform='scale(0)'
 }
@@ -193,7 +203,6 @@ cmmnt[3].onmouseover=()=>
  cmmnt[3].style.transform='scale(1.2)'
  cmmnt[3].style.color='#fff'
  cmmnt[3].style.fontSize='3em'
-  cmmnt[3].innerHTML=sc
  cmmnt[1].style.transform='scale(0)'
  cmmnt[2].style.transform='scale(0)'
 }
