@@ -16,7 +16,7 @@ canvas
  background:#0f0;
 }
 
-.btn,.cmmnt
+.btn
 {
  position:absolute;
  transition:1s;
@@ -29,6 +29,7 @@ canvas
 <body>
 <canvas></canvas> 
 <input type=button class=btn value='round'>
+<input type=button class=btn value='line'>
 <input type=button class=btn value='clear'>
 
 <script>
@@ -39,7 +40,6 @@ cnv[0].style.width=77+'%'
 cnv[0].style.height=96+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
-cnv[0].style.zIndex=1
  cntxt=cnv[0].getContext('2d')
 
 btn[0].style.left=85+'%'
@@ -51,26 +51,45 @@ btn[0].style.color='#ff0'
 btn[0].style.transform='scale(1.5)'
 
 btn[1].style.left=85+'%'
-btn[1].style.top=14+'%'
+btn[1].style.top=12+'%'
 btn[1].style.width=7+'%'
 btn[1].style.height=4+'%'
-btn[1].style.background='#0f0'
-btn[1].style.fontSize=0+'em'
+btn[1].style.background='#b00'
+btn[1].style.color='#ff0'
 btn[1].style.transform='scale(1.5)'
 
+btn[2].style.left=85+'%'
+btn[2].style.top=20+'%'
+btn[2].style.width=7+'%'
+btn[2].style.height=4+'%'
+btn[2].style.background='#0f0'
+btn[2].style.transform='scale(1.5)'
+
 bcnvs=0
-nrnd=0, nln=0
+//nrnd=0, nlne=0
 function fline()
 {
-  if(bcnvs)
-   cntxt.moveTo(0,0)
-  else
-  {
-   cntxt.lineTo(event.clientX/4+28,event.clientY/4+8)
-   cntxt.stroke()
-    nln++ 
-  }
-  bcnvs=!bcnvs
+ if(bcnvs)
+  cntxt.moveTo(0,0)
+ else
+ {
+  cntxt.lineTo(event.clientX/4+28,event.clientY/4+8)
+  cntxt.stroke()
+   nln++ 
+ }
+}
+function fround()
+{
+ if(bcnvs)
+  cntxt.moveTo(0,0)
+ else
+ {
+  cntxt.beginPath()
+  cntxt.arc(event.clientX/4+2,event.clientY/4+8,
+   9,0,2*Math.PI)
+  cntxt.stroke()
+  nrnd++
+ }
 }
 cnv[0].onmouseover=()=>
 {
@@ -81,61 +100,54 @@ cnv[0].onmouseout=()=>
  cnv[0].style.border='11px ridge #ff0'
 }
 cnv[0].onclick=()=>
-{
- if(bbtn0)
- {
-  cntxt.beginPath()
-  cntxt.arc(event.clientX/4+2,event.clientY/4+8,
-    9,0,2*Math.PI)
-  cntxt.stroke()
-   nrnd++
- }
- else
- {
-  cntxt.beginPath()
-   fline()
- } 
+{ 
+  fline() 
 }
 
 btn[0].onmouseover=()=>
 {
  btn[0].style.transform='scale(1.7)'
- btn[0].style.fontSize='1.2em'
+ btn[0].style.fontSize=1.2+'em'
 }
 btn[0].onmouseout=()=>
 {
  btn[0].style.transform='scale(1.5)'
- btn[0].style.fontSize='1em'
+ btn[0].style.fontSize=1+'em'
 }
-bbtn0=1
 btn[0].onclick=()=>
 {   
- if(bbtn0)
- {
-  btn[0].value='line'
- }
- else
- {
-  btn[0].value='round'
- } 
-    bbtn0=!bbtn0
+ bcnvs=0
 }
 
 btn[1].onmouseover=()=>
 {
  btn[1].style.transform='scale(1.7)'
- btn[1].style.fontSize='1em'
+ btn[1].style.fontSize=1.2+'em'
 }
 btn[1].onmouseout=()=>
 {
  btn[1].style.transform='scale(1.5)'
- btn[1].style.fontSize='0em'
+ btn[1].style.fontSize=1+'em'
 }
 btn[1].onclick=()=>
 {
- cntxt.clearRect(0,0,999,999)
-  nrnd=0
-  nln=0
+ bbtn0=1
+}
+
+btn[2].onmouseover=()=>
+{
+ btn[2].style.transform='scale(1.7)'
+ btn[2].style.fontSize=1.2+'em'
+}
+btn[2].onmouseout=()=>
+{
+ btn[2].style.transform='scale(1.5)'
+ btn[2].style.fontSize=1+'em'
+}
+btn[2].onclick=()=>
+{
+ cntxt.clearRect(0,0,900,900)
+ //cntxt.moveTo(0,0)
 }
 
 //for(var i=0;i<n;i++) 
