@@ -31,6 +31,7 @@ canvas
 <input type=button class=btn value='line'>
 <input type=button class=btn value='round'>
 <input type=button class=btn value='clear'>
+<input type=button class=btn value='color'>
 
 <script>
 cnv=document.getElementsByTagName('canvas')
@@ -42,26 +43,32 @@ cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
  cntxt=cnv[0].getContext('2d')
 
-btn[0].style.left=85+'%'
+btn[0].style.left=91+'%'
 btn[0].style.top=4+'%'
 btn[0].style.background='#f00'
 btn[0].style.color='#ff0'
 btn[0].style.transform='scale(2)'
 
-btn[1].style.left=85+'%'
+btn[1].style.left=91+'%'
 btn[1].style.top=12+'%'
 btn[1].style.background='#b00'
 btn[1].style.color='#ff0'
 btn[1].style.transform='scale(2)'
 
-btn[2].style.left=85+'%'
+btn[2].style.left=91+'%'
 btn[2].style.top=20+'%'
 btn[2].style.background='#dd0'
 btn[2].style.transform='scale(2)'
 
+btn[3].style.left=91+'%'
+btn[3].style.top=32+'%'
+btn[3].style.background='#ab0'
+btn[3].style.transform='scale(2)'
+
 bcnvs=-1
 function fline()
 {
+ //cntxt.beginPath()
  cntxt.lineTo(event.clientX/4+28,event.clientY/4+8)
  cntxt.stroke()
 }
@@ -125,6 +132,7 @@ btn[2].onmouseout=()=>
 }
 btn[2].onclick=()=>
 {
+ //cntxt.endPath()
  cntxt.clearRect(0,0,999,999)
  //cntxt.moveTo(33,33)
 }
