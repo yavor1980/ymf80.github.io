@@ -36,34 +36,28 @@ canvas
 cnv=document.getElementsByTagName('canvas')
 btn=document.getElementsByClassName('btn')
 
-cnv[0].style.width=888//+'%'
-cnv[0].style.height=666//+'%'
+cnv[0].style.width=88+'%'
+cnv[0].style.height=97+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
  cntxt=cnv[0].getContext('2d')
 
 btn[0].style.left=85+'%'
 btn[0].style.top=4+'%'
-btn[0].style.width=7+'%'
-btn[0].style.height=4+'%'
 btn[0].style.background='#f00'
 btn[0].style.color='#ff0'
-btn[0].style.transform='scale(1.5)'
+btn[0].style.transform='scale(2)'
 
 btn[1].style.left=85+'%'
 btn[1].style.top=12+'%'
-btn[1].style.width=7+'%'
-btn[1].style.height=4+'%'
 btn[1].style.background='#b00'
 btn[1].style.color='#ff0'
-btn[1].style.transform='scale(1.5)'
+btn[1].style.transform='scale(2)'
 
 btn[2].style.left=85+'%'
 btn[2].style.top=20+'%'
-btn[2].style.width=7+'%'
-btn[2].style.height=4+'%'
 btn[2].style.background='#dd0'
-btn[2].style.transform='scale(1.5)'
+btn[2].style.transform='scale(2)'
 
 bcnvs=-1
 function fline()
@@ -97,12 +91,10 @@ cnv[0].onclick=()=>
 
 btn[0].onmouseover=()=>
 {
- btn[0].style.transform='scale(1.7)'
- btn[0].style.fontSize=1.2+'em'
+ btn[0].style.fontSize=1.1+'em'
 }
 btn[0].onmouseout=()=>
 {
- btn[0].style.transform='scale(1.5)'
  btn[0].style.fontSize=1+'em'
 }
 btn[0].onclick=()=>
@@ -112,12 +104,10 @@ btn[0].onclick=()=>
 
 btn[1].onmouseover=()=>
 {
- btn[1].style.transform='scale(1.7)'
- btn[1].style.fontSize=1.2+'em'
+ btn[1].style.fontSize=1.1+'em'
 }
 btn[1].onmouseout=()=>
 {
- btn[1].style.transform='scale(1.5)'
  btn[1].style.fontSize=1+'em'
 }
 btn[1].onclick=()=>
@@ -127,12 +117,10 @@ btn[1].onclick=()=>
 
 btn[2].onmouseover=()=>
 {
- btn[2].style.transform='scale(1.7)'
- btn[2].style.fontSize=1.2+'em'
+ btn[2].style.fontSize=1.1+'em'
 }
 btn[2].onmouseout=()=>
 {
- btn[2].style.transform='scale(1.5)'
  btn[2].style.fontSize=1+'em'
 }
 btn[2].onclick=()=>
