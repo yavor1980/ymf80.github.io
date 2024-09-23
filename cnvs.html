@@ -28,16 +28,16 @@ canvas
 
 <body>
 <canvas></canvas> 
-<input type=button class=btn value='round'>
 <input type=button class=btn value='line'>
+<input type=button class=btn value='round'>
 <input type=button class=btn value='clear'>
 
 <script>
 cnv=document.getElementsByTagName('canvas')
 btn=document.getElementsByClassName('btn')
 
-cnv[0].style.width=77+'%'
-cnv[0].style.height=96+'%'
+cnv[0].style.width=888//+'%'
+cnv[0].style.height=666//+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
  cntxt=cnv[0].getContext('2d')
@@ -62,34 +62,21 @@ btn[2].style.left=85+'%'
 btn[2].style.top=20+'%'
 btn[2].style.width=7+'%'
 btn[2].style.height=4+'%'
-btn[2].style.background='#0f0'
+btn[2].style.background='#dd0'
 btn[2].style.transform='scale(1.5)'
 
-bcnvs=0
-//nrnd=0, nlne=0
+bcnvs=-1
 function fline()
 {
- if(bcnvs)
-  cntxt.moveTo(0,0)
- else
- {
-  cntxt.lineTo(event.clientX/4+28,event.clientY/4+8)
-  cntxt.stroke()
-   nln++ 
- }
+ cntxt.lineTo(event.clientX/4+28,event.clientY/4+8)
+ cntxt.stroke()
 }
 function fround()
 {
- if(bcnvs)
-  cntxt.moveTo(0,0)
- else
- {
-  cntxt.beginPath()
-  cntxt.arc(event.clientX/4+2,event.clientY/4+8,
-   9,0,2*Math.PI)
-  cntxt.stroke()
-  nrnd++
- }
+ cntxt.beginPath()
+ cntxt.arc(event.clientX/4+2,event.clientY/4+8,
+  9,0,2*Math.PI)
+ cntxt.stroke()
 }
 cnv[0].onmouseover=()=>
 {
@@ -101,7 +88,11 @@ cnv[0].onmouseout=()=>
 }
 cnv[0].onclick=()=>
 { 
-  fline() 
+ switch(bcnvs) 
+ {
+  case 0: fline(); break;
+  case 1: fround(); break;
+ }  
 }
 
 btn[0].onmouseover=()=>
@@ -131,7 +122,7 @@ btn[1].onmouseout=()=>
 }
 btn[1].onclick=()=>
 {
- bbtn0=1
+ bcnvs=1
 }
 
 btn[2].onmouseover=()=>
@@ -146,8 +137,8 @@ btn[2].onmouseout=()=>
 }
 btn[2].onclick=()=>
 {
- cntxt.clearRect(0,0,900,900)
- //cntxt.moveTo(0,0)
+ cntxt.clearRect(0,0,999,999)
+ //cntxt.moveTo(33,33)
 }
 
 //for(var i=0;i<n;i++) 
