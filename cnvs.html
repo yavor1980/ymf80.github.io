@@ -69,13 +69,13 @@ bcnvs=-1
 function fline()
 {
  //cntxt.beginPath()
- cntxt.lineTo(event.clientX/4+28,event.clientY/4+8)
+ cntxt.lineTo(event.offsetX/4,event.offsetY/4)
  cntxt.stroke()
 }
 function fround()
 {
  cntxt.beginPath()
- cntxt.arc(event.clientX/4+2,event.clientY/4+8,
+ cntxt.arc(event.offsetX/4,event.offsetY/4,
   9,0,2*Math.PI)
  cntxt.stroke()
 }
@@ -96,39 +96,13 @@ cnv[0].onclick=()=>
  }  
 }
 
-btn[0].onmouseover=()=>
-{
- btn[0].style.fontSize=1.1+'em'
-}
-btn[0].onmouseout=()=>
-{
- btn[0].style.fontSize=1+'em'
-}
 btn[0].onclick=()=>
 {   
  bcnvs=0
 }
-
-btn[1].onmouseover=()=>
-{
- btn[1].style.fontSize=1.1+'em'
-}
-btn[1].onmouseout=()=>
-{
- btn[1].style.fontSize=1+'em'
-}
 btn[1].onclick=()=>
 {
  bcnvs=1
-}
-
-btn[2].onmouseover=()=>
-{
- btn[2].style.fontSize=1.1+'em'
-}
-btn[2].onmouseout=()=>
-{
- btn[2].style.fontSize=1+'em'
 }
 btn[2].onclick=()=>
 {
