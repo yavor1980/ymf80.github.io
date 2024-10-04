@@ -28,10 +28,10 @@ canvas
 
 <body>
 <canvas></canvas> 
+<input type=button class=btn value='draw'>
 <input type=button class=btn value='line'>
 <input type=button class=btn value='round'>
 <input type=button class=btn value='clear'>
-<input type=button class=btn value='color'>
 
 <script>
 cnv=document.getElementsByTagName('canvas')
@@ -42,7 +42,7 @@ cnv[0].style.height=97+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
  cntxt=cnv[0].getContext('2d')
-
+ 
 btn[0].style.left=91+'%'
 btn[0].style.top=4+'%'
 btn[0].style.background='#f00'
@@ -68,7 +68,8 @@ btn[3].style.transform='scale(2)'
 bcnvs=-1
 function fline()
 {
- //cntxt.beginPath()
+ cntxt.beginPath()
+ cntxt.moveTo(Math.random()*88,Math.random()*88)
  cntxt.lineTo(event.offsetX/4,event.offsetY/4)
  cntxt.stroke()
 }
@@ -79,9 +80,16 @@ function fround()
   9,0,2*Math.PI)
  cntxt.stroke()
 }
+function fdrw()
+{
+ cntxt.beginPath()
+ cntxt.fillRect(event.offsetX/4,event.offsetY/4,1,1)
+}
 cnv[0].onmouseover=()=>
 {
  cnv[0].style.border='11px ridge #ee0'
+ if(bcnvs==2)fdrw()
+  
 }
 cnv[0].onmouseout=()=>
 {
@@ -91,8 +99,9 @@ cnv[0].onclick=()=>
 { 
  switch(bcnvs) 
  {
-  case 0: fline(); break;
-  case 1: fround(); break;
+  case 0: fdrw(); break;
+  case 1: fline(); break;
+  case 2: fround(); break;
  }  
 }
 
@@ -106,9 +115,11 @@ btn[1].onclick=()=>
 }
 btn[2].onclick=()=>
 {
- //cntxt.endPath()
+ bcnvs=2
+}
+btn[3].onclick=()=>
+{
  cntxt.clearRect(0,0,999,999)
- //cntxt.moveTo(33,33)
 }
 
 //for(var i=0;i<n;i++) 
