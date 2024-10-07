@@ -65,7 +65,7 @@ btn[3].style.top=32+'%'
 btn[3].style.background='#ab0'
 btn[3].style.transform='scale(2)'
 
-bcnvs=-1
+bcnvs=0
 function fline()
 {
  cntxt.beginPath()
@@ -85,11 +85,10 @@ function fdrw()
  cntxt.beginPath()
  cntxt.fillRect(event.offsetX/4,event.offsetY/4,1,1)
 }
-cnv[0].onmouseover=()=>
+cnv[0].onmousemove=()=>
 {
  cnv[0].style.border='11px ridge #ee0'
- if(bcnvs==2)fdrw()
-  
+ if(bcnvs==0)fdrw()  
 }
 cnv[0].onmouseout=()=>
 {
@@ -99,7 +98,6 @@ cnv[0].onclick=()=>
 { 
  switch(bcnvs) 
  {
-  case 0: fdrw(); break;
   case 1: fline(); break;
   case 2: fround(); break;
  }  
