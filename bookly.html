@@ -10,7 +10,7 @@
  background:radial-gradient(#066,#0bb);
 }
 
-.btn,.bdy
+.bdy
 {
  position:absolute;   
  transition:1s;
@@ -21,28 +21,22 @@
 {
  position:absolute;   
  transition:1s;
+ z-index:1;
 }
 
 .lst
 {
  position:absolute;   
  transition:1s;
+ z-index:0;
 }
 
 </style>
 
-<div class=btn>
- <div class=btn> name:</div>
- <input type class=btn value='' >
- <input type=submit class=btn value='send'>
-  <div class=btn> PW:</div>
-  <input type class=btn value='' >
-</div>
-
 <div class=bdy>
  <div class=bdy>
   <li>meeting</li>
-  <li>expo1</li>
+  <li>expo</li>
   <li>seminar</li>
   <li>exposition</li>
  </div>
@@ -50,6 +44,7 @@
  <input type='submit' class=bdy value='change'>
  <input type='submit' class=bdy value='off'>
  <input type='submit' class=bdy value='OK'>
+ <div class=bdy></div>
   <div class=oftm>
    <input class=oftm value>
    <input type='submit' class=oftm value='ok'>
@@ -67,7 +62,7 @@
    <input type='submit' class=tftm value='c'>
   </div>
   <div class=lst>
-   <div class=lst>seminar</div> 
+   <div class=lst></div> 
    <div class=lst></div> 
    <div class=lst></div> 
    <div class=lst></div> 
@@ -76,58 +71,23 @@
 </div>  
  
 <script>
-btn=document.getElementsByClassName('btn')
+li=document.getElementsByTagName('li')
 bdy=document.getElementsByClassName('bdy')
- li=document.getElementsByTagName('li')
- oftm=document.getElementsByClassName('oftm')
- chftm=document.getElementsByClassName('chftm')
- tftm=document.getElementsByClassName('tftm')
+oftm=document.getElementsByClassName('oftm')
+chftm=document.getElementsByClassName('chftm')
+tftm=document.getElementsByClassName('tftm')
 lst=document.getElementsByClassName('lst') 
-
-btn[0].style.left=5+'%'
-btn[0].style.top=4+'%'  
-btn[0].style.width=77+'%'
-btn[0].style.height=39+'%'
-btn[0].style.background='#f0f'
-btn[0].style.borderRadius=12+'%'
-btn[0].style.zIndex=1
-btn[1].style.left=5+'%'
-btn[1].style.top=8+'%'
-btn[1].style.width=8+'px'
-btn[1].style.transform=
- 'scale(1.2) skew(-11deg)'
-btn[2].style.left=30+'%'
-btn[2].style.top=8+'%'
-btn[2].style.width=288+'px'
-btn[3].style.left=74+'%'
-btn[3].style.top=8+'%'
-btn[3].style.background='#888'
-btn[3].style.borderRadius=22+'%'
-btn[3].style.cursor='pointer'
-btn[4].style.left=5+'%'
-btn[4].style.top=48+'%'
-btn[4].style.width=8+'px'
-btn[4].style.transform=
- 'scale(1.2) skew(-11deg)'
-btn[4].style.opacity=0.5
-btn[5].style.left=27+'%'
-btn[5].style.top=48+'%'
-btn[5].style.width=188+'px'
-btn[5].style.opacity=0.5
   
 bdy[0].style.left=5+'%'
-bdy[0].style.top=34+'%'  
+bdy[0].style.top=9+'%'  
 bdy[0].style.width=88+'%'
-bdy[0].style.height=55+'%'
+bdy[0].style.height=79+'%'
 bdy[0].style.background='#880'
 bdy[0].style.borderRadius=12+'%'
-bdy[0].style.opacity=0//.3
-bdy[0].style.zIndex=-1
 bdy[1].style.left=5+'%'
 bdy[1].style.top=13+'%'  
 bdy[1].style.width=33+'%'
 bdy[1].style.background='#ff0'
-bdy[1].style.transform='scale(1,0)'
 bdy[1].style.cursor='pointer'
 bdy[2].style.left=40+'%'
 bdy[2].style.top=13+'%'
@@ -150,11 +110,15 @@ bdy[5].style.background='#f00'
 bdy[5].style.color='#fff'
 bdy[5].style.borderRadius=12+'%'
 bdy[5].style.cursor='pointer'
+bdy[6].style.left=77+'%'
+bdy[6].style.top=33+'%' 
+bdy[6].style.color='#fff'  
+bdy[6].style.transform='scale(0)'
   
-oftm[0].style.left=48+'%'
+oftm[0].style.left=51+'%'
 oftm[0].style.top=53+'%'  
 oftm[0].style.width=7+'%'
-oftm[0].style.height=10+'%'
+oftm[0].style.height=16+'%'
 oftm[0].style.background='#00f'
 oftm[0].style.borderRadius=12+'%'
 oftm[0].style.transform='scale(0)'
@@ -163,13 +127,13 @@ oftm[1].style.top=4+'%'
 oftm[1].style.width=94+'%'
 oftm[1].style.borderRadius=12+'%'
 oftm[2].style.left=6+'%'
-oftm[2].style.top=48+'%'  
+oftm[2].style.top=53+'%'  
 oftm[2].style.background='#888'
 oftm[2].style.borderRadius=12+'%'
 oftm[2].style.transform='scale(0.7)'
 oftm[2].style.cursor='pointer'
 oftm[3].style.left=52+'%'
-oftm[3].style.top=48+'%'  
+oftm[3].style.top=53+'%'  
 oftm[3].style.background='#888'
 oftm[3].style.borderRadius=12+'%'
 oftm[3].style.transform='scale(0.7)'
@@ -178,7 +142,7 @@ oftm[3].style.cursor='pointer'
 chftm[0].style.left=55+'%'
 chftm[0].style.top=55+'%' 
 chftm[0].style.width=7+'%'
-chftm[0].style.height=10+'%' 
+chftm[0].style.height=16+'%' 
 chftm[0].style.background='#00b'
 chftm[0].style.borderRadius=12+'%'
 chftm[0].style.transform='scale(0)'
@@ -191,22 +155,22 @@ chftm[2].style.top=34+'%'
 chftm[2].style.width=77+'%'
 chftm[2].style.height=23+'%'
 chftm[3].style.left=4+'%'
-chftm[3].style.bottom=1+'%'
+chftm[3].style.bottom=3+'%'
 chftm[3].style.background='#bb0'
 chftm[3].style.pedding=0
 chftm[3].style.cursor='pointer'
 chftm[3].style.transform='scale(0.7)'
 chftm[4].style.left=53+'%'
-chftm[4].style.bottom=1+'%'
+chftm[4].style.bottom=3+'%'
 chftm[4].style.background='#bb0'
 chftm[4].style.pedding=0
 chftm[4].style.cursor='pointer'
 chftm[4].style.transform='scale(0.7)'
 
 tftm[0].style.left=75+'%'
-tftm[0].style.top=75+'%' 
+tftm[0].style.top=55+'%' 
 tftm[0].style.width=7+'%'
-tftm[0].style.height=8+'%' 
+tftm[0].style.height=16+'%' 
 tftm[0].style.background='#009' 
 tftm[0].style.borderRadius=12+'%'
 tftm[0].style.transform='scale(0)'
@@ -215,24 +179,22 @@ tftm[1].style.top=6+'%'
 tftm[1].style.width=77+'%'
 tftm[1].style.height=23+'%'
 tftm[2].style.left=5+'%'
-tftm[2].style.top=40+'%' 
+tftm[2].style.top=49+'%' 
 tftm[2].style.background='#f0f'
 tftm[2].style.cursor='pointer'
 tftm[2].style.transform='scale(0.7)'
 tftm[3].style.left=53+'%'
-tftm[3].style.top=40+'%' 
+tftm[3].style.top=49+'%' 
 tftm[3].style.background='#f0f'
 tftm[3].style.cursor='pointer'
 tftm[3].style.transform='scale(0.7)'
 
-lst[0].style.left=58+'%'
-lst[0].style.top=35+'%' 
+lst[0].style.left=5+'%'
+lst[0].style.top=55+'%' 
 lst[0].style.width=33+'%'
 lst[0].style.height=33+'%' 
-lst[0].style.background='#979'
+lst[0].style.background='#eee'
 lst[0].style.borderRadius=8+'%'
-lst[0].style.zIndex=-1
-lst[0].style.transform='scale(1,0)'
 lst[1].style.left=33+'%'
 lst[1].style.top=5+'%' 
 lst[1].style.color='#b00'
@@ -254,37 +216,6 @@ lst[4].style.color='#b00'
 lst[4].style.cursor='pointer'
 lst[4].style.transform='scale(2)'
 
-btn[0].onmouseover=()=>
-{ 
- btn[0].style.height=39+'%'
- btn[0].style.border='6px ridge #ff8'
-  btn[2].value='&&&&&'
- btn[4].style.opacity=1
- btn[5].style.opacity=1
-  btn[5].value='****'
-}
-btn[0].onmouseout=()=>
-{  
- btn[0].style.height=37+'%'
- btn[0].style.border='none'
-  btn[2].value=''
- btn[4].style.opacity=0.5
- btn[5].style.opacity=0.5
-  btn[5].value=''
-} 
-
-btn[3].onclick=()=>
-{ 
- btn[0].style.opacity=0
- btn[0].style.zIndex=-1
- bdy[0].style.height=66+'%'
- bdy[0].style.opacity=1
- bdy[0].style.transform='translate(0,-23%)'
- bdy[0].style.zIndex=1
- bdy[1].style.transform='scale(1)'
- lst[0].style.transform='scale(1)'
-}
-
 bdy[2].onclick=()=>
 { 
  oftm[0].style.transform='scale(4)'
@@ -303,16 +234,23 @@ bdy[4].onclick=()=>
  chftm[0].style.transform='scale(0)'
  tftm[0].style.transform='scale(4)'
 } 
-
+  
 ili=2
-ilst=1
+ilst=0
 oftm[2].onclick=()=>
 { 
  oftm[0].style.transform='scale(0)'
   lst[ili].innerHTML=oftm[1].value
   oftm[1].value=''
   ili++
-  if(ili==2)ili=1
+  if(ili==2) ili=1
+   bdy[6].innerHTML='Ticket ordered!'
+  bdy[6].style.transform=
+  'scale(1.4) translate(-22%,0) skew(-22deg)'
+ setTimeout(()=>{
+   bdy[6].style.color='#ff0'
+   bdy[6].style.transform='scale(0)'
+  }, 1111)
 } 
 oftm[3].onclick=()=>
 { 
@@ -345,17 +283,11 @@ tftm[3].onclick=()=>
 } 
 
 bdy[5].onclick=()=>
-{ 
- btn[0].style.opacity=1
- btn[0].style.zIndex=1
- bdy[0].style.zIndex=-1
- bdy[0].style.height=55+'%'
- bdy[0].style.opacity=0
- bdy[1].style.transform='scale(1,0)'
- lst[0].style.transform='scale(1,0)'
+{
  oftm[0].style.transform='scale(0)'
  chftm[0].style.transform='scale(0)'
  tftm[0].style.transform='scale(0)'
+  bdy[6].innerHTML='operation<br> completed!'
 }
 
 function actli(nm,i)
@@ -370,14 +302,13 @@ function actli(nm,i)
  } 
  nm[i].onclick=()=>
  { 
-   if(ili>4) ili=1
+   //if(ili>4) ili=1
   oftm[0].style.transform='scale(4)'
    oftm[1].value=nm[i].innerHTML
  } 
 }
  actli(li,0), actli(li,1), actli(li,2)
  actli(li,3)
- 
  
 function actlst(nm,i)
 {
