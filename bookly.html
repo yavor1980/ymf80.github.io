@@ -235,16 +235,16 @@ bdy[4].onclick=()=>
  tftm[0].style.transform='scale(4)'
 } 
   
-ili=0
+ili=1
 ilst=0
 oftm[2].onclick=()=>
 { 
  oftm[0].style.transform='scale(0.6)'
  chftm[0].style.transform='scale(0.6)'
  tftm[0].style.transform='scale(0.6)'
-  lst[1].innerHTML=oftm[1].value
+  lst[ili].innerHTML=oftm[1].value
   oftm[1].value=''
-  if(ili==2) ili=0
+  if(ili==4) ili=0
   ili++
   bdy[6].style.color='#ff6'
    bdy[6].innerHTML='Ticket ordered!'
