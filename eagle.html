@@ -33,15 +33,13 @@
 {
  position:absolute;   
  transition:2s; 
- left:33%;
+ left:36%;
  top:28%;
  width:11%;
  height:44%;
  background:radial-gradient(#444,#000);
- border-top-left-radius:66%;
- border-top-right-radius:66%;
- border-bottom-left-radius:55%;
- border-bottom-right-radius:55%;  
+ background:#300;
+ border-radius:55%;
  cursor:pointer;
 } 
 .hd
@@ -109,7 +107,8 @@
 
 <button class=btn>WAKE UP</button>
 
-<div class=eagle >
+<div class=eagle>
+ <div class=eagle></div>
  <div class=hd >
   <div class=hd >To fly?..</div>
   <div class=hd ></div> 
@@ -118,6 +117,7 @@
    <div class=mth></div>
   </div>
  </div>
+ <div class=eagle></div>
  <div class=lwng ><div class=lwng ></div></div>
  <div class=rwng ><div class=rwng ></div></div> 
 </div>
@@ -136,7 +136,6 @@
  
 <script>
 btn=document.getElementsByClassName('btn')
-
 eagle=document.getElementsByClassName('eagle')
 hd=document.getElementsByClassName('hd')
 mth=document.getElementsByClassName('mth')
@@ -150,17 +149,34 @@ var eagl=
  b:1,    
  init:function()
  {
+  eagle[1].style.left=0+'%'
+  eagle[1].style.top=0+'%' 	 
+  eagle[1].style.width=100+'%'
+  eagle[1].style.height=100+'%' 
+  eagle[1].style.background=
+   'radial-gradient(#444,#000)' 
+  eagle[2].style.left=-5+'%'
+  eagle[2].style.top=36+'%' 	 
+  eagle[2].style.width=122+'%'
+  eagle[2].style.height=77+'%' 
+  eagle[2].style.background=
+   'radial-gradient(#844,#000)' 
+  eagle[2].style.borderBottomLeftRadius=35+'%' 
+  eagle[2].style.borderBottomRightRadius=35+'%'
+  eagle[2].style.zIndex=-1 
   hd[0].style.left=18+'%'
   hd[0].style.top=-11+'%' 	 
   hd[0].style.width=66+'%'
   hd[0].style.height=66+'%' 
   hd[0].style.background=
-   'radial-gradient(#444,#000)' 
+   'radial-gradient(#444,#000)'
+  hd[0].style.borderRadius=55+'%' 
   hd[1].style.left=-8+'%'
   hd[1].style.top=-22+'%'  
   hd[1].style.width=99+'%'
   hd[1].style.height=6+'%'  
   hd[1].style.color='#fff'
+  hd[1].style.opacity=0.7
   hd[1].style.transform='scale(0)'
   hd[2].style.left=20+'%'
   hd[2].style.top=17+'%' 
@@ -263,6 +279,7 @@ var eagl=
   clk:function()
  {       
    v=Math.random()*11
+  hd[0].style.borderRadius=33+'%'  
   eagle[0].style.transform=
    'skew('+(Math.random()*44-22)+'deg)'
   hd[1].style.transform=
@@ -284,6 +301,7 @@ var eagl=
  },	
  re:function()
  {
+  hd[0].style.borderRadius=55+'%' 
   eagle[0].style.transform='skew(0deg)'
   hd[1].style.transform='scale(0)'
   hd[2].style.height=0+'%'
