@@ -111,7 +111,7 @@
 
 <div class=eagle >
  <div class=hd >
-  <div class=hd ></div>
+  <div class=hd >To fly?..</div>
   <div class=hd ></div> 
   <div class=hd ></div>
   <div class=mth>
@@ -127,15 +127,11 @@
  <div class=wrd>CAPTAT</div> 
  <div class=wrd>MUSCAS</div> 
  
-<div class=flt>flight</div>
- <div class=flt></div>
- <div class=flt>transform any block</div>
- 
 <div class=gthb>GitHub</div> 
  <div class=gthb>Add server!</div>
  <div class=gthb>Control content</div>
  <div class=gthb>Instructns to client</div>
- <div class=gthb></div>
+  <div class=gthb></div>
  <div class=gthb>LocalHost</div>
  
 <script>
@@ -146,9 +142,7 @@ hd=document.getElementsByClassName('hd')
 mth=document.getElementsByClassName('mth')
 lwng=document.getElementsByClassName('lwng')
 rwng=document.getElementsByClassName('rwng')
-  
 wrd=document.getElementsByClassName('wrd')
-flt=document.getElementsByClassName('flt')
 gthb=document.getElementsByClassName('gthb')
   
 var eagl= 
@@ -166,8 +160,7 @@ var eagl=
   hd[1].style.top=-22+'%'  
   hd[1].style.width=99+'%'
   hd[1].style.height=6+'%'  
-  hd[1].style.background='none'
-  hd[1].style.border='11px ridge #ff0'
+  hd[1].style.color='#fff'
   hd[1].style.transform='scale(0)'
   hd[2].style.left=20+'%'
   hd[2].style.top=17+'%' 
@@ -181,7 +174,6 @@ var eagl=
   hd[3].style.height=0+'%'
   hd[3].style.background=
    'radial-gradient(#f00,#ff0)'	 
-  
   mth[0].style.left=33+'%'
   mth[0].style.top=33+'%' 
   mth[0].style.width=44+'%'
@@ -194,7 +186,6 @@ var eagl=
   mth[1].style.height=0+'%' 
   mth[1].style.background=
    'radial-gradient(#900,#d00)'
-  
   lwng[0].style.left='-89%'
   lwng[0].style.top='6%'  
   lwng[0].style.width='99%'
@@ -207,7 +198,6 @@ var eagl=
   lwng[1].style.height='99%'
   lwng[1].style.background=
    'radial-gradient(#444,#000)'	  
- 
   rwng[0].style.left='88%'
   rwng[0].style.top='6%'  
   rwng[0].style.width='99%'
@@ -220,7 +210,6 @@ var eagl=
   rwng[1].style.height='99%'
   rwng[1].style.background=
    'radial-gradient(#444,#000)'
-  
   wrd[0].style.left='44%' 
   wrd[0].style.top='6%'  
   wrd[0].style.color='#ff0' 
@@ -242,23 +231,6 @@ var eagl=
   wrd[3].style.opacity=0	  
   wrd[3].style.fontSize='3em'
   
-  flt[0].style.left='6%'
-  flt[0].style.top='11%'
-  flt[0].style.color='#f00'
-  flt[0].style.opacity=1	  
-  flt[0].style.fontSize='3em'
-  flt[0].style.cursor='pointer'
-  flt[1].style.left='16%' 
-  flt[1].style.top='19%'
-  flt[1].style.color='#f00'
-  flt[1].style.opacity=1
-  flt[1].style.transform='scale(0)'	  
-  flt[2].style.left='16%' 
-  flt[2].style.top='19%'
-  flt[2].style.color='#f00'
-  flt[2].style.opacity=1
-  flt[2].style.transform='scale(0)'	 
-	  
   gthb[0].style.left='67%' 
   gthb[0].style.top='66%'
   gthb[0].style.color='#f00'
@@ -294,7 +266,7 @@ var eagl=
   eagle[0].style.transform=
    'skew('+(Math.random()*44-22)+'deg)'
   hd[1].style.transform=
-   'scale(2) translate(0,-66%)'
+   'scale(3) translate(0,-66%) skew(22deg)'
   hd[2].style.height=18+'%'
   hd[3].style.height=18+'%' 
   mth[1].style.width=88+'%'
@@ -342,35 +314,6 @@ eagle[0].onmousemove=()=>
 {
  eagl.clk()
 } 
- 
-fv=0
-flt[0].onmouseover=()=>
-{
-  fv=Math.round(Math.random()*55)
- flt[0].style.transform=
-  'scale(1.1) skew(-11deg)'
- flt[0].style.color='#888'
-  flt[0].innerHTML=
-   "eagle.style.transform='skew("+9+"deg)'"
- flt[1].style.transform=
-  'scale(3) translate(11%,99%)'
- flt[1].style.color='#f00'
-  flt[1].innerHTML=
-   'transition="1s"<br>translate('+fv+'%,'+fv+'%)'
- flt[2].style.transform=
-  'scale(3) translate(1%,33%) skew(11deg)'
- flt[2].style.color='#00f' 
-}		  
-flt[0].onmouseout=()=>
-{
- flt[0].style.color='#f00'
- flt[0].style.transform='scale(1)'
-  flt[0].innerHTML='flight'
- flt[1].style.transform='scale(0)'
- flt[1].style.color='#fff'
- flt[2].style.transform='scale(0) '
- flt[2].style.color='#fff' 
-}    
 
 alg=['PHP','Python','java','C#']
 ialg=0
@@ -389,23 +332,23 @@ gthb[0].onmouseover=()=>
  gthb[3].style.transform=
   'scale(3) translate(-11%,33%) skew(12deg)'
  gthb[3].style.color='#ff0'
+ gthb[4].style.transform=
+   'scale(3) translate(-11%,99%)'
+ gthb[4].style.color='#0ff'
+ gthb[5].style.transform=
+  'scale(3) translate(-22%,119%)'
+ gthb[5].style.color='#0f6'
  Igthb= setInterval(()=>{
   gthb[4].innerHTML=alg[ialg]
    ialg++ 
    if(ialg==4) ialg=0
-  },1111)
-  gthb[4].style.transform=
-   'scale(3) translate(-11%,99%)'
-  gthb[4].style.color='#0ff'
-  gthb[5].style.transform=
-   'scale(3) translate(-22%,119%)'
-  gthb[5].style.color='#0f6'
+ }, 1111)  
 }		  
 gthb[0].onmouseout=()=>
 {
- gthb[0].innerHTML='GitHub'
  gthb[0].style.color='#f00'
  gthb[0].style.transform='scale(3)'
+  gthb[0].innerHTML='GitHub'
  gthb[1].style.transform='scale(0)'
  gthb[1].style.color='#fff'
  gthb[2].style.transform='scale(0)'
