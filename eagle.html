@@ -37,8 +37,6 @@
  top:28%;
  width:11%;
  height:44%;
- background:radial-gradient(#444,#000);
- background:#300;
  border-radius:55%;
  cursor:pointer;
 } 
@@ -79,12 +77,18 @@
  border-bottom-left-radius:99%;
  border-bottom-right-radius:55%; 
 }
+.pws
+{
+ position:absolute;  
+ transition:2s;
+ width:55%;
+ height:122%; 
+}
 
 .wrd
 {
  position:absolute;
  transition:2s;
- z-index:-1;
 }
 
 .gthb
@@ -92,13 +96,6 @@
  position:absolute;
  transition:2s;
  z-index:1;
-}
-
-.flt
-{
- position:absolute; 
- transition:2s;
- z-index:1; 
 }
 
 </style>
@@ -117,9 +114,12 @@
    <div class=mth></div>
   </div>
  </div>
- <div class=eagle></div>
- <div class=lwng ><div class=lwng ></div></div>
- <div class=rwng ><div class=rwng ></div></div> 
+ <div class=eagle>
+  <div class=pws></div>
+  <div class=pws></div>
+ </div>
+ <div class=lwng ><div class=lwng></div></div>
+ <div class=rwng ><div class=rwng></div></div> 
 </div>
 
  <div class=wrd>AQUILA</div> 
@@ -141,6 +141,7 @@ hd=document.getElementsByClassName('hd')
 mth=document.getElementsByClassName('mth')
 lwng=document.getElementsByClassName('lwng')
 rwng=document.getElementsByClassName('rwng')
+pws=document.getElementsByClassName('pws')
 wrd=document.getElementsByClassName('wrd')
 gthb=document.getElementsByClassName('gthb')
   
@@ -160,7 +161,7 @@ var eagl=
   eagle[2].style.width=122+'%'
   eagle[2].style.height=77+'%' 
   eagle[2].style.background=
-   'radial-gradient(#844,#000)' 
+   'radial-gradient(#444,#000)' 
   eagle[2].style.borderBottomLeftRadius=39+'%' 
   eagle[2].style.borderBottomRightRadius=39+'%'
   eagle[2].style.zIndex=-1 
