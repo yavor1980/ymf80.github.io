@@ -32,7 +32,7 @@
 .bgrnd
 {
  position:absolute;   
- transition:2s; 
+ transition:1s; 
 }
 
 .eagle
@@ -114,7 +114,9 @@
 
 <button class=btn>WAKE UP</button>
 
-<div class=bgrnd></div>
+<div class=bgrnd>
+ <div class=bgrnd></div>
+</div>
 
 <div class=eagle>
  <div class=eagle></div>
@@ -170,6 +172,12 @@ var eagl=
   bgrnd[0].style.background='#888'
   bgrnd[0].style.borderRadius=55+'%'
   bgrnd[0].style.opacity=0
+  bgrnd[1].style.left=84+'%' 
+  bgrnd[1].style.top=25+'%'
+  bgrnd[1].style.width=1+'%' 
+  bgrnd[1].style.height=47+'%'
+  bgrnd[1].style.background='#ff0'
+  bgrnd[1].style.transform='scale(0)'
  
   eagle[1].style.left=0+'%'
   eagle[1].style.top=0+'%' 	 
@@ -313,7 +321,11 @@ var eagl=
   bgrnd[0].style.borderBottomRightRadius=
    (33+Math.random()*22)+'%'
   bgrnd[0].style.opacity=0.6
-   v=Math.random()*11 
+  bgrnd[1].style.borderBottomRightRadius=55+'%'
+  bgrnd[1].style.borderBottomLeftRadius=55+'%'
+  bgrnd[1].style.opacity=0 
+  bgrnd[1].style.transform= 
+   'scale(3) translate(0,56%) skew(22deg)'
   eagle[0].style.transform=
    'skew('+(Math.random()*44-22)+'deg)'
   eagle[2].style.borderRadius=55+'%'
@@ -325,6 +337,7 @@ var eagl=
   hd[3].style.height=18+'%' 
   mth[1].style.width=88+'%'
   mth[1].style.height=33+'%'
+   v=Math.random()*11
   lwng[1].style.transform=
    'translate(-33%,-11%) scale('+(1+v/11)+',1)'
   rwng[1].style.transform=
@@ -341,6 +354,8 @@ var eagl=
  re:function()
  {
   bgrnd[0].style.opacity=0
+  bgrnd[1].style.opacity=1
+  bgrnd[1].style.transform='scale(0)'
   eagle[2].style.borderBottomLeftRadius=39+'%' 
   eagle[2].style.borderBottomRightRadius=39+'%'
   eagle[2].style.transform='scale(1)'
@@ -365,8 +380,7 @@ var eagl=
  } 
 }    
    eagl.init()
-	
-    setInterval(eagl.cl, 999)	
+	setInterval(eagl.cl, 999)	
   
 btn[0].onclick=()=>
 {
