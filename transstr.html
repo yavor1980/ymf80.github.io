@@ -5,49 +5,45 @@
 
 #idbd
 {
-background:linear-gradient(#bb0,#033);
+ background:linear-gradient(#bb0,#033);
 }
 
 button
 {
-position:absolute;
-background:#b00;
-color:#ff0;
-left:11%;
-top:11%;
-width:11%;
-font-size:2.3em;
-border-radius:33%;
-transition:1s;
-cursor:pointer;
+ position:absolute;
+ background:#b00;
+ color:#ff0;
+ left:11%;
+ top:11%;
+ transform:scale(1.6);
+ font-size:2.3em;
+ border-radius:33%;
+ transition:1s;
+ cursor:pointer;
 }
 button:hover
 {
-transform:scale(1.2);
+ transform:scale(1.8);
 }
 
 .pnp
 {
-position:absolute;
-transition:1s;
-cursor:pointer;
-z-index:1;
-}
-.pnp:hover
-{
-transform:scale(1.2);
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+ z-index:1;
 }
 
 .tpnp
 {
-position:absolute;
-transition:1s;
+ position:absolute;
+ transition:1s;
 }
 
 .fnctn
 {
-position:absolute;
-transition:1s;
+ position:absolute;
+ transition:1s;
 }
 
 </style>
@@ -81,9 +77,6 @@ transition:1s;
 <div class=tpnp>
  working<br>&nbsp circuit
 </div>
-<div class=tpnp>
- npn type
-</div>
 
 <div class=fnctn>
  function
@@ -101,13 +94,13 @@ pnp=document.getElementsByClassName('pnp')
 tpnp=document.getElementsByClassName('tpnp')
 fnctn=document.getElementsByClassName('fnctn')
 
-
 pnp[0].style.left='33%'
 pnp[0].style.top='33%'
-pnp[0].style.width='22%'
+pnp[0].style.width='16%'
 pnp[0].style.height='33%' 
 pnp[0].style.border='11px ridge #707'
 pnp[0].style.borderRadius='55%'
+pnp[0].style.transition=222+'ms' 
  
 pnp[1].style.left='22%'
 pnp[1].style.top='-11%'
@@ -145,12 +138,13 @@ pnp[5].style.width='0'
 pnp[5].style.height='0'
 pnp[5].style.borderLeft='22px solid transparent'
 pnp[5].style.borderRight='22px solid transparent'
-pnp[5].style.borderTop='0px solid #909'
+pnp[5].style.borderTop='0px solid #000'
 pnp[5].style.borderBottom='44px solid #800'
 pnp[5].style.transform='rotate(88deg)' 
 
 tpnp[0].style.left='67%'
 tpnp[0].style.top='11%'
+tpnp[0].style.cursor='pointer'
 tpnp[0].style.transform='scale(3) skew(-22deg)'
 
 tpnp[1].style.left='67%'
@@ -178,11 +172,6 @@ tpnp[5].style.top='11%'
 tpnp[5].style.opacity=0
 tpnp[5].style.transform='scale(0)'
 
-tpnp[6].style.left='55%'
-tpnp[6].style.top='12%'
-tpnp[6].style.color='#0bb'
-tpnp[6].style.transform='scale(0)'
-
 fnctn[0].style.left='77%'
 fnctn[0].style.top='33%'
 fnctn[0].style.cursor='pointer'
@@ -198,26 +187,26 @@ fnctn[2].style.left='66%'
 fnctn[2].style.top='30%'
 fnctn[2].style.transform='scale(0)'
 
-
 bbtn=1
-btn[0].onclick=()=>
+btn[0].onmouseover=()=>
 {
- if(bbtn){
-   btn[0].innerHTML='npn'
-   tpnp[6].innerHTML='pnp'
-  pnp[5].style.transform=
-   'rotate(-84deg)translate(-18%,-228%)'
- }else{
-   btn[0].innerHTML='pnp'
-   tpnp[6].innerHTML='npn'
-  pnp[5].style.transform='rotate(88deg)'
- }
- bbtn=!bbtn
+ btn[0].innerHTML='npn'
+ pnp[5].style.transform=
+  'rotate(-84deg)translate(-18%,-228%)'
+}
+btn[0].onmouseout=()=>
+{
+  btn[0].innerHTML='pnp'
+ pnp[5].style.transform='rotate(88deg)'
 }
 
+Ipnp=0
 pnp[0].onmouseover=()=>
 {
- pnp[2].style.transform='translate(-3%,0)'
+ Ipnp=setInterval(()=>{
+  pnp[0].style.transform='scale('+
+   (1+Math.random()/9)+')'
+ }, 111)
  tpnp[0].style.color='#f00'
  tpnp[0].style.opacity=1
  tpnp[1].style.transform=
@@ -240,11 +229,10 @@ pnp[0].onmouseover=()=>
   'scale(4) translate(44%,226%) skew(22deg)'
  tpnp[5].style.color='#800'
  tpnp[5].style.opacity=1
- tpnp[6].style.transform='scale(4)'
 }
 pnp[0].onmouseout=()=>
 {
- pnp[2].style.transform='translate(0,0)'
+  clearInterval(Ipnp)
  tpnp[0].style.color='#000'
  tpnp[1].style.transform='scale(0)'
  tpnp[1].style.color='#f00' 
@@ -261,7 +249,17 @@ pnp[0].onmouseout=()=>
  tpnp[5].style.transform='scale(0)'
  tpnp[5].style.color='#f00'
  tpnp[5].style.opacity=0
- tpnp[6].style.transform='scale(0)'
+}
+
+tpnp[0].onmouseover=()=>
+{
+ tpnp[0].style.transform=
+  'scale(4) skew(-11deg)'
+}
+tpnp[0].onmouseout=()=>
+{
+ tpnp[0].style.transform=
+  'scale(3) skew(-22deg)'
 }
 
 fnctn[0].onmouseover=()=>
