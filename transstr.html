@@ -201,24 +201,27 @@ btn[0].onmouseout=()=>
 }
 
 Ipnp=0
+clr=0
 pnp[0].onmouseover=()=>
 {
+ clr=Math.round(9*Math.random())
  Ipnp=setInterval(()=>{
   pnp[0].style.transform='scale('+
    (1+Math.random()/9)+')'
- }, 111)
+  pnp[1].style.background='#'+clr+'00'
+ }, 222)
  tpnp[0].style.color='#f00'
  tpnp[0].style.opacity=1
  tpnp[1].style.transform=
-  'scale(3) translate(-333%,0) skew(22deg)'
+  'scale(3) translate(-333%,111%) skew(22deg)'
  tpnp[1].style.color='#0f0' 
  tpnp[1].style.opacity=1
  tpnp[2].style.transform=
-  'scale(3) translate(0,222%) skew(22deg)'
+  'scale(3) translate(-77%,222%) skew(22deg)'
  tpnp[2].style.color='#0f0' 
  tpnp[2].style.opacity=1
  tpnp[3].style.transform=
-  'scale(3) translate(0,777%) skew(22deg)'
+  'scale(3) translate(-111%,777%) skew(22deg)'
  tpnp[3].style.color='#0f0' 
  tpnp[3].style.opacity=1
  tpnp[4].style.transform=
@@ -233,6 +236,7 @@ pnp[0].onmouseover=()=>
 pnp[0].onmouseout=()=>
 {
   clearInterval(Ipnp)
+ pnp[1].style.background='#707'
  tpnp[0].style.color='#000'
  tpnp[1].style.transform='scale(0)'
  tpnp[1].style.color='#f00' 
