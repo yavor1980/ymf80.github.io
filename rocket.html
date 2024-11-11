@@ -69,6 +69,7 @@
 <div class=cld></div>
 <div class=cld></div>
 <div class=cld></div>
+<div class=cld></div>
  
 <div class=tcld>
  funny clouds...
@@ -130,7 +131,6 @@ cld[0].style.background=
  'radial-gradient(#009,#00f)'
 cld[0].style.borderRadius='55%'
 cld[0].style.opacity=0.3
- 
 cld[1].style.left='27%'
 cld[1].style.top='11%'
 cld[1].style.width='18%'
@@ -139,7 +139,6 @@ cld[1].style.background=
  'radial-gradient(#009,#00f)'
 cld[1].style.borderRadius='55%'
 cld[1].style.opacity=0.4
- 
 cld[2].style.left='49%'
 cld[2].style.top='24%'
 cld[2].style.width='16%'
@@ -148,7 +147,6 @@ cld[2].style.background=
  'radial-gradient(#008,#00f)'
 cld[2].style.borderRadius='55%'
 cld[2].style.opacity=0.3
-
 cld[3].style.left='77%'
 cld[3].style.top='22%'
 cld[3].style.width='16%'
@@ -157,12 +155,20 @@ cld[3].style.background=
  'radial-gradient(#008,#00f)'
 cld[3].style.borderRadius='55%'
 cld[3].style.opacity=0.3
+cld[4].style.left='0%'
+cld[4].style.bottom='0%'
+cld[4].style.width='100%'
+cld[4].style.height='19%' 
+cld[4].style.background=
+ 'radial-gradient(#000,#fb0)'
+cld[4].style.borderTopLeftRadius='44%'
+cld[4].style.borderTopRightRadius='22%'
+cld[4].style.opacity=0.3
 
 tcld[0].style.left='11%'
 tcld[0].style.top='22%'
 tcld[0].style.color='#b00'
 tcld[0].style.transform='scale(0)'
-
 tcld[1].style.left='11%'
 tcld[1].style.top='22%'
 tcld[1].style.color='#088'
@@ -176,47 +182,38 @@ rckt[0].style.background=
  'radial-gradient(#440,#990)'
 rckt[0].style.borderTopLeftRadius='55%'
 rckt[0].style.borderTopRightRadius='55%'
-
 rckt[1].style.left='-33%'
 rckt[1].style.top='66%'
 rckt[1].style.width='66%'
 rckt[1].style.height='44%' 
 rckt[1].style.background='#440'
-rckt[1].style.borderTopLeftRadius='30%'
-rckt[1].style.borderBottomRightRadius='30%'
-
+rckt[1].style.transform='skew(-12deg)'
 rckt[2].style.left='67%'
 rckt[2].style.top='66%'
 rckt[2].style.width='66%'
 rckt[2].style.height='44%' 
 rckt[2].style.background='#440'
-rckt[2].style.borderTopRightRadius='30%'
-rckt[2].style.borderBottomLeftRadius='30%'
-
+rckt[2].style.transform='skew(12deg)'
 rckt[3].style.left='29%'
 rckt[3].style.top='33%'
 rckt[3].style.width='44%'
 rckt[3].style.height='22%' 
 rckt[3].style.background='#900'
 rckt[3].style.borderRadius='55%'
-
 rckt[4].style.left='20%'
 rckt[4].style.top='92%'
 rckt[4].style.width='66%'
 rckt[4].style.height='22%' 
 rckt[4].style.zIndex=-1
 
-
 trckt[0].style.left='22%'
 trckt[0].style.top='33%'
 trckt[0].style.color='#440'
 trckt[0].style.transform='scale(0)'
-
 trckt[1].style.left='22%'
 trckt[1].style.top='49%'
 trckt[1].style.color='#f00'
 trckt[1].style.transform='scale(0)'
-
 trckt[2].style.left='47%'
 trckt[2].style.top='4%'
 trckt[2].style.color='#666'
@@ -231,7 +228,6 @@ shtl[0].style.background=
  'radial-gradient(#444,#660)'
 shtl[0].style.borderRadius='55%'
 shtl[0].style.transform='scale(0.01)'
-
 shtl[1].style.left='18%'
 shtl[1].style.top='8%'
 shtl[1].style.width='66%'
@@ -239,7 +235,6 @@ shtl[1].style.height='66%'
 shtl[1].style.background=
  'radial-gradient(#f0f,#808)'
 shtl[1].style.borderRadius='55%'
-
 tshtl[0].style.left='44%'
 tshtl[0].style.top='33%'
 tshtl[0].style.color='#f00'
@@ -360,7 +355,8 @@ rckt[0].onmouseover=()=>
    'scale('+(Math.random()*2+2)+
    ') translate(3%,-200%)'
   }, 222) 
-  rckt[3].style.background='#d00'
+  rckt[3].style.background=
+   'radial-gradient(22px,#ff0,#d00)'
   trckt[0].style.transform=
    'scale(3) translate(33%,-144%)'
 }
