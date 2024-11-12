@@ -6,6 +6,14 @@
 {
  background:radial-gradient(#009,#0ff);
 }
+button
+{
+ position:absolute;
+ left:88%;
+ top:6%;
+ transform:scale(2);
+ cursor:pointer;
+}
 
 #idcat
 {
@@ -80,6 +88,7 @@
 
 </style>
 
+<button class>go</button>
 <div class=wls></div>
 <div class=wls></div>
 
@@ -108,6 +117,7 @@
 <div class=frz>intensity scale</div>
 
 <script>
+btn=document.getElementsByTagName('button')
 wls=document.getElementsByClassName('wls')  
 drn=document.getElementsByClassName('drn')
 prplr=document.getElementsByClassName('prplr')
@@ -133,7 +143,6 @@ drn[0].style.left=44+'%'
 drn[0].style.top=44+'%'
 drn[0].style.width=22+'%'
 drn[0].style.height=11+'%'
-drn[0].style.background='#b00'
 drn[0].style.borderRadius='55%'
 drn[0].style.border='9px ridge #900'
 drn[0].style.transform='scale(1.4)' 
@@ -244,6 +253,16 @@ function cl()
   ') rotate('+(Math.random()*1)+'deg)'
 }
 
+bbtn=0
+btn[0].onclick=()=>
+{
+ if(bbtn==0) 
+  drn[0].onmouseover()
+ else
+  drn[0].onmouseout()
+   bbtn=!bbtn
+} 
+
 Iwls=0  
 wls[0].onmouseover=()=>
 {
@@ -270,7 +289,6 @@ wls[1].onmouseout=()=>
 
 drn[0].onmouseover=()=>
 {
- drn[0].style.background='#600'
  drn[0].style.border='11px ridge #400'
  drn[1].style.background='#400'
  drn[2].style.background='#300'
@@ -306,7 +324,6 @@ drn[0].onmouseover=()=>
 }
 drn[0].onmouseout=()=>
 {
- drn[0].style.background='#b00'
  drn[0].style.border='9px ridge #900'
  drn[0].style.transform='scale(1.4)'
  drn[1].style.background='#800'
@@ -420,7 +437,7 @@ frz[2].onmouseout=()=>
 frz[2].style.zIndex=1
 frz[2].style.color='#0b0'
 frz[2].style.transform='scale(3)'
-frz[2].innerHTML='intensity scale'
+ frz[2].innerHTML='intensity scale'
 } 
  
 </script>
