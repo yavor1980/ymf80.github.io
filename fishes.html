@@ -7,17 +7,17 @@
  background:linear-gradient(#0c0,#00c);
 }
 
-#idb
+#idbtn
 { 
  position:absolute;
- background:#f00;
+ transition:1s;
  left:11%;
  top:4%;
  width:9%;
  height:6%;
+ background:#f00;
  font-size:2em;
  cursor:pointer;
- transition:1s;
 }
 
 #idaq
@@ -50,12 +50,17 @@
  transition:2s;
  border-radius:55%;
 }
+.fns
+{ 
+ position:absolute; 
+ transition:2s;
+ border-radius:55%;
+}
 .bbl
 { 
  position:absolute; 
  cursor:pointer;
 }
-
 
 .t_wtr
 { 
@@ -67,7 +72,7 @@
 
 </style>
 
-<button id=idb>come</button>
+<button id=idbtn>come</button>
 <img id=idaq src='img/aquarium.png'   >
 
 <div class=fsh>
@@ -82,6 +87,8 @@
   </div>
  </div> 
  <div class=fsh></div>
+ <div class=fns></div>
+ <div class=fns></div>
 </div>
 <div class=fsh>floating fish</div>
 
@@ -91,6 +98,7 @@
 <script>
 fsh=document.getElementsByClassName('fsh') 
 fc=document.getElementsByClassName('fc')
+fns=document.getElementsByClassName('fns')
 bbl=document.getElementsByClassName('bbl')
 t_wtr=document.getElementsByClassName('t_wtr')
 
@@ -98,21 +106,18 @@ fsh[0].style.left=30+'%'
 fsh[0].style.top=22+'%'
 fsh[0].style.width=11+'%'
 fsh[0].style.height=34+'%'
-
 fsh[1].style.left=22+'%'
 fsh[1].style.top=22+'%'
 fsh[1].style.width=66+'%'
 fsh[1].style.height=99+'%'
 fsh[1].style.background=
  'radial-gradient(#bb0,#f70)'
- 
 fsh[2].style.left=16+'%'
 fsh[2].style.top=2+'%'
 fsh[2].style.width=66+'%'
 fsh[2].style.height=99+'%'
 fsh[2].style.background=
  'radial-gradient(#bb0,#770)'
-
 fsh[3].style.left=44+'%'
 fsh[3].style.top=11+'%'
 fsh[3].style.width=22+'%'
@@ -123,72 +128,84 @@ fsh[3].style.borderTopRightRadius=29+'%'
 fsh[3].style.borderBottomRightRadius=39+'%'
 fsh[3].style.transform='scale(0.2,1)'
 fsh[3].style.zIndex=-1
-
-fsh[4].style.left='22%'
-fsh[4].style.top='33%'
+fsh[4].style.left=22+'%'
+fsh[4].style.top=33+'%'
 fsh[4].style.transform='scale(0)'
 
-fc[0].style.left='22%'
-fc[0].style.top='22%'
-fc[0].style.width='9%'
-fc[0].style.height='11%'
+fc[0].style.left=22+'%'
+fc[0].style.top=22+'%'
+fc[0].style.width=9+'%'
+fc[0].style.height=11+'%'
 fc[0].style.background='#0ff'
-
-fc[1].style.left='66%'
-fc[1].style.top='22%'
-fc[1].style.width='9%'
-fc[1].style.height='11%'
+fc[1].style.left=66+'%'
+fc[1].style.top=22+'%'
+fc[1].style.width=9+'%'
+fc[1].style.height=11+'%'
 fc[1].style.background='#0ff'
-
-fc[2].style.left='33%'
-fc[2].style.top='66%'
-fc[2].style.width='33%'
-fc[2].style.height='5%'
+fc[2].style.left=33+'%'
+fc[2].style.top=66+'%'
+fc[2].style.width=33+'%'
+fc[2].style.height=5+'%'
 fc[2].style.background=
  'radial-gradient(#000,#f00)'
  
-bbl[0].style.left='45%'
-bbl[0].style.top='66%'
-bbl[0].style.width='5%'
-bbl[0].style.height='5%'
-bbl[0].style.borderRadius='50%'
+fns[0].style.left=0+'%'
+fns[0].style.top=22+'%'
+fns[0].style.width=99+'%'
+fns[0].style.height=99+'%'
+fns[0].style.background=
+ 'radial-gradient(#f00,#fff)'  
+fns[0].style.opacity=0.8
+fns[0].style.transform='scale(0,1)'
+fns[1].style.left=4+'%'
+fns[1].style.top=87+'%'
+fns[1].style.width=100+'%'
+fns[1].style.height=29+'%'
+fns[1].style.background=
+ 'radial-gradient(#00f,#fff)'
+fns[1].style.opacity=0.4 
+fns[1].style.transform='scale(0,1)'
+fns[1].style.zIndex=0
+
+ 
+bbl[0].style.left=45+'%'
+bbl[0].style.top=66+'%'
+bbl[0].style.width=5+'%'
+bbl[0].style.height=5+'%'
+bbl[0].style.borderRadius=50+'%'
 bbl[0].style.background=
  'radial-gradient(#00f,#fff)'
 bbl[0].style.transform='scale(0)' 
-
-bbl[1].style.left='45%'
-bbl[1].style.top='66%'
-bbl[1].style.width='5%'
-bbl[1].style.height='5%'
-bbl[1].style.borderRadius='50%'
+bbl[1].style.left=45+'%'
+bbl[1].style.top=66+'%'
+bbl[1].style.width=5+'%'
+bbl[1].style.height=5+'%'
+bbl[1].style.borderRadius=50+'%'
 bbl[1].style.background=
  'radial-gradient(#00b,#fff)'
 bbl[1].style.transform='scale(0)' 
-
-bbl[2].style.left='45%'
-bbl[2].style.top='66%'
-bbl[2].style.width='5%'
-bbl[2].style.height='5%'
-bbl[2].style.borderRadius='50%'
+bbl[2].style.left=45+'%'
+bbl[2].style.top=66+'%'
+bbl[2].style.width=5+'%'
+bbl[2].style.height=5+'%'
+bbl[2].style.borderRadius=50+'%'
 bbl[2].style.background=
  'radial-gradient(#009,#fff)'
 bbl[2].style.transform='scale(0)'
 
-t_wtr[0].style.left='33%'
-t_wtr[0].style.top='6%'
-t_wtr[0].style.width='44%'
-t_wtr[0].style.height='11%'
+t_wtr[0].style.left=33+'%'
+t_wtr[0].style.top=6+'%'
+t_wtr[0].style.width=44+'%'
+t_wtr[0].style.height=11+'%'
 t_wtr[0].innerHTML= 
  'Gases dissolved in water: nitrogen, oxygen, argon,'+    
  'carbon dioxide - and other impurities in the air.'+ 
  'The properties of the solvent are especially  '+
  'pronounced in marine water, in which almost all'+ 
  'substances dissolve.' 
-
-t_wtr[1].style.left='47%'
-t_wtr[1].style.top='22%'
-t_wtr[1].style.height='11%'
-t_wtr[1].style.textAlign='left'
+t_wtr[1].style.left=47+'%'
+t_wtr[1].style.top=22+'%'
+t_wtr[1].style.height=11+'%'
 t_wtr[1].innerHTML= 
  'heavy water (DO)<br>'+
  'superheavy water (TO)<br>'+
@@ -217,27 +234,27 @@ function cl()
 }   
 	setInterval(cl,1444)	
  
-idb.onmouseover=()=>
+idbtn.onmouseover=()=>
 {
- idb.style.transform='scale(1.2)'
+ idbtn.style.transform='scale(1.2)'
 } 
-idb.onmouseout=()=>
+idbtn.onmouseout=()=>
 {
- idb.style.transform='scale(1)'
+ idbtn.style.transform='scale(1)'
 } 
-idb.onclick=()=>
+idbtn.onclick=()=>
 {
- idb.style.transform='scale(0)'
+ idbtn.style.transform='scale(0)'
  fsh[0].style.transform=
   'scale(2) translate(133%,0)'
  setTimeout(()=>
  {
-  idb.style.transform='scale(1)'
+  idbtn.style.transform='scale(1)'
   fsh[0].style.transform='scale(2)'
  }, 1000) 
  setTimeout(()=>
  {
-  idb.style.transform='scale(1)'
+  idbtn.style.transform='scale(1)'
   fsh[0].style.transform='scale(1)'
  }, 2000)
 }  
@@ -245,7 +262,7 @@ idb.onclick=()=>
 Ifsh=0 
 fsh[0].onmouseover=()=>
 {
- idb.style.transform='scale(0)'
+ idbtn.style.transform='scale(0)'
  fsh[0].style.transform='scale(1.7,1.4)'
  fsh[4].style.color='#f00'
  fsh[4].style.transform=
@@ -259,6 +276,10 @@ fsh[0].onmouseover=()=>
  fc[2].style.transform='scale(1,3)'
  Ifsh=setInterval(()=>
  {
+  fns[0].style.transform=
+   'scale('+1.8*Math.random()+',1)'
+  fns[1].style.transform=
+   'scale('+1.8*Math.random()+',1)' 
   bbl[0].style.transition='1s'
   bbl[0].style.transform=
    'scale(6) translate('+Math.random()*333+'%,-222%)'
@@ -269,6 +290,8 @@ fsh[0].onmouseover=()=>
   bbl[2].style.transform=
    'scale(4) translate('+Math.random()*333+'%,-11%)'
   setTimeout(()=>{
+   fns[0].style.transform='scale(0,1)'
+   fns[1].style.transform='scale(0,1)'
    bbl[0].style.transition='0s'
    bbl[0].style.transform='scale(0)'
    bbl[1].style.transition='0s'
@@ -281,7 +304,7 @@ fsh[0].onmouseover=()=>
 fsh[0].onmouseout=()=>
 {
   clearInterval(Ifsh)
- idb.style.transform='scale(1)'
+ idbtn.style.transform='scale(1)'
  fsh[0].style.transform='scale(1)'
  fsh[4].style.transform='scale(0)'
  fc[0].style.transform='scale(1)'
@@ -293,6 +316,10 @@ fsh[0].onmouseout=()=>
  bbl[1].style.transform='scale(0)'
  bbl[2].style.transition='0s'
  bbl[2].style.transform='scale(0)'
+}
+fsh[0].onclick=()=>
+{
+ 
 }
  
 t_wtr[0].onmouseover=()=>
@@ -312,13 +339,11 @@ t_wtr[1].onmouseover=()=>
  t_wtr[1].style.transform=
   'scale(1.7) translate(23%,0)'
  t_wtr[1].style.color='#110'
- t_wtr[1].style.zIndex=1
 }
 t_wtr[1].onmouseout=()=>
 {
  t_wtr[1].style.transform='scale(1)'
  t_wtr[1].style.color='#000'
- t_wtr[1].style.zIndex=0
 }
  
 </script>
