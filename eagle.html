@@ -87,12 +87,14 @@
 {
  position:absolute;  
  transition:2s;
- width:13%;
- height:12%; 
+ width:7%;
+ height:7%; 
  background:#aaa; 
  border-radius:55%; 
- border-bottom:12px ridge #ff0; 
- transform:scale(1,0.2);
+ border-bottom:12px ridge #f0f;
+ border-left:12px ridge #808;
+ border-right:12px ridge #808;
+ transform:scale(2,0.2);
 }
 
 .wrd
@@ -114,9 +116,9 @@
 
 <button class=btn>WAKE UP</button>
 
-<div class=bgrnd>
- <div class=bgrnd></div>
-</div>
+<div class=bgrnd></div>
+<div class=bgrnd></div>
+
 
 <div class=eagle>
  <div class=eagle></div>
@@ -169,11 +171,12 @@ var eagl=
   bgrnd[0].style.top=6+'%'
   bgrnd[0].style.width=67+'%' 
   bgrnd[0].style.height=47+'%'
-  bgrnd[0].style.background='#888'
+  bgrnd[0].style.background=
+   'linear-gradient(-44deg,#222,#888)'
   bgrnd[0].style.borderRadius=55+'%'
   bgrnd[0].style.opacity=0
-  bgrnd[1].style.left=84+'%' 
-  bgrnd[1].style.top=25+'%'
+  bgrnd[1].style.left=64+'%' 
+  bgrnd[1].style.top=15+'%'
   bgrnd[1].style.width=1+'%' 
   bgrnd[1].style.height=47+'%'
   bgrnd[1].style.background='#ff0'
@@ -194,6 +197,7 @@ var eagl=
   eagle[2].style.borderBottomLeftRadius=39+'%' 
   eagle[2].style.borderBottomRightRadius=39+'%'
   eagle[2].style.zIndex=-1 
+  
   hd[0].style.left=18+'%'
   hd[0].style.top=-11+'%' 	 
   hd[0].style.width=66+'%'
@@ -220,6 +224,7 @@ var eagl=
   hd[3].style.height=1+'%'
   hd[3].style.background=
    'radial-gradient(#f00,#ff0)'	 
+  
   mth[0].style.left=33+'%'
   mth[0].style.top=33+'%' 
   mth[0].style.width=44+'%'
@@ -232,6 +237,7 @@ var eagl=
   mth[1].style.height=0+'%' 
   mth[1].style.background=
    'radial-gradient(#900,#d00)'
+  
   lwng[0].style.left='-89%'
   lwng[0].style.top='6%'  
   lwng[0].style.width='99%'
@@ -244,6 +250,7 @@ var eagl=
   lwng[1].style.height='99%'
   lwng[1].style.background=
    'radial-gradient(#444,#000)'	  
+  
   rwng[0].style.left='88%'
   rwng[0].style.top='6%'  
   rwng[0].style.width='99%'
@@ -256,10 +263,12 @@ var eagl=
   rwng[1].style.height='99%'
   rwng[1].style.background=
    'radial-gradient(#444,#000)'
-  pws[0].style.left='28%' 
+  
+  pws[0].style.left='8%' 
   pws[0].style.top='77%'
   pws[1].style.left='64%' 
   pws[1].style.top='77%'
+  
   wrd[0].style.left='44%' 
   wrd[0].style.top='6%'  
   wrd[0].style.color='#ff0' 
@@ -320,12 +329,12 @@ var eagl=
    (33+Math.random()*22)+'%'
   bgrnd[0].style.borderBottomRightRadius=
    (33+Math.random()*22)+'%'
-  bgrnd[0].style.opacity=0.6
+  bgrnd[0].style.opacity=0.9
   bgrnd[1].style.borderBottomRightRadius=55+'%'
   bgrnd[1].style.borderBottomLeftRadius=55+'%'
   bgrnd[1].style.opacity=0 
   bgrnd[1].style.transform= 
-   'scale(3) translate(0,56%) skew(22deg)'
+   'translate(0,6%) rotate(-0deg) skew(27deg)'
   eagle[0].style.transform=
    'skew('+(Math.random()*44-22)+'deg)'
   eagle[2].style.borderRadius=55+'%'
@@ -342,8 +351,8 @@ var eagl=
    'translate(-33%,-11%) scale('+(1+v/11)+',1)'
   rwng[1].style.transform=
    'translate(33%,-11%) scale('+(1+v/11)+',1)'
-  pws[0].style.transform='scale(1)'
-  pws[1].style.transform='scale(1)'
+  pws[0].style.transform='scale(2,1)'
+  pws[1].style.transform='scale(2,1)'
   wrd[0].style.opacity=1
   wrd[1].style.opacity=1
   wrd[2].style.opacity=1
@@ -370,8 +379,8 @@ var eagl=
    'translate(0%,0%) scale(1)'
   rwng[1].style.transform=
    'translate(0%,0%) scale(1)'
-  pws[0].style.transform='scale(1,0.2)'
-  pws[1].style.transform='scale(1,0.2)' 
+  pws[0].style.transform='scale(2,0.2)'
+  pws[1].style.transform='scale(2,0.2)' 
   btn[0].style.opacity=1   
   wrd[0].style.opacity=0
   wrd[1].style.opacity=0
