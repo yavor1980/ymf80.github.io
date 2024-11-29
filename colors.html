@@ -153,15 +153,15 @@ btn[1].onmouseout=()=>
 }
 btn[1].onclick=()=>
 {  
-  rnge[1].value=9
-  rnge[2].value=9
-  rnge[3].value=9
- cmmnt[1].style.background='#f00'
-  cmmnt[1].innerHTML='#f00'
- cmmnt[2].style.background='#0f0'
-  cmmnt[2].innerHTML='#0f0'
- cmmnt[3].style.background='#00f'
-  cmmnt[3].innerHTML='#00f'
+  rnge[1].value=0
+  rnge[2].value=0
+  rnge[3].value=0
+ cmmnt[1].style.background='#000'
+  cmmnt[1].innerHTML='#000'
+ cmmnt[2].style.background='#000'
+  cmmnt[2].innerHTML='#000'
+ cmmnt[3].style.background='#000'
+  cmmnt[3].innerHTML='#000'
 }   
 
 cmmnt[1].onmouseover=()=>
@@ -183,36 +183,36 @@ cmmnt[1].onmouseout=()=>
 
 cmmnt[2].onmouseover=()=>
 {  
+ cmmnt[1].style.transform='scale(0)'
  cmmnt[2].style.transform='scale(1.2)'
  cmmnt[2].style.color='#fff'
  cmmnt[2].style.fontSize='3em'
- cmmnt[1].style.transform='scale(0)'
  cmmnt[3].style.transform='scale(0)'
 }
 cmmnt[2].onmouseout=()=>
 {  
+ cmmnt[1].style.transform='scale(1)'
  cmmnt[2].style.transform='scale(1)' 
  cmmnt[2].style.color='#000'
  cmmnt[2].style.fontSize='0em'
- cmmnt[1].style.transform='scale(1)'  
  cmmnt[3].style.transform='scale(1)'
 }
 
 cmmnt[3].onmouseover=()=>
 {  
+ cmmnt[1].style.transform='scale(0)'
+ cmmnt[2].style.transform='scale(0)'
  cmmnt[3].style.transform='scale(1.2)'
  cmmnt[3].style.color='#fff'
  cmmnt[3].style.fontSize='3em'
- cmmnt[1].style.transform='scale(0)'
- cmmnt[2].style.transform='scale(0)'
 }
 cmmnt[3].onmouseout=()=>
 {  
+ cmmnt[1].style.transform='scale(1)'  
+ cmmnt[2].style.transform='scale(1)'
  cmmnt[3].style.transform='scale(1)' 
  cmmnt[3].style.color='#000'
  cmmnt[3].style.fontSize='0em'
- cmmnt[1].style.transform='scale(1)'  
- cmmnt[2].style.transform='scale(1)'
 }
 
 //for(var i=0;i<n;i++) 
