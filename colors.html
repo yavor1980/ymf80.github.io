@@ -19,10 +19,10 @@ body
 {
  position:absolute;
  transition:1s;
- left:37%;
- top:12%;
+ left:20%;
+ top:6%;
  width:27%;
- height:32%;
+ height:18%;
  background:#ff0;
  border-radius:27%;
 }
@@ -32,7 +32,7 @@ body
  position:absolute;
  transition:1s;
  left:11%;
- top:62%;
+ top:29%;
  width:74%;
  height:22%;
  background:#dd0;
@@ -44,6 +44,7 @@ body
 </head>
 <body>
 <input type=button class=btn value='change'>
+<input type=button class=btn value='color'>
 <input type=button class=btn value='reset'>
 
 <div class=rnge>
@@ -58,36 +59,46 @@ body
  <div class=cmmnt></div>
 </div>
 
+<div class=cmmnt></div>
+
 <script>
 btn=document.getElementsByClassName('btn')
 rnge=document.getElementsByClassName('rnge')
 cmmnt=document.getElementsByClassName('cmmnt')
 
-btn[0].style.left=8+'%'
-btn[0].style.top=8+'%'
+btn[0].style.left=5+'%'
+btn[0].style.top=5+'%'
 btn[0].style.width=11+'%'
 btn[0].style.height=11+'%'
 btn[0].style.background='#f00'
-btn[1].style.left=8+'%'
-btn[1].style.top=22+'%'
+btn[1].style.left=50+'%'
+btn[1].style.top=5+'%'
 btn[1].style.width=11+'%'
 btn[1].style.height=11+'%'
 btn[1].style.background='#f0f'
+btn[2].style.left=63+'%'
+btn[2].style.top=5+'%'
+btn[2].style.width=11+'%'
+btn[2].style.height=11+'%'
+btn[2].style.background='#f8f'
 
-rnge[1].style.left=15+'%'
-rnge[1].style.top=8+'%'
+rnge[1].style.left=11+'%'
+rnge[1].style.top=11+'%'
 rnge[1].style.width=77+'%'
 rnge[1].style.height=7+'%'
+rnge[1].style.cursor='pointer'
  rnge[1].value=9
-rnge[2].style.left=15+'%'
-rnge[2].style.top=28+'%'
+rnge[2].style.left=11+'%'
+rnge[2].style.top=40+'%'
 rnge[2].style.width=77+'%'
 rnge[2].style.height=7+'%'
+rnge[2].style.cursor='pointer'
  rnge[2].value=9
-rnge[3].style.left=15+'%'
-rnge[3].style.top=48+'%'
+rnge[3].style.left=11+'%'
+rnge[3].style.top=68+'%'
 rnge[3].style.width=77+'%'
 rnge[3].style.height=7+'%'
+rnge[2].style.cursor='pointer'
  rnge[3].value=9 
  
 cmmnt[1].style.left=5+'%'
@@ -114,12 +125,19 @@ cmmnt[3].style.background='#00f'
 cmmnt[3].style.cursor='pointer'
 cmmnt[3].style.fontSize=0+'em'
   cmmnt[3].innerHTML='#00f'
+cmmnt[4].style.left=11+'%'
+cmmnt[4].style.top=65+'%'
+cmmnt[4].style.width=78+'%'
+cmmnt[4].style.height=23+'%'
+cmmnt[4].style.background='#bbb'
+cmmnt[4].style.borderRadius=55+'%'
+cmmnt[4].style.cursor='pointer'
 
 nbtn2=0
 fc='#f00', sc='#f0f', tc='#00f'
 btn[0].onmouseover=()=>
 {
- btn[0].style.transform='scale(1.2)'
+ btn[0].style.transform='scale(1.1)'
 }
 btn[0].onmouseout=()=>
 {
@@ -145,13 +163,34 @@ btn[0].onclick=()=>
 }   
 btn[1].onmouseover=()=>
 {
- btn[1].style.transform='scale(1.2)'
+ btn[1].style.transform='scale(1.1)'
 }
 btn[1].onmouseout=()=>
 {
  btn[1].style.transform='scale(1)'
 }
 btn[1].onclick=()=>
+{  
+  rnge[1].value=9
+  rnge[2].value=9
+  rnge[3].value=9
+ cmmnt[1].style.background='#f00'
+  cmmnt[1].innerHTML='#f00'
+ cmmnt[2].style.background='#0f0'
+  cmmnt[2].innerHTML='#0f0'
+ cmmnt[3].style.background='#00f'
+  cmmnt[3].innerHTML='#00f'
+}   
+
+btn[2].onmouseover=()=>
+{
+ btn[2].style.transform='scale(1.1)'
+}
+btn[2].onmouseout=()=>
+{
+ btn[2].style.transform='scale(1)'
+}
+btn[2].onclick=()=>
 {  
   rnge[1].value=0
   rnge[2].value=0
