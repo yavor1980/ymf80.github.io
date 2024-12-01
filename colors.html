@@ -129,7 +129,8 @@ cmmnt[4].style.left=11+'%'
 cmmnt[4].style.top=65+'%'
 cmmnt[4].style.width=78+'%'
 cmmnt[4].style.height=23+'%'
-cmmnt[4].style.background='#bbb'
+cmmnt[4].style.background=
+ 'radial-gradient(#bbb,#999)'
 cmmnt[4].style.borderRadius=55+'%'
 cmmnt[4].style.cursor='pointer'
 
@@ -252,6 +253,19 @@ cmmnt[3].onmouseout=()=>
  cmmnt[3].style.transform='scale(1)' 
  cmmnt[3].style.color='#000'
  cmmnt[3].style.fontSize='0em'
+}
+
+cmmnt[4].onmouseover=()=>
+{  
+ cmmnt[4].style.background=
+  'radial-gradient(#f00,#0f0,#00f)'
+ cmmnt[4].style.transform='scale(1.2)'
+}
+cmmnt[4].onmouseout=()=>
+{  
+ cmmnt[4].style.background=
+  'radial-gradient(#bbb,#999)'
+ cmmnt[4].style.transform='scale(1)'
 }
 
 //for(var i=0;i<n;i++) 
