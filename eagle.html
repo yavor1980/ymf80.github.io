@@ -50,10 +50,7 @@
 {
  position:absolute;
  transition:2s;
- border-top-left-radius:55%;
- border-top-right-radius:55%;
- border-bottom-left-radius:55%;
- border-bottom-right-radius:55%;
+ border-radius:55%;
 }
 .mth
 {
@@ -67,10 +64,8 @@
  transition:2s;
  width:55%;
  height:122%; 
- border-top-left-radius:55%;
+ border-radius:55%;
  border-top-right-radius:5%;
- border-bottom-left-radius:55%;
- border-bottom-right-radius:99%; 
 }
 .rwng
 {
@@ -78,10 +73,8 @@
  transition:2s;
  width:55%;
  height:122%; 
+ border-radius:55%;
  border-top-left-radius:5%;
- border-top-right-radius:55%;
- border-bottom-left-radius:99%;
- border-bottom-right-radius:55%; 
 }
 .pws
 {
@@ -118,7 +111,6 @@
 
 <div class=bgrnd></div>
 <div class=bgrnd></div>
-
 
 <div class=eagle>
  <div class=eagle></div>
@@ -159,6 +151,7 @@ mth=document.getElementsByClassName('mth')
 lwng=document.getElementsByClassName('lwng')
 rwng=document.getElementsByClassName('rwng')
 pws=document.getElementsByClassName('pws')
+
 wrd=document.getElementsByClassName('wrd')
 gthb=document.getElementsByClassName('gthb')
   
@@ -172,7 +165,7 @@ var eagl=
   bgrnd[0].style.width=67+'%' 
   bgrnd[0].style.height=47+'%'
   bgrnd[0].style.background=
-   'radial-gradient(#fff,#00f)'
+   'radial-gradient(#ff0,#00f)'
   bgrnd[0].style.borderRadius=55+'%'
   bgrnd[0].style.opacity=0
   bgrnd[1].style.left=64+'%' 
@@ -187,7 +180,7 @@ var eagl=
   eagle[1].style.width=100+'%'
   eagle[1].style.height=100+'%' 
   eagle[1].style.background=
-   'radial-gradient(#444,#000)' 
+   'radial-gradient(#980,#000)' 
   eagle[2].style.left=-5+'%'
   eagle[2].style.top=36+'%' 	 
   eagle[2].style.width=122+'%'
@@ -203,8 +196,9 @@ var eagl=
   hd[0].style.width=66+'%'
   hd[0].style.height=66+'%' 
   hd[0].style.background=
-   'radial-gradient(#444,#000)'
-  hd[0].style.borderRadius=55+'%' 
+   'radial-gradient(#998,#222)'
+  hd[0].style.borderTopLeftRadius=45+'%' 
+  hd[0].style.borderTopRightRadius=45+'%'
   hd[1].style.left=-8+'%'
   hd[1].style.top=-22+'%'  
   hd[1].style.width=99+'%'
