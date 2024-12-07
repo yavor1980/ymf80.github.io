@@ -209,8 +209,8 @@ cmmnt[1].onmouseover=()=>
  cmmnt[1].style.transform='scale(1.2)'
  cmmnt[1].style.color='#fff'
  cmmnt[1].style.fontSize='3em'
- cmmnt[2].style.transform='scale(0)'
- cmmnt[3].style.transform='scale(0)'
+ cmmnt[2].style.transform='scale(0.2)'
+ cmmnt[3].style.transform='scale(0.2)'
 }
 cmmnt[1].onmouseout=()=>
 {  
@@ -223,11 +223,11 @@ cmmnt[1].onmouseout=()=>
 
 cmmnt[2].onmouseover=()=>
 {  
- cmmnt[1].style.transform='scale(0)'
+ cmmnt[1].style.transform='scale(0.2)'
  cmmnt[2].style.transform='scale(1.2)'
  cmmnt[2].style.color='#fff'
  cmmnt[2].style.fontSize='3em'
- cmmnt[3].style.transform='scale(0)'
+ cmmnt[3].style.transform='scale(0.2)'
 }
 cmmnt[2].onmouseout=()=>
 {  
@@ -240,8 +240,8 @@ cmmnt[2].onmouseout=()=>
 
 cmmnt[3].onmouseover=()=>
 {  
- cmmnt[1].style.transform='scale(0)'
- cmmnt[2].style.transform='scale(0)'
+ cmmnt[1].style.transform='scale(0.2)'
+ cmmnt[2].style.transform='scale(0.2)'
  cmmnt[3].style.transform='scale(1.2)'
  cmmnt[3].style.color='#fff'
  cmmnt[3].style.fontSize='3em'
@@ -255,16 +255,23 @@ cmmnt[3].onmouseout=()=>
  cmmnt[3].style.fontSize='0em'
 }
 
+Icmmnt=0
 cmmnt[4].onmouseover=()=>
 {  
  cmmnt[4].style.background=
   'radial-gradient(#f00,#0f0,#00f)'
+ Icmmnt=setInterval(()=>{
+  cmmnt[4].style.background=
+   'radial-gradient('+(328+Math.random()*87)+
+   'px,#f00,#0f0,#00f)'
+ }, 499)
  cmmnt[4].style.transform='scale(1.2)'
 }
 cmmnt[4].onmouseout=()=>
 {  
+  clearInterval(Icmmnt)
  cmmnt[4].style.background=
-  'radial-gradient(#bbb,#999)'
+   'radial-gradient(#bbb,#999)'
  cmmnt[4].style.transform='scale(1)'
 }
 
