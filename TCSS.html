@@ -10,7 +10,7 @@
  background:radial-gradient(#ff0,#00f);
 }
 
-.ttl,.psy
+.ttl,.psy,.cult
 {
  position:absolute;   
  transition:1s;
@@ -28,9 +28,16 @@
  <div class=psy>education</div>
 </div>
 
+<div class=cult>culture
+ <div class=cult>excursions</div>
+ <div class=cult>trips</div>
+ <div class=cult>seminars</div>
+</div>
+
 <script>
 ttl=document.getElementsByClassName('ttl')
 psy=document.getElementsByClassName('psy')
+cult=document.getElementsByClassName('cult')
 
 ttl[0].style.left=33+'%'
 ttl[0].style.top=4+'%'
@@ -57,6 +64,19 @@ psy[2].style.top=99+'%'
 psy[3].style.left=33+'%'
 psy[3].style.top=99+'%'
 
+cult[0].style.left=33+'%'
+cult[0].style.top=54+'%'
+cult[0].style.width=22+'%'
+cult[0].style.height=13+'%'
+cult[0].style.background='#d0d'
+cult[0].style.fontSize=0+'em'
+cult[0].style.borderRadius=13+'%'
+cult[1].style.left=33+'%'
+cult[1].style.top=99+'%'
+cult[2].style.left=33+'%'
+cult[2].style.top=99+'%'
+cult[3].style.left=33+'%'
+cult[3].style.top=99+'%'
 
 ttl[0].onmouseover=()=>
 { 
@@ -70,38 +90,48 @@ ttl[0].onmouseout=()=>
  ttl[1].style.transform='scale(0)'
 }
 
-psy[0].onmouseover=()=>
+Imovr=0
+function movr(nm)
+{
+nm[0].onmouseover=()=>
 { 
- psy[0].style.transform='scale(1.1)'
- psy[0].style.color='#ff0'
- psy[0].style.padding=7+'px'
- psy[0].style.fontSize=3+'em'
- psy[1].style.transform=
-  'scale(1) translate(117%,-87%)'
- psy[1].style.color='#b0b'
- psy[2].style.transform=
-  'scale(1) translate(117%,2%)'
- psy[2].style.color='#909'
- psy[3].style.transform=
-  'scale(1) translate(87%,99%)'
- psy[3].style.color='#808'
+ nm[0].style.transform='scale(1.1)'
+ nm[0].style.color='#ff0'
+ nm[0].style.padding=7+'px'
+ nm[0].style.fontSize=3+'em'
+ nm[1].style.color='#ff0'
+ nm[2].style.color='#00f'
+ nm[3].style.color='#0f0'
+ Imovr=setInterval(()=>
+ {
+ nm[1].style.transform=
+  'scale('+(1+Math.random()/4)+') translate(117%,-87%)'
  
+ nm[2].style.transform=
+  'scale('+(1+Math.random()/4)+') translate(117%,2%)'
+ 
+ nm[3].style.transform=
+  'scale('+(1+Math.random()/4)+') translate(117%,99%)'
+ }, 999) 
 }
-psy[0].onmouseout=()=>
+nm[0].onmouseout=()=>
 { 
- psy[0].style.transform='scale(1)'
- psy[0].style.color='#000'
- psy[0].style.padding=0+'px'
- psy[0].style.fontSize=0+'em'
- psy[1].style.transform='scale(0)'
- psy[1].style.color='#000'
- psy[2].style.transform='scale(0)'
- psy[2].style.color='#000'
- psy[3].style.transform='scale(0)'
- psy[3].style.color='#000'
+ nm[0].style.transform='scale(1)'
+ nm[0].style.color='#000'
+ nm[0].style.padding=0+'px'
+ nm[0].style.fontSize=0+'em'
+ nm[1].style.transform='scale(0)'
+ nm[1].style.color='#000'
+ nm[2].style.transform='scale(0)'
+ nm[2].style.color='#000'
+ nm[3].style.transform='scale(0)'
+ nm[3].style.color='#000'
+  clearInterval(Imovr)
 }
+}
+ movr(psy); movr(cult);
 
-function clk(nm){}	  	   
+	  	   
 </script>
 </body>
 </html>
