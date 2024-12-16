@@ -18,7 +18,6 @@ body
  background:radial-gradient(#333,#505);
  border-top-left-radius:12%;
  border-top-right-radius:22%;
- opacity:0.6;
 }
 
 .sbmrne
@@ -57,6 +56,7 @@ body
 <div class=grnd>
  <div class=grnd></div>
  <div class=grnd></div>
+ <div class=grnd></div>
 </div>
 
 <div class=sbmrne>
@@ -75,10 +75,10 @@ body
 <div class=tsbmrne>submurrine</div>
  <div class=tsbmrne>torpedo atack...</div>
 
+ <div class=prjctr></div>
 <div class=prjctr>projector</div>
- <div class=prjctr>
-  <div class=prjctr></div>
- </div>
+<div class=prjctr></div>
+ 
 <script> 
 grnd=document.getElementsByClassName('grnd')
 sbmrne=document.getElementsByClassName('sbmrne')
@@ -87,6 +87,7 @@ tsbmrne=document.getElementsByClassName('tsbmrne')
 
 prjctr=document.getElementsByClassName('prjctr')
  
+grnd[0].style.opacity=0.7
 grnd[1].style.cursor='pointer' 
 grnd[1].style.left=56+'%'
 grnd[1].style.bottom=5+'%'
@@ -96,21 +97,24 @@ grnd[1].style.background=
  'radial-gradient(#0c0,#060)' 
 grnd[1].style.borderRadius=55+'%'
 grnd[1].style.opacity=0.7
- 
 grnd[2].style.left=39+'%'
 grnd[2].style.top=25+'%'
 grnd[2].style.width=18+'%'
 grnd[2].style.height=33+'%'
 grnd[2].style.background='#444'
 grnd[2].style.borderRadius=55+'%' 
-
 grnd[3].style.left=39+'%'
 grnd[3].style.top=25+'%'
 grnd[3].style.width=18+'%'
 grnd[3].style.height=33+'%'
-grnd[3].style.background='#f0f'
+grnd[3].style.background='#ff0'
 grnd[3].style.opacity=0
 grnd[3].style.borderRadius=55+'%' 
+grnd[4].style.left=17+'%'
+grnd[4].style.top=77+'%'
+grnd[4].style.width=66+'%'
+grnd[4].style.height=8+'%'
+grnd[4].style.borderRadius=55+'%' 
  
 sbmrne[1].style.left=6+'%'
 sbmrne[1].style.top=4+'%'
@@ -119,7 +123,6 @@ sbmrne[1].style.height=88+'%'
 sbmrne[1].style.background='#050'
 sbmrne[1].style.borderRadius=55+'%'
 sbmrne[1].style.opacity=0.9
-
 sbmrne[2].style.left=12+'%'
 sbmrne[2].style.top=5+'%'
 sbmrne[2].style.width=88+'%'
@@ -129,7 +132,6 @@ sbmrne[2].style.background=
 sbmrne[2].style.borderRadius=55+'%'
 sbmrne[2].style.transform=
  'scale(0.8) translate(-9%,0)'
-
 sbmrne[3].style.left=-16+'%'
 sbmrne[3].style.top=55+'%'
 sbmrne[3].style.width=122+'%'
@@ -138,7 +140,6 @@ sbmrne[3].style.background='#050'
 sbmrne[3].style.borderRadius=55+'%'
 sbmrne[3].style.opacity=0.8
 sbmrne[3].style.zIndex=-1
-
 sbmrne[4].style.left=17+'%'
 sbmrne[4].style.top=-19+'%'
 sbmrne[4].style.width=55+'%'
@@ -151,17 +152,14 @@ sbmrne[4].style.zIndex=-1
 apprts[0].style.left=17+'%'
 apprts[0].style.top=58+'%'
 apprts[0].style.opacity=0
-
 apprts[1].style.left=55+'%'
 apprts[1].style.top=58+'%'
 apprts[1].style.opacity=0
-
 apprts[2].style.left=38+'%'
 apprts[2].style.top=12+'%'
 apprts[2].style.height=32+'%'
 apprts[2].style.background='#000'
-
-apprts[3].style.zIndex=33
+apprts[3].style.zIndex=3
 apprts[3].style.left=36+'%'
 apprts[3].style.top=26+'%'
 apprts[3].style.height=2+'%'
@@ -174,27 +172,25 @@ tsbmrne[0].style.color='#ff0'
 tsbmrne[0].style.transform=
  'scale(4,6) skew(-22deg)'
 tsbmrne[0].style.cursor='pointer'
-
 tsbmrne[1].style.left=27+'%'
 tsbmrne[1].style.top=11+'%'
 tsbmrne[1].style.color='#bb0'
 tsbmrne[1].style.transform='scale(0)'
 
 prjctr[0].style.left=55+'%'
-prjctr[0].style.top=9+'%'
-prjctr[0].style.color='#bbb'
-prjctr[0].style.transform='scale(0) '
-
-prjctr[1].style.left=55+'%'
-prjctr[1].style.top=22+'%'
-prjctr[1].style.width=11+'%'
-prjctr[1].style.height=13+'%'
-prjctr[1].style.background='#ddd'
-prjctr[1].style.borderRadius='55%'
-prjctr[1].style.opacity=0.3
-prjctr[1].style.cursor='pointer'
-prjctr[1].style.transform=
+prjctr[0].style.top=22+'%'
+prjctr[0].style.width=11+'%'
+prjctr[0].style.height=13+'%'
+prjctr[0].style.background='#ddd'
+prjctr[0].style.borderRadius='55%'
+prjctr[0].style.opacity=0.3
+prjctr[0].style.cursor='pointer'
+prjctr[0].style.transform=
  'rotate(-28deg) skew(44deg)'
+prjctr[1].style.left=55+'%'
+prjctr[1].style.top=9+'%'
+prjctr[1].style.color='#bbb'
+prjctr[1].style.transform='scale(0) ' 
 
 bsmv=0
 function smv()
@@ -220,16 +216,19 @@ function pmv()
 {
  tr=Math.random()*99-44
  sc=Math.random()+1
- prjctr[1].style.transform=
+ prjctr[0].style.transform=
   'translate('+tr+'%,33%) rotate(-28deg) skew(44deg)'+
   'scale('+sc+')' 
+ apprts[3].style.transform='scale(8,'+
+  (Math.random()*9+8)+')'  
 }
    Iprjctr=setInterval(pmv, 666)
 
 grnd[1].onmouseover=()=>
 {
- grnd[2].style.background='#e0e'
+ grnd[2].style.background='#ee0'
  grnd[2].style.transform='scale(1.2)'
+ grnd[3].style.background='#ff0'
  grnd[3].style.opacity=0.3
  grnd[3].style.transform='scale(1.7)'
 }
@@ -245,16 +244,20 @@ sbmrne[0].onmouseover=()=>
 {
  grnd[1].style.transform=
   'scale(1) translate(0%,-28%)' 
- grnd[2].style.background='#e0e'
+ grnd[2].style.background='#ee0'
  grnd[2].style.opacity=1
  grnd[2].style.transform=
   'scale(0.9,1.2) translate(-88%,0%)' 
  grnd[3].style.opacity=0.4
  grnd[3].style.transform=
-  'scale(0.9,2.2) translate(-188%,0%)'  
+  'scale(0.9,2.2) translate(-188%,0%)'
+ grnd[4].style.background='#500'
+ grnd[4].style.opacity=0.4
+ grnd[4].style.borderBottomLeftRadius=11+'%' 
+ grnd[4].style.borderBottomRightRadius=11+'%'
+ grnd[4].style.transform=
+  'scale(1,7) translate(0%,33%)'  
  sbmrne[0].style.transform='scale(1.2)'
- sbmrne[1].style.background='#550'
- sbmrne[3].style.background='#550'
  sbmrne[3].style.transform='scale(1.2,1)'
  sbmrne[4].style.background='#550'
  apprts[0].style.opacity=0.7
@@ -262,10 +265,9 @@ sbmrne[0].onmouseover=()=>
  apprts[2].style.background='#ff0'
  apprts[2].style.transform='scale(1.2)'
  apprts[3].style.opacity=0.7
- apprts[3].style.transform=
-  'scale(8,24) translate(0,-77%)'
+ apprts[3].style.transform=' translate(0,-1888%)'
   bsmv=1
-  prjctr[1].onmouseover()
+  prjctr[0].onmouseover()
 }
 sbmrne[0].onmouseout=()=>
 {
@@ -275,6 +277,10 @@ sbmrne[0].onmouseout=()=>
  grnd[2].style.transform='scale(1)' 
  grnd[3].style.opacity=0
  grnd[3].style.transform='scale(1)' 
+ grnd[4].style.background='#070'
+ grnd[4].style.opacity=1
+ grnd[4].style.borderRadius=55+'%'
+ grnd[4].style.transform='scale(1)' 
  sbmrne[0].style.transform='scale(1)'
  sbmrne[1].style.background='#050'
  sbmrne[3].style.background='#050'
@@ -289,7 +295,7 @@ sbmrne[0].onmouseout=()=>
  apprts[3].style.opacity=0
  apprts[3].style.transform='scale(1)'
   bsmv=0
-  prjctr[1].onmouseout()
+  prjctr[0].onmouseout()
 }
 
 tsbmrne[0].onmouseover=()=>
@@ -306,18 +312,17 @@ tsbmrne[0].onmouseout=()=>
  tsbmrne[1].style.transform='scale(0)' 
 }
 
-prjctr[1].onmouseover=()=>
+prjctr[0].onmouseover=()=>
 {
- prjctr[0].style.transform=
+ prjctr[0].style.background=
+  'radial-gradient(#ff0,#eee)'
+ prjctr[1].style.transform=
   'scale(3) translate(88%,88%) skew(-12deg)'
- prjctr[1].style.background='#fff'
- prjctr[1].style.opacity=0.4
 }
-prjctr[1].onmouseout=()=>
+prjctr[0].onmouseout=()=>
 {
- prjctr[0].style.transform='scale(0)'
- prjctr[1].style.background='#ddd'
- prjctr[1].style.opacity=0.3
+ prjctr[0].style.background='#ddd'
+ prjctr[1].style.transform='scale(0)'
 }
 
 </script>
