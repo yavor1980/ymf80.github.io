@@ -1,0 +1,130 @@
+<DOCTYPE html>
+<html>
+<head>
+ <meta charset='utf-8'>
+</head>
+<body id=idbd>
+<style>
+#idbd
+{
+ background:linear-gradient(#dd0,177px,#333);
+}
+
+.kttl,.bttl
+{
+ position:absolute;   
+ transition:1s;
+}
+
+</style>
+<div class=kttl>
+ <div class=kttl>K</div>
+ <div class=kttl>A</div>
+ <div class=kttl>R</div>
+ <div class=kttl>A</div>
+ <div class=kttl>B</div>
+ <div class=kttl>A</div>
+ <div class=kttl>S</div>
+</div>
+<div class=bttl>
+ <div class=bttl>B</div>
+ <div class=bttl>A</div>
+ <div class=bttl>R</div>
+ <div class=bttl>A</div>
+ <div class=bttl>B</div>
+ <div class=bttl>A</div>
+ <div class=bttl>S</div>
+</div>
+
+<script>
+kttl=document.getElementsByClassName('kttl')
+bttl=document.getElementsByClassName('bttl')
+
+kttl[0].style.left=12+'%'
+kttl[0].style.top=11+'%'
+kttl[0].style.width=66+'%'
+kttl[0].style.cursor='pointer'
+kttl[1].style.left=2+'%'
+kttl[1].style.color='#c00'
+kttl[1].style.transform='scale(9)'
+kttl[2].style.left=12+'%'
+kttl[2].style.color='#00c'
+kttl[3].style.left=22+'%'
+kttl[3].style.color='#c0c'
+kttl[4].style.left=32+'%'
+kttl[4].style.color='#0c0'
+kttl[4].style.transform='scale(9)'
+kttl[5].style.left=42+'%'
+kttl[5].style.color='#00c'
+kttl[5].style.transform='scale(9)'
+kttl[6].style.left=52+'%'
+kttl[6].style.color='#f00'
+kttl[6].style.transform='scale(9)'
+kttl[7].style.left=62+'%'
+kttl[7].style.color='#00f'
+kttl[7].style.transform='scale(9)'
+
+bttl[0].style.left=34+'%'
+bttl[0].style.top=29+'%'
+bttl[0].style.width=66+'%'
+bttl[0].style.cursor='pointer'
+bttl[1].style.left=2+'%'
+bttl[1].style.color='#800'
+bttl[1].style.transform='scale(9)'
+bttl[2].style.left=12+'%'
+bttl[2].style.color='#c00'
+bttl[2].style.transform='scale(9)'
+bttl[3].style.left=22+'%'
+bttl[3].style.color='#c0c'
+bttl[3].style.transform='scale(9)'
+bttl[4].style.left=32+'%'
+bttl[4].style.color='#00c'
+bttl[4].style.transform='scale(9)'
+bttl[5].style.left=42+'%'
+bttl[5].style.color='#cc0'
+bttl[5].style.transform='scale(9)'
+bttl[6].style.left=52+'%'
+bttl[6].style.color='#0c0'
+bttl[6].style.transform='scale(9)'
+bttl[7].style.left=62+'%'
+bttl[7].style.color='#cc0'
+bttl[7].style.transform='scale(9)'
+
+Imv=0
+function mv()
+{
+ for(i=1;i<8;i++)
+ {
+  kttl[i].style.transform='scale(9) skew('+
+   (Math.random()*33-11)+'deg)'
+  bttl[i].style.transform='scale(9) skew('+
+   (Math.random()*33-11)+'deg)'
+ } 
+}
+  mv()
+ Imv=setInterval(mv,999)
+ 
+kttl[0].onmouseover=()=>
+{ 
+ clearInterval(Imv)
+}
+kttl[0].onmouseout=()=>
+{ 
+ mv()
+ Imv=setInterval(mv,999)
+}
+
+bttl[0].onmouseover=()=>
+{ 
+ clearInterval(Imv)
+}
+bttl[0].onmouseout=()=>
+{ 
+ mv()
+ Imv=setInterval(mv,999)
+}
+//restaurant
+	  	   
+</script>
+</body>
+</html>
