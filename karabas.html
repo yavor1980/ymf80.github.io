@@ -10,7 +10,7 @@
  background:linear-gradient(#dd0,177px,#333);
 }
 
-.kttl,.bttl
+.kttl,.bttl,.blb
 {
  position:absolute;   
  transition:1s;
@@ -36,9 +36,15 @@
  <div class=bttl>S</div>
 </div>
 
+<div class=blb>craft</div>
+ <div class=blb>brewery</div>
+ <div class=blb>restaurant</div>
+
+
 <script>
 kttl=document.getElementsByClassName('kttl')
 bttl=document.getElementsByClassName('bttl')
+blb=document.getElementsByClassName('blb')
 
 kttl[0].style.left=12+'%'
 kttl[0].style.top=11+'%'
@@ -90,6 +96,24 @@ bttl[7].style.left=62+'%'
 bttl[7].style.color='#cc0'
 bttl[7].style.transform='scale(9)'
 
+blb[0].style.left=64+'%'
+blb[0].style.top=48+'%'
+blb[0].style.width=16+'%'
+blb[0].style.height=18+'%'
+blb[0].style.background='radial-gradient(#777,#bba)'
+blb[0].style.borderRadius=55+'%'
+blb[0].style.opacity=0.5
+blb[0].style.fontSize=0+'em'
+blb[0].style.textAlign='center'
+blb[1].style.left=64+'%'
+blb[1].style.top=48+'%'
+blb[1].style.color='#dd0'
+blb[1].style.transform='scale(0)'
+blb[2].style.left=64+'%'
+blb[2].style.top=48+'%'
+blb[2].style.color='#ff0'
+blb[2].style.transform='scale(0)'
+
 Imv=0
 function mv()
 {
@@ -100,28 +124,40 @@ function mv()
   bttl[i].style.transform='scale(9) skew('+
    (Math.random()*33-11)+'deg)'
  } 
+ blb[0].style.transform='scale('+(1+Math.random()/3)+')'
 }
   mv()
- Imv=setInterval(mv,999)
+ Imv=setInterval(mv, 999)
  
 kttl[0].onmouseover=()=>
 { 
- clearInterval(Imv)
+  clearInterval(Imv)
+ blb[0].style.background='radial-gradient(#770,#bb0)'
+ blb[0].style.transform='scale(2,1)'
+ blb[0].style.fontSize=3+'em'
+ blb[1].style.transform=
+  'scale(3,4) translate(-177%,11%) skew(-22deg)'
+ blb[2].style.transform=
+  'scale(3,4) translate(-177%,133%) skew(22deg)'
 }
 kttl[0].onmouseout=()=>
 { 
- mv()
- Imv=setInterval(mv,999)
+  mv()
+  Imv=setInterval(mv, 999)
+ blb[0].style.background='radial-gradient(#777,#bba)'
+ blb[0].style.transform='scale(1)'
+ blb[0].style.fontSize=0+'em'
+ blb[1].style.transform='scale(0)'
+ blb[2].style.transform='scale(0)'
 }
 
 bttl[0].onmouseover=()=>
 { 
- clearInterval(Imv)
+ kttl[0].onmouseover()
 }
 bttl[0].onmouseout=()=>
 { 
- mv()
- Imv=setInterval(mv,999)
+ kttl[0].onmouseout()
 }
 //restaurant
 	  	   
