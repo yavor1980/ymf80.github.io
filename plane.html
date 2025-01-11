@@ -1,8 +1,6 @@
 
 <html>
 <body>
-
-
 <style>
 
 body
@@ -49,38 +47,6 @@ body
  text-align:center;
 }
 
-.mchnc
-{
- position:absolute;
- transition:1s;
- z-index: 1;
- font-size:3em;
- cursor:pointer;
-}
-
-.dpsk
-{
- position:absolute;
- transition:1s;
-}
-
-.ad
-{
- position:absolute;
- transition:1s;
- z-index: 1;
- text-align:center;
- cursor:pointer;
-}
-
-.dvsns
-{
- position:absolute;
- transition:1s;
- text-align:center;
- cursor:pointer;
-}
-
 </style>
 
 <button id=idb>act</button>
@@ -101,73 +67,17 @@ body
 <div class=clds>what?</div>
 <div class=clds>status</div>
 
-<div class=mchnc> 
- Class
-</div>
-
-<div class=mchnc> 
- Engines
-</div>
-
-<div class=mchnc> 
- Tolerances<br> Landings
-</div>
-
-<div class=mchnc> 
- Cowl
-</div>
-
-<div class=dpsk>
- H
-</div>
-<div class=dpsk>
- G 
-</div>
-<div class=dpsk>
- J
-</div>
-<div class=dpsk>
- D
-</div>
-
-<div class=dvsns>
- AutoDesk
-</div>
-<div class=dvsns>
- SAPR
-</div>
-
-<div class=dvsns>
- SW
-</div>
-<div class=dvsns></div>
-
-<div class=ad> 
- Aerodynamics
-</div>
-
-<div class=ad>Plane</div>
-<div class=ad>object</div>
-
 <script>
 pln=document.getElementsByClassName('pln')
 clds=document.getElementsByClassName('clds')
 
-mchnc=document.getElementsByClassName('mchnc')
-ad=document.getElementsByClassName('ad')
-dpsk=document.getElementsByClassName('dpsk')
-dvsns=document.getElementsByClassName('dvsns')
-
-pln[0].style.transition=1+'s'
-
 pln[1].style.left=2+'%'
 pln[1].style.top=3+'%'
 pln[1].style.width=100+'%'
-pln[1].style.height=100+'%'  
+pln[1].style.height=88+'%'  
 pln[1].style.background=
  'linear-gradient(#0b0,#000)'
-pln[1].style.borderRadius=55+'%'
-
+pln[1].style.borderRadius=44+'%'
 pln[2].style.left=46+'%'
 pln[2].style.top=-111+'%'
 pln[2].style.width=9+'%'
@@ -179,26 +89,22 @@ pln[2].style.borderTopRightRadius=44+'%'
 pln[2].style.borderBottomLeftRadius=33+'%'
 pln[2].style.borderBottomRightRadius=33+'%'
 pln[2].style.zIndex=-1  
-  
 pln[3].style.left=40+'%'
 pln[3].style.top=18+'%'
 pln[3].style.width=22+'%'
 pln[3].style.height=88+'%' 
 pln[3].style.background=
- 'radial-gradient(#bb0,#bbb)'
+ 'radial-gradient(#999,#050)'
 pln[3].style.borderTopLeftRadius=19+'%'
 pln[3].style.borderTopRightRadius=19+'%'
 pln[3].style.borderBottomLeftRadius=44+'%'
 pln[3].style.borderBottomRightRadius=44+'%'
-  
 pln[4].style.left=18+'%'
 pln[4].style.top=33+'%'
 pln[4].style.width=4+'%'
 pln[4].style.height=22+'%' 
 pln[4].style.background='#000'
 pln[4].style.borderRadius=55+'%'
-
-pln[5].style.transition='1s'
 pln[5].style.left=-33+'%'
 pln[5].style.top=-33+'%'
 pln[5].style.width=222+'%'
@@ -209,14 +115,12 @@ pln[5].style.opacity=0.6
 pln[5].style.borderRadius=55+'%'
 pln[5].style.transform='scale(3)'
 pln[5].style.zIndex=-1
-
 pln[6].style.left=77+'%'
 pln[6].style.top=33+'%'
 pln[6].style.width=4+'%'
 pln[6].style.height=22+'%' 
 pln[6].style.background='#000'
 pln[6].style.borderRadius=55+'%' 
-
 pln[7].style.transition='1s'
 pln[7].style.left=-33+'%'
 pln[7].style.top=-33+'%'
@@ -244,74 +148,6 @@ inn(clds,1, 48,9, 27,18,'radial-gradient(#066,#ff9)')
  clds[1].style.opacity=0.5
 inn(clds,2, 9,74, 20,13,'radial-gradient(#606,#fff)')
  clds[2].style.opacity=0.6
-     
-inn(mchnc,0, 22,66,'','','')   
- mchnc[0].style.opacity=1
- mchnc[0].style.color='#ff0'
- mchnc[0].style.transform='scale(1.1) skew(-11deg)'
-   
-inn(mchnc,1, 36,55,'','','')   
- mchnc[1].style.opacity=1
- mchnc[1].style.color='#f0f'
- mchnc[1].style.transform='scale(1.1) skew(22deg)'
-
-inn(mchnc,2, 66,55,'','','')   
- mchnc[2].style.opacity=1
- mchnc[2].style.color='#777'
- mchnc[2].style.transform='scale(1.1) skew(-33deg)'
-
-inn(mchnc,3, 50,77,'','','')   
- mchnc[3].style.opacity=1
- mchnc[3].style.color='#770'
- mchnc[3].style.transform='scale(1.1) skew(-22deg)'
-   
-inn(dpsk,0, 77,66,'','','')
- dpsk[0].style.fontSize='3em'
- dpsk[0].style.color='#070'
- dpsk[0].style.transform='scale(0)'
-   
-inn(dpsk,1, 77,66,'','','')
- dpsk[1].style.fontSize='3em'
- dpsk[1].style.color='#070'
- dpsk[1].style.transform='scale(0)'
-   
-inn(dpsk,2, 77,66,'','','')
- dpsk[2].style.fontSize='3em'
- dpsk[2].style.color='#070'
- dpsk[2].style.transform='scale(0)'
-   
-inn(dpsk,3, 77,66,'','','')
- dpsk[3].style.fontSize='3em'
- dpsk[3].style.color='#070'
- dpsk[3].style.transform='scale(0)'
-   
-inn(dvsns,0, 3,15,'','','')
- dvsns[0].style.fontSize='3em'
- dvsns[0].style.color='#fff'
-	
-inn(dvsns,1, 3,22,'','','')
- dvsns[1].style.fontSize='3em'
- dvsns[1].style.color='#055'
- dvsns[1].style.transform='scale(0)'
-   
-inn(dvsns,2, 3,28,'','','')
- dvsns[2].style.fontSize='3em'
- dvsns[2].style.color='#0ff'
-   
-inn(dvsns,3, 8,33,'','','')
- dvsns[3].style.fontSize='3em'
- dvsns[3].style.color='#ff0'
- dvsns[3].style.transform='scale(0)'
-   
-inn(ad,0, 33,4,'','','')   
- ad[0].style.transform='scale(3) skew(22deg)'
-    
-inn(ad,1,3,3,16,'','#999')
- ad[1].style.fontSize='3em'
- ad[1].style.color='#cc0'
-   
-inn(ad,2,4,11,13,9,'')   
- ad[2].style.transform='scale(0)'
 
 Icl=0
 function cl()
@@ -329,17 +165,17 @@ function cl()
  
 idb.onclick=()=>
 { 
- clearInterval(Icl)
+  clearInterval(Icl)
  pln[0].style.transform=
   'scale(2) translate(0,99%) rotate(0deg)'
  pln[3].style.background='#990'
  pln[3].style.transform='scale(1,0.5)'
  setTimeout(()=>
  {
-  Icl=setInterval(cl,999);
+   Icl=setInterval(cl,999);
   pln[3].style.transform='scale(1)'
   pln[3].style.background=
-  'radial-gradient(#bb0,#bbb)'
+  'radial-gradient(#999,#050)'
  }  ,888)
 }
  
@@ -361,7 +197,7 @@ pln[0].onmouseout=()=>
  pln[2].style.background=
   'linear-gradient(#0b0,#000)'
  pln[3].style.background=
-  'radial-gradient(#bb0,#bbb)' 
+  'radial-gradient(#999,#050)' 
 }
 
 clds[0].onmouseover=()=>
@@ -409,158 +245,6 @@ clds[2].onmouseout=()=>
  clds[2].style.paddingTop='1%'
   clds[2].innerHTML='status'
 }
-
-mchnc[0].onmouseover=()=>
-{
- mchnc[0].style.color='#000'
- mchnc[0].style.transform=
-  'scale(1) translate(-10%,-33%)'
-mchnc[0].innerHTML=
- '4th class - up to 10 tons *<br>'+
- '3rd class - from 10 to 30 tons <br>'+
- '2nd class - from 30 to 75 tons <br>'+
- '1st class - over 75 tons <br>' 
-}    
-mchnc[0].onmouseout=()=>
-{	
- mchnc[0].style.color='#ff0'
- mchnc[0].style.transform='scale(1.1) skew(-11deg)'
-  mchnc[0].innerHTML='Class'	
-}
-
-mchnc[1].onmouseover=()=>
-{
- mchnc[1].style.color='#550'
- mchnc[1].style.transform=
-  'scale(1) translate(0,-33%)'
-mchnc[1].innerHTML=
- 'piston<br> turboprop<br> turbojet<br>'+
- ' ПРВД<br>'+' ЖРД'
-}   
-mchnc[1].onmouseout=()=>
-{	
- mchnc[1].style.color='#f0f'
- mchnc[1].style.transform='scale(1.1) skew(22deg)'
-  mchnc[1].innerHTML='Engines'
-}
-
-mchnc[2].onmouseover=()=>
-{
- mchnc[2].style.color='#f60'
- mchnc[2].style.transform=
-  'scale(1) translate(0,-33%) skew(-11deg)'
-  mchnc[2].innerHTML=' 16 qualitats'
- dpsk[0].style.transform=
-  'scale(2) translate(-226%,-111%)'
- dpsk[1].style.transform=
-  'scale(2) translate(-133%,-25%)'
- dpsk[2].style.transform=
-  'scale(2) translate(-55%,-299%)'
- dpsk[3].style.transform=
-  'scale(2) translate(22%,22%)' 
-}   
-mchnc[2].onmouseout=()=>
-{	
- mchnc[2].style.color='#777'
- mchnc[2].style.transform='scale(1.1) skew(-33)'
-  mchnc[2].innerHTML='Tolerances<br> Landings'	
- dpsk[0].style.transform='scale(0)'
- dpsk[1].style.transform='scale(0)'
- dpsk[2].style.transform='scale(0)'
- dpsk[3].style.transform='scale(0)'
-}
-
-mchnc[3].onmouseover=()=>
-{
- mchnc[3].style.color='#f00'
- mchnc[3].style.transform=
-  'scale(1) translate(-33%,-3%) skew(11deg)'
-  mchnc[3].innerHTML='Curve surface<br>of n-order'
-}   
-mchnc[3].onmouseout=()=>
-{	
- mchnc[3].style.color='#770'
- mchnc[3].style.transform='scale(1.1) skew(-22deg)'
-  mchnc[3].innerHTML='Cowl'
-}
-
-ad[0].onmouseover=()=>
-{
- ad[0].style.color='#f00'
- ad[0].style.zIndex=2
- ad[0].style.transform='scale(3.3) translate(16%,3%)'
-  ad[0].innerHTML='Study of moving<br> air streams'
-}   
-ad[0].onmouseout=()=>
-{	
- ad[0].style.color='#000'
- ad[0].style.transform='scale(3) skew(22deg)'
-  ad[0].innerHTML='Aerodynamics'	
-}
-
-ad[1].onmouseover=()=>
-{    
-  ad[1].innerHTML='dynamic'
- ad[1].style.color='#ff0'
- ad[1].style.fontSize='3em'
- ad[1].style.width='18%'
- ad[2].style.color='#070'
- ad[2].style.transform='scale(3) translate(44%,38%)'
-}   
-ad[1].onmouseout=()=>
-{
- ad[1].style.color='#880'
- ad[1].style.width='16%'
-  ad[1].innerHTML='Plane'
- ad[2].style.transform='scale(0)'	 
-}
-
-dvsns[0].onmouseover=()=>
-{	
- dvsns[0].style.transform='scale(1.2) translate(44%,0)'
- dvsns[0].style.color='#770'
-  dvsns[0].innerHTML='Autocad'
- dvsns[1].style.transform=
-  'scale(1.2) translate(255%,244%)'
-}
-dvsns[0].onmouseout=()=>
-{	
- dvsns[0].style.transform='scale(1) '
- dvsns[0].innerHTML='Autodesk'
- dvsns[0].style.color='#fff'
- dvsns[1].style.transform='scale(0) '
-}
-
-Idvsns=0
-bdvsns=0
-dvsns[2].onmouseover=()=>
-{	
- dvsns[2].style.transform='scale(1.2) translate(22%,0)'
- dvsns[2].innerHTML='SolidWorks'
- dvsns[2].style.color='#770'
- dvsns[3].style.transform=
-  'scale(1.2) translate(44%,-22%)'
- Idvsns=setInterval(()=>{
-  if(bdvsns){
-   dvsns[3].style.transform=
-    'scale(1.2) translate(33%,22%)'
-	 dvsns[3].innerHTML='vector'
-   }else{
-	dvsns[3].style.transform='scale(1)'
-	 dvsns[3].innerHTML='modelling'
-   }
-  bdvsns=!bdvsns
-	 },999)	 
-}
-dvsns[2].onmouseout=()=>
-{	
- dvsns[2].style.transform='scale(1) '
- dvsns[2].style.color='#0ff'
- dvsns[2].innerHTML='SW'
- dvsns[3].style.transform='scale(0) '
-  clearInterval(Idvsns)
-}
-
 
 </script>
 </body>
