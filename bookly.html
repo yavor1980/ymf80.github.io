@@ -7,7 +7,15 @@
 <style>
 #idbd
 {
- background:radial-gradient(#066,#0bb);
+ background:radial-gradient(#660,#bb0);
+}
+input:hover
+{
+transformn:scale(1.2);   
+}
+button,input
+{
+ height:9%;   
 }
 
 .bdy
@@ -16,339 +24,138 @@
  transition:1s;
  font-size:1.7em;
 }
-
-.oftm,.chftm,.tftm
+.dty
 {
  position:absolute;   
  transition:1s;
- z-index:0;
 }
 
 .lst
 {
  position:absolute;   
  transition:1s;
- z-index:0;
+ text-align:center;
 }
-
+ 
 </style>
 
 <div class=bdy>
- <div class=bdy>
-  <li>meeting</li>
-  <li>expo</li>
-  <li>seminar</li>
-  <li>exposition</li>
+ <div class></div>
+ <select class=bdy>
+  <option>meeting</option>
+  <option> expo</option>
+  <option>seminar</option>
+  <option>exposition</option>
+ </select> 
  </div>
  <input type='submit' class=bdy value='order'>
  <input type='submit' class=bdy value='change'>
  <input type='submit' class=bdy value='off'>
- <input type='submit' href=cnvs.html class=bdy value='OK'>
- <div class=bdy></div>
-  <div class=oftm>
-   <input class=oftm value>
-   <input type='submit' class=oftm value='ok'>
-   <input type='submit' class=oftm value='c'>
-  </div>
-  <div class=chftm>
-   <input class=chftm value>
-   <input class=chftm value>
-   <input type='submit' class=chftm value='ok'>
-   <input type='submit' class=chftm value='c'>
-  </div>
-  <div class=tftm>
-   <input class=tftm>
-   <input type='submit' class=tftm value='ok'>
-   <input type='submit' class=tftm value='c'>
-  </div>
-  <div class=lst>
-   <div class=lst></div> 
-   <div class=lst></div> 
-   <div class=lst></div> 
-   <div class=lst></div> 
-   <div class=lst></div> 
-  </div>
+ <div class=lst></div>
 </div>  
  
 <script>
 bdy=document.getElementsByClassName('bdy')
-li=document.getElementsByTagName('li')
-oftm=document.getElementsByClassName('oftm')
-chftm=document.getElementsByClassName('chftm')
-tftm=document.getElementsByClassName('tftm')
+dty=document.getElementsByClassName('dty')
 lst=document.getElementsByClassName('lst') 
   
-bdy[0].style.left=5+'%'
-bdy[0].style.top=9+'%'  
-bdy[0].style.width=88+'%'
-bdy[0].style.height=79+'%'
+bdy[0].style.left=2+'%'
+bdy[0].style.top=2+'%'  
+bdy[0].style.width=94+'%'
+bdy[0].style.height=94+'%'
 bdy[0].style.background='#880'
 bdy[0].style.borderRadius=12+'%'
+bdy[0].style.border='9px ridge #990'
 bdy[1].style.left=5+'%'
-bdy[1].style.top=13+'%'  
-bdy[1].style.width=33+'%'
+bdy[1].style.top=16+'%'  
 bdy[1].style.background='#ff0'
 bdy[1].style.cursor='pointer'
 bdy[2].style.left=40+'%'
 bdy[2].style.top=13+'%'
+bdy[2].style.background='#0f0'
 bdy[2].style.color='#00f'
 bdy[2].style.borderRadius=12+'%'
+bdy[2].style.transform='scale(1.2)'
 bdy[2].style.cursor='pointer'
 bdy[3].style.left=55+'%'
 bdy[3].style.top=13+'%'
-bdy[3].style.color='#080'
+bdy[3].style.background='#080'
+bdy[3].style.color='#008'
 bdy[3].style.borderRadius=12+'%'
+bdy[3].style.transform='scale(1.2)'
 bdy[3].style.cursor='pointer'
 bdy[4].style.left=75+'%'
 bdy[4].style.top=13+'%' 
-bdy[4].style.color='#090'
+bdy[4].style.background='#080'
+bdy[4].style.color='#dd0'
 bdy[4].style.borderRadius=12+'%'
 bdy[4].style.cursor='pointer'
-bdy[5].style.left=87+'%'
-bdy[5].style.top=13+'%' 
-bdy[5].style.background='#f00'
-bdy[5].style.color='#fff'
-bdy[5].style.borderRadius=12+'%'
-bdy[5].style.cursor='pointer'
-bdy[6].style.left=77+'%'
-bdy[6].style.top=33+'%' 
-bdy[6].style.color='#fff'  
-bdy[6].style.transform='scale(0)'
-  
-oftm[0].style.left=51+'%'
-oftm[0].style.top=53+'%'  
-oftm[0].style.width=7+'%'
-oftm[0].style.height=16+'%'
-oftm[0].style.background='#00f'
-oftm[0].style.borderRadius=12+'%'
-oftm[0].style.transform='scale(0.6)'
-oftm[1].style.left=4+'%'
-oftm[1].style.top=4+'%'  
-oftm[1].style.width=94+'%'
-oftm[1].style.borderRadius=12+'%'
-oftm[2].style.left=6+'%'
-oftm[2].style.top=53+'%'  
-oftm[2].style.background='#888'
-oftm[2].style.borderRadius=12+'%'
-oftm[2].style.transform='scale(0.7)'
-oftm[2].style.cursor='pointer'
-oftm[3].style.left=52+'%'
-oftm[3].style.top=53+'%'  
-oftm[3].style.background='#888'
-oftm[3].style.borderRadius=12+'%'
-oftm[3].style.transform='scale(0.7)'
-oftm[3].style.cursor='pointer'
-
-chftm[0].style.left=66+'%'
-chftm[0].style.top=55+'%' 
-chftm[0].style.width=7+'%'
-chftm[0].style.height=16+'%' 
-chftm[0].style.background='#00b'
-chftm[0].style.borderRadius=12+'%'
-chftm[0].style.transform='scale(0.6)'
-chftm[1].style.left=4+'%'
-chftm[1].style.top=4+'%'
-chftm[1].style.width=77+'%'
-chftm[1].style.height=23+'%'
-chftm[2].style.left=4+'%'
-chftm[2].style.top=34+'%'
-chftm[2].style.width=77+'%'
-chftm[2].style.height=23+'%'
-chftm[3].style.left=4+'%'
-chftm[3].style.bottom=3+'%'
-chftm[3].style.background='#bb0'
-chftm[3].style.pedding=0
-chftm[3].style.cursor='pointer'
-chftm[3].style.transform='scale(0.7)'
-chftm[4].style.left=53+'%'
-chftm[4].style.bottom=3+'%'
-chftm[4].style.background='#bb0'
-chftm[4].style.pedding=0
-chftm[4].style.cursor='pointer'
-chftm[4].style.transform='scale(0.7)'
-
-tftm[0].style.left=69+'%'
-tftm[0].style.top=55+'%' 
-tftm[0].style.width=7+'%'
-tftm[0].style.height=16+'%' 
-tftm[0].style.background='#009' 
-tftm[0].style.borderRadius=12+'%'
-tftm[0].style.transform='scale(0.7)'
-tftm[1].style.left=6+'%'
-tftm[1].style.top=6+'%' 
-tftm[1].style.width=77+'%'
-tftm[1].style.height=23+'%'
-tftm[2].style.left=5+'%'
-tftm[2].style.top=49+'%' 
-tftm[2].style.background='#f0f'
-tftm[2].style.cursor='pointer'
-tftm[2].style.transform='scale(0.7)'
-tftm[3].style.left=53+'%'
-tftm[3].style.top=49+'%' 
-tftm[3].style.background='#f0f'
-tftm[3].style.cursor='pointer'
-tftm[3].style.transform='scale(0.7)'
+bdy[4].style.transform='scale(1.2)'
 
 lst[0].style.left=5+'%'
 lst[0].style.top=55+'%' 
-lst[0].style.width=33+'%'
+lst[0].style.width=66+'%'
 lst[0].style.height=33+'%' 
 lst[0].style.background='#eee'
 lst[0].style.borderRadius=8+'%'
-lst[1].style.left=33+'%'
-lst[1].style.top=5+'%' 
-lst[1].style.color='#b00'
-lst[1].style.cursor='pointer'
-lst[1].style.transform='scale(2)'
-lst[2].style.left=33+'%'
-lst[2].style.top=25+'%' 
-lst[2].style.color='#b00'
-lst[2].style.cursor='pointer'
-lst[2].style.transform='scale(2)'
-lst[3].style.left=33+'%'
-lst[3].style.top=45+'%' 
-lst[3].style.color='#b00'
-lst[3].style.cursor='pointer'
-lst[3].style.transform='scale(2)'
-lst[4].style.left=33+'%'
-lst[4].style.top=65+'%' 
-lst[4].style.color='#b00'
-lst[4].style.cursor='pointer'
-lst[4].style.transform='scale(2)'
+lst[0].style.border='9px ridge #990'
 
+cl=[],icl=0,irfse=0
+bdy[2].onmouseover=()=>
+{ 
+ bdy[2].style.transform='scale(1.4)'
+} 
+bdy[2].onmouseout=()=>
+{  
+ bdy[2].style.transform='scale(1.2)'
+} 
 bdy[2].onclick=()=>
 { 
- oftm[0].style.transform='scale(4)'
- chftm[0].style.transform='scale(0)'
- tftm[0].style.transform='scale(0)'
+ if(icl<4)
+ {
+ cl[icl]=document.createElement('div')
+ cl[icl].className='lst'
+  cl[icl].innerHTML=bdy[1].value
+ lst[0].appendChild(cl[icl])
+ cl[icl].style.top=icl*18+'%'
+ cl[icl].style.color='#009'
+ cl[icl].style.paddingLeft=13+'%'
+ cl[icl].style.paddingTop=3+'%'
+ cl[icl].style.transform='scale(4)'
+ cl[icl].style.cursor='pointer'
+  icl++
+ }
+} 
+bdy[3].onmouseover=()=>
+{ 
+ bdy[3].style.transform='scale(1.4)'
+} 
+bdy[3].onmouseout=()=>
+{  
+ bdy[3].style.transform='scale(1.2)'
 } 
 bdy[3].onclick=()=>
 { 
- oftm[0].style.transform='scale(0)'
- chftm[0].style.transform='scale(4)'
- tftm[0].style.transform='scale(0)'
+ 
+}
+bdy[4].onmouseover=()=>
+{ 
+ bdy[4].style.transform='scale(1.4)'
+} 
+bdy[4].onmouseout=()=>
+{  
+ bdy[4].style.transform='scale(1.2)'
 } 
 bdy[4].onclick=()=>
 { 
- oftm[0].style.transform='scale(0)'
- chftm[0].style.transform='scale(0)'
- tftm[0].style.transform='scale(4)'
-} 
-  
-ili=1
-ilst=0
-oftm[2].onclick=()=>
-{ 
- oftm[0].style.transform='scale(0.6)'
- chftm[0].style.transform='scale(0.6)'
- tftm[0].style.transform='scale(0.6)'
-  lst[ili].innerHTML=oftm[1].value
-  oftm[1].value=''
-  if(ili==4) ili=0
-  ili++
-  bdy[6].style.color='#ff6'
-   bdy[6].innerHTML='Ticket ordered!'
-  bdy[6].style.transform=
-  'scale(1.4) translate(-22%,0) skew(-22deg)'
- setTimeout(()=>{
-   bdy[6].style.color='#fff'
-   bdy[6].style.transform='scale(0)'
-  }, 1111)
-} 
-oftm[3].onclick=()=>
-{ 
- oftm[0].style.transform='scale(0.6)'
- chftm[0].style.transform='scale(0.6)'
- tftm[0].style.transform='scale(0.6)'
-  oftm[1].value=''
-} 
-
-chftm[3].onclick=()=>
-{ 
- oftm[0].style.transform='scale(0.6)'
- chftm[0].style.transform='scale(0.6)'
- tftm[0].style.transform='scale(0.6)'
-  lst[ili].innerHTML=chftm[2].value
-} 
-chftm[4].onclick=()=>
-{ 
- oftm[0].style.transform='scale(0.6)'
- chftm[0].style.transform='scale(0.6)'
- tftm[0].style.transform='scale(0.6)'
-  chftm[1].value=''
-  chftm[2].value=''
-} 
-
-tftm[2].onclick=()=>
-{ 
- oftm[0].style.transform='scale(0.6)'
- chftm[0].style.transform='scale(0.6)'
- tftm[0].style.transform='scale(0.6)'
- if(ili>0) lst[--ili].innerHTML=chftm[2].value
-} 
-tftm[3].onclick=()=>
-{ 
- oftm[0].style.transform='scale(0.6)'
- chftm[0].style.transform='scale(0.6)'
- tftm[0].style.transform='scale(0.6)'
-  tftm[1].value=''
-} 
-
-bdy[5].onclick=()=>
-{
- oftm[0].style.transform='scale(0.6)'
- chftm[0].style.transform='scale(0.6)'
- tftm[0].style.transform='scale(0.6)'
- bdy[6].style.color='#ff7'
- bdy[6].style.transform=
-  'scale(1.4) translate(-28%,0)'
-  bdy[6].innerHTML='operation<br> completed!'
- setTimeout(()=>{
-   bdy[6].style.color='#fff'
-   bdy[6].style.transform='scale(0)'
-  }, 1111)
-}
-
-function actli(nm,i)
-{
- nm[i].onmouseover=()=>
- { 
-  nm[i].style.color='#f00'
- } 
- nm[i].onmouseout=()=>
- {  
-  nm[i].style.color='#000'
- } 
- nm[i].onclick=()=>
- { 
-   if(ili>4) ili=1
-  oftm[0].style.transform='scale(4)'
-   oftm[1].value=nm[i].innerHTML
-  chftm[0].style.transform='scale(0.6)'
-  tftm[0].style.transform='scale(0.6)' 
+ if(icl>0)
+ {
+  icl=--icl
+  cl[icl].innerHTML=''
  } 
 }
- actli(li,0), actli(li,1), actli(li,2)
- actli(li,3)
- 
-function actlst(nm,i)
-{
- nm[i].onmouseover=()=>
- { 
-  nm[i].style.color='#f00'
- } 
- nm[i].onmouseout=()=>
- {  
-  nm[i].style.color='#000'
- } 
- nm[i].onclick=()=>
- { 
-  chftm[1].value=nm[i].innerHTML
-  tftm[1].value=nm[i].innerHTML
- } 
-}
- actlst(lst,1), actlst(lst,2), actlst(lst,3) 
-  actlst(lst,4)
+
+
  
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
