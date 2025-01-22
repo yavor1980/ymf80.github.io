@@ -46,12 +46,17 @@ button,input
   <option>seminar</option>
   <option>exposition</option>
  </select> 
- 
  <input class=dty value='mm.dd.yy'>
  <input type='submit' class=bdy value='order'>
  <input type='submit' class=bdy value='change'>
  <input type='submit' class=bdy value='off'>
- <div class=lst></div>
+ 
+ <div class=lst>
+  <div class=lst></div>
+  <div class=lst></div>
+  <div class=lst></div>
+  <div class=lst></div>
+ </div>
 </div>  
  
 <script>
@@ -112,7 +117,19 @@ lst[0].style.background='#eee'
 lst[0].style.borderRadius=8+'%'
 lst[0].style.border='9px ridge #990'
 
-cl=[],icl=0,irfse=0
+function initlst(i,l,t)
+{
+ lst[i].style.left=l+'%'
+ lst[i].style.top=t+'%' 
+ lst[i].style.color='#009'
+ lst[i].style.cursor='pointer'
+ lst[i].style.paddingLeft=8+'%'
+ lst[i].style.transform='scale(2)'
+}
+ initlst(1,5,9), initlst(2,5,26),
+ initlst(3,5,43), initlst(4,5,60)
+
+ilst=1
 bdy[2].onmouseover=()=>
 { 
  bdy[2].style.transform='scale(1.4)'
@@ -123,23 +140,14 @@ bdy[2].onmouseout=()=>
 } 
 bdy[2].onclick=()=>
 { 
- if(icl<4)
+ if(ilst<5)
  {
- cl[icl]=document.createElement('div')
- cl[icl].className='lst'
-  cl[icl].innerHTML=bdy[1].value
- lst[0].appendChild(cl[icl])
- cl[icl].style.top=icl*18+'%'
- cl[icl].style.color='#009'
- cl[icl].style.paddingLeft=8+'%'
- cl[icl].style.paddingTop=2+'%'
- cl[icl].style.transform='scale(2)'
- cl[icl].style.cursor='pointer'
+  lst[ilst].innerHTML=bdy[1].value
  dty[1].style.transform='scale(2.9) translate(8%,88%)'
  setTimeout(()=>{
     dty[1].style.transform='scale(2)'
    }, 1111)
-  icl++
+  ilst++
  }
 } 
 
@@ -153,18 +161,18 @@ bdy[4].onmouseout=()=>
 } 
 bdy[4].onclick=()=>
 { 
- if(icl>0)
+ if(ilst>1)
  {
-  icl=--icl
-  cl[icl].innerHTML=''
+  ilst=--ilst
+  lst[ilst].innerHTML=''
  } 
 }
 
 function flst(i)
 { 
- lst[0].onclick=()=>
+ lst[i].onclick=()=>
  { 
-  lst[1].style.transform='scale(0)'
+  lst[i].style.transform='scale(0)'
  }
 } 
  flst(1),flst(2),flst(3),flst(4)
