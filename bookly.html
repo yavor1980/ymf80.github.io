@@ -53,14 +53,15 @@ button,input
  <input type='submit' class=bdy value='off'>
  
  <div class=lst>
-  <div class=lst></div>
-  <div class=lst></div>
-  <div class=lst></div>
-  <div class=lst></div>
+  <div class=lst><td></td></div>
+  <div class=lst><td></td></div>
+  <div class=lst><td></td></div>
+  <div class=lst><td></td></div>
  </div>
 </div>  
  
 <script>
+td=document.getElementsByTagName('td')
 bdy=document.getElementsByClassName('bdy')
 dty=document.getElementsByClassName('dty')
 lst=document.getElementsByClassName('lst') 
@@ -118,7 +119,7 @@ dty[2].style.transform='scale(0)'
 
 lst[0].style.left=5+'%'
 lst[0].style.top=55+'%' 
-lst[0].style.width=66+'%'
+lst[0].style.width=77+'%'
 lst[0].style.height=33+'%' 
 lst[0].style.background='#eee'
 lst[0].style.borderRadius=8+'%'
@@ -128,7 +129,6 @@ function initlst(i,t)
 {
  lst[i].style.left=19+'%'
  lst[i].style.top=t+'%' 
- lst[i].style.width=6+'%'
  lst[i].style.height=2+'%'
  //lst[i].style.background='#999'
  //lst[i].style.opacity=0.5
@@ -161,7 +161,7 @@ dty[1].onclick=()=>
 { 
  dty[1].style.transform='scale(2)'
   dty[1].value='mm.dd.yy'
- lst[ilst].innerHTML=bdy[1].value 
+ lst[ilst].innerHTML=bdy[1].value+' '+dty[1].value
   dty[1].disabled=1
   bordr=0
   ilst++
