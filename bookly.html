@@ -61,7 +61,6 @@ button,input
 </div>  
  
 <script>
-td=document.getElementsByTagName('td')
 bdy=document.getElementsByClassName('bdy')
 dty=document.getElementsByClassName('dty')
 lst=document.getElementsByClassName('lst') 
@@ -152,16 +151,18 @@ bdy[2].onclick=()=>
 { 
  if(ilst<5)
  {
+  m=Math.round(Math.random()*11)
+  d=Math.round(Math.random()*30)
    dty[1].disabled=0	
   dty[1].style.transform='scale(3.9) translate(8%,88%)'
-   dty[1].value='02.8.2025'
+   dty[1].value=m+'.'+d+'.'+'25'
  } 
 } 
 dty[1].onclick=()=>
 { 
  dty[1].style.transform='scale(2)'
-  dty[1].value='mm.dd.yy'
  lst[ilst].innerHTML=bdy[1].value+' '+dty[1].value
+  dty[1].value='mm.dd.yy'
   dty[1].disabled=1
   bordr=0
   ilst++
@@ -188,7 +189,7 @@ function flst(i)
  } 
  lst[i].onclick=()=>
  { 
-  //lst[i].style.transform='scale(2)'
+  
  }
 } 
  flst(1),flst(2),flst(3),flst(4)
