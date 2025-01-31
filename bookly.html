@@ -57,6 +57,7 @@ button,input
   <div class=lst><td></td></div>
   <div class=lst><td></td></div>
   <div class=lst><td></td></div>
+  <div class=lst><td></td></div>
  </div>
 </div>  
  
@@ -129,15 +130,20 @@ function initlst(i,t)
  lst[i].style.left=19+'%'
  lst[i].style.top=t+'%' 
  lst[i].style.height=2+'%'
- //lst[i].style.background='#999'
- //lst[i].style.opacity=0.5
  lst[i].style.color='#009'
  lst[i].style.cursor='pointer'
  lst[i].style.transform='scale(2)'
 }
  initlst(1,9), initlst(2,26),
- initlst(3,43), initlst(4,60)
-
+ initlst(3,43), initlst(4,60),
+ initlst(5,4)
+ lst[5].style.left=67+'%'
+ lst[5].style.width=7+'%'
+ lst[5].style.height=13+'%' 
+ lst[5].style.background='#d70'
+ lst[5].style.borderRadius=8+'%'
+ lst[5].style.transform='scale(0)'
+ 
 ilst=1, bordr=0
 bdy[2].onmouseover=()=>
 { 
@@ -172,8 +178,7 @@ bdy[4].onclick=()=>
 { 
  if(ilst>1)
  {
-  ilst=--ilst
-  lst[ilst].innerHTML=''
+  lst[del].innerHTML=''
  } 
 }
 
@@ -189,7 +194,7 @@ function flst(i)
  } 
  lst[i].onclick=()=>
  { 
-  
+  del=i
  }
 } 
  flst(1),flst(2),flst(3),flst(4)
