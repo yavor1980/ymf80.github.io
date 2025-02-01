@@ -47,7 +47,7 @@ button,input
   <option>exposition</option>
  </select> 
  <input class=dty disabled value='mm.dd.yy'>
- <div class=dty></div>
+ <button class=dty disabled>OK</button>
  <input type='submit' class=bdy value='order'>
  <input type='submit' class=bdy value='change'>
  <input type='submit' class=bdy value='off'>
@@ -110,12 +110,13 @@ dty[1].style.height=3+'%'
 dty[1].style.background='#0ff'
 dty[1].style.textAlign='center'
 dty[1].style.transform='scale(2)'
-dty[2].style.left=12+'%'
+dty[2].style.left=39+'%'
 dty[2].style.top=33+'%' 
 dty[2].style.width=9+'%'
-dty[2].style.height=3+'%'
-dty[2].style.background='#0f0'
-dty[2].style.transform='scale(0)'
+dty[2].style.height=9+'%'
+dty[2].style.background='#099'
+dty[2].style.fontSize=1.8+'em'
+dty[2].style.cursor='pointer'
 
 lst[0].style.left=5+'%'
 lst[0].style.top=55+'%' 
@@ -159,17 +160,17 @@ bdy[2].onclick=()=>
  {
   m=Math.round(Math.random()*11)
   d=Math.round(Math.random()*30)
-   dty[1].disabled=0	
+   dty[2].disabled=0
   dty[1].style.transform='scale(3.9) translate(8%,88%)'
    dty[1].value=m+'.'+d+'.'+'25'
  } 
 } 
-dty[1].onclick=()=>
+dty[2].onclick=()=>
 { 
  dty[1].style.transform='scale(2)'
  lst[ilst].innerHTML=bdy[1].value+' '+dty[1].value
-  dty[1].value='mm.dd.yy'
-  dty[1].disabled=1
+  dty[1].value='mm.dd.yy' 
+  dty[2].disabled=1
   bordr=0
   ilst++
 }
@@ -178,7 +179,8 @@ bdy[4].onclick=()=>
 { 
  if(ilst>1)
  {
-  lst[del].innerHTML=''
+  lst[idel].innerHTML=''
+   ilst=idel
  } 
 }
 
@@ -194,7 +196,7 @@ function flst(i)
  } 
  lst[i].onclick=()=>
  { 
-  del=i
+  idel=i
  }
 } 
  flst(1),flst(2),flst(3),flst(4)
