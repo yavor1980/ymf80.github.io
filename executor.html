@@ -69,7 +69,7 @@
 
 </style>
 
-<button class=btn>rotte</button>
+<button class=btn>rotate</button>
 <button class=btn>drop</button>
 
 <div class=jws>  
@@ -88,7 +88,7 @@
  </div>
 </div>
 
-<div class=shrm></div> 
+<div class=shrm>Sentence...</div> 
  
 <div class=exctr >Executnr </div> 
  <div class=exctr >for executions </div>
@@ -131,16 +131,15 @@ shrm=document.getElementsByClassName('shrm')
 exctr=document.getElementsByClassName('exctr')
 vctr=document.getElementsByClassName('vctr')
    
-btn[0].style.left=5+'%'
+btn[0].style.right=5+'%'
 btn[0].style.top=5+'%'  
 btn[0].style.width=9+'%'
 btn[0].style.height=7+'%'
 btn[0].style.background=
  'radial-gradient(#f00,#840)';
 btn[0].style.borderRadius=33+'%'
-   
-btn[1].style.left=18+'%'
-btn[1].style.top=5+'%'  
+btn[1].style.right=5+'%'
+btn[1].style.top=15+'%'  
 btn[1].style.width=9+'%'
 btn[1].style.height=7+'%' 
 btn[1].style.background=
@@ -164,21 +163,18 @@ gl[0].style.width=14+'%'
 gl[0].style.height=22+'%' 
 gl[0].style.background='#fff';
 gl[0].style.borderRadius=55+'%'
-	
 gl[1].style.left=22+'%'
 gl[1].style.top=26+'%'  
 gl[1].style.width=44+'%'
 gl[1].style.height=44+'%'  
 gl[1].style.background='#f00';
 gl[1].style.borderRadius=55+'%'
-	 
 gl[2].style.left=66+'%'
 gl[2].style.top=17+'%'  
 gl[2].style.width=14+'%'
 gl[2].style.height=22+'%'  
 gl[2].style.background='#fff'; 
 gl[2].style.borderRadius=55+'%'
-	  
 gl[3].style.left=22+'%'
 gl[3].style.top=26+'%'  
 gl[3].style.width=44+'%'
@@ -193,7 +189,6 @@ ns[0].style.height=33+'%'
 ns[0].style.background=
  'radial-gradient(#bbb,#660)';
 ns[0].style.borderRadius=55+'%'
-	 
 ns[1].style.left=-33+'%'
 ns[1].style.top=77+'%'  
 ns[1].style.width=166+'%'
@@ -209,7 +204,6 @@ lwng[0].style.height=55+'%'
 lwng[0].style.background=          
  'radial-gradient(#bbb,#660)'
 lwng[0].style.borderRadius=33+'%'
-	 
 lwng[1].style.left=-1+'%'
 lwng[1].style.top=88+'%'  
 lwng[1].style.width=88+'%'
@@ -225,7 +219,6 @@ rwng[0].style.height=55+'%'
 rwng[0].style.background=  
  'radial-gradient(#bbb,#660)'
 rwng[0].style.borderRadius=33+'%'
-	 
 rwng[1].style.left=9+'%'
 rwng[1].style.top=88+'%'  
 rwng[1].style.width=88+'%'
@@ -242,14 +235,12 @@ plh[0].style.background='#700'
 plh[0].style.borderRadius=33+'%'
 plh[0].style.transform=
  'translate(77%,0) rotate(5deg)' 
- 
 plh[1].style.left=1+'%'
 plh[1].style.top=1+'%'  
 plh[1].style.width=44+'%'
 plh[1].style.height=66+'%' 
 plh[1].style.background='#fff'
 plh[1].style.borderRadius=9+'%'
-
 plh[2].style.left=55+'%'
 plh[2].style.top=1+'%'  
 plh[2].style.width=44+'%'
@@ -265,40 +256,33 @@ shrm[0].style.background='#f50'
 shrm[0].style.opacity=0.2
 shrm[0].style.borderRadius=22+'%'
 shrm[0].style.fontSize=0
- shrm[0].innerHTML='sentence'
 	
 exctr[0].style.left=62+'%'
 exctr[0].style.top=14+'%' 
 exctr[0].style.color='#f00'
 exctr[0].style.transform='scale(3)'
-	
 exctr[1].style.left=55+'%'
 exctr[1].style.top=22+'%'  
 exctr[1].style.transform='scale(0)'
- 
 exctr[2].style.left=55+'%'
 exctr[2].style.top=36+'%'  
 exctr[2].style.transform='scale(0)'
-	 
 exctr[3].style.left=55+'%'
 exctr[3].style.top=44+'%'  
-exctr[3].style.transform='scale(0)'	 
-	 
+exctr[3].style.transform='scale(0)'	
+ 
 vctr[0].style.left=18+'%'
 vctr[0].style.top=33+'%'
 vctr[0].style.color='#f00'
 vctr[0].style.transform='scale(0)'
-	 
 vctr[1].style.left=13+'%'
 vctr[1].style.top=44+'%'
 vctr[1].style.color='#f70'
 vctr[1].style.transform='scale(0)'
-	 
 vctr[2].style.left=10+'%'
 vctr[2].style.top=55+'%'
 vctr[2].style.color='#f08'
 vctr[2].style.transform='scale(0)'
-	 
 vctr[3].style.left=8+'%'
 vctr[3].style.top=66+'%'
 vctr[3].style.color='#f88'
@@ -426,7 +410,6 @@ shrm[0].onmouseover=()=>
  shrm[0].style.border='7px ridge #ff0'
  shrm[0].style.transform=
   'scale(1,1.5) translate(16%,-5%)'
- shrm[0].style.fontSize=2+'em' 
 }
 shrm[0].onmouseout=()=>
 { 
@@ -435,13 +418,11 @@ shrm[0].onmouseout=()=>
  shrm[0].style.border='none'
  shrm[0].style.transform='scale(1)'
   shrm[0].style.fontSize=0
-  shrm[0].innerHTML=''
 }
 shrm[0].onclick=()=>
 { 
  shrm[0].style.background='#0f0'
  shrm[0].style.fontSize='3em'
-  shrm[0].innerHTML='sentence'
 }
  
 frz0I=0
