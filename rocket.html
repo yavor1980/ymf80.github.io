@@ -63,7 +63,7 @@
 
 </style>
 <button class=btn>UFO</button>
-<div class=tbtn>watch UFO!</div>
+ <div class=tbtn>watch UFO!</div>
 
 <div class=cld></div>
 <div class=cld></div>
@@ -103,10 +103,13 @@
 <script>
 btn=document.getElementsByClassName('btn')
 tbtn=document.getElementsByClassName('tbtn')
+
 cld=document.getElementsByClassName('cld')
-rckt=document.getElementsByClassName('rckt')
 tcld=document.getElementsByClassName('tcld')
+
+rckt=document.getElementsByClassName('rckt')
 trckt=document.getElementsByClassName('trckt')
+
 shtl=document.getElementsByClassName('shtl')
 tshtl=document.getElementsByClassName('tshtl')
 
@@ -341,7 +344,8 @@ cld[3].onmouseout=()=>
 
 Irckt=0
 rckt[0].onmouseover=()=>
-{
+{ 
+ btn[0].onclick()
  Irckt=setInterval(()=>{
   rckt[0].style.transform=
    'scale('+(Math.random()/9+1)+')'
