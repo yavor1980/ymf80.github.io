@@ -12,499 +12,147 @@
 input
 {
  cursor:pointer;
- border-radius:21%; 
+ border-radius:21%;
 :text-align:center;
  transform:scale(1,2); 
 }
-button
+button,select
 {
- border-radius:21%; 
  cursor:pointer; 
  transform:scale(3); 
 }
 select
 {
- cursor:pointer; 
- transform:scale(1,2); 
+ background:#0ff; 
 }
-li
+button
 {
- text-decoration:none; 
- font-size:2em; 
+ cursor:pointer;
+ border-radius:21%; 
 }
 
-.btn,.bdy
+.btn
+{
+ position:absolute;   
+ transition:1s;
+}
+
+.pnl,.mnge,.term,.ttl
 {
  position:absolute;   
  transition:1s;
  text-align:center;
 }
 
-.iauto,.ihlth,.ilf,.iownrshp,.itrsm
-{
- position:absolute;   
- transition:1s;
- //z-index:-1;
-}
-
 </style>
-<div class=btn>
- <div class=btn>Insurance</div>
+<div class=pnl>
  <input type=submit class=btn value='life' >
  <input type=submit class=btn value='health'>
  <input type=submit class=btn value='ownership' >
  <input type=submit class=btn value='auto'>
  <input type=submit class=btn value='tourism'>
 </div>
-<div class=bdy>
- <div class=ilf>
-  <button class=ilf>OK</button>
-  <button class=ilf>C</button>
-  <div class=ilf>life</div>
-  <select class=ilf>
+<div class=pnl>
+ <div class=ttl>Insurance</div>
+ <div class=mnge>
+  <button class=mnge>OK</button>
+  <button class=mnge>C</button>
+ </div> 
+ <div class=term>
+  <select class=term>
     <option >1 year</option>
 	<option >2 years</option>
 	<option >3 years</option>
 	<option >4 years</option>
-  <select>
-  <input class=ilf value >
- </div>
- <div class=ihlth>
-  <button class=ihlth>OK</button>
-  <button class=ihlth>C</button>
-  <div class=ihlth>health</div>
-  <input class=ihlth value >
-  <select class=ihlth>
-    <option >1 year</option>
-	<option >2 years</option>
-	<option >3 years</option>
-	<option >4 years</option>
-  <select>
- </div>
- <div class=iownrshp>
-  <button class=iownrshp>OK</button>
-  <button class=iownrshp>C</button>
-  <div class=iownrshp>ownership</div>
-  <input class=iownrshp>
-  <div class=iownrshp>
-   <li></li>
-   <li></li>
-   <li></li>
-  </div>
-  <select class=iownrshp>
-    <option >1 year</option>
-	<option >2 years</option>
-	<option >3 years</option>
-	<option >4 years</option>
-  <select>
- </div>
-
- <div class=iauto>
-  <button class=iauto>OK</button>
-  <button class=iauto>C</button>
-  <div class=iauto>auto</div>
-  <input class=iauto>
-  <input class=iauto>
-  <select class=iauto>
-    <option >1 year</option>
-	<option >2 years</option>
-	<option >3 years</option>
-	<option >4 years</option>
-  <select>
- </div>
- <div class=itrsm>
-  <button class=itrsm>OK</button>
-  <button class=itrsm>C</button>
-  <div class=itrsm>tourism</div>
-  <input class=itrsm>
-  <input class=itrsm>
- </div>
- <div class=bdy>
-  You're<br> insured!
- </div>
+  </select>
+ </div> 
 </div>
-
 <script>
-li=document.getElementsByTagName('li')
+var pnl=document.getElementsByClassName('pnl')
+var btn=document.getElementsByClassName('btn')
+var ttl=document.getElementsByClassName('ttl')
+var mnge=document.getElementsByClassName('mnge')	
+var term=document.getElementsByClassName('term')
 
-btn=document.getElementsByClassName('btn')
-bdy=document.getElementsByClassName('bdy')	
+pnl[0].style.left=17+'%'
+pnl[0].style.top=5+'%'  
+pnl[0].style.width=66+'%'
+pnl[0].style.height=16+'%'
+pnl[0].style.background='#f0f'
+pnl[0].style.borderRadius=12+'%'
+pnl[0].style.border='4px ridge #bb0'
+pnl[0].style.transform='scale(1.4)'
+pnl[1].style.left=17+'%'
+pnl[1].style.top=38+'%'
+pnl[1].style.width=66+'%'
+pnl[1].style.height=50+'%'
+pnl[1].style.background='#f0f'
+pnl[1].style.borderRadius=12+'%'
+pnl[1].style.border='4px ridge #bb0'
+pnl[1].style.transform='scale(1.4)'
 
-ilf=document.getElementsByClassName('ilf')
-ihlth=document.getElementsByClassName('ihlth')
-iownrshp=document.getElementsByClassName('iownrshp')
-iauto=document.getElementsByClassName('iauto')
-itrsm=document.getElementsByClassName('itrsm')	
+ttl[0].style.left=55+'%'
+ttl[0].style.top=11+'%'
+ttl[0].style.transform='scale(3) skew(-12deg)'
+ttl[0].style.cursor='pointer'
 
-btn[0].style.left=17+'%'
-btn[0].style.top=5+'%'  
-btn[0].style.width=66+'%'
-btn[0].style.height=16+'%'
-btn[0].style.background='#f0f'
-btn[0].style.borderRadius=12+'%'
-btn[0].style.border='4px ridge #bb0'
-btn[0].style.transform='scale(1.4)'
-btn[1].style.left=33+'%'
-btn[1].style.top=9+'%'
-btn[1].style.color='#b0b'
-btn[1].style.transform='scale(3) skew(-12deg)'
-btn[2].style.left=11+'%'
+btn[0].style.left=11+'%'
+btn[0].style.top=55+'%'
+btn[0].style.background='#f00'
+btn[0].style.transform='scale(2)'
+btn[1].style.left=23+'%'
+btn[1].style.top=55+'%'
+btn[1].style.background='#00f'
+btn[1].style.transform='scale(2)'
+btn[2].style.left=41+'%'
 btn[2].style.top=55+'%'
-btn[2].style.cursor='pointer'
+btn[2].style.background='#0f0'
 btn[2].style.transform='scale(2)'
-btn[3].style.left=23+'%'
+btn[3].style.left=62+'%'
 btn[3].style.top=55+'%'
-btn[3].style.cursor='pointer'
-btn[3].style.transform='scale(2)'
-btn[4].style.left=41+'%'
+btn[3].style.background='#fb0'
+btn[3].style.transform='scale(2)'    
+btn[4].style.left=77+'%'
 btn[4].style.top=55+'%'
-btn[4].style.cursor='pointer'
-btn[4].style.transform='scale(2)'
-btn[5].style.left=62+'%'
-btn[5].style.top=55+'%'
-btn[5].style.cursor='pointer'
-btn[5].style.transform='scale(2)'    
-btn[6].style.left=77+'%'
-btn[6].style.top=55+'%'
-btn[6].style.cursor='pointer'
-btn[6].style.transform='scale(2)'  
-  
-bdy[0].style.left=3+'%'
-bdy[0].style.top=27+'%'  
-bdy[0].style.width=94+'%'
-bdy[0].style.height=70+'%'
-bdy[0].style.background='#b0b'
-bdy[0].style.borderRadius=12+'%'  
-bdy[0].style.border='6px ridge #ff8'
-bdy[1].style.left=13+'%'
-bdy[1].style.top=17+'%'  
-bdy[1].style.borderRadius=12+'%' 
-bdy[1].style.transform='scale(0)'
+btn[4].style.background='#f0b'
+btn[4].style.transform='scale(2)'  
 
-ilf[0].style.left=0+'%'
-ilf[0].style.top=0+'%'  
-ilf[0].style.width=100+'%'
-ilf[0].style.height=100+'%'
-ilf[0].style.background='#990'
-ilf[0].style.borderRadius=22+'%'  
-ilf[0].style.transform=
- 'scale(0.3) translate('+Math.random()*44+'%,'+
- Math.random()*44+'%)' 
-ilf[1].style.left=33+'%'
-ilf[1].style.top=77+'%'
-ilf[2].style.left=56+'%'
-ilf[2].style.top=77+'%'
-ilf[3].style.left=55+'%'
-ilf[3].style.top=7+'%'
-ilf[3].style.fontSize=4+'em'
-ilf[3].style.cursor='pointer'
-ilf[4].style.left=57+'%'
-ilf[4].style.top=38+'%'
-ilf[4].style.width=23+'%'
-ilf[5].style.left=20+'%'
-ilf[5].style.top=38+'%'
-ilf[5].style.width=23+'%'
+mnge[0].style.left=39+'%'
+mnge[0].style.top=30+'%'  
+mnge[0].style.width=60+'%'
+mnge[0].style.height=66+'%'
+mnge[0].style.background='#f07'
+mnge[0].style.borderRadius=12+'%'
+mnge[1].style.left=45+'%'
+mnge[1].style.top=76+'%' 
+mnge[1].style.background='#ff0'
+mnge[1].style.fontSize=0.6+'%' 
+mnge[2].style.left=66+'%'
+mnge[2].style.top=76+'%' 
+mnge[2].style.background='#ff0' 
+mnge[2].style.fontSize=0.6+'%' 
 
-ihlth[0].style.left=0+'%'
-ihlth[0].style.top=0+'%'
-ihlth[0].style.width=100+'%'
-ihlth[0].style.height=100+'%'
-ihlth[0].style.background='#bb4'
-ihlth[0].style.borderRadius=22+'%'  
-ihlth[0].style.transform=
- 'scale(0.3) translate('+Math.random()*44+'%,'+
- Math.random()*44+'%)'
-ihlth[1].style.left=33+'%'
-ihlth[1].style.top=77+'%'
-ihlth[2].style.left=56+'%'
-ihlth[2].style.top=77+'%'
-ihlth[3].style.left=55+'%'
-ihlth[3].style.top=7+'%'
-ihlth[3].style.fontSize=4+'em'
-ihlth[3].style.cursor='pointer'
-ihlth[4].style.left=24+'%'
-ihlth[4].style.top=30+'%'
-ihlth[5].style.left=59+'%'
-ihlth[5].style.top=30+'%'
-ihlth[5].style.width=23+'%'
-
-iownrshp[0].style.left=0+'%'
-iownrshp[0].style.top=0+'%'  
-iownrshp[0].style.width=100+'%'
-iownrshp[0].style.height=100+'%'
-iownrshp[0].style.background='#099'
-iownrshp[0].style.borderRadius=22+'%'  
-iownrshp[0].style.transform=
- 'scale(0.3) translate('+Math.random()*44+'%,'+
- Math.random()*44+'%)'
-iownrshp[1].style.left=33+'%'
-iownrshp[1].style.top=77+'%'
-iownrshp[2].style.left=56+'%'
-iownrshp[2].style.top=77+'%'
-iownrshp[3].style.left=55+'%'
-iownrshp[3].style.top=7+'%'
-iownrshp[3].style.fontSize=4+'em'
-iownrshp[3].style.cursor='pointer'
-iownrshp[4].style.left=22+'%'
-iownrshp[4].style.top=23+'%'
-iownrshp[4].style.width=23+'%'
-iownrshp[5].style.left=62+'%'
-iownrshp[5].style.top=34+'%'
-iownrshp[5].style.width=23+'%'
-iownrshp[5].style.height=23+'%'
-iownrshp[5].style.background='#f00'
-iownrshp[5].style.borderRadius=14+'%'
-iownrshp[5].style.opacity=0.3
-iownrshp[6].style.left=22+'%'
-iownrshp[6].style.top=34+'%'
-iownrshp[6].style.width=23+'%'
-
-iauto[0].style.left=0+'%'
-iauto[0].style.top=0+'%'  
-iauto[0].style.width=100+'%'
-iauto[0].style.height=100+'%'
-iauto[0].style.background='#8bb'
-iauto[0].style.borderRadius=22+'%'  
-iauto[0].style.transform=
- 'scale(0.3) translate('+Math.random()*44+'%,'+
-  Math.random()*44+'%)'
-iauto[1].style.left=33+'%'
-iauto[1].style.top=77+'%' 
-iauto[2].style.left=56+'%'
-iauto[2].style.top=77+'%'
-iauto[3].style.left=55+'%'
-iauto[3].style.top=7+'%'
-iauto[3].style.fontSize=4+'em'
-iauto[3].style.cursor='pointer'
-iauto[4].style.left=22+'%'
-iauto[4].style.top=32+'%'
-iauto[4].style.width=23+'%'
-iauto[5].style.left=22+'%'
-iauto[5].style.top=45+'%'
-iauto[5].style.width=23+'%'
-iauto[6].style.left=59+'%'
-iauto[6].style.top=33+'%'
-iauto[6].style.width=23+'%'
-
-itrsm[0].style.left=0+'%'
-itrsm[0].style.top=0+'%'  
-itrsm[0].style.width=100+'%'
-itrsm[0].style.height=100+'%'
-itrsm[0].style.background='#090'
-itrsm[0].style.borderRadius=22+'%'  
-itrsm[0].style.transform=
- 'scale(0.3)  translate('+Math.random()*44+'%,'+
-  Math.random()*44+'%)'
-itrsm[1].style.left=30+'%'
-itrsm[1].style.top=77+'%'
-itrsm[2].style.left=56+'%'
-itrsm[2].style.top=77+'%'
-itrsm[3].style.left=55+'%'
-itrsm[3].style.top=7+'%'
-itrsm[3].style.fontSize=4+'em'
-itrsm[3].style.cursor='pointer'
-itrsm[4].style.left=25+'%'
-itrsm[4].style.top=30+'%'
-itrsm[4].style.width=23+'%'
-itrsm[5].style.left=25+'%'
-itrsm[5].style.top=42+'%'
-itrsm[5].style.width=23+'%'
-   
-bbtn2=0  
-btn[0].onmouseover=()=>
-{ 
- btn[1].style.transform='scale(3.4)'
-}
-btn[0].onmouseout=()=>
-{ 
- btn[1].style.transform=
-  'scale(3) skew(-12deg)'
-} 
-
-function zI0()
-{
- ilf[0].style.zIndex=0
- ilf[0].style.transform='scale(0.3)'
- ihlth[0].style.zIndex=0
- ihlth[0].style.transform='scale(0.3)'
- iownrshp[0].style.zIndex=0
- iownrshp[0].style.transform='scale(0.3)'
- iauto[0].style.zIndex=0
- iauto[0].style.transform='scale(0.3)'
- itrsm[0].style.zIndex=0
- itrsm[0].style.transform='scale(0.3)'
-}
+term[0].style.left=13+'%'
+term[0].style.top=13+'%' 
 
 btn[2].onclick=()=>
 { 
-  zI0()
- ilf[0].style.zIndex=1
- ilf[0].style.transform='scale(1)'
- ilf[3].style.transform='skew(-11deg)'
-}
-btn[3].onclick=()=>
-{ 
-  zI0()
- ihlth[0].style.zIndex=1 
- ihlth[0].style.transform='scale(1) '
- ihlth[3].style.transform='skew(-11deg)'
-}
-btn[4].onclick=()=>
-{ 
-  zI0()
- iownrshp[0].style.zIndex=1
- iownrshp[0].style.transform='scale(1)'
- iownrshp[3].style.transform='skew(-11deg)'
- iownrshp[5].style.opacity=1
-}
-btn[5].onclick=()=>
-{ 
-  zI0()
- iauto[0].style.zIndex=1
- iauto[0].style.transform='scale(1) '
- iauto[3].style.transform='skew(-11deg)'
-}
-btn[6].onclick=()=>
-{ 
-  zI0()  
- itrsm[0].style.zIndex=1
- itrsm[0].style.transform='scale(1) '
- itrsm[3].style.transform='skew(-11deg)'
+ ///bdy[1].style.transform='scale(3)'
 }
 
-function insrd()
-{
- bdy[1].style.color='#ff0'
- bdy[1].style.zIndex=1
- bdy[1].style.transform=
-  'scale(7) translate(44%,22%) skew(11deg)'
- setTimeout(()=>{
-    bdy[1].style.color='#000'
-	bdy[1].style.zIndex=0
-    bdy[1].style.transform='scale(0)'
-   }, 999)
+ttl[0].onmouseover=()=>
+{ 
+ ttl[0].style.transform='scale(3.4)'
+ ttl[0].style.color='#900'
 }
-
-ilf[1].onclick=()=>
+ttl[0].onmouseout=()=>
 { 
- ilf[0].style.transform='scale(0.3) translate('+
-  Math.random()*44+'%,'+Math.random()*44+'%)'  
- ilf[0].style.zIndex=0
-  ilf[5].value=''
-  insrd()
-} 
-ilf[2].onclick=()=>
-{ 
- ilf[0].style.transform='scale(0.3) translate('+
-  Math.random()*44+'%,'+Math.random()*44+'%)' 
- ilf[0].style.zIndex=0
-  ilf[5].value=''
-}
-ilf[3].onclick=()=>
-{ 
- ilf[5].value='888$'
-}
-
-ihlth[1].onclick=()=>
-{ 
- ihlth[0].style.transform='scale(0.3) translate('+
-  Math.random()*44+'%,'+Math.random()*44+'%)'  
- ihlth[0].style.zIndex=0
-  ihlth[4].value=''
-  insrd()
-}
-ihlth[2].onclick=()=>
-{ 
- ihlth[0].style.transform='scale(0.3) translate('+
-  Math.random()*44+'%,'+Math.random()*44+'%)' 
- ihlth[0].style.zIndex=0
-  ihlth[4].value=''
-}
-ihlth[3].onclick=()=>
-{ 
- ihlth[4].value='1000$'
-}
- 
-osh=['house','auto','land'], i=0 
-iownrshp[1].onclick=()=>
-{ 
- iownrshp[0].style.transform='scale(0.3) translate('+
-  Math.random()*44+'%,'+Math.random()*44+'%)'  
- iownrshp[0].style.zIndex=0
- iownrshp[5].style.opacity=0.3
-  i=0 
- li[0].innerHTML=''
- li[1].innerHTML=''
- li[2].innerHTML=''
-  insrd()
-}
-iownrshp[2].onclick=()=>
-{ 
- iownrshp[0].style.transform='scale(0.3) translate('+
-  Math.random()*44+'%,'+Math.random()*44+'%)' 
- iownrshp[0].style.zIndex=0
- iownrshp[5].style.opacity=0.3
-  i=0 
- li[0].innerHTML=''
- li[1].innerHTML=''
- li[2].innerHTML=''
-}
-iownrshp[3].onclick=()=>
-{ 
- iownrshp[4].value=osh[i]
- li[i].innerHTML=iownrshp[4].value
-  i++
- if(i>2)
- {
-  i=0
- }
+ ttl[0].style.transform=
+  'scale(3) skew(-12deg)'
+ ttl[0].style.color='#000' 
 } 
 
-iauto[1].onclick=()=>
-{ 
- iauto[0].style.transform='scale(0.3) translate('+
-  Math.random()*44+'%,'+Math.random()*44+'%)'  
- iauto[0].style.zIndex=0
-  iauto[4].value=''
-  iauto[5].value=''
-  insrd()
-}
-iauto[2].onclick=()=>
-{ 
- iauto[0].style.transform='scale(0.3) translate('+
-  Math.random()*44+'%,'+Math.random()*44+'%)' 
- iauto[0].style.zIndex=0
-  iauto[4].value=''
-  iauto[5].value=''
-}
-iauto[3].onclick=()=>
-{ 
- iauto[4].value='BMW'
- iauto[5].value='2003'
-}
 
-itrsm[1].onclick=()=>
-{ 
- itrsm[0].style.transform='scale(0.3) translate('+
-  Math.random()*44+'%,'+Math.random()*44+'%)'  
- itrsm[0].style.zIndex=0
-  itrsm[4].value=''
-  itrsm[5].value=''
-  insrd()
-} 
-itrsm[2].onclick=()=>
-{ 
- itrsm[0].style.transform='scale(0.3) translate('+
-  Math.random()*44+'%,'+Math.random()*44+'%)' 
- itrsm[0].style.zIndex=0
-  itrsm[4].value=''
-  itrsm[5].value=''
-}
-itrsm[3].onclick=()=>
-{ 
- itrsm[4].value='Egypt'
- itrsm[5].value='21 day'
-}
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
