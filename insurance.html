@@ -56,6 +56,7 @@ button
  <div class=ttl>Insurance</div>
  <div class=ttl></div>
  <div class=mnge>
+  <div class=ttl></div>
   <button class=mnge>OK</button>
   <button class=mnge>C</button>
  </div> 
@@ -102,6 +103,11 @@ ttl[1].style.color='#900'
 ttl[1].style.opacity=0.6
 ttl[1].style.transform='scale(3)'
 ttl[1].style.transition=555+'ms'
+ttl[2].style.left=17+'%'
+ttl[2].style.top=14+'%'
+ttl[2].style.color='#900'
+ttl[2].style.opacity=0.6
+ttl[2].style.transform='scale(3)'
 
 btn[0].style.left=11+'%'
 btn[0].style.top=55+'%'
@@ -169,7 +175,14 @@ ttl[0].onmouseout=()=>
   ttl[1].innerHTML=''
 } 
 
-
+function fbtn(i)
+{
+ btn[i].onclick=()=>
+ { 
+  ttl[2].innerHTML=arrNm[i]
+ }  
+}
+ fbtn(0),fbtn(1),fbtn(2),fbtn(3),fbtn(4)
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
