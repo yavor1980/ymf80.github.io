@@ -17,6 +17,7 @@ body
  width:9%;
  height:7%;
  background:#ff0;
+ border-radius:22%;
  font-size:2em;
  color:#999;
 }
@@ -111,7 +112,7 @@ pln[5].style.width=222+'%'
 pln[5].style.height=222+'%' 
 pln[5].style.background=
  'radial-gradient(#300,#f00)'
-pln[5].style.opacity=0.6
+pln[5].style.opacity=0.2
 pln[5].style.borderRadius=55+'%'
 pln[5].style.transform='scale(3)'
 pln[5].style.zIndex=-1
@@ -128,7 +129,7 @@ pln[7].style.width=222+'%'
 pln[7].style.height=222+'%' 
 pln[7].style.background=
  'radial-gradient(#300,#f00)'
-pln[7].style.opacity=0.6
+pln[7].style.opacity=0.2
 pln[7].style.borderRadius=55+'%'
 pln[7].style.transform='scale(3)'
 pln[7].style.zIndex=-1 
@@ -146,7 +147,7 @@ inn(clds,0, 7,39, 33,22,'radial-gradient(#660,#fff)')
  clds[0].style.opacity=0.4
 inn(clds,1, 48,9, 27,18,'radial-gradient(#066,#ff9)')
  clds[1].style.opacity=0.5
-inn(clds,2, 9,74, 20,13,'radial-gradient(#606,#fff)')
+inn(clds,2, 60,55, 20,13,'radial-gradient(#606,#fff)')
  clds[2].style.opacity=0.6
 
 Icl=0
@@ -170,12 +171,16 @@ idb.onclick=()=>
   'scale(2) translate(0,99%) rotate(0deg)'
  pln[3].style.background='#990'
  pln[3].style.transform='scale(1,0.5)'
+ pln[5].style.opacity=0.6
+ pln[7].style.opacity=0.6
  setTimeout(()=>
  {
    Icl=setInterval(cl,999);
   pln[3].style.transform='scale(1)'
   pln[3].style.background=
   'radial-gradient(#999,#050)'
+  pln[5].style.opacity=0.2
+  pln[7].style.opacity=0.2
  }  ,888)
 }
  
@@ -188,6 +193,8 @@ pln[0].onmouseover=()=>
   'radial-gradient(#0f0,#000)'
  pln[3].style.background=
   'radial-gradient(#ddd,#bb0)'
+ pln[5].style.opacity=0.6
+ pln[7].style.opacity=0.6 
 }   
 pln[0].onmouseout=()=>
 {
@@ -198,6 +205,8 @@ pln[0].onmouseout=()=>
   'linear-gradient(#0b0,#000)'
  pln[3].style.background=
   'radial-gradient(#999,#050)' 
+ pln[5].style.opacity=0.2
+ pln[7].style.opacity=0.2 
 }
 
 clds[0].onmouseover=()=>
