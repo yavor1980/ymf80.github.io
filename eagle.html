@@ -96,13 +96,6 @@
  transition:2s;
 }
 
-.gthb
-{
- position:absolute;
- transition:2s;
- z-index:1;
-}
-
 </style>
 
 <body id=idbd>
@@ -135,13 +128,6 @@
  <div class=wrd>CAPTAT</div> 
  <div class=wrd>MUSCAS</div> 
  
-<div class=gthb>GitHub</div> 
- <div class=gthb>Add server!</div>
- <div class=gthb>Control content</div>
- <div class=gthb>Instructns to client</div>
-  <div class=gthb></div>
- <div class=gthb>LocalHost</div>
- 
 <script>
 btn=document.getElementsByClassName('btn')
 bgrnd=document.getElementsByClassName('bgrnd')
@@ -153,7 +139,6 @@ rwng=document.getElementsByClassName('rwng')
 pws=document.getElementsByClassName('pws')
 
 wrd=document.getElementsByClassName('wrd')
-gthb=document.getElementsByClassName('gthb')
   
 var eagl= 
 {
@@ -167,7 +152,7 @@ var eagl=
   bgrnd[0].style.background=
    'radial-gradient(#ff0,#00f)'
   bgrnd[0].style.borderRadius=55+'%'
-  bgrnd[0].style.opacity=0
+  bgrnd[0].style.opacity=0.2
   bgrnd[1].style.left=64+'%' 
   bgrnd[1].style.top=15+'%'
   bgrnd[1].style.width=1+'%' 
@@ -283,27 +268,7 @@ var eagl=
   wrd[3].style.color='#f00'
   wrd[3].style.opacity=0	  
   wrd[3].style.fontSize='3em'
-   
-  gthb[0].style.left='67%' 
-  gthb[0].style.top='66%'
-  gthb[0].style.color='#f00'
-  gthb[0].style.cursor='pointer'
-  gthb[0].style.transform='scale(3)'	
-  gthb[1].style.left='58%' 
-  gthb[1].style.top='57%'
-  gthb[1].style.transform='scale(0)'	  
-  gthb[2].style.left='64%' 
-  gthb[2].style.top='55%'
-  gthb[2].style.transform='scale(0)'
-  gthb[3].style.left='70%' 
-  gthb[3].style.top='74%'
-  gthb[3].style.transform='scale(0)'
-  gthb[4].style.left='70%' 
-  gthb[4].style.top='76%'
-  gthb[4].style.transform='scale(0)'
-  gthb[5].style.left='70%' 
-  gthb[5].style.top='46%'
-  gthb[5].style.transform='scale(0)'	 
+  
  },
  cl:function()
  { 
@@ -323,6 +288,8 @@ var eagl=
    (33+Math.random()*22)+'%'
   bgrnd[0].style.borderBottomRightRadius=
    (33+Math.random()*22)+'%'
+  bgrnd[0].style.background=
+   'radial-gradient(#0ff,#000)'
   bgrnd[0].style.opacity=0.3
   bgrnd[1].style.borderBottomRightRadius=55+'%'
   bgrnd[1].style.borderBottomLeftRadius=55+'%'
@@ -358,7 +325,9 @@ var eagl=
  },	
  re:function()
  {
-  bgrnd[0].style.opacity=0
+  bgrnd[0].style.background=
+   'radial-gradient(#ff0,#00f)'
+  bgrnd[0].style.opacity=0.2
   bgrnd[1].style.opacity=1
   bgrnd[1].style.transform='scale(0)'
   eagle[2].style.borderBottomLeftRadius=39+'%' 
@@ -397,54 +366,6 @@ eagle[0].onmouseover=()=>
 {
  eagl.clk()
 } 
-
-alg=['PHP','Python','java','C#']
-ialg=0
-Igthb=0
-gthb[0].onmouseover=()=>
-{
- gthb[0].style.color='#555'
- gthb[0].style.transform='scale(4)'
-  gthb[0].innerHTML='static hosting'
- gthb[1].style.transform=
-   'scale(3) translate(-11%,-99%) skew(12deg)'
- gthb[1].style.color='#f00'
- gthb[2].style.transform=
-  'scale(3) translate(-11%,-222%) skew(12deg)'
- gthb[2].style.color='#f0f'
- gthb[3].style.transform=
-  'scale(3) translate(-11%,33%) skew(12deg)'
- gthb[3].style.color='#ff0'
- gthb[4].style.transform=
-   'scale(3) translate(-11%,99%)'
- gthb[4].style.color='#0ff'
- gthb[5].style.transform=
-  'scale(3) translate(-22%,119%)'
- gthb[5].style.color='#0f6'
- Igthb= setInterval(()=>{
-  gthb[4].innerHTML=alg[ialg]
-   ialg++ 
-   if(ialg==4) ialg=0
- }, 1111)  
-}		  
-gthb[0].onmouseout=()=>
-{
- gthb[0].style.color='#f00'
- gthb[0].style.transform='scale(3)'
-  gthb[0].innerHTML='GitHub'
- gthb[1].style.transform='scale(0)'
- gthb[1].style.color='#fff'
- gthb[2].style.transform='scale(0)'
- gthb[2].style.color='#fff'
- gthb[3].style.transform='scale(0) '
- gthb[3].style.color='#fff'
- gthb[4].style.transform='scale(0) '
- gthb[4].style.color='#fff'
- gthb[5].style.transform='scale(0) '
- gthb[5].style.color='#fff'
-  clearInterval(Igthb)
-  ialg=0   
-}       
 
 //eagl.intr= setInterval(()=>,2222	
 </script>
