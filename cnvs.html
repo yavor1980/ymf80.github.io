@@ -92,15 +92,14 @@ bln=0
 x=0,y=0
 function fline()
 {
- cntxt.beginPath() 
- x=event.clientX/4
- y=event.clientY/4
- //if(bln==0)
-  cntxt.moveTo(0,0)
- //else 
-  cntxt.lineTo(x,y)
- cntxt.stroke()
- bln=!bln
+ if(bln==0){
+  cntxt.beginPath() 
+  cntxt.moveTo(event.clientX/4,event.clientY/4)
+ }else {
+  cntxt.lineTo(event.clientX/4,event.clientY/4)
+  cntxt.stroke()
+ } 
+ bln=1
 }
 cnv[0].onmousemove=()=>
 {
