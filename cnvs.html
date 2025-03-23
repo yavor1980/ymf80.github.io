@@ -29,8 +29,9 @@ canvas
 <body>
 <canvas></canvas> 
 <input type=button class=btn value='draw'>
-<input type=button class=btn value='line'>
+<input type=button class=btn value='rndline'>
 <input type=button class=btn value='round'>
+<input type=button class=btn value='line'>
 <input type=button class=btn value='clear'>
 
 <script>
@@ -42,6 +43,7 @@ cnv[0].style.height=97+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
  cntxt=cnv[0].getContext('2d')
+ cntxt.moveTo(4,4)
  
 btn[0].style.left=91+'%'
 btn[0].style.top=4+'%'
@@ -61,26 +63,44 @@ btn[3].style.left=91+'%'
 btn[3].style.top=32+'%'
 btn[3].style.background='#ab0'
 btn[3].style.transform='scale(2)'
+btn[4].style.left=91+'%'
+btn[4].style.top=44+'%'
+btn[4].style.background='#ab0'
+btn[4].style.transform='scale(2)'
 
-bcnvs=-1
-function fline()
+function fdrw()
+{
+ cntxt.beginPath()
+ cntxt.fillRect(event.offsetX/4,event.offsetY/4,1,1)
+}
+function frndline()
 {
  cntxt.beginPath()
  cntxt.moveTo(Math.random()*88,Math.random()*88)
- cntxt.lineTo(event.offsetX/4,event.offsetY/4)
+ cntxt.lineTo(event.clientX/4,event.clientY/4)
  cntxt.stroke()
 }
 function fround()
 {
  cntxt.beginPath()
- cntxt.arc(event.offsetX/4,event.offsetY/4,
+ cntxt.arc(event.clientX/4,event.clientY/4,
   9,0,2*Math.PI)
  cntxt.stroke()
 }
-function fdrw()
+bcnvs=3//-1
+bln=0 
+x=0,y=0
+function fline()
 {
- cntxt.beginPath()
- cntxt.fillRect(event.offsetX/4,event.offsetY/4,1,1)
+ cntxt.beginPath() 
+ x=event.clientX/4
+ y=event.clientY/4
+ //if(bln==0)
+  cntxt.moveTo(0,0)
+ //else 
+  cntxt.lineTo(x,y)
+ cntxt.stroke()
+ bln=!bln
 }
 cnv[0].onmousemove=()=>
 {
@@ -95,8 +115,9 @@ cnv[0].onclick=()=>
 { 
  switch(bcnvs) 
  {
-  case 1: fline(); break;
+  case 1: frndline(); break;
   case 2: fround(); break;
+  case 3: fline(); break;
  }  
 }
 
@@ -113,6 +134,10 @@ btn[2].onclick=()=>
  bcnvs=2
 }
 btn[3].onclick=()=>
+{
+ bcnvs=3
+}
+btn[4].onclick=()=>
 {
  cntxt.clearRect(0,0,999,999)
 }
