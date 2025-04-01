@@ -34,6 +34,7 @@ canvas
 <input type=button class=btn value='line'>
 <input type=button class=btn value='clear'>
 <input type=button class=btn value='axes'>
+<input type=button class=btn value='oscll'>
 
 <script>
 cnv=document.getElementsByTagName('canvas')
@@ -70,8 +71,12 @@ btn[4].style.background='#aba'
 btn[4].style.transform='scale(2)'
 btn[5].style.left=91+'%'
 btn[5].style.top=44+'%'
-btn[5].style.background='#880'
+btn[5].style.background='#886'
 btn[5].style.transform='scale(2)'
+btn[6].style.left=91+'%'
+btn[6].style.top=52+'%'
+btn[6].style.background='#886'
+btn[6].style.transform='scale(2)'
 
 function fdrw()
 {
@@ -102,7 +107,7 @@ function fline()
  }else {
   cntxt.lineTo(event.clientX/4,event.clientY/4)
   cntxt.stroke()
-  cntxt.endPath()
+  //cntxt.endPath()
  } 
  bln=1
 }
@@ -111,11 +116,20 @@ function faxs()
  cntxt.beginPath()
  cntxt.moveTo(0, 79)
  cntxt.lineTo(333, 79)
+ cntxt.moveTo(145, 0)
+ cntxt.lineTo(145, 333)
  cntxt.stroke()
- cntxt.endPath()
- //cnv[0].innerHTML=
- //alert(cnv[0].style.width)
+ //cntxt.endPath()
 }
+function foscll()
+{ 
+ for(i=0;i<99;i++)
+ {
+  cntxt.moveTo(145, 889)
+  cntxt.lineTo(145, 333)
+ }
+}
+
 cnv[0].onmousemove=()=>
 {
  cnv[0].style.border='11px ridge #ee0'
@@ -159,7 +173,10 @@ btn[5].onclick=()=>
 {
  faxs()
 }
-
+btn[6].onclick=()=>
+{
+// foscll()
+}
 //for(var i=0;i<n;i++) 
 </script> 
 </html>
