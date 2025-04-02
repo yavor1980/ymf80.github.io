@@ -113,7 +113,7 @@ function fline()
 }
 function faxs()
 {
- cntxt.beginPath()
+ //cntxt.beginPath()
  cntxt.moveTo(0, 79)
  cntxt.lineTo(333, 79)
  cntxt.moveTo(145, 0)
@@ -125,8 +125,9 @@ function foscll()
 { 
  for(i=0;i<99;i++)
  {
-  cntxt.moveTo(145, 889)
-  cntxt.lineTo(145, 333)
+  cntxt.moveTo(i, i)
+  cntxt.lineTo(i*3, i)
+  cntxt.stroke()
  }
 }
 
@@ -175,7 +176,7 @@ btn[5].onclick=()=>
 }
 btn[6].onclick=()=>
 {
-// foscll()
+ foscll()
 }
 //for(var i=0;i<n;i++) 
 </script> 
