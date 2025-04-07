@@ -33,7 +33,7 @@ canvas
 <input type=button class=btn value='round'>
 <input type=button class=btn value='line'>
 <input type=button class=btn value='clear'>
-<input type=button class=btn value='axes'>
+<input type=button class=btn visible=none value='axes'>
 <input type=button class=btn value='oscll'>
 
 <script>
@@ -45,7 +45,7 @@ cnv[0].style.height=97+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
  cntxt=cnv[0].getContext('2d')
- cntxt.moveTo(4,4)
+ cntxt.moveTo(0,333)
  
 btn[0].style.left=91+'%'
 btn[0].style.top=4+'%'
@@ -80,10 +80,12 @@ btn[6].style.transform='scale(2)'
 
 function fdrw()
 {
+ cntxt.fillStyle='#f00'
  cntxt.fillRect(event.offsetX/4,event.offsetY/4,1,1)
 }
 function frndline()
 {
+ cntxt.strokeStyle='#00f'
  cntxt.beginPath()
  cntxt.moveTo(Math.random()*88,Math.random()*88)
  cntxt.lineTo(event.clientX/4,event.clientY/4)
@@ -91,6 +93,7 @@ function frndline()
 }
 function fround()
 {
+ cntxt.strokeStyle='#909'
  cntxt.beginPath()
  cntxt.arc(event.clientX/4,event.clientY/4,
   9,0,2*Math.PI)
@@ -101,6 +104,7 @@ bln=0
 x=0,y=0
 function fline()
 {
+ cntxt.strokeStyle='#770'
  if(bln==0){
   cntxt.beginPath() 
   cntxt.moveTo(event.clientX/4,event.clientY/4)
@@ -114,21 +118,23 @@ function fline()
 function faxs()
 {
  //cntxt.beginPath()
+ cntxt.strokeStyle='#000'
  cntxt.moveTo(0, 79)
  cntxt.lineTo(333, 79)
  cntxt.moveTo(145, 0)
- cntxt.lineTo(145, 333)
+ cntxt.lineTo(145, 100)
  cntxt.stroke()
  //cntxt.endPath()
 }
 function foscll()
 { 
- for(i=0;i<99;i++)
+ cntxt.moveTo(0, 333)
+ cntxt.strokeStyle='#b00'
+ for(i=0;i<300;i++)
  {
-  cntxt.moveTo(i, i)
-  cntxt.lineTo(i*3, i)
-  cntxt.stroke()
- }
+  cntxt.lineTo(i,66+22*Math.sin(i/11+1))
+ } 
+ cntxt.stroke() 
 }
 
 cnv[0].onmousemove=()=>
