@@ -33,7 +33,7 @@ canvas
 <input type=button class=btn value='round'>
 <input type=button class=btn value='line'>
 <input type=button class=btn value='clear'>
-<input type=button class=btn visible=none value='axes'>
+<input type=button class=btn  value='axes'>
 <input type=button class=btn value='oscll'>
 
 <script>
@@ -48,34 +48,34 @@ cnv[0].style.cursor='pointer'
  cntxt.moveTo(0,333)
  
 btn[0].style.left=91+'%'
-btn[0].style.top=4+'%'
+btn[0].style.bottom=4+'%'
 btn[0].style.background='#f00'
 btn[0].style.color='#ff0'
 btn[0].style.transform='scale(2)'
 btn[1].style.left=91+'%'
-btn[1].style.top=12+'%'
+btn[1].style.bottom=12+'%'
 btn[1].style.background='#b00'
 btn[1].style.color='#ff0'
 btn[1].style.transform='scale(2)'
 btn[2].style.left=91+'%'
-btn[2].style.top=20+'%'
+btn[2].style.bottom=20+'%'
 btn[2].style.background='#dd0'
 btn[2].style.transform='scale(2)'
 btn[3].style.left=91+'%'
-btn[3].style.top=28+'%'
+btn[3].style.bottom=28+'%'
 btn[3].style.background='#ab0'
 btn[3].style.transform='scale(2)'
 btn[4].style.left=91+'%'
-btn[4].style.top=36+'%'
+btn[4].style.bottom=36+'%'
 btn[4].style.background='#aba'
 btn[4].style.transform='scale(2)'
 btn[5].style.left=91+'%'
-btn[5].style.top=44+'%'
+btn[5].style.top=4+'%'
 btn[5].style.background='#886'
 btn[5].style.transform='scale(2)'
 btn[6].style.left=91+'%'
-btn[6].style.top=52+'%'
-btn[6].style.background='#886'
+btn[6].style.top=13+'%'
+btn[6].style.background='#e00'
 btn[6].style.transform='scale(2)'
 
 function fdrw()
@@ -126,21 +126,38 @@ function faxs()
  cntxt.stroke()
  //cntxt.endPath()
 }
+shft=66
+scle=22
+trvl=11
 function foscll()
 { 
- cntxt.moveTo(0, 333)
+ bcnvs=
  cntxt.strokeStyle='#b00'
  for(i=0;i<300;i++)
  {
-  cntxt.lineTo(i,66+22*Math.sin(i/11+1))
+  cntxt.lineTo(i,shft+scle*Math.sin(i/trvl+1))
  } 
  cntxt.stroke() 
+}
+function foscllmv()
+{ 
+setInterval(()=>{
+ shft=66+Math.random()*11
+ scle=22+Math.random()*11
+ trvl=11+Math.random()*11
+ for(i=0;i<300;i++)
+ {
+  cntxt.lineTo(i,shft+scle*Math.sin(i/trvl+1))
+ } 
+ cntxt.stroke() 
+}, 999)
 }
 
 cnv[0].onmousemove=()=>
 {
  cnv[0].style.border='11px ridge #ee0'
- if(bcnvs==0)fdrw()  
+ if(bcnvs==0) fdrw()  
+ if(bcnvs==4) foscllmv()
 }
 cnv[0].onmouseout=()=>
 {
@@ -182,6 +199,7 @@ btn[5].onclick=()=>
 }
 btn[6].onclick=()=>
 {
+ bcnvs=4
  foscll()
 }
 //for(var i=0;i<n;i++) 
