@@ -90,6 +90,7 @@ function frndline()
  cntxt.moveTo(Math.random()*88,Math.random()*88)
  cntxt.lineTo(event.clientX/4,event.clientY/4)
  cntxt.stroke()
+ cntxt.endPath()
 }
 function fround()
 {
@@ -98,6 +99,7 @@ function fround()
  cntxt.arc(event.clientX/4,event.clientY/4,
   9,0,2*Math.PI)
  cntxt.stroke()
+ cntxt.endPath()
 }
 bcnvs=-1
 bln=0 
@@ -105,33 +107,33 @@ x=0,y=0
 function fline()
 {
  cntxt.strokeStyle='#770'
- if(bln==0){
+ if(bln==0)
+ {
   cntxt.beginPath() 
   cntxt.moveTo(event.clientX/4,event.clientY/4)
- }else {
+ }
+  else 
+ {
   cntxt.lineTo(event.clientX/4,event.clientY/4)
   cntxt.stroke()
-  //cntxt.endPath()
+  cntxt.endPath()
  } 
  bln=1
 }
 function faxs()
 {
- //cntxt.beginPath()
  cntxt.strokeStyle='#000'
  cntxt.moveTo(0, 79)
  cntxt.lineTo(333, 79)
  cntxt.moveTo(145, 0)
  cntxt.lineTo(145, 100)
- cntxt.stroke()
- //cntxt.endPath()
 }
 shft=66
 scle=22
 trvl=11
+Iosc=0
 function foscll()
 { 
- bcnvs=
  cntxt.strokeStyle='#b00'
  for(i=0;i<300;i++)
  {
@@ -141,7 +143,10 @@ function foscll()
 }
 function foscllmv()
 { 
-setInterval(()=>{
+
+Iosc=setInterval(()=>{
+ cntxt.beginPath()
+ cntxt.clearRect(0,0,999,999)
  shft=66+Math.random()*11
  scle=22+Math.random()*11
  trvl=11+Math.random()*11
@@ -149,22 +154,26 @@ setInterval(()=>{
  {
   cntxt.lineTo(i,shft+scle*Math.sin(i/trvl+1))
  } 
- cntxt.stroke() 
+cntxt.stroke() 
+cntxt.endPath()
 }, 999)
+
+cntxt.endPath()
 }
 
 cnv[0].onmousemove=()=>
 {
  cnv[0].style.border='11px ridge #ee0'
  if(bcnvs==0) fdrw()  
- if(bcnvs==4) foscllmv()
 }
 cnv[0].onmouseout=()=>
 {
  cnv[0].style.border='11px ridge #ff0'
+ 
 }
 cnv[0].onclick=()=>
 { 
+ clearInterval(Iosc)
  switch(bcnvs) 
  {
   case 1: frndline(); break;
@@ -199,8 +208,8 @@ btn[5].onclick=()=>
 }
 btn[6].onclick=()=>
 {
- bcnvs=4
  foscll()
+ foscllmv()
 }
 //for(var i=0;i<n;i++) 
 </script> 
