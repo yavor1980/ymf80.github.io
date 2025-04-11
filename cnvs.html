@@ -122,11 +122,14 @@ function fline()
 }
 function faxs()
 {
+  cntxt.beginPath()
  cntxt.strokeStyle='#000'
  cntxt.moveTo(0, 79)
  cntxt.lineTo(333, 79)
  cntxt.moveTo(145, 0)
  cntxt.lineTo(145, 100)
+  cntxt.stroke()
+  cntxt.endPath()
 }
 shft=66
 scle=22
@@ -154,11 +157,9 @@ Iosc=setInterval(()=>{
  {
   cntxt.lineTo(i,shft+scle*Math.sin(i/trvl+1))
  } 
-cntxt.stroke() 
-cntxt.endPath()
-}, 999)
-
-cntxt.endPath()
+  cntxt.stroke() 
+  //cntxt.endPath()
+ }, 999)
 }
 
 cnv[0].onmousemove=()=>
@@ -173,7 +174,7 @@ cnv[0].onmouseout=()=>
 }
 cnv[0].onclick=()=>
 { 
- clearInterval(Iosc)
+ 
  switch(bcnvs) 
  {
   case 1: frndline(); break;
@@ -206,10 +207,19 @@ btn[5].onclick=()=>
 {
  faxs()
 }
+boscll=0
 btn[6].onclick=()=>
 {
- foscll()
- foscllmv()
+ if(boscll==0)
+ {
+  foscll()
+  foscllmv()
+ }
+ else
+ {
+  clearInterval(Iosc)
+ }
+ boscll=!boscll
 }
 //for(var i=0;i<n;i++) 
 </script> 
