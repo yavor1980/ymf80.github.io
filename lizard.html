@@ -63,17 +63,24 @@
  background:#f00;
  border-radius:55%;
 }
-.pw
+.pw,.hvs
 {
  position:absolute; 
  transition:1s;
  border-radius:22%;
 }
-.hvs
+.fhvs
 {
  position:absolute; 
  transition:1s;
- border-radius:22%;
+ border-radius:55%;
+ border-bottom-left-radius:22%;
+ border-bottom-right-radius:22%;
+ left:30%;
+ top:-98%;
+ width:45%;
+ height:99%;
+ background:radial-gradient(#444,#440);
 }
 
 .ttagrss
@@ -104,9 +111,9 @@
    </div>
   </div> 
  </div>
+ <div class=pw><div class=fhvs></div></div>
  <div class=pw></div>
- <div class=pw></div>
- <div class=pw></div>
+ <div class=pw><div class=fhvs></div></div>
  <div class=pw><div class=pw></div></div>
  <div class=pw><div class=hvs></div></div>
  <div class=pw><div class=hvs></div></div>
@@ -146,7 +153,6 @@ grnd[1].style.background=
 grnd[1].style.borderTopLeftRadius=38+'%'	  
 grnd[1].style.borderTopRightRadius=44+'%'	
 grnd[1].style.zIndex=-1
-	   
 grnd[2].style.left=4+'%'	  
 grnd[2].style.bottom=0+'%'
 grnd[2].style.width=39+'%'
@@ -157,7 +163,6 @@ grnd[2].style.opacity=0.4
 grnd[2].style.borderTopLeftRadius=44+'%'	  
 grnd[2].style.borderTopRightRadius=44+'%'		  
 grnd[2].style.zIndex=-2
-
 grnd[3].style.left=55+'%'	  
 grnd[3].style.bottom=0+'%'
 grnd[3].style.width=35+'%'
@@ -168,15 +173,16 @@ grnd[3].style.opacity=0.6
 grnd[3].style.borderTopLeftRadius=38+'%'	  
 grnd[3].style.borderTopRightRadius=44+'%'		  
 grnd[3].style.zIndex=-2
-
 grnd[4].style.left=75+'%'	  
 grnd[4].style.bottom=75+'%'
 grnd[4].style.width=9+'%'
 grnd[4].style.height=11+'%'
 grnd[4].style.background=
- 'radial-gradient(#222,#822)' 
+ 'radial-gradient(#922,#b22)' 
 grnd[4].style.opacity=0.9
-grnd[4].style.borderRadius=55+'%'	  		  
+grnd[4].style.borderRadius=55+'%'
+grnd[4].style.borderBottomLeftRadius=22+'%'
+grnd[4].style.borderBottomRightRadius=26+'%'
 	  
 function inn(nm,i, l,t, w,h, bkgrd, btlr,btrr,bblr,bbrr)
 {
