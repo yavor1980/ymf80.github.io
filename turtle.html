@@ -6,11 +6,16 @@ body
 {
  background:linear-gradient(57deg,#000,#888);
 }
+button
+{
+ position:absolute;
+ cursor:pointer;
+}
 
 .grnd
 {
-position:absolute;
-transition:1s;
+ position:absolute;
+ transition:1s;
 }
 
 .pzr
@@ -25,7 +30,7 @@ transition:1s;
  position:absolute;
  transition:1s; 
 }
-.pw
+.pw,.bpw
 {
  position:absolute;
  transition:1s; 
@@ -42,19 +47,23 @@ transition:1s;
 
 </style>
 
+<button>UP</button>
+
 <div class=grnd>
  <div class=grnd></div>
 </div>
 
 <div class=pzr>
-<div class=pzr></div>
+ <div class=pzr></div>
  <div class=pw></div>
  <div class=pw></div>
  <div class=pw></div>
- <div class=pw></div>
+ <div class=bpw></div>
+ <div class=bpw></div>
  <div class=hd>
   <div class=hd></div>
   <div class=hd></div>  
+  <div class=hd></div> 
  </div>
 </div>
 
@@ -86,14 +95,23 @@ transition:1s;
 </div>
  
 <script>
+btn=document.getElementsByTagName('button')
+
 grnd=document.getElementsByClassName('grnd')
 pzr=document.getElementsByClassName('pzr')
 hd=document.getElementsByClassName('hd')
 pw=document.getElementsByClassName('pw')
+bpw=document.getElementsByClassName('bpw')
 
 frz=document.getElementsByClassName('frz')
 prgrss=document.getElementsByClassName('prgrss')
 scty=document.getElementsByClassName('scty')
+
+btn[0].style.right=5+'%'
+btn[0].style.top=7+'%'
+btn[0].style.background='#b00'
+btn[0].style.color='#eee'
+btn[0].style.transform='scale(3)'
 
 grnd[0].style.left=0+'%'
 grnd[0].style.bottom=0+'%'
@@ -102,7 +120,8 @@ grnd[0].style.height=33+'%'
 grnd[0].style.background=
  'linear-gradient(#080,#880)'
 grnd[0].style.borderTopLeftRadius=33+'%'
-grnd[0].style.borderTopRightRadius=33+'%'  
+grnd[0].style.borderTopRightRadius=33+'%' 
+grnd[0].style.zIndex=-1
 grnd[1].style.left=1+'%'
 grnd[1].style.bottom=5+'%'
 grnd[1].style.width=98+'%'
@@ -156,6 +175,13 @@ hd[2].style.background=
  'radial-gradient(11px, #f00, #fff)';
 hd[2].style.borderRadius=55+'%'  
 hd[2].style.transform='scale(0.6)'
+hd[3].style.left=31+'%' 
+hd[3].style.top=66+'%'
+hd[3].style.width=43+'%' 
+hd[3].style.height=9+'%'
+hd[3].style.background=
+ 'radial-gradient(#800,#555)'
+hd[3].style.borderRadius=55+'%' 
   
 pw[0].style.left=-11+'%'
 pw[0].style.top=87+'%'
@@ -170,12 +196,25 @@ pw[2].style.top=90+'%'
 pw[2].style.background='#222'
 pw[2].style.transform='scale(1.6,0.4)' 
 pw[2].style.opacity=0.5
-  
+
+bpw[0].style.left=-11+'%'
+bpw[0].style.top=87+'%'
+bpw[0].style.background='#333'
+bpw[0].style.borderTopLeftRadius=55+'%' 
+bpw[0].style.transform='scale(1.2)' 
+bpw[0].style.zIndex=-1
+bpw[1].style.left=77+'%'
+bpw[1].style.top=87+'%'
+bpw[1].style.background='#333'
+bpw[1].style.borderTopRightRadius=55+'%' 
+bpw[1].style.transform='scale(1.2)'
+bpw[1].style.zIndex=-1
+
 frz[0].style.left=44+'%' 
 frz[0].style.top=20+'%'
 frz[0].style.transform='scale(0)'
 frz[1].style.left=44+'%' 
-frz[1].style.top=44+'%'
+frz[1].style.top=20+'%'
 frz[1].style.transform='scale(0)'
  
 prgrss[0].style.left=11+'%' 
@@ -196,7 +235,7 @@ scty[0].style.left=62+'%'
 scty[0].style.top=9+'%'
 scty[0].style.color='#0f0' 
 scty[0].style.transform='scale(2)'
-scty[1].style.left=72+'%' 
+scty[1].style.left=19+'%' 
 scty[1].style.top=22+'%'
 scty[1].style.color='#ff0' 
 scty[1].style.transform='scale(2)'
@@ -225,6 +264,15 @@ function mv()
 }
    Ig=setInterval(mv, 1111) 
   
+btn[0].onclick=()=>
+{
+ pzr[1].style.top=34+'%'
+ 
+ setTimeout(()=>{
+  pzr[1].style.top=69+'%'
+ }, 1555)
+} 
+  
 Ipzr0=0
 bpzr0=0
 pzr[0].onmouseover=()=>
@@ -242,7 +290,7 @@ pzr[0].onmouseover=()=>
    'scale(3) skew(-33deg) translate(33%, 22%)' 
   frz[0].style.zIndex=1
   frz[1].style.transform=
-   'scale(3) skew(-33deg) translate(69%, 222%)' 
+   'scale(3) skew(-33deg) translate(69%, 322%)' 
  }
   else
  {
@@ -251,7 +299,7 @@ pzr[0].onmouseover=()=>
   frz[0].style.transform=
    'scale(3) skew(33deg) translate(-33%, 22%)' 
   frz[1].style.transform=
-   'scale(3) skew(33deg) translate(69%, 222%)' 
+   'scale(3) skew(33deg) translate(69%, 322%)' 
  }
   hd[1].style.transform='scale(1)'
   hd[2].style.transform='scale(1)' 
@@ -265,8 +313,6 @@ pzr[0].onmouseout=()=>
  hd[2].style.transform='scale(0.6) '
  frz[0].style.transform='scale(0) '
  frz[1].style.transform='scale(0) '
- frz[2].style.transform='scale(0) '
- frz[3].style.transform='scale(0) '
   clearInterval(Ipzr0)
 }
   
@@ -308,7 +354,7 @@ scty[0].onmouseout=()=>
  scty[0].style.zIndex=0
  scty[0].style.transform='scale(2)' 
  scty[0].style.color='#0f0'
-  scty[0].innerHTML='PostIndustrial<br> seciety'
+  scty[0].innerHTML='PostIndustrial<br> society'
 }   
   
 scty[1].onmouseover=()=>
