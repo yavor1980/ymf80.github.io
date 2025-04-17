@@ -21,7 +21,7 @@ button
 .pzr
 {
  position:absolute;
- transition:3s;
+ transition:1s;
  cursor:pointer;
 }
 
@@ -267,9 +267,14 @@ function mv()
 btn[0].onclick=()=>
 {
  pzr[1].style.top=34+'%'
- 
+ hd[0].style.top=5+'%'
+ pw[0].style.top=44+'%'
+ pw[1].style.top=44+'%'
  setTimeout(()=>{
   pzr[1].style.top=69+'%'
+  hd[0].style.top=50+'%'
+  pw[0].style.top=87+'%'
+  pw[1].style.top=87+'%'
  }, 1555)
 } 
   
@@ -382,7 +387,7 @@ scty[2].onmouseover=()=>
  scty[2].style.transform=
   'scale(2.4) translate(11%,0) skew(-12deg)' 
  scty[2].style.color='#0ff'
- scty[2].style.zIndex=2
+ scty[2].style.zIndex=1
 }
 scty[2].onmouseout=()=>
 {
