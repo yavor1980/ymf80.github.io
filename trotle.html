@@ -212,6 +212,24 @@ cpcty[8].style.background='#777'
 cpcty[8].style.opacity=0
 cpcty[8].style.borderRadius=22+'%'
 
+bbtn=1
+btn[0].onclick=()=>
+{
+ if(bbtn==0)
+ {
+  coil[0].onmouseout()
+  cpcty[0].onmouseout()
+   btn[0].innerHTML='ON'
+ } 
+ else
+ {
+  coil[0].onmouseover()
+  cpcty[0].onmouseover()
+   btn[0].innerHTML='OFF'
+ } 
+ bbtn=!bbtn
+}
+
 coilI=0
 coil[0].onmouseover=()=>
 {
@@ -299,7 +317,7 @@ cpcty[0].onmouseout=()=>
  cpcty[4].style.background='#444'
  cpcty[4].style.transform='translate(0,0)'
  cpcty[5].style.transform='scale(0)'
- cpcty[6].style.color='#404'
+ cpcty[6].style.color='#20f'
  cpcty[6].style.transform=
   'scale(3) translate(0,-222%)'
  cpcty[7].style.color='#444' 
