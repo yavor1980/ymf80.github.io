@@ -61,12 +61,13 @@ hd[1].style.top=58+'%'
 hd[1].style.color='#900'
 hd[1].style.cursor='pointer' 
 hd[1].style.transform='scale(7)'
-hd[2].style.left=22+'%'
-hd[2].style.top=78+'%'
-hd[2].style.width=7+'%'
-hd[2].style.height=8+'%'
+hd[1].style.zIndex=1
+hd[2].style.left=12+'%'
+hd[2].style.top=24+'%'
+hd[2].style.width=78+'%'
+hd[2].style.height=43+'%'
 hd[2].style.background=
- 'radial-gradient(#f00,#000,#f00,#000,#f00)'
+ 'radial-gradient(#ff0,#f0f,#0f0,#f0f,#00f)'
 hd[2].style.borderRadius=46+'%'
 hd[2].style.opacity=0
 hd[2].style.zIndex=-1
@@ -154,7 +155,8 @@ function sltcl()
   slte[0].style.transform=
    'scale(1.2) translate('+(Math.random()*666-333)+
    '%,-888%)'
-  ppp[0].style.transform='scale(5) translate(-66%,-33%)'+
+  ppp[0].style.transform='scale('+(1.6*Math.random()+5)+
+   ') translate(-66%,-93%)'+
    'rotate('+(Math.random()*444-222)+'deg)' 
   setTimeout(()=>{
    slte[1].style.transition='444ms'
