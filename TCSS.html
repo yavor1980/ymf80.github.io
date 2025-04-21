@@ -23,7 +23,7 @@
 
 </style>
 <div class=ttl>Terr center</div>
- <div class=ttl>social politics</div>
+ <div class=ttl>social politic</div>
 
 <div class=psy>psycholog
  <div class=psy>interview</div>
@@ -38,9 +38,9 @@
 </div>
 
 <div class=trck>
- <div class=trck></div>
- <div class=trck></div>
- <div class=trck></div>
+ <div class=trck>news</div>
+ <div class=trck>discuss</div>
+ <div class=trck>conclude</div>
 </div>
 
 <script>
@@ -97,28 +97,28 @@ trck[0].style.borderRadius=3+'%'
 trck[1].style.left=3+'%'
 trck[1].style.top=9+'%'
 trck[1].style.width=93+'%'
-trck[1].style.height=22+'%'
+trck[1].style.height=20+'%'
 trck[1].style.background='#990'
+trck[1].style.paddingTop=18+'px'
+trck[1].style.fontSize=0+'em'
 trck[1].style.cursor='pointer'
 trck[2].style.left=3+'%'
 trck[2].style.top=39+'%'
 trck[2].style.width=93+'%'
-trck[2].style.height=22+'%'
+trck[2].style.height=20+'%'
 trck[2].style.background='#770'
+trck[2].style.paddingTop=18+'px'
+trck[2].style.fontSize=0+'em'
 trck[2].style.cursor='pointer'
 trck[3].style.left=3+'%'
 trck[3].style.top=69+'%'
 trck[3].style.width=93+'%'
-trck[3].style.height=22+'%'
+trck[3].style.height=20+'%'
 trck[3].style.background='#550'
+trck[3].style.paddingTop=18+'px'
+trck[3].style.fontSize=0+'em'
 trck[3].style.cursor='pointer'
 
-function clk()
-{
- trck[1].style.top=0+'%'
- trck[2].style.top=0+'%'
- trck[3].style.top=0+'%'
-}
 ttl[0].onmouseover=()=>
 { 
  ttl[0].style.transform='scale(1.1) skew(-12deg)'
@@ -143,27 +143,20 @@ nm[0].onmouseover=()=>
  nm[1].style.color='#ff0'
  nm[2].style.color='#00f'
  nm[3].style.color='#0f0'
-  //clk()
  Imovr=setInterval(()=>
  {
-  trck[1].style.transition=999+'ms'
-  trck[2].style.transition=999+'ms'
-  trck[3].style.transition=999+'ms'
-  clk()
+  trck[1].style.color='#b00'
+  trck[1].style.fontSize=(3+Math.random())+'em'
+  trck[2].style.color='#bb0'
+  trck[2].style.fontSize=(3+Math.random())+'em'
+  trck[3].style.color='#b0b'
+  trck[3].style.fontSize=(3+Math.random())+'em'
  nm[1].style.transform=
   'scale('+(1+Math.random()/4)+') translate(117%,-87%)'
  nm[2].style.transform=
   'scale('+(1+Math.random()/4)+') translate(117%,2%)'
  nm[3].style.transform=
-  'scale('+(1+Math.random()/4)+') translate(117%,99%)'
-  setTimeout(()=>{
-    trck[1].style.transition=0+'ms'
-    trck[1].style.top=9+'%'
-	trck[2].style.transition=0+'ms'
-	trck[2].style.top=39+'%'
-	trck[3].style.transition=0+'ms'
-	trck[3].style.top=69+'%'
-  }, 888)  
+  'scale('+(1+Math.random()/4)+') translate(117%,99%)' 
  }, 999) 
 }
 nm[0].onmouseout=()=>
@@ -178,6 +171,12 @@ nm[0].onmouseout=()=>
  nm[2].style.color='#000'
  nm[3].style.transform='scale(0)'
  nm[3].style.color='#000'
+ trck[1].style.color='#000'
+ trck[1].style.fontSize=0+'em'
+ trck[2].style.color='#000'
+ trck[2].style.fontSize=0+'em'
+ trck[3].style.color='#000'
+ trck[3].style.fontSize=0+'em'
   clearInterval(Imovr)
 }
 }
