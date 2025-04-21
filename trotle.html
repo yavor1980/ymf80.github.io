@@ -217,21 +217,21 @@ btn[0].onclick=()=>
 {
  if(bbtn==0)
  {
-  coil[0].onmouseout()
-  cpcty[0].onmouseout()
+  fcoiloff()
+  fcpctyoff()
    btn[0].innerHTML='ON'
  } 
  else
  {
-  coil[0].onmouseover()
-  cpcty[0].onmouseover()
+  fcoilon()
+  fcpctyon()
    btn[0].innerHTML='OFF'
  } 
  bbtn=!bbtn
 }
 
 coilI=0
-coil[0].onmouseover=()=>
+function fcoilon()
 {
  coil[0].style.transform='scale(2.1)'
  coil[1].style.border='11px ridge #900'
@@ -261,8 +261,12 @@ coil[0].onmouseover=()=>
   fld[4].style.transform=
    'scale('+(p+1.4)+') translate(-22%,55%) skew(-23deg)'
  }, 333)
+}
+coil[0].onmouseover=()=>
+{
+ if(bbtn==1) fcoilon()
 }  
-coil[0].onmouseout=()=>
+function fcoiloff()
 {
  coil[0].style.transform='scale(2)'
  coil[1].style.border='11px ridge #333'
@@ -285,10 +289,14 @@ coil[0].onmouseout=()=>
  fld[6].style.opacity=0
  fld[6].style.transform='translate(0%,0)'
   clearInterval(coilI)
+}
+coil[0].onmouseout=()=>
+{
+ fcoiloff()
 }    
 
 cpctyI=0
-cpcty[0].onmouseover=()=>
+function fcpctyon()
 {
  cpcty[1].style.background='#900'
  cpcty[2].style.background='#c00'
@@ -308,7 +316,11 @@ cpcty[0].onmouseover=()=>
   cpcty[5].style.transform='scale('+p+')'
  }, 333)
 }
-cpcty[0].onmouseout=()=>
+cpcty[0].onmouseover=()=>
+{
+ if(bbtn==1) fcpctyon()
+}
+function fcpctyoff()
 {
  cpcty[1].style.background='#777'
  cpcty[2].style.background='#444'
@@ -324,6 +336,10 @@ cpcty[0].onmouseout=()=>
  cpcty[7].style.transform='scale(0)' 
  cpcty[8].style.opacity=0
   clearInterval(cpctyI)
+}
+cpcty[0].onmouseout=()=>
+{
+ fcpctyoff()
 }
 
 
