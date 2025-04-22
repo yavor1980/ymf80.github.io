@@ -11,7 +11,7 @@
 { 
  position:absolute;
  transition:1s;
- left:11%;
+ right:7%;
  top:4%;
  width:9%;
  height:6%;
@@ -317,16 +317,12 @@ fsh[0].onmouseout=()=>
  bbl[2].style.transition='0s'
  bbl[2].style.transform='scale(0)'
 }
-fsh[0].onclick=()=>
-{
- 
-}
- 
+
 t_wtr[0].onmouseover=()=>
 {
+ t_wtr[0].style.color='#220'
  t_wtr[0].style.transform=
   'scale(1.7) translate(6%,0)'
- t_wtr[0].style.color='#220'
 }
 t_wtr[0].onmouseout=()=>
 {
@@ -336,14 +332,15 @@ t_wtr[0].onmouseout=()=>
  
 t_wtr[1].onmouseover=()=>
 { 
+ t_wtr[1].style.color='#110'
  t_wtr[1].style.transform=
   'scale(1.7) translate(23%,0)'
- t_wtr[1].style.color='#110'
 }
 t_wtr[1].onmouseout=()=>
 {
- t_wtr[1].style.transform='scale(1)'
  t_wtr[1].style.color='#000'
+ t_wtr[1].style.transform='scale(1)'
+ 
 }
  
 </script>
