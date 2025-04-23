@@ -82,6 +82,7 @@
     <div class=plh>
      <div class=plh></div> 
      <div class=plh></div> 
+	 <div class=plh></div> 
     </div> 
    </div>
   </div> 
@@ -245,6 +246,13 @@ plh[2].style.width=44+'%'
 plh[2].style.height=66+'%'  
 plh[2].style.background='#bbb'
 plh[2].style.borderRadius=9+'%'
+plh[3].style.left=-166+'%'
+plh[3].style.top=-9+'%'  
+plh[3].style.width=444+'%'
+plh[3].style.height=77+'%'  
+plh[3].style.background='#ff0'
+plh[3].style.borderRadius=55+'%'
+plh[3].style.opacity=0
 
 shrm[0].style.left=64+'%'
 shrm[0].style.top=33+'%' 
@@ -372,6 +380,8 @@ jws[0].onmouseover=()=>
  plh[1].style.opacity=0
  plh[2].style.opacity=0
  vctrI=setInterval(()=>{
+  plh[3].style.opacity=Math.random()
+  
   if(bth)
   {
    vctr[0].style.transform='scale(3) skew(11deg)'
@@ -396,6 +406,7 @@ jws[0].onmouseout=()=>
   shrm[0].onmouseout()
  plh[1].style.opacity=1
  plh[2].style.opacity=1
+ plh[3].style.opacity=0
  vctr[0].style.transform='scale(0)'
  vctr[1].style.transform='scale(0)'
  vctr[2].style.transform='scale(0)'
