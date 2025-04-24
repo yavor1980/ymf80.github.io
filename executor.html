@@ -381,7 +381,8 @@ jws[0].onmouseover=()=>
  plh[2].style.opacity=0
  vctrI=setInterval(()=>{
   plh[3].style.opacity=Math.random()
-  
+  plh[3].style.transform='scale('+
+   (0.5+Math.random()/2)+',1)'
   if(bth)
   {
    vctr[0].style.transform='scale(3) skew(11deg)'
