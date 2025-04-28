@@ -13,57 +13,17 @@
  background:linear-gradient(44deg,#330,#cc0);
 }
 
-.blck
-{
- position:absolute;
- transition:1s;
- font-size:1.2em;
-}
-.blck:hover
-{
- transform:scale(1.2);
-}
-
-.nm
+.indctr,.ttmthm,.bin,.ttsrv,.ttcntrl
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
- color:#800;
- font-size:3em;
- z-index:1;
-}
-
-.indctr,.ttmthm,.ttsrv,.ttcntrl
-{
- position:absolute;
- transition:1s;
- cursor:pointer;
-}
-
 }
 
 </style>
 </head>
 
 <body id=idbd >
-  
-<div class=blck> 
- <input type=button class=blck value='get'>
- <input type=button class=blck value='erase'><br>
- <input class=blck type=range value=0 
-    min=0 max=100 step=1> 
-</div>
-
-<div class=nm></div>
-<div class=nm></div>
-<div class=nm></div>
-<div class=nm></div>
-<div class=nm></div>
-<div class=nm></div>
-<div class=nm></div>
-<div class=nm></div>
-<div class=nm></div>
 
 <div class=indctr>
  <div class=indctr></div>
@@ -75,8 +35,15 @@
  <div class=indctr></div>
 </div>
 
+<div class=bin>
+ <div class=bin></div>
+ <div class=bin></div>
+ <div class=bin></div>
+ <div class=bin></div>
+</div>
+
 <div class=ttmthm>
- natural
+ DIGITS
 </div>
  <div class=ttmthm> 
   Each number is 1 more<br>&nbsp 
@@ -100,9 +67,8 @@
  <div class=ttsrv>data<br>&nbsp exchngng</div>
 
 <script  >
-blck=document.getElementsByClassName('blck')
-nm=document.getElementsByClassName('nm')
 indctr=document.getElementsByClassName('indctr')
+bin=document.getElementsByClassName('bin')
 
 ttmthm=document.getElementsByClassName('ttmthm')
 ttsrv=document.getElementsByClassName('ttsrv')
@@ -114,20 +80,6 @@ function init(nm,i,l,t,w,h)
  nm[i].style.width=w+'%'
  nm[i].style.height=h+'%'
 }
-init(blck,0,66,11,22,23) 
- blck[0].style.background=
-  'radial-gradient(#ff0,#f00)'
- blck[0].style.borderRadius=22+'%'
- blck[0].style.border='8px ridge #b0b'
-init(blck,1,11,11,33,33) 
- blck[1].style.color='#b00'
- blck[1].style.background='#0bb'
- blck[1].style.cursor='pointer'
-init(blck,2,54,11,33,33)
- blck[2].style.color='#900'
- blck[2].style.background='#0bb'
- blck[2].style.cursor='pointer'
-init(blck,3,11,68,66,'')
 
 init(indctr,0,11,39,7,18)
  indctr[0].style.background='#bb0'
@@ -154,6 +106,18 @@ init(indctr,6,87,8,8,42)
 init(indctr,7,87,52,8,41)
  indctr[7].style.background='#555'
  indctr[7].style.borderRadius=55+'%'
+
+init(bin,0,46,22,44,18)
+ bin[0].style.background='#666'
+ bin[0].style.borderRadius=7+'%'
+init(bin,1,4,5,22,77)
+ bin[1].style.background='#bbb'
+init(bin,2,28,5,22,77)
+ bin[2].style.background='#bbb'
+init(bin,3,52,5,22,77)
+ bin[3].style.background='#bbb'
+init(bin,4,76,5,22,77)
+ bin[4].style.background='#bbb'
 
 ttmthm[0].style.left=44+'%'
 ttmthm[0].style.top=9+'%'
@@ -200,43 +164,6 @@ ttsrv[7].style.left='66%'
 ttsrv[7].style.top='66%'
 ttsrv[7].style.color='#f0b'
 ttsrv[7].style.transform='scale(0)'
-
-blck[0].onmouseover=()=>
-{
- blck[3].value=Math.round(Math.random()*99)
- fi0('#d00')
-}
-blck[0].onmouseout=()=>
-{
- ficlr('#555')
-}
-
-iblck=0
-sum=0
-blck[1].onclick=()=>
-{ 
-  sum=sum+Number(blck[3].value)
- nm[iblck].style.left=
-  (27+Math.random()*20)+'%'
- nm[iblck].style.top=
-  (15+Math.random()*20)+'%'
-  nm[iblck].innerHTML=blck[3].value
- iblck++ 	  
-}
-setInterval(()=>{
- for(i=0;i<iblck;i++)
- {
-  nm[i].style.transform=
-   'scale('+(Math.random()/2+1)+')' 
- }  
-}, 999)
-
-blck[2].onclick=()=>
-{
- for(i=0;i<iblck;i++)
-   nm[i].innerHTML=''
-  iblck=0
-}
 
 function fi0(clr)
 {
@@ -353,7 +280,7 @@ ttmthm[0].onmouseout=()=>
 {
  ttmthm[0].style.transform='scale(5)'
  ttmthm[0].style.color='#0bb'
-  ttmthm[0].innerHTML='natural'
+  ttmthm[0].innerHTML='DIGITS'
  ttmthm[1].style.transform='scale(0)'
  ttmthm[2].style.transform='scale(0)'
 }  
