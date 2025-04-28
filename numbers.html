@@ -13,11 +13,16 @@
  background:linear-gradient(44deg,#330,#cc0);
 }
 
-.indctr,.ttmthm,.bin,.ttsrv,.ttcntrl
+.indctr,.ttmthm,.bin,.ttsrv,.ttcntrl,.ttl
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
+}
+.bin
+{
+ text-align:center;
+ font-size:2em;
 }
 
 </style>
@@ -33,6 +38,7 @@
  <div class=indctr></div>
  <div class=indctr></div>
  <div class=indctr></div>
+ <div class=ttl>DEC</div>
 </div>
 
 <div class=bin>
@@ -40,6 +46,7 @@
  <div class=bin></div>
  <div class=bin></div>
  <div class=bin></div>
+ <div class=ttl>BIN</div>
 </div>
 
 <div class=ttmthm>
@@ -66,9 +73,10 @@
  <div class=ttsrv>request</div>
  <div class=ttsrv>data<br>&nbsp exchngng</div>
 
-<script  >
+<script>
 indctr=document.getElementsByClassName('indctr')
 bin=document.getElementsByClassName('bin')
+ttl=document.getElementsByClassName('ttl')
 
 ttmthm=document.getElementsByClassName('ttmthm')
 ttsrv=document.getElementsByClassName('ttsrv')
@@ -106,6 +114,9 @@ init(indctr,6,87,8,8,42)
 init(indctr,7,87,52,8,41)
  indctr[7].style.background='#555'
  indctr[7].style.borderRadius=55+'%'
+ttl[0].style.left=120+'%'
+ttl[0].style.top=100+'%'
+ttl[0].style.color='#eee'
 
 init(bin,0,46,22,44,18)
  bin[0].style.background='#666'
@@ -118,6 +129,8 @@ init(bin,3,52,5,22,77)
  bin[3].style.background='#bbb'
 init(bin,4,76,5,22,77)
  bin[4].style.background='#bbb'
+ttl[1].style.left=-20+'%'
+ttl[1].style.color='#eee' 
 
 ttmthm[0].style.left=44+'%'
 ttmthm[0].style.top=9+'%'
@@ -170,11 +183,19 @@ function fi0(clr)
  indctr[1].style.background=clr
  for(i=3;i<8;i++)
   indctr[i].style.background=clr
+ bin[1].innerHTML='0' 
+ bin[2].innerHTML='0'
+ bin[3].innerHTML='0'
+ bin[4].innerHTML='0'
 }
 function fi1(clr)
 {
  indctr[6].style.background=clr
  indctr[7].style.background=clr
+ bin[1].innerHTML='0' 
+ bin[2].innerHTML='0'
+ bin[3].innerHTML='0'
+ bin[4].innerHTML='1'
 }
 function fi2(clr)
 {
@@ -183,6 +204,10 @@ function fi2(clr)
  indctr[3].style.background=clr
  indctr[5].style.background=clr
  indctr[6].style.background=clr
+ bin[1].innerHTML='0' 
+ bin[2].innerHTML='0'
+ bin[3].innerHTML='1'
+ bin[4].innerHTML='0'
 }
 function fi3(clr)
 {
@@ -190,6 +215,10 @@ function fi3(clr)
   indctr[i].style.background=clr
  indctr[6].style.background=clr
  indctr[7].style.background=clr
+ bin[1].innerHTML='0' 
+ bin[2].innerHTML='0'
+ bin[3].innerHTML='1'
+ bin[4].innerHTML='1'
 }
 function fi4(clr)
 {
@@ -197,6 +226,10 @@ function fi4(clr)
  indctr[4].style.background=clr
  indctr[6].style.background=clr
  indctr[7].style.background=clr
+ bin[1].innerHTML='0' 
+ bin[2].innerHTML='1'
+ bin[3].innerHTML='0'
+ bin[4].innerHTML='0'
 }
 function fi5(clr)
 {
@@ -205,6 +238,10 @@ function fi5(clr)
  indctr[3].style.background=clr
  indctr[4].style.background=clr
  indctr[7].style.background=clr
+ bin[1].innerHTML='0' 
+ bin[2].innerHTML='1'
+ bin[3].innerHTML='0'
+ bin[4].innerHTML='1'
 }
 function fi6(clr)
 {
@@ -214,17 +251,29 @@ function fi6(clr)
  indctr[4].style.background=clr
  indctr[5].style.background=clr
  indctr[7].style.background=clr
+ bin[1].innerHTML='0' 
+ bin[2].innerHTML='1'
+ bin[3].innerHTML='1'
+ bin[4].innerHTML='1'
 }
 function fi7(clr)
 {
  indctr[1].style.background=clr
  indctr[6].style.background=clr
  indctr[7].style.background=clr
+ bin[1].innerHTML='1' 
+ bin[2].innerHTML='0'
+ bin[3].innerHTML='0'
+ bin[4].innerHTML='0'
 }
 function fi8(clr)
 {
  for(i=1;i<8;i++)
   indctr[i].style.background=clr
+ bin[1].innerHTML='1' 
+ bin[2].innerHTML='0'
+ bin[3].innerHTML='0'
+ bin[4].innerHTML='1'  
 }
 function fi9(clr)
 {
@@ -233,11 +282,19 @@ function fi9(clr)
  indctr[4].style.background=clr
  indctr[6].style.background=clr
  indctr[7].style.background=clr
+ bin[1].innerHTML='1' 
+ bin[2].innerHTML='0'
+ bin[3].innerHTML='1'
+ bin[4].innerHTML= '0' 
 }
 function ficlr(clr)
 {
  for(i=1;i<8;i++)
   indctr[i].style.background=clr
+ bin[1].innerHTML='' 
+ bin[2].innerHTML=''
+ bin[3].innerHTML=''
+ bin[4].innerHTML=''  
 }
 bind=0
 indctr[0].onmouseover=()=>
@@ -266,17 +323,17 @@ indctr[0].onmouseout=()=>
 
 bin[0].onmouseover=()=>
 {
- bin[1].style.background='#666'
- bin[2].style.background='#666'
- bin[3].style.background='#666'
- bin[4].style.background='#666'
+ bin[1].innerHTML='0'
+ bin[2].innerHTML='0'
+ bin[3].innerHTML='0'
+ bin[4].innerHTML='0'
 }
 bin[0].onmouseout=()=>
 {
- bin[1].style.background='#bbb'
- bin[2].style.background='#bbb'
- bin[3].style.background='#bbb'
- bin[4].style.background='#bbb'
+ bin[1].innerHTML=''
+ bin[2].innerHTML=''
+ bin[3].innerHTML=''
+ bin[4].innerHTML=''
 } 
  
 ttmthm[0].onmouseover=()=>
