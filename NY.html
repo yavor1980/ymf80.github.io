@@ -24,7 +24,7 @@
  border-radius:55%;
  opacity:0.9;
 }
-.crstint
+.crstint,.crstintt
 { 
  position:absolute; 
  transition:1s;
@@ -53,7 +53,9 @@
 <div class=bckrnd></div>
 
 <div class=crstmtr>
- <div class=crstmtr></div>
+ <div class=crstmtr>
+  <div class=crstintt></div>
+ </div>
  <div class=crstmtr></div>
  <div class=crstmtr></div>
  <div class=crstmtr></div>
@@ -68,6 +70,7 @@
  <div class=crstint></div>
  <div class=crstint></div>
  <div class=crstint>Happy<br>&nbsp New year!</div>
+ <div class=crstintt></div>
 </div>
 
 <div class=snwmn>
@@ -89,6 +92,7 @@
 bckrnd=document.getElementsByClassName('bckrnd')
 crstmtr=document.getElementsByClassName('crstmtr') 
 crstint=document.getElementsByClassName('crstint') 
+crstintt=document.getElementsByClassName('crstintt')
 snwmn=document.getElementsByClassName('snwmn') 
 smint=document.getElementsByClassName('smint')
 
@@ -216,7 +220,14 @@ crstint[3].style.transform=
 crstint[4].style.left=1+'%'
 crstint[4].style.top=33+'%'
 crstint[4].style.transform='scale(0)'
-
+crstintt[0].style.left=6+'%'
+crstintt[0].style.top=-88+'%'
+crstintt[0].style.width=88+'%'
+crstintt[0].style.height=44+'%'
+crstintt[0].style.background=
+ 'radial-gradient(#990,#770)'
+crstintt[0].style.borderRadius=55+'%' 
+ 
 snwmn[0].style.left=66+'%'
 snwmn[0].style.top=33+'%'
 snwmn[0].style.width=22+'%'
@@ -343,6 +354,8 @@ crstmtr[0].onmouseover=()=>
   'radial-gradient(#040,#0d0)'
  crstint[1].style.background=
   'radial-gradient(#ff0,#bb0)'
+ crstintt[0].style.background=
+  'radial-gradient(#ff0,#bb0)'
  crstint[3].style.border='8px ridge #f0f' 
  crstint[4].style.color='#f00' 
  crstint[4].style.transform=
@@ -368,6 +381,8 @@ crstmtr[0].onmouseout=()=>
   'radial-gradient(#040,#090)'
  crstint[1].style.background=
   'radial-gradient(#990,#770)'
+ crstintt[0].style.background=
+  'radial-gradient(#990,#770)' 
  crstint[2].style.background=
   'radial-gradient(33px,#e0e,#707)' 
  crstint[3].style.border='8px ridge #f80' 
