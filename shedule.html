@@ -20,10 +20,8 @@
 {
  position:absolute;
  transition:1s;
- top:37%;
  width:98%;
  height:62%;
- background:radial-gradient(#0f0,#000);
  font-size:2em;
  text-align:center;
 }
@@ -31,8 +29,8 @@
 .frz
 {
  position:absolute;
- transition: 1s;
- cursor: pointer;
+ transition:1s;
+ cursor:pointer;
 }
 
 </style>
@@ -53,7 +51,6 @@
 <div class=ftr>
  <div class=ftr>choose any day </div>
   <div class=ftr>every day any task </div>
- <div class=ftr>OOP</div>
  <div class=ftr>VCTR</div>
 </div>
 
@@ -98,30 +95,29 @@ inn(hd,8, 12,67, '','', 'none')
  hd[8].style.cursor='pointer'
  hd[8].style.transform='scale(2)'
 inn(hd,9, 66,67, '','', 'none')
-
  hd[9].style.cursor='pointer'
  hd[9].style.transform='scale(3)'
- 
+
+ftr[0].style.top=37+'%' 
+ftr[0].style.background=
+ 'radial-gradient(#0f0,#000)'
 inn(ftr,1, 44,22, 44,44, '#555')
  ftr[1].style.cursor='pointer'
+ ftr[1].style.zIndex=1
 inn(ftr,2, 50,5, 44,44, 'none')
  ftr[2].style.color='#f05'
  ftr[2].style.transform='scale(0)'
-
-ftr[3].style.left=11+'%'
-ftr[3].style.top=11+'%'
-ftr[3].style.width=11+'%'
-ftr[3].style.height=11+'%'
-ftr[3].style.background='none'
-ftr[3].style.cursor='pointer'
+ ftr[2].style.zIndex=1
  
-ftr[4].style.left=11+'%'
-ftr[4].style.top=28+'%'
-ftr[4].style.width=11+'%'
-ftr[4].style.height=11+'%'
-ftr[4].style.background='none'
-ftr[4].style.cursor='pointer'
-ftr[4].style.zIndex=1
+ftr[3].style.left=1+'%'
+ftr[3].style.top=0+'%'
+ftr[3].style.width=33+'%'
+ftr[3].style.height=77+'%'
+ftr[3].style.background=
+ 'radial-gradient(#f00,#0f0,#00f)'
+ftr[3].style.paddingTop=9+'%' 
+ftr[3].style.cursor='pointer'
+ftr[3].style.borderRadius=55+'%'
  
 Icl=0, bcl=0
 function cl()
@@ -143,7 +139,7 @@ function act(i)
  hd[i].onmouseover=()=>
  {  
   ftr[1].style.color='#f00' 
-  ftr[1].style.background='none'
+  ftr[1].style.background='#009'
   ftr[1].style.transform=
    'scale(1.4) translate(-12%,0) skew(15deg)'
    clearInterval(Icl)
@@ -304,53 +300,25 @@ ftr[1].onclick=()=>
   ftr[2].style.color='#f05'
  }, 999)
 }  
- 
-alg=["struct","class",'constructor()',"new_Obj()",] 
-ialg=0; asI=0
-mtd=["compsitn","inheritnce",'polymrphsm',"dynamc",] 
-imtd=0; 
+
+Iftr3=0
+bftr3=0
 ftr[3].onmouseover=()=>
 {
- ftr[3].style.color='#ee9'
- asI=setInterval(()=>
- {
-  ftr[3].style.transform='scale('+
-   (1+Math.random())+') skew('+14*(1+Math.random())+
-   'deg)'
-  ftr[3].innerHTML=alg[ialg]; 
-   ialg++;
-   if(ialg==4){ ialg=0; imtd=0; }   
- }, 1555) 	 
-} 
+  ftr[3].innerHTML='interact animtn'
+ ftr[3].style.color='#ff0'
+ setInterval(()=>{
+ 
+  }, 999) 
+}   
 ftr[3].onmouseout=()=>
 {
- ftr[3].style.zIndex=1
- ftr[3].style.width='10%'
+  ftr[3].innerHTML='VCTR'
  ftr[3].style.color='#000'
- ftr[3].style.transform='scale(1)'
-  ftr[3].innerHTML='OOP'
- ftr[4].style.transform='scale(1)'
-  clearInterval(asI)
-  ialg=0
+ 
 }  
 
-ftr[4].onmouseover=()=>
-{
-  ftr[4].innerHTML='interact animtn'
- ftr[4].style.color='#ff0'
- ftr[4].style.transform=
-  'translate(22%,0) scale(1.2)'  
-  ftr[3].onmouseover()  
-}   
-ftr[4].onmouseout=()=>
-{
-  ftr[4].innerHTML='VCTR'
- ftr[4].style.color='#000'
- ftr[4].style.transform='translate(0,0)' 
-  ftr[3].onmouseout()
-}  
-
-//setTimeout(()=>{ftr[3].style.transform='scale(1)'},999)
+//setTimeout()
 </script>
 </body>
 
