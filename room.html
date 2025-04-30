@@ -10,6 +10,7 @@ button
 {
  position:absolute;
  transition:1s;
+ border-radius:11%;
  transform:scale(2);
  cursor:pointer;
 }
@@ -92,7 +93,10 @@ button:hover
 </style>
 
 <button>go</button>
-<button>signal</button>
+<button>mnvre</button>
+<button>left</button>
+<button>right</button>
+
 <div class=wls></div>
 <div class=wls></div>
 
@@ -127,9 +131,14 @@ frz=document.getElementsByClassName('frz')
  
 btn[0].style.left=88+'%'
 btn[0].style.top=6+'%'
+btn[0].style.width=4+'%'
 btn[1].style.left=88+'%'
 btn[1].style.top=14+'%'
-btn[1].style.color='#00b'
+btn[1].style.width=5+'%'
+btn[2].style.left=86+'%'
+btn[2].style.top=23+'%'
+btn[3].style.left=93+'%'
+btn[3].style.top=23+'%'
  
 wls[0].style.left=11+'%'
 wls[0].style.bottom=2+'%'
@@ -239,17 +248,15 @@ function cl()
  idface.style.transform=
   'scale('+(1+Math.random()/5)
  wls[0].style.transform=
-  'scale('+(Math.random()/5+0.8)+
-  ') skew(22deg) rotate('+(Math.random())+'deg)'
+  'scale('+(Math.random()/5+0.8)+') skew(22deg)'
  wls[1].style.transform=
-  'scale('+(Math.random()/5)+0.8+
-  ') rotate('+(Math.random()*1)+'deg)'
+  'scale('+(Math.random()/5)+0.8+')'
 }
 
-bbtn=0, vw=0
+bbtn0=0, vw=0
 function fdrn()
 {
- if(bbtn==0)
+ if(bbtn0==0)
  {
   drn[0].style.border='11px ridge #400'
   drn[1].style.background='#400'
@@ -301,11 +308,7 @@ function fdrn()
    clearInterval(drn0I)
    clearInterval(drnI)
    btn[0].innerHTML='go'
- }  bbtn=!bbtn
-}
-function fsgnl()
-{
- 
+ }  bbtn0=!bbtn0
 }
 btn[0].onclick=()=>
 {
@@ -313,7 +316,15 @@ btn[0].onclick=()=>
 } 
 btn[1].onclick=()=>
 {
- fsgnl()
+ drn[0].style.transform='scale(1,0.4)'
+} 
+btn[2].onclick=()=>
+{
+ drn[0].style.transform='translate(-122%,0)'
+} 
+btn[3].onclick=()=>
+{
+ drn[0].style.transform='translate(122%,0)'
 } 
 
 Iwls=0  
@@ -342,11 +353,11 @@ wls[1].onmouseout=()=>
 
 drn[0].onmouseover=()=>
 {
- 
+ drn[0].style.transform='scale(1.8,1.4)'
 }
 drn[0].onmouseout=()=>
 {
- 
+ drn[0].style.transform='scale(1.4)'
 } 
 
 Ivctr=0
