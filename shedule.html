@@ -41,11 +41,9 @@
  <div class=hd>Wednesday</div>
  <div class=hd>Thursday</div>
  <div class=hd>Friday</div>
- 
- <div class=hd>shedule</div>
-  <div class=hd>be ready</div>
- <div class=hd>ampltda</div>
- <div class=hd>order</div>  
+ <div class=hd>Task</div>
+ <div class=hd>Task</div>
+ <div class=hd>Task</div>  
 </div>
 
 <div class=ftr>
@@ -84,19 +82,12 @@ inn(hd,4, 62,22, 17,22, '#f0f')
 inn(hd,5, 82,22, 17,22, '#8f8')
  hd[5].style.cursor='pointer'
  hd[5].style.border='3px ridge #500'
-inn(hd,6, 37,66, '','', 'none')
- hd[6].style.cursor='pointer'
- hd[6].style.transform='scale(2)'
-inn(hd,7, 44,72, '','', 'none')
- hd[7].style.cursor='pointer'
- hd[7].style.zIndex=1
- hd[7].style.transform='scale(0)'
-inn(hd,8, 12,67, '','', 'none')
- hd[8].style.cursor='pointer'
- hd[8].style.transform='scale(2)'
-inn(hd,9, 66,67, '','', 'none')
- hd[9].style.cursor='pointer'
- hd[9].style.transform='scale(3)'
+inn(hd,6, 2,64, 30,22, '#777')
+ hd[6].style.fontSize=0+'em'
+inn(hd,7, 35,64, 30,22, '#888')
+ hd[7].style.fontSize=0+'em'
+inn(hd,8, 68,64, 30,22, '#999')
+ hd[8].style.fontSize=0+'em'
 
 ftr[0].style.top=37+'%' 
 ftr[0].style.background=
@@ -108,7 +99,6 @@ inn(ftr,2, 50,5, 44,44, 'none')
  ftr[2].style.color='#f05'
  ftr[2].style.transform='scale(0)'
  ftr[2].style.zIndex=1
- 
 ftr[3].style.left=1+'%'
 ftr[3].style.top=0+'%'
 ftr[3].style.width=33+'%'
@@ -138,6 +128,9 @@ function act(i)
 { 
  hd[i].onmouseover=()=>
  {  
+  hd[6].style.fontSize=2+'em'
+  hd[7].style.fontSize=2+'em'
+  hd[8].style.fontSize=2+'em'
   ftr[1].style.color='#f00' 
   ftr[1].style.background='#009'
   ftr[1].style.transform=
@@ -146,46 +139,54 @@ function act(i)
   switch(i){ 
    case 1: 
 	 hd[i].innerHTML='new deal'
-	 ftr[1].innerHTML='preparing'
 	hd[i].style.color='#bbf'
+	hd[i].style.fontSize=2+'em'
 	hd[i].style.transform='scale(1.2)'
 	hd[i].style.zIndex=1
+	 ftr[1].innerHTML='preparing'
    break
    case 2: 
      hd[i].innerHTML='continue...'
-	 ftr[1].innerHTML='task definition'
 	hd[i].style.color='#78f'
+	hd[i].style.fontSize=2+'em'
 	hd[i].style.transform='scale(1.2)'
 	hd[i].style.zIndex=1
+	 ftr[1].innerHTML='task definition'
    break
    case 3: 
-     hd[i].innerHTML='midweek'
-	 ftr[1].innerHTML='working'
+     hd[i].innerHTML='midweek' 
 	hd[i].style.color='#f78'
+	hd[i].style.fontSize=2+'em'
 	hd[i].style.transform='scale(1.2)'
     hd[i].style.zIndex=1
+	 ftr[1].innerHTML='working'
    break
    case 4: 
      hd[i].innerHTML='evnng'
-	 ftr[1].innerHTML='summarizing'
 	hd[i].style.color='#ff8'
+	hd[i].style.fontSize=2+'em'
 	hd[i].style.transform='scale(1.2)'
 	hd[i].style.zIndex=1
+	 ftr[1].innerHTML='summarizing'
    break
    case 5: 
 	 hd[i].innerHTML='finito'
-	 ftr[1].innerHTML='cleaning'
-    hd[i].style.transform=
+	hd[i].style.transform=
 	 'scale(1.2) translate(-7%,8%)'
     hd[i].style.color='#088'
+	hd[i].style.fontSize=2+'em'
 	hd[i].style.zIndex=1
+	 ftr[1].innerHTML='cleaning'
    break
   }
-   hd[i].style.fontSize='2em'
+   //hd[i].style.fontSize='2em'
  }		  
  hd[i].onmouseout=()=>
  {
    Icl=setInterval(()=>cl(),999)
+  hd[6].style.fontSize=0+'em'
+  hd[7].style.fontSize=0+'em'
+  hd[8].style.fontSize=0+'em' 
   ftr[1].style.color='#000' 
   ftr[1].style.background='#555' 
    ftr[1].innerHTML='choose any day'
@@ -212,68 +213,6 @@ function act(i)
  act(3)
  act(4)
  act(5)
- 
-shI=0 
-bsh=0
-hd[6].onmouseover=()=>
-{
- hd[6].style.color='#f00'
- hd[6].style.transform='scale(3) translate(-3%,-33%)'
- hd[7].style.color='#ff0'
- Ish=setInterval(()=>{	
-  if(bsh)	
-    hd[7].style.transform='scale(3) translate(22%,33%)'
-	 else
-	hd[7].style.transform='scale(4) translate(22%,33%)'
-	  bsh=!bsh
-  }, 999)	
-  hd[6].innerHTML='can be changed' 
-  hd[8].onmouseover() 
-  hd[9].onmouseover() 
-}
-hd[6].onmouseout=()=>
-{
- hd[6].style.color='#000'
- hd[6].style.transform='scale(2) '
- hd[7].style.color='#000'
- hd[7].style.transform='scale(0) '
-  hd[6].innerHTML='shedule'
-  clearInterval(Ish)
-  hd[8].onmouseout() 
-  hd[9].onmouseout() 
-}
-
-hd[8].onmouseover=()=>
-{
- hd[8].style.color='#f00'
- hd[8].style.transform='scale(3) translate(17%,33%)'
-  hd[8].innerHTML='min ... max'
-}
-hd[8].onmouseout=()=>
-{
- hd[8].style.color='#000'
- hd[8].style.transform='scale(2) '
-  hd[8].innerHTML='ampltda'
-}
-
-hd[9].onmouseover=()=>
-{
- hd[9].style.color='#f00'
- hd[9].style.transform='scale(3) translate(-17%,33%)'
-  hd[9].innerHTML='step by step' 
-}
-hd[9].onmouseout=()=>
-{
- hd[9].style.color='#000'
- hd[9].style.transform='scale(2) '
-  hd[9].innerHTML='order'
-}
-hd[9].onclick=()=>
-{
- hd[9].style.color='#f0f'
- hd[9].style.transform='scale(4) '
-  hd[9].innerHTML='to infinity' 
-}
 
 ftr[1].onmouseover=()=>
 {
@@ -306,20 +245,21 @@ bftr3=0
 ftr[3].onmouseover=()=>
 {
   ftr[3].innerHTML='interact animtn'
- ftr[3].style.color='#ff0'
- setInterval(()=>{
- 
-  }, 999) 
+ ftr[3].style.color='#b0b'
+ ftr[3].style.borderRadius=4+'%'
+ Iftr3=setInterval(()=>{
+  ftr[3].style.borderRadius=Math.random()*55+'%'
+ }, 999) 
 }   
 ftr[3].onmouseout=()=>
 {
   ftr[3].innerHTML='VCTR'
  ftr[3].style.color='#000'
- 
+ ftr[3].style.borderRadius=55+'%'
+  clearInterval(Iftr3)
 }  
 
 //setTimeout()
 </script>
 </body>
-
 </html>
