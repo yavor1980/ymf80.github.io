@@ -42,6 +42,7 @@
  <div class=blb></div>
  <div class=blb></div>
  <div class=pna></div>
+ <div class=pna></div>
 </div>
 
 <script>
@@ -144,12 +145,19 @@ pna[0].style.top=-30+'%'
 pna[0].style.width=122+'%'
 pna[0].style.height=33+'%'
 pna[0].style.background=
- 'radial-gradient(#fff,#eee)'
+ 'radial-gradient(#fff,#ccc)'
 pna[0].style.borderRadius=55+'%'
 pna[0].style.borderBottomLeftRadius=8+'%'
 pna[0].style.borderBottomRightRadius=8+'%'
 pna[0].style.opacity=0
-pna[0].style.zIndex=-1
+pna[1].style.left=33+'%'
+pna[1].style.width=44+'%'
+pna[1].style.height=44+'%'
+pna[1].style.background=
+ 'radial-gradient(#fff,#ccc)'
+pna[1].style.borderBottomLeftRadius=22+'%'
+pna[1].style.borderBottomRightRadius=33+'%'
+pna[1].style.opacity=0
 
 Imv=0
 function mv()
@@ -172,9 +180,22 @@ kttl[0].onmouseover=()=>
  blb[1].style.background=
   'radial-gradient(#770,#bb0)'
  blb[0].style.transform='scale(1,1)'
+ pna[0].style.opacity=0.8
+ pna[1].style.opacity=0.8
  Ipna=setInterval(()=>
- {
-  pna[0].style.opacity=Math.random()
+ { 
+  pna[0].style.borderTopLeftRadius=
+   (44+11*Math.random())+'%'
+  pna[0].style.borderTopRightRadius=
+   (44+11*Math.random())+'%'
+  pna[0].style.borderBottomLeftRadius=
+   (8+15*Math.random())+'%'
+  pna[0].style.borderBottomRightRadius=
+   (8+15*Math.random())+'%' 
+  pna[1].style.borderBottomLeftRadius=
+   (33+22*Math.random())+'%'
+  pna[1].style.borderBottomRightRadius=
+   (33+22*Math.random())+'%'  
  }, 999)
  ttl[0].style.transform=
   'scale(3,4) translate(39%,99%) skew(22deg)'
@@ -190,6 +211,7 @@ kttl[0].onmouseout=()=>
   'radial-gradient(#777,#bba)'
  blb[0].style.transform='scale(1)'
  pna[0].style.opacity=0
+ pna[1].style.opacity=0
  ttl[0].style.transform='scale(0)'
  ttl[1].style.transform='scale(0)'
 }
