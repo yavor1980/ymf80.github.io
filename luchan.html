@@ -10,7 +10,7 @@
  background:linear-gradient(#dd0,177px,#333);
 }
 
-.ttl,.glss
+.ttl,.glss,.beer
 {
  position:absolute;   
  transition:1s;
@@ -33,9 +33,9 @@
  <div class=glss></div>
  <div class=glss></div>
  <div class=glss></div>
+ <div class=glss></div>
+ <div class=glss></div>
 </div>
-
-<div class=glss></div>
 
 <script>
 ttl=document.getElementsByClassName('ttl')
@@ -71,6 +71,7 @@ glss[2].style.left=9+'%'
 glss[2].style.top=95+'%'
 glss[2].style.width=99+'%'
 glss[2].style.height=33+'%'
+
 glss[2].style.borderRadius=55+'%'
 glss[2].style.border='11px ridge #800'
 glss[2].style.transform='scale(1,0.4)'
@@ -88,6 +89,26 @@ glss[4].style.height=80+'%'
 glss[4].style.borderRadius=55+'%'
 glss[4].style.borderRight='11px ridge #800'
 glss[4].style.transform='rotate(3deg)'
+glss[5].style.left=8+'%'
+glss[5].style.top=50+'%'
+glss[5].style.width=99+'%'
+glss[5].style.height=66+'%'
+glss[5].style.background='#990'
+glss[5].style.borderRadius=15+'%'
+glss[5].style.borderTopLeftRadius=25+'%'
+glss[5].style.borderTopRightRadius=25+'%'
+glss[5].style.transform='skew(6deg)'
+glss[5].style.opacity=0
+glss[6].style.left=16+'%'
+glss[6].style.top=50+'%'
+glss[6].style.width=99+'%'
+glss[6].style.height=66+'%'
+glss[6].style.background='#990'
+glss[6].style.borderRadius=15+'%'
+glss[6].style.borderTopLeftRadius=25+'%'
+glss[6].style.borderTopRightRadius=25+'%'
+glss[6].style.transform='skew(-6deg)'
+glss[6].style.opacity=0
 
 ttl[0].onmouseover=()=>
 { 
@@ -95,12 +116,18 @@ ttl[0].onmouseover=()=>
  ttl[7].style.color='#900'
  ttl[7].style.transform=
   'scale(6) translate(22%,76%) skew(22deg)'
+ glss[2].style.background='#990'
+ glss[5].style.opacity=1
+ glss[6].style.opacity=1
 }
 ttl[0].onmouseout=()=>
 { 
  ttl[0].style.transform='scale(1)'
  ttl[7].style.color='#000'
  ttl[7].style.transform='scale(0)'
+ glss[2].style.background='none'
+ glss[5].style.opacity=0
+ glss[6].style.opacity=0
 }
 
 </script>
