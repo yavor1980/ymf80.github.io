@@ -10,130 +10,99 @@
  background:linear-gradient(#dd0,177px,#333);
 }
 
-.ttl,.shwrz,.drkwht
+.ttl,.glss
 {
  position:absolute;   
  transition:1s;
  cursor:pointer;
- text-align:center;
 }
 
 </style>
 <div class=ttl>
- LUCHAN
+<div class=ttl>L</div>
+<div class=ttl>U</div>
+<div class=ttl>C</div>
+<div class=ttl>H</div>
+<div class=ttl>A</div>
+<div class=ttl>N</div>
+</div>
  <div class=ttl>kraft beer</div>
+
+<div class=glss>
+ <div class=glss></div>
+ <div class=glss></div>
+ <div class=glss></div>
+ <div class=glss></div>
 </div>
 
-<div class=shwrz>
- shwrzbeer
- <div class=shwrz></div>
- <div class=shwrz></div>
- <div class=shwrz></div>
-</div>
-
-<div class=drkwht>
- drkwhtbeer
- <div class=drkwht></div>
- <div class=drkwht></div>
- <div class=drkwht></div>
-</div>
+<div class=glss></div>
 
 <script>
 ttl=document.getElementsByClassName('ttl')
-shwrz=document.getElementsByClassName('shwrz')
-drkwht=document.getElementsByClassName('drkwht')
+glss=document.getElementsByClassName('glss')
 
-ttl[0].style.left=33+'%'
+ttl[0].style.left=11+'%'
 ttl[0].style.top=4+'%'
+ttl[0].style.width=44+'%'
 ttl[0].style.color='#808'
-ttl[0].style.fontSize=9+'em'
-ttl[0].style.transform='scale(1) skew(-22deg)'
-ttl[1].style.left=33+'%'
-ttl[1].style.top=47+'%'
-ttl[1].style.color='#ccc'
-ttl[1].style.padding=0+'px'
-ttl[1].style.transform='scale(0)'
+ttl[0].style.fontSize=11+'em'
+ttl[1].style.left=0+'%'
+ttl[2].style.left=16+'%'
+ttl[3].style.left=32+'%'
+ttl[4].style.left=48+'%'
+ttl[5].style.left=64+'%'
+ttl[6].style.left=80+'%'
+ttl[7].style.left=22+'%'
+ttl[7].style.top=29+'%'
+ttl[7].style.transform='scale(0)'
 
-shwrz[0].style.left=33+'%'
-shwrz[0].style.top=33+'%'
-shwrz[0].style.width=22+'%'
-shwrz[0].style.height=13+'%'
-shwrz[0].style.background='#800'
-shwrz[0].style.fontSize=0+'em'
-shwrz[0].style.borderRadius=13+'%'
-shwrz[1].style.left=33+'%'
-shwrz[1].style.top=99+'%'
-shwrz[2].style.left=33+'%'
-shwrz[2].style.top=99+'%'
-shwrz[3].style.left=33+'%'
-shwrz[3].style.top=99+'%'
-
-drkwht[0].style.left=33+'%'
-drkwht[0].style.top=54+'%'
-drkwht[0].style.width=22+'%'
-drkwht[0].style.height=13+'%'
-drkwht[0].style.background='#d0d'
-drkwht[0].style.fontSize=0+'em'
-drkwht[0].style.borderRadius=13+'%'
-drkwht[1].style.left=33+'%'
-drkwht[1].style.top=99+'%'
-drkwht[2].style.left=33+'%'
-drkwht[2].style.top=99+'%'
-drkwht[3].style.left=33+'%'
-drkwht[3].style.top=99+'%'
+glss[0].style.left=58+'%'
+glss[0].style.top=21+'%'
+glss[0].style.width=22+'%'
+glss[0].style.height=44+'%'
+glss[0].style.transform='scale(1,1.4)'
+glss[1].style.top=22+'%'
+glss[1].style.width=111+'%'
+glss[1].style.height=33+'%'
+glss[1].style.borderRadius=55+'%'
+glss[1].style.border='11px ridge #800'
+glss[1].style.transform='scale(1,0.4)'
+glss[2].style.left=9+'%'
+glss[2].style.top=95+'%'
+glss[2].style.width=99+'%'
+glss[2].style.height=33+'%'
+glss[2].style.borderRadius=55+'%'
+glss[2].style.border='11px ridge #800'
+glss[2].style.transform='scale(1,0.4)'
+glss[3].style.left=2+'%'
+glss[3].style.top=38+'%'
+glss[3].style.width=10+'%'
+glss[3].style.height=80+'%'
+glss[3].style.borderRadius=55+'%'
+glss[3].style.borderLeft='11px ridge #800'
+glss[3].style.transform='rotate(-5deg)'
+glss[4].style.left=107+'%'
+glss[4].style.top=38+'%'
+glss[4].style.width=10+'%'
+glss[4].style.height=80+'%'
+glss[4].style.borderRadius=55+'%'
+glss[4].style.borderRight='11px ridge #800'
+glss[4].style.transform='rotate(3deg)'
 
 ttl[0].onmouseover=()=>
 { 
- ttl[0].style.transform='scale(1.1) skew(-12deg)'
- ttl[1].style.transform=
-  'scale(0.2) translate(22%,7%) skew(8deg)'
+ ttl[0].style.transform='scale(1.1)'
+ ttl[7].style.color='#900'
+ ttl[7].style.transform=
+  'scale(6) translate(22%,76%) skew(22deg)'
 }
 ttl[0].onmouseout=()=>
 { 
- ttl[0].style.transform='scale(1) skew(-22deg)'
- ttl[1].style.transform='scale(0)'
+ ttl[0].style.transform='scale(1)'
+ ttl[7].style.color='#000'
+ ttl[7].style.transform='scale(0)'
 }
 
-Imovr=0
-function movr(nm)
-{
-nm[0].onmouseover=()=>
-{ 
- nm[0].style.transform='scale(1.1)'
- nm[0].style.color='#ff0'
- nm[0].style.padding=7+'px'
- nm[0].style.fontSize=3+'em'
- nm[1].style.color='#ff0'
- nm[2].style.color='#00f'
- nm[3].style.color='#0f0'
- Imovr=setInterval(()=>
- {
- nm[1].style.transform=
-  'scale('+(1+Math.random()/4)+') translate(117%,-87%)'
- nm[2].style.transform=
-  'scale('+(1+Math.random()/4)+') translate(117%,2%)'
- nm[3].style.transform=
-  'scale('+(1+Math.random()/4)+') translate(117%,99%)'
- }, 999) 
-}
-nm[0].onmouseout=()=>
-{ 
- nm[0].style.transform='scale(1)'
- nm[0].style.color='#000'
- nm[0].style.padding=0+'px'
- nm[0].style.fontSize=0+'em'
- nm[1].style.transform='scale(0)'
- nm[1].style.color='#000'
- nm[2].style.transform='scale(0)'
- nm[2].style.color='#000'
- nm[3].style.transform='scale(0)'
- nm[3].style.color='#000'
-  clearInterval(Imovr)
-}
-}
- movr(shwrz); movr(drkwht);
-
-	  	   
 </script>
 </body>
 </html>
