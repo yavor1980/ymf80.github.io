@@ -10,7 +10,7 @@
  background:linear-gradient(#dd0,177px,#333);
 }
 
-.ttl,.glss,.beer
+.ttl,.glss,.blb
 {
  position:absolute;   
  transition:1s;
@@ -35,11 +35,15 @@
  <div class=glss></div>
  <div class=glss></div>
  <div class=glss></div>
+ <div class=blb></div>
+ <div class=blb></div>
+ <div class=blb></div>
 </div>
 
 <script>
 ttl=document.getElementsByClassName('ttl')
 glss=document.getElementsByClassName('glss')
+blb=document.getElementsByClassName('blb')
 
 ttl[0].style.left=11+'%'
 ttl[0].style.top=4+'%'
@@ -71,7 +75,6 @@ glss[2].style.left=9+'%'
 glss[2].style.top=95+'%'
 glss[2].style.width=99+'%'
 glss[2].style.height=33+'%'
-
 glss[2].style.borderRadius=55+'%'
 glss[2].style.border='11px ridge #800'
 glss[2].style.transform='scale(1,0.4)'
@@ -99,7 +102,7 @@ glss[5].style.borderTopLeftRadius=25+'%'
 glss[5].style.borderTopRightRadius=25+'%'
 glss[5].style.transform='skew(6deg)'
 glss[5].style.opacity=0
-glss[6].style.left=16+'%'
+glss[6].style.left=17+'%'
 glss[6].style.top=50+'%'
 glss[6].style.width=99+'%'
 glss[6].style.height=66+'%'
@@ -110,6 +113,35 @@ glss[6].style.borderTopRightRadius=25+'%'
 glss[6].style.transform='skew(-6deg)'
 glss[6].style.opacity=0
 
+blb[0].style.left=0+'%'
+blb[0].style.top=19+'%'
+blb[0].style.width=121+'%'
+blb[0].style.height=43+'%'
+blb[0].style.background=
+ 'radial-gradient(#fff,#bbb)'
+blb[0].style.borderRadius=55+'%' 
+blb[0].style.borderBottomLeftRadius=45+'%'
+blb[0].style.borderBottomRightRadius=35+'%'
+blb[0].style.opacity=0
+blb[1].style.left=30+'%'
+blb[1].style.top=-8+'%'
+blb[1].style.width=88+'%'
+blb[1].style.height=9+'%'
+blb[1].style.background=
+ 'radial-gradient(#fff,#ff0)'
+blb[1].style.borderTopLeftRadius=55+'%'
+blb[1].style.borderTopRightRadius=55+'%'
+blb[1].style.opacity=0
+blb[2].style.left=93+'%'
+blb[2].style.top=3+'%'
+blb[2].style.width=11+'%'
+blb[2].style.height=9+'%'
+//blb[2].style.background=
+ 'radial-gradient(#fff,#ff0)'
+blb[2].style.borderRadius=55+'%'
+blb[2].style.opacity=0
+
+Iblb=0
 ttl[0].onmouseover=()=>
 { 
  ttl[0].style.transform='scale(1.1)'
@@ -119,6 +151,15 @@ ttl[0].onmouseover=()=>
  glss[2].style.background='#990'
  glss[5].style.opacity=1
  glss[6].style.opacity=1
+ blb[0].style.opacity=0.8
+ blb[1].style.opacity=0.7
+ blb[2].style.opacity=0.9
+ Iblb=setInterval(()=>{
+   blb[0].style.transform='scale('+
+    (1+Math.random()/5)+')'
+   blb[1].style.transform='scale(1)'
+   blb[2].style.transform='scale(1)'
+ }, 666)
 }
 ttl[0].onmouseout=()=>
 { 
@@ -128,6 +169,10 @@ ttl[0].onmouseout=()=>
  glss[2].style.background='none'
  glss[5].style.opacity=0
  glss[6].style.opacity=0
+ blb[0].style.opacity=0
+ blb[1].style.opacity=0
+ blb[2].style.opacity=0
+  clearInterval(Iblb)
 }
 
 </script>
