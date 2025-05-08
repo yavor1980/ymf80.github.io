@@ -26,15 +26,15 @@
  <div class=ttl>social politic</div>
 
 <div class=psy>psycholog
- <div class=psy>interview</div>
- <div class=psy>relaxation</div>
- <div class=psy>education</div>
+<div class=psy>interview</div>
+<div class=psy>relaxation</div>
+<div class=psy>education</div>
 </div>
 
 <div class=cult>culture
- <div class=cult>excursions</div>
- <div class=cult>trips</div>
- <div class=cult>seminars</div>
+<div class=cult>excursions</div>
+<div class=cult>trips</div>
+<div class=cult>seminars</div>
 </div>
 
 <div class=trck>
@@ -121,7 +121,8 @@ trck[3].style.cursor='pointer'
 
 ttl[0].onmouseover=()=>
 { 
- ttl[0].style.transform='scale(1.1) skew(-12deg)'
+ ttl[0].style.transform=
+  'scale(1.1) translate(-6%,7%) skew(-12deg)'
  ttl[1].style.transform=
   'scale(5) translate(49%,7%) skew(8deg)'
 }
@@ -132,7 +133,7 @@ ttl[0].onmouseout=()=>
 }
 
 Imovr=0
-function movr(nm)
+function fact(nm)
 {
 nm[0].onmouseover=()=>
 { 
@@ -143,16 +144,19 @@ nm[0].onmouseover=()=>
  nm[1].style.color='#ff0'
  nm[2].style.color='#00f'
  nm[3].style.color='#0f0'
+ nm[1].style.border='9px ridge #b00'
+ nm[2].style.border='9px ridge #0b0'
+ nm[3].style.border='9px ridge #00b'
  Imovr=setInterval(()=>
  {
   trck[1].style.color='#b00'
-  trck[1].style.fontSize=(3+Math.random())+'em'
+  trck[1].style.fontSize=(2+Math.random())+'em'
   trck[2].style.color='#bb0'
   trck[2].style.fontSize=(3+Math.random())+'em'
   trck[3].style.color='#b0b'
   trck[3].style.fontSize=(3+Math.random())+'em'
  nm[1].style.transform=
-  'scale('+(1+Math.random()/4)+') translate(117%,-87%)'
+  'scale('+(1+Math.random()/4)+') translate(100%,-87%)'
  nm[2].style.transform=
   'scale('+(1+Math.random()/4)+') translate(117%,2%)'
  nm[3].style.transform=
@@ -167,10 +171,13 @@ nm[0].onmouseout=()=>
  nm[0].style.fontSize=0+'em'
  nm[1].style.transform='scale(0)'
  nm[1].style.color='#000'
+ nm[1].style.border=''
  nm[2].style.transform='scale(0)'
  nm[2].style.color='#000'
+ nm[2].style.border=''
  nm[3].style.transform='scale(0)'
  nm[3].style.color='#000'
+ nm[3].style.border=''
  trck[1].style.color='#000'
  trck[1].style.fontSize=0+'em'
  trck[2].style.color='#000'
@@ -180,8 +187,9 @@ nm[0].onmouseout=()=>
   clearInterval(Imovr)
 }
 }
-movr(psy); 
-movr(cult);
+  fact(psy)
+  fact(cult)
+  
  cult[2].style.left=76+'%'
 	  	  
 		  
