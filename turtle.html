@@ -4,7 +4,7 @@
 
 body
 {
- background:linear-gradient(57deg,#000,#888);
+ background:linear-gradient(0deg,#000,#303);
 }
 button
 {
@@ -52,7 +52,9 @@ button
 <div class=grnd>
  <div class=grnd></div>
 </div>
-
+<div class=grnd></div>
+<div class=grnd></div>
+ 
 <div class=pzr>
  <div class=pzr></div>
  <div class=pw></div>
@@ -66,7 +68,7 @@ button
   <div class=hd></div> 
  </div>
 </div>
-
+ <div class=></div> 
 <div class=frz>
  PROGRESS<br> CAN'T BE<br> STOPPED
 </div>
@@ -95,6 +97,7 @@ button
 </div>
  
 <script>
+bdy=document.getElementsByTagName('body')
 btn=document.getElementsByTagName('button')
 
 grnd=document.getElementsByClassName('grnd')
@@ -133,6 +136,14 @@ grnd[1].style.borderTopRightRadius=55+'%'
 grnd[1].style.borderBottomLeftRadius=11+'%'
 grnd[1].style.borderBottomRightRadius=11+'%'
 grnd[1].style.cursor='pointer' 
+grnd[2].style.left=15+'%'
+grnd[2].style.top=33+'%'
+grnd[2].style.width=77+'%'
+grnd[2].style.height=11+'%'
+grnd[2].style.background=
+ 'radial-gradient(#444,#bbb)'
+grnd[2].style.opacity=0.1
+grnd[2].style.borderRadius=55+'%'
   
 pzr[0].style.left=33+'%' 
 pzr[0].style.top=49+'%'
@@ -281,9 +292,12 @@ btn[0].onclick=()=>
 Ipzr0=0
 bpzr0=0
 pzr[0].onmouseover=()=>
-{
+{ 
+ bdy[0].style.background=
+  'linear-gradient(0deg,#000,#505)' 
  grnd[1].style.background=
   'radial-gradient(#220,#080)'
+ grnd[2].style.opacity=0.8
  frz[0].style.color='#f00'
  frz[1].style.color='#f80'
   b=Math.round(Math.random())
@@ -291,6 +305,12 @@ pzr[0].onmouseover=()=>
  {
   hd[0].style.transform=
    'scale(1.4) translate(-33%, -33%)'  
+  pzr[1].style.transform=
+   'scale(1) translate(-3%, -3%)'   
+  pw[0].style.transform=
+   'scale(1) translate(-7%, -3%)'   
+  pw[1].style.transform=
+   'scale(1) translate(-7%, -3%)'  
   frz[0].style.transform=
    'scale(3) skew(-33deg) translate(33%, 22%)' 
   frz[0].style.zIndex=1
@@ -301,6 +321,12 @@ pzr[0].onmouseover=()=>
  {
   hd[0].style.transform=
    'scale(1.4) translate(33%, -33%)'
+  pzr[1].style.transform=
+   'scale(1) translate(3%, -3%)'
+  pw[0].style.transform=
+   'scale(1) translate(7%, -3%)'  
+  pw[1].style.transform=
+   'scale(1) translate(7%, -3%)'
   frz[0].style.transform=
    'scale(3) skew(33deg) translate(-33%, 22%)' 
   frz[1].style.transform=
@@ -312,9 +338,15 @@ pzr[0].onmouseover=()=>
 }
 pzr[0].onmouseout=()=>
 {
+ bdy[0].style.background=
+  'linear-gradient(0deg,#000,#303)'
  grnd[1].style.background=
   'radial-gradient(#440,#0b0)'
- hd[0].style.transform='scale(1) ' 
+ grnd[2].style.opacity=0.1
+ hd[0].style.transform='scale(1)' 
+ pzr[1].style.transform='scale(1)'
+ pw[0].style.transform='scale(1)'
+ pw[1].style.transform='scale(1)'
  hd[1].style.transform='scale(0.6) '
  hd[2].style.transform='scale(0.6) '
  frz[0].style.transform='scale(0) '
@@ -349,11 +381,13 @@ prgrss[0].onmouseout=()=>
 
 scty[0].onmouseover=()=>
 {
+  scty[0].innerHTML=
+   'the economy is dominated<br> '+
+   'by an innovative sector with<br> '+
+   'high-performance industry' 
  scty[0].style.zIndex=1
  scty[0].style.transform='scale(2.4) skew(-12deg)' 
  scty[0].style.color='#f0f'
-  scty[0].innerHTML=
-   'the economy is dominated<br> by an innovative sector with<br> high-performance industry' 
 }
 scty[0].onmouseout=()=>
 {
@@ -365,19 +399,19 @@ scty[0].onmouseout=()=>
   
 scty[1].onmouseover=()=>
 {
+  scty[1].innerHTML=
+   'Innovations demanded<br> by the consumer'
  scty[1].style.transform='scale(2.4) skew(-12deg)' 
  scty[1].style.color='#0f0'
  scty[1].style.zIndex=1
-  scty[1].innerHTML=
-   'Innovations demanded<br> by the consumer'
 }
 scty[1].onmouseout=()=>
 {
+ scty[1].innerHTML=
+  'Innovation<br>economy'
  scty[1].style.transform='scale(2)' 
  scty[1].style.color='#ff0'
  scty[1].style.zIndex=0
- scty[1].innerHTML=
-  'Innovation<br>economy'
 }  
 
 scty[2].onmouseover=()=>
@@ -400,5 +434,4 @@ scty[2].onmouseout=()=>
 
 </script>
 </body>
-
 </html>
