@@ -39,6 +39,7 @@
 {
  position:absolute;
  transition:999ms;
+ z-index:1;
 }
 .shld
 {
@@ -212,7 +213,12 @@ btn[1].onmouseout=()=>
 }
 btn[1].onclick=()=>
 {
- 
+ swrd[0].style.transform=
+  'scale(0.8) translate(222%,-184%) rotate(-23deg)'
+ setTimeout(()=>
+ {
+  swrd[0].style.transform='scale(1)'
+ }, 999)
 }
 
 idsw.onmouseover=()=>
