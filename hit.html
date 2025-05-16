@@ -11,8 +11,9 @@
 {
  position:absolute;
  transition:1s;
-
- 
+ cursor:pointer;
+ width:9%;
+ height:8%;
 }
 
 #idsw
@@ -31,10 +32,14 @@
 .s
 {
  position:absolute;
- transition:0.2s;
+ transition:999ms;
  cursor:pointer;
 }
-
+.swrd
+{
+ position:absolute;
+ transition:999ms;
+}
 .shld
 {
  position:absolute;
@@ -46,7 +51,7 @@
 </style>
 
 <button class=btn>HIT</button>
-<div class=btn>Neurosis</div>
+<button class=btn>SWORD</button>
 
 <img src='img/sword.png' id=idsw >
 
@@ -54,6 +59,11 @@
  <div class=s><div class=s></div></div>
  <div class=s><div class=s></div></div> 
 </div>
+<div class=swrd>
+ <div class=swrd></div>
+ <div class=swrd></div>
+ <div class=swrd></div>
+</div> 
 <div class=shld>
  <div class=shld></div>
  <div class=shld>Shield</div>
@@ -61,23 +71,24 @@
 
 <script>
 btn=document.getElementsByClassName('btn')
+
 s=document.getElementsByClassName('s')
+swrd=document.getElementsByClassName('swrd')
 shld=document.getElementsByClassName('shld')
  
 btn[0].style.left=77+'%'
 btn[0].style.top=8+'%'
-btn[0].style.width=9+'%'
-btn[0].style.height=8+'%'
 btn[0].style.background='#b0b'
 btn[0].style.color='#fff'
 btn[0].style.borderRadius=33+'%'
 btn[0].style.fontSize=3+'em'
-btn[0].style.cursor='pointer'
-btn[1].style.left=77+'%'
-btn[1].style.top=28+'%'
-btn[1].style.color='#ee0'
-btn[1].style.transform='scale(5) skew(-22deg)'
- 
+btn[1].style.left=88+'%'
+btn[1].style.top=8+'%'
+btn[1].style.background='#bb0'
+btn[1].style.color='#700'
+btn[1].style.borderRadius=33+'%'
+btn[1].style.fontSize=1.4+'em'
+
 s[0].style.left=11+'%'
 s[0].style.top=22+'%'
 s[0].style.width=11+'%'
@@ -110,20 +121,39 @@ s[4].style.height=33+'%'
 s[4].style.background='#000'
 s[4].style.borderRadius=55+'%'
 
-shld[0].style.left='33%'
-shld[0].style.top='12%'
-shld[0].style.width='18%'
-shld[0].style.height='33%'
+swrd[0].style.left=13+'%'
+swrd[0].style.top=77+'%'
+swrd[0].style.width=23+'%'
+swrd[0].style.height=7+'%'
+swrd[1].style.left=-23+'%'
+swrd[1].style.top=37+'%'
+swrd[1].style.width=32+'%'
+swrd[1].style.height=78+'%'
+swrd[1].style.background='#333'
+swrd[2].style.width=100+'%'
+swrd[2].style.height=73+'%'
+swrd[2].style.background='#eee'
+swrd[2].style.transform='skew(44deg)'
+swrd[3].style.top=66+'%'
+swrd[3].style.width=100+'%'
+swrd[3].style.height=73+'%'
+swrd[3].style.background='#fff'
+swrd[3].style.transform='skew(-44deg)'
+
+shld[0].style.left=33+'%'
+shld[0].style.top=12+'%'
+shld[0].style.width=18+'%'
+shld[0].style.height=33+'%'
 shld[0].style.background='#a0a'
-shld[1].style.left='34%'
-shld[1].style.top='33%'
-shld[1].style.width='33%'
-shld[1].style.height='33%'
+shld[1].style.left=34+'%'
+shld[1].style.top=33+'%'
+shld[1].style.width=33+'%'
+shld[1].style.height=33+'%'
 shld[1].style.background=
  'radial-gradient(#505,#909)'
 shld[1].style.transform='scale(2.2)'
-shld[2].style.left='34%'
-shld[2].style.top='23%'
+shld[2].style.left=34+'%'
+shld[2].style.top=23+'%'
 shld[2].style.color='#ff0'
 shld[2].style.transform='scale(0)'
 
@@ -137,24 +167,21 @@ function cl()
   s[0].style.transform='scale(0.9)'
    b=!b
 }	 
-  Icl=setInterval(cl, 222)
+  Icl=setInterval(cl, 999)
  
 btn[0].onmouseover=()=>
 {
  btn[0].style.transform='scale(1.2)'
- btn[1].style.transform='scale(5)'
 }
 btn[0].onmouseout=()=>
 {
  btn[0].style.transform='scale(1)'
- btn[1].style.transform='scale(5) skew(-22deg)'
 }
 btn[0].onclick=()=>
 {
   clearInterval(Icl)
  idsw.style.transform=
-  'rotate(48deg) translate(-222%,111%)'
- s[0].style.transition='1s' 
+  'translate(-222%,9%) rotate(48deg)'
  s[0].style.transform=
   'scale(1,1.2) translate(-28%,0%)' 
  s[2].style.background='#f00'
@@ -167,13 +194,25 @@ btn[0].onclick=()=>
  {
   idsw.style.transform='scale(2)';
   btn[0].style.transform='scale(1)'
-  s[0].style.transition='0.2s'
   s[2].style.background='#000'
   s[2].style.transform='scale(1)'
   s[4].style.background='#000'
   s[4].style.transform='scale(1)'
-   Icl=setInterval(cl, 222)
+   Icl=setInterval(cl, 999)
  }, 1111)
+}
+
+btn[1].onmouseover=()=>
+{
+ btn[1].style.transform='scale(1.2)'
+}
+btn[1].onmouseout=()=>
+{
+ btn[1].style.transform='scale(1)'
+}
+btn[1].onclick=()=>
+{
+ 
 }
 
 idsw.onmouseover=()=>
@@ -186,7 +225,6 @@ idsw.onmouseout=()=>
  idsw.style.transform='scale(2)'
   s[0].onmouseout()
 }
-
 Is=0
 bs=1
 function smo()
@@ -215,6 +253,8 @@ s[0].onmouseover=()=>
 {
  s[0].style.background='#666'
  s[0].style.transform='scale(1.1)'
+ swrd[0].style.transform=
+  'scale(0.7,1) translate(77%,-77%) rotate(-33deg)'
  shld[0].style.transform=
   'scale(0.7,1) translate(-77%,77%) rotate(33deg)'
   clearInterval(Icl)
@@ -229,10 +269,12 @@ s[0].onmouseout=()=>
  s[2].style.transform='scale(1)'
  s[4].style.background='#000'
  s[4].style.transform='scale(1)'
+ swrd[0].style.transform='scale(1)'
  shld[0].style.transform='scale(1)'
   bs=1
   clearInterval(Is)
-  Icl=setInterval(cl, 222)
+  cl()
+  Icl=setInterval(cl, 999)
 }
 s[0].onclick=()=>
 {
@@ -250,7 +292,6 @@ shld[0].onmouseout=()=>
  shld[0].style.transform='scale(1)'
  shld[2].style.transform='scale(0)'
 }
-
 
 </script>
 </body>
