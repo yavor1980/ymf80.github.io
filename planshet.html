@@ -6,14 +6,13 @@
  background:radial-gradient(#090,#888);
 }
 
-.dsply
+.csvg
 {
  position:absolute;
- cursor:pointer;
  transition:1s;
 }
 
-.pnel
+.dsply,.pnel
 {
  position:absolute;
  cursor:pointer;
@@ -22,13 +21,11 @@
 
 </style>
 <body id=idbd>
- 
-<div class=dsply>
- <div class=dsply></div>
- <div class=dsply></div>
- <div class=dsply></div>
- <div class=dsply></div>
-</div>
+
+<svg class=csvg>
+ <circle class=csvg />
+ <line class=csvg />
+</svg>
  
 <div class=pnel>
  <div class=pnel></div>
@@ -38,12 +35,32 @@
  <div class=pnel></div>
  <div class=pnel></div>
   <div class=pnel>solar<br> panel...</div>
-</div> 
+</div>  
  
+<div class=dsply>
+ <div class=dsply></div>
+ <div class=dsply></div>
+ <div class=dsply></div>
+</div>
+
 <script>
+csvg=document.getElementsByClassName("csvg")
 dsply=document.getElementsByClassName('dsply')
 pnel=document.getElementsByClassName("pnel") 
- 
+
+csvg[0].style.left=66+'%'
+csvg[0].style.top=55+'%'
+csvg[0].style.width=24+'%'
+csvg[0].style.height=28+'%'
+//csvg[0].style.background='#888'
+csvg[1].style.cx=50+'%'
+csvg[1].style.cy=50+'%'
+csvg[1].style.r=44
+csvg[1].style.fill='#990'
+csvg[1].style.stroke='#0f0'
+csvg[1].style.strokeWidth=7
+csvg[1].style.cursor='pointer' 
+
 dsply[0].style.left=19+'%'
 dsply[0].style.top=45+'%'
 dsply[0].style.width=17+'%'
@@ -51,13 +68,11 @@ dsply[0].style.height=22+'%'
 dsply[0].style.background='#909'
 dsply[0].style.borderRadius=5+'%'
 dsply[0].style.transform='scale(2) skew(11deg)'
-
 dsply[1].style.left=4+'%'
 dsply[1].style.top=4+'%'
 dsply[1].style.width=92+'%'
 dsply[1].style.height=83+'%'
 dsply[1].style.background='#555'
-
 dsply[2].style.left=77+'%'
 dsply[2].style.bottom=2+'%'
 dsply[2].style.width=14+'%'
@@ -65,7 +80,6 @@ dsply[2].style.height=10+'%'
 dsply[2].style.background='#222'
 dsply[2].style.color='#fff'
 dsply[2].style.borderRadius=50+'%'
-
 dsply[3].style.left=7+'%'
 dsply[3].style.bottom=2+'%'
 dsply[3].style.width=19+'%'
@@ -100,33 +114,38 @@ inp(7,99,44,'','','')
  pnel[7].style.transform='scale(0)'
 
 Idsply=0; vdspl=0
+function fdsply()
+{
+  vdspl=Math.random()*33+33
+ dsply[1].style.background=
+  'radial-gradient('+vdspl+
+  'px,#f00,#ff0,#00b,#666)'
+ pnel[1].style.background=
+  '#'+Math.round(Math.random()*9)+'00'
+ pnel[2].style.background=
+  '#'+Math.round(Math.random()*9)+'00'
+ pnel[3].style.background=
+  '#'+Math.round(Math.random()*9)+'00'
+ pnel[4].style.background=
+  '#'+Math.round(Math.random()*9)+'00'
+ pnel[5].style.background=
+  '#'+Math.round(Math.random()*9)+'00'
+ pnel[6].style.background=
+  '#'+Math.round(Math.random()*9)+'00' 
+}
 dsply[0].onmouseover=()=>
 {
  dsply[0].style.transform='scale(2)'
- Idsply=setInterval(()=>{ 
-  vdspl=Math.random()*33+33
-  dsply[1].style.background=
-   'radial-gradient('+vdspl+
-   'px,#f00,#ff0,#00b,#666)'
-  pnel[1].style.background=
-   '#'+Math.round(Math.random()*9)+'00'
-  pnel[2].style.background=
-   '#'+Math.round(Math.random()*9)+'00'
-  pnel[3].style.background=
-   '#'+Math.round(Math.random()*9)+'00'
-  pnel[4].style.background=
-   '#'+Math.round(Math.random()*9)+'00'
-  pnel[5].style.background=
-   '#'+Math.round(Math.random()*9)+'00'
-  pnel[6].style.background=
-   '#'+Math.round(Math.random()*9)+'00' 
- }, 999)
+  fdsply()
+  Idsply=setInterval(()=>fdsply(), 999)
  dsply[2].style.background=
   'radial-gradient(#0f0,#090)'
  dsply[3].style.background=
   'linear-gradient(90deg,#055,#111,#555,#111,#055)'
  pnel[0].style.transform='scale(1.1)'
- 
+ csvg[0].style.transform=
+  'scale(1.7) translate(-12%,-69%)'
+ csvg[1].style.fill='#ff0' 
 }
 dsply[0].onmouseout=()=>
 {
@@ -142,6 +161,8 @@ dsply[0].onmouseout=()=>
  pnel[4].style.background='#000'
  pnel[5].style.background='#000'
  pnel[6].style.background='#000'
+ csvg[0].style.transform='scale(1)'
+ csvg[1].style.fill='#990'
 }
 
 pnel[0].onmouseover=()=>
