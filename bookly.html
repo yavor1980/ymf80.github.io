@@ -9,26 +9,43 @@
 {
  background:radial-gradient(#660,#bb0);
 }
-input:hover
+input
 {
-transformn:scale(1.2);   
-}
-button,input
-{
- height:9%;   
+ text-align:center;
 }
 
-.bdy
+#idbdy
+{
+ position:absolute;   
+ transition:1s;
+ left:2%;
+ top:2%; 
+ width:94%;
+ height:94%;
+ background:#880;
+ border-radius:12%;
+ border:9px ridge #990;
+}
+.btn
 {
  position:absolute;   
  transition:1s;
  font-size:1.7em;
+ transform:scale(2);
+ cursor:pointer;
 }
-.dty
+.ttl
 {
  position:absolute;   
  transition:1s;
 }
+.dlg
+{
+ position:absolute;   
+ transition:1s;
+ z-index:1;
+}
+
 .lst
 {
  position:absolute;   
@@ -38,19 +55,24 @@ button,input
  
 </style>
 
-<div class=bdy>
- <div class=dty>event:</div>
- <select class=bdy>
+<div id=idbdy>
+ <div class=ttl>event:</div>
+ 
+ <select class=ttl>
   <option>meeting</option>
   <option> expo</option>
   <option>seminar</option>
   <option>exposition</option>
  </select> 
- <input class=dty disabled value='mm.dd.yy'>
- <button class=dty disabled>OK</button>
- <input type='submit' class=bdy value='order'>
- <input type='submit' class=bdy value='change'>
- <input type='submit' class=bdy value='off'>
+ 
+ <input type='submit' class=btn value='order'>
+ <input type='submit' class=btn value='change'>
+ <input type='submit' class=btn value='off'>
+ 
+ <div class=dlg>
+  <input class=dlg disabled value='mm.dd.yy'>
+  <button class=dlg disabled>OK</button>
+ </div>
  
  <div class=lst>
   <div class=lst><td></td></div>
@@ -62,61 +84,52 @@ button,input
 </div>  
  
 <script>
-bdy=document.getElementsByClassName('bdy')
-dty=document.getElementsByClassName('dty')
+btn=document.getElementsByClassName('btn')
+ttl=document.getElementsByClassName('ttl')
+dlg=document.getElementsByClassName('dlg')
 lst=document.getElementsByClassName('lst') 
   
-bdy[0].style.left=2+'%'
-bdy[0].style.top=2+'%'  
-bdy[0].style.width=94+'%'
-bdy[0].style.height=94+'%'
-bdy[0].style.background='#880'
-bdy[0].style.borderRadius=12+'%'
-bdy[0].style.border='9px ridge #990'
-bdy[1].style.left=5+'%'
-bdy[1].style.top=16+'%'  
-bdy[1].style.background='#ff0'
-bdy[1].style.cursor='pointer'
-bdy[2].style.left=40+'%'
-bdy[2].style.top=13+'%'
-bdy[2].style.background='#0f0'
-bdy[2].style.color='#00f'
-bdy[2].style.borderRadius=12+'%'
-bdy[2].style.transform='scale(1.2)'
-bdy[2].style.cursor='pointer'
-bdy[3].style.left=59+'%'
-bdy[3].style.top=13+'%'
-bdy[3].style.background='#080'
-bdy[3].style.color='#008'
-bdy[3].style.borderRadius=12+'%'
-bdy[3].style.transform='scale(1.2)'
-bdy[3].style.cursor='pointer'
-bdy[4].style.left=82+'%'
-bdy[4].style.top=13+'%' 
-bdy[4].style.background='#080'
-bdy[4].style.color='#dd0'
-bdy[4].style.borderRadius=12+'%'
-bdy[4].style.cursor='pointer'
-bdy[4].style.transform='scale(1.2)'
+btn[0].style.left=44+'%'
+btn[0].style.top=5+'%'  
+btn[0].style.color='#800'
+btn[0].style.borderRadius=11+'%'
+btn[0].style.transform='scale(2)'
+btn[1].style.left=63+'%'
+btn[1].style.top=5+'%' 
+btn[1].style.color='#d00'
+btn[1].style.borderRadius=17+'%'
+btn[1].style.transform='scale(2)'
+btn[2].style.left=83+'%'
+btn[2].style.top=5+'%' 
+btn[2].style.color='#d08'
+btn[2].style.borderRadius=15+'%'
+btn[2].style.transform='scale(2)'  
+  
+ttl[0].style.left=5+'%'
+ttl[0].style.top=5+'%'  
+ttl[0].style.fontSize=4+'em'
+ttl[0].style.cursor='default'
+ttl[1].style.left=11+'%'
+ttl[1].style.top=17+'%' 
+ttl[1].style.width=11+'%' 
+ttl[1].style.color='#d0d'
+ttl[1].style.transform='scale(2)'
+ttl[1].style.cursor='pointer'
 
-dty[0].style.left=7+'%'
-dty[0].style.top=5+'%' 
-dty[0].style.color='#d0d'
-dty[0].style.transform='scale(2)'
-dty[1].style.left=12+'%'
-dty[1].style.top=30+'%' 
-dty[1].style.width=9+'%'
-dty[1].style.height=3+'%'
-dty[1].style.background='#0ff'
-dty[1].style.textAlign='center'
-dty[1].style.transform='scale(2)'
-dty[2].style.left=39+'%'
-dty[2].style.top=33+'%' 
-dty[2].style.width=9+'%'
-dty[2].style.height=9+'%'
-dty[2].style.background='#099'
-dty[2].style.fontSize=1.8+'em'
-dty[2].style.cursor='pointer'
+dlg[0].style.left=14+'%'
+dlg[0].style.top=25+'%' 
+dlg[0].style.width=17+'%'
+dlg[0].style.height=22+'%' 
+dlg[0].style.background='#ee0'
+dlg[0].style.borderRadius=8+'%'
+dlg[1].style.left=2+'%'
+dlg[1].style.top=25+'%'
+dlg[1].textAlign='center'
+dlg[1].style.transform='scale(0.6,1.2)'
+dlg[2].style.left=34+'%'
+dlg[2].style.top=72+'%' 
+dlg[2].style.transform='scale(1.2)'
+dlg[2].style.cursor='pointer'
 
 lst[0].style.left=5+'%'
 lst[0].style.top=55+'%' 
@@ -131,6 +144,7 @@ function initlst(i,t)
  lst[i].style.left=19+'%'
  lst[i].style.top=t+'%' 
  lst[i].style.height=2+'%'
+ //lst[i].style.background='#999'
  lst[i].style.color='#009'
  lst[i].style.cursor='pointer'
  lst[i].style.transform='scale(2)'
@@ -138,50 +152,35 @@ function initlst(i,t)
  initlst(1,9), initlst(2,26),
  initlst(3,43), initlst(4,60),
  initlst(5,4)
- lst[5].style.left=67+'%'
- lst[5].style.width=7+'%'
- lst[5].style.height=13+'%' 
- lst[5].style.background='#d70'
- lst[5].style.borderRadius=8+'%'
- lst[5].style.transform='scale(0)'
  
-ilst=1, bordr=0
-bdy[2].onmouseover=()=>
+ilst=0, bordr=0, idel=-1
+btn[0].onclick=()=>
 { 
- bdy[2].style.transform='scale(1.4)'
-} 
-bdy[2].onmouseout=()=>
-{  
- bdy[2].style.transform='scale(1.2)'
-} 
-bdy[2].onclick=()=>
-{ 
- if(ilst<5)
- {
+   dlg[1].disabled=0
   m=Math.round(Math.random()*11)
   d=Math.round(Math.random()*30)
-   dty[2].disabled=0
-  dty[1].style.transform='scale(3.9) translate(8%,88%)'
-   dty[1].value=m+'.'+d+'.'+'25'
- } 
-} 
-dty[2].onclick=()=>
-{ 
- dty[1].style.transform='scale(2)'
- lst[ilst].innerHTML=bdy[1].value+' '+dty[1].value
-  dty[1].value='mm.dd.yy' 
-  dty[2].disabled=1
+   dlg[1].value=m+'.'+d+'.'+'25'
+ dlg[0].style.transform='scale(2) translate(77%,27%)'
+  dlg[1].disabled=0
+  dlg[2].disabled=0
   bordr=0
-  ilst++
+  ilst++  
+} 
+
+dlg[2].onclick=()=>
+{ 
+  lst[ilst].innerHTML=ttl[1].value+' '+dlg[1].value
+  dlg[1].value='mm.dd.yy' 
+ dlg[0].style.transform='scale(1)'
+ dlg[1].disabled=1
+ dlg[2].disabled=1
 }
 
-bdy[4].onclick=()=>
+btn[2].onclick=()=>
 { 
- if(ilst>1)
- {
-  lst[idel].innerHTML=''
-   ilst=idel
- } 
+ lst[idel].innerHTML=''
+  if(idel>0) idel--
+  ilst=idel
 }
 
 function flst(i)
