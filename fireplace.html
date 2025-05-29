@@ -149,8 +149,11 @@ flme[4].style.top=89+'%'
 flme[4].style.width=77+'%'
 flme[4].style.height=8+'%'
 flme[4].style.background=
- 'radial-gradient(#cc0,#b00)'
-flme[4].style.borderRadius=55+'%' 
+ 'radial-gradient(#f00,#300)'
+flme[4].style.borderTopLeftRadius=55+'%' 
+flme[4].style.borderTopRightRadius=55+'%'
+flme[4].style.borderBottomLeftRadius=5+'%' 
+flme[4].style.borderBottomRightRadius=5+'%'
 flme[4].style.opacity=0
 flme[5].style.left=18+'%'
 flme[5].style.top=16+'%'
@@ -181,6 +184,15 @@ drv[2].style.background='#440'
 drv[2].style.transform='rotate(0deg)'
 drv[2].style.borderRadius=22+'%' 
 
+drts[0].style.left='79%'
+drts[0].style.top='22%'
+drts[0].style.width='12%'
+drts[0].style.height='32%'
+drts[0].style.background='#bbb'
+drts[0].style.borderRadius='55%'
+drts[0].style.border='15px ridge #000'
+drts[0].style.transform='skew(-16deg)'
+
 hdd[0].style.left=9+'%'
 hdd[0].style.top=18+'%'
 hdd[0].style.transform=
@@ -208,15 +220,6 @@ frz[7].style.left=33+Math.random()*7+'%'
 frz[7].style.top=77+'%'
 frz[8].style.left=58+Math.random()*7+'%'
 frz[8].style.top=47+'%'
-
-drts[0].style.left='79%'
-drts[0].style.top='22%'
-drts[0].style.width='12%'
-drts[0].style.height='32%'
-drts[0].style.background='#bbb'
-drts[0].style.borderRadius='55%'
-drts[0].style.border='15px ridge #704'
-drts[0].style.transform='skew(-16deg)'
 
 b=0
 function cld()
@@ -287,7 +290,8 @@ flme[0].onmouseover=()=>
  flme[4].style.opacity=0.7
  flme[5].style.opacity=0.7
  drts[0].style.transform='skew(0deg)'
- drts[0].style.background='#f00'
+ drts[0].style.background=
+  'radial-gradient('+(44+Math.random()*33)+'px,#f00,#ff0)'
  hdd[0].style.transform=
   'scale(4) rotate(-33deg) skew(-33deg)'
  hdd[0].style.color='#f00' 
@@ -315,12 +319,12 @@ flme[0].onmouseout=()=>
 }
 flme[0].onclick=()=>
 {    
-
+ 
 } 
 
 flme[1].onmouseover=()=>
 {    
- flme[3].style.opacity=0.6
+ flme[3].style.opacity=0.9
 } 
 flme[1].onmouseout=()=>
 {    
@@ -329,7 +333,7 @@ flme[1].onmouseout=()=>
 
 flme[2].onmouseover=()=>
 {    
- flme[3].style.opacity=0.6
+ flme[3].style.opacity=0.9
 } 
 flme[2].onmouseout=()=>
 {    
