@@ -61,14 +61,13 @@ hd[1].style.top=58+'%'
 hd[1].style.color='#900'
 hd[1].style.cursor='pointer' 
 hd[1].style.transform='scale(7)'
-hd[1].style.zIndex=1
 hd[2].style.left=12+'%'
 hd[2].style.top=24+'%'
 hd[2].style.width=78+'%'
 hd[2].style.height=43+'%'
 hd[2].style.background=
  'radial-gradient(#ff0,#f0f,#0f0,#f0f,#00f)'
-hd[2].style.borderRadius=46+'%'
+hd[2].style.borderRadius=8+'%'
 hd[2].style.opacity=0
 hd[2].style.zIndex=-1
 
@@ -151,6 +150,8 @@ function cl()
 function sltcl()
 {
  if(bcl){
+  hd[2].style.transform='skew('+
+   (Math.random()*22-11)+'deg)'
   slte[0].style.transition='999ms'
   slte[0].style.transform=
    'scale(1.2) translate('+(Math.random()*666-333)+
@@ -184,7 +185,6 @@ function sltcl()
    slte[5].style.transform=
     'scale(9) translate('+(222+Math.random()*111)+'%,-'+
      (222+Math.random()*111)+'%)'	
-		
   }, 444)
  }
  else
@@ -220,7 +220,7 @@ hd[0].onmouseover=()=>
   hd[0].innerHTML='VICTORY!..'
  hd[1].style.transform='scale(9) skew(22deg)'
   hd[1].innerHTML='PEACE!..'
- hd[2].style.opacity=1//0.5
+ hd[2].style.opacity=0.8
   clearInterval(Icl)
   sltcl(); Icl=setInterval(()=>sltcl(), 999)
 }
