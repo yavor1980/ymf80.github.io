@@ -11,7 +11,7 @@
 { 
  position:absolute;
  transition:1s;
- right:7%;
+ right:5%;
  top:4%;
  width:9%;
  height:6%;
@@ -38,28 +38,11 @@
  cursor:pointer;
  z-index:1;
 }
-.plls
+.plls,.fc,.fns,.bbl
 { 
  position:absolute; 
  transition:2s;
  border-radius:55%;
-}
-.fc
-{ 
- position:absolute; 
- transition:2s;
- border-radius:55%;
-}
-.fns
-{ 
- position:absolute; 
- transition:2s;
- border-radius:55%;
-}
-.bbl
-{ 
- position:absolute; 
- cursor:pointer;
 }
 
 .t_wtr
@@ -167,7 +150,6 @@ fns[1].style.opacity=0.4
 fns[1].style.transform='scale(0.8,1)'
 fns[1].style.zIndex=0
 
- 
 bbl[0].style.left=45+'%'
 bbl[0].style.top=66+'%'
 bbl[0].style.width=5+'%'
@@ -193,10 +175,9 @@ bbl[2].style.background=
  'radial-gradient(#009,#fff)'
 bbl[2].style.transform='scale(0)'
 
-t_wtr[0].style.left=33+'%'
+t_wtr[0].style.left=20+'%'
 t_wtr[0].style.top=6+'%'
 t_wtr[0].style.width=44+'%'
-t_wtr[0].style.height=11+'%'
 t_wtr[0].innerHTML= 
  'Gases dissolved in water: nitrogen, oxygen, argon,'+    
  'carbon dioxide - and other impurities in the air.'+ 
@@ -205,7 +186,6 @@ t_wtr[0].innerHTML=
  'substances dissolve.' 
 t_wtr[1].style.left=47+'%'
 t_wtr[1].style.top=22+'%'
-t_wtr[1].style.height=11+'%'
 t_wtr[1].innerHTML= 
  'heavy water (DO)<br>'+
  'superheavy water (TO)<br>'+
@@ -247,6 +227,10 @@ idbtn.onclick=()=>
  idbtn.style.transform='scale(0)'
  fsh[0].style.transform=
   'scale(2) translate(133%,0)'
+ fns[0].style.transform=
+  'scale('+2.8*Math.random()+',1)'
+ fns[1].style.transform=
+  'scale('+2.8*Math.random()+',1)'  
  setTimeout(()=>
  {
   idbtn.style.transform='scale(1)'
@@ -256,6 +240,8 @@ idbtn.onclick=()=>
  {
   idbtn.style.transform='scale(1)'
   fsh[0].style.transform='scale(1)'
+  fns[0].style.transform='scale(1)'
+  fns[1].style.transform='scale(1)'
  }, 2000)
 }  
 
@@ -277,9 +263,9 @@ fsh[0].onmouseover=()=>
  Ifsh=setInterval(()=>
  {
   fns[0].style.transform=
-   'scale('+1.8*Math.random()+',1)'
+   'scale('+2.8*Math.random()+',1)'
   fns[1].style.transform=
-   'scale('+1.8*Math.random()+',1)' 
+   'scale('+2.8*Math.random()+',1)' 
   bbl[0].style.transition='1s'
   bbl[0].style.transform=
    'scale(6) translate('+Math.random()*333+'%,-222%)'
@@ -340,10 +326,8 @@ t_wtr[1].onmouseout=()=>
 {
  t_wtr[1].style.color='#000'
  t_wtr[1].style.transform='scale(1)'
- 
 }
  
 </script>
 </body>
-
 </html>
