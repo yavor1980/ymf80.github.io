@@ -8,10 +8,10 @@
 <style>
 #idbd
 {
- background:radial-gradient(222px,#bb0,#666);
+ background:radial-gradient(222px,#bbb,#666);
 }
 
-.fc,.gl,.ns,.mth,.ears
+.fc,.gl,.ns,.mth,.ears,.bgrnd
 {
  position:absolute;   
  transition:1s;
@@ -32,7 +32,11 @@
 }
 
 </style>
-
+<div class=bgrnd>
+ <div class=bgrnd></div>
+ <div class=bgrnd></div>
+ <div class=bgrnd></div>
+</div>
 <div class=fc>
  <div class=fc></div>
  <div class=fc></div>
@@ -68,6 +72,7 @@
  </div>
 
 <script>
+bgrnd=document.getElementsByClassName('bgrnd')
 fc=document.getElementsByClassName('fc')
 gl=document.getElementsByClassName('gl')
 ns=document.getElementsByClassName('ns')
@@ -76,7 +81,38 @@ ears=document.getElementsByClassName('ears')
 
 smk=document.getElementsByClassName('smk')
 tfre=document.getElementsByClassName('tfre')
-   
+ 
+bgrnd[0].style.left=12+'%'
+bgrnd[0].style.top=62+'%'  
+bgrnd[0].style.width=33+'%'
+bgrnd[0].style.height=23+'%'
+bgrnd[1].style.left=0+'%'
+bgrnd[1].style.top=0+'%'  
+bgrnd[1].style.width=100+'%'
+bgrnd[1].style.height=100+'%'
+bgrnd[1].style.background=
+ 'radial-gradient(#eee,#a5a)'
+bgrnd[1].style.borderBottomLeftRadius='25%'
+bgrnd[1].style.borderBottomRightRadius='25%'
+bgrnd[1].style.zIndex=-1 
+bgrnd[2].style.left=-16+'%'
+bgrnd[2].style.top=7+'%'  
+bgrnd[2].style.width=33+'%'
+bgrnd[2].style.height=44+'%'
+bgrnd[2].style.background=
+ 'radial-gradient(#eee,#a5a)'
+bgrnd[2].style.borderBottomLeftRadius='25%'
+bgrnd[2].style.borderBottomRightRadius='25%'
+bgrnd[3].style.left=83+'%'
+bgrnd[3].style.top=7+'%'  
+bgrnd[3].style.width=33+'%'
+bgrnd[3].style.height=44+'%'
+bgrnd[3].style.background=
+ 'radial-gradient(#eee,#a5a)'
+bgrnd[3].style.borderBottomLeftRadius='25%'
+bgrnd[3].style.borderBottomRightRadius='25%'
+bgrnd[3].style.zIndex=-4 
+ 
 fc[0].style.left=19+'%'
 fc[0].style.top=22+'%'  
 fc[0].style.width=18+'%'
@@ -198,7 +234,7 @@ smk[2].style.left=-33+'%'
 smk[2].style.top=-83+'%'  
 smk[2].style.width=111+'%'
 smk[2].style.height=111+'%'
-smk[2].style.background=
+//smk[2].style.background=
  'radial-gradient(#ff0,#f00)'
 smk[2].style.borderTopLeftRadius=Math.random()*44+'%'
 smk[2].style.borderTopRightRadius=Math.random()*44+'%'
@@ -245,14 +281,12 @@ function cl()
    bs=!bs
 }
   cl()
-  Icl=setInterval(()=>cl(),)
+  Icl=setInterval(()=>cl(),999)
  
 Ifc=0 
 fc[0].onmouseover=()=>
-{   
+{ 
   clearInterval(Icl)
- idbd.style.background=
-  'radial-gradient(300px,#ff0,#777)'
  mth[2].style.transform=
    'scale(1.0,2.3) translate(11%,-33%) rotate(-9deg)'  
  smk[2].style.opacity=0.4
@@ -260,6 +294,8 @@ fc[0].onmouseover=()=>
  mth[3].style.transform=
    'scale(2.0,1.0) translate(11%,-6%) rotate(-9deg)'  
  Ifc=setInterval(()=>{ 
+  smk[2].style.background=
+   'radial-gradient(#ff0,#f00)'
   smk[2].style.borderTopLeftRadius=Math.random()*44+'%'
   smk[2].style.borderTopRightRadius=Math.random()*44+'%'
   smk[2].style.transform='scale('+(0.4+Math.random())+
@@ -277,13 +313,12 @@ fc[0].onmouseover=()=>
  ears[0].style.transform='scale(1.3,1.4)'
  ears[1].style.transform='scale(1.3,1.4)'
  mth[2].style.transform='transform(111%,-77%)'
+ bgrnd[3].style.transform='scale(3,1)'
 }
 fc[0].onmouseout=()=>
 { 
   cl()
   Icl=setInterval(()=>cl(),1111)
- idbd.style.background=
-  'radial-gradient(222px,#bb0,#666)' 
  smk[2].style.opacity=0
  smk[2].style.transform='scale(0)'  
  smk[3].style.top=-8+'%'
@@ -298,13 +333,12 @@ fc[0].onmouseout=()=>
  gl[3].style.background='#000'
  ears[0].style.transform='scale(1)'
  ears[1].style.transform='scale(1)'
+ bgrnd[3].style.transform='scale(1)'
   clearInterval(Ifc)
 }
 
 smk[0].onmouseover=()=>
 {   
- idbd.style.background=
-  'radial-gradient(300px,#ff0,#777)'  
  smk[0].style.transform='scale(1.1)'
  smk[2].style.opacity=0.4
  smk[2].style.transform=
@@ -313,8 +347,6 @@ smk[0].onmouseover=()=>
 }  
 smk[0].onmouseout=()=>
 {   
- idbd.style.background=
-  'radial-gradient(222px,#bb0,#666)'  
  smk[0].style.transform='scale(1)'
  smk[2].style.opacity=0
  smk[2].style.transform='scale(0)'
