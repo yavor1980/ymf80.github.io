@@ -157,7 +157,7 @@ function tchw(i)
 {
  wf[i].onmouseover=()=>
  {   
-  if(bwf) wf[i].style.left=0+'%'
+  if(bwf) wf[i].style.left=event.offsetX+'%'
   wf[i].style.transform='scale(1.2)'
   wf[i].style.background=
    'radial-gradient(14px,#090,#0c0)'
@@ -196,7 +196,7 @@ function tchb(i)
 {
  bf[i].onmouseover=()=>
  {
-  if(bbf) bf[i].style.left=0+'%'
+  if(bbf) bf[i].style.left=event.offsetX+'%'
   bf[i].style.background=
    'radial-gradient(14px,#cc0,#ff0)'
   bf[i].style.border='1px ridge #222'
