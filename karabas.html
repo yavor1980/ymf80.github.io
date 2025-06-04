@@ -10,7 +10,7 @@
  background:linear-gradient(#dd0,177px,#333);
 }
 
-.kttl,.bttl,.blb,.ttl,.pna
+.kttl,.bttl,.blb,.ttl,.pna,.cncr
 {
  position:absolute;   
  transition:1s;
@@ -45,6 +45,13 @@
  <div class=pna></div>
 </div>
 
+<div class=cncr>
+ <div class=cncr></div>
+ <div class=cncr></div>
+ <div class=cncr></div>
+ <div class=cncr></div>
+</div>
+
 <script>
 kttl=document.getElementsByClassName('kttl')
 bttl=document.getElementsByClassName('bttl')
@@ -52,6 +59,7 @@ ttl=document.getElementsByClassName('ttl')
 
 blb=document.getElementsByClassName('blb')
 pna=document.getElementsByClassName('pna')
+cncr=document.getElementsByClassName('cncr')
 
 kttl[0].style.left=12+'%'
 kttl[0].style.top=11+'%'
@@ -107,10 +115,12 @@ ttl[0].style.left=6+'%'
 ttl[0].style.top=30+'%'
 ttl[0].style.color='#ff0'
 ttl[0].style.transform='scale(0)'
+ttl[0].style.zIndex=1
 ttl[1].style.left=6+'%'
 ttl[1].style.top=30+'%'
 ttl[1].style.color='#d0d'
 ttl[1].style.transform='scale(0)'
+ttl[1].style.zIndex=1
 
 blb[0].style.left=48+'%'
 blb[0].style.top=30+'%'
@@ -158,6 +168,33 @@ pna[1].style.background=
 pna[1].style.borderBottomLeftRadius=22+'%'
 pna[1].style.borderBottomRightRadius=33+'%'
 pna[1].style.opacity=0
+
+cncr[0].style.left=14+'%'
+cncr[0].style.top=48+'%'
+cncr[0].style.width=14+'%'
+cncr[0].style.height=33+'%'
+cncr[0].style.cursor='pointer'
+cncr[1].style.left=2+'%'
+cncr[1].style.top=0+'%'
+cncr[1].style.width=99+'%'
+cncr[1].style.height=77+'%'
+cncr[1].style.background=
+ 'radial-gradient(#f00,#cc0)'
+cncr[1].style.borderRadius=44+'%'
+cncr[2].style.left=16+'%'
+cncr[2].style.top=67+'%'
+cncr[2].style.width=74+'%'
+cncr[2].style.height=27+'%'
+cncr[2].style.background=
+ 'radial-gradient(#f00,#cc0)'
+cncr[2].style.borderRadius=33+'%'
+cncr[3].style.left=16+'%'
+cncr[3].style.top=90+'%'
+cncr[3].style.width=74+'%'
+cncr[3].style.height=27+'%'
+cncr[3].style.background=
+ 'radial-gradient(#f00,#cc0)'
+cncr[3].style.borderRadius=33+'%'
 
 Imv=0
 function mv()
@@ -224,6 +261,24 @@ bttl[0].onmouseover=()=>
  kttl[0].onmouseover()
 }
 bttl[0].onmouseout=()=>
+{ 
+ kttl[0].onmouseout()
+}
+
+blb[0].onmouseover=()=>
+{ 
+ kttl[0].onmouseover()
+}
+blb[0].onmouseout=()=>
+{ 
+ kttl[0].onmouseout()
+}
+
+cncr[0].onmouseover=()=>
+{ 
+ kttl[0].onmouseover()
+}
+cncr[0].onmouseout=()=>
 { 
  kttl[0].onmouseout()
 }
