@@ -212,22 +212,17 @@ cpcty[8].style.background='#777'
 cpcty[8].style.opacity=0
 cpcty[8].style.borderRadius=22+'%'
 
-bbtn=1
-btn[0].onclick=()=>
+btn[0].onmouseover=()=>
 {
- if(bbtn==0)
- {
-  fcoiloff()
-  fcpctyoff()
-   btn[0].innerHTML='ON'
- } 
- else
- {
-  fcoilon()
-  fcpctyon()
-   btn[0].innerHTML='OFF'
- } 
- bbtn=!bbtn
+ fcoilon()
+ fcpctyon()
+  btn[0].innerHTML='OFF'
+}
+btn[0].onmouseout=()=>
+{
+ fcoiloff()
+ fcpctyoff()
+  btn[0].innerHTML='ON'
 }
 
 coilI=0
@@ -264,7 +259,7 @@ function fcoilon()
 }
 coil[0].onmouseover=()=>
 {
- if(bbtn==1) fcoilon()
+ fcoilon()
 }  
 function fcoiloff()
 {
@@ -318,7 +313,7 @@ function fcpctyon()
 }
 cpcty[0].onmouseover=()=>
 {
- if(bbtn==1) fcpctyon()
+ fcpctyon()
 }
 function fcpctyoff()
 {
