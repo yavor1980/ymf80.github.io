@@ -7,6 +7,13 @@
  background:radial-gradient(#0bb,#bb0);
 }
 
+.btn
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+}
+
 .dsk
 {
  position:absolute;
@@ -36,24 +43,28 @@
  text-align:center;
 }
 
-.ttpl
-{
- position: absolute;
- transition:1s;
- cursor:pointer;
- transform:scale(0);
-}
-
 </style>
-
 <div class=dsk></div>
 
-<div class=ttpl>Go...</div>
-<div class=ttpl>PLAY!</div>
+<button class=btn>Stop</button>
+<button class=btn>Stay</button>
 
 <script>
+btn=document.getElementsByClassName("btn")
 dsk=document.getElementsByClassName("dsk")
 ttpl=document.getElementsByClassName("ttpl")
+   
+btn[0].style.left=5+'%'
+btn[0].style.top=44+'%'
+btn[0].style.background='#b00'
+btn[0].style.color='#fff'
+btn[0].style.transform='scale(3)'
+   
+btn[1].style.left=5+'%'
+btn[1].style.top=55+'%'
+btn[1].style.background='#b00'
+btn[1].style.color='#eee'
+btn[1].style.transform='scale(3)'   
    
 cl=[], icl=[], jcl=[]
 for(i=0;i<8;i++)
@@ -65,7 +76,7 @@ for(i=0;i<8;i++)
   cl[i].style.top=50*j+'px'
   cl[i].style.background='#888'
    dsk[0].appendChild(cl[i])
-   icl[i]=1; jcl[j]=1;
+   //icl[i]=1; jcl[j]=1;
   if(!(i%2==0)&&(j%2==0)||!(i%2==1)&&(j%2==1))
   {
    cl[i].style.background='#aaa'
@@ -74,25 +85,16 @@ for(i=0;i<8;i++)
   }  
  }
  
-wf=[]
+wf=[], bf=[]
 for(i=0;i<12;i++)    
 { 
  wf[i]=document.createElement("div")
  wf[i].className='fgr'
  dsk[0].appendChild(wf[i])
  wf[i].style.left= i*50+'px'
- if(i%2==1)	
-  wf[i].style.top=50+'px'
- if(i>7)
- {
-  wf[i].style.left= 2*(i-8)*50+'px'
-  wf[i].style.top= 2*50+'px'
- }
-  wf[i].style.background=
-   'radial-gradient(14px,#999,#ccc)' 
+ wf[i].style.background=
+  'radial-gradient(14px,#999,#ccc)' 
 }
-
-bf=[]
 for(i=0;i<12;i++)    
 { 
  bf[i]=document.createElement("div")
@@ -100,25 +102,34 @@ for(i=0;i<12;i++)
  dsk[0].appendChild(bf[i])
  bf[i].style.left=i*50+'px'
  bf[i].style.top=6*50+'px'
- if(i%2==1)
-  bf[i].style.top=7*50+'px'
- if(i>7)
- {
-  bf[i].style.left=50+2*(i-8)*50+'px'
-  bf[i].style.top=5*50+'px'
- }
  bf[i].style.background=
   'radial-gradient(14px,#555,#222)'
 }    
 
-ttpl[0].style.left=11+'%' 
-ttpl[0].style.top=19+'%' 
-ttpl[0].style.color='#f70'
-ttpl[0].style.transform='scale(0)' 
-ttpl[1].style.left=14+'%' 
-ttpl[1].style.top=34+'%'
-ttpl[1].style.color='#f00'
-ttpl[1].style.transform='scale(0)'
+function arrfgr()
+{
+ for(i=0;i<12;i++)    
+ {
+  if(i%2==1)	
+   wf[i].style.top=50+'px'
+  if(i>7)
+  {
+   wf[i].style.left= 2*(i-8)*50+'px'
+   wf[i].style.top= 2*50+'px'
+  } 
+ }
+ for(i=0;i<12;i++)    
+ {
+  if(i%2==1)
+   bf[i].style.top=7*50+'px'
+  if(i>7)
+  {
+   bf[i].style.left=50+2*(i-8)*50+'px'
+   bf[i].style.top=5*50+'px'
+  }
+ }
+}
+  //arrfgr()
 
 Isi=0
 bmv=1
@@ -135,23 +146,31 @@ function mv()
  mv()
  Isi=setInterval(mv, 2000)	
  
-dsk[0].onmouseover=()=>
+bbtn0=0 
+btn[0].onclick=()=>
 {
+ if(bbtn0==0)
+ {
    clearInterval(Isi)
- dsk[0].style.border='5px ridge #909' 
- dsk[0].style.transform= 
-  'scale(1.6) translate(11%,11%)'
- ttpl[0].style.transform='scale(6) skew(-22deg)' 
- ttpl[1].style.transform='scale(6) skew(11deg)'  
-}	
-dsk[0].onmouseout=()=>
-{
-  mv()
-  Isi= setInterval(mv, 2000)
- dsk[0].style.border='2px ridge #909'  
- ttpl[0].style.transform='scale(0)'
- ttpl[1].style.transform='scale(0)' 	 
-}	  
+  dsk[0].style.border='5px ridge #909' 
+  dsk[0].style.transform= 
+   'scale(1.6) translate(11%,11%)'
+   btn[0].innerHTML='Go' 
+ }
+ else
+ {
+   mv()
+   Isi= setInterval(mv, 2000)
+  dsk[0].style.border='2px ridge #909'  
+   btn[0].innerHTML='Stop'
+ }
+  bbtn0=!bbtn0
+}
+ 
+btn[1].onclick=()=>
+{ 
+  arrfgr()
+}
 	
 function tchw(i)
 {
