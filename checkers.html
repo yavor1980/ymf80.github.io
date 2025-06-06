@@ -46,7 +46,7 @@
 </style>
 <div class=dsk></div>
 
-<button class=btn>Stop</button>
+<button class=btn>Go..</button>
 <button class=btn>Stay</button>
 
 <script>
@@ -84,6 +84,9 @@ for(i=0;i<8;i++)
     icl[i]=0; jcl[j]=0;
   }  
  }
+ dsk[0].style.border='5px ridge #909' 
+ dsk[0].style.transform= 
+   'scale(1.6) translate(11%,11%)'
  
 wf=[], bf=[]
 for(i=0;i<12;i++)    
@@ -129,7 +132,7 @@ function arrfgr()
   }
  }
 }
-  //arrfgr()
+  arrfgr()
 
 Isi=0
 bmv=1
@@ -141,28 +144,24 @@ function mv()
  else
   dsk[0].style.transform= 
    'scale(1.2) translate(0, 15%) skew(-33deg)'
-   bmv=!bmv
+ bmv=!bmv
 }
- mv()
- Isi=setInterval(mv, 2000)	
- 
+
 bbtn0=0 
 btn[0].onclick=()=>
 {
  if(bbtn0==0)
  {
-   clearInterval(Isi)
-  dsk[0].style.border='5px ridge #909' 
-  dsk[0].style.transform= 
-   'scale(1.6) translate(11%,11%)'
-   btn[0].innerHTML='Go' 
+   mv()
+  Isi=setInterval(mv, 2000)	
+   btn[0].innerHTML='Stop' 
  }
  else
  {
-   mv()
-   Isi= setInterval(mv, 2000)
-  dsk[0].style.border='2px ridge #909'  
-   btn[0].innerHTML='Stop'
+  clearInterval(Isi)
+  dsk[0].style.transform= 
+   'scale(1.6) translate(11%,11%)'
+   btn[0].innerHTML='Go..'
  }
   bbtn0=!bbtn0
 }
