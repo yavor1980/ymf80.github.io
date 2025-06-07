@@ -46,8 +46,8 @@
 </style>
 <div class=dsk></div>
 
-<button class=btn>Go..</button>
-<button class=btn>Stay</button>
+<button class=btn >Go..</button>
+<button class=btn disabled>Stay</button>
 
 <script>
 btn=document.getElementsByClassName("btn")
@@ -169,6 +169,7 @@ btn[0].onclick=()=>
 btn[1].onclick=()=>
 { 
   arrfgr()
+ // btn[1].disabled=1
 }
 	
 function tchw(i)
@@ -202,6 +203,7 @@ function clw(i)
  bwf=0
  wf[i].onclick=()=>
  {
+  btn[1].disabled=0
   bwf=1
  }
 }
@@ -214,6 +216,7 @@ function tchb(i)
 {
  bf[i].onmouseover=()=>
  {
+  
   if(bbf) bf[i].style.left=event.offsetX+'%'
   bf[i].style.background=
    'radial-gradient(14px,#cc0,#ff0)'
@@ -241,7 +244,8 @@ function clb(i)
  bbf=0
  bf[i].onclick=()=>
  { 
-   bbf=1
+  btn[1].disabled=0
+  bbf=1
  }
 }
 clb(0); clb(1); clb(2);
