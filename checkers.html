@@ -76,11 +76,10 @@ for(i=0;i<8;i++)
   cl[i].style.top=50*j+'px'
   cl[i].style.background='#888'
    dsk[0].appendChild(cl[i])
-   //icl[i]=1; jcl[j]=1;
+   icl[i]=1; jcl[j]=1;
   if(!(i%2==0)&&(j%2==0)||!(i%2==1)&&(j%2==1))
   {
    cl[i].style.background='#aaa'
-   dsk[0].appendChild(cl[i])
     icl[i]=0; jcl[j]=0;
   }  
  }
@@ -94,7 +93,7 @@ for(i=0;i<12;i++)
  wf[i]=document.createElement("div")
  wf[i].className='fgr'
  dsk[0].appendChild(wf[i])
- wf[i].style.left= i*50+'px'
+ 
  wf[i].style.background=
   'radial-gradient(14px,#999,#ccc)' 
 }
@@ -103,8 +102,7 @@ for(i=0;i<12;i++)
  bf[i]=document.createElement("div")
  bf[i].className='fgr'  
  dsk[0].appendChild(bf[i])
- bf[i].style.left=i*50+'px'
- bf[i].style.top=6*50+'px'
+
  bf[i].style.background=
   'radial-gradient(14px,#555,#222)'
 }    
@@ -113,6 +111,7 @@ function arrfgr()
 {
  for(i=0;i<12;i++)    
  {
+  wf[i].style.left= i*50+'px'
   if(i%2==1)	
    wf[i].style.top=50+'px'
   if(i>7)
@@ -123,6 +122,8 @@ function arrfgr()
  }
  for(i=0;i<12;i++)    
  {
+  bf[i].style.left=i*50+'px'
+  bf[i].style.top=6*50+'px'
   if(i%2==1)
    bf[i].style.top=7*50+'px'
   if(i>7)
