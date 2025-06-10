@@ -1,6 +1,5 @@
 <DOCTYPE html>
 <html>
-
 <head>
  <meta charset='utf-8'>
 </head>
@@ -44,11 +43,10 @@
  z-index:-2;
 }
 
-.frz
+.brd
 {
  position:absolute;
  transition:1s;
- transform:scale(2);
 }
 
 </style>
@@ -58,6 +56,9 @@
 <button class=btn>darking</button>
 
 <div class=whl>
+ <div class=brd>
+  <div class=brd></div>
+ </div>
  <div class=whl></div>
  <div class=whl></div>
  <div class=whl></div>
@@ -67,11 +68,6 @@
   <div class=fr></div>
   <div class=fr></div>
  </div>
-  <div class=frz>A</div>
-  <div class=frz>U</div>
-  <div class=frz>T</div>
-  <div class=frz>O</div>
-  <div class=frz>Motor vs Transmission</div>
 </div>
 
 <div class=rd>
@@ -83,8 +79,7 @@ btn=document.getElementsByClassName('btn')
 whl=document.getElementsByClassName('whl')
 fr=document.getElementsByClassName('fr')
 rd=document.getElementsByClassName('rd')
-   
-frz=document.getElementsByClassName('frz')
+brd=document.getElementsByClassName('brd')
    
 btn[0].style.right=5+'%'
 btn[0].style.top=3+'%'
@@ -188,9 +183,7 @@ fr[3].style.width=80+'%'
 fr[3].style.height=14+'%'
 fr[3].style.background=
  'radial-gradient(#ff0,#555)'
-fr[3].style.borderRadius=14+'%'
-fr[3].style.borderTopLeftRadius=55+'%'
-fr[3].style.borderTopRightRadius=55+'%'	 
+fr[3].style.borderRadius=55+'%'
 	 
 rd[0].style.left=0+'%'
 rd[0].style.bottom=0+'%'
@@ -205,27 +198,22 @@ rd[1].style.width=2+'%'
 rd[1].style.height=100+'%'
 rd[1].style.background='#fff'
 	 
-frz[0].style.left=88+'%'
-frz[0].style.top=10+'%' 
-frz[0].style.color='#f00'
-frz[0].style.transform='scale(0)'
-frz[1].style.left=88+'%'
-frz[1].style.top=10+'%' 
-frz[1].style.color='#f80';	
-frz[1].style.transform='scale(0)'
-frz[2].style.left=88+'%'
-frz[2].style.top=10+'%' 
-frz[2].style.color='#fc0'
-frz[2].style.transform='scale(0)'
-frz[3].style.left=88+'%'
-frz[3].style.top=10+'%' 
-frz[3].style.color='#f30'
-frz[3].style.transform='scale(0)'
-frz[4].style.left=88+'%'
-frz[4].style.top=10+'%' 
-frz[4].style.color='#f0f'
-frz[4].style.transform='scale(0)' 
-	 
+function itbrd(i,l,t,w,h)	 
+{
+ brd[i].style.left=l+'%'
+ brd[i].style.top=t+'%' 
+ brd[i].style.width=w+'%'
+ brd[i].style.height=h+'%' 
+}
+ itbrd(0,  44,-18,  14,22)
+  brd[0].style.borderRadius=55+'%'
+  brd[0].style.background='#900'
+  brd[0].style.zIndex=1
+ itbrd(1,  0,0,  99,99)
+  brd[1].style.background='#f00'
+  brd[1].style.opacity=0
+  brd[1].style.borderRadius=55+'%'
+ 	
 o= 
 {
  btr:1, intr:0, bs:0, 
@@ -248,9 +236,6 @@ o=
    'rotate(0deg) translate(-33%,0)'
   fr[0].style.background='#000'
   fr[1].style.background='#000'
-  frz[0].style.transform=
-   'scale(2) translate(0,-233%)'
-   frz[0].innerHTML='Braking 3s'
   setTimeout(()=>
   {
     o.intr=setInterval(()=>{o.cl();}, 222);
@@ -259,8 +244,6 @@ o=
    btn[2].style.opacity=1
    fr[0].style.background='#f00'
    fr[1].style.background='#f00'
-	frz[0].innerHTML='Racing 2s'
-   setTimeout(()=>{frz[0].innerHTML='';},2222)
   }, 2000)
  } 
 }   
@@ -318,16 +301,10 @@ whl[0].onmouseover=()=>
    Math.round(Math.random()*9)+''+
    Math.round(Math.random()*9)+''+
    Math.round(Math.random()*9)
- frz[0].style.transform=
-  'scale(3) translate(-799%,-199%)'  
- frz[1].style.transform=
-  'scale(3) translate(-600%,-199%)'
- frz[2].style.transform=
-  'scale(3) translate(-555%,-188%)'
- frz[3].style.transform=
-  'scale(3) translate(-333%,-177%)'
- frz[4].style.transform=
-  'scale(3) translate(33%,-166%) skew(-12deg)'
+ brd[0].style.background='#f00'
+ brd[0].style.transform='scale(1.3)' 
+ brd[1].style.opacity=0.5
+ brd[1].style.transform='scale(4)'
 }
 whl[0].onmouseout=()=>
 {
@@ -335,11 +312,10 @@ whl[0].onmouseout=()=>
  fr[1].style.background='#f00'
  fr[2].style.background='#777'
   fr[2].innerHTML=''
- frz[0].style.transform='scale(0)'
- frz[1].style.transform='scale(0)'
- frz[2].style.transform='scale(0)'
- frz[3].style.transform='scale(0)'
- frz[4].style.transform='scale(0)'	
+ brd[0].style.background='#900'
+ brd[0].style.transform='scale(1)'	
+ brd[1].style.opacity=0
+ brd[1].style.transform='scale(1)'
 }
 
 </script>
