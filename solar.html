@@ -15,16 +15,16 @@
 #idb
 {
  position:absolute;
+ transition:1s;
  left:77%;
  top:7%;
  width:9%;
  height:7%;
  background:#f00;
  color:#0ff;
- transition:1s;
+ font-size:2em;
  border-radius:22%;
  cursor:pointer;
- font-size:2em;
 }
 #idb:hover
 {
@@ -46,26 +46,20 @@
 .plnt
 {
  position:absolute;  
- border-radius:9%;
  transition:4s;
  border-radius:55%; 
  z-index:0; 
  transition-timing-function:linear;
 }
 
-.spc
-{ 
- position:absolute;
- transition:1s;
- cursor:pointer;
-}
+
 .strs
 {
  position:absolute;  
- border-radius:55%;
  transition:2s;
  width:0.4%;
  height:1%;
+ border-radius:55%;
  z-index:-1;
 }
 
@@ -77,20 +71,18 @@
 .flm
 {
  position:absolute;  
- border-radius:55%;
  transition:1s;
  width:11%;
  height:5%;  
+ border-radius:55%;
 }
 
-.rct
-{
+.spce
+{ 
  position:absolute;
  transition:1s;
  cursor:pointer;
- transform:scale(2);
 }
-
 
 </style>
 
@@ -101,8 +93,6 @@
  <div class=plnt></div>
  <div class=plnt></div>
  <div class=plnt></div>
- <div class=plnt>solar </div>
- <div class=plnt>for all galaxy </div>
 </div>
 
 <div class=shtl>
@@ -117,31 +107,11 @@
 <div class=strs></div>
 <div class=strs></div>
 
-<div class=spc >
- Galaxy
-</div>
-<div class=spc >
- redshift
-</div>
-<div class=spc >
- radio galaxy
-</div>
-<div class=spc >
- Researching
-</div>
-<div class=spc ></div>
-<div class=rct >
- render()
-</div>
-<div class=rct >
- state
-</div>
-<div class=rct >
- props
-</div>
-<div class=rct >
- setInterval(()=>mv(),999)
-</div>
+<div class=spce>Galaxy</div>
+<div class=spce>redshift</div>
+<div class=spce>radio galaxy</div>
+<div class=spce>Researching</div>
+<div class=spce></div>
 
 <script>
 sol=document.getElementsByClassName('sol')
@@ -150,8 +120,7 @@ shtl=document.getElementsByClassName('shtl')
 flm=document.getElementsByClassName('flm')
 strs=document.getElementsByClassName('strs')
   
-spc=document.getElementsByClassName('spc')
-rct=document.getElementsByClassName('rct')
+spce=document.getElementsByClassName('spce')
   
 sol[1].style.zIndex=-1
 sol[1].style.left=-6+'%'
@@ -182,17 +151,6 @@ plnt[2].style.top=Math.random()*77+'%'
 plnt[2].style.width=22+'%'
 plnt[2].style.height=22+'%'  
 plnt[2].style.cursor='pointer'
-plnt[3].style.left=88+'%'
-plnt[3].style.top=-22+'%'  
-plnt[3].style.color='#f09'
-plnt[3].style.cursor='pointer'
-plnt[3].style.transform='scale(2)'
-plnt[4].style.left=94+'%'
-plnt[4].style.top=-33+'%'  
-plnt[4].style.width=33+'%'
-plnt[4].style.color='#f0f'
-plnt[4].style.transition='1s'
-plnt[4].style.transform='scale(0)'
 	 
 shtl[0].style.left=66+'%'
 shtl[0].style.top=45+'%'  
@@ -227,22 +185,26 @@ shtl[3].style.borderTopLeftRadius=55+'%'
 shtl[3].style.borderBottomLeftRadius=55+'%'
 shtl[3].style.zIndex=-1
 	
-flm[0].style.background='red' 
 flm[0].style.left=-44+'%'
 flm[0].style.top=7+'%'  
 flm[0].style.width=33+'%'
 flm[0].style.height=99+'%'
+flm[0].style.borderLeft='9px ridge #b09'
+flm[0].style.borderTop='9px ridge #b09'
+//flm[0].style.borderBottom='9px ridge #b00'
 flm[0].style.opacity=0
-flm[1].style.background='red' 
 flm[1].style.left=-44+'%'
 flm[1].style.top=7+'%'  
 flm[1].style.width=33+'%'
 flm[1].style.height=99+'%'
+flm[1].style.borderLeft='9px ridge #b09'
+flm[1].style.borderTop='9px ridge #b09'
+//flm[1].style.borderBottom='9px ridge #b00'
 flm[1].style.opacity=0
 
 strs[0].style.left=11+'%'
 strs[0].style.top=55+'%'
-strs[0].style.background='#ff0';
+strs[0].style.background='#ff0'
 strs[1].style.left=77+'%'
 strs[1].style.top=22+'%'
 strs[1].style.background='#ff0';
@@ -256,47 +218,31 @@ strs[4].style.left=88+'%'
 strs[4].style.top=77+'%'
 strs[4].style.background='#ff0';
 	 
-spc[0].style.left=11+'%'
-spc[0].style.top=5+'%'
-spc[0].style.color='#ff0'
-spc[0].style.transform=
+spce[0].style.left=11+'%'
+spce[0].style.top=5+'%'
+spce[0].style.color='#ff0'
+spce[0].style.transform=
  'scale(2.5) skew(-11deg)'
-spc[1].style.left=11+'%'
-spc[1].style.top=12+'%'
-spc[1].style.color='#d0d'
-spc[1].style.transform=
+spce[1].style.left=11+'%'
+spce[1].style.top=12+'%'
+spce[1].style.color='#d0d'
+spce[1].style.transform=
  'scale(2.5) skew(-22deg)' 
-spc[2].style.left=11+'%'
-spc[2].style.top=19+'%'
-spc[2].style.color='#099'
-spc[2].style.transform=
+spce[2].style.left=11+'%'
+spce[2].style.top=19+'%'
+spce[2].style.color='#099'
+spce[2].style.transform=
  'scale(2.5) skew(-22deg)'
-spc[3].style.left=11+'%'
-spc[3].style.top=29+'%'
-spc[3].style.color='#099'
-spc[3].style.transform=
+spce[3].style.left=11+'%'
+spce[3].style.top=29+'%'
+spce[3].style.color='#099'
+spce[3].style.transform=
  'scale(2.5) skew(-22deg)'
-spc[4].style.left=45+'%'
-spc[4].style.top=63+'%'
-spc[4].style.color='#fff'
-spc[4].style.transform='scale(0) '
+spce[4].style.left=45+'%'
+spce[4].style.top=63+'%'
+spce[4].style.color='#fff'
+spce[4].style.transform='scale(0) '
 	  
-rct[0].style.left=62+'%'
-rct[0].style.top=22+'%'
-rct[0].style.color='#ff0'
-rct[1].style.left=55+'%'
-rct[1].style.top=66+'%'
-rct[1].style.color='#ff0'
-rct[1].style.transform='scale(0)'
-rct[2].style.left=77+'%'
-rct[2].style.top=66+'%'
-rct[2].style.color='#ff0'
-rct[2].style.transform='scale(0)'
-rct[3].style.left=44+'%'
-rct[3].style.top=44+'%'
-rct[3].style.color='#f8f'
-rct[3].style.transform='scale(0)'
-   
 bclsh=0 
 function clsh()
 {
@@ -309,14 +255,6 @@ function clsh()
      bclsh=!bclsh
 }
 
-function clksh()
-{
- shtl[0].style.transform=
-  'skew(22deg) scale(1.1) translate(11%,11%)' 
- flm[0].style.opacity=1
- flm[1].style.opacity=1 
-}
-  
 function clpl()
 {
  sol[1].style.transform=
@@ -337,12 +275,41 @@ function clpl()
  strs[2].style.transform=
   'scale('+Math.random()*2+
   'translate'+Math.random()*88+'%'
- strs[3].style.transform='scale('+Math.random()*2
- strs[4].style.transform='scale('+Math.random()*2
 }	  
-	   
-   setInterval(()=>clpl(),999)
    setInterval(()=>clsh(),2000)
+   setInterval(()=>clpl(),999)
+
+function clksh()
+{
+ shtl[0].style.transform=
+  'skew(22deg) scale(1.1) translate(11%,11%)' 
+}
+idb.onclick=()=>
+{  
+  clksh()
+ flm[0].style.transition='1s'
+ flm[0].style.opacity=0.7
+ flm[0].style.transform=
+  'scale(3,7) translate(-144%,0%) skew(44deg)'
+ flm[1].style.transition='1s'
+ flm[1].style.opacity=0.7
+ flm[1].style.transform=
+  'scale(3,7) translate(-144%,0%) skew(44deg)'   
+ shtl[2].style.borderRadius='55%'
+ setTimeout(()=>{
+  shtl[2].style.borderRadius='22%'
+  shtl[0].style.transform=
+   'translate(-11%,-11%) skew(44deg)'
+  flm[0].style.transition='0s'
+  flm[0].style.opacity=0
+  flm[0].style.transform=
+   'translate(0%,0%) skew(44deg)'
+  flm[1].style.transition='0s'
+  flm[1].style.opacity=0
+  flm[1].style.transform=
+   'translate(0%,0%) skew(44deg)'
+ }, 1111)            
+}   
    
 shtl[0].onmouseover=()=>
 {
@@ -362,199 +329,117 @@ shtl[2].onclick=()=>
   idb.onmousedown() 	
 }
 
-idb.onmousedown=()=>
-{  
- flm[0].style.transition='1s'
- flm[0].style.transform=
-	 'translate(-444%,0%) skew(44deg)'
- flm[1].style.transition='1s'
- flm[1].style.transform=
-	 'translate(-444%,0%) skew(44deg)'   
- shtl[2].style.borderRadius='55%'
-        
-		clksh()
- setTimeout(()=>{
-  flm[0].style.opacity=0
-  flm[1].style.opacity=0
-  shtl[2].style.borderRadius='22%'
-  shtl[0].style.transform=
-   'translate(-11%,-11%) skew(44deg)'
-  flm[0].style.transition='0s'
-  flm[0].style.transform=
-   'translate(0%,0%) skew(44deg)'
-  flm[1].style.transition='0s'
-  flm[1].style.transform=
-   'translate(0%,0%) skew(44deg)'
- }, 1111)
-            
-}
-
 plnt[0].onmouseover=()=>
 {
- spc[4].innerHTML='green<br> planet'
- spc[4].style.transform=
+ spce[4].innerHTML='green<br> planet'
+ spce[4].style.transform=
    'scale(3) translate(66%,-99%)'
- spc[4].style.color='#0f7'
+ spce[4].style.color='#0f7'
 }
 plnt[0].onmouseout=()=>
 {
- spc[4].style.transform='scale(0) '
+ spce[4].style.transform='scale(0) '
 }
 
 plnt[1].onmouseover=()=>
 {
- spc[4].innerHTML='red<br> planet'
- spc[4].style.transform=
+ spce[4].innerHTML='red<br> planet'
+ spce[4].style.transform=
    'scale(3) translate(66%,-99%)'
- spc[4].style.color='#f07'
+ spce[4].style.color='#f07'
 }
 plnt[1].onmouseout=()=>
 {
- spc[4].style.transform='scale(0) '
+ spce[4].style.transform='scale(0) '
 }
 
 plnt[2].onmouseover=()=>
 {
- spc[4].innerHTML='yellow<br> planet'
- spc[4].style.transform=
+ spce[4].innerHTML='yellow<br> planet'
+ spce[4].style.transform=
    'scale(3) translate(66%,-99%)'
- spc[4].style.color='#ff7'
+ spce[4].style.color='#ff7'
 }
 plnt[2].onmouseout=()=>
 {
- spc[4].style.transform='scale(0) '
+ spce[4].style.transform='scale(0) '
 }
 
-plnt[3].onmouseover=()=>
+spce[0].onmouseover=()=>
 {
-  plnt[3].innerHTML='radiation'
- plnt[3].style.transform='scale(3) '
- plnt[3].style.color='#ff7'
- plnt[4].style.transform='scale(3) skew(-22deg)'
-}
-plnt[3].onmouseout=()=>
-{
-  plnt[3].innerHTML='solar'
- plnt[3].style.transform='scale(2) '
- plnt[3].style.color='#f09'
- plnt[4].style.transform='scale(0) '
-}
-
-spc[0].onmouseover=()=>
-{
- spc[0].style.transform=
+ spce[0].style.transform=
   'scale(1.9) translate(22%,0)'
- spc[0].style.zIndex=1
- spc[0].style.color='#ddd'
-  spc[0].innerHTML=
+ spce[0].style.zIndex=1
+ spce[0].style.color='#ddd'
+  spce[0].innerHTML=
    'A gravitationally bound system of stars,<br>'+
    'star clusters, interstellar gas <br>'+ 
    'and dust, dark matter, planets. '
 }
-spc[0].onmouseout=()=>
+spce[0].onmouseout=()=>
 {
- spc[0].style.transform=
+ spce[0].style.transform=
   'scale(2.5) skew(-22deg)'
- spc[0].innerHTML='Galaxy'
- spc[0].style.color='#ff0'
- spc[0].style.zIndex=0
+ spce[0].innerHTML='Galaxy'
+ spce[0].style.color='#ff0'
+ spce[0].style.zIndex=0
 }
 
-spc[1].onmouseover=()=>
+spce[1].onmouseover=()=>
 {
- spc[1].style.transform=
+ spce[1].style.transform=
   'scale(1.9) translate(22%,0)'
- spc[1].style.zIndex=1
- spc[1].style.color='#ccc'
-  spc[1].innerHTML=
+ spce[1].style.zIndex=1
+ spce[1].style.color='#ccc'
+  spce[1].innerHTML=
    'Lowering the radiation frequencies,<br>'+ 
    'when dynamically deleting sources. <br>'+  
    'Non-stationarity of the Metagalaxy..'	   	   
 }
-spc[1].onmouseout=()=>
+spce[1].onmouseout=()=>
 {
- spc[1].style.transform=
+ spce[1].style.transform=
   'scale(2.5) skew(-22deg)'
- spc[1].style.color='#d0d' 
- spc[1].style.zIndex=0
-  spc[1].innerHTML='кedshift'
+ spce[1].style.color='#d0d' 
+ spce[1].style.zIndex=0
+  spce[1].innerHTML='кedshift'
 }
  
-spc[2].onmouseover=()=>
+spce[2].onmouseover=()=>
 {
- spc[2].style.transform=
+ spce[2].style.transform=
    'scale(1.9) translate(22%,0)'
- spc[2].style.zIndex=1
- spc[2].style.color='#eee'
-  spc[2].innerHTML=
+ spce[2].style.zIndex=1
+ spce[2].style.color='#eee'
+  spce[2].innerHTML=
   'Increased radio emission '+ 
   '(10<sup>37</sup>10<sup>38</sup> erg/s)' 	   
 }
-spc[2].onmouseout=()=>
+spce[2].onmouseout=()=>
 {
- spc[2].style.transform=
+ spce[2].style.transform=
   'scale(2.5) skew(-22deg)'
- spc[2].style.color='#099' 
- spc[2].style.zIndex=0 
-  spc[2].innerHTML='radio galaxy'
+ spce[2].style.color='#099' 
+ spce[2].style.zIndex=0 
+  spce[2].innerHTML='radio galaxy'
 } 
 
-spc[3].onmouseover=()=>
+spce[3].onmouseover=()=>
 {
- spc[3].style.transform=
+ spce[3].style.transform=
    'scale(1.9) translate(22%,0)'
- spc[3].style.zIndex=1
- spc[3].style.color='#ddd'
-  spc[3].innerHTML='by complex observation...' 	   
+ spce[3].style.zIndex=1
+ spce[3].style.color='#ddd'
+  spce[3].innerHTML='by complex observation...' 	   
 }
-spc[3].onmouseout=()=>
+spce[3].onmouseout=()=>
 {
- spc[3].style.transform=
+ spce[3].style.transform=
   'scale(2.5) skew(-22deg)'
- spc[3].style.color='#099' 
- spc[3].style.zIndex=0 
-  spc[3].innerHTML='Researching'
+ spce[3].style.color='#099' 
+ spce[3].style.zIndex=0 
+  spce[3].innerHTML='Researching'
 }  
- 
-Irct0=0
-brct0=0
-fnc=['init','mv','cl','pr']
- ifnc=0
-rct[0].onmouseover=()=>
-{
- rct[0].style.transform=' scale(2.2) translate(-9%,0)'
-  rct[0].innerHTML=
-    "return(<br>"+ 
-	 "&nbsp < cmpnt attr={this.pr()} />"+  
-	'<br> &nbsp &nbsp )'
- Irct0=setInterval(()=>{
-  rct[3].innerHTML=
-   'setInterval(()=>'+fnc[ifnc]+'(),999)'
-  ifnc++
-  if(ifnc>3){ifnc=0;}	
-  if(brct0){	
-   rct[1].style.transform='scale(2.9) skew(-33deg)'
-   rct[2].style.transform='scale(2) skew(33deg)'
-  }else{
-   rct[1].style.transform='scale(2) skew(-33deg)'
-   rct[2].style.transform='scale(2.9) skew(33deg)'
-  }
-    brct0=!brct0
- },999)
- rct[3].style.transform='scale(2) translate(0,-77%)' 
-}
-rct[0].onmouseout=()=>
-{
- rct[0].style.transform='scale(2)'
-  rct[0].innerHTML='render()'
- rct[1].style.transform='scale(0) '
- rct[2].style.transform='scale(0) '
- rct[3].style.transform='scale(0) '
-  clearInterval(Irct0)
-   ifnc=0  
-  rct[3].innerHTML=
-  'setInterval(()=>'+fnc[ifnc]+'(),999)'
-}     
 
 </script>
 </body>
