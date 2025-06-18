@@ -96,8 +96,8 @@
 </div>
 
 <div class=shtl>
- <div class=shtl><div class=flm ></div></div>
- <div class=shtl></div>
+ <div class=shtl><div class=flm></div></div>
+ <div class=shtl><div class=flm></div></div>
  <div class=shtl><div class=flm ></div></div>
 </div>
 
@@ -191,16 +191,20 @@ flm[0].style.width=33+'%'
 flm[0].style.height=99+'%'
 flm[0].style.borderLeft='9px ridge #b09'
 flm[0].style.borderTop='9px ridge #b09'
-//flm[0].style.borderBottom='9px ridge #b00'
 flm[0].style.opacity=0
-flm[1].style.left=-44+'%'
-flm[1].style.top=7+'%'  
-flm[1].style.width=33+'%'
-flm[1].style.height=99+'%'
-flm[1].style.borderLeft='9px ridge #b09'
-flm[1].style.borderTop='9px ridge #b09'
-//flm[1].style.borderBottom='9px ridge #b00'
+flm[1].style.left=11+'%'
+flm[1].style.top=6+'%'  
+flm[1].style.width=22+'%'
+flm[1].style.height=88+'%'
+flm[1].style.borderLeft='22px ridge #b99'
 flm[1].style.opacity=0
+flm[2].style.left=-44+'%'
+flm[2].style.top=7+'%'  
+flm[2].style.width=33+'%'
+flm[2].style.height=99+'%'
+flm[2].style.borderLeft='9px ridge #b09'
+flm[2].style.borderTop='9px ridge #b09'
+flm[2].style.opacity=0
 
 strs[0].style.left=11+'%'
 strs[0].style.top=55+'%'
@@ -275,6 +279,12 @@ function clpl()
  strs[2].style.transform=
   'scale('+Math.random()*2+
   'translate'+Math.random()*88+'%'
+ strs[3].style.transform=
+  'scale('+Math.random()*2+
+  'translate'+Math.random()*88+'%'
+ strs[4].style.transform=
+  'scale('+Math.random()*2+
+  'translate'+Math.random()*88+'%'
 }	  
    setInterval(()=>clsh(),2000)
    setInterval(()=>clpl(),999)
@@ -291,9 +301,10 @@ idb.onclick=()=>
  flm[0].style.opacity=0.7
  flm[0].style.transform=
   'scale(3,7) translate(-144%,0%) skew(44deg)'
- flm[1].style.transition='1s'
  flm[1].style.opacity=0.7
- flm[1].style.transform=
+ flm[2].style.transition='1s'
+ flm[2].style.opacity=0.7
+ flm[2].style.transform=
   'scale(3,7) translate(-144%,0%) skew(44deg)'   
  shtl[2].style.borderRadius='55%'
  setTimeout(()=>{
@@ -304,9 +315,10 @@ idb.onclick=()=>
   flm[0].style.opacity=0
   flm[0].style.transform=
    'translate(0%,0%) skew(44deg)'
-  flm[1].style.transition='0s'
   flm[1].style.opacity=0
-  flm[1].style.transform=
+  flm[2].style.transition='0s'
+  flm[2].style.opacity=0
+  flm[2].style.transform=
    'translate(0%,0%) skew(44deg)'
  }, 1111)            
 }   
