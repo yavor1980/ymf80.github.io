@@ -314,6 +314,7 @@ btn[0].onclick=()=>
 {
  if(bbtn)
  {
+  btn[0].innerHTML='Stop'
    indctr[0].onmouseover()
    Ibtn=setInterval(()=>
    {
@@ -325,6 +326,7 @@ btn[0].onclick=()=>
  } 
  else
  {
+  btn[0].innerHTML='GO'
   indctr[0].onmouseout()
   clearInterval(Ibtn)
  }
@@ -334,7 +336,6 @@ btn[0].onclick=()=>
 bind=0
 indctr[0].onmouseover=()=>
 {
- indctr[0].style.transform='scale(3.4)' 
  bind=Math.round(Math.random()*9) 
  switch(bind)
  {
@@ -352,7 +353,6 @@ indctr[0].onmouseover=()=>
 }
 indctr[0].onmouseout=()=>
 {
- indctr[0].style.transform='scale(3)'
   ficlear('#555')
 } 
 
