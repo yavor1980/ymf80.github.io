@@ -90,26 +90,22 @@ bgrnd[0].style.top=4+'%'
 bgrnd[0].style.width=22+'%'
 bgrnd[0].style.height=12+'%'
 bgrnd[0].style.background='#f00'
- 
 bgrnd[1].style.left=27+'%'
 bgrnd[1].style.top=4+'%'
 bgrnd[1].style.width=22+'%'
 bgrnd[1].style.height=12+'%'
 bgrnd[1].style.background='#0f0'
- 
 bgrnd[2].style.left=51+'%'
 bgrnd[2].style.top=4+'%'
 bgrnd[2].style.width=22+'%'
 bgrnd[2].style.height=12+'%'
 bgrnd[2].style.background='#00f'
- 
 bgrnd[3].style.left=75+'%'
 bgrnd[3].style.top=4+'%'
 bgrnd[3].style.width=22+'%'
 bgrnd[3].style.height=12+'%'
 bgrnd[3].style.background='#fff'
 bgrnd[3].style.color='#444'
-
 bgrnd[4].style.left=77+'%'
 bgrnd[4].style.top=11+'%'
 bgrnd[4].style.color='#000'
@@ -125,7 +121,6 @@ tst[0].style.background=
 tst[0].style.borderRadius='9%'
 tst[0].style.boxShadow='11px 11px 6px'
 tst[0].style.border='9px ridge #800'
- 
 tst[1].style.left=6+'%'
 tst[1].style.top=6+'%'
 tst[1].style.width=88+'%'
@@ -134,31 +129,23 @@ tst[1].style.background='#ff0'
 tst[1].style.textAlign='center'
 tst[1].style.fontSize='3em'
 tst[1].style.borderRadius='7%'
- 
+
 btn[0].style.left=9+'%'
 btn[0].style.top=33+'%'
-
 btn[1].style.left=39+'%'
 btn[1].style.top=33+'%'
-
 btn[2].style.left=69+'%'
 btn[2].style.top=33+'%'
-
 btn[3].style.left=9+'%'
 btn[3].style.top=55+'%'
-
 btn[4].style.left=39+'%'
 btn[4].style.top=55+'%'
-
 btn[5].style.left=69+'%'
 btn[5].style.top=55+'%'
-
 btn[6].style.left=9+'%'
 btn[6].style.top=77+'%'
-
 btn[7].style.left=39+'%'
 btn[7].style.top=77+'%'
-
 btn[8].style.left=69+'%'
 btn[8].style.top=77+'%'
 
@@ -168,39 +155,30 @@ bldng[0].style.width=22+'%'
 bldng[0].style.height=56+'%'
 bldng[0].style.background='#000'
 bldng[0].style.opacity=0.6
- 
 bldng[1].style.left=6+'%'
 bldng[1].style.top=3+'%'
 bldng[1].style.background='#222'
-
 bldng[2].style.left=6+'%'
 bldng[2].style.top=13+'%'
 bldng[2].style.background='#222'
-
 bldng[3].style.left=6+'%'
 bldng[3].style.top=23+'%'
 bldng[3].style.background='#222'
- 
 bldng[4].style.left=6+'%'
 bldng[4].style.top=33+'%'
 bldng[4].style.background='#222'
-
 bldng[5].style.left=6+'%'
 bldng[5].style.top=43+'%'
 bldng[5].style.background='#222'
-
 bldng[6].style.left=6+'%'
 bldng[6].style.top=53+'%'
 bldng[6].style.background='#222' 
- 
 bldng[7].style.left=6+'%'
 bldng[7].style.top=63+'%'
 bldng[7].style.background='#222'
-
 bldng[8].style.left=6+'%'
 bldng[8].style.top=73+'%'
 bldng[8].style.background='#222'
-
 bldng[9].style.left=6+'%'
 bldng[9].style.top=83+'%'
 bldng[9].style.background='#222'  
@@ -219,7 +197,6 @@ bgrnd[0].onmouseout=()=>
  bgrnd[0].style.fontSize='0em'
  bgrnd[0].style.transform='scale(1)'
 } 
- 
 bgrnd[1].onmouseover=()=>
 {
  bgrnd[1].style.background='#0d0'
@@ -234,7 +211,6 @@ bgrnd[1].onmouseout=()=>
  bgrnd[1].style.fontSize='0em'
  bgrnd[1].style.transform='scale(1)'
 } 
- 
 bgrnd[2].onmouseover=()=>
 {
  bgrnd[2].style.background='#00d'
@@ -249,7 +225,6 @@ bgrnd[2].onmouseout=()=>
  bgrnd[2].style.fontSize='0em'
  bgrnd[2].style.transform='scale(1)'
 } 
-
 bgrnd[3].onmouseover=()=>
 {
  bgrnd[3].style.background='#ddd'
@@ -285,7 +260,8 @@ tst[0].onmouseover=()=>
  btn[6].style.boxShadow='11px 11px 6px'
  btn[7].style.boxShadow='11px 11px 6px'
  btn[8].style.boxShadow='11px 11px 6px'
- Itst= setInterval(()=>{
+ Itst= setInterval(()=>
+ {
   btn[ldgt].style.boxShadow='11px 11px 6px'
   bldng[ldgt+1].style.background='#222'
   tst[1].style.fontSize='3em'
@@ -319,6 +295,7 @@ bldng[0].onmouseover=()=>
  for(i=0;i<9;i++)
  {
   bldng[i+1].style.background='#f0f'
+  bldng[i+1].style.border='5px ridge #0f0'
   bldng[i+1].style.borderRadius='55%'
  } 
 }
@@ -327,10 +304,10 @@ bldng[0].onmouseout=()=>
  for(i=0;i<9;i++)
  {
   bldng[i+1].style.background='#222'
+  bldng[i+1].style.border='none'
   bldng[i+1].style.borderRadius='0%'
  } 
 }
-
 
 </script>
 </body>
