@@ -47,7 +47,8 @@
 <div class=dsk></div>
 
 <button class=btn >Go..</button>
-<button class=btn disabled>Stay</button>
+<button class=btn >Stay</button>
+<button class=btn >Mix</button>
 
 <script>
 btn=document.getElementsByClassName("btn")
@@ -64,7 +65,13 @@ btn[1].style.left=5+'%'
 btn[1].style.top=55+'%'
 btn[1].style.background='#b00'
 btn[1].style.color='#eee'
-btn[1].style.transform='scale(3)'   
+btn[1].style.transform='scale(3)'  
+
+btn[2].style.left=5+'%'
+btn[2].style.top=65+'%'
+btn[2].style.background='#b00'
+btn[2].style.color='#eee'
+btn[2].style.transform='scale(3)'  
    
 cl=[], icl=[], jcl=[]
 for(i=0;i<8;i++)
@@ -109,7 +116,8 @@ function arrfgr()
 {
  for(i=0;i<12;i++)    
  {
-  wf[i].style.left= i*50+'px'
+   wf[i].style.left= i*50+'px'
+   wf[i].style.top= 0*50+'px'
   if(i%2==1)	
    wf[i].style.top=50+'px'
   if(i>7)
@@ -120,8 +128,8 @@ function arrfgr()
  }
  for(i=0;i<12;i++)    
  {
-  bf[i].style.left=i*50+'px'
-  bf[i].style.top=6*50+'px'
+   bf[i].style.left=i*50+'px'
+   bf[i].style.top=6*50+'px'
   if(i%2==1)
    bf[i].style.top=7*50+'px'
   if(i>7)
@@ -169,7 +177,16 @@ btn[1].onclick=()=>
 { 
   arrfgr()
   btn[1].disabled=1
+  bwf=0
+  bbf=0
 }
+bwf=bbf=0
+btn[2].onclick=()=>
+{ 
+  btn[1].disabled=0
+  bwf=1
+  bbf=1
+}	
 	
 function tchw(i)
 {
@@ -205,8 +222,7 @@ function clw(i)
 {
  wf[i].onclick=()=>
  {
-  btn[1].disabled=0
-  bwf=1
+  
  }
 }
 clw(0); clw(1); clw(2);
@@ -248,8 +264,7 @@ function clb(i)
 {
  bf[i].onclick=()=>
  { 
-  btn[1].disabled=0
-  bbf=1
+ 
  }
 }
 clb(0); clb(1); clb(2);
