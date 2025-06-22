@@ -93,7 +93,6 @@ for(i=0;i<12;i++)
  wf[i]=document.createElement("div")
  wf[i].className='fgr'
  dsk[0].appendChild(wf[i])
- 
  wf[i].style.background=
   'radial-gradient(14px,#999,#ccc)' 
 }
@@ -102,7 +101,6 @@ for(i=0;i<12;i++)
  bf[i]=document.createElement("div")
  bf[i].className='fgr'  
  dsk[0].appendChild(bf[i])
-
  bf[i].style.background=
   'radial-gradient(14px,#555,#222)'
 }    
@@ -170,14 +168,18 @@ btn[0].onclick=()=>
 btn[1].onclick=()=>
 { 
   arrfgr()
- // btn[1].disabled=1
+  btn[1].disabled=1
 }
 	
 function tchw(i)
 {
  wf[i].onmouseover=()=>
  {   
-  if(bwf) wf[i].style.left=event.offsetX+'%'
+  if(bwf)
+  {
+   wf[i].style.left=event.offsetX+'%'
+   wf[i].style.top=event.offsetY+'%'
+  } 
   wf[i].style.transform='scale(1.2)'
   wf[i].style.background=
    'radial-gradient(14px,#090,#0c0)'
@@ -201,7 +203,6 @@ tchw(6); tchw(7); tchw(8);
 tchw(9); tchw(10); tchw(11);
 function clw(i)
 {
- bwf=0
  wf[i].onclick=()=>
  {
   btn[1].disabled=0
@@ -217,8 +218,11 @@ function tchb(i)
 {
  bf[i].onmouseover=()=>
  {
-  
-  if(bbf) bf[i].style.left=event.offsetX+'%'
+  if(bbf)
+  {
+   bf[i].style.left=event.offsetX+'%'
+   bf[i].style.top=event.offsetY+'%'
+  } 
   bf[i].style.background=
    'radial-gradient(14px,#cc0,#ff0)'
   bf[i].style.border='1px ridge #222'
@@ -242,7 +246,6 @@ tchb(6); tchb(7); tchb(8);
 tchb(9); tchb(10); tchb(11);	
 function clb(i)
 {
- bbf=0
  bf[i].onclick=()=>
  { 
   btn[1].disabled=0
