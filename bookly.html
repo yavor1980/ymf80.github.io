@@ -34,16 +34,10 @@ input
  transform:scale(2);
  cursor:pointer;
 }
-.ttl
+.bse,.zpr,.dlg
 {
  position:absolute;   
  transition:1s;
-}
-.dlg
-{
- position:absolute;   
- transition:1s;
- z-index:1;
 }
 
 .lst
@@ -57,10 +51,10 @@ input
 
 <div id=idbdy>
  
- <div class=ttl>
-  <div class=ttl>meeting</div>
-  <div class=ttl> expo</div>
-  <div class=ttl>seminar</div>
+ <div class=bse>
+  <div class=bse>meeting</div>
+  <div class=bse> expo</div>
+  <div class=bse>seminar</div>
  </div> 
  
  <input type='submit' class=btn value='order'>
@@ -68,10 +62,12 @@ input
  <input type='submit' class=btn value='off'>
  
  <div class=dlg>
+ <div class=zpr>Order the ticket!</div>
   <input class=dlg disabled value='mm.dd.yy'>
   <button class=dlg disabled>OK</button>
   <button class=dlg disabled>No</button>
  </div>
+ <div class=zpr>Choose any event!</div>
  
  <div class=lst>
   <div class=lst><td></td></div>
@@ -81,9 +77,10 @@ input
   <div class=lst><td></td></div>
  </div>
 </div>  
- 
+
 <script>
-ttl=document.getElementsByClassName('ttl')
+bse=document.getElementsByClassName('bse')
+zpr=document.getElementsByClassName('zpr')
 btn=document.getElementsByClassName('btn')
 dlg=document.getElementsByClassName('dlg')
 lst=document.getElementsByClassName('lst') 
@@ -104,27 +101,26 @@ btn[2].style.color='#d08'
 btn[2].style.borderRadius=15+'%'
 btn[2].style.transform='scale(2)'  
   
-ttl[0].style.left=5+'%'
-ttl[0].style.top=7+'%' 
-ttl[0].style.width=22+'%' 
-ttl[0].style.height=28+'%'
-ttl[0].style.background='#bb0'
-ttl[0].style.borderRadius=15+'%'
-
-function initttl(i,t,clr)
+bse[0].style.left=5+'%'
+bse[0].style.top=7+'%' 
+bse[0].style.width=22+'%' 
+bse[0].style.height=28+'%'
+bse[0].style.background='#bb0'
+bse[0].style.borderRadius=15+'%'
+function initbse(i,t,clr)
 { 
- ttl[i].style.left=9+'%'
- ttl[i].style.top=t+'%' 
- ttl[i].style.width=77+'%'
- ttl[i].style.height=22+'%' 
- ttl[i].style.background=clr
- ttl[i].style.fontSize=2+'em'
- ttl[i].style.borderRadius=8+'%'
- ttl[i].style.textAlign='center'
- ttl[i].style.cursor='pointer'
+ bse[i].style.left=9+'%'
+ bse[i].style.top=t+'%' 
+ bse[i].style.width=77+'%'
+ bse[i].style.height=22+'%' 
+ bse[i].style.background=clr
+ bse[i].style.fontSize=2+'em'
+ bse[i].style.borderRadius=8+'%'
+ bse[i].style.textAlign='center'
+ bse[i].style.cursor='pointer'
 }
- initttl(1,8,'#f0f'), initttl(2,34,'#ff0'),
- initttl(3,60,'#0f0'),
+ initbse(1,8,'#f0f'), initbse(2,34,'#ff0'),
+ initbse(3,60,'#0f0'),
 
 dlg[0].style.left=44+'%'
 dlg[0].style.top=25+'%' 
@@ -133,9 +129,9 @@ dlg[0].style.height=22+'%'
 dlg[0].style.background='#ee0'
 dlg[0].style.borderRadius=8+'%'
 dlg[1].style.left=2+'%'
-dlg[1].style.top=25+'%'
-dlg[1].textAlign='center'
+dlg[1].style.top=44+'%'
 dlg[1].style.transform='scale(0.6,1.2)'
+dlg[1].textAlign='center'
 dlg[2].style.left=34+'%'
 dlg[2].style.top=72+'%' 
 dlg[2].style.transform='scale(1.2)'
@@ -145,6 +141,17 @@ dlg[3].style.top=72+'%'
 dlg[3].style.transform='scale(1.2)'
 dlg[3].style.cursor='pointer'
 
+zpr[0].style.left=9+'%'
+zpr[0].style.top=9+'%' 
+zpr[0].style.color='#b00'
+zpr[0].style.fontSize=1.2+'em' 
+zpr[0].style.cursor='default'
+zpr[0].style.transform='skew(22deg)'
+zpr[1].style.left=50+'%'
+zpr[1].style.top=20+'%' 
+zpr[1].style.color='#900'
+zpr[1].style.transform='scale(0)'
+
 lst[0].style.left=5+'%'
 lst[0].style.top=55+'%' 
 lst[0].style.width=77+'%'
@@ -152,7 +159,6 @@ lst[0].style.height=33+'%'
 lst[0].style.background='#ddd'
 lst[0].style.borderRadius=8+'%'
 lst[0].style.border='9px ridge #990'
-
 function initlst(i,t)
 { 
  lst[i].style.left=19+'%'
@@ -167,41 +173,57 @@ function initlst(i,t)
  initlst(1,9), initlst(2,26),
  initlst(3,43), initlst(4,60),initlst(5,77)
  
-function attl(i)
-{  
- ttl[i].onmouseover=()=>
- { 
-  ttl[i].style.transform='scale(1.2)'
- }
- ttl[i].onmouseout=()=>
- { 
-  ttl[i].style.transform='scale(1)'
- }
- ttl[i].onclick=()=>
- { 
-  btn[0].onclick()
- }
-}
- attl(0), 
- attl(1), attl(2), attl(3)
- 
-ilst=1, bordr=0, idel=-1
-btn[0].onclick=()=>
+sbse=['meeting','expo','seminar']
+pbse=0
+bse[0].onmouseover=()=>
 { 
-   dlg[1].disabled=0
+ bse[0].style.transform='scale(1.2)'
+}
+ bse[0].onmouseout=()=>
+{ 
+ bse[0].style.transform='scale(1)'
+}
+function abse(i,pp)
+{  
+ bse[i].onmouseover=()=>
+ { 
+  bse[i].style.transform='scale(1.2)'
+ }
+ bse[i].onmouseout=()=>
+ { 
+  bse[i].style.transform='scale(1)'
+ }
+ bse[i].onclick=()=>
+ { 
+  dlg[0].style.zIndex=1
+  dlg[0].style.transform='scale(2) translate(37%,27%)'
+  pbse=pp
   m=Math.round(Math.random()*11)
   d=Math.round(Math.random()*30)
    dlg[1].value=d+'.'+m+'.'+'25'
- dlg[0].style.transform='scale(2) translate(37%,27%)'
-  dlg[1].disabled=0
+  dlg[1].disabled=0 
   dlg[2].disabled=0
   dlg[3].disabled=0
   bordr=0
+ }
+}
+ abse(1,0), abse(2,1), abse(3,2)
+ 
+ilst=1, bordr=0, idel=-1
+btn[0].onmouseout=()=>
+{ 
+ zpr[1].style.transform='scale(0)'
+} 
+btn[0].onclick=()=>
+{ 
+  zpr[1].innerHTML='Choose <br>&nbsp any event!'
+ zpr[1].style.zIndex=1
+ zpr[1].style.transform=
+  'scale(4) translate(55%,22%) skew(22deg)'
 } 
 dlg[2].onclick=()=>
 { 
-  lst[ilst].innerHTML=
-   ttl[1].innerHTML+' '+dlg[1].value
+  lst[ilst].innerHTML=sbse[pbse]+' '+dlg[1].value
   dlg[1].value='dd.mm.yy' 
  dlg[0].style.transform='scale(1)'
  dlg[1].disabled=1
@@ -218,13 +240,16 @@ dlg[3].onclick=()=>
  dlg[3].disabled=1
 }
 
-
 btn[2].onclick=()=>
 { 
   if(idel>0)
   {
    lst[idel].innerHTML=''
-   idel--; ilst--
+  // idel--; ilst--
+  } 
+  if(idel==0)
+  {
+   lst[idel].innerHTML=''
   } 
   ilst=idel
 }
