@@ -152,7 +152,7 @@ term[0].style.left=13+'%'
 term[0].style.top=13+'%' 
 term[0].style.borderRadius=13+'%' 
 
-function abtn(i,str)
+function abtn(i,clr,str)
 {
  btn[i].onmouseover=()=>
  { 
@@ -166,12 +166,13 @@ function abtn(i,str)
  { 
    mnge[1].disabled=0
    mnge[2].disabled=0
+  ttl[3].style.color=clr 
    ttl[3].innerHTML=str 
  } 
 }
- abtn(0,'life'), abtn(1,'health'), 
- abtn(2,'ownership'), abtn(3,'auto'), 
- abtn(4,'tourism')
+ abtn(0,'#f00','life'), abtn(1,'#00f','health'), 
+ abtn(2,'#0f0','ownership'), abtn(3,'#fb0','auto'), 
+ abtn(4,'#f0b','tourism')
  
 ttl[0].onmouseover=()=>
 { 
@@ -193,6 +194,7 @@ ttl[2].onclick=()=>
 mnge[1].onclick=()=>
 { 
  ttl[0].innerHTML='You are insured!'
+ ttl[3].innerHTML=''
  mnge[1].disabled=1
  mnge[2].disabled=1
 }
@@ -202,6 +204,7 @@ mnge[1].onmouseout=()=>
 }  
 mnge[2].onclick=()=>
 { 
+ ttl[3].innerHTML=''
  mnge[1].disabled=1
  mnge[2].disabled=1
 }  
