@@ -54,25 +54,24 @@ button
 </div>
 <div class=pnl>
  <div class=ttl>Insurance</div>
- <div class=ttl></div>
-  
  <div class=mnge>
-  <div class=ttl></div>
-  <button class=mnge>OK</button>
-  <button class=mnge>C</button>
+  <div class=ttl>Sum:</div>
+  <input value='1000' class=ttl>
+   <div class=ttl></div>
+  <button class=mnge disabled>OK</button>
+  <button class=mnge disabled>C</button>
  </div> 
- <div class=term>
   <select class=term>
     <option >1 year</option>
 	<option >2 years</option>
 	<option >3 years</option>
 	<option >4 years</option>
   </select>
- </div> 
 </div>
 <script>
-var pnl=document.getElementsByClassName('pnl')
 var btn=document.getElementsByClassName('btn')
+
+var pnl=document.getElementsByClassName('pnl')
 var ttl=document.getElementsByClassName('ttl')
 var mnge=document.getElementsByClassName('mnge')	
 var term=document.getElementsByClassName('term')
@@ -81,7 +80,7 @@ pnl[0].style.left=17+'%'
 pnl[0].style.top=5+'%'  
 pnl[0].style.width=66+'%'
 pnl[0].style.height=16+'%'
-pnl[0].style.background='#999'
+pnl[0].style.background='#777'
 pnl[0].style.borderRadius=12+'%'
 pnl[0].style.border='4px ridge #bb0'
 pnl[0].style.transform='scale(1.4)'
@@ -93,22 +92,6 @@ pnl[1].style.background='#888'
 pnl[1].style.borderRadius=12+'%'
 pnl[1].style.border='4px ridge #bb0'
 pnl[1].style.transform='scale(1.4)'
-
-ttl[0].style.left=55+'%'
-ttl[0].style.top=11+'%'
-ttl[0].style.transform='scale(3) skew(-12deg)'
-ttl[0].style.cursor='pointer'
-ttl[1].style.left=17+'%'
-ttl[1].style.top=64+'%'
-ttl[1].style.color='#900'
-ttl[1].style.opacity=0.6
-ttl[1].style.transform='scale(3)'
-ttl[1].style.transition=555+'ms'
-ttl[2].style.left=17+'%'
-ttl[2].style.top=14+'%'
-ttl[2].style.color='#900'
-ttl[2].style.opacity=0.6
-ttl[2].style.transform='scale(3)'
 
 btn[0].style.left=11+'%'
 btn[0].style.top=55+'%'
@@ -131,61 +114,103 @@ btn[4].style.top=55+'%'
 btn[4].style.background='#f0b'
 btn[4].style.transform='scale(2)'  
 
-mnge[0].style.left=39+'%'
+ttl[0].style.left=49+'%'
+ttl[0].style.top=11+'%'
+ttl[0].style.color='#600'
+ttl[0].style.transform='scale(3) skew(-12deg)'
+ttl[0].style.cursor='pointer'
+ttl[1].style.left=7+'%'
+ttl[1].style.top=8+'%'
+ttl[1].style.color='#bbb'
+ttl[1].style.transform='scale(3)'
+ttl[1].style.cursor='pointer'
+ttl[2].style.left=22+'%'
+ttl[2].style.top=8+'%'
+ttl[3].style.left=72+'%'
+ttl[3].style.top=8+'%'
+ttl[3].style.transform='scale(3) skew(-12deg)'
+
+mnge[0].style.left=3+'%'
 mnge[0].style.top=30+'%'  
-mnge[0].style.width=60+'%'
+mnge[0].style.width=94+'%'
 mnge[0].style.height=66+'%'
-mnge[0].style.background='#777'
-mnge[0].style.borderRadius=12+'%'
-mnge[1].style.left=45+'%'
+mnge[0].style.background='#707'
+mnge[0].style.borderTopLeftRadius=6+'%'
+mnge[0].style.borderTopRightRadius=6+'%'
+mnge[0].style.borderBottomLeftRadius=12+'%'
+mnge[0].style.borderBottomRightRadius=12+'%'
+mnge[1].style.left=35+'%'
 mnge[1].style.top=76+'%' 
 mnge[1].style.background='#770'
 mnge[1].style.fontSize=0.6+'%' 
-mnge[2].style.left=66+'%'
+mnge[2].style.left=49+'%'
 mnge[2].style.top=76+'%' 
 mnge[2].style.background='#660' 
 mnge[2].style.fontSize=0.6+'%' 
 
 term[0].style.left=13+'%'
 term[0].style.top=13+'%' 
+term[0].style.borderRadius=13+'%' 
 
-btn[2].onclick=()=>
-{ 
- bdy[1].style.transform='scale(3)'
+function abtn(i,str)
+{
+ btn[i].onmouseover=()=>
+ { 
+  btn[i].style.transform='scale(2.2)'
+ }
+ btn[i].onmouseout=()=>
+ { 
+  btn[i].style.transform='scale(2)'
+ }
+ btn[i].onclick=()=>
+ { 
+   mnge[1].disabled=0
+   mnge[2].disabled=0
+   ttl[3].innerHTML=str 
+ } 
 }
-
-arrNm=['life','health','ownership','auto','tourism']
-Ittl0=0
+ abtn(0,'life'), abtn(1,'health'), 
+ abtn(2,'ownership'), abtn(3,'auto'), 
+ abtn(4,'tourism')
+ 
 ttl[0].onmouseover=()=>
 { 
- ttl[0].style.transform='scale(3.4)'
  ttl[0].style.color='#900'
- Ittl0=setInterval(()=>{
-  ttl[1].innerHTML=
-   arrNm[Math.round(Math.random())]
-  ttl[1].style.transform=
-  'scale(3) skew('+(Math.random()*12-6)+'deg)' 
-  }, 555)
+ ttl[0].style.transform='scale(3.4)'
 }
 ttl[0].onmouseout=()=>
 { 
+ ttl[0].style.color='#600'
  ttl[0].style.transform=
   'scale(3) skew(-12deg)'
- ttl[0].style.color='#000' 
-  clearInterval(Ittl0)
-  ttl[1].innerHTML=''
-} 
+}  
 
-function fbtn(i)
-{
- btn[i].onclick=()=>
- { 
-  ttl[2].innerHTML=arrNm[i]
- }  
+ttl[2].onclick=()=>
+{ 
+ ttl[2].value='2000' 
+}  
+
+mnge[1].onclick=()=>
+{ 
+ ttl[0].innerHTML='You are insured!'
+ mnge[1].disabled=1
+ mnge[2].disabled=1
 }
- fbtn(0),fbtn(1),fbtn(2),fbtn(3),fbtn(4)
-
-//  ii0=setInterval(()=>clk(rw0), 1000)
+mnge[1].onmouseout=()=>
+{ 
+ ttl[0].innerHTML='Insurance'
+}  
+mnge[2].onclick=()=>
+{ 
+ mnge[1].disabled=1
+ mnge[2].disabled=1
+}  
+mnge[2].onmouseout=()=>
+{ 
+ ttl[0].innerHTML='Insurance'
+}  
+ 
+//Ittl0=setInterval(()=>{
 </script>
 </body>
 </html>
