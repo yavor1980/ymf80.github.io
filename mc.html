@@ -2,11 +2,11 @@
 <html>
 <body id=idbd >
 <style>
-.prcssr,.lp,.rp,.sp
+.prcssr,.lp,.rp,.sp,.antnn
 { 
  position:absolute;  
  transition:777ms;
- cursor: pointer;  
+ cursor:pointer;  
 }
 .lmp
 { 
@@ -66,6 +66,13 @@
  <div class=lmp></div>
  <div class=lmp></div>
 </div>
+<div class=antnn>
+ <div class=antnn></div>
+ <div class=antnn></div>
+ <div class=antnn></div>
+ <div class=antnn></div>
+</div>
+ 
 
 <div class=cmnd>mov ax,00h</div>
 <div class=cmnd>xchg bx,ax</div>
@@ -90,6 +97,8 @@ lp=document.getElementsByClassName('lp')
 rp=document.getElementsByClassName('rp')
 sp=document.getElementsByClassName('sp')
 lmp=document.getElementsByClassName('lmp')
+antnn=document.getElementsByClassName('antnn')
+
 cmnd=document.getElementsByClassName('cmnd')
 rgstr=document.getElementsByClassName('rgstr')
 snd=document.getElementsByClassName('snd')
@@ -127,9 +136,9 @@ inn(rp,4, 86,71, 26,2,' #ff0','')
 inn(sp,0, 27,88, 2,29,' #bb0','')
 inn(sp,1, 73,88, 2,29,' #bb0','')
 
-inn(lmp,0, 33,50,9,5, '#707','')
+inn(lmp,0, 73,27,9,5, '#707','')
  lmp[0].style.border='4px ridge #990'
- lmp[0].style.transform='scale(0)'
+ lmp[0].style.opacity=0.4
 inn(lmp,1, 9,33,10,33, '#000','') 
  lmp[1].style.borderRadius=55+'%'
 inn(lmp,2, 33,33,10,33, '#000','')
@@ -138,6 +147,21 @@ inn(lmp,3, 57,33,10,33, '#000','')
  lmp[3].style.borderRadius=55+'%'
 inn(lmp,4, 81,33,10,33, '#000','')
  lmp[4].style.borderRadius=55+'%'
+ 
+inn(antnn,0, 27,73,22,2, '#111','')
+ antnn[0].style.borderRadius=25+'%'
+inn(antnn,1, 9,-400,5,933, '#000','')
+ antnn[1].style.borderRadius=55+'%'
+inn(antnn,2, 48,-400,5,933, '#000','')
+ antnn[2].style.borderRadius=55+'%'
+inn(antnn,3, 90,-400,5,933, '#000','')
+ antnn[3].style.borderRadius=55+'%'
+inn(antnn,4, -22,-749,140,1600, '','')
+ antnn[4].style.border='2px ridge #f0f'
+ antnn[4].style.borderLeft='2px ridge transparent'
+ antnn[4].style.borderRight='2px ridge transparent'
+ antnn[4].style.opacity=0
+ antnn[4].style.borderRadius=55+'%'
  
 inn(cmnd,0, 9,12)
 inn(cmnd,1, 9,16)
@@ -191,6 +215,8 @@ function clk()
   Math.round(Math.random())+Math.round(Math.random())
  lp[llv].style.transform='scale(1)'
  rp[lrv].style.transform='scale(1)'
+ lmp[0].style.opacity=1
+ lmp[0].style.transform= 'scale(3) skew(-33deg)'
  lmp[1].style.background=
   '#'+Math.round(9+Math.random())+'00'
  lmp[2].style.background=
@@ -205,6 +231,7 @@ function clk()
   'scale(1.1,3) translate(-22%,0)'
  rp[rv].style.transform=
   'scale(1.2,3) translate(22%,0)'
+ antnn[4].style.opacity=0.7
   llv=lv
   lrv=rv
  if(bcl)
@@ -215,14 +242,18 @@ function clk()
    'scale(2,1.2) translate(0,11%)'
   sp[1].style.transform='scale(1)'
    icmnd=Math.round(Math.random()*3)
+  antnn[0].style.transform= 'skew(-33deg)'
   cmnd[icmnd].style.transform=
    'scale(2) translate(33%,0)'
- }else{
+ }
+ else
+ {
   prcssr[0].style.transform='scale(1)'
   prcssr[1].style.background='#333'
   sp[0].style.transform='scale(1) '
   sp[1].style.transform=
    'scale(2,1.2) translate(0,11%)'
+  antnn[0].style.transform= 'skew(33deg)' 
   cmnd[icmnd].style.transform='scale(1.5)'
  }
   bcl=!bcl   
@@ -232,9 +263,7 @@ Ip=0
 prcssr[0].onmouseover=()=>
 { 
   clk()
-  Ip=setInterval(clk,999)
- lmp[0].style.transform= 
-  'scale(3) translate(42%,88%)'
+  Ip=setInterval(clk, 999)
 }
 prcssr[0].onmouseout=()=>
 {
@@ -250,11 +279,14 @@ prcssr[0].onmouseout=()=>
   prcssr[2].innerHTML=''
  sp[0].style.transform= 'scale(1)'
  sp[1].style.transform= 'scale(1)'
- lmp[0].style.transform= 'scale(0)'
+ lmp[0].style.opacity=0.4
+ lmp[0].style.transform= 'scale(2)'
  for(i=1;i<5;i++)
  {
   lmp[i].style.background= '#000'
  }
+ antnn[0].style.transform= 'skew(0deg)' 
+ antnn[4].style.opacity=0
  cmnd[icmnd].style.transform='scale(1.5)'
   bcl=1
 }
@@ -372,7 +404,7 @@ function f()
   cmnt[6].innerHTML=n
  }, 555) 
 } 
- //f()
+  //f()
 </script>
 </body>
 </html>
