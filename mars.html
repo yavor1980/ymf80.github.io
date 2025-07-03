@@ -296,8 +296,9 @@ ss=
   lhnd[2].style.width=55+'%'
   lhnd[2].style.height=55+'%'
   lhnd[2].style.background=
-   'linear-gradient(#f00,#f00)'
+   'linear-gradient(#b00,#f00)'
   lhnd[2].style.opacity=0.4
+
   
   rhnd[0].style.left=88+'%'
   rhnd[0].style.top=1+'%'
@@ -314,7 +315,7 @@ ss=
   rhnd[2].style.width=55+'%'
   rhnd[2].style.height=55+'%'
   rhnd[2].style.background=
-   'linear-gradient(#f00,#f00)'
+   'linear-gradient(#b00,#f00)'
   rhnd[2].style.opacity=0.4
   
   inf[0].style.left=70+'%'
@@ -350,7 +351,7 @@ ss=
  {
   v=48+Math.round(Math.random()*48)
   ids.style.background=
-   'radial-gradient('+(v)+'px,#555,#ff0)'
+   'radial-gradient('+(v)+'px,#909,#ff0)'
   if(!ss.b) 
   {
    hd[0].style.transform='rotate(44deg)'
@@ -420,12 +421,14 @@ ids.onmouseover=()=>
   'scale(3) translate(4px,-66px) skew(22deg)'
  ids.style.background=
   'radial-gradient(#909,#ff0)' 
- rhnd[0].style.transform=
-  'scale(1,0.5) translate(-66%,-33%) rotate(22deg)'
+ lhnd[0].style.transform=
+  'scale(1,0.5) translate(-66%,-63%) rotate(72deg)'
  lhnd[1].style.background=
   'radial-gradient(#909,#000)'
  lhnd[1].style.transform=
   'scale(2,2) rotate(-55deg)'
+ lhnd[2].style.transform='scale(4)'
+ lhnd[2].style.zIndex=3
  rhnd[1].style.background=
   'radial-gradient(#909,#000)' 
  rhnd[1].style.transform=
@@ -454,6 +457,7 @@ ids.onmouseout=()=>{
  lhnd[1].style.background=
   'linear-gradient(#444,#000)'
  lhnd[1].style.transform='scale(1,1) rotate(0deg)'
+ lhnd[2].style.transform='scale(1)'
  rhnd[1].style.background=
   'linear-gradient(#444,#000)'
  rhnd[1].style.transform='scale(1,1) rotate(0deg)'
