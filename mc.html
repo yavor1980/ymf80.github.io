@@ -53,7 +53,6 @@
  <div class=lp></div>
  <div class=lp></div>  
  <div class=rp></div>  
- 
  <div class=rp></div>  
  <div class=rp></div>
  <div class=rp></div>  
@@ -61,6 +60,7 @@
  <div class=sp></div>  
  <div class=sp></div>
 </div>
+
 <div class=lmp>
  <div class=lmp></div>
  <div class=lmp></div>
@@ -74,7 +74,6 @@
  <div class=antnn></div>
 </div>
  
-
 <div class=cmnd>mov ax,00h</div>
 <div class=cmnd>xchg bx,ax</div>
 <div class=cmnd>add ax,44h</div>
@@ -116,7 +115,6 @@ function inn(nm,i,l,t,w,h,bkg,clr)
  nm[i].style.background=bkg
  nm[i].style.color=clr 
 }
-
 inn(prcssr,0, 33,22, 20,27, '#333','')
  prcssr[0].style.borderRadius=3+'%'
 inn(prcssr,1, 18,14, 64,70, '#444','')
@@ -236,7 +234,7 @@ function clk()
   (66*Math.random()-33)+'deg)'
  antnn[4].style.opacity=Math.random()
  antnn[4].style.transform=
-  'scale('+(1+Math.random()/5)+')'
+  'scale('+(1+Math.random()/3)+')'
   llv=lv
   lrv=rv
  if(bcl)
