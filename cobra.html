@@ -33,8 +33,6 @@ button:hover
 
 <button id=idb>DANGER</button>
 
-
-
 <div class=hd>
  <div class=hd>
   <div class=hd></div>
@@ -47,6 +45,7 @@ button:hover
  </div>
  <div class=bd>
   <div class=bd><div class=bd></div></div>
+  <div class=bd></div>
   <div class=bd></div>
  </div>
 </div>
@@ -151,6 +150,12 @@ bd[3].style.width=333+'%'
 bd[3].style.height=22+'%'
 bd[3].style.background=
  'radial-gradient(#080,#000)' 
+bd[4].style.left=22+'%'
+bd[4].style.top=77+'%'
+bd[4].style.width=233+'%'
+bd[4].style.height=20+'%'
+bd[4].style.background=
+ 'radial-gradient(#080,#000)' 
 
 tbe[0].style.left=59+'%'
 tbe[0].style.top=40+'%'
@@ -199,6 +204,7 @@ function cl()
   hd[2].style.transform='scale(1.3)'
   hd[3].style.transform='scale(1.3)'
   bd[3].style.transform='scale(1.2)'
+  bd[4].style.transform='scale(1)'
   tbe[0].style.transform=
   'scale('+(1+Math.random()/5)+
   ') rotate('+(62+Math.random()*5)+'deg)'
@@ -211,6 +217,7 @@ function cl()
   hd[2].style.transform='scale(0.7)'
   hd[3].style.transform='scale(0.7)'
   bd[3].style.transform='scale(0.8)' 
+  bd[4].style.transform='scale(1.2)'
   tbe[0].style.transform=
   'scale('+(1+Math.random()/8)+
   ') rotate('+(62+Math.random()*5)+'deg)'
@@ -274,6 +281,7 @@ hd[1].onmousemove=()=>
 {
  clk()
 }
+
 ttl[0].onmouseover=()=>
 {
  ttl[0].style.transform='skew(23deg)'
