@@ -30,8 +30,8 @@ button:hover
 
 </style>
 <body id=idbd>
-
 <button id=idb>DANGER</button>
+<div class=ttl>SNAKES</div>
 
 <div class=hd>
  <div class=hd>
@@ -47,6 +47,7 @@ button:hover
   <div class=bd><div class=bd></div></div>
   <div class=bd></div>
   <div class=bd></div>
+  <div class=bd></div>
  </div>
 </div>
 
@@ -57,8 +58,6 @@ button:hover
  <div class=tbe></div>
 </div>
  
-<div class=ttl>SNAKES</div>
-
 </body >
 <script>
 hd=document.getElementsByClassName('hd')
@@ -156,6 +155,13 @@ bd[4].style.width=233+'%'
 bd[4].style.height=20+'%'
 bd[4].style.background=
  'radial-gradient(#080,#000)' 
+bd[5].style.left=29+'%'
+bd[5].style.top=66+'%'
+bd[5].style.width=200+'%'
+bd[5].style.height=20+'%'
+bd[5].style.background=
+ 'radial-gradient(#080,#000)' 
+bd[5].style.zIndex=-1 
 
 tbe[0].style.left=59+'%'
 tbe[0].style.top=40+'%'
@@ -193,7 +199,7 @@ ttl[0].style.color='#099'
 ttl[0].style.fontSize='3em'
 ttl[0].style.opacity=0.8
 ttl[0].style.cursor='pointer'
-ttl[0].style.zIndex=1 
+ttl[0].style.zIndex=1
 
   bcl=0
 function cl()
@@ -205,6 +211,7 @@ function cl()
   hd[3].style.transform='scale(1.3)'
   bd[3].style.transform='scale(1.2)'
   bd[4].style.transform='scale(1)'
+  bd[5].style.transform='scale(1.2)'
   tbe[0].style.transform=
   'scale('+(1+Math.random()/5)+
   ') rotate('+(62+Math.random()*5)+'deg)'
@@ -218,6 +225,7 @@ function cl()
   hd[3].style.transform='scale(0.7)'
   bd[3].style.transform='scale(0.8)' 
   bd[4].style.transform='scale(1.2)'
+  bd[5].style.transform='scale(1.8)'
   tbe[0].style.transform=
   'scale('+(1+Math.random()/8)+
   ') rotate('+(62+Math.random()*5)+'deg)'
