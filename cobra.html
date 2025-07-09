@@ -33,6 +33,8 @@ button:hover
 <button id=idb>DANGER</button>
 <div class=ttl>SNAKES</div>
 
+<div class=ttl></div>
+
 <div class=hd>
  <div class=hd>
   <div class=hd></div>
@@ -61,21 +63,37 @@ button:hover
  
 </body >
 <script>
+ttl=document.getElementsByClassName('ttl')
+
 hd=document.getElementsByClassName('hd')
 mth=document.getElementsByClassName('mth')
 tng=document.getElementsByClassName('tng')
 bd=document.getElementsByClassName('bd')
 tbe=document.getElementsByClassName('tbe')
 
-ttl=document.getElementsByClassName('ttl')
-
 idbd.style.background=
- 'linear-gradient(-22deg,#ff0,#00f,#0ff)'
+ 'linear-gradient(-199deg,#ff0,#00f,#0ff)'
 
 snk=
  'suborder  <br>'+
  'of the<br>'+
  'reptile class<br>'
+ 
+ttl[0].style.left=6+'%'
+ttl[0].style.top=6+'%'
+ttl[0].style.color='#099'
+ttl[0].style.fontSize='3em'
+ttl[0].style.opacity=0.8
+ttl[0].style.cursor='pointer'
+ttl[0].style.zIndex=1
+ttl[1].style.left=0+'%'
+ttl[1].style.bottom=0+'%'
+ttl[1].style.width=100+'%'
+ttl[1].style.height=22+'%'
+ttl[1].style.borderBottomLeftRadius=0+'%'
+ttl[1].style.borderBottomRightRadius=0+'%'
+ttl[1].style.background=
+ 'radial-gradient(#960,#999)'
 
 function init(nm,i,l,t,w,h)
 {
@@ -202,14 +220,6 @@ tbe[3].style.borderLeft='1px ridge transparent'
 tbe[3].style.borderRight='1px ridge transparent'
 tbe[3].style.opacity=0
 
-ttl[0].style.left=6+'%'
-ttl[0].style.top=6+'%'
-ttl[0].style.color='#099'
-ttl[0].style.fontSize='3em'
-ttl[0].style.opacity=0.8
-ttl[0].style.cursor='pointer'
-ttl[0].style.zIndex=1
-
   bcl=0
 function cl()
 {
@@ -248,6 +258,17 @@ function cl()
  bcl=!bcl
 }
    i=setInterval(cl, 999)
+
+ttl[0].onmouseover=()=>
+{
+ ttl[0].style.transform='skew(23deg)'
+  ttl[0].innerHTML=snk	
+}
+ttl[0].onmouseout=()=>
+{
+ ttl[0].style.transform='skew(0deg)'
+  ttl[0].innerHTML='SNAKES' 
+}
 
 function clk()
 {  
@@ -300,18 +321,5 @@ hd[1].onmousemove=()=>
 {
  clk()
 }
-
-ttl[0].onmouseover=()=>
-{
- ttl[0].style.transform='skew(23deg)'
-  ttl[0].innerHTML=snk	
-}
-ttl[0].onmouseout=()=>
-{
- ttl[0].style.transform='skew(0deg)'
-  ttl[0].innerHTML='SNAKES' 
-}
-
-
 
 </script>
