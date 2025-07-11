@@ -187,7 +187,6 @@ grd=
   kr3[1].style.top=20+'%'
   kr3[1].style.width=55+'%' 
   kr3[1].style.height=55+'%'
- 
   star[0].style.left=Math.random()*88+'%' 
   star[0].style.top=Math.random()*44+'%'     
   star[1].style.left=Math.random()*88+'%' 
@@ -212,7 +211,7 @@ grd=
  },   
 }
     grd.init()
-	 setInterval(()=>grd.cl(), 1111)
+	 setInterval(grd.cl, 1111)
 	 
 me[0].style.left='55%'
 me[0].style.top='33%'
@@ -226,6 +225,7 @@ me[2].style.left='55%'
 me[2].style.top='33%'
 me[2].style.color='#0f0'
 me[2].style.transform='scale(0)'
+
 ss=
 {
  b:0, bb:0,
@@ -254,7 +254,6 @@ ss=
   hd[4].style.top=22+'%'
   hd[4].style.width=22+'%'
   hd[4].style.height=44+'%'
-      
   llg[0].style.left=11+'%'
   llg[0].style.bottom=-33+'%'
   llg[0].style.borderRadius=22+'%' 
@@ -267,7 +266,6 @@ ss=
   llg[1].style.background=
    'linear-gradient(#555,#000)'; 
   llg[1].style.borderRadius=22+'%' 
-  
   rlg[0].style.left=68+'%' 
   rlg[0].style.bottom=-33+'%'	
   rlg[0].style.borderRadius=22+'%' 
@@ -280,7 +278,6 @@ ss=
   rlg[1].style.background=
    'linear-gradient(#555,#000)'
   rlg[1].style.borderRadius=22+'%' 
-  
   lhnd[0].style.left=-11+'%'
   lhnd[0].style.top=+'%'
   lhnd[0].style.width=22+'%'
@@ -298,8 +295,6 @@ ss=
   lhnd[2].style.background=
    'linear-gradient(#b00,#f00)'
   lhnd[2].style.opacity=0.4
-
-  
   rhnd[0].style.left=88+'%'
   rhnd[0].style.top=1+'%'
   rhnd[0].style.width=22+'%'
@@ -317,7 +312,6 @@ ss=
   rhnd[2].style.background=
    'linear-gradient(#b00,#f00)'
   rhnd[2].style.opacity=0.4
-  
   inf[0].style.left=70+'%'
   inf[0].style.top=9+'%'
   inf[0].style.width=22+'%'
@@ -422,7 +416,7 @@ ids.onmouseover=()=>
  ids.style.background=
   'radial-gradient(#909,#ff0)' 
  lhnd[0].style.transform=
-  'scale(1,0.5) translate(-66%,-63%) rotate(72deg)'
+  'scale(1.5,0.5) translate(-66%,-63%) rotate(72deg)'
  lhnd[1].style.background=
   'radial-gradient(#909,#000)'
  lhnd[1].style.transform=
@@ -476,13 +470,11 @@ kr1[0].onmouseover=()=>
  kr1[1].style.transform=
   'scale(1,5) translate(0,-66%)'
 }
-
 kr2[0].onmouseover=()=>
 {   
  kr2[1].style.transform=
   'scale(1,5) translate(0,-66%)'
 }
-
 kr3[0].onmouseover=()=>
 {   
  kr3[1].style.transform=
@@ -491,22 +483,21 @@ kr3[0].onmouseover=()=>
 
 inf[0].onmouseover=()=>
 {   
-  inf[0].style.fontSize='2em'
-  inf[0].style.color='#f00'
-  inf[0].style.opacity= 1 
-  inf[0].style.height= 16+'%'
-  inf[0].style.border='9px ridge #f0f'
-   inf[0].innerHTML= 
-    '&nbsp martian<br> &nbsp &nbsp &nbsp landform '
+ inf[0].style.fontSize='2em'
+ inf[0].style.color='#f00'
+ inf[0].style.opacity= 1 
+ inf[0].style.height= 16+'%'
+ inf[0].style.border='9px ridge #f0f'
+  inf[0].innerHTML= 
+   '&nbsp martian<br> &nbsp &nbsp &nbsp landform '
 }     
 inf[0].onmouseout=()=>
 {   
-  inf[0].innerHTML= 'what?'
-  inf[0].style.color='#000'
-  inf[0].style.opacity= 0.3
-  inf[0].style.height= 11+'%'
-  inf[0].style.border=''
-  
+ inf[0].innerHTML= 'what?'
+ inf[0].style.color='#000'
+ inf[0].style.opacity= 0.3
+ inf[0].style.height= 11+'%'
+ inf[0].style.border='' 
 } 
 
 inf[1].onmouseover=()=>
