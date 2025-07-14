@@ -95,12 +95,13 @@ ttl[1].style.borderBottomLeftRadius=0+'%'
 ttl[1].style.borderBottomRightRadius=0+'%'
 ttl[1].style.background=
  'radial-gradient(#960,#999)'
-ttl[2].style.left=0+'%'
-ttl[2].style.bottom=0+'%'
-ttl[2].style.width=10+'%'
-ttl[2].style.height=22+'%'
+ttl[2].style.left=70+'%'
+ttl[2].style.bottom=5+'%'
+ttl[2].style.width=22+'%'
+ttl[2].style.height=10+'%'
 ttl[2].style.background=
- 'radial-gradient(#960,#999)'
+ 'radial-gradient(#0ff,#00f)'
+ttl[2].style.opacity=0.7 
 
 function init(nm,i,l,t,w,h)
 {
@@ -282,6 +283,8 @@ function clk()
 {  
   v=Math.round(Math.random()*2-1)
  idb.style.opacity=0
+ ttl[2].style.transform=
+  'scale('+(1+Math.random()/2)+')'
  hd[2].style.background=
   'radial-gradient(12px,#f00,#fff)'
  hd[3].style.background=
@@ -303,6 +306,7 @@ function clk()
  tbe[3].style.transform='scale(2,5)'
  setTimeout(()=>{
   idb.style.opacity=1
+  ttl[2].style.transform='scale(1)'
   hd[2].style.background=
    'radial-gradient(7px,#ff0,#fff)'
   hd[3].style.background=
