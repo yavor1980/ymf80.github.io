@@ -135,9 +135,7 @@
 </div>
 <div class=me></div>
 <div class=me></div>
-<div class=me>
- answer me!
-</div>
+<div class=me>answer me!</div>
 
 <div class=inf>what?</div>
 <div class=inf>how?</div>
@@ -377,13 +375,16 @@ idsI=0
 bids=0
 ids.onmouseover=()=>
 {
+ lhnd[2].style.transform='scale('+(4+Math.random())+')'
  idsI=setInterval(()=>{
   for(i=0;i<5;i++)
-   fids[i]=Math.round(Math.random())   
+   fids[i]=Math.round(Math.random()) 
   me[0].innerHTML=fids[0]+''+fids[1]+''+fids[2]+''+
    fids[3]+''+fids[4]   
   if(bids)
   {
+   lhnd[2].style.transform=
+    'scale('+(4+2*Math.random())+')'
    me[0].style.transform=
     'scale(3) translate(44px,-33px) skew(-11deg)'
    me[0].style.color='#bb0'
@@ -394,6 +395,7 @@ ids.onmouseover=()=>
   }
    else
   {
+   lhnd[2].style.transform='scale(1)'
    me[0].style.transform=
     'scale(4) translate(44px,-33px) skew(11deg)'
    me[0].style.color='#ff0'
@@ -416,12 +418,11 @@ ids.onmouseover=()=>
  ids.style.background=
   'radial-gradient(#909,#ff0)' 
  lhnd[0].style.transform=
-  'scale(1.5,0.5) translate(-66%,-63%) rotate(72deg)'
+  'scale(1.5,0.5) translate(-96%,-63%) rotate(72deg)'
  lhnd[1].style.background=
   'radial-gradient(#909,#000)'
  lhnd[1].style.transform=
   'scale(2,2) rotate(-55deg)'
- lhnd[2].style.transform='scale(4)'
  lhnd[2].style.zIndex=3
  rhnd[1].style.background=
   'radial-gradient(#909,#000)' 
