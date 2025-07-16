@@ -11,6 +11,7 @@
 #idbd
 {
  background:linear-gradient(44deg,#330,#cc0);
+ height:200%;
 }
 
 .btn
@@ -41,6 +42,13 @@
 {
  position:absolute;
  transition:333ms;
+ cursor:pointer;
+}
+
+#idtrsfrmtr
+{
+ position:absolute;
+ transition:1s;
  cursor:pointer;
 }
 
@@ -77,6 +85,8 @@
  <div class=cpcty></div>
  <div class=cpcty></div>
 </div>
+
+<div id=idtrsfrmtr></div>
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -221,6 +231,15 @@ cpcty[9].style.borderLeft='8px ridge transparent'
 cpcty[9].style.borderBottom='8px ridge transparent'
 cpcty[9].style.transform='skew(11deg)'
 cpcty[9].style.opacity=0
+
+idtrsfrmtr.style.left=14+'%'
+idtrsfrmtr.style.top=111+'%'
+idtrsfrmtr.style.width=33+'%'
+idtrsfrmtr.style.height=55+'%'
+idtrsfrmtr.style.borderRadius=22+'%'
+idtrsfrmtr.style.border='99px ridge #bbb'
+idtrsfrmtr.style.borderLeft='199px ridge #444'
+idtrsfrmtr.style.borderRight='199px ridge #444'
 
 btn[0].onmouseover=()=>
 {
