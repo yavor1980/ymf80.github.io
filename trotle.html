@@ -75,6 +75,7 @@
  <div class=cpcty>Capacity</div>
  <div class=cpcty>I=CdU/dt</div>
  <div class=cpcty></div>
+ <div class=cpcty></div>
 </div>
 
 <script>
@@ -211,6 +212,15 @@ cpcty[8].style.height=100+'%'
 cpcty[8].style.background='#777'
 cpcty[8].style.opacity=0
 cpcty[8].style.borderRadius=22+'%'
+cpcty[9].style.left=10+'%'
+cpcty[9].style.top=-12+'%'
+cpcty[9].style.width=33+'%'
+cpcty[9].style.height=118+'%'
+cpcty[9].style.border='17px ridge #900'
+cpcty[9].style.borderLeft='8px ridge transparent'
+cpcty[9].style.borderBottom='8px ridge transparent'
+cpcty[9].style.transform='skew(11deg)'
+cpcty[9].style.opacity=0
 
 btn[0].onmouseover=()=>
 {
@@ -306,6 +316,7 @@ function fcpctyon()
  cpcty[7].style.transform=
   'scale(3) translate(-19%,-22%) skew(9deg)'
  cpcty[8].style.opacity=0.8
+ cpcty[9].style.opacity=1
  cpctyI=setInterval(()=>{
    p=1.2+Math.random()/11
   cpcty[5].style.transform='scale('+p+')'
@@ -330,13 +341,13 @@ function fcpctyoff()
  cpcty[7].style.color='#444' 
  cpcty[7].style.transform='scale(0)' 
  cpcty[8].style.opacity=0
+ cpcty[9].style.opacity=0
   clearInterval(cpctyI)
 }
 cpcty[0].onmouseout=()=>
 {
  fcpctyoff()
 }
-
 
 </script>
 </body>
