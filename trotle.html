@@ -37,7 +37,6 @@
  transition:333ms;
  transform:scale(0);
 }
-
 .cpcty
 {
  position:absolute;
@@ -45,12 +44,22 @@
  cursor:pointer;
 }
 
-#idtrsfrmtr
+#idtrsfrmtr,.lcoils,.rcoils
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
 }
+.lcoils,.rcoils
+{
+ left:-79%;
+ width:88%;
+ height:11%;
+ border-radius:55%;
+ border:22px ridge #777;
+ border-top:22px ridge transparent;
+}
+
 
 </style>
 </head>
@@ -86,7 +95,16 @@
  <div class=cpcty></div>
 </div>
 
-<div id=idtrsfrmtr></div>
+<div id=idtrsfrmtr>
+<div class=lcoils></div>
+<div class=lcoils></div>
+<div class=lcoils></div>
+<div class=lcoils></div>
+<div class=rcoils></div>
+<div class=rcoils></div>
+<div class=rcoils></div>
+<div class=rcoils></div>
+</div>
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -95,6 +113,9 @@ fld=document.getElementsByClassName('fld')
 ttl=document.getElementsByClassName('ttl')
 
 cpcty=document.getElementsByClassName('cpcty')
+
+lcoils=document.getElementsByClassName('lcoils')
+rcoils=document.getElementsByClassName('rcoils')
 
 btn[0].style.right=6+'%'
 btn[0].style.top=9+'%'
@@ -240,6 +261,10 @@ idtrsfrmtr.style.borderRadius=22+'%'
 idtrsfrmtr.style.border='99px ridge #bbb'
 idtrsfrmtr.style.borderLeft='199px ridge #444'
 idtrsfrmtr.style.borderRight='199px ridge #444'
+
+lcoils[1].style.top=22+'%'
+lcoils[2].style.top=44+'%'
+lcoils[3].style.top=66+'%'
 
 btn[0].onmouseover=()=>
 {
