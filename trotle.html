@@ -44,7 +44,7 @@
  cursor:pointer;
 }
 
-#idtrsfrmtr,.lcoils,.rcoils
+#idtrsfrmtr,.lcoils,.rcoils,.ttl
 {
  position:absolute;
  transition:1s;
@@ -52,14 +52,20 @@
 }
 .lcoils,.rcoils
 {
- left:-79%;
- width:88%;
+ width:298px;
  height:11%;
  border-radius:55%;
  border:22px ridge #777;
  border-top:22px ridge transparent;
 }
-
+.lcoils
+{
+ left:-269px;
+}
+.rcoils
+{
+ left:84%;
+}
 
 </style>
 </head>
@@ -95,25 +101,28 @@
  <div class=cpcty></div>
 </div>
 
+
 <div id=idtrsfrmtr>
-<div class=lcoils></div>
-<div class=lcoils></div>
-<div class=lcoils></div>
-<div class=lcoils></div>
-<div class=rcoils></div>
-<div class=rcoils></div>
-<div class=rcoils></div>
-<div class=rcoils></div>
+ <div class=ttl>Transformation</div>
+ <div class=ttl></div>
+ <div class=lcoils></div>
+ <div class=lcoils></div>
+ <div class=lcoils></div>
+ <div class=lcoils></div>
+ <div class=rcoils></div>
+ <div class=rcoils></div>
+ <div class=rcoils></div>
+ <div class=rcoils></div>
 </div>
 
 <script>
 btn=document.getElementsByClassName('btn')
 coil=document.getElementsByClassName('coil')
 fld=document.getElementsByClassName('fld')
-ttl=document.getElementsByClassName('ttl')
 
 cpcty=document.getElementsByClassName('cpcty')
 
+ttl=document.getElementsByClassName('ttl')
 lcoils=document.getElementsByClassName('lcoils')
 rcoils=document.getElementsByClassName('rcoils')
 
@@ -261,10 +270,24 @@ idtrsfrmtr.style.borderRadius=22+'%'
 idtrsfrmtr.style.border='99px ridge #bbb'
 idtrsfrmtr.style.borderLeft='199px ridge #444'
 idtrsfrmtr.style.borderRight='199px ridge #444'
-
 lcoils[1].style.top=22+'%'
 lcoils[2].style.top=44+'%'
 lcoils[3].style.top=66+'%'
+rcoils[1].style.top=22+'%'
+rcoils[2].style.top=44+'%'
+rcoils[3].style.top=66+'%'
+
+ttl[0].style.left=22+'%'
+ttl[0].style.top=-44+'%'
+ttl[0].style.color='#008'
+ttl[0].style.transform='scale(4)'
+ttl[1].style.left=28+'%'
+ttl[1].style.top=8+'%'
+ttl[1].style.width=43+'%'
+ttl[1].style.height=80+'%'
+ttl[1].style.border='4px ridge #f0f'
+ttl[1].style.borderRadius=35+'%'
+ttl[1].style.opacity=0
 
 btn[0].onmouseover=()=>
 {
@@ -311,10 +334,6 @@ function fcoilon()
    'scale('+(p+1.4)+') translate(-22%,55%) skew(-23deg)'
  }, 333)
 }
-coil[0].onmouseover=()=>
-{
- fcoilon()
-}  
 function fcoiloff()
 {
  coil[0].style.transform='scale(2)'
@@ -339,6 +358,10 @@ function fcoiloff()
  fld[6].style.transform='translate(0%,0)'
   clearInterval(coilI)
 }
+coil[0].onmouseover=()=>
+{
+ fcoilon()
+}  
 coil[0].onmouseout=()=>
 {
  fcoiloff()
@@ -366,10 +389,6 @@ function fcpctyon()
   cpcty[5].style.transform='scale('+p+')'
  }, 333)
 }
-cpcty[0].onmouseover=()=>
-{
- fcpctyon()
-}
 function fcpctyoff()
 {
  cpcty[1].style.background='#777'
@@ -388,9 +407,54 @@ function fcpctyoff()
  cpcty[9].style.opacity=0
   clearInterval(cpctyI)
 }
+cpcty[0].onmouseover=()=>
+{
+ fcpctyon()
+}
 cpcty[0].onmouseout=()=>
 {
  fcpctyoff()
+}
+
+trsfrmI=0
+function trsfrmon()
+{
+ for(i=0;i<4;i++)
+ { 
+  ttl[0].style.color='#00b'
+  ttl[0].style.transform='scale(4) skew(14deg)'
+  ttl[1].style.opacity=0.2+Math.random()/2
+  lcoils[i].style.borderColor='#900'
+  lcoils[i].style.borderTop='transparent'
+  rcoils[i].style.borderColor='#900'
+  rcoils[i].style.borderTop='transparnt'
+ }
+  trsfrmI=setInterval(()=>{
+   p=Math.round(Math.random()*4)
+   lcoils[i].style.borderColor='#900'
+ }, 333)
+} 
+function trsfrmoff()
+{
+ for(i=0;i<4;i++)
+ { 
+  ttl[0].style.color='#008'
+  ttl[0].style.transform='scale(4)'
+  ttl[1].style.opacity=0
+  lcoils[i].style.borderColor='#777'
+  lcoils[i].style.borderTop='transparent'
+  rcoils[i].style.borderColor='#777'
+  rcoils[i].style.borderTop='transparent'
+ }
+  clearInterval(cpctyI)
+} 
+idtrsfrmtr.onmouseover=()=>
+{
+ trsfrmon()
+}
+idtrsfrmtr.onmouseout=()=>
+{
+ trsfrmoff()
 }
 
 </script>
