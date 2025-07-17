@@ -286,6 +286,8 @@ ttl[1].style.top=8+'%'
 ttl[1].style.width=43+'%'
 ttl[1].style.height=80+'%'
 ttl[1].style.border='4px ridge #f0f'
+ttl[1].style.borderTopColor='transparent'
+ttl[1].style.borderBottomColor='transparent'
 ttl[1].style.borderRadius=35+'%'
 ttl[1].style.opacity=0
 
@@ -431,9 +433,10 @@ function trsfrmon()
  }
  trsfrmI=setInterval(()=>
  {
-    p=Math.round(Math.random()*4)
+    pl=Math.round(Math.random()*4)
+   //lcoils[pl].style.opacity=0
    ttl[1].style.transform='scale('+
-    (1+Math.random()/5)+')'
+    (1+Math.random()/4)+')'
  }, 333)
 } 
 function trsfrmoff()
