@@ -429,9 +429,11 @@ function trsfrmon()
   rcoils[i].style.borderColor='#900'
   rcoils[i].style.borderTop='transparnt'
  }
-  trsfrmI=setInterval(()=>{
-   p=Math.round(Math.random()*4)
-   lcoils[i].style.borderColor='#900'
+ trsfrmI=setInterval(()=>
+ {
+    p=Math.round(Math.random()*4)
+   ttl[1].style.transform='scale('+
+    (1+Math.random()/5)+')'
  }, 333)
 } 
 function trsfrmoff()
