@@ -23,12 +23,12 @@
 
 </style>
 <div class=ttl>
-<div class=ttl>L</div>
-<div class=ttl>U</div>
-<div class=ttl>C</div>
-<div class=ttl>H</div>
-<div class=ttl>A</div>
-<div class=ttl>N</div>
+ <div class=ttl>L</div>
+ <div class=ttl>U</div>
+ <div class=ttl>C</div>
+ <div class=ttl>H</div>
+ <div class=ttl>A</div>
+ <div class=ttl>N</div>
 </div>
  <div class=ttl>kraft beer</div>
 
@@ -55,14 +55,21 @@ ttl[0].style.width=44+'%'
 ttl[0].style.color='#808'
 ttl[0].style.fontSize=11+'em'
 ttl[1].style.left=0+'%'
+ttl[1].style.color='#f00'
 ttl[2].style.left=16+'%'
+ttl[2].style.color='#0f0'
 ttl[3].style.left=32+'%'
+ttl[3].style.color='#00f'
 ttl[4].style.left=48+'%'
+ttl[4].style.color='#ff0'
 ttl[5].style.left=64+'%'
+ttl[5].style.color='#f0f'
 ttl[6].style.left=80+'%'
+ttl[6].style.color='#0ff'
 ttl[7].style.zIndex=2
 ttl[7].style.left=22+'%'
 ttl[7].style.top=29+'%'
+ttl[7].style.background='#bb0'
 ttl[7].style.opacity=0.6
 ttl[7].style.border='6px ridge #890'
 ttl[7].style.transform='scale(0)'
@@ -149,9 +156,18 @@ blb[2].style.borderRadius=55+'%'
 blb[2].style.borderRight='9px ridge #b0b'
 blb[2].style.opacity=0
 
+ttlI=0
+function cl()
+{
+ for(i=1;i<7;i++)
+  ttl[i].style.transform='scale('+(1+Math.random()/4)+')'
+}
+ ttlI=setInterval(cl, 999)
+
 Iblb=0
 ttl[0].onmouseover=()=>
 { 
+  clearInterval(ttlI)
  ttl[0].style.transform='scale(1.3)'
  ttl[7].style.color='#900'
  ttl[7].style.transform=
@@ -173,6 +189,7 @@ ttl[0].onmouseover=()=>
 }
 ttl[0].onmouseout=()=>
 { 
+  ttlI=setInterval(cl, 999)
  ttl[0].style.transform='scale(1)'
  ttl[7].style.color='#000'
  ttl[7].style.transform='scale(0)'
