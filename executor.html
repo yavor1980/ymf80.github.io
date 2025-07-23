@@ -14,9 +14,9 @@
 {
  position:absolute;
  transition:1s; 
+ cursor:pointer;
  text-align:center;
  font-size:2em;
- cursor:pointer;
 }
 .btn:hover
 {
@@ -26,30 +26,30 @@
 .jws
 {
  position:absolute;   
- background:radial-gradient(#bbb,#660);
+ transition:1s;
+ cursor:pointer;
  left:33%;
  top:8%; 
  width:16%;
  height:44%;
- transition:1s;
+ background:radial-gradient(#bbb,#660);
  border-top-left-radius:77%;
  border-top-right-radius:77%;  
  border-bottom-left-radius:33%;
  border-bottom-right-radius:33%; 
- cursor:pointer;
 }
 .mth,.gl,.ns,.lwng,.rwng,.plh
 {
  position:absolute;   
- transition:2s;
+ transition:1s;
 }
 
 .exctr
 {
  position:absolute;    
  transition:1s;
- transform:scale(2);
  cursor:pointer;
+ transform:scale(2);
 }
 
 .shrm
@@ -59,12 +59,6 @@
  cursor:pointer;
  text-align:center;
  padding-top:1;
-}
-
-.vctr
-{
- position:absolute;    
- transition:1s;
 }
 
 </style>
@@ -78,7 +72,8 @@
  <div class=ns><div class=ns ></div></div>   
  <div class=jws>
   <div class=lwng><div class=lwng></div></div>
-  <div class=rwng><div class=rwng>
+  <div class=rwng>
+   <div class=rwng>
     <div class=plh>
      <div class=plh></div> 
      <div class=plh></div> 
@@ -92,30 +87,7 @@
 <div class=shrm>Sentence...</div> 
  
 <div class=exctr >Executnr </div> 
- <div class=exctr >for executions </div>
- <div class=exctr >
-  plh[0].style.transform=  
-     <br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-	    &nbsp
-   'rotate(44deg)'+<br>
-   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-	    &nbsp
-   'skew(11deg)'+<br>
- </div>
- <div class=exctr >Execute(vctm)</div>
-
-<div class=vctr >
-  V
-</div>
-<div class=vctr >
-  C
-</div>
-<div class=vctr >
-  T
-</div>
-<div class=vctr >
-  R
-</div>
+<div class=exctr >Execute(vctm)</div>
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -146,15 +118,6 @@ btn[1].style.height=7+'%'
 btn[1].style.background=
  'radial-gradient(#f00,#620)';
 btn[1].style.borderRadius=44+'%'
-
-jws[1].style.left=-33+'%'
-jws[1].style.top=88+'%'  
-jws[1].style.width=166+'%'
-jws[1].style.height=101+'%'  
-jws[1].style.borderRadius=1+'%'
-jws[1].style.borderTopLeftRadius=11+'%'
-jws[1].style.borderTopRightRadius=11+'%' 
-jws[1].style.opacity=0.6
 
 gl[0].style.left=18+'%'
 gl[0].style.top=17+'%'  
@@ -196,6 +159,15 @@ ns[1].style.background=
  'radial-gradient(#bbb,#660)';
 ns[1].style.borderRadius=55+'%'
   
+jws[1].style.left=-33+'%'
+jws[1].style.top=88+'%'  
+jws[1].style.width=166+'%'
+jws[1].style.height=101+'%'  
+jws[1].style.borderRadius=1+'%'
+jws[1].style.borderTopLeftRadius=11+'%'
+jws[1].style.borderTopRightRadius=11+'%' 
+jws[1].style.opacity=0.6 
+  
 lwng[0].style.left=-18+'%'
 lwng[0].style.top=2+'%'  
 lwng[0].style.width=22+'%'
@@ -226,14 +198,13 @@ rwng[1].style.background=
  'radial-gradient(#bbb,#ff0)'
 rwng[1].style.borderRadius=33+'%'
 	  
-plh[0].style.left=-35+'%'
+plh[0].style.left=33+'%'
 plh[0].style.top=-888+'%'  
 plh[0].style.width=88+'%'
 plh[0].style.height=999+'%'  
 plh[0].style.background='#700'
 plh[0].style.borderRadius=33+'%'
-plh[0].style.transform=
- 'translate(77%,0) rotate(5deg)' 
+plh[0].style.transform='rotate(5deg)' 
 plh[1].style.left=1+'%'
 plh[1].style.top=1+'%'  
 plh[1].style.width=44+'%'
@@ -268,31 +239,9 @@ exctr[0].style.top=14+'%'
 exctr[0].style.color='#f00'
 exctr[0].style.transform='scale(3)'
 exctr[1].style.left=55+'%'
-exctr[1].style.top=22+'%'  
+exctr[1].style.top=11+'%'  
+exctr[1].style.color='#b00'
 exctr[1].style.transform='scale(0)'
-exctr[2].style.left=55+'%'
-exctr[2].style.top=36+'%'  
-exctr[2].style.transform='scale(0)'
-exctr[3].style.left=55+'%'
-exctr[3].style.top=44+'%'  
-exctr[3].style.transform='scale(0)'	
- 
-vctr[0].style.left=18+'%'
-vctr[0].style.top=33+'%'
-vctr[0].style.color='#f00'
-vctr[0].style.transform='scale(0)'
-vctr[1].style.left=13+'%'
-vctr[1].style.top=44+'%'
-vctr[1].style.color='#f70'
-vctr[1].style.transform='scale(0)'
-vctr[2].style.left=10+'%'
-vctr[2].style.top=55+'%'
-vctr[2].style.color='#f08'
-vctr[2].style.transform='scale(0)'
-vctr[3].style.left=8+'%'
-vctr[3].style.top=66+'%'
-vctr[3].style.color='#f88'
-vctr[3].style.transform='scale(0)'
 
 jwI=0   
 bst=0
@@ -330,7 +279,6 @@ function clk()
  plh[2].style.transform='scale(1.7,1.6)'
    setTimeout(sto, 1111)
 }
- 
 function sto()
 {
  rwng[1].style.transform='rotate(0deg)'  
@@ -360,14 +308,17 @@ btn[1].onmouseout=()=>
 btn[1].onclick=()=>
 { 
  btn[1].style.opacity=0
+ lwng[0].style.transform=
+  'translate(99%,0) rotate(-44deg)'
+ rwng[0].style.transform=
+  'translate(-99%,0) rotate(44deg)'
  plh[0].style.transform=
-  ' rotate(22deg) translate(499%,9%)'
- plh[0].style.opacity=0  
+  'translate(-99%,0) rotate(-19deg)'
  setTimeout(()=>{
    btn[1].style.opacity=1
-   plh[0].style.transform=
-     ' rotate(5deg) scale(1) translate(77%,0)'
-   plh[0].style.opacity=1
+   lwng[0].style.transform='rotate(0deg)'
+   rwng[0].style.transform='rotate(0deg)'
+   plh[0].style.transform='rotate(0deg)'
   }, 999)
 }
 
@@ -383,21 +334,6 @@ jws[0].onmouseover=()=>
   plh[3].style.opacity=Math.random()
   plh[3].style.transform='scale('+
    (0.5+Math.random()/2)+',1)'
-  if(bth)
-  {
-   vctr[0].style.transform='scale(3) skew(11deg)'
-   vctr[1].style.transform='scale(4) skew(-11deg)'
-   vctr[2].style.transform='scale(3) skew(11deg)'
-   vctr[3].style.transform='scale(4) skew(-11deg)'
-  }
-  else
-  {
-   vctr[0].style.transform='scale(4) skew(-11deg)'
-   vctr[1].style.transform='scale(3) skew(11deg)'
-   vctr[2].style.transform='scale(4) skew(-11deg)'
-   vctr[3].style.transform='scale(3) skew(11deg)'
-  }
-    bth=!bth
  }, 1000)
 } 
 jws[0].onmouseout=()=>
@@ -408,10 +344,6 @@ jws[0].onmouseout=()=>
  plh[1].style.opacity=1
  plh[2].style.opacity=1
  plh[3].style.opacity=0
- vctr[0].style.transform='scale(0)'
- vctr[1].style.transform='scale(0)'
- vctr[2].style.transform='scale(0)'
- vctr[3].style.transform='scale(0)'
 } 
 jws[0].onclick=()=>
 { 
@@ -439,50 +371,19 @@ shrm[0].onclick=()=>
  shrm[0].style.background='#0f0'
  shrm[0].style.fontSize='3em'
 }
- 
-frz0I=0
-bfrz0=0
+
 exctr[0].onmouseover=()=>
 { 
- exctr[0].innerHTML='Sword' 
- exctr[0].style.transform='scale(4)' 
- exctr[0].style.color='#f00' 
- exctr[1].style.color='#f70' 
- exctr[1].style.transform='scale(3)' 
- exctr[2].style.color='#f00' 
- exctr[2].style.transform=
-  'scale(3) translate(11%,0)'     
- frz0I=setInterval(()=>{
-  if(bfrz0)
-  {   	 
-   exctr[3].style.color='#ff0' 
-   exctr[3].style.transform=
-	'scale(4) translate(11%,0)' 
-  }
-  else
-  {
-   exctr[3].style.color='#f0f' 
-   exctr[3].style.transform=
-    'scale(3) translate(11%,0)' 
-  }
-   bfrz0=!bfrz0   
- }, 999) 
+ exctr[0].style.transform='scale(4)'
+ exctr[1].style.transform=
+  'scale(3) translate(37%,-77%) skew(22deg)'
 }
 exctr[0].onmouseout=()=>
 { 
- exctr[0].style.transform='scale(3)' 
- exctr[0].style.color='#b00' 
-  exctr[0].innerHTML='Executnr' 
- exctr[1].style.color='#fff'
- exctr[1].style.transform='scale(0)' 
- exctr[2].style.color='#000' 
- exctr[2].style.transform='scale(0)' 
- exctr[3].style.color='#ff0' 
- exctr[3].style.transform='scale(0) translate(11%,0)' 
-  clearInterval(frz0I) 
+ exctr[0].style.transform='scale(3)'
+ exctr[1].style.transform='scale(0)'
 }
-
+ 
 </script>
 </body>
 </html>
-
