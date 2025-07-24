@@ -10,7 +10,7 @@
  background:linear-gradient(#dd0,177px,#333);
 }
 
-.kttl,.bttl,.blb,.ttl,.pna,.cncr
+.kttl,.bttl,.blb,.ttl,.pna,.cncr,.cncrcl
 {
  position:absolute;   
  transition:1s;
@@ -49,7 +49,10 @@
  <div class=cncr></div>
  <div class=cncr></div>
  <div class=cncr></div>
- <div class=cncr></div>
+ <div class=cncr>
+  <div class=cncr></div>
+ </div>
+ 
 </div>
 
 <script>
@@ -160,6 +163,7 @@ pna[0].style.borderRadius=55+'%'
 pna[0].style.borderBottomLeftRadius=8+'%'
 pna[0].style.borderBottomRightRadius=8+'%'
 pna[0].style.opacity=0
+//pna[1].style.zIndex=-1
 pna[1].style.left=33+'%'
 pna[1].style.width=44+'%'
 pna[1].style.height=44+'%'
@@ -195,6 +199,23 @@ cncr[3].style.height=27+'%'
 cncr[3].style.background=
  'radial-gradient(#f00,#cc0)'
 cncr[3].style.borderRadius=33+'%'
+cncr[4].style.left=16+'%'
+cncr[4].style.top=-19+'%'
+cncr[4].style.width=74+'%'
+cncr[4].style.height=37+'%'
+cncr[4].style.background=
+ 'radial-gradient(#f00,#cc0)'
+cncr[4].style.borderRadius=55+'%'
+cncr[4].style.borderBottomLeftRadius=22+'%'
+cncr[4].style.borderBottomRightRadius=22+'%'
+cncr[5].style.left=-13+'%'
+cncr[5].style.top=-141+'%'
+cncr[5].style.width=111+'%'
+cncr[5].style.height=177+'%'
+cncr[5].style.border='7px ridge #000'
+cncr[5].style.borderTop='7px ridge transparent'
+cncr[5].style.borderRadius=55+'%'
+cncr[5].style.zIndex=-1
 
 Imv=0
 function mv()
@@ -210,6 +231,7 @@ function mv()
 }
   mv()
  Imv=setInterval(mv, 999)
+ 
 Ipna=0 
 kttl[0].onmouseover=()=>
 { 
@@ -221,6 +243,8 @@ kttl[0].onmouseover=()=>
  pna[1].style.opacity=0.8
  Ipna=setInterval(()=>
  { 
+  cncr[5].style.transform='scale('+
+   (1+Math.random()/4)+')'
   pna[0].style.borderTopLeftRadius=
    (44+11*Math.random())+'%'
   pna[0].style.borderTopRightRadius=
@@ -261,15 +285,6 @@ bttl[0].onmouseover=()=>
  kttl[0].onmouseover()
 }
 bttl[0].onmouseout=()=>
-{ 
- kttl[0].onmouseout()
-}
-
-blb[0].onmouseover=()=>
-{ 
- kttl[0].onmouseover()
-}
-blb[0].onmouseout=()=>
 { 
  kttl[0].onmouseout()
 }
