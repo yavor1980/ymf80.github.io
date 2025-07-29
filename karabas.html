@@ -10,14 +10,11 @@
  background:linear-gradient(#dd0,177px,#333);
 }
 
-
-
 .kttl,.bttl,.blb,.ttl,.pna,.cncr,.lcncrcl,.rcncrcl
 {
  position:absolute;   
  transition:1s;
 }
-
 
 </style>
 <div class=kttl>
@@ -80,23 +77,18 @@ kttl[0].style.width=66+'%'
 kttl[0].style.cursor='pointer'
 kttl[1].style.left=2+'%'
 kttl[1].style.color='#c00'
-kttl[1].style.transform='scale(9)'
 kttl[2].style.left=12+'%'
 kttl[2].style.color='#00c'
 kttl[3].style.left=22+'%'
 kttl[3].style.color='#c0c'
 kttl[4].style.left=32+'%'
 kttl[4].style.color='#0c0'
-kttl[4].style.transform='scale(9)'
 kttl[5].style.left=42+'%'
 kttl[5].style.color='#00c'
-kttl[5].style.transform='scale(9)'
 kttl[6].style.left=52+'%'
 kttl[6].style.color='#f00'
-kttl[6].style.transform='scale(9)'
 kttl[7].style.left=62+'%'
 kttl[7].style.color='#00f'
-kttl[7].style.transform='scale(9)'
 
 bttl[0].style.left=34+'%'
 bttl[0].style.top=29+'%'
@@ -104,25 +96,18 @@ bttl[0].style.width=66+'%'
 bttl[0].style.cursor='pointer'
 bttl[1].style.left=2+'%'
 bttl[1].style.color='#800'
-bttl[1].style.transform='scale(9)'
 bttl[2].style.left=12+'%'
 bttl[2].style.color='#c00'
-bttl[2].style.transform='scale(9)'
 bttl[3].style.left=22+'%'
 bttl[3].style.color='#c0c'
-bttl[3].style.transform='scale(9)'
 bttl[4].style.left=32+'%'
 bttl[4].style.color='#00c'
-bttl[4].style.transform='scale(9)'
 bttl[5].style.left=42+'%'
 bttl[5].style.color='#cc0'
-bttl[5].style.transform='scale(9)'
 bttl[6].style.left=52+'%'
 bttl[6].style.color='#0c0'
-bttl[6].style.transform='scale(9)'
 bttl[7].style.left=62+'%'
 bttl[7].style.color='#cc0'
-bttl[7].style.transform='scale(9)'
 
 ttl[0].style.left=6+'%'
 ttl[0].style.top=30+'%'
@@ -150,10 +135,8 @@ blb[1].style.borderTopLeftRadius=5+'%'
 blb[1].style.borderTopRightRadius=5+'%'
 blb[1].style.borderBottomLeftRadius=25+'%'
 blb[1].style.borderBottomRightRadius=25+'%'
+blb[1].style.border='22px ridge #ddd'
 blb[1].style.borderTop='2px ridge #ddd'
-blb[1].style.borderBottom='22px ridge #ddd'
-blb[1].style.borderLeft='22px ridge #ddd'
-blb[1].style.borderRight='22px ridge #ddd'
 blb[2].style.left=-30+'%'
 blb[2].style.top=13+'%'
 blb[2].style.width=30+'%'
@@ -226,7 +209,8 @@ cncr[5].style.border='7px ridge #000'
 cncr[5].style.borderTop='7px ridge transparent'
 cncr[5].style.borderRadius=55+'%'
 cncr[5].style.zIndex=-1
-lcncrcl[0].style.left=1+'%'
+
+lcncrcl[0].style.left=5+'%'
 lcncrcl[0].style.top=4+'%'
 lcncrcl[0].style.width=14+'%'
 lcncrcl[0].style.height=33+'%'
@@ -241,8 +225,8 @@ lcncrcl[1].style.background=
  'radial-gradient(#f00,#cc0)'
 lcncrcl[1].style.borderRadius=44+'%'
 lcncrcl[1].style.borderTopRightRadius=4+'%'
-lcncrcl[1].style.borderBottomRightRadius=4+'%'
-lcncrcl[1].style.borderTopLeftRadius=55+'%'
+lcncrcl[1].style.borderBottomRightRadius=8+'%'
+
 rcncrcl[0].style.left=111+'%'
 rcncrcl[0].style.top=4+'%'
 rcncrcl[0].style.width=14+'%'
@@ -258,8 +242,7 @@ rcncrcl[1].style.background=
  'radial-gradient(#f00,#cc0)'
 rcncrcl[1].style.borderRadius=44+'%'
 rcncrcl[1].style.borderTopLeftRadius=4+'%'
-rcncrcl[1].style.borderTopRightRadius=49+'%'
-rcncrcl[1].style.borderBottomRightRadius=48+'%'
+rcncrcl[1].style.borderBottomLeftRadius=8+'%'
 
 Imv=0
 function mv()
@@ -276,35 +259,40 @@ function mv()
   mv()
  Imv=setInterval(mv, 999)
  
+function fkmv()
+{
+ cncr[5].style.transform='scale('+
+  (1+Math.random()/4)+')'
+ pna[0].style.borderTopLeftRadius=
+  (44+11*Math.random())+'%'
+ pna[0].style.borderTopRightRadius=
+  (44+11*Math.random())+'%'
+ pna[0].style.borderBottomLeftRadius=
+  (8+15*Math.random())+'%'
+ pna[0].style.borderBottomRightRadius=
+  (8+15*Math.random())+'%' 
+ pna[1].style.borderBottomLeftRadius=
+  (33+22*Math.random())+'%'
+ pna[1].style.borderBottomRightRadius=
+  (33+22*Math.random())+'%'  
+ pna[1].style.transform='scale('+(1+Math.random())+
+  ','+(1+Math.random())+')'
+ lcncrcl[0].style.transform='rotate(-11deg) scale('+
+  (1+Math.random())+') '
+ rcncrcl[0].style.transform='rotate(7deg) scale('+
+  (1+Math.random())+') '
+} 
 Ipna=0 
 kttl[0].onmouseover=()=>
 { 
   clearInterval(Imv)
+ blb[0].style.transform='scale(1,1)' 
  blb[1].style.background=
   'radial-gradient(#770,#bb0)'
- blb[0].style.transform='scale(1,1)'
  pna[0].style.opacity=0.8
  pna[1].style.opacity=0.8
- Ipna=setInterval(()=>
- { 
-  cncr[5].style.transform='scale('+
-   (1+Math.random()/4)+')'
-  pna[0].style.borderTopLeftRadius=
-   (44+11*Math.random())+'%'
-  pna[0].style.borderTopRightRadius=
-   (44+11*Math.random())+'%'
-  pna[0].style.borderBottomLeftRadius=
-   (8+15*Math.random())+'%'
-  pna[0].style.borderBottomRightRadius=
-   (8+15*Math.random())+'%' 
-  pna[1].style.borderBottomLeftRadius=
-   (33+22*Math.random())+'%'
-  pna[1].style.borderBottomRightRadius=
-   (33+22*Math.random())+'%'  
-  pna[1].style.transform='scale('+(1+Math.random())+
-   ','+(1+Math.random())+')'
-     
- }, 999)
+  fkmv()
+  Ipna=setInterval(fkmv, 999)
  ttl[0].style.transform=
   'scale(3,4) translate(39%,99%) skew(22deg)'
  ttl[1].style.transform=
@@ -315,13 +303,15 @@ kttl[0].onmouseout=()=>
  clearInterval(Ipna)
   mv()
   Imv=setInterval(mv, 999)
+ blb[0].style.transform='scale(1)' 
  blb[1].style.background=
   'radial-gradient(#777,#bba)'
- blb[0].style.transform='scale(1)'
  pna[0].style.opacity=0
  pna[1].style.opacity=0
  ttl[0].style.transform='scale(0)'
  ttl[1].style.transform='scale(0)'
+ lcncrcl[0].style.transform='scale(1) rotate(-22deg)'
+ rcncrcl[0].style.transform='scale(1) rotate(22deg)'
 }
 
 bttl[0].onmouseover=()=>
