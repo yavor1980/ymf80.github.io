@@ -315,7 +315,10 @@ function clk()
  bd[2].style.borderTopRightRadius='22%'
  bd[3].style.transform='scale(1,1.5)'
  tbe[3].style.transform='scale(2,5)'
- ttl[3].style.transform='translate(0,-422%)'
+ ttl[3].style.background=
+  'radial-gradient(#088,#00f)'
+ ttl[3].style.transform=
+  'scale(3,2) translate(0,-322%)'
  setTimeout(()=>{
   idb.style.opacity=1
   ttl[2].style.transform='scale(1)'
@@ -334,9 +337,11 @@ function clk()
   bd[2].style.borderTopRightRadius='55%'
   bd[3].style.transform='scale(1,1)' 
   tbe[3].style.transform='scale(1)'
+  ttl[3].style.background=
+  'radial-gradient(#0ff,#00f)'
  }, 999)
 }
-  
+ 
 idb.onclick=()=>
 {
  clk()  
