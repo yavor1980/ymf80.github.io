@@ -258,6 +258,7 @@ function fdrn()
 {
  if(bbtn0==0)
  {
+  btn[1].onclick()
   drn[0].style.border='11px ridge #400'
   drn[1].style.background='#400'
   drn[2].style.background='#300'
@@ -268,7 +269,7 @@ function fdrn()
   prplr[3].style.transform='scale(1)'
  drn0I=setInterval(()=>{
   drn[0].style.transform='scale(1.5) translate(-11%,'+
-  (Math.random()*27-13)+'%)'
+   (Math.random()*27-13)+'%)'
  }, 1111)
  w=0,h=0,b=0
  drnI=setInterval(()=>{ 
@@ -308,7 +309,8 @@ function fdrn()
    clearInterval(drn0I)
    clearInterval(drnI)
    btn[0].innerHTML='go'
- }  bbtn0=!bbtn0
+ }  
+     bbtn0=!bbtn0
 }
 btn[0].onclick=()=>
 {
@@ -359,7 +361,6 @@ drn[0].onmouseout=()=>
 {
  drn[0].style.transform='scale(1.4)'
 } 
-
 Ivctr=0
 bvctr=0
 vctr[0].onmouseover=()=>
