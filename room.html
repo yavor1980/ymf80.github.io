@@ -96,6 +96,7 @@ button:hover
 <button>mnvre</button>
 <button>left</button>
 <button>right</button>
+<button>fire</button>
 
 <div class=wls></div>
 <div class=wls></div>
@@ -113,6 +114,7 @@ button:hover
   <div class=prplr></div>
   <div class=prplr></div>
  </div>
+ <div class=drn></div>
  <div class=drn></div>
  <div class=drn></div>
 </div>
@@ -139,6 +141,8 @@ btn[2].style.left=86+'%'
 btn[2].style.top=23+'%'
 btn[3].style.left=93+'%'
 btn[3].style.top=23+'%'
+btn[4].style.left=89+'%'
+btn[4].style.top=32+'%'
  
 wls[0].style.left=11+'%'
 wls[0].style.bottom=2+'%'
@@ -196,6 +200,18 @@ drn[4].style.borderLeft='2px solid transparent'
 drn[4].style.borderRight='2px solid transparent'
 drn[4].style.transform='scale(2)'
 drn[4].style.transition=666+'ms'
+drn[5].style.left=40+'%'
+drn[5].style.top=44+'%'
+drn[5].style.width=22+'%'
+drn[5].style.height=22+'%'
+drn[5].style.borderRadius='55%'
+drn[5].style.opacity=0
+drn[5].style.border='1px solid #f00'
+drn[5].style.borderTop='2px solid transparent'
+drn[5].style.borderLeft='2px solid transparent'
+drn[5].style.borderRight='2px solid transparent'
+drn[5].style.transform='scale(2)'
+drn[5].style.transition=666+'ms'
  
 prplr[0].style.left=4+'%'
 prplr[0].style.top=-13+'%'
@@ -266,10 +282,11 @@ function fdrn()
   drn[1].style.background='#400'
   drn[2].style.background='#300'
   drn[3].style.opacity=1
+  drn[3].style.border='1px ridge #900'
   prplr[0].style.transform='scale(1)'
   prplr[1].style.transform='scale(1)'
   prplr[2].style.transform='scale(1)'
-  prplr[3].style.transform='scale(1)'
+  prplr[3].style.transform='scale(1)'	
  drn0I=setInterval(()=>{
   drn[0].style.transform='scale(1.5) translate(-11%,'+
    (Math.random()*27-13)+'%)'
@@ -278,6 +295,10 @@ function fdrn()
  drnI=setInterval(()=>{ 
    w-=1; h-=1
     b++   
+  prplr[0].style.transform='scale('+(1+Math.random())+')'
+  prplr[1].style.transform='scale('+(1+Math.random())+')'
+  prplr[2].style.transform='scale('+(1+Math.random())+')'
+  prplr[3].style.transform='scale('+(1+Math.random())+')'	
   if(b%2==0)
   { 
    drn[4].style.opacity=0
@@ -306,6 +327,7 @@ function fdrn()
   drn[1].style.background='#800'
   drn[2].style.background='#600'
   drn[3].style.opacity=0.4
+  drn[3].style.border='none'
   drn[4].style.opacity=0
   drn[4].style.transform='scale(0)'
   prplr[0].style.transform='scale(0)'
@@ -333,6 +355,10 @@ btn[2].onclick=()=>
 btn[3].onclick=()=>
 {
  drn[0].style.transform='translate(122%,0)'
+} 
+btn[4].onclick=()=>
+{
+ drn[5].style.opacity=1
 } 
 
 Iwls=0  
