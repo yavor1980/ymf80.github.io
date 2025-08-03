@@ -206,7 +206,7 @@ drn[5].style.width=22+'%'
 drn[5].style.height=22+'%'
 drn[5].style.borderRadius='55%'
 drn[5].style.opacity=0
-drn[5].style.border='1px solid #f00'
+drn[5].style.border='1px solid #f89'
 drn[5].style.borderTop='2px solid transparent'
 drn[5].style.borderLeft='2px solid transparent'
 drn[5].style.borderRight='2px solid transparent'
@@ -295,6 +295,7 @@ function fdrn()
  drnI=setInterval(()=>{ 
    w-=1; h-=1
     b++   
+  
   prplr[0].style.transform='scale('+(1+Math.random())+')'
   prplr[1].style.transform='scale('+(1+Math.random())+')'
   prplr[2].style.transform='scale('+(1+Math.random())+')'
@@ -358,7 +359,16 @@ btn[3].onclick=()=>
 } 
 btn[4].onclick=()=>
 {
- drn[5].style.opacity=1
+ drn[5].style.transition=1+'s'
+ drn[5].style.background='#bb0'
+ drn[5].style.opacity=0.6
+ drn[5].style.transform='scale(8,6) translate(0,111%)'
+ setTimeout(()=>{
+  drn[5].style.transition=0+'s'
+  drn[5].style.background='none'
+  drn[5].style.opacity=0
+  drn[5].style.transform='scale(0)'  
+ }, 1111)
 } 
 
 Iwls=0  
@@ -393,6 +403,7 @@ drn[0].onmouseout=()=>
 {
  drn[0].style.transform='scale(1.4)'
 } 
+
 Ivctr=0
 bvctr=0
 vctr[0].onmouseover=()=>
