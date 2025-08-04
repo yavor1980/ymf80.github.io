@@ -67,7 +67,6 @@
 <script>
 d=document.getElementsByClassName('d')
 
- 
 for(i=0;i<d.length;i++) 
 {  
  d[i].style.left=(Math.random()*77)+'%'
@@ -84,6 +83,7 @@ function cl()
  Icl=0   
  Icl=setInterval(cl, 999)
 
+var ii=0
 for(i=0;i<d.length;i++)
 {
  d[i].onmouseover=()=>
@@ -93,6 +93,22 @@ for(i=0;i<d.length;i++)
  d[i].onmouseout=()=>
  { 
   Icl=setInterval(cl, 999)
+  for(j=0;j<d.length;j++) 
+  {  
+   d[j].style.opacity=1
+  }
+ } 
+ d[i].onclick=()=>
+ { 
+  for(j=0;j<d.length;j++) 
+  {  
+   d[j].style.opacity=0
+  }
+  ii=Math.round(Math.random()*d.length)
+  d[ii].style.left=33+'%'
+  d[ii].style.top=33+'%'
+  d[ii].style.opacity=1
+  d[ii].style.transform='scale(6)'
  } 
 }
 
@@ -100,5 +116,4 @@ for(i=0;i<d.length;i++)
 //for(i=0;i<d.length;i++)
 </script>
 </body>
-
 </html>
