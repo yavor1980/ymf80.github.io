@@ -28,13 +28,13 @@ input
 }
 .btn
 {
- position:absolute;   
+ position:absolute; 
  transition:1s;
  font-size:1.7em;
  transform:scale(2);
  cursor:pointer;
 }
-.bse,.zpr,.dlg
+.bse,.zpr,.dlg,.dlgr
 {
  position:absolute;   
  transition:1s;
@@ -57,9 +57,10 @@ input
   <div class=bse>seminar</div>
  </div> 
  
+ 
  <input type='submit' class=btn value='order'>
  <input type='submit' class=btn value='change'>
- <input type='submit' class=btn value='off'>
+ <input type='submit' class=btn value='reject'>
  
  <div class=dlg>
  <div class=zpr>Order the ticket!</div>
@@ -67,7 +68,13 @@ input
   <button class=dlg disabled>OK</button>
   <button class=dlg disabled>No</button>
  </div>
- <div class=zpr>Choose any event!</div>
+  <div class=zpr></div>
+ <div class=dlgr>
+ <div class=zpr>reject the ticket!</div>
+  <input class=dlgr disabled value='mm.dd.yy'>
+  <button class=dlgr disabled>OK</button>
+  <button class=dlgr disabled>No</button>
+ </div>
  
  <div class=lst>
   <div class=lst><td></td></div>
@@ -80,17 +87,18 @@ input
 
 <script>
 bse=document.getElementsByClassName('bse')
-zpr=document.getElementsByClassName('zpr')
 btn=document.getElementsByClassName('btn')
+zpr=document.getElementsByClassName('zpr')
 dlg=document.getElementsByClassName('dlg')
+dlgr=document.getElementsByClassName('dlgr')
 lst=document.getElementsByClassName('lst') 
   
-btn[0].style.left=44+'%'
+btn[0].style.left=40+'%'
 btn[0].style.top=5+'%'  
 btn[0].style.color='#800'
 btn[0].style.borderRadius=11+'%'
 btn[0].style.transform='scale(2)'
-btn[1].style.left=63+'%'
+btn[1].style.left=60+'%'
 btn[1].style.top=5+'%' 
 btn[1].style.color='#d00'
 btn[1].style.borderRadius=17+'%'
@@ -141,6 +149,25 @@ dlg[3].style.top=72+'%'
 dlg[3].style.transform='scale(1.2)'
 dlg[3].style.cursor='pointer'
 
+dlgr[0].style.left=64+'%'
+dlgr[0].style.top=25+'%' 
+dlgr[0].style.width=17+'%'
+dlgr[0].style.height=22+'%' 
+dlgr[0].style.background='#ee0'
+dlgr[0].style.borderRadius=8+'%'
+dlgr[1].style.left=2+'%'
+dlgr[1].style.top=44+'%'
+dlgr[1].style.transform='scale(0.6,1.2)'
+dlgr[1].textAlign='center'
+dlgr[2].style.left=34+'%'
+dlgr[2].style.top=72+'%' 
+dlgr[2].style.transform='scale(1.2)'
+dlgr[2].style.cursor='pointer'
+dlgr[3].style.left=64+'%'
+dlgr[3].style.top=72+'%' 
+dlgr[3].style.transform='scale(1.2)'
+dlgr[3].style.cursor='pointer'
+
 zpr[0].style.left=9+'%'
 zpr[0].style.top=9+'%' 
 zpr[0].style.color='#b00'
@@ -172,6 +199,7 @@ function initlst(i,t)
 }
  initlst(1,9), initlst(2,26),
  initlst(3,43), initlst(4,60),initlst(5,77)
+ //===============================================
  
 sbse=['meeting','expo','seminar']
 pbse=0
@@ -209,18 +237,55 @@ function abse(i,pp)
 }
  abse(1,0), abse(2,1), abse(3,2)
  
-ilst=1, bordr=0, idel=-1
+ilst=1,  idel=-1
 btn[0].onmouseout=()=>
 { 
+ zpr[1].style.background='none'
  zpr[1].style.transform='scale(0)'
 } 
 btn[0].onclick=()=>
 { 
+ zpr[1].style.background='#990'
   zpr[1].innerHTML='Choose <br>&nbsp any event!'
  zpr[1].style.zIndex=1
  zpr[1].style.transform=
   'scale(4) translate(55%,22%) skew(22deg)'
 } 
+btn[1].onmouseout=()=>
+{ 
+ zpr[1].style.background='none'
+ zpr[1].style.transform='scale(0)'
+} 
+btn[1].onclick=()=>
+{ 
+ zpr[1].style.background='#990'
+  zpr[1].innerHTML='Choose <br>&nbsp from list'
+ zpr[1].style.zIndex=1
+ zpr[1].style.transform=
+  'scale(4) translate(55%,22%) skew(22deg)'
+} 
+btn[2].onmouseout=()=>
+{ 
+zpr[1].style.background='none'
+ zpr[1].style.transform='scale(0)'
+} 
+btn[2].onclick=()=>
+{ 
+  if(idel>0)
+  {
+   lst[idel].innerHTML=''
+    ilst=idel
+  } else
+  {
+   zpr[1].style.background='#990'
+    zpr[1].innerHTML='Choose <br>&nbsp from list'
+   zpr[1].style.zIndex=1
+   zpr[1].style.transform=
+    'scale(4) translate(55%,22%) skew(22deg)'
+  }
+  
+}
+
 dlg[2].onclick=()=>
 { 
   lst[ilst].innerHTML=sbse[pbse]+' '+dlg[1].value
@@ -229,6 +294,7 @@ dlg[2].onclick=()=>
  dlg[1].disabled=1
  dlg[2].disabled=1
  dlg[3].disabled=1
+  //if(lst[++ilst].innerHTML==0) 
   ilst++
 }
 dlg[3].onclick=()=>
@@ -238,20 +304,6 @@ dlg[3].onclick=()=>
  dlg[1].disabled=1
  dlg[2].disabled=1
  dlg[3].disabled=1
-}
-
-btn[2].onclick=()=>
-{ 
-  if(idel>0)
-  {
-   lst[idel].innerHTML=''
-  // idel--; ilst--
-  } 
-  if(idel==0)
-  {
-   lst[idel].innerHTML=''
-  } 
-  ilst=idel
 }
 
 function flst(i)
