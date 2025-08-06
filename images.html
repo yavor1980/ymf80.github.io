@@ -11,17 +11,10 @@
 {
  position:absolute; 
  transition:1s;
+ cursor:pointer;
  width:6%;
  height:11%;
- cursor:pointer;
  z-index:0;
-}
-.d:hover
-{
- width:12%;
- height:22%;
- z-index:1;
- transform:scale(2);
 }
 
 </style>
@@ -85,38 +78,37 @@ function cl()
  Icl=setInterval(cl, 999)
 
 var ii=0
-for(i=0;i<d.length;i++)
+function fcl(i)
 {
  d[i].onmouseover=()=>
  { 
-  clearInterval(Icl) 
+   clearInterval(Icl) 
+  d[i].style.zIndex=1
+  d[i].style.transform='scale(4)'
  } 
  d[i].onmouseout=()=>
  { 
-  Icl=setInterval(cl, 999)
+   Icl=setInterval(cl, 999)
   for(j=0;j<d.length;j++) 
   {  
+   d[j].style.transform='scale(1)'
    d[j].style.opacity=1
   }
  }  
-}
-
-function fcl(i)
-{
-d[i].onclick=()=>
+ d[i].onclick=()=>
  { 
   for(j=0;j<d.length;j++) 
   {  
    d[j].style.opacity=0
   }
   ii=i//Math.round(Math.random()*d.length)
-  d[ii].style.left=33+'%'
-  d[ii].style.top=33+'%'
+  //d[ii].style.left=33+'%'
+  //d[ii].style.top=33+'%'
   d[ii].style.opacity=1
   d[ii].style.transform='scale(4)'
  }
 }
-/*
+/**/
  fcl(0), fcl(1), fcl(2), fcl(3), fcl(4)
  fcl(5), fcl(6), fcl(7), fcl(8), fcl(9)
  fcl(10), fcl(11), fcl(12), fcl(13), fcl(14)
@@ -125,7 +117,7 @@ d[i].onclick=()=>
  fcl(25), fcl(26), fcl(27), fcl(28), fcl(29)
  fcl(30), fcl(31), fcl(32), fcl(33), fcl(34)
  fcl(35), fcl(36), fcl(37)
-*/
+
 //d[i].style.transform='scale('+(0.6+Math.random())
 //for(i=0;i<d.length;i++)
 </script>
