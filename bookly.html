@@ -57,7 +57,6 @@ input
   <div class=bse>seminar</div>
  </div> 
  
- 
  <input type='submit' class=btn value='order'>
  <input type='submit' class=btn value='change'>
  <input type='submit' class=btn value='reject'>
@@ -77,11 +76,11 @@ input
  </div>
  
  <div class=lst>
-  <div class=lst><td></td></div>
-  <div class=lst><td></td></div>
-  <div class=lst><td></td></div>
-  <div class=lst><td></td></div>
-  <div class=lst><td></td></div>
+  <div class=lst></div>
+  <div class=lst></div>
+  <div class=lst></div>
+  <div class=lst></div>
+  <div class=lst></div>
  </div>
 </div>  
 
@@ -127,8 +126,9 @@ function initbse(i,t,clr)
  bse[i].style.textAlign='center'
  bse[i].style.cursor='pointer'
 }
- initbse(1,8,'#f0f'), initbse(2,34,'#ff0'),
- initbse(3,60,'#0f0'),
+ initbse(1,8,'#f0f'), 
+ initbse(2,34,'#ff0'),
+ initbse(3,60,'#0f0')
 
 dlg[0].style.left=44+'%'
 dlg[0].style.top=25+'%' 
@@ -283,7 +283,6 @@ btn[2].onclick=()=>
    zpr[1].style.transform=
     'scale(4) translate(55%,22%) skew(22deg)'
   }
-  
 }
 
 dlg[2].onclick=()=>
@@ -294,7 +293,7 @@ dlg[2].onclick=()=>
  dlg[1].disabled=1
  dlg[2].disabled=1
  dlg[3].disabled=1
-  //if(lst[++ilst].innerHTML==0) 
+  if(lst[ilst++].innerHTML==0) 
   ilst++
 }
 dlg[3].onclick=()=>
@@ -319,6 +318,10 @@ function flst(i)
  lst[i].onclick=()=>
  { 
   idel=i
+ }
+ lst[i].ondblclick=()=>
+ { 
+  lst[i].innerHTML=''
  }
 } 
  flst(1),flst(2),flst(3),flst(4),flst(5)
