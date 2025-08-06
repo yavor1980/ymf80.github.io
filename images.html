@@ -21,6 +21,7 @@
  width:12%;
  height:22%;
  z-index:1;
+ transform:scale(2);
 }
 
 </style>
@@ -66,7 +67,7 @@
 
 <script>
 d=document.getElementsByClassName('d')
-
+ //alert(d.length)
 for(i=0;i<d.length;i++) 
 {  
  d[i].style.left=(Math.random()*77)+'%'
@@ -97,21 +98,34 @@ for(i=0;i<d.length;i++)
   {  
    d[j].style.opacity=1
   }
- } 
- d[i].onclick=()=>
+ }  
+}
+
+function fcl(i)
+{
+d[i].onclick=()=>
  { 
   for(j=0;j<d.length;j++) 
   {  
    d[j].style.opacity=0
   }
-  ii=Math.round(Math.random()*d.length)
+  ii=i//Math.round(Math.random()*d.length)
   d[ii].style.left=33+'%'
   d[ii].style.top=33+'%'
   d[ii].style.opacity=1
-  d[ii].style.transform='scale(6)'
- } 
+  d[ii].style.transform='scale(4)'
+ }
 }
-
+/*
+ fcl(0), fcl(1), fcl(2), fcl(3), fcl(4)
+ fcl(5), fcl(6), fcl(7), fcl(8), fcl(9)
+ fcl(10), fcl(11), fcl(12), fcl(13), fcl(14)
+ fcl(15), fcl(16), fcl(17), fcl(18), fcl(19)
+ fcl(20), fcl(21), fcl(22), fcl(23), fcl(24)
+ fcl(25), fcl(26), fcl(27), fcl(28), fcl(29)
+ fcl(30), fcl(31), fcl(32), fcl(33), fcl(34)
+ fcl(35), fcl(36), fcl(37)
+*/
 //d[i].style.transform='scale('+(0.6+Math.random())
 //for(i=0;i<d.length;i++)
 </script>
