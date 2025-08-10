@@ -104,6 +104,7 @@
 
 <div class=bgrnd></div>
 <div class=bgrnd></div>
+<div class=bgrnd></div>
 
 <div class=eagle>
  <div class=eagle></div>
@@ -159,6 +160,13 @@ var eagl=
   bgrnd[1].style.height=47+'%'
   bgrnd[1].style.background='#ff0'
   bgrnd[1].style.transform='scale(0)'
+  bgrnd[2].style.left=17+'%' 
+  bgrnd[2].style.top=15+'%'
+  bgrnd[2].style.width=4+'%' 
+  bgrnd[2].style.height=47+'%'
+  bgrnd[2].style.opacity=0
+  bgrnd[2].style.borderRadius=55+'%'
+  bgrnd[2].style.transform='skew(-33deg) rotate(11deg)'
  
   eagle[1].style.left=0+'%'
   eagle[1].style.top=0+'%' 	 
@@ -288,14 +296,15 @@ var eagl=
    (33+Math.random()*22)+'%'
   bgrnd[0].style.borderBottomRightRadius=
    (33+Math.random()*22)+'%'
-  bgrnd[0].style.background=
+  bgrnd[2].style.background=
    'radial-gradient(#0ff,#000)'
-  bgrnd[0].style.opacity=0.3
+  bgrnd[2].style.opacity=0.4
   bgrnd[1].style.borderBottomRightRadius=55+'%'
   bgrnd[1].style.borderBottomLeftRadius=55+'%'
   bgrnd[1].style.opacity=0 
   bgrnd[1].style.transform= 
-   'translate(0,6%) rotate(-0deg) skew(27deg)'
+   'translate(0,6%) skew(27deg)'
+  bgrnd[2].style.background='#ff0' 
   eagle[0].style.transform=
    'skew('+(Math.random()*44-22)+'deg)'
   eagle[2].style.borderRadius=55+'%'
@@ -330,6 +339,7 @@ var eagl=
   bgrnd[0].style.opacity=0.2
   bgrnd[1].style.opacity=1
   bgrnd[1].style.transform='scale(0)'
+  bgrnd[2].style.opacity=0
   eagle[2].style.borderBottomLeftRadius=39+'%' 
   eagle[2].style.borderBottomRightRadius=39+'%'
   eagle[2].style.transform='scale(1)'
