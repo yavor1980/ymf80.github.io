@@ -6,6 +6,13 @@
  background:radial-gradient(#090,#888);
 }
 
+.btn
+{
+ position:absolute;
+ transition:1s;
+ cursor:pointer;
+}
+
 .csvg
 {
  position:absolute;
@@ -15,12 +22,14 @@
 .dsply,.pnel
 {
  position:absolute;
- cursor:pointer;
  transition:1s;
+ cursor:pointer;
 }
 
 </style>
 <body id=idbd>
+
+<button class=btn>rect</button>
 
 <svg class=csvg>
  <circle class=csvg />
@@ -44,22 +53,30 @@
 </div>
 
 <script>
+btn=document.getElementsByClassName("btn")
 csvg=document.getElementsByClassName("csvg")
 dsply=document.getElementsByClassName('dsply')
 pnel=document.getElementsByClassName("pnel") 
+
+btn[0].style.left=86+'%'
+btn[0].style.top=3+'%'
+btn[0].style.transform='scale(2)'
 
 csvg[0].style.left=66+'%'
 csvg[0].style.top=55+'%'
 csvg[0].style.width=24+'%'
 csvg[0].style.height=28+'%'
-//csvg[0].style.background='#888'
-csvg[1].style.cx=50+'%'
-csvg[1].style.cy=50+'%'
-csvg[1].style.r=44
-csvg[1].style.fill='#990'
-csvg[1].style.stroke='#0f0'
-csvg[1].style.strokeWidth=7
-csvg[1].style.cursor='pointer' 
+function insvg(i,rr)
+{
+ csvg[i].style.cx=50+'%'
+ csvg[i].style.cy=50+'%'
+ csvg[i].style.r=rr
+ csvg[i].style.fill='#990'
+ csvg[i].style.stroke='#0f0'
+ csvg[i].style.strokeWidth=7
+ csvg[i].style.cursor='pointer' 
+}
+ insvg(1,44)
 
 dsply[0].style.left=19+'%'
 dsply[0].style.top=45+'%'
@@ -112,6 +129,22 @@ inp(6,72,50,26,44,'#333')
 inp(7,99,44,'','','')
  pnel[7].style.color='#f00'
  pnel[7].style.transform='scale(0)'
+ 
+bbtn=1
+btn[0].onclick=()=>
+{
+ if(bbtn)
+ {
+  btn[0].innerHTML='rect'
+  insvg(1,66)
+ } 
+  else
+ {
+  btn[0].innerHTML='circle'
+  insvg(1,44)
+ } 
+   bbtn=!bbtn
+}
 
 Idsply=0; vdspl=0
 function fdsply()
@@ -143,6 +176,8 @@ dsply[0].onmouseover=()=>
  dsply[3].style.background=
   'linear-gradient(90deg,#055,#111,#555,#111,#055)'
  pnel[0].style.transform='scale(1.1)'
+ csvg[0].style.background='#888'
+ csvg[0].style.border='7px ridge #bb0'
  csvg[0].style.transform=
   'scale(1.7) translate(-12%,-69%)'
  csvg[1].style.fill='#ff0' 
@@ -161,21 +196,15 @@ dsply[0].onmouseout=()=>
  pnel[4].style.background='#000'
  pnel[5].style.background='#000'
  pnel[6].style.background='#000'
+ csvg[0].style.background='none'
+ csvg[0].style.border='none'
  csvg[0].style.transform='scale(1)'
  csvg[1].style.fill='#990'
 }
 
-pnel[0].onmouseover=()=>
-{
- pnel[0].style.transform='scale(1.2)'
- pnel[7].style.transform=
-  'scale(4) translate(88%,-11%) skew(22deg)'
-}
-pnel[0].onmouseout=()=>
-{
- pnel[0].style.transform='scale(1)'
- pnel[7].style.transform='scale(0)'
-} 
+
+
+
  
 </script>
 </body>
