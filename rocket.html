@@ -97,7 +97,6 @@
 
 <div class=shtl> 
  <div class=shtl></div>
- <div class=tshtl>undefined</div>
 </div>
 
 <script>
@@ -185,23 +184,27 @@ rckt[0].style.background=
  'radial-gradient(#440,#990)'
 rckt[0].style.borderTopLeftRadius='55%'
 rckt[0].style.borderTopRightRadius='55%'
+rckt[0].style.borderTop='9px ridge #b00'
 rckt[1].style.left='-33%'
 rckt[1].style.top='66%'
 rckt[1].style.width='66%'
 rckt[1].style.height='44%' 
 rckt[1].style.background='#440'
+rckt[1].style.borderTop='9px ridge #600'
 rckt[1].style.transform='skew(-12deg)'
 rckt[2].style.left='67%'
 rckt[2].style.top='66%'
 rckt[2].style.width='66%'
 rckt[2].style.height='44%' 
 rckt[2].style.background='#440'
+rckt[2].style.borderTop='9px ridge #600'
 rckt[2].style.transform='skew(12deg)'
 rckt[3].style.left='29%'
 rckt[3].style.top='33%'
 rckt[3].style.width='44%'
 rckt[3].style.height='22%' 
 rckt[3].style.background='#900'
+rckt[3].style.border='4px ridge #ff0'
 rckt[3].style.borderRadius='55%'
 rckt[4].style.left='20%'
 rckt[4].style.top='92%'
@@ -238,10 +241,6 @@ shtl[1].style.height='66%'
 shtl[1].style.background=
  'radial-gradient(#f0f,#808)'
 shtl[1].style.borderRadius='55%'
-tshtl[0].style.left='44%'
-tshtl[0].style.top='33%'
-tshtl[0].style.color='#f00'
-tshtl[0].style.transform='scale(0)'
 
 Ibtn0=0
 bbtn0=0
@@ -343,6 +342,7 @@ cld[3].onmouseout=()=>
 }
 
 Irckt=0
+nrckt=0
 rckt[0].onmouseover=()=>
 { 
  btn[0].onclick()
@@ -408,15 +408,6 @@ rckt[0].onclick=()=>
  }, 1111)
 }  
 
-trckt[2].onmouseover=()=>
-{
- trckt[2].style.transform='scale(3)'
-} 
-trckt[2].onmouseout=()=>
-{
- trckt[2].style.transform='scale(2)'
-}  
- 
 shtl[0].onmouseover=()=>
 {
  tshtl[0].style.transform=
@@ -426,7 +417,7 @@ shtl[0].onmouseout=()=>
 {
  tshtl[0].style.transform='scale(0)'
 } 
-
+ 
 </script>
 </body>
 </html>
