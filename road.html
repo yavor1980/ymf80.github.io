@@ -15,7 +15,6 @@ body
 {
  position:absolute;
  transition:1s;
- cursor:pointer;
  z-index:1;
 }
 .cr
@@ -30,7 +29,7 @@ body
  background:radial-gradient(#ff0,#550);
  border-radius:5%;
  box-shadow:9px 9px;
- border-bottom:11px ridge #b0b;
+ border-bottom:11px ridge #00f;
 }
 .fre
 {
@@ -87,15 +86,17 @@ function inn(nm,i, l,t, w,h, bkg)
  nm[i].style.height=h+'%' 
  nm[i].style.background= bkg
 }
-
 inn(tl,0, 11,22, 9,33, '#000')
  tl[0].style.borderRadius='5%'
 inn(tl,1, 7,9, 88,22, '#f00')
  tl[1].style.borderRadius='55%'
+ tl[1].style.cursor='pointer'
 inn(tl,2, 7,33, 88,22, '#ff0')
  tl[2].style.borderRadius='55%'
+ tl[2].style.cursor='pointer'
 inn(tl,3, 7,58, 88,22, '#0f0')
  tl[3].style.borderRadius='55%'
+ tl[3].style.cursor='pointer'
    
 inn(rd,0, 15,1, 77,99, '#777')
  rd[0].style.borderRadius='5%'
@@ -105,10 +106,10 @@ inn(rd,1, 44,77, 9,22, '#fff')
 inn(cr,1, 2,11, 88,66, 'radial-gradient(#ff0,#550)')
  cr[1].style.borderBottomLeftRadius='55%'
  cr[1].style.borderBottomRightRadius='55%'
- cr[1].style.borderColor='#b05'
+ cr[1].style.borderBottom='9px ridge #090'
 inn(cr,2, 3,11, 88,66, 'radial-gradient(#ff0,#550)')
  cr[2].style.borderRadius='5%'
- cr[2].style.borderColor='#905'
+ cr[2].style.borderBottom='9px ridge #000'
 inn(fre,0, 40,40, 29,17,'#000')
 inn(fre,1, -1,-48, 111,17,'radial-gradient(#ff0,#f0f)')
  fre[1].style.opacity=0
@@ -214,12 +215,6 @@ cr[0].onmouseout=()=>
  dly[2].style.transform='scale(0) skew(0deg)'
   clearInterval(dlyI)
 }
-
-rls=
-'towing - 50km/h <br>'+
-'dividing strip - 90 km/h - 90 км/ч <br>'+
-'double solid - 110 km/h <br>'+
-'highway - 130 km/h <br>'
 
 //d[0].innerHTML+=r
 </script>
