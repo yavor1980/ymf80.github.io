@@ -230,7 +230,7 @@ crstintt[1].style.top=38+'%'
 crstintt[1].style.width=36+'%'
 crstintt[1].style.height=28+'%'
 crstintt[1].style.background=
- 'radial-gradient(#ff0,#f0f)'
+ 'radial-gradient(33px,#e0e,#707)'
 crstintt[1].style.borderRadius=55+'%' 
 crstintt[1].style.borderTopLeftRadius=29+'%'
 crstintt[1].style.borderTopRightRadius=29+'%'
@@ -309,11 +309,13 @@ snwmn[0].onmouseover=()=>
  Isnwmn=setInterval(()=>
  {
   smint[3].style.transform=
-   'scale(1.5) translate(0%,-116%) rotate('+
-   (211+Math.random()*22)+'deg)'
+   'scale('+(1.4+Math.random())+
+   ') translate(0%,-116%) rotate('+
+   (211+Math.random()*30)+'deg)'
   smint[4].style.transform=
-   'scale(1.5) translate(0%,116%) rotate('+
-   (21+Math.random()*22)+'deg)'
+   'scale('+(1.4+Math.random())+
+   ') translate(0%,116%) rotate('+
+   (21+Math.random()*30)+'deg)'
  }, 999) 
  smint[5].style.color='#f0f' 
  smint[5].style.transform=
@@ -337,7 +339,12 @@ fcrtr=()=>
 {
  crstint[2].style.background=
   'radial-gradient('+Math.round(Math.random()*44)+
-  'px,#ee0,#b0b)'
+  'px,#ff0,#f00)'
+ crstintt[1].style.background=
+  'radial-gradient('+Math.round(Math.random()*44)+
+  'px,#ff0,#f0f)' 
+ crstint[3].style.border=Math.round(8+Math.random()*4)+
+  'px ridge #ff0' 
  bckrnd[1].style.transform=
   'scale('+Math.random()+')' 
  bckrnd[3].style.transform=
@@ -362,12 +369,11 @@ crstmtr[0].onmouseover=()=>
   'radial-gradient(#ff0,#bb0)'
  crstintt[0].style.background=
   'radial-gradient(#ff0,#bb0)'
- crstint[3].style.border='8px ridge #f0f' 
  crstint[4].style.color='#f00' 
  crstint[4].style.transform=
   'scale(4) translate(88%,-66%) skew(11deg)'
   fcrtr()
-  Itr=setInterval(fcrtr,999)
+  Itr=setInterval(fcrtr, 999)
   snwmn[0].onmouseover()
 } 
 crstmtr[0].onmouseout=()=>
@@ -394,6 +400,8 @@ crstmtr[0].onmouseout=()=>
  crstint[3].style.border='8px ridge #f80' 
  crstint[4].style.color='#000'  
  crstint[4].style.transform='scale(0)'
+ crstintt[1].style.background=
+  'radial-gradient(33px,#e0e,#707)' 
   clearInterval(Itr)
   snwmn[0].onmouseout()
 }
