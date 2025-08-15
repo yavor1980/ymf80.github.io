@@ -12,6 +12,7 @@
 {
  position:absolute;
  transition:1s;
+ text-align:center;
  cursor:pointer;
 
 }
@@ -19,22 +20,12 @@
 {
  transform:scale(1.3);
 }
-.tbtn
-{
- position:absolute;
- transition:1s;
-}
 
 .cld
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
-}
-.tcld
-{
- position:absolute;
- transition:1s;
 }
 
 .rckt
@@ -55,28 +46,17 @@
  transition:1111ms;
  cursor:pointer;
 }
-.tshtl
-{
- position:absolute;
- transition:1s;
-}
 
 </style>
 <button class=btn>UFO</button>
- <div class=tbtn>watch UFO!</div>
+ <div class=btn>watch UFO!</div>
+<div class=btn></div> 
 
 <div class=cld></div>
 <div class=cld></div>
 <div class=cld></div>
 <div class=cld></div>
 <div class=cld></div>
- 
-<div class=tcld>
- funny clouds...
-</div>
-<div class=tcld>
- normal<br>&nbsp cndtions...
-</div>
     
 <div class=rckt> 
  <div class=rckt></div>
@@ -101,16 +81,13 @@
 
 <script>
 btn=document.getElementsByClassName('btn')
-tbtn=document.getElementsByClassName('tbtn')
 
 cld=document.getElementsByClassName('cld')
-tcld=document.getElementsByClassName('tcld')
 
 rckt=document.getElementsByClassName('rckt')
 trckt=document.getElementsByClassName('trckt')
 
 shtl=document.getElementsByClassName('shtl')
-tshtl=document.getElementsByClassName('tshtl')
 
 btn[0].style.left='77%'
 btn[0].style.top='5%'
@@ -120,15 +97,24 @@ btn[0].style.background='#bbb'
 btn[0].style.color='#b80'
 btn[0].style.borderRadius='44%'
 btn[0].style.fontSize='2em'
-
-tbtn[0].style.left='77%'
-tbtn[0].style.top='15%'
-tbtn[0].style.transform='scale(0)'
+btn[1].style.left='77%'
+btn[1].style.top='13%'
+btn[1].style.color='#b00'
+btn[1].style.transform='scale(0)'
+btn[2].style.left='77%'
+btn[2].style.top='43%'
+btn[2].style.width='8%'
+btn[2].style.height='15%' 
+btn[2].style.background='#bb0'
+btn[2].style.border='4px ridge #ff0'
+btn[2].style.color='#b00'
+btn[2].style.fontSize='4em'
+btn[2].style.transform='scale(0)'
 
 cld[0].style.left='9%'
 cld[0].style.top='27%'
 cld[0].style.width='15%'
-cld[0].style.height='19%' 
+cld[0].style.height='9%' 
 cld[0].style.background=
  'radial-gradient(#009,#00f)'
 cld[0].style.borderRadius='55%'
@@ -136,7 +122,7 @@ cld[0].style.opacity=0.3
 cld[1].style.left='27%'
 cld[1].style.top='11%'
 cld[1].style.width='18%'
-cld[1].style.height='22%' 
+cld[1].style.height='9%' 
 cld[1].style.background=
  'radial-gradient(#009,#00f)'
 cld[1].style.borderRadius='55%'
@@ -144,7 +130,7 @@ cld[1].style.opacity=0.4
 cld[2].style.left='49%'
 cld[2].style.top='24%'
 cld[2].style.width='16%'
-cld[2].style.height='19%' 
+cld[2].style.height='9%' 
 cld[2].style.background=
  'radial-gradient(#008,#00f)'
 cld[2].style.borderRadius='55%'
@@ -152,7 +138,7 @@ cld[2].style.opacity=0.3
 cld[3].style.left='77%'
 cld[3].style.top='22%'
 cld[3].style.width='16%'
-cld[3].style.height='19%' 
+cld[3].style.height='9%' 
 cld[3].style.background=
  'radial-gradient(#008,#00f)'
 cld[3].style.borderRadius='55%'
@@ -166,15 +152,6 @@ cld[4].style.background=
 cld[4].style.borderTopLeftRadius='44%'
 cld[4].style.borderTopRightRadius='22%'
 cld[4].style.opacity=0.3
-
-tcld[0].style.left='11%'
-tcld[0].style.top='22%'
-tcld[0].style.color='#b00'
-tcld[0].style.transform='scale(0)'
-tcld[1].style.left='11%'
-tcld[1].style.top='22%'
-tcld[1].style.color='#088'
-tcld[1].style.transform='scale(0)'
 
 rckt[0].style.left='33%'
 rckt[0].style.bottom='17%'
@@ -243,17 +220,39 @@ shtl[1].style.height='66%'
 shtl[1].style.background=
  'radial-gradient(#f0f,#808)'
 shtl[1].style.borderRadius='55%'
+shtl[1].style.border='2px ridge #dd0'
+
+setInterval(()=>{
+ cld[0].style.opacity=(Math.random()/6+0.2)
+ cld[0].style.transform=
+    'scale('+(Math.random()/3+0.7)+')'
+}, 999)
+setInterval(()=>{
+  cld[1].style.opacity=(Math.random()/6+0.2)
+  cld[1].style.transform=
+   'scale('+(Math.random()/3+0.7)+')'
+}, 999)
+setInterval(()=>{
+  cld[2].style.opacity=(Math.random()/6+0.2)
+  cld[2].style.transform=
+    'scale('+(Math.random()/3+0.7)+')'
+}, 999)
+setInterval(()=>{
+  cld[3].style.opacity=(Math.random()/6+0.2)
+  cld[3].style.transform=
+    'scale('+(Math.random()/3+0.7)+')'
+}, 999)
 
 Ibtn0=0
 bbtn0=0
 btn[0].onmouseover=()=>
 {
- tbtn[0].style.transform=
+ btn[1].style.transform=
   'scale(3) translate(0,88%) skew(-22deg)'
 }
 btn[0].onmouseout=()=>
 {
- tbtn[0].style.transform='scale(0)'
+ btn[1].style.transform='scale(0)'
 }
 sclbtn0=0
 btn[0].onclick=()=>
@@ -279,75 +278,20 @@ if(bbtn0==0){
   bbtn0=!bbtn0
 }
 
-setInterval(()=>{
- cld[0].style.opacity=(Math.random()/6+0.2)
- cld[0].style.transform=
-    'scale('+(Math.random()/3+0.7)+')'
-}, 999)
-setInterval(()=>{
-  cld[1].style.opacity=(Math.random()/6+0.2)
-  cld[1].style.transform=
-   'scale('+(Math.random()/3+0.7)+')'
-}, 999)
-setInterval(()=>{
-  cld[2].style.opacity=(Math.random()/6+0.2)
-  cld[2].style.transform=
-    'scale('+(Math.random()/3+0.7)+')'
-}, 999)
-setInterval(()=>{
-  cld[3].style.opacity=(Math.random()/6+0.2)
-  cld[3].style.transform=
-    'scale('+(Math.random()/3+0.7)+')'
-}, 999)
-
-cld[0].onmouseover=()=>
-{
- tcld[0].style.transform=
-  'scale(3) translate(33%,99%)'
- tcld[1].style.transform=
-  'scale(3) translate(18%,122%)' 
-}
-cld[0].onmouseout=()=>
-{
- tcld[0].style.transform='scale(0)'
- tcld[1].style.transform='scale(0)'
- cld[0].style.transform='scale(1)'
- cld[1].style.transform='scale(1)'
- cld[2].style.transform='scale(1)'
-}
-
-cld[1].onmouseover=()=>
-{
- cld[0].onmouseover()
-}
-cld[1].onmouseout=()=>
-{
- cld[0].onmouseout()
-}
-
-cld[2].onmouseover=()=>
-{
- cld[0].onmouseover()
-}
-cld[2].onmouseout=()=>
-{
- cld[0].onmouseout()
-}
-
-cld[3].onmouseover=()=>
-{
- cld[0].onmouseover()
-}
-cld[3].onmouseout=()=>
-{
- cld[0].onmouseout()
-}
-
 Irckt=0
 nrckt=0
+dn=9
 rckt[0].onmouseover=()=>
 { 
+ dn=9
  btn[0].onclick()
+ btn[2].style.transform='scale(2)'
+  btn[2].innerHTML=dn
+ Irrckt=setInterval(()=>{
+  btn[2].innerHTML=dn
+  dn--
+  if(dn<0)dn=9
+ }, 555)
  Irckt=setInterval(()=>{
   rckt[0].style.transform=
    'scale('+(Math.random()/9+1)+')'
@@ -368,6 +312,7 @@ rckt[0].onmouseover=()=>
 }
 rckt[0].onmouseout=()=>
 {
+ btn[2].style.transform='scale(0)'
  rckt[0].style.transform='scale(1)'
  rckt[4].style.background='none'
  rckt[4].style.opacity=0
@@ -377,6 +322,7 @@ rckt[0].onmouseout=()=>
  trckt[0].style.transform='scale(0)'
  trckt[1].style.transform='scale(0)'
   clearInterval(Irckt)
+  clearInterval(Irrckt)
 }
 rckt[0].onclick=()=>
 {
@@ -409,16 +355,6 @@ rckt[0].onclick=()=>
    trckt[2].innerHTML='score: '+nrckt
  }, 1111)
 }  
-
-shtl[0].onmouseover=()=>
-{
- tshtl[0].style.transform=
-  'scale(3) translate(0,-222%) skew(-22deg)'
-} 
-shtl[0].onmouseout=()=>
-{
- tshtl[0].style.transform='scale(0)'
-} 
  
 </script>
 </body>
