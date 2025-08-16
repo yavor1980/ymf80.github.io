@@ -35,6 +35,7 @@ canvas
 <input type=button class=btn value='clear'>
 <input type=button class=btn  value='axes'>
 <input type=button class=btn value='oscll'>
+<input type=button class=btn value='fill'>
 
 <script>
 cnv=document.getElementsByTagName('canvas')
@@ -45,7 +46,7 @@ cnv[0].style.height=97+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
  cntxt=cnv[0].getContext('2d')
- cntxt.moveTo(0,333)
+ //cntxt.moveTo(0,333)
  
 btn[0].style.left=91+'%'
 btn[0].style.bottom=4+'%'
@@ -77,20 +78,26 @@ btn[6].style.left=91+'%'
 btn[6].style.top=13+'%'
 btn[6].style.background='#e00'
 btn[6].style.transform='scale(2)'
+btn[7].style.left=93+'%'
+btn[7].style.top=22+'%'
+btn[7].style.background='#e00'
+btn[7].style.transform='scale(2)'
 
 function fdrw()
 {
  cntxt.fillStyle='#f00'
- cntxt.fillRect(event.offsetX/4,event.offsetY/4,1,1)
+ cntxt.beginPath()
+ cntxt.arc(event.clientX/4,event.clientY/4,
+  1,0,2*Math.PI)
+ cntxt.fill()
+ cntxt.endPath()
 }
 function frndline()
 {
  cntxt.strokeStyle='#00f'
- cntxt.beginPath()
  cntxt.moveTo(Math.random()*88,Math.random()*88)
  cntxt.lineTo(event.clientX/4,event.clientY/4)
  cntxt.stroke()
- cntxt.endPath()
 }
 function fround()
 {
@@ -99,7 +106,7 @@ function fround()
  cntxt.arc(event.clientX/4,event.clientY/4,
   9,0,2*Math.PI)
  cntxt.stroke()
- cntxt.endPath()
+ //cntxt.endPath()
 }
 bcnvs=-1
 bln=0 
@@ -116,20 +123,19 @@ function fline()
  {
   cntxt.lineTo(event.clientX/4,event.clientY/4)
   cntxt.stroke()
-  cntxt.endPath()
  } 
  bln=1
 }
 function faxs()
 {
-  cntxt.beginPath()
+  //cntxt.beginPath()
  cntxt.strokeStyle='#000'
  cntxt.moveTo(0, 79)
  cntxt.lineTo(333, 79)
  cntxt.moveTo(145, 0)
  cntxt.lineTo(145, 100)
   cntxt.stroke()
-  cntxt.endPath()
+ // cntxt.endPath()
 }
 shft=66
 scle=22
@@ -144,9 +150,9 @@ function foscll()
  } 
  cntxt.stroke() 
 }
+ff=1
 function foscllmv()
 { 
-
 Iosc=setInterval(()=>{
  cntxt.beginPath()
  cntxt.clearRect(0,0,999,999)
@@ -155,7 +161,7 @@ Iosc=setInterval(()=>{
  trvl=11+Math.random()*11
  for(i=0;i<300;i++)
  {
-  cntxt.lineTo(i,shft+scle*Math.sin(i/trvl+1))
+  cntxt.lineTo(i, shft+scle*Math.sin(i*ff/trvl+1))
  } 
   cntxt.stroke() 
   //cntxt.endPath()
@@ -170,11 +176,9 @@ cnv[0].onmousemove=()=>
 cnv[0].onmouseout=()=>
 {
  cnv[0].style.border='11px ridge #ff0'
- 
 }
 cnv[0].onclick=()=>
 { 
- 
  switch(bcnvs) 
  {
   case 1: frndline(); break;
@@ -191,6 +195,7 @@ btn[1].onclick=()=>
 {
  bcnvs=1
 }
+
 btn[2].onclick=()=>
 {
  bcnvs=2
@@ -199,14 +204,17 @@ btn[3].onclick=()=>
 {
  bcnvs=3
 }
+
 btn[4].onclick=()=>
 {
  cntxt.clearRect(0,0,999,999)
 }
+
 btn[5].onclick=()=>
 {
  faxs()
 }
+
 boscll=0
 btn[6].onclick=()=>
 {
@@ -221,6 +229,16 @@ btn[6].onclick=()=>
  }
  boscll=!boscll
 }
+
+btn[7].onmousemove=()=>
+{
+ ff=9
+}
+btn[7].onmouseout=()=>
+{
+ ff=1
+}
+
 //for(var i=0;i<n;i++) 
 </script> 
 </html>
