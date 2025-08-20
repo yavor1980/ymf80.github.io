@@ -6,7 +6,7 @@
  background:radial-gradient(#090,#888);
 }
 
-.btn
+.btn,.dsply,.pnel
 {
  position:absolute;
  transition:1s;
@@ -19,13 +19,6 @@
  transition:1s;
 }
 
-.dsply,.pnel
-{
- position:absolute;
- transition:1s;
- cursor:pointer;
-}
-
 </style>
 <body id=idbd>
 
@@ -33,7 +26,7 @@
 
 <svg class=csvg>
  <circle class=csvg />
- <line class=csvg />
+ <rect class=csvg />
 </svg>
  
 <div class=pnel>
@@ -66,18 +59,32 @@ csvg[0].style.left=66+'%'
 csvg[0].style.top=55+'%'
 csvg[0].style.width=24+'%'
 csvg[0].style.height=28+'%'
-function insvg(i,rr)
+function insvgrnd(i,rr)
 {
+ csvg[1].style.transform='scale(1)'
  csvg[i].style.cx=50+'%'
  csvg[i].style.cy=50+'%'
  csvg[i].style.r=rr
- csvg[i].style.fill='#990'
- csvg[i].style.stroke='#0f0'
+ csvg[i].style.fill='#ff0'
  csvg[i].style.strokeWidth=7
- csvg[i].style.cursor='pointer' 
+ csvg[i].style.stroke='#0f0'
+ csvg[2].style.transform='scale(0)'
 }
- insvg(1,44)
-
+function insvgrect(i)
+{
+ csvg[2].style.transform='scale(1)'
+ csvg[i].style.x=25+'%'
+ csvg[i].style.y=25+'%'
+ csvg[i].style.width=44+'%'
+ csvg[i].style.height=44+'%'
+ csvg[i].style.fill='#f00'
+ csvg[i].style.strokeWidth=9
+ csvg[i].style.stroke='#0ff'
+ csvg[1].style.transform='scale(0)'
+}
+ insvgrnd(1,44)
+ insvgrect(2)
+  
 dsply[0].style.left=19+'%'
 dsply[0].style.top=45+'%'
 dsply[0].style.width=17+'%'
@@ -111,7 +118,6 @@ pnel[0].style.height=22+'%'
 pnel[0].style.background='#bbb'
 pnel[0].style.borderRadius=15+'%'
 pnel[0].style.border='9px ridge #990'
-
 function inp(i,l,t,w,h,bkgr)
 {
  pnel[i].style.left=l+'%'
@@ -127,7 +133,6 @@ inp(4,2,50,26,44,'#333')
 inp(5,31,50,37,44,'#333')
 inp(6,72,50,26,44,'#333')
 inp(7,99,44,'','','')
- pnel[7].style.color='#f00'
  pnel[7].style.transform='scale(0)'
  
 bbtn=1
@@ -136,12 +141,12 @@ btn[0].onclick=()=>
  if(bbtn)
  {
   btn[0].innerHTML='rect'
-  insvg(1,66)
+  insvgrnd(1,44)
  } 
   else
  {
   btn[0].innerHTML='circle'
-  insvg(1,44)
+  insvgrect(1)
  } 
    bbtn=!bbtn
 }
@@ -203,9 +208,6 @@ dsply[0].onmouseout=()=>
 }
 
 
-
-
- 
 </script>
 </body>
 </html>
