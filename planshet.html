@@ -28,6 +28,7 @@
  <circle class=csvg />
  <rect class=csvg />
 </svg>
+ <div class=csvg>SVG</div>
  
 <div class=pnel>
  <div class=pnel></div>
@@ -84,6 +85,9 @@ function insvgrect(i)
 }
  insvgrnd(1,44)
  insvgrect(2)
+csvg[3].style.left=64+'%'
+csvg[3].style.top=78+'%' 
+csvg[3].style.transform='scale(0)'
   
 dsply[0].style.left=19+'%'
 dsply[0].style.top=45+'%'
@@ -181,11 +185,16 @@ dsply[0].onmouseover=()=>
  dsply[3].style.background=
   'linear-gradient(90deg,#055,#111,#555,#111,#055)'
  pnel[0].style.transform='scale(1.1)'
+ pnel[7].style.color='#f0f'
+ pnel[7].style.transform=
+  'scale(3) translate(33%,-33%)  skew(33deg)'
  csvg[0].style.background='#888'
  csvg[0].style.border='7px ridge #bb0'
  csvg[0].style.transform=
   'scale(1.7) translate(-12%,-69%)'
- csvg[1].style.fill='#ff0' 
+ csvg[3].style.color='#f00'
+ csvg[3].style.transform=
+  'scale(5) translate(83%,-42%)skew(-24deg) '
 }
 dsply[0].onmouseout=()=>
 {
@@ -201,10 +210,13 @@ dsply[0].onmouseout=()=>
  pnel[4].style.background='#000'
  pnel[5].style.background='#000'
  pnel[6].style.background='#000'
+ pnel[7].style.color='#000'
+ pnel[7].style.transform='scale(0)'
  csvg[0].style.background='none'
  csvg[0].style.border='none'
  csvg[0].style.transform='scale(1)'
- csvg[1].style.fill='#990'
+ csvg[3].style.color='#000'
+ csvg[3].style.transform='scale(0)'
 }
 
 
