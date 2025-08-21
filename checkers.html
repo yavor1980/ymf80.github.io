@@ -35,10 +35,10 @@
 {
  position:absolute;
  transition:1s;
+ cursor:pointer;
  width:50px;
  height:50px;
  border-radius:50%;
- cursor:pointer;
  font-size:2em;
  text-align:center;
 }
@@ -60,15 +60,13 @@ btn[0].style.top=44+'%'
 btn[0].style.background='#b00'
 btn[0].style.color='#fff'
 btn[0].style.transform='scale(3)'
-   
 btn[1].style.left=5+'%'
-btn[1].style.top=55+'%'
+btn[1].style.top=65+'%'
 btn[1].style.background='#b00'
 btn[1].style.color='#eee'
 btn[1].style.transform='scale(3)'  
-
 btn[2].style.left=5+'%'
-btn[2].style.top=65+'%'
+btn[2].style.top=55+'%'
 btn[2].style.background='#b00'
 btn[2].style.color='#eee'
 btn[2].style.transform='scale(3)'  
@@ -79,15 +77,15 @@ for(i=0;i<8;i++)
  {
   cl[i]=document.createElement("div")
   cl[i].className='cll'; 
-  cl[i].style.left=50*i+'px'
-  cl[i].style.top=50*j+'px'
+  cl[i].style.left=i*50+'px'
+  cl[i].style.top=j*50+'px'
   cl[i].style.background='#888'
    dsk[0].appendChild(cl[i])
-   icl[i]=1; jcl[j]=1;
+   //icl[i]=1; jcl[j]=1;
   if(!(i%2==0)&&(j%2==0)||!(i%2==1)&&(j%2==1))
   {
    cl[i].style.background='#aaa'
-    icl[i]=0; jcl[j]=0;
+    //icl[i]=0; jcl[j]=0;
   }  
  }
  dsk[0].style.border='5px ridge #909' 
@@ -153,7 +151,6 @@ function mv()
    'scale(1.2) translate(0, 15%) skew(-33deg)'
  bmv=!bmv
 }
-
 bbtn0=0 
 btn[0].onclick=()=>
 {
@@ -172,7 +169,7 @@ btn[0].onclick=()=>
  }
   bbtn0=!bbtn0
 }
- 
+
 btn[1].onclick=()=>
 { 
   arrfgr()
@@ -190,7 +187,7 @@ btn[2].onclick=()=>
 	
 function tchw(i)
 {
- wf[i].onmouseover=()=>
+ wf[i].onmousemove=()=>
  {   
   if(bwf)
   {
