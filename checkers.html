@@ -49,6 +49,7 @@
 <button class=btn >Go..</button>
 <button class=btn >Stay</button>
 <button class=btn >Mix</button>
+<button class=btn >Step</button>
 
 <script>
 btn=document.getElementsByClassName("btn")
@@ -56,27 +57,32 @@ dsk=document.getElementsByClassName("dsk")
 ttpl=document.getElementsByClassName("ttpl")
    
 btn[0].style.left=5+'%'
-btn[0].style.top=44+'%'
+btn[0].style.top=11+'%'
 btn[0].style.background='#b00'
 btn[0].style.color='#fff'
 btn[0].style.transform='scale(3)'
 btn[1].style.left=5+'%'
-btn[1].style.top=65+'%'
+btn[1].style.top=31+'%'
 btn[1].style.background='#b00'
 btn[1].style.color='#eee'
 btn[1].style.transform='scale(3)'  
 btn[2].style.left=5+'%'
-btn[2].style.top=55+'%'
+btn[2].style.top=21+'%'
 btn[2].style.background='#b00'
 btn[2].style.color='#eee'
 btn[2].style.transform='scale(3)'  
+btn[3].style.left=5+'%'
+btn[3].style.top=41+'%'
+btn[3].style.background='#b00'
+btn[3].style.color='#eee'
+btn[3].style.transform='scale(3)' 
    
 cl=[], icl=[], jcl=[]
 for(i=0;i<8;i++)
  for(j=0;j<8;j++)
  {
   cl[i]=document.createElement("div")
-  cl[i].className='cll'; 
+  cl[i].className='cll'
   cl[i].style.left=i*50+'px'
   cl[i].style.top=j*50+'px'
   cl[i].style.background='#888'
@@ -219,7 +225,8 @@ function clw(i)
 {
  wf[i].onclick=()=>
  {
-  
+  wf[i].style.left=0+'%'
+  wf[i].style.top=0+'%'
  }
 }
 clw(0); clw(1); clw(2);
@@ -261,7 +268,8 @@ function clb(i)
 {
  bf[i].onclick=()=>
  { 
- 
+  bf[i].style.left=0+'%'
+  bf[i].style.top=0+'%'
  }
 }
 clb(0); clb(1); clb(2);
