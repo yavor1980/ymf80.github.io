@@ -113,32 +113,33 @@ for(i=0;i<12;i++)
  bf[i].style.background=
   'radial-gradient(14px,#555,#222)'
 }    
-
+function ina()
+{
+ aw=[
+     {x:0,y:0},{x:2,y:0},{x:4,y:0},{x:6,y:0},
+     {x:1,y:1},{x:3,y:1},{x:5,y:1},{x:7,y:1},
+     {x:0,y:2},{x:2,y:2},{x:4,y:2},{x:6,y:2}
+    ]
+ ab=[
+     {x:1,y:7},{x:3,y:7},{x:5,y:7},{x:7,y:7},
+     {x:0,y:6},{x:2,y:6},{x:4,y:6},{x:6,y:6},
+     {x:1,y:5},{x:3,y:5},{x:5,y:5},{x:7,y:5}
+    ]   
+}
+ 
 function arrfgr()
 {
+ ina()
  for(i=0;i<12;i++)    
  {
-   wf[i].style.left=i*50+'px'
-   wf[i].style.top=0*50+'px'
-  if(i%2==1)	
-   wf[i].style.top=50+'px'
-  if(i>7)
-  {
-   wf[i].style.left= 2*(i-8)*50+'px'
-   wf[i].style.top= 2*50+'px'
-  } 
+   wf[i].style.left=aw[i].x*50+'px'
+   wf[i].style.top=aw[i].y*50+'px'
+   wf[i].style.transform='scale(1)' 
  }
  for(i=0;i<12;i++)    
  {
-   bf[i].style.left=i*50+'px'
-   bf[i].style.top=6*50+'px'
-  if(i%2==1)
-   bf[i].style.top=7*50+'px'
-  if(i>7)
-  {
-   bf[i].style.left=50+2*(i-8)*50+'px'
-   bf[i].style.top=5*50+'px'
-  }
+   bf[i].style.left=ab[i].x*50+'px'
+   bf[i].style.top=ab[i].y*50+'px'
  }
 }
   arrfgr()
@@ -200,15 +201,15 @@ function tchw(i)
  {   
   if(bwf)
   {
-   wf[i].style.left=(event.offsetX*5)
-   wf[i].style.top=(event.offsetY*5)
+   vx=(event.offsetX)*5
+   vy=(event.offsetY)*5
+   wf[i].style.left=vx+'px'
+   wf[i].style.top=vy+'px'
   } 
   wf[i].style.transform='scale(1.2)'
   wf[i].style.background=
    'radial-gradient(14px,#090,#0c0)'
   wf[i].style.border='1px ridge #000'
-  for(j=0;j<12;j++)   
-   bf[j].style.transform='scale(1.1)'
  }	
  wf[i].onmouseout=()=>
  {   
@@ -216,8 +217,6 @@ function tchw(i)
   wf[i].style.background=
    'radial-gradient(14px,#999,#ccc)'
   wf[i].style.border='none'
-  for(j=0;j<12;j++) 
-   bf[j].style.transform='scale(1)' 
  }	
 }
 tchw(0); tchw(1); tchw(2);
@@ -227,9 +226,16 @@ tchw(9); tchw(10); tchw(11);
 function clw(i)
 {
  wf[i].onclick=()=>
- {
-  wf[i].style.left=((i%4)*50)
-  wf[i].style.top=((i%4)*50)
+ { 
+   st=Math.round(Math.random()*2-1)
+  if(st<0)st=-1; else st=1; 
+  if(aw[i].x+st<0||aw[i].x+st>7) st=-st  
+  wf[i].style.left=(aw[i].x+st)*50
+   aw[i].x+=st
+  wf[i].style.top=(aw[i].y+1)*50
+   aw[i].y+=1
+  if(st==0)st=-1; else st=1; 
+  clb(11)
    btn[1].disabled=0
  }
 }
@@ -255,8 +261,6 @@ function tchb(i)
    'radial-gradient(14px,#cc0,#ff0)'
   bf[i].style.border='1px ridge #222'
   bf[i].style.transform='scale(1.2)'
-  for(j=0;j<12;j++) 
-   wf[j].style.transform='scale(1.1)'   
  }	
  bf[i].onmouseout=()=>
  { 
@@ -264,8 +268,6 @@ function tchb(i)
    'radial-gradient(14px,#555,#222)'
   bf[i].style.border='none'
   bf[i].style.transform='scale(1)'
-  for(j=0;j<12;j++) 
-   wf[j].style.transform='scale(1)'  
  }	
 }	
 tchb(0); tchb(1); tchb(2);
@@ -276,8 +278,16 @@ function clb(i)
 {
  bf[i].onclick=()=>
  { 
-  bf[i].style.left=((i%4)*50)
-  bf[i].style.top=((i%4)*50)
+   st=Math.round(Math.random()*2-1)
+  if(st<0)st=-1; else st=1; 
+  if(ab[i].x+st<0||ab[i].x+st>7) st=-st 
+ // for(j=0;j<12;j++)
+   //if((aw[j].x==ab[i].x)&&(aw[j].x==ab[i].x))
+    //wf[j].style.transform='scale(0)'
+  bf[i].style.left=(ab[i].x+st)*50
+   ab[i].x+=st
+  bf[i].style.top=(ab[i].y-1)*50
+   ab[i].y-=1
    btn[1].disabled=0
  }
 }
