@@ -209,7 +209,6 @@ cncr[5].style.border='7px ridge #000'
 cncr[5].style.borderTop='7px ridge transparent'
 cncr[5].style.borderRadius=55+'%'
 cncr[5].style.zIndex=-1
-
 lcncrcl[0].style.left=-55+'%'
 lcncrcl[0].style.top=-33+'%'
 lcncrcl[0].style.width=68+'%'
@@ -280,10 +279,14 @@ function fkmv()
   ','+(1+Math.random())+')'
  lcncrcl[0].style.transform='rotate(-11deg) scale('+
   (1+Math.random())+') '
+ lcncrcl[1].style.border='8px ridge #000'
+ lcncrcl[1].style.borderTop='8px ridge transparent'
  lcncrcl[1].style.transform='rotate(-11deg) scale('+
   (1+Math.random())+',1) ' 
  rcncrcl[0].style.transform='rotate(7deg) scale('+
   (1+Math.random())+') '
+ rcncrcl[1].style.border='8px ridge #000'
+ rcncrcl[1].style.borderTop='8px ridge transparent'
  rcncrcl[1].style.transform='rotate(7deg) scale('+
   (1+Math.random())+',1) ' 
 } 
@@ -316,8 +319,10 @@ kttl[0].onmouseout=()=>
  ttl[0].style.transform='scale(0)'
  ttl[1].style.transform='scale(0)'
  lcncrcl[0].style.transform='scale(1) rotate(-22deg)'
+ lcncrcl[1].style.border=''
  lcncrcl[1].style.transform='scale(1)'
  rcncrcl[0].style.transform='scale(1) rotate(22deg)'
+ rcncrcl[1].style.border=''
  rcncrcl[1].style.transform='scale(1)'
 }
 
