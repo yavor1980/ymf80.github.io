@@ -226,6 +226,8 @@ lcncrcl[1].style.height=69+'%'
 lcncrcl[1].style.background=
  'linear-gradient(#dd0,#333)'
 lcncrcl[1].style.borderRadius=44+'%'
+//lcncrcl[1].style.borderTopLeftRadius=14+'%'
+//lcncrcl[1].style.borderTopRightRadius=14+'%'
 rcncrcl[0].style.left=90+'%'
 rcncrcl[0].style.top=-34+'%'
 rcncrcl[0].style.width=68+'%'
@@ -279,14 +281,16 @@ function fkmv()
   ','+(1+Math.random())+')'
  lcncrcl[0].style.transform='rotate(-11deg) scale('+
   (1+Math.random())+') '
- lcncrcl[1].style.border='8px ridge #000'
- lcncrcl[1].style.borderTop='8px ridge transparent'
+ lcncrcl[1].style.borderBottom='8px ridge #000'
+ lcncrcl[1].style.borderLeft='8px ridge #000'
+ lcncrcl[1].style.borderRight='8px ridge #000'
  lcncrcl[1].style.transform='rotate(-11deg) scale('+
   (1+Math.random())+',1) ' 
  rcncrcl[0].style.transform='rotate(7deg) scale('+
   (1+Math.random())+') '
- rcncrcl[1].style.border='8px ridge #000'
- rcncrcl[1].style.borderTop='8px ridge transparent'
+ rcncrcl[1].style.borderBottom='8px ridge #000'
+ rcncrcl[1].style.borderLeft='8px ridge #000'
+ rcncrcl[1].style.borderRight='8px ridge #000'
  rcncrcl[1].style.transform='rotate(7deg) scale('+
   (1+Math.random())+',1) ' 
 } 
