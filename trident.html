@@ -94,11 +94,13 @@ trdnt[4].style.borderBottomRightRadius=35+'%'
 ttl[0].style.left=29+'%'
 ttl[0].style.top=5+'%'
 ttl[0].style.color='#444'
+ttl[0].style.opacity=0.6
 ttl[0].style.transform='scale(7) skew(12deg)'
  ttl[0].innerHTML= 'Resource'
 ttl[1].style.left=66+'%'
 ttl[1].style.top=12+'%'
 ttl[1].style.color='#440'
+ttl[1].style.opacity=0.6
 ttl[1].style.transform='scale(7) skew(17deg)'
  ttl[1].innerHTML='Curse'
 
@@ -111,6 +113,7 @@ function fcl()
  trdnt[3].style.transform='scale('+vcl+',1)'
  trdnt[4].style.transform='scale('+vcl+',1)'
 }
+ fcl()
  Icl=setInterval(fcl, 999)
 
 function ftrdnt()
@@ -151,8 +154,10 @@ trdnt[0].onmouseover=()=>
  trdnt[4].style.background='#ff0'
  for(i=0;i<7;i++)
   ltra[i].style.opacity=1
-  ttl[0].innerHTML= 'Added'
-  ttl[1].innerHTML= 'Value'
+  ttl[0].style.color='#f00'
+   ttl[0].innerHTML= 'Added'
+  ttl[1].style.color='#b00'
+   ttl[1].innerHTML= 'Value'
   ftrdnt()
   Itrdnt=setInterval(()=>ftrdnt(), 999)
 }
@@ -167,8 +172,10 @@ trdnt[0].onmouseout=()=>
  trdnt[4].style.background='#fff'
  for(i=0;i<7;i++)
   ltra[i].style.opacity=0.1
-  ttl[0].innerHTML= 'Resource'
-  ttl[1].innerHTML= 'Curse'
+  ttl[0].style.color='#444'
+   ttl[0].innerHTML= 'Resource'
+  ttl[1].style.color='#440' 
+   ttl[1].innerHTML= 'Curse'
   clearInterval(Itrdnt)
 }
 
