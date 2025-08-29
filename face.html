@@ -40,6 +40,7 @@
  <div class=bgrnd>
   <div class=elbw>
    <div class=elbw></div>
+   <div class=elbw></div>
   </div>
  </div>
 </div>
@@ -140,9 +141,18 @@ elbw[2].style.left=9+'%'
 elbw[2].style.top=62+'%'  
 elbw[2].style.width=99+'%'
 elbw[2].style.height=93+'%' 
-elbw[2].style.background=
- 'radial-gradient(#fff,#b9b)' 
-elbw[2].style.opacity=0.2
+elbw[2].style.opacity=0.2  
+elbw[2].style.borderTop='5px ridge #000'
+elbw[2].style.borderLeft='5px ridge #000'
+elbw[2].style.borderRight='5px ridge #000'
+elbw[3].style.left=39+'%'
+elbw[3].style.top=72+'%'
+elbw[3].style.width=55+'%'
+elbw[3].style.height=44+'%' 
+elbw[3].style.opacity=0.2 
+elbw[3].style.borderTop='5px ridge #000'
+elbw[3].style.borderLeft='5px ridge #000'
+elbw[3].style.borderRight='5px ridge #000'
  
 fc[0].style.left=19+'%'
 fc[0].style.top=22+'%'  
@@ -355,6 +365,10 @@ fc[0].onmouseover=()=>
  elbw[2].style.borderRight='15px ridge #000'
  elbw[2].style.transform=
   'scale(2,0.5) translate(0%,-33%)' 
+ elbw[3].style.borderTop='15px ridge #000'
+ elbw[3].style.borderLeft='15px ridge #000'
+ elbw[3].style.borderRight='15px ridge #000' 
+ elbw[3].style.opacity=1
 }
 fc[0].onmouseout=()=>
 { 
@@ -379,10 +393,14 @@ fc[0].onmouseout=()=>
  elbw[0].style.transform='scale(1)'
  elbw[1].style.transform='scale(1)'
  elbw[2].style.opacity=0.2
- elbw[2].style.borderTop='none'
- elbw[2].style.borderLeft='none'
- elbw[2].style.borderRight='none'
+ elbw[2].style.borderTop='5px ridge #000'
+ elbw[2].style.borderLeft='5px ridge #000'
+ elbw[2].style.borderRight='5px ridge #000'
  elbw[2].style.transform='scale(1)'
+ elbw[3].style.opacity=0.2
+ elbw[3].style.borderTop='5px ridge #000'
+ elbw[3].style.borderLeft='5px ridge #000'
+ elbw[3].style.borderRight='5px ridge #000' 
   clearInterval(Ifc)
 }
 
