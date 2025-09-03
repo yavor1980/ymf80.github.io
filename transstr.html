@@ -35,12 +35,18 @@ button:hover
  z-index:1;
 }
 
-.tpnp,.fnctn,.smcndctr,.smcndctr
+.tpnp,.fnctn,.smcndctr,.els
 {
  position:absolute;
  transition:1s;
 }
-
+.els
+{
+ width:9%;
+ height:9%;
+ background:radial-gradient(#888,#0e0);
+}
+ 
 </style>
 
 <button>pnp</button>
@@ -65,9 +71,9 @@ button:hover
 <div class=fnctn>TTL</div>
 
 <div class=smcndctr>
- <div class=smcndctr><div class=pin></div></div>
  <div class=smcndctr></div>
- <div class=smcndctr><div class=pin></div></div>
+ <div class=smcndctr></div>
+ <div class=smcndctr></div>
 </div>
 
 <script>
@@ -76,7 +82,7 @@ pnp=document.getElementsByClassName('pnp')
 tpnp=document.getElementsByClassName('tpnp')
 fnctn=document.getElementsByClassName('fnctn')
 smcndctr=document.getElementsByClassName('smcndctr')
-pin=document.getElementsByClassName('pin')
+els=document.getElementsByClassName('els')
 
 pnp[0].style.left=33+'%'
 pnp[0].style.top=33+'%'
@@ -173,6 +179,7 @@ smcndctr[2].style.top=0+'%'
 smcndctr[2].style.width=17+'%'
 smcndctr[2].style.height=100+'%'
 smcndctr[2].style.background='#990'
+smcndctr[2].style.zIndex=1
 smcndctr[2].style.transition=222+'ms'
 smcndctr[3].style.left=83+'%'
 smcndctr[3].style.top=0+'%'
@@ -180,11 +187,21 @@ smcndctr[3].style.width=55+'%'
 smcndctr[3].style.height=100+'%'
 smcndctr[3].style.background='#b00'
 
+el=[7]
+for(i=0;i<7;i++)
+{
+ el[i]=document.createElement('div')
+ el[i].className='els'
+ smcndctr[0].appendChild(el[i])
+ el[i].style.left=(30*Math.random())+'%'
+ el[i].style.top=(100*Math.random())+'%'
+ el[i].style.borderRadius=55+'%'
+} 
 
 bbtn=1
 btn[0].onmouseover=()=>
 {
- btn[0].innerHTML='npn'
+  btn[0].innerHTML='npn'
  pnp[5].style.transform=
   'rotate(-84deg)translate(-18%,-228%)'
 }
@@ -256,7 +273,6 @@ pnp[0].onmouseout=()=>
   'scale(3) skew(-22deg)'
  fnctn[1].style.transform='scale(0)'
  fnctn[2].style.transform='scale(0)'
- 
 }
 
 tpnp[0].onmouseover=()=>
@@ -279,14 +295,22 @@ smcndctr[0].onmouseover=()=>
   smcndctr[0].style.transform=
   'scale('+(3+Math.random()/4)+')'
   smcndctr[2].style.transform=
-  'scale('+(3+Math.random()/4)+',1) translate('+
-  (Math.random())+'%,0)'
+  'scale('+(2+Math.random()/4)+',1) translate('+
+  (7*Math.random())+'%,0%)'
+  for(i=0;i<7;i++)
+  {
+   el[i].style.opacity=Math.random()
+  }
  }, 222)
 }
 smcndctr[0].onmouseout=()=>
 {
  smcndctr[2].style.transform='scale(1)' 
   clearInterval(Ism)
+ for(i=0;i<7;i++)
+ {
+  el[i].style.opacity=1
+ } 
 }
 
 </script>
