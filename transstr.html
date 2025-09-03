@@ -187,15 +187,25 @@ smcndctr[3].style.width=55+'%'
 smcndctr[3].style.height=100+'%'
 smcndctr[3].style.background='#b00'
 
-el=[7]
+el=[7],ele=[7]
 for(i=0;i<7;i++)
 {
  el[i]=document.createElement('div')
  el[i].className='els'
  smcndctr[0].appendChild(el[i])
  el[i].style.left=(30*Math.random())+'%'
- el[i].style.top=(100*Math.random())+'%'
+ el[i].style.top=(5+90*Math.random())+'%'
  el[i].style.borderRadius=55+'%'
+} 
+for(i=0;i<7;i++)
+{
+ ele[i]=document.createElement('div')
+ ele[i].className='els'
+ smcndctr[3].appendChild(ele[i])
+ ele[i].style.left=(40+30*Math.random())+'%'
+ ele[i].style.top=(5+90*Math.random())+'%'
+ ele[i].style.borderRadius=55+'%'
+ ele[i].style.opacity=0
 } 
 
 bbtn=1
@@ -300,6 +310,7 @@ smcndctr[0].onmouseover=()=>
   for(i=0;i<7;i++)
   {
    el[i].style.opacity=Math.random()
+   ele[i].style.opacity=Math.random()
   }
  }, 222)
 }
@@ -310,6 +321,7 @@ smcndctr[0].onmouseout=()=>
  for(i=0;i<7;i++)
  {
   el[i].style.opacity=1
+  ele[i].style.opacity=0
  } 
 }
 
