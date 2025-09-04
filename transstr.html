@@ -35,7 +35,7 @@ button:hover
  z-index:1;
 }
 
-.tpnp,.fnctn,.smcndctr,.els
+.tpnp,.fnctn,.smcndctr,.els,.pin
 {
  position:absolute;
  transition:1s;
@@ -72,7 +72,10 @@ button:hover
 
 <div class=smcndctr>
  <div class=smcndctr></div>
- <div class=smcndctr></div>
+ <div class=smcndctr>
+  <div class=pin></div>
+  <div class=pin></div>
+ </div>
  <div class=smcndctr></div>
 </div>
 
@@ -82,6 +85,7 @@ pnp=document.getElementsByClassName('pnp')
 tpnp=document.getElementsByClassName('tpnp')
 fnctn=document.getElementsByClassName('fnctn')
 smcndctr=document.getElementsByClassName('smcndctr')
+pin=document.getElementsByClassName('pin')
 els=document.getElementsByClassName('els')
 
 pnp[0].style.left=33+'%'
@@ -187,13 +191,31 @@ smcndctr[3].style.width=55+'%'
 smcndctr[3].style.height=100+'%'
 smcndctr[3].style.background='#b00'
 
+pin[0].style.left=-13+'%'
+pin[0].style.top=-10+'%'
+pin[0].style.width=55+'%'
+pin[0].style.height=103+'%'
+pin[0].style.border='12px ridge #999'
+pin[0].style.borderLeft='12px ridge transparent'
+pin[0].style.borderRight='12px ridge transparent'
+pin[0].style.zIndex=-2
+pin[1].style.left=33+'%'
+pin[1].style.top=2+'%'
+pin[1].style.width=33+'%'
+pin[1].style.height=73+'%'
+pin[1].style.borderRadius=55+'%'
+pin[1].style.border='1px ridge #f00'
+pin[1].style.borderTop='12px ridge transparent'
+pin[1].style.borderBottom='12px ridge transparent'
+pin[1].style.opacity=0
+
 el=[7],ele=[7]
 for(i=0;i<7;i++)
 {
  el[i]=document.createElement('div')
  el[i].className='els'
  smcndctr[0].appendChild(el[i])
- el[i].style.left=(30*Math.random())+'%'
+ el[i].style.left=(10+30*Math.random())+'%'
  el[i].style.top=(5+90*Math.random())+'%'
  el[i].style.borderRadius=55+'%'
 } 
@@ -256,7 +278,6 @@ pnp[0].onmouseover=()=>
  fnctn[2].style.color='#ff0'
  fnctn[2].style.transform=
   'scale(4) translate(66%,-188%) skew(22deg)'
-  
 }
 pnp[0].onmouseout=()=>
 {
@@ -301,26 +322,39 @@ tpnp[0].onmouseout=()=>
 Ism=0
 smcndctr[0].onmouseover=()=>
 {
+  pin[0].style.borderTopColor='#f00'
+  pin[0].style.borderBottomColor='#f00'
+  pin[1].style.opacity=0.6
  Ism=setInterval(()=>{
   smcndctr[0].style.transform=
   'scale('+(3+Math.random()/4)+')'
   smcndctr[2].style.transform=
   'scale('+(2+Math.random()/4)+',1) translate('+
   (7*Math.random())+'%,0%)'
+  pin[1].style.transform='scale('+
+   (1+Math.random()/2)+')'
   for(i=0;i<7;i++)
   {
    el[i].style.opacity=Math.random()
    ele[i].style.opacity=Math.random()
-  }
+  } 
  }, 222)
 }
 smcndctr[0].onmouseout=()=>
 {
  smcndctr[2].style.transform='scale(1)' 
+ pin[0].style.borderTopColor='#999'
+ pin[0].style.borderBottomColor='#999'
+ pin[1].style.opacity=0
+ pin[1].style.transform='scale(1)'
   clearInterval(Ism)
  for(i=0;i<7;i++)
  {
+  el[i].style.left=(10+30*Math.random())+'%'
+  el[i].style.top=(5+90*Math.random())+'%'
   el[i].style.opacity=1
+  ele[i].style.left=(40+30*Math.random())+'%'
+  ele[i].style.top=(5+90*Math.random())+'%'
   ele[i].style.opacity=0
  } 
 }
