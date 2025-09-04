@@ -43,6 +43,7 @@
  <div class=blb></div>
  <div class=blb></div>
  <div class=blb></div>
+ <div class=blb></div>
 </div>
 
 <script>
@@ -164,6 +165,14 @@ blb[3].style.background=
  'radial-gradient(#fff,#bbb)'
 blb[3].style.borderRadius=55+'%'
 blb[3].style.opacity=0
+blb[4].style.left=30+'%'
+blb[4].style.top=47+'%'
+blb[4].style.width=66+'%'
+blb[4].style.height=9+'%'
+blb[4].style.background=
+ 'radial-gradient(#fff,#bbb)'
+blb[4].style.borderRadius=55+'%'
+blb[4].style.opacity=0
 
 ttlI=0
 function cl()
@@ -188,6 +197,7 @@ ttl[0].onmouseover=()=>
  blb[1].style.opacity=0.7
  blb[2].style.opacity=0.9
  blb[3].style.opacity=0.9
+ blb[4].style.opacity=0.9
  Iblb=setInterval(()=>{
    blb[0].style.transform='scale('+
     (1+Math.random()/5)+')'
@@ -197,6 +207,8 @@ ttl[0].onmouseover=()=>
     (1+Math.random()/5)+')'
    blb[3].style.transform='scale('+
     (1+Math.random()/2)+',2) translate(0,-66%)'
+   blb[4].style.transform='scale('+
+    (1+Math.random()/2)+',2) translate(0,77%)'
  }, 666)
 }
 ttl[0].onmouseout=()=>
@@ -213,6 +225,8 @@ ttl[0].onmouseout=()=>
  blb[2].style.opacity=0
  blb[3].style.opacity=0
  blb[3].style.transform='scale(1)'
+ blb[4].style.opacity=0
+ blb[4].style.transform='scale(1)'
   clearInterval(Iblb)
 }
 
