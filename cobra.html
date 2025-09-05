@@ -232,10 +232,8 @@ tbe[3].style.left=9+'%'
 tbe[3].style.top=266+'%' 
 tbe[3].style.width=79+'%'
 tbe[3].style.height=88+'%'
-tbe[3].style.borderTop='1px ridge transparent'
+tbe[3].style.border='1px ridge transparent'
 tbe[3].style.borderBottom='3px solid #000'
-tbe[3].style.borderLeft='1px ridge transparent'
-tbe[3].style.borderRight='1px ridge transparent'
 tbe[3].style.opacity=0
 
   bcl=0
@@ -281,11 +279,13 @@ function cl()
 
 ttl[0].onmouseover=()=>
 {
+ ttl[0].style.color='#f00'
  ttl[0].style.transform='skew(23deg)'
   ttl[0].innerHTML=snk	
 }
 ttl[0].onmouseout=()=>
 {
+ ttl[0].style.color='#099'
  ttl[0].style.transform='skew(0deg)'
   ttl[0].innerHTML='SNAKES' 
 }
@@ -317,11 +317,13 @@ function clk()
  tbe[3].style.transform='scale(2,5)'
  ttl[3].style.background=
   'radial-gradient(#088,#00f)'
+ ttl[3].style.opacity=0 
  ttl[3].style.transform=
   'scale(3,2) translate(0,-322%)'
  setTimeout(()=>{
   idb.style.opacity=1
   ttl[2].style.transform='scale(1)'
+  ttl[3].style.opacity=0.7
   hd[2].style.background=
    'radial-gradient(7px,#ff0,#fff)'
   hd[3].style.background=
