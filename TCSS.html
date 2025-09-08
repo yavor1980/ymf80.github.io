@@ -218,20 +218,39 @@ nm[0].onmouseout=()=>
   fact(psy)
   fact(cult)
   
+atrck=[9,39,69] 
+Itrck=0 
 trck[4].onmouseover=()=>
 {
  trck[4].style.background=
   'radial-gradient(#0f0,#00f,#f00)'
  trck[4].style.borderRadius=15+'%'
+ trck[4].style.border='5px ridge #f00'
  trck[4].style.transform='scale(1.1)' 
+ Itrck=setInterval(()=>
+ {
+  for(i=1;i<4;i++)
+  {
+   atrck[i-1]-=8
+   trck[i].style.top=atrck[i-1]+'%'
+   if(atrck[i-1]<0) 
+    trck[i].style.top=69+'%' 
+  }
+ }, 444) 
 }
 trck[4].onmouseout=()=>
 {
-
+ atrck=[9,39,69] 
+ for(i=1;i<4;i++)
+ {
+  trck[i].style.top=atrck[i-1]+'%' 
+ } 
  trck[4].style.background=
   'radial-gradient(#f00,#0f0,#00f)'
  trck[4].style.borderRadius=55+'%' 
+ trck[4].style.border='none'
  trck[4].style.transform='scale(1)'  
+  clearInterval(Itrck)
 }
 		  
 </script>
