@@ -233,8 +233,13 @@ trck[4].onmouseover=()=>
   {
    atrck[i-1]-=8
    trck[i].style.top=atrck[i-1]+'%'
-   if(atrck[i-1]<0) 
-    trck[i].style.top=69+'%' 
+   trck[i].style.opacity=1
+   if(atrck[i-1]<0)
+   {
+    trck[i].style.top=80+'%' 
+	trck[i].style.opacity=0
+	 atrck[i-1]=89
+   }
   }
  }, 444) 
 }
