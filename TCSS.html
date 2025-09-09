@@ -160,6 +160,22 @@ ttl[0].onmouseout=()=>
  ttl[1].style.transform='scale(0)'
 }
 
+function ftrck(i)
+{
+trck[i].onmouseover=()=>
+{ 
+ trck[i].style.color='#f00'
+ trck[i].style.fontSize=3+'em'
+}
+trck[i].onmouseout=()=>
+{ 
+ trck[i].style.color='#000'
+ trck[i].style.fontSize=2+'em'
+}
+}
+ ftrck(1),ftrck(2),ftrck(3)
+
+
 Imovr=0
 function fact(nm)
 {
@@ -231,11 +247,13 @@ trck[4].onmouseover=()=>
  {
   for(i=1;i<4;i++)
   {
+   //trck[i].style.transition=1+'s'
    atrck[i-1]-=8
    trck[i].style.top=atrck[i-1]+'%'
    trck[i].style.opacity=1
    if(atrck[i-1]<0)
    {
+    //trck[i].style.transition=0+'ms'
     trck[i].style.top=80+'%' 
 	trck[i].style.opacity=0
 	 atrck[i-1]=89
