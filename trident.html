@@ -42,7 +42,7 @@
  <div class=ltra>Y</div> 
 </div> 
 <div class=ttl></div> 
-<div class=ttl>added value</div> 
+<div class=ttl></div> 
 
 <script>
 trdnt=document.getElementsByClassName('trdnt')
@@ -139,8 +139,13 @@ function ftrdnt()
  ltra[6].style.transform=
   'scale(9) translate(248%,178%) skew('
   +(44*Math.random()-21)+'deg)'
+ ttl[0].style.transform=
+  'scale('+(7+3*Math.random())+',7) skew('+
+  (27*Math.random())+'deg)'
+ ttl[1].style.transform=
+  'scale(7) skew('+(27*Math.random())+'deg)'   
 }
- ftrdnt()
+ //ftrdnt()
  
 Itrdnt=0
 trdnt[0].onmouseover=()=>
@@ -152,12 +157,12 @@ trdnt[0].onmouseover=()=>
  trdnt[2].style.background='#ff0'
  trdnt[3].style.background='#ff0'
  trdnt[4].style.background='#ff0'
+ ttl[0].style.color='#f00'
+  ttl[0].innerHTML= 'Added'
+ ttl[1].style.color='#b00'
+   ttl[1].innerHTML= 'Value'
  for(i=0;i<7;i++)
   ltra[i].style.opacity=1
-  ttl[0].style.color='#f00'
-   ttl[0].innerHTML= 'Added'
-  ttl[1].style.color='#b00'
-   ttl[1].innerHTML= 'Value'
   ftrdnt()
   Itrdnt=setInterval(()=>ftrdnt(), 999)
 }
