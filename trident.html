@@ -7,11 +7,16 @@
  background:radial-gradient(#333,#999);
 }
 
-.trdnt,.ttl
+.trdnt
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
+}
+.ttl
+{
+ position:absolute;
+ transition:1s;
 }
 .ltra
 {
@@ -43,6 +48,7 @@
 </div> 
 <div class=ttl></div> 
 <div class=ttl></div> 
+<div class=ttl></div>
 
 <script>
 trdnt=document.getElementsByClassName('trdnt')
@@ -103,6 +109,14 @@ ttl[1].style.color='#440'
 ttl[1].style.opacity=0.6
 ttl[1].style.transform='scale(7) skew(17deg)'
  ttl[1].innerHTML='Curse'
+ttl[2].style.left=6+'%'
+ttl[2].style.bottom=3+'%'
+ttl[2].style.width=77+'%'
+ttl[2].style.height=22+'%'
+ttl[2].style.background='#556'
+ttl[2].style.borderRadius=55+'%'
+ttl[2].style.opacity=0.6
+ttl[2].style.zIndex=-1
 
 Icl=0
 function fcl()
@@ -139,13 +153,22 @@ function ftrdnt()
  ltra[6].style.transform=
   'scale(9) translate(248%,178%) skew('
   +(44*Math.random()-21)+'deg)'
+}
+ ftrdnt()
+ 
+function fttl()
+{ 
  ttl[0].style.transform=
   'scale('+(7+3*Math.random())+',7) skew('+
-  (27*Math.random())+'deg)'
+  (27*Math.random())+'deg) translate(7%,48%)'
  ttl[1].style.transform=
-  'scale(7) skew('+(27*Math.random())+'deg)'   
-}
- //ftrdnt()
+  'scale(7) skew('+(27*Math.random())+'deg)'
+ ttl[2].style.background=
+  'radial-gradient(#f0f,#ff0)'  
+ ttl[2].style.opacity=0.4+Math.random()/7
+ ttl[2].style.transform=
+  'scale('+(1+Math.random()/8)+')'   
+} 
  
 Itrdnt=0
 trdnt[0].onmouseover=()=>
@@ -157,14 +180,15 @@ trdnt[0].onmouseover=()=>
  trdnt[2].style.background='#ff0'
  trdnt[3].style.background='#ff0'
  trdnt[4].style.background='#ff0'
- ttl[0].style.color='#f00'
+ ttl[0].style.color='#f0f'
   ttl[0].innerHTML= 'Added'
  ttl[1].style.color='#b00'
    ttl[1].innerHTML= 'Value'
+   fttl()
  for(i=0;i<7;i++)
   ltra[i].style.opacity=1
   ftrdnt()
-  Itrdnt=setInterval(()=>ftrdnt(), 999)
+  Itrdnt=setInterval(()=>{ftrdnt();fttl();}, 999)
 }
 trdnt[0].onmouseout=()=>
 {
@@ -175,13 +199,17 @@ trdnt[0].onmouseout=()=>
  trdnt[2].style.background='#fff'
  trdnt[3].style.background='#fff'
  trdnt[4].style.background='#fff'
+ ttl[0].style.color='#444'
+ ttl[0].style.transform='scale(7) skew(12deg)'
+  ttl[0].innerHTML= 'Resource'
+ ttl[1].style.color='#440' 
+ ttl[1].style.transform='scale(7) skew(17deg)'
+  ttl[1].innerHTML= 'Curse'
+ ttl[2].style.background='#556' 
+ ttl[2].style.opacity=0.6 
+  clearInterval(Itrdnt)
  for(i=0;i<7;i++)
   ltra[i].style.opacity=0.1
-  ttl[0].style.color='#444'
-   ttl[0].innerHTML= 'Resource'
-  ttl[1].style.color='#440' 
-   ttl[1].innerHTML= 'Curse'
-  clearInterval(Itrdnt)
 }
 
 //for(var i=0;i<n;i++
