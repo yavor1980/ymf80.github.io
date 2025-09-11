@@ -288,6 +288,8 @@ rckt[0].onmouseover=()=>
  btn[0].onclick()
  btn[2].style.transform='scale(2)'
   btn[2].innerHTML=dn
+ rckt[1].style.borderRight='2px ridge #400'
+ rckt[2].style.borderLeft='2px ridge #400'
  Irrckt=setInterval(()=>{
   btn[2].innerHTML=dn
   dn--
@@ -316,6 +318,8 @@ rckt[0].onmouseout=()=>
  btn[2].style.transform='scale(1)'
   btn[2].innerHTML=''
  rckt[0].style.transform='scale(1)'
+ rckt[1].style.borderRight='none'
+ rckt[2].style.borderLeft='none'
  rckt[4].style.background='none'
  rckt[4].style.opacity=0
  rckt[4].style.transform='scale(1)' 
