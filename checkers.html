@@ -44,12 +44,12 @@
 }
 
 </style>
-<div class=dsk></div>
-
 <button class=btn >Go..</button>
 <button class=btn >Stay</button>
 <button class=btn >Mix</button>
 <button class=btn >Step</button>
+
+<div class=dsk></div>
 
 <script>
 btn=document.getElementsByClassName("btn")
@@ -58,7 +58,7 @@ ttpl=document.getElementsByClassName("ttpl")
    
 btn[0].style.left=5+'%'
 btn[0].style.top=11+'%'
-btn[0].style.background='#b00'
+btn[0].style.background='#f00'
 btn[0].style.color='#fff'
 btn[0].style.transform='scale(3)'
 btn[1].style.left=5+'%'
@@ -68,7 +68,7 @@ btn[1].style.color='#eee'
 btn[1].style.transform='scale(3)'  
 btn[2].style.left=5+'%'
 btn[2].style.top=21+'%'
-btn[2].style.background='#b00'
+btn[2].style.background='#b0f'
 btn[2].style.color='#eee'
 btn[2].style.transform='scale(3)'  
 btn[3].style.left=5+'%'
@@ -140,6 +140,7 @@ function arrfgr()
  {
    bf[i].style.left=ab[i].x*50+'px'
    bf[i].style.top=ab[i].y*50+'px'
+   bf[i].style.transform='scale(1)'
  }
 }
   arrfgr()
@@ -150,24 +151,25 @@ function mv()
 {
  if(bmv)
   dsk[0].style.transform= 
-   'scale(0.6) translate(0, 11%) skew(33deg)'
+   'scale(0.6) translate(0,11%) skew(33deg)'
  else
   dsk[0].style.transform= 
-   'scale(1.2) translate(0, 15%) skew(-33deg)'
+   'scale(1.2) translate(0,15%) skew(-33deg)'
  bmv=!bmv
 }
+
 bbtn0=0 
 btn[0].onclick=()=>
 {
  if(bbtn0==0)
  {
    mv()
-  Isi=setInterval(mv, 2000)	
+   Isi=setInterval(mv, 2000)	
    btn[0].innerHTML='Stop' 
  }
  else
  {
-  clearInterval(Isi)
+   clearInterval(Isi)
   dsk[0].style.transform= 
    'scale(1.6) translate(11%,11%)'
    btn[0].innerHTML='Go..'
@@ -203,8 +205,10 @@ function tchw(i)
   {
    vx=(event.offsetX)*5
    vy=(event.offsetY)*5
-   wf[i].style.left=vx+'px'
-   wf[i].style.top=vy+'px'
+   dx=vx%50
+   dy=vy%50
+   wf[i].style.left=(vx-dx)+'px'
+   wf[i].style.top=(vy-dy)+'px'
   } 
   wf[i].style.transform='scale(1.2)'
   wf[i].style.background=
@@ -235,7 +239,7 @@ function clw(i)
   wf[i].style.top=(aw[i].y+1)*50
    aw[i].y+=1
   if(st==0)st=-1; else st=1; 
-  clb(11)
+  clb(1)
    btn[1].disabled=0
  }
 }
@@ -250,10 +254,15 @@ function tchb(i)
  {
   if(bbf)
   {
-   bf[i].style.left=event.offsetX*5
-   bf[i].style.top=event.offsetY*5
+   vx=(event.offsetX)*5
+   vy=(event.offsetY)*5
+   dx=vx%50
+   dy=vy%50
+   bf[i].style.left=(vx-dx)+'px'
+   bf[i].style.top=(vy-dy)+'px'
    for(j=0;j<12;j++)    
-    if(bf[i].style.left<=wf[j].style.left)
+    if((bf[i].style.left==wf[j].style.left)&&
+	 (bf[i].style.top==wf[j].style.top))
 	 bf[i].style.transform='scale(0)'
 	 wf[i].style.transform='scale(0)'
   } 
@@ -281,9 +290,9 @@ function clb(i)
    st=Math.round(Math.random()*2-1)
   if(st<0)st=-1; else st=1; 
   if(ab[i].x+st<0||ab[i].x+st>7) st=-st 
- // for(j=0;j<12;j++)
-   //if((aw[j].x==ab[i].x)&&(aw[j].x==ab[i].x))
-    //wf[j].style.transform='scale(0)'
+  for(j=0;j<12;j++)
+   if((aw[j].x==ab[i].x)&&(aw[j].y==ab[i].y))
+    wf[j].style.transform='scale(0)'
   bf[i].style.left=(ab[i].x+st)*50
    ab[i].x+=st
   bf[i].style.top=(ab[i].y-1)*50
