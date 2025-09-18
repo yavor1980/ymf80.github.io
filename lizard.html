@@ -128,6 +128,7 @@ btn=document.getElementsByClassName('btn')
 grnd=document.getElementsByClassName('grnd')
 hd=document.getElementsByClassName('hd')
 pw=document.getElementsByClassName('pw')
+fhvs=document.getElementsByClassName('fhvs')
 hvs=document.getElementsByClassName('hvs')
 gl=document.getElementsByClassName('gl')
 zr=document.getElementsByClassName('zr')
@@ -198,6 +199,7 @@ function inn(nm,i, l,t, w,h, bkgrd, btlr,btrr,bblr,bbrr)
 }	 
 inn(hd,0, 22,21, 44,66,
  'radial-gradient(#880,#222)',-55,55,33,33)
+//hd[0].style.width=544+'px'
 inn(hd,1, 28,22, 44,66,
  'radial-gradient(#880,#222)',55,55,33,33)
  hd[1].style.cursor='pointer'
@@ -244,6 +246,8 @@ function stp()
 {  
  if(bstp)
  {
+  hd[1].style.transform='scale(1.3)'
+  hd[2].style.transform='rotate(-22deg)'
   pw[0].style.transform='translate(0,-33%)'
   pw[1].style.transform=
    'translate(-144%,0) rotate(44deg)'
@@ -252,12 +256,10 @@ function stp()
   pw[2].style.transform='translate(0,33%)'
   pw[5].style.transform=' translate(0,3%)'
   pw[6].style.transform=' translate(0,-3%)'
-  hd[1].style.transform=
-   'scale(1.3) translate(0%,0)'
-  hd[2].style.transform='rotate(-22deg)'
  } 
   else
  {
+  hd[2].style.transform='rotate(22deg)'
   pw[0].style.transform='translate(0,33%)'
   pw[1].style.transform=
    'translate(144%,0) rotate(-44deg)'
@@ -267,7 +269,6 @@ function stp()
   pw[2].style.transform='translate(0,-33%)'
   pw[5].style.transform=' translate(0,-3%)'
   pw[6].style.transform=' translate(0,3%)'
-  hd[2].style.transform='rotate(22deg)'
  }
   bstp=!bstp
 }
@@ -280,8 +281,8 @@ function clk()
  mth[0].style.height='22%'
  gl[0].style.transform='scale(2)'
  gl[1].style.transform='scale(2)'
- pw[0].style.transform='translate(0,0)'
- pw[2].style.transform='translate(0,0)'
+ fhvs[0].style.borderTop='17px ridge #333'
+ fhvs[1].style.borderTop='17px ridge #333'
  pw[3].style.background=
   'radial-gradient(#fb0,#555)'
  pw[3].style.transform=
@@ -326,8 +327,8 @@ function clk()
    'scale(1) translate(0%,0)'
   gl[0].style.transform='scale(1)'
   gl[1].style.transform='scale(1)'
-  pw[0].style.transform='translate(0,0%)'
-  pw[2].style.transform='translate(0,0)'
+  fhvs[0].style.borderTop='none'
+  fhvs[1].style.borderTop='none'
   pw[3].style.background=
    'radial-gradient(#f80,#555)'
   pw[3].style.transform='scale(1)'
