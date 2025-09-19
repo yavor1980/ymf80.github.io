@@ -97,7 +97,10 @@
 <div class=grnd>
  <div class=grnd></div>
  <div class=grnd></div>
- <div class=grnd><div class=grnd></div></div>
+ <div class=grnd>
+  <div class=grnd></div>
+  <div class=grnd></div>
+ </div>
 </div>
 
 <div class=hd>
@@ -184,6 +187,15 @@ grnd[4].style.opacity=0.9
 grnd[4].style.borderRadius=55+'%'
 grnd[4].style.borderBottomLeftRadius=22+'%'
 grnd[4].style.borderBottomRightRadius=26+'%'
+grnd[5].style.left=-15+'%'	  
+grnd[5].style.top=5+'%'
+grnd[5].style.width=99+'%'
+grnd[5].style.height=66+'%'
+grnd[5].style.background=
+ 'radial-gradient(#000,#777)' 
+grnd[5].style.borderRadius=55+'%' 
+grnd[5].style.opacity=0  
+	  
 	  
 function inn(nm,i, l,t, w,h, bkgrd, btlr,btrr,bblr,bbrr)
 {
@@ -276,8 +288,13 @@ function stp()
 		 
 function clk()
 {
+ grnd[4].style.borderTopLeftRadius=17+'%'
+ grnd[4].style.borderTopRightRadius=17+'%'
  grnd[4].style.transform=
   'scale(3,7) translate(0,-14%)'
+ grnd[5].style.opacity=0.6
+ grnd[5].style.transform=
+  'scale(1.2,1.2) translate(0,-148%)' 
  mth[0].style.height='22%'
  gl[0].style.transform='scale(2)'
  gl[1].style.transform='scale(2)'
@@ -305,6 +322,10 @@ function clk()
    'scale(1,1.3) translate(0,-14%) skew(-22deg)'
   grnd[3].style.transform=
    'scale(1,1.3) translate(0,-14%) skew(22deg)' 
+  grnd[4].style.borderTopLeftRadius=
+   33*Math.random()+'%'
+  grnd[4].style.borderTopRightRadius=
+   33*Math.random()+'%'
   hd[2].style.transform='scale(2) translate(-44%,0)' 
  }  
  else  
@@ -312,7 +333,7 @@ function clk()
   grnd[2].style.transform=
    'scale(1,1.3) translate(0,-14%) skew(22deg)'
   grnd[3].style.transform=
-   'scale(1,1.3) translate(0,-14%) skew(-22deg)'    
+   'scale(1,1.3) translate(0,-14%) skew(-22deg)' 
   hd[2].style.transform='scale(2) translate(44%,0)'  
  } 
  setTimeout(()=>{
@@ -322,6 +343,8 @@ function clk()
   grnd[2].style.transform='scale(1)'
   grnd[3].style.transform='scale(1)'
   grnd[4].style.transform='scale(1)'
+  grnd[5].style.opacity=0
+  grnd[5].style.transform='scale(1)'
   mth[0].style.height='1%'
   hd[2].style.transform=
    'scale(1) translate(0%,0)'
