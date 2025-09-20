@@ -26,33 +26,41 @@
  transform:scale(1.1);  
 }
 
-.rw0,.rw1,.rw2,.frz
+.rw0,.rw1,.rw2,.dd
 {
  position:absolute;  
  transition:1s;
  border-radius:5%;
  text-align:center;
 }
+.dd
+{
+ left:9%;
+ width:77%;
+ height:11%;
+ background:#f00; 
+}
 
 </style>
+<button class=btn>bottom</button>
+
 <div class=rw0>
  <div class=rw0>lft-tp<br> corner</div>
  <div class=rw0>top </div>
  <div class=rw0>rght-tp<br> corner</div>
 </div>
-<button class=btn>top</button>
+<button class=btn>center</button>
 <div class=rw1>
  <div class=rw1>left </div>
  <div class=rw1>center</div>
  <div class=rw1>right </div>
 </div>
-<button class=btn>center</button>
+<button class=btn>top</button>
 <div class=rw2>
  <div class=rw2>lft-bttm<br> corner</div>
  <div class=rw2><br>bottom</div>
  <div class=rw2>rght-bttm<br> corner</div>
 </div>
-<button class=btn>bottom</button>
 <div class=rw2></div>
 
 <script>
@@ -61,6 +69,7 @@ btn=document.getElementsByClassName('btn')
 rw0=document.getElementsByClassName('rw0')
 rw1=document.getElementsByClassName('rw1')
 rw2=document.getElementsByClassName('rw2')
+dd=document.getElementsByClassName('dd')
 	
 function init(c,i, l,t, w,h,bkg)
 { 
@@ -123,19 +132,20 @@ function clk(nm)
 }
 btn[0].onmouseover=()=>
 { 
- clk(rw0)
- ii0=setInterval(()=>clk(rw0), 1000)
+ clk(rw2)
+ ii0=setInterval(()=>clk(rw2), 1000)
 }
 btn[0].onmouseout=()=>
 { 
   clearInterval(ii0)
- rw0[1].style.fontSize='0em' 
- rw0[1].style.transform='scale(1)'
- rw0[2].style.fontSize='0em'
- rw0[2].style.transform='scale(1)'
- rw0[3].style.fontSize='0em'
- rw0[3].style.transform='scale(1)'
+ rw2[1].style.fontSize='0em' 
+ rw2[1].style.transform='scale(1)'
+ rw2[2].style.fontSize='0em'
+ rw2[2].style.transform='scale(1)'
+ rw2[3].style.fontSize='0em'
+ rw2[3].style.transform='scale(1)'
 }
+
 btn[1].onmouseover=()=>
 { 
  clk(rw1)
@@ -151,20 +161,21 @@ btn[1].onmouseout=()=>
  rw1[3].style.fontSize='0em'
  rw1[3].style.transform='scale(1)'
 }
+
 btn[2].onmouseover=()=>
 { 
- clk(rw2)
- ii2=setInterval(()=>clk(rw2), 1000)
+ clk(rw0)
+ ii2=setInterval(()=>clk(rw0), 1000)
 }
 btn[2].onmouseout=()=>
 { 
   clearInterval(ii2)
- rw2[1].style.fontSize='0em'
- rw2[1].style.transform='scale(1)'
- rw2[2].style.fontSize='0em'
- rw2[2].style.transform='scale(1)'
- rw2[3].style.fontSize='0em'
- rw2[3].style.transform='scale(1)'
+ rw0[1].style.fontSize='0em'
+ rw0[1].style.transform='scale(1)'
+ rw0[2].style.fontSize='0em'
+ rw0[2].style.transform='scale(1)'
+ rw0[3].style.fontSize='0em'
+ rw0[3].style.transform='scale(1)'
 }
 	  	  
 function mv(nm,fnt)
@@ -192,12 +203,16 @@ mv(rw2[1],'2em')
 mv(rw2[2],'2em')
 mv(rw2[3],'2em') 
 
+add=[]
 idir=0
 function fdir(nm,fr)
 {
  nm.onclick=()=>
  {
-  rw2[4].innerHTML+=fr
+  add[idir]=document.createElement('div')
+  add[idir].className='dd'
+  rw2[4].appendChild(add[idir])
+  dd[idir].style.top=(4+idir*12)+'%'
    idir++
  }
 }
@@ -228,7 +243,7 @@ rw2[4].onmouseout=()=>
 }
 rw2[4].onclick=()=>
 { 
- rw2[4].innerHTML=''
+ 
 }
  
 </script>
