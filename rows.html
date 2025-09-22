@@ -43,7 +43,6 @@
 
 </style>
 <button class=btn>bottom</button>
-
 <div class=rw0>
  <div class=rw0>lft-tp</div>
  <div class=rw0>top </div>
@@ -62,6 +61,7 @@
  <div class=rw2>rght-bttm</div>
 </div>
 <div class=rw2></div>
+<button class=btn>reset</button>
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -82,6 +82,7 @@ function init(c,i, l,t, w,h,bkg)
 init(btn,0, 35,26, 12,6,'#b50')
 init(btn,1, 49,26, 12,6,'#095')
 init(btn,2, 63,26, 12,6,'#bb0')
+init(btn,3, 57,57, 12,6,'#b00')
  
 init(rw0,0, 7,3, 66,22,'#660')
 init(rw0,1, 6,3, 22,88,'#00f')
@@ -255,6 +256,13 @@ rw2[4].onmouseout=()=>
  rw2[4].style.background='#808'
 }
 
+btn[3].onclick=()=>
+{ 
+ for(i=0;i<8;i++)
+  dd[i].style.opacity=0.2
+  dd[i].style.fontSize=0+'em' 
+   idir=0
+}
 function cld(i)
 {
 dd[i].onclick=()=>
