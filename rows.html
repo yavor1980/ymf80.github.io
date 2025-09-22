@@ -45,9 +45,9 @@
 <button class=btn>bottom</button>
 
 <div class=rw0>
- <div class=rw0>lft-tp<br> corner</div>
+ <div class=rw0>lft-tp</div>
  <div class=rw0>top </div>
- <div class=rw0>rght-tp<br> corner</div>
+ <div class=rw0>rght-tp</div>
 </div>
 <button class=btn>center</button>
 <div class=rw1>
@@ -57,9 +57,9 @@
 </div>
 <button class=btn>top</button>
 <div class=rw2>
- <div class=rw2>lft-bttm<br> corner</div>
- <div class=rw2><br>bottom</div>
- <div class=rw2>rght-bttm<br> corner</div>
+ <div class=rw2>lft-bttm</div>
+ <div class=rw2>bottom</div>
+ <div class=rw2>rght-bttm</div>
 </div>
 <div class=rw2></div>
 
@@ -205,46 +205,68 @@ mv(rw2[3],'2em')
 
 add=[]
 idir=0
+for(i=0;i<8;i++)
+{
+ add[i]=document.createElement('div')
+ add[i].className='dd'
+ rw2[4].appendChild(add[i])
+ dd[i].style.top=(4+i*12)+'%'
+ dd[i].style.color='#ff0'
+ dd[i].style.opacity=0.2
+ dd[i].style.fontSize=0+'em'
+}
 function fdir(nm,fr)
 {
  nm.onclick=()=>
  {
-  add[idir]=document.createElement('div')
-  add[idir].className='dd'
-  rw2[4].appendChild(add[idir])
-  dd[idir].style.top=(4+idir*12)+'%'
+   if(idir>7)
+   { 
+    for(i=0;i<8;i++)
+	 dd[i].style.opacity=0.2
+    idir=0
+   }
+  dd[idir].style.opacity=1
+  dd[idir].style.fontSize=2.6+'em'
+   dd[idir].innerHTML=fr
    idir++
  }
 }
+/**/
+fdir(rw0[1],'lft-to')
+fdir(rw0[2],'top')
+fdir(rw0[3],'rght-tp')
 
-fdir(rw0[1],'left-top-corner <br>' )
-fdir(rw0[2],'top <br>' )
-fdir(rw0[3],'right-top-corner <br>' )
+fdir(rw1[1],'left' )
+fdir(rw1[2],'center' )
+fdir(rw1[3],'right' )
 
-fdir(rw1[1],'left <br>' )
-fdir(rw1[2],'center <br>' )
-fdir(rw1[3],'right <br>' )
-
-fdir(rw2[1],'left-bottom-corner <br>' )
-fdir(rw2[2],'bottom <br>' )
-fdir(rw2[3],'right-bottom-corner <br>' )
+fdir(rw2[1],'lft-bttm')
+fdir(rw2[2],'bottom')
+fdir(rw2[3],'rght-bm')
 
 rw2[4].onmouseover=()=>
 {
  rw2[4].style.height='88%'
  rw2[4].style.background='#a0a'
- rw2[4].style.fontSize='2em'
 }
 rw2[4].onmouseout=()=>
 { 
  rw2[4].style.height='77%'
  rw2[4].style.background='#808'
- rw2[4].style.fontSize='1em'
 }
-rw2[4].onclick=()=>
+
+function cld(i)
+{
+dd[i].onclick=()=>
 { 
- 
+ for(j=i;j<8;j++)
+  dd[j].style.opacity=0.2
+  dd[j].style.fontSize=0+'em' 
+   idir=i
 }
+}
+ cld(0),cld(1),cld(2),cld(3)
+ cld(4),cld(5),cld(6),cld(7)
  
 </script>
 </body>
