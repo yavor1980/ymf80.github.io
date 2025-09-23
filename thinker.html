@@ -6,27 +6,18 @@ body
  background:linear-gradient(44deg,blue,yellow);
 }
 
-.d
+.d,.glss,.gls,.hd
 {
  position:absolute;
  transition:1s;
  border-radius:55%;
 }
-.glss
+.gls
 {
- position:absolute;
- transition:1s;
- left:37%;
- top:22%;
- width:22%;
- height:22%;
- border-radius:55%;
-}
-.hd
-{
- position:absolute;
- transition:1s;
- border-radius:55%;
+ width:100%;
+ height:100%;
+ background:#fff;
+ opacity:0.1;
 }
 
 .lzr,.rzr
@@ -84,8 +75,8 @@ body
  </div> 
  <div class=glss>
   <div class=glss></div>
-  <div class=glss></div>
-  <div class=glss></div>
+  <div class=glss><div class=gls></div></div>
+  <div class=glss><div class=gls></div></div>
  </div>
 </div> 
 
@@ -93,6 +84,8 @@ body
  <div class=dvce>debet </div>
  <div class=dvce>credit </div>
  <div class=dvce></div>
+ <div class=dvce>$</div>
+ <div class=dvce>$</div>
  <div class=dvce>$</div>
 </div> 
 
@@ -121,6 +114,7 @@ d=document.getElementsByClassName('d')
 lzr=document.getElementsByClassName('lzr')
 rzr=document.getElementsByClassName('rzr')
 glss=document.getElementsByClassName('glss')
+gls=document.getElementsByClassName('gls')
 hd=document.getElementsByClassName('hd')
 
 nme=document.getElementsByClassName('nme')
@@ -180,14 +174,17 @@ hd[1].style.top=19+'%'
 hd[1].style.width=12+'%'
 hd[1].style.height=42+'%'
 hd[1].style.background='#f99'
- 
+
+glss[0].style.left=37+'%'
+glss[0].style.top=22+'%'
+glss[0].style.width=22+'%'
+glss[0].style.height=22+'%'
 glss[0].style.opacity=0.5
 glss[0].style.transform='translate(666%,77%)'  
 glss[1].style.left=-11+'%'
 glss[1].style.top=2+'%'
 glss[1].style.width=131+'%'
 glss[1].style.height=22+'%'
-glss[1].style.borderRadius=
 glss[1].style.borderTop='44px ridge #955'
 glss[2].style.left=-81+'%'
 glss[2].style.top=-22+'%'
@@ -203,7 +200,7 @@ glss[3].style.height=22+'%'
 glss[3].style.border='8px ridge #000'
 glss[3].style.transform=
  'scale(5) translate(-6%,-5%)'  
-  
+
 nme[0].style.left=66+'%'
 nme[0].style.top=11+'%'
 nme[0].style.color='#000'
@@ -280,8 +277,16 @@ dvce[3].style.borderRadius=55+'%'
 dvce[3].style.opacity=0
 dvce[4].style.left=44+'%'
 dvce[4].style.top=44+'%'
-dvce[4].style.color='#f99';
+dvce[4].style.color='#f99'
 dvce[4].style.transform='scale(0)'
+dvce[5].style.left=44+'%'
+dvce[5].style.top=44+'%'
+dvce[5].style.color='#f99'
+dvce[5].style.transform='scale(0)'
+dvce[6].style.left=44+'%'
+dvce[6].style.top=44+'%'
+dvce[6].style.color='#f99'
+dvce[6].style.transform='scale(0)'
 
 b=0
 function clk()
@@ -294,6 +299,8 @@ function clk()
  hd[1].style.borderTopRightRadius=24+'%'
  glss[0].style.opacity=1  
  glss[0].style.transform='scale(1)'
+ gls[0].style.opacity=0.5
+ gls[1].style.opacity=0.5
  if(b)
  {
   d[0].style.transform='scale(1.2)'
@@ -338,6 +345,8 @@ d[0].onmouseout=()=>
  hd[1].style.borderTopRightRadius=55+'%'
  glss[0].style.opacity=0.5
  glss[0].style.transform='translate(666%,77%)'
+ gls[0].style.opacity=0.1
+ gls[1].style.opacity=0.1
  lzr[0].style.transform='scale(1)'
  lzr[0].style.background='#000'
  rzr[0].style.transform='scale(1)'
@@ -463,6 +472,10 @@ dvce[0].onmouseover=()=>
   'scale(1.4) translate(-22%,-22%) skew(22deg)' 
  dvce[3].style.opacity=1
  Idvs=setInterval(()=>{
+  dvce[5].style.transform=
+   'scale('+(4+Math.random())+') translate(-292%,-99%)'
+  dvce[6].style.transform=
+   'scale('+(4+Math.random())+') translate(221%,-98%)' 
   if(bdvs)
   {
    dvce[1].style.fontSize='2em'
@@ -488,6 +501,8 @@ dvce[0].onmouseout=()=>
  dvce[2].style.fontSize='0em'  
  dvce[3].style.opacity=0
  dvce[4].style.transform='scale(0)'
+ dvce[5].style.transform='scale(0)'
+ dvce[6].style.transform='scale(0)'
   clearInterval(Idvs)
 }	 
 	 
