@@ -13,7 +13,7 @@
 .ttl,.psy,.cult,.trck
 {
  position:absolute;   
- transition:1s;
+ transition:999ms;
  text-align:center;
 }
 .ttl,.psy,.cult
@@ -145,6 +145,8 @@ trck[4].style.height=30+'%'
 trck[4].style.background=
  'radial-gradient(#f00,#0f0,#00f)'
 trck[4].style.borderRadius=55+'%'
+trck[4].style.fontSize=0+'em'
+ trck[4].innerHTML='Sliding...'
 trck[4].style.cursor='pointer'
 
 ttl[0].onmouseover=()=>
@@ -174,7 +176,6 @@ trck[i].onmouseout=()=>
 }
 }
  ftrck(1),ftrck(2),ftrck(3)
-
 
 Imovr=0
 function fact(nm)
@@ -209,6 +210,7 @@ nm[0].onmouseover=()=>
 }
 nm[0].onmouseout=()=>
 { 
+  clearInterval(Imovr)
  nm[0].style.transform='scale(1)'
  nm[0].style.color='#bbb'
  nm[0].style.padding=0+'px'
@@ -228,7 +230,6 @@ nm[0].onmouseout=()=>
  trck[2].style.fontSize=2+'em'
  trck[3].style.color='#000'
  trck[3].style.fontSize=2+'em'
-  clearInterval(Imovr)
 }
 }
   fact(psy)
@@ -240,9 +241,11 @@ trck[4].onmouseover=()=>
 {
  trck[4].style.background=
   'radial-gradient(#0f0,#00f,#f00)'
+ trck[4].style.color='#bbb' 
  trck[4].style.borderRadius=15+'%'
  trck[4].style.border='5px ridge #f00'
  trck[4].style.transform='scale(1.1)' 
+ trck[4].style.fontSize=5+'em'
  Itrck=setInterval(()=>
  {
   for(i=1;i<4;i++)
@@ -263,6 +266,7 @@ trck[4].onmouseover=()=>
 }
 trck[4].onmouseout=()=>
 {
+  clearInterval(Itrck)
  atrck=[9,39,69] 
  for(i=1;i<4;i++)
  {
@@ -270,10 +274,11 @@ trck[4].onmouseout=()=>
  } 
  trck[4].style.background=
   'radial-gradient(#f00,#0f0,#00f)'
+ trck[4].style.color='#000' 
  trck[4].style.borderRadius=55+'%' 
  trck[4].style.border='none'
- trck[4].style.transform='scale(1)'  
-  clearInterval(Itrck)
+ trck[4].style.transform='scale(1)' 
+ trck[4].style.fontSize=0+'em'
 }
 		  
 </script>
