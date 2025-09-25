@@ -26,7 +26,7 @@
  transition:2s;
 }
 
-.plnt
+.plnt,#idplnt
 {
  position:absolute;   
  transition:2s;
@@ -61,6 +61,7 @@
 </style>
 
 <div class=bgrnd></div> 
+<div class=bgrnd></div>
 
 <div class=plnt>
  <div class=plnt></div>
@@ -69,6 +70,8 @@
  <div class=plnt></div>    
  <div class=plnt></div> 
 </div>
+<div id=idplnt></div> 
+ 
 <div class=flwr> 
  <div class=flwr></div>
  <div class=flwr></div>
@@ -104,7 +107,16 @@ bgrnd[0].style.height=24+'%'
 bgrnd[0].style.background=
  'linear-gradient(#090,#0e0)' 	
 bgrnd[0].style.borderTopLeftRadius=14+'%'
-bgrnd[0].style.borderTopRightRadius=11+'%'	
+bgrnd[0].style.borderTopRightRadius=11+'%'
+bgrnd[0].style.zIndex=-1	
+bgrnd[1].style.left=22+'%'
+bgrnd[1].style.top=22+'%'  
+bgrnd[1].style.width=36+'%'
+bgrnd[1].style.height=15+'%'
+bgrnd[1].style.background=
+ 'linear-gradient(#804,#000)'
+bgrnd[1].style.borderRadius=55+'%'
+bgrnd[1].style.opacity=0
 	
 plnt[0].style.left=22+'%'
 plnt[0].style.bottom=6+'%'  
@@ -113,7 +125,7 @@ plnt[0].style.height=44+'%'
 plnt[0].style.background=
  'linear-gradient(#840,#000)' 
 plnt[0].style.borderTopLeftRadius=9+'%'
-plnt[0].style.borderTopRightRadius=9+'%'	 
+plnt[0].style.borderTopRightRadius=9+'%'
 plnt[1].style.left=66+'%'
 plnt[1].style.top=-22+'%'  
 plnt[1].style.width=22+'%'
@@ -123,7 +135,7 @@ plnt[2].style.left=22+'%'
 plnt[2].style.top=49+'%'  
 plnt[2].style.width=55+'%'
 plnt[2].style.height=44+'%' 
-plnt[2].style.background='#000';
+plnt[2].style.background='#000'
 plnt[2].style.borderTopLeftRadius=9+'%'
 plnt[2].style.borderTopRightRadius=9+'%'
 plnt[3].style.left=11+'%'
@@ -136,15 +148,17 @@ plnt[4].style.top=17+'%'
 plnt[4].style.width=22+'%'
 plnt[4].style.height=22+'%'  
 plnt[4].style.background='#000'
-plnt[5].style.left=99+'%'
-plnt[5].style.top=-47+'%'  
-plnt[5].style.width=7+'%'
-plnt[5].style.height=3+'%'
-plnt[5].style.background='#333' 
-plnt[5].style.opacity=0
-plnt[5].style.borderRadius=55+'%'
+idplnt.style.left=5+'%'
+idplnt.style.bottom=8+'%'  
+idplnt.style.width=62+'%'
+idplnt.style.height=25+'%'
+idplnt.style.background=
+ 'linear-gradient(#840,#000)' 
+idplnt.style.borderTopLeftRadius=15+'%'
+idplnt.style.borderTopRightRadius=15+'%'
+idplnt.style.zIndex=-1
 	
-flwr[0].style.left=59+'%'
+flwr[0].style.left=79+'%'
 flwr[0].style.top=73+'%'  
 flwr[0].style.width=2+'%'
 flwr[0].style.height=14+'%'
@@ -263,9 +277,10 @@ o=
    plnt[2].style.background='#800'
    plnt[3].style.background='#700'
    plnt[4].style.background='#600'
-   plnt[5].style.opacity=0.5	
-   plnt[5].style.transform=
-    'scale(22,11) translate(-33%,-33%)'
+   plnt[5].style.background='#600'
+   bgrnd[1].style.opacity=0.5	
+   bgrnd[1].style.transform=
+    'scale(1.2,1) translate(-33%,-33%)'
    cld[0].style.transform='scale(1)'	
    setTimeout(()=>{
 	frz[0].style.opacity=1; 
@@ -286,8 +301,7 @@ o=
    plnt[3].style.background='#f00'
    plnt[4].style.transform='scale(1) '
    plnt[4].style.background='#f00'
-   plnt[5].style.transform=
-    'scale(33,22) translate(-33%,-33%)'
+   plnt[5].style.transform='scale(1)'
    cld[0].style.transform='scale(4) '
    cld[0].style.opacity=1
    frz[1].style.opacity=0
@@ -296,7 +310,6 @@ o=
 	o.bcl=!o.bcl 
  },  
 }
- 
 plnt[0].onmouseover=()=>
 { 	
  flwr[0].style.background='#020'
@@ -313,11 +326,11 @@ plnt[0].onmouseout=()=>
   o.intr=0
  idbd.style.background='linear-gradient(#ff0,#0ff)'
  bgrnd[0].style.background='linear-gradient(#090,#0e0)' 
+ bgrnd[1].style.opacity=0
  cld[0].style.transform='scale(0)'
  plnt[2].style.background='#000'
  plnt[3].style.background='#000'
  plnt[4].style.background='#000' 
- plnt[5].style.opacity=0
  flwr[0].style.background='#050'
  flwr[1].style.background='#f00'
  flwr[2].style.background='#f00'
