@@ -108,6 +108,8 @@ button:hover
  <div class=crrnt></div>
 </div>
 
+<canvas class=crrnt></canvas>
+
 <script>
 btn=document.getElementsByTagName('button')
 wrs=document.getElementsByClassName('wrs')
@@ -310,30 +312,41 @@ crrnt[4].style.background=
 crrnt[4].style.borderRadius=55+'%'
 crrnt[4].style.transform='scale(2)'
 crrnt[4].style.opacity=0
+crrnt[5].style.left=4+'%'
+crrnt[5].style.top=74+'%'
+crrnt[5].style.width=58+'%'
+crrnt[5].style.height=22+'%'
+crrnt[5].style.background='#fff'
+crrnt[5].style.opacity=0.3
+crrnt[5].style.zIndex=-1
+ cnvs=crrnt[5].getContext('2d')
+ cnvs.arc(6,6,55,9,2*Math.Pi)
 
 bbtn0=1 
 btn[0].onmouseover=()=>
 {
  btn[0].style.color='#0f0'
+  elm[1].style.transform=
+   'translate(130%,233%) rotate(90deg)'
+  elm[2].style.transform=
+   'scale(4) translate(-399%,-133%) rotate(0deg)'
 }
 btn[0].onmouseout=()=>
 {
  btn[0].style.color='#0b0'
+ elm[1].style.transform='rotate(0deg)'
+ elm[2].style.transform=
+   'scale(4)  rotate(90deg)'
 }
 btn[0].onclick=()=>
 {
  if(bbtn0)
  {
-  elm[1].style.transform=
-   'translate(130%,233%) rotate(90deg)'
-  elm[2].style.transform=
-   'scale(4) translate(-399%,-133%) rotate(0deg)'
+ 
  }
  else
  {
-  elm[1].style.transform='rotate(0deg)'
-  elm[2].style.transform=
-   'scale(4)  rotate(90deg)'
+ 
  }
   bbtn0=!bbtn0
 }
@@ -417,12 +430,13 @@ wrs[0].onmouseover=()=>
    (111*Math.random()/2)+'%,'+
     (88*Math.random()/2)+'%)' 	
  }, 555)
+ crrnt[5].style.opacity=1
  tprcss[0].style.transform=
   'scale(3) translate(-44%,-99%) skew(11deg)'
  tprcss[1].style.transform=
   'scale(3) translate(44%,-99%) skew(-11deg)'
  tprcss[2].style.transform=
-  'scale(3) translate(133%,333%) skew(-8deg)'
+  'scale(3) translate(199%,333%) skew(-8deg)'
 }
 wrs[0].onmouseout=()=>
 {
@@ -446,6 +460,7 @@ wrs[0].onmouseout=()=>
  crrnt[2].style.opacity=0
  crrnt[3].style.opacity=0
  crrnt[4].style.opacity=0
+ crrnt[5].style.opacity=0.3
  tprcss[0].style.transform='scale(0)'
  tprcss[1].style.transform='scale(0)'
  tprcss[2].style.transform='scale(0)'
