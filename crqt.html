@@ -73,6 +73,12 @@ button:hover
 <button>compts</button>
 
 <div class=wrs>
+<div class=telm>Circuit</div>
+  <div class=telm>Source</div>
+  <div class=telm>Resistor</div>
+  <div class=telm>Capacity</div>
+  <div class=telm>Trotle</div>
+  <div class=telm>Ground</div>  
  <div class=wrs></div>
  <div class=wrs>
   <div class=elm>>></div>
@@ -90,12 +96,7 @@ button:hover
    </div>
    <div class=clma></div>
   </div> 
- <div class=telm>Circuit</div>
-  <div class=telm>Source</div>
-  <div class=telm>Resistor</div>
-  <div class=telm>Capacity</div>
-  <div class=telm>Trotle</div>
-  <div class=telm>Ground</div>
+ 
   <div class=tprcss>Fluctuations...</div>
   <div class=tprcss>pulse<br>&nbsp smoothing...</div>
   <div class=tprcss>moving<br>&nbsp charged...</div>
@@ -244,6 +245,7 @@ telm[2].style.top=27+'%'
 telm[2].style.transform='scale(0)'
 telm[3].style.left=58+'%'
 telm[3].style.top=50+'%'
+telm[3].style.zIndex=1
 telm[3].style.transform='scale(0)'
 telm[4].style.left=57+'%'
 telm[4].style.top=15+'%'
@@ -263,6 +265,7 @@ tprcss[1].style.transform='scale(0)'
 tprcss[2].style.left=34+'%'
 tprcss[2].style.top=24+'%'
 tprcss[2].style.color='#b00'
+tprcss[2].style.zIndex=1
 tprcss[2].style.transform='scale(0)'
 
 crrnt[0].style.left=67+'%'
@@ -326,27 +329,25 @@ bbtn0=1
 btn[0].onmouseover=()=>
 {
  btn[0].style.color='#0f0'
-  elm[1].style.transform=
-   'translate(130%,233%) rotate(90deg)'
-  elm[2].style.transform=
-   'scale(4) translate(-399%,-133%) rotate(0deg)'
 }
 btn[0].onmouseout=()=>
 {
  btn[0].style.color='#0b0'
- elm[1].style.transform='rotate(0deg)'
- elm[2].style.transform=
-   'scale(4)  rotate(90deg)'
 }
 btn[0].onclick=()=>
 {
  if(bbtn0)
  {
- 
+  elm[1].style.transform=
+   'translate(130%,233%) rotate(90deg)'
+  elm[2].style.transform=
+   'scale(4) translate(-399%,-133%) rotate(0deg)'
  }
  else
  {
- 
+  elm[1].style.transform='rotate(0deg)'
+  elm[2].style.transform=
+   'scale(4)  rotate(90deg)'
  }
   bbtn0=!bbtn0
 }
@@ -383,8 +384,12 @@ btn[1].onmouseout=()=>
  telm[5].style.transform='scale(0)'
 }
 
+shft=0
+scle=0
+trvl=0
 wrs[0].onmouseover=()=>
 {
+  telm[0].onmouseover()
  wrs[0].style.background='#ff0'
  elm[0].style.background=
   'radial-gradient(28px,#f00,#f0f)'
@@ -429,6 +434,12 @@ wrs[0].onmouseover=()=>
    'scale('+3*Math.random()+') translate('+
    (111*Math.random()/2)+'%,'+
     (88*Math.random()/2)+'%)' 	
+  cnvs.strokeStyle='#b00'
+  for(i=0;i<300;i++)
+  {
+   cnvs.lineTo(i,shft+scle*Math.sin(i/trvl+1))
+  } 
+  cnvs.stroke() 
  }, 555)
  crrnt[5].style.opacity=1
  tprcss[0].style.transform=
@@ -440,6 +451,7 @@ wrs[0].onmouseover=()=>
 }
 wrs[0].onmouseout=()=>
 {
+ telm[0].onmouseout()
  wrs[0].style.background='none'
   clearInterval(Ielm)
  elm[0].style.background='#999'
