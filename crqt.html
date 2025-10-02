@@ -119,7 +119,6 @@ drssl=document.getElementsByClassName('drssl')
 clma=document.getElementsByClassName('clma')
 telm=document.getElementsByClassName('telm')
 tprcss=document.getElementsByClassName('tprcss')
-
 crrnt=document.getElementsByClassName('crrnt')
 
 btn[0].style.right=4+'%'
@@ -315,6 +314,7 @@ crrnt[4].style.background=
 crrnt[4].style.borderRadius=55+'%'
 crrnt[4].style.transform='scale(2)'
 crrnt[4].style.opacity=0
+//crrnt[5].style.transition=555+'ms'
 crrnt[5].style.left=4+'%'
 crrnt[5].style.top=74+'%'
 crrnt[5].style.width=58+'%'
@@ -322,8 +322,8 @@ crrnt[5].style.height=22+'%'
 crrnt[5].style.background='#fff'
 crrnt[5].style.opacity=0.3
 crrnt[5].style.zIndex=-1
+ //const cnvs=0
  cnvs=crrnt[5].getContext('2d')
- cnvs.arc(6,6,55,9,2*Math.Pi)
 
 bbtn0=1 
 btn[0].onmouseover=()=>
@@ -384,9 +384,7 @@ btn[1].onmouseout=()=>
  telm[5].style.transform='scale(0)'
 }
 
-shft=0
-scle=0
-trvl=0
+scle=8
 wrs[0].onmouseover=()=>
 {
   telm[0].onmouseover()
@@ -434,10 +432,13 @@ wrs[0].onmouseover=()=>
    'scale('+3*Math.random()+') translate('+
    (111*Math.random()/2)+'%,'+
     (88*Math.random()/2)+'%)' 	
+  //clearRect(0,0,999,999)	
   cnvs.strokeStyle='#b00'
+  scle=8+Math.random() 
+  cnvs.moveTo(0,66)
   for(i=0;i<300;i++)
   {
-   cnvs.lineTo(i,shft+scle*Math.sin(i/trvl+1))
+   cnvs.lineTo(i,75+44*Math.sin(i/scle+1))
   } 
   cnvs.stroke() 
  }, 555)
@@ -473,6 +474,7 @@ wrs[0].onmouseout=()=>
  crrnt[3].style.opacity=0
  crrnt[4].style.opacity=0
  crrnt[5].style.opacity=0.3
+ cnvs.clearRect(0,0,999,999)
  tprcss[0].style.transform='scale(0)'
  tprcss[1].style.transform='scale(0)'
  tprcss[2].style.transform='scale(0)'
