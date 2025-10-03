@@ -85,11 +85,11 @@ input
 </div>  
 
 <script>
-bse=document.getElementsByClassName('bse')
 btn=document.getElementsByClassName('btn')
-zpr=document.getElementsByClassName('zpr')
+bse=document.getElementsByClassName('bse')
 dlg=document.getElementsByClassName('dlg')
 dlgr=document.getElementsByClassName('dlgr')
+zpr=document.getElementsByClassName('zpr')
 lst=document.getElementsByClassName('lst') 
   
 btn[0].style.left=40+'%'
@@ -177,7 +177,13 @@ zpr[0].style.transform='skew(22deg)'
 zpr[1].style.left=50+'%'
 zpr[1].style.top=20+'%' 
 zpr[1].style.color='#900'
-zpr[1].style.transform='scale(0)'
+zpr[1].style.fontSize=1.2+'em' 
+zpr[1].style.transform='skew(22deg)'
+zpr[2].style.left=9+'%'
+zpr[2].style.top=9+'%' 
+zpr[2].style.color='#970'
+zpr[2].style.fontSize=1.2+'em' 
+zpr[2].style.transform='skew(-22deg)'
 
 lst[0].style.left=5+'%'
 lst[0].style.top=55+'%' 
@@ -266,7 +272,7 @@ btn[1].onclick=()=>
 } 
 btn[2].onmouseout=()=>
 { 
-zpr[1].style.background='none'
+ zpr[1].style.background='none'
  zpr[1].style.transform='scale(0)'
 } 
 btn[2].onclick=()=>
@@ -275,7 +281,8 @@ btn[2].onclick=()=>
   {
    lst[idel].innerHTML=''
     ilst=idel
-  } else
+  } 
+  else
   {
    zpr[1].style.background='#990'
     zpr[1].innerHTML='Choose <br>&nbsp from list'
@@ -293,8 +300,8 @@ dlg[2].onclick=()=>
  dlg[1].disabled=1
  dlg[2].disabled=1
  dlg[3].disabled=1
-  if(lst[ilst++].innerHTML==0) 
-  ilst++
+  if(lst[++ilst].innerHTML==0) 
+   ilst++
 }
 dlg[3].onclick=()=>
 { 
@@ -317,6 +324,10 @@ function flst(i)
  } 
  lst[i].onclick=()=>
  { 
+  dlgr[0].style.transform='scale(2)'
+  dlgr[2].disabled=0
+  dlgr[3].disabled=0
+  dlgr[0].style.zIndex=1
   idel=i
  }
  lst[i].ondblclick=()=>
@@ -325,6 +336,27 @@ function flst(i)
  }
 } 
  flst(1),flst(2),flst(3),flst(4),flst(5)
+ 
+dlgr[2].onclick=()=>
+{ 
+  lst[ilst].innerHTML=sbse[pbse]+' '+dlg[1].value
+  dlgr[1].value='dd.mm.yy' 
+ dlgr[0].style.transform='scale(1)'
+ dlgr[1].disabled=1
+ dlgr[2].disabled=1
+ dlgr[3].disabled=1
+  if(lst[++ilst].innerHTML==0) 
+   ilst++
+}
+dlgr[3].onclick=()=>
+{ 
+  dlgr[1].value='dd.mm.yy' 
+ dlgr[0].style.transform='scale(1)'
+ dlgr[1].disabled=1
+ dlgr[2].disabled=1
+ dlgr[3].disabled=1
+}
+ 
  
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
