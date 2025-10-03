@@ -67,6 +67,9 @@ button
 	<option >3 years</option>
 	<option >4 years</option>
   </select>
+<div class=term>
+ <button class=term></button> 
+</div>  
 </div>
 <script>
 var btn=document.getElementsByClassName('btn')
@@ -151,6 +154,16 @@ mnge[2].style.fontSize=0.6+'%'
 term[0].style.left=13+'%'
 term[0].style.top=13+'%' 
 term[0].style.borderRadius=13+'%' 
+term[1].style.left=73+'%'
+term[1].style.top=13+'%'
+term[1].style.width=13+'%'
+term[1].style.height=13+'%'
+term[1].style.background='#b00' 
+term[1].style.borderRadius=13+'%' 
+term[1].style.transform='scale(0.2)'
+term[2].style.left=33+'%'
+term[2].style.top=73+'%'
+
 
 function abtn(i,clr,str)
 {
@@ -197,6 +210,7 @@ mnge[1].onclick=()=>
  ttl[3].innerHTML=''
  mnge[1].disabled=1
  mnge[2].disabled=1
+ term[1].style.transform='scale(2) translate(-33%,99%)'
 }
 mnge[1].onmouseout=()=>
 { 
@@ -211,6 +225,12 @@ mnge[2].onclick=()=>
 mnge[2].onmouseout=()=>
 { 
  ttl[0].innerHTML='Insurance'
+}  
+
+term[2].onclick=()=>
+{ 
+ term[1].style.transform='scale(0.2)'
+
 }  
  
 //Ittl0=setInterval(()=>{
