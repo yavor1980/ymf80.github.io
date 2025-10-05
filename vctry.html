@@ -31,6 +31,7 @@
 <div class=hd>Waiting...</div>
 <div class=hd>When?..</div>
  <div class=hd></div>
+ <div class=hd></div>
 
 <div class=slte>
  <div class=slte></div>
@@ -70,6 +71,15 @@ hd[2].style.background=
 hd[2].style.borderRadius=8+'%'
 hd[2].style.opacity=0
 hd[2].style.zIndex=-1
+hd[3].style.left=5+'%'
+hd[3].style.bottom=4+'%'
+hd[3].style.width=90+'%'
+hd[3].style.height=9+'%'
+hd[3].style.background=
+ 'radial-gradient(#f00,#000,#f00,#000,#f00)'
+hd[3].style.borderRadius=55+'%'
+hd[3].style.opacity=0
+hd[3].style.zIndex=-1
 
 slte[0].style.left=46+'%'
 slte[0].style.bottom=9+'%'
@@ -221,6 +231,7 @@ hd[0].onmouseover=()=>
  hd[1].style.transform='scale(9) skew(22deg)'
   hd[1].innerHTML='PEACE!..'
  hd[2].style.opacity=0.8
+ hd[3].style.opacity=0.8
   clearInterval(Icl)
   sltcl(); Icl=setInterval(()=>sltcl(), 999)
 }
@@ -236,6 +247,7 @@ hd[0].onmouseout=()=>
   hd[0].innerHTML='Waiting...' 
   hd[1].innerHTML='When?..'
  hd[2].style.opacity=0
+ hd[3].style.opacity=0
   clearInterval(Icl)
   cl(); Icl=setInterval(()=>cl(),999)
 }
