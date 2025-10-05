@@ -183,48 +183,27 @@ bldng[9].style.left=6+'%'
 bldng[9].style.top=83+'%'
 bldng[9].style.background='#222'  
  
-bgrnd[0].onmouseover=()=>
+function actbck(i,b1,b2)
 {
- bgrnd[0].style.background='#d00'
- bgrnd[0].style.borderRadius='7%'
- bgrnd[0].style.fontSize='4em'
- bgrnd[0].style.transform='scale(1,1.2)'
-} 
-bgrnd[0].onmouseout=()=>
+bgrnd[i].onmouseover=()=>
 {
- bgrnd[0].style.background='#f00'
- bgrnd[0].style.borderRadius='0%'
- bgrnd[0].style.fontSize='0em'
- bgrnd[0].style.transform='scale(1)'
+ bgrnd[i].style.background=b1
+ bgrnd[i].style.borderRadius='7%'
+ bgrnd[i].style.fontSize='4em'
+ bgrnd[i].style.transform='scale(1,1.2)'
 } 
-bgrnd[1].onmouseover=()=>
+bgrnd[i].onmouseout=()=>
 {
- bgrnd[1].style.background='#0d0'
- bgrnd[1].style.borderRadius='7%'
- bgrnd[1].style.fontSize='4em'
- bgrnd[1].style.transform='scale(1,1.2)'
+ bgrnd[i].style.background=b2
+ bgrnd[i].style.borderRadius='0%'
+ bgrnd[i].style.fontSize='0em'
+ bgrnd[i].style.transform='scale(1)'
 } 
-bgrnd[1].onmouseout=()=>
-{
- bgrnd[1].style.background='#0f0'
- bgrnd[1].style.borderRadius='0%'
- bgrnd[1].style.fontSize='0em'
- bgrnd[1].style.transform='scale(1)'
-} 
-bgrnd[2].onmouseover=()=>
-{
- bgrnd[2].style.background='#00d'
- bgrnd[2].style.borderRadius='7%'
- bgrnd[2].style.fontSize='4em'
- bgrnd[2].style.transform='scale(1,1.2)'
-} 
-bgrnd[2].onmouseout=()=>
-{
- bgrnd[2].style.background='#00f'
- bgrnd[2].style.borderRadius='0%'
- bgrnd[2].style.fontSize='0em'
- bgrnd[2].style.transform='scale(1)'
-} 
+}
+ actbck(0, '#d00', '#f00') 
+ actbck(1, '#0d0', '#0f0')
+ actbck(2, '#00d', '#00f')
+
 bgrnd[3].onmouseover=()=>
 {
  bgrnd[3].style.background='#ddd'
@@ -245,7 +224,7 @@ bgrnd[3].onmouseout=()=>
  bgrnd[4].style.transform='scale(0)'
 } 
 
-Itst=0, dgt=0, ldgt=0
+Itst=0, dgt=0, ddgt=0
 tst[0].onmouseover=()=>
 {   
  tst[0].style.boxShadow='none'
@@ -260,17 +239,22 @@ tst[0].onmouseover=()=>
  btn[6].style.boxShadow='11px 11px 6px'
  btn[7].style.boxShadow='11px 11px 6px'
  btn[8].style.boxShadow='11px 11px 6px'
+ for(i=0;i<3;i++)
+ {
+  bgrnd[i].style.transform='scale(1.1)'
+  bgrnd[i].style.fontSize=3+'em'
+ }
  Itst= setInterval(()=>
  {
-  btn[ldgt].style.boxShadow='11px 11px 6px'
-  bldng[ldgt+1].style.background='#222'
-  tst[1].style.fontSize='3em'
+  btn[ddgt].style.boxShadow='11px 11px 6px'
+  bldng[ddgt+1].style.background='#222'
+  tst[1].style.fontSize=3+'em'
    dgt=Math.round(Math.random()*8)
   btn[dgt].style.boxShadow='none'
-  bldng[dgt+1].style.background='#ffd'
+  bldng[dgt+1].style.background='#ff0'
   tst[1].style.fontSize='4em'
    tst[1].innerHTML=dgt+1
-   ldgt=dgt 
+   ddgt=dgt 
  }, 999) 
 } 
 tst[0].onmouseout=()=>
@@ -286,6 +270,11 @@ tst[0].onmouseout=()=>
   btn[i].style.boxShadow='none'
   bldng[i+1].style.background='#222'
  } 
+ for(i=0;i<3;i++)
+ {
+  bgrnd[i].style.transform='scale(1)'
+  bgrnd[i].style.fontSize=0+'em'
+ }
   dgt=0
   clearInterval(Itst)
 } 
