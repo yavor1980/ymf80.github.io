@@ -98,7 +98,9 @@
 
 <div class=bgrnd></div>
 <div class=bgrnd></div>
-<div class=bgrnd></div>
+<div class=bgrnd>
+ <div class=bgrnd></div>
+</div>
 <div class=bgrnd></div>
 
 <div class=eagle>
@@ -157,7 +159,7 @@ var eagl=
   bgrnd[1].style.background='#ff0'
   bgrnd[1].style.opacity=0
   bgrnd[1].style.transform= 
-   'scale(0.1)  skew(30deg)'
+   'scale(1)  skew(30deg)'
   bgrnd[2].style.left=0+'%' 
   bgrnd[2].style.bottom=0+'%'
   bgrnd[2].style.width=100+'%' 
@@ -167,6 +169,23 @@ var eagl=
   bgrnd[2].style.borderTopRightRadius=44+'%'
   bgrnd[2].style.opacity=0.7
   bgrnd[2].style.zIndex=-2
+  bgrnd[3].style.left=66+'%' 
+  bgrnd[3].style.bottom=38+'%'
+  bgrnd[3].style.width=17+'%' 
+  bgrnd[3].style.height=22+'%'
+  bgrnd[3].style.background='#0ff'
+  bgrnd[3].style.borderRadius=55+'%'
+  bgrnd[3].style.opacity=0.3
+  bgrnd[4].style.left=3+'%' 
+  bgrnd[4].style.bottom=8+'%'
+  bgrnd[4].style.width=47+'%' 
+  bgrnd[4].style.height=33+'%'
+  bgrnd[4].style.background='#777'
+  bgrnd[4].style.borderTopLeftRadius=37+'%'
+  bgrnd[4].style.borderTopRightRadius=11+'%'
+  bgrnd[4].style.borderBottomLeftRadius=25+'%'
+  bgrnd[4].style.borderBottomRightRadius=19+'%'
+  bgrnd[4].style.opacity=0.3
    
   eagle[1].style.left=1+'%'
   eagle[1].style.top=0+'%' 	 
@@ -306,8 +325,11 @@ var eagl=
    (33+Math.random()*22)+'%'
   bgrnd[1].style.opacity=0.5
   bgrnd[1].style.transform= 
-   'scale(0.9,0.7) translate(44%,44%)'+
+   'scale(0.9,0.7) translate(44%,24%)'+
    ' rotate(33deg) skew(53deg)'
+  bgrnd[3].style.opacity=0.7 
+  bgrnd[3].style.transform='scale(1.5)'
+  bgrnd[4].style.opacity=0.9
   eagle[0].style.transform=
    'skew('+(Math.random()*44-22)+'deg)'
   eagle[2].style.borderRadius=55+'%'
@@ -344,7 +366,10 @@ var eagl=
    'radial-gradient(#ff0,#00f)'
   bgrnd[1].style.opacity=0
   bgrnd[1].style.transform= 
-   'scale(0.1)  skew(30deg)'
+   'scale(1)  skew(30deg)'
+  bgrnd[3].style.opacity=0.3
+  bgrnd[3].style.transform='scale(1)'
+  bgrnd[4].style.opacity=0.3
   eagle[2].style.borderBottomLeftRadius=39+'%' 
   eagle[2].style.borderBottomRightRadius=39+'%'
   eagle[2].style.transform='scale(1)'
