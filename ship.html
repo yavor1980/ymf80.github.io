@@ -118,42 +118,21 @@ body
  <div class=mne></div>  
  <div class=mne></div>
 </div>
-<div class=ttmne>explosive...</div> 
+ <div class=ttmne>explosive...</div> 
   
- <div class=ttnm>
- aircraft carrier
-</div>
-<div class=ttnm>
- cruiser
-</div>
-<div class=ttnm>
- landing ship
-</div>
-<div class=ttnm>
- destroyer
-</div>
-<div class=ttnm>
- frigate
-</div>
-<div class=ttnm>
- corvette
-</div>
+<div class=ttnm>aircraft carrier</div>
+<div class=ttnm>cruiser</div>
+<div class=ttnm>landing ship</div>
+<div class=ttnm>destroyer</div>
+<div class=ttnm>frigate</div>
+<div class=ttnm>corvette</div>
 
-<div class=ttstte>
- Very steady ...
+<div class=ttstte>Very steady ...</div>
+<div class=ttstte>Good target<br> &nbsp
+  for torpedo atack
 </div>
-<div class=ttstte>
- Good target
-  <br> &nbsp
- for torpedo atack
-</div>
-
-<div class=ttcmnd>
- don't demask me!
-</div>
-<div class=ttcmnd>
- Danger!
-</div>
+<div class=ttcmnd> don't demask me!</div>
+<div class=ttcmnd>Danger!</div>
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -432,10 +411,9 @@ btn[1].onclick=()=>
   slte[4].style.transform=
    'scale(1) translate(66%,-466%)'
   slte[5].style.transition='0s' 
- 
  }, 1000)
 }
- 
+ inm=0
 sh[0].onmouseover=()=>
 {
  sh[0].style.transform=
@@ -445,7 +423,7 @@ sh[0].onmouseover=()=>
  slte[3].style.background=
   'radial-gradient(#bb0,#333)'
  slte[3].style.opacity=1
- slte[3].style.transition='1s'
+ slte[3].style.transition=1+'s'
  slte[3].style.transform=
   'scale(3) translate(266%,-188%)'
  setTimeout(()=>{
@@ -454,7 +432,7 @@ sh[0].onmouseover=()=>
   slte[3].style.opacity=0
  }, 999) 
  setTimeout(()=>{ 
-  slte[3].style.transition='0s'
+  slte[3].style.transition=0+'s'
   slte[3].style.transform='scale(0)'
  }, 2000)  
  ttnm[0].style.transform=
@@ -471,6 +449,8 @@ sh[0].onmouseover=()=>
  mne[0].style.opacity=0
  ttcmnd[1].style.transform=
   'scale(3) skew(-33deg)'
+  inm=Math.round(Math.random()*6+2)
+ ttnm[inm].onmouseover() 
 }
 sh[0].onmouseout=()=>
 {
@@ -486,6 +466,7 @@ sh[0].onmouseout=()=>
  mne[0].style.transform='scale(2)'
  mne[0].style.opacity=1
  ttcmnd[1].style.transform='scale(0)'
+ ttnm[inm].onmouseout()
 }
 
 mne[0].onmouseover=()=>
@@ -515,7 +496,7 @@ ttnm[3].onmouseover=()=>
 {
  ttnm[3].innerHTML='offline enemy search' 
  ttnm[3].style.transform='scale(1.4) ' 
- ttnm[3].style.color='#0ff ' 
+ ttnm[3].style.color='#ff0' 
 }
 ttnm[3].onmouseout=()=>
 {
@@ -528,7 +509,7 @@ ttnm[4].onmouseover=()=>
 {
  ttnm[4].innerHTML='sea landing' 
  ttnm[4].style.transform='scale(1.4) ' 
- ttnm[4].style.color='#6f6 ' 
+ ttnm[4].style.color='#ff0' 
 }
 ttnm[4].onmouseout=()=>
 {
@@ -541,7 +522,7 @@ ttnm[5].onmouseover=()=>
 {
 
  ttnm[5].style.transform='scale(1.4) ' 
- ttnm[5].style.color='#507'
+ ttnm[5].style.color='#550'
   ttnm[5].innerHTML='mining'
 }
 ttnm[5].onmouseout=()=>
@@ -555,7 +536,7 @@ ttnm[6].onmouseover=()=>
 {
  ttnm[6].innerHTML='search for submarines'
  ttnm[6].style.transform='scale(1.4) '
- ttnm[6].style.color='#f05 ' 
+ ttnm[6].style.color='#550' 
 }
 ttnm[6].onmouseout=()=>
 {
@@ -568,7 +549,7 @@ ttnm[7].onmouseover=()=>
 {
  ttnm[7].innerHTML='transport convoy'
  ttnm[7].style.transform='scale(1.4) ' 
- ttnm[7].style.color='#000 ' 
+ ttnm[7].style.color='#550' 
 }
 ttnm[7].onmouseout=()=>
 {
