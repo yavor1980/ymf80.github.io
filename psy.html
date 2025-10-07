@@ -16,7 +16,7 @@ body
  font-size:1.7em;
 }
 
-.tmprm
+.tmprm,.vctr,.phlsph
 {
  position:absolute;
  transition:1s;
@@ -39,12 +39,6 @@ body
  font-size:3em;
 }
 
-.vctr,.phlsph
-{
- position:absolute;
- transition:1s;
-}
-
 </style>
 
 <div class=psch>
@@ -58,15 +52,15 @@ body
 </div>
 
 <div class=tmprm>Temperament</div>
-<div class=tmprm>choleric </div>
-<div class=tmprm>melancholic </div>
-<div class=tmprm>phlegmatic </div>
-<div class=tmprm>sanguine </div>
+ <div class=tmprm>choleric </div>
+ <div class=tmprm>melancholic </div>
+ <div class=tmprm>phlegmatic </div>
+ <div class=tmprm>sanguine </div>
  
 <div class=bhvr>Behavioral type</div>
-<div class=bhvr>introvert </div>
-<div class=bhvr>extrovert </div>
-<div class=bhvr>ambivert </div>
+ <div class=bhvr>introvert </div>
+ <div class=bhvr>extrovert </div>
+ <div class=bhvr>ambivert </div>
  
 <div class=dfn>Attention </div>
 <div class=dfn>Perception </div>
@@ -96,7 +90,6 @@ psch[0].style.height=11+'%'
 psch[0].style.background='#777'
 psch[0].style.color='#bf0'
 psch[0].style.border='4px ridge #333'
- 
 psch[1].style.left=40+'%'
 psch[1].style.top=11+'%'
 psch[1].style.width=22+'%'
@@ -104,7 +97,6 @@ psch[1].style.height=11+'%'
 psch[1].style.background='#888'
 psch[1].style.color='#bf0'
 psch[1].style.border='4px ridge #333'
-  
 psch[2].style.left=64+'%'
 psch[2].style.top=11+'%'
 psch[2].style.width=22+'%'
@@ -123,22 +115,18 @@ tmprm[0].style.color='#ff0'
 tmprm[0].style.border='18px ridge #050'
 tmprm[0].style.textAlign='center'
 tmprm[0].style.fontSize='2em'
-
 tmprm[1].style.left=22+'%'
 tmprm[1].style.top=44+'%'
 tmprm[1].style.color='#f00' 	
 tmprm[1].style.transform='scale(0)'
-   
 tmprm[2].style.left=22+'%'
 tmprm[2].style.top=44+'%'
 tmprm[2].style.color='#00f' 
 tmprm[2].style.transform='scale(0)'
-
 tmprm[3].style.left=22+'%'
 tmprm[3].style.top=44+'%'
 tmprm[3].style.color='#f0f'
 tmprm[3].style.transform='scale(0)'
-
 tmprm[4].style.left=22+'%'
 tmprm[4].style.top=44+'%'
 tmprm[4].style.color='#0f0'
@@ -153,17 +141,14 @@ bhvr[0].style.background='#005'
 bhvr[0].style.color='#0ff'
 bhvr[0].style.border='18px ridge #040'
 bhvr[0].style.fontSize='2em'
-
 bhvr[1].style.left=69+'%'
 bhvr[1].style.top=44+'%'
 bhvr[1].style.color='#f00'
 bhvr[1].style.transform='scale(0)'
-    
 bhvr[2].style.left=69+'%'
 bhvr[2].style.top=44+'%'
 bhvr[2].style.color='#00f'
 bhvr[2].style.transform='scale(0)'
-  
 bhvr[3].style.left=69+'%'
 bhvr[3].style.top=44+'%'
 bhvr[3].style.color='#f0f'
@@ -175,21 +160,18 @@ dfn[0].style.width=22+'%'
 dfn[0].style.height=11+'%'
 dfn[0].style.background='#808'
 dfn[0].style.color='#bbb'
-  
 dfn[1].style.left=38+'%'
 dfn[1].style.top=80+'%'
 dfn[1].style.width=22+'%'
 dfn[1].style.height=11+'%'
 dfn[1].style.background='#770'
 dfn[1].style.color='#bbb'
-
 dfn[2].style.left=66+'%'
 dfn[2].style.top=80+'%'
 dfn[2].style.width=22+'%'
 dfn[2].style.height=11+'%'
 dfn[2].style.background='#088'
 dfn[2].style.color='#bbb'
-  
 dfn[3].style.left=29+'%'
 dfn[3].style.top=66+'%'
 dfn[3].style.transform='scale(0)'
@@ -197,9 +179,9 @@ dfn[3].style.transform='scale(0)'
 vctr[0].style.cursor='pointer'
 vctr[0].style.left=8+'%'
 vctr[0].style.top=33+'%'
+vctr[0].style.background='#b0b'
 vctr[0].style.color='#0bb'
 vctr[0].style.transform='scale(3)'
-  
 vctr[1].style.left=8+'%'
 vctr[1].style.top=39+'%'
 vctr[1].style.color='#330'
@@ -210,36 +192,30 @@ phlsph[0].style.top=55+'%'
 phlsph[0].style.color='#800'
 phlsph[0].style.transform='scale(4) skew(22deg)'
 phlsph[0].style.cursor='pointer'
-
 phlsph[1].style.left=18+'%'
 phlsph[1].style.top=55+'%'
 phlsph[1].style.color='#800'
 phlsph[1].style.transform='scale(0) '
-
 phlsph[2].style.left=18+'%'
 phlsph[2].style.top=55+'%'
 phlsph[2].style.color='#008'
 phlsph[2].style.transform='scale(0)'
-
 phlsph[3].style.left=44+'%'
 phlsph[3].style.top=55+'%'
 phlsph[3].style.color='#f00'
 phlsph[3].style.transform='scale(0)'
  
 obj='The totality of mental phenomena '
-  
 tsk=
  '-learn to understand <br>&nbsp the essence of'+
  '<br>&nbsp mental <br>&nbsp phenomena;<br>'+
  '-learn to manage <br>&nbsp them'
-
 mthd=
  '-organizational'+'<br>'+ 
  '-empirical'+'<br>'+ 
  '-observation'+'<br>'+ 
  '-experiment'+'<br>'+
  '-statistical'+'<br>'
-
 psch[0].onmouseover=()=>
 {  
  psch[0].style.height='12%'
@@ -309,14 +285,11 @@ psch[2].onmouseout=()=>
 
 tmprm[0].onmouseover=()=>
 {  
- tmprm[0].style.transform='scale(1.4)'
  tmprm[0].style.height='22%'
  tmprm[0].style.background='#900'
  tmprm[0].style.textAlign='left'
- tmprm[0].style.borderTop='5px ridge #090'
- tmprm[0].style.borderBottom='5px ridge #090'
- tmprm[0].style.borderLeft='5px ridge #060'
- tmprm[0].style.borderRight='5px ridge #060'
+ tmprm[0].style.border='5px ridge #090'
+ tmprm[0].style.transform='scale(1.4)'
   tmprm[0].innerHTML=
    '-level of mental <br>&nbsp activity <br>&nbsp'+  
    '-mental <br>&nbsp condition'
@@ -334,8 +307,8 @@ tmprm[0].onmouseout=()=>
  tmprm[0].style.height='15%'
  tmprm[0].style.background='#500'
  tmprm[0].style.border='18px ridge #050'
- tmprm[0].style.transform='scale(1)'
  tmprm[0].style.textAlign='center'
+ tmprm[0].style.transform='scale(1)'
  tmprm[0].style.zIndex=0
   tmprm[0].innerHTML='Temperament'
  tmprm[1].style.transform='scale(0)'
@@ -347,10 +320,7 @@ tmprm[0].onmouseout=()=>
 bhvr[0].onmouseover=()=>
 {        
  bhvr[0].style.background='#009'
- bhvr[0].style.borderTop='5px groove #0d0'
- bhvr[0].style.borderBottom='5px groove #0d0'
- bhvr[0].style.borderLeft='5px groove #090'
- bhvr[0].style.borderRight='5px groove #090'
+ bhvr[0].style.border='5px groove #0d0'
  bhvr[0].style.transform='scale(1.4)'
   bhvr[0].innerHTML='Orientation of consciousness' 
  bhvr[1].style.transform=
@@ -397,11 +367,11 @@ dfn[0].onmouseout=()=>
 
 dfn[1].onmouseover=()=>
 {        
- dfn[1].style.transform='scale(1.4)'
+ dfn[1].style.zIndex=1
  dfn[1].style.background='#00f'
  dfn[1].style.color='#ddd'
  dfn[1].style.border='11px groove #666'
- dfn[1].style.zIndex=1
+ dfn[1].style.transform='scale(1.4)'
  dfn[3].style.color='#050'
  dfn[3].style.transform=
   'scale(1) translate(0%,-33%)'
@@ -410,11 +380,11 @@ dfn[1].onmouseover=()=>
 }		
 dfn[1].onmouseout=()=>
 {  
- dfn[1].style.transform='scale(1)'
+ dfn[1].style.zIndex=0
  dfn[1].style.background='#770'
  dfn[1].style.color='#bbb'
  dfn[1].style.border='none'
- dfn[1].style.zIndex=0
+ dfn[1].style.transform='scale(1)'
  dfn[3].style.transform='scale(0)'
 }	
 
@@ -424,18 +394,18 @@ dfn[2].onmouseover=()=>
  dfn[2].style.color='#ddd'
  dfn[2].style.border='11px groove #666'
  dfn[2].style.transform='scale(1.4)'
+ dfn[3].style.color='#f00'
  dfn[3].style.transform=
   'scale(1) translate(44%,-33%)'
- dfn[3].style.color='#f00'
   dfn[3].innerHTML=
    'The highest level<br> of knowledge '
 }	  
 dfn[2].onmouseout=()=>
 {  
- dfn[2].style.transform='scale(1)'
  dfn[2].style.background='#088'
  dfn[2].style.color='#bbb'
  dfn[2].style.border='none'
+ dfn[2].style.transform='scale(1)'
  dfn[3].style.transform='scale(0)'
 }	
 
@@ -474,6 +444,7 @@ phlsphI=0
 bphlsph=0
 phlsph[0].onmouseover=()=>
 {  
+ phlsph[0].style.background='#999'
  phlsph[0].style.transform=
   'scale(5) translate(22%,0) skew(-22deg)'
  phlsph[0].style.color='#b00'
@@ -494,6 +465,7 @@ phlsph[0].onmouseover=()=>
 }
 phlsph[0].onmouseout=()=>
 {  
+ phlsph[0].style.background='none'
  phlsph[0].style.transform=
   'scale(4) skew(22deg)'
  phlsph[0].style.color='#800'
@@ -505,5 +477,4 @@ phlsph[0].onmouseout=()=>
  
 </script>
 </body>
-
 </html>
