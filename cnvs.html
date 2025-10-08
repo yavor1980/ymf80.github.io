@@ -10,7 +10,7 @@ body
 canvas
 {
  position:absolute;
- transition:1s;
+ transition:999ms;
  left:0%;
  top:0%;
  background:#0f0;
@@ -27,7 +27,6 @@ canvas
 </head>
 
 <body id=idbd>
-<canvas></canvas> 
 <input type=button class=btn value='draw'>
 <input type=button class=btn value='rndline'>
 <input type=button class=btn value='round'>
@@ -35,21 +34,15 @@ canvas
 <input type=button class=btn value='clear'>
 <input type=button class=btn  value='axes'>
 <input type=button class=btn value='oscll'>
-<input type=button class=btn value='fill'>
-
+<input type=button class=btn value='Smooth'>
+<input type=button class=btn value='Hz'>
+<canvas></canvas> 
 <script>
 cnv=document.getElementsByTagName('canvas')
 btn=document.getElementsByClassName('btn')
 
-cnv[0].style.width=88+'%'
-cnv[0].style.height=97+'%'
-cnv[0].style.border='11px ridge #ff0'
-cnv[0].style.cursor='pointer'
- cntxt=cnv[0].getContext('2d')
- //cntxt.moveTo(0,333)
- 
-btn[0].style.left=91+'%'
-btn[0].style.bottom=4+'%'
+btn[0].style.left=92+'%'
+btn[0].style.bottom=44+'%'
 btn[0].style.background='#f00'
 btn[0].style.color='#ff0'
 btn[0].style.transform='scale(2)'
@@ -82,6 +75,17 @@ btn[7].style.left=93+'%'
 btn[7].style.top=22+'%'
 btn[7].style.background='#e00'
 btn[7].style.transform='scale(2)'
+btn[8].style.left=93+'%'
+btn[8].style.top=31+'%'
+btn[8].style.background='#e00'
+btn[8].style.transform='scale(2)'
+
+cnv[0].style.width=88+'%'
+cnv[0].style.height=97+'%'
+cnv[0].style.border='11px ridge #ff0'
+cnv[0].style.cursor='pointer'
+ cntxt=cnv[0].getContext('2d')
+ //cntxt.moveTo(0,333)
 
 function fdrw()
 {
@@ -90,7 +94,7 @@ function fdrw()
  cntxt.arc(event.clientX/4,event.clientY/4,
   1,0,2*Math.PI)
  cntxt.fill()
- cntxt.endPath()
+ //cntxt.endPath()
 }
 function frndline()
 {
@@ -106,9 +110,9 @@ function fround()
  cntxt.arc(event.clientX/4,event.clientY/4,
   9,0,2*Math.PI)
  cntxt.stroke()
- //cntxt.endPath()
+ cntxt.endPath()
 }
-bcnvs=-1
+bcnvs=0
 bln=0 
 x=0,y=0
 function fline()
@@ -128,19 +132,17 @@ function fline()
 }
 function faxs()
 {
-  //cntxt.beginPath()
  cntxt.strokeStyle='#000'
  cntxt.moveTo(0, 79)
  cntxt.lineTo(333, 79)
  cntxt.moveTo(145, 0)
  cntxt.lineTo(145, 100)
   cntxt.stroke()
- // cntxt.endPath()
 }
 shft=66
 scle=22
 trvl=11
-Iosc=0
+Iosc=0 
 function foscll()
 { 
  cntxt.strokeStyle='#b00'
@@ -150,22 +152,23 @@ function foscll()
  } 
  cntxt.stroke() 
 }
-ff=1
-function foscllmv()
+ff=0
+function foscllmv(b)
 { 
 Iosc=setInterval(()=>{
  cntxt.beginPath()
- cntxt.clearRect(0,0,999,999)
  shft=66+Math.random()*11
  scle=22+Math.random()*11
  trvl=11+Math.random()*11
+ cntxt.clearRect(0,0,999,999)
+ if(b==0) ff+=2 
+ if(b==1) ff=Math.round(Math.random()*9)
  for(i=0;i<300;i++)
  {
   cntxt.lineTo(i, shft+scle*Math.sin(i*ff/trvl+1))
  } 
   cntxt.stroke() 
-  //cntxt.endPath()
- }, 999)
+ }, imtosc)
 }
 
 cnv[0].onmousemove=()=>
@@ -189,13 +192,12 @@ cnv[0].onclick=()=>
 
 btn[0].onclick=()=>
 {   
- bcnvs=0
+ bcnvs=!bcnvs
 }
 btn[1].onclick=()=>
 {
  bcnvs=1
 }
-
 btn[2].onclick=()=>
 {
  bcnvs=2
@@ -221,22 +223,33 @@ btn[6].onclick=()=>
  if(boscll==0)
  {
   foscll()
-  foscllmv()
+  foscllmv(0)
+  btn[6].value='Stop'
  }
  else
  {
   clearInterval(Iosc)
+  ff=0
+  btn[6].value='oscll'
  }
  boscll=!boscll
 }
-
-btn[7].onmousemove=()=>
+imtosc=666
+btn[7].onclick=()=>
 {
- ff=9
-}
-btn[7].onmouseout=()=>
-{
- ff=1
+ if(boscll==0)
+ {
+  foscll()
+  foscllmv(1)
+  btn[7].value='Stop'
+ }
+ else
+ {
+  clearInterval(Iosc)
+  ff=0
+  btn[7].value='oscll'
+ }
+ boscll=!boscll
 }
 
 //for(var i=0;i<n;i++) 
