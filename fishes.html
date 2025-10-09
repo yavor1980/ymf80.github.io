@@ -27,7 +27,7 @@
  top:4%;
  width:55%;
  height:77%;
- opacity:0.4;
+ opacity:0.5;
 }
 
 .fsh
@@ -38,7 +38,7 @@
  cursor:pointer;
  z-index:1;
 }
-.plls,.fc,.fns,.bbl
+.plls,.fc,.fns,.bbl,.jlly
 { 
  position:absolute; 
  transition:2s;
@@ -75,6 +75,11 @@
 </div>
 <div class=fsh>floating fish</div>
 
+<div class=jlly>
+ <div class=jlly></div>
+ <div class=jlly>jelly fish</div>
+</div>
+
 <div class=t_wtr></div>
 <div class=t_wtr></div>
 
@@ -83,6 +88,8 @@ fsh=document.getElementsByClassName('fsh')
 fc=document.getElementsByClassName('fc')
 fns=document.getElementsByClassName('fns')
 bbl=document.getElementsByClassName('bbl')
+jlly=document.getElementsByClassName('jlly')
+
 t_wtr=document.getElementsByClassName('t_wtr')
 
 fsh[0].style.left=30+'%'
@@ -148,13 +155,11 @@ fns[1].style.background=
  'radial-gradient(#00f,#fff)'
 fns[1].style.opacity=0.4 
 fns[1].style.transform='scale(0.8,1)'
-fns[1].style.zIndex=0
 
 bbl[0].style.left=45+'%'
 bbl[0].style.top=66+'%'
 bbl[0].style.width=5+'%'
 bbl[0].style.height=5+'%'
-bbl[0].style.borderRadius=50+'%'
 bbl[0].style.background=
  'radial-gradient(#00f,#fff)'
 bbl[0].style.transform='scale(0)' 
@@ -162,7 +167,6 @@ bbl[1].style.left=45+'%'
 bbl[1].style.top=66+'%'
 bbl[1].style.width=5+'%'
 bbl[1].style.height=5+'%'
-bbl[1].style.borderRadius=50+'%'
 bbl[1].style.background=
  'radial-gradient(#00b,#fff)'
 bbl[1].style.transform='scale(0)' 
@@ -170,10 +174,27 @@ bbl[2].style.left=45+'%'
 bbl[2].style.top=66+'%'
 bbl[2].style.width=5+'%'
 bbl[2].style.height=5+'%'
-bbl[2].style.borderRadius=50+'%'
 bbl[2].style.background=
  'radial-gradient(#009,#fff)'
 bbl[2].style.transform='scale(0)'
+
+jlly[0].style.left=70+'%'
+jlly[0].style.top=76+'%'
+jlly[0].style.width=19+'%'
+jlly[0].style.height=7+'%'
+jlly[0].style.background=
+ 'radial-gradient(#0f0,#00f)'
+jlly[0].style.opacity=0.5
+jlly[1].style.left=24+'%'
+jlly[1].style.top=13+'%'
+jlly[1].style.width=46+'%'
+jlly[1].style.height=56+'%'
+jlly[1].style.background=
+ 'radial-gradient(#0a0,#00b)'
+jlly[1].style.opacity=0.5
+jlly[2].style.color='#b00'
+jlly[2].style.opacity=0
+jlly[2].style.transform='scale(0)'
 
 t_wtr[0].style.left=20+'%'
 t_wtr[0].style.top=6+'%'
@@ -212,7 +233,7 @@ function cl()
  } 
    b=!b
 }   
-	setInterval(cl,1444)	
+	setInterval(cl, 1444)	
  
 idbtn.onmouseover=()=>
 {
@@ -275,6 +296,23 @@ fsh[0].onmouseover=()=>
   bbl[2].style.transition='1s'
   bbl[2].style.transform=
    'scale(4) translate('+Math.random()*333+'%,-11%)'
+  jlly[0].style.opacity=0.8
+  jlly[0].style.borderTopLeftRadius=
+   (22+Math.random()*33)+'%'
+  jlly[0].style.borderTopRightRadius=
+   (22+Math.random()*33)+'%'
+  jlly[0].style.borderBottomLeftRadius=
+   (22+Math.random()*33)+'%'
+  jlly[0].style.borderBottomRightRadius=
+   (22+Math.random()*33)+'%'
+  jlly[0].style.transform=
+   'scale(1.5,4) translate(-12%,-77%)'
+  jlly[1].style.transform='scale('+(1+
+   Math.random()/2)+') translate(0%,'+
+   Math.random()*(-33)+'%' 
+  jlly[2].style.opacity=1
+  jlly[2].style.transform=
+   'scale(2,1.5) translate(99%,-144%) skew(22deg)' 
   setTimeout(()=>{
    fns[0].style.transform='scale(0.8,1)'
    fns[1].style.transform='scale(0.8,1)'
@@ -302,7 +340,13 @@ fsh[0].onmouseout=()=>
  bbl[1].style.transform='scale(0)'
  bbl[2].style.transition='0s'
  bbl[2].style.transform='scale(0)'
-}
+ jlly[0].style.opacity=0.5
+ jlly[0].style.borderRadius=55+'%'
+ jlly[0].style.transform='scale(1)'
+ jlly[1].style.transform='scale(1)'
+ jlly[2].style.opacity=0
+ jlly[2].style.transform='scale(0)'
+} 
 
 t_wtr[0].onmouseover=()=>
 {
