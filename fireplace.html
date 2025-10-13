@@ -31,7 +31,6 @@
 {
  position:absolute;
  transition:999ms;
- cursor:pointer;
  transform:scale(1.2);
 }
 .drv
@@ -84,7 +83,6 @@
  <div class=drv></div>
  <div class=drv></div>
 </div>
-
 <div class=drts></div>
 
 <div class=frz>White</div>
@@ -108,7 +106,6 @@ drts=document.getElementsByClassName('drts')
 frz=document.getElementsByClassName('frz')
 hdd=document.getElementsByClassName('hdd')
  	    
-flme[0].style.cursor='pointer'
 flme[0].style.left=11+'%'
 flme[0].style.bottom=11+'%'
 flme[0].style.width=55+'%'
@@ -164,7 +161,23 @@ flme[5].style.background=
 flme[5].style.borderTopLeftRadius=55+'%' 
 flme[5].style.borderTopRightRadius=55+'%' 
 flme[5].style.opacity=0
-
+fl=[3]
+for(i=0;i<3;i++)
+{
+ fl[i]=document.createElement('div')
+ fl[i].className='flme'
+ flme[0].appendChild(fl[i]) 
+ fl[i].style.position='absolute'
+ fl[i].style.left=46+'%'
+ fl[i].style.top=86+'%'
+ fl[i].style.width=1+'%'
+ fl[i].style.height=1+'%'
+ fl[i].style.background=
+  'radial-gradient(#ff0,#f0f)'
+ fl[i].style.borderRadius=55+'%'
+ fl[i].style.opacity=0
+}
+ 
 drv[0].style.top=64+'%'
 drv[0].style.width=4+'%'
 drv[0].style.height=44+'%'
@@ -270,7 +283,7 @@ function clk()
  flme[2].style.transform='scale(0.1)'
  setTimeout(()=>
  {
-   I=setInterval(cld,999)
+   I=setInterval(cld, 999)
   idb.style.opacity=1
  }, 999)  
 }
@@ -279,6 +292,7 @@ idb.onclick=()=>
 {    
  clk() 
 }  
+
 
 flme[0].onmouseover=()=>
 {    
@@ -289,6 +303,10 @@ flme[0].onmouseover=()=>
   'radial-gradient(#0ff,#f00)'
  flme[4].style.opacity=0.7
  flme[5].style.opacity=0.7
+ for(i=0;i<3;i++)
+ {
+  fl[i].style.opacity=0.9
+ }
  drts[0].style.transform='skew(0deg)'
  drts[0].style.background=
   'radial-gradient('+(44+Math.random()*33)+'px,#f00,#ff0)'
@@ -308,6 +326,10 @@ flme[0].onmouseout=()=>
   'radial-gradient(44px,#c0c,#f00)'
  flme[4].style.opacity=0
  flme[5].style.opacity=0
+ for(i=0;i<3;i++)
+ {
+  fl[i].style.opacity=0
+ }
  drts[0].style.transform='skew(-16deg)'
  drts[0].style.background='#fff'
  hdd[0].style.transform=
@@ -319,7 +341,31 @@ flme[0].onmouseout=()=>
 }
 flme[0].onclick=()=>
 {    
+  for(i=0;i<3;i++)
+  {
+   fl[i].style.transition=1+'s'
+  }
+  fl[0].style.transform=
+   'scale('+(5+Math.random())+
+   ') translate('+Math.random()*1156+'%,'+
+   -Math.random()*1159+'%)'
+  fl[1].style.transform=
+   'scale('+(5+Math.random())+
+   ') translate('+Math.random()*1156+'%,'+
+   -Math.random()*1159+'%)'
+  fl[2].style.transform=
+   'scale('+(5+Math.random())+
+   ') translate('+Math.random()*1256+'%,'+
+   -Math.random()*1159+'%)' 
+ setTimeout(()=>{
+  for(i=0;i<3;i++)
+  {
+   fl[i].style.transition=0+'s'
+   fl[i].style.opacity=0
+   fl[i].style.transform='scale(1)'
+  }
  
+ }, 999)   
 } 
 
 flme[1].onmouseover=()=>
