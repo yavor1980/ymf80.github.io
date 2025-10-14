@@ -234,27 +234,27 @@ mne[0].style.top=81+'%'
 mne[0].style.width=6+'%'
 mne[0].style.height=6+'%'
 mne[0].style.background=
- 'radial-gradient(#777,#333)'
+ 'radial-gradient(#700,#b00)'
 mne[0].style.borderRadius=55+'%'
 mne[0].style.transform='scale(2)'
 mne[1].style.left=22+'%'
 mne[1].style.top=40+'%'
 mne[1].style.width=22+'%'
 mne[1].style.height=33+'%'
-mne[1].style.background='#444'
+mne[1].style.background='#400'
 mne[1].style.borderRadius=55+'%'
 mne[2].style.left=55+'%'
 mne[2].style.top=52+'%'
 mne[2].style.width=22+'%'
 mne[2].style.height=33+'%'
-mne[2].style.background='#444'
+mne[2].style.background='#400'
 mne[2].style.borderRadius=55+'%'
 mne[2].style.transform='rotate(-22deg)'
 mne[3].style.left=45+'%'
 mne[3].style.top=-12+'%'
 mne[3].style.width=22+'%'
 mne[3].style.height=44+'%'
-mne[3].style.background='#444'
+mne[3].style.background='#400'
 mne[3].style.borderRadius=36+'%'
 mne[3].style.transform='rotate(7deg)'
 
@@ -269,7 +269,9 @@ ttstte[1].style.transform='scale(0)'
 
 ttmne[0].style.left=77+'%'
 ttmne[0].style.top=77+'%'
+ttmne[0].style.background='#ff0'
 ttmne[0].style.color='#b00'
+ttmne[0].style.opacity=0.5
 ttmne[0].style.transform='scale(0)'
 
 ttcmnd[0].style.left=66+'%'
@@ -278,7 +280,9 @@ ttcmnd[0].style.color='#000'
 ttcmnd[0].style.opacity=0
 ttcmnd[1].style.left=77+'%'
 ttcmnd[1].style.top=55+'%'
+ttcmnd[1].style.background='#ff0'
 ttcmnd[1].style.color='#f00'
+ttcmnd[1].style.opacity=0.6
 ttcmnd[1].style.transform='scale(0)'
 
 b=0
@@ -324,15 +328,6 @@ function cl()
 btn[0].onclick=()=>
 {
   b=Math.round(Math.random())
- slte[0].style.background='radial-gradient(#ff0,#f00)'
- slte[1].style.background='radial-gradient(#ff0,#f00)'
- slte[2].style.background='radial-gradient(#ff0,#f00)'
- slte[0].style.transition='1s'
- slte[1].style.transition='1s'
- slte[2].style.transition='1s'
- slte[0].style.opacity=1
- slte[1].style.opacity=1
- slte[2].style.opacity=1
  sh[1].style.transform=
   'scale(1,0.6) translate(0,44%)'
  sh[2].style.transform=
@@ -340,30 +335,31 @@ btn[0].onclick=()=>
  sh[3].style.transform='translate(0,33%)'
  sh[5].style.transform=
   'scale(1,0.6) translate(0,44%)'
+ slte[0].style.background='radial-gradient(#ff0,#f00)'
+ slte[1].style.background='radial-gradient(#ff0,#f00)'
+ slte[2].style.background='radial-gradient(#ff0,#f00)'
+ slte[0].style.transition='1s'
+ slte[1].style.transition='1s'
+ slte[2].style.transition='1s'
+ slte[0].style.opacity=0.8
+ slte[1].style.opacity=0.8
+ slte[2].style.opacity=0.8 
  ttcmnd[0].style.opacity=1
  ttcmnd[0].style.transform=
   'scale(3) translate(-33%,0) skew(-22deg)'
  ttcmnd[0].style.color='#f00'
- if(b)
- { 
+ 
   sh[0].style.transform='translate(-22%,0)'
   slte[0].style.transform=
-   ' translate('+Math.random()*2222+'%, -1111%) scale(3)'
+   'scale(5) translate('+(Math.random()*888-444)+
+   '%, -322%) '
   slte[1].style.transform=
-   ' translate('+Math.random()*2222+'%, -1111%) scale(3)'
+   'scale(5) translate('+(Math.random()*888-444)+
+   '%, -377%) '
   slte[2].style.transform=
-   ' translate('+Math.random()*2222+'%, -1111%) scale(3)'
- } 
- else
- {
-  sh[0].style.transform='translate(22%,0)'
-  slte[0].style.transform=
-   ' translate(-'+Math.random()*2222+'%, -1111%) scale(3)'
-  slte[1].style.transform=
-   ' translate(-'+Math.random()*2222+'%, -1111%) scale(3)'
-  slte[2].style.transform=
-   ' translate(-'+Math.random()*2222+'%, -1111%) scale(3)'
- }  
+   'scale(5) translate('+(Math.random()*888-444)+
+   '%, -322%) '
+  
  setTimeout(()=>
  {
   sh[3].style.transform='translate(0,0%)'
@@ -409,7 +405,7 @@ sh[0].onmouseover=()=>
  sh[4].style.background='#bb0'
  slte[3].style.left=76+'%'
  slte[3].style.background=
-  'radial-gradient(#bb0,#333)'
+  'radial-gradient(#900,#b00)'
  slte[3].style.opacity=1
  slte[3].style.transition=1+'s'
  slte[3].style.transform=
@@ -469,30 +465,38 @@ mne[0].onmouseout=()=>
 
 ttnm[2].onmouseover=()=>
 {
- ttnm[2].innerHTML='floating airfield' 
+ ttnm[2].style.zIndex=1
+ ttnm[2].style.background='#ff0'
+ ttnm[2].style.opacity=0.5
  ttnm[2].style.transform=
   'scale(1.8) translate(8%,-77%) skew(-22deg)' 
- ttnm[2].style.color='#ff0 ' 
+  ttnm[2].innerHTML='floating airfield'
 }
 ttnm[2].onmouseout=()=>
 {
- ttnm[2].innerHTML='aircraft carrier'
+ ttnm[2].style.zIndex=0
+ ttnm[2].style.background='none'
+ ttnm[2].style.opacity=1
  ttnm[2].style.transform='scale(1)'
- ttnm[2].style.color='#f00 ' 
+  ttnm[2].innerHTML='aircraft carrier'
 }
 
 ttnm[3].onmouseover=()=>
 {
- ttnm[3].innerHTML='offline enemy search' 
+ ttnm[3].style.zIndex=1
+ ttnm[3].style.background='#ff0'
+ ttnm[3].style.opacity=0.5
  ttnm[3].style.transform=
   'scale(1.8) translate(8%,-77%) skew(-22deg)' 
- ttnm[3].style.color='#ff0' 
+  ttnm[3].innerHTML='offline enemy search'
 }
 ttnm[3].onmouseout=()=>
 {
- ttnm[3].innerHTML='cruiser'
+ ttnm[3].style.zIndex=0
+ ttnm[3].style.background='none'
+ ttnm[3].style.opacity=1
  ttnm[3].style.transform='scale(1)'
- ttnm[3].style.color='#f00 ' 
+  ttnm[3].innerHTML='cruiser'
 }
 
 ttnm[4].onmouseover=()=>
