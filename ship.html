@@ -42,7 +42,6 @@ body
  height:33%;
  cursor:pointer;
 }
-
 .slte
 {
  position:absolute;
@@ -52,30 +51,16 @@ body
  z-index:-1;
 }
 
-.mne
+.mne,.hlcptr,.ttnm
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
 }
-.ttmne
-{
- position:absolute;
- transition:1s;
-}
-
 .ttnm
 {
- position:absolute;
- font-size:1em;
  color:#ff0;
- transition:1s;
-}
-
-.ttstte,.ttcmnd,.ttgthb
-{
- position:absolute;
- transition:1s;
+ font-size:1em;
 }
 
 </style>
@@ -106,34 +91,22 @@ body
  <div class=mne></div>  
  <div class=mne></div>
 </div>
- <div class=ttmne>explosive...</div> 
-  
-<div class=ttnm>aircraft carrier</div>
-<div class=ttnm>cruiser</div>
-<div class=ttnm>landing ship</div>
-<div class=ttnm>destroyer</div>
-<div class=ttnm>frigate</div>
-<div class=ttnm>corvette</div>
 
-<div class=ttstte>Very steady ...</div>
-<div class=ttstte>Good target<br> &nbsp
-  for torpedo atack
+<div class=hlcptr>
+ <div class=hlcptr>
+  <div class=hlcptr></div>  
+ </div>
 </div>
-<div class=ttcmnd> don't demask me!</div>
-<div class=ttcmnd>Danger!</div>
 
 <script>
 btn=document.getElementsByClassName('btn')
 wtr=document.getElementsByClassName('wtr')
 sh=document.getElementsByClassName('sh')
 slte=document.getElementsByClassName('slte')
-ttnm=document.getElementsByClassName('ttnm')
 mne=document.getElementsByClassName('mne')
-ttmne=document.getElementsByClassName('ttmne')
+hlcptr=document.getElementsByClassName('hlcptr')
 
-ttalgrt=document.getElementsByClassName('ttalgrt')
-ttcmnd=document.getElementsByClassName('ttcmnd')
-ttstte=document.getElementsByClassName('ttstte')
+ttnm=document.getElementsByClassName('ttnm')
 
 btn[0].style.right=5+'%'
 btn[0].style.top=4+'%' 
@@ -203,7 +176,10 @@ sh[5].style.borderRadius='55%'
 sh[5].style.borderTopLeftRadius='5%'
 sh[5].style.borderTopRightRadius='5%'
 sh[5].style.zIndex=-2
-
+ttnm[0].style.left='51%'
+ttnm[0].style.top='6%'
+ttnm[1].style.left='11%'
+ttnm[1].style.top='6%'
 slte[4].style.left=77+'%'
 slte[4].style.top=44+'%'
 slte[4].style.height=11+'%'
@@ -214,20 +190,28 @@ slte[5].style.background=
 slte[5].style.zIndex=-1 
 slte[5].style.transform='scale(0)' 
    
-ttnm[0].style.left='51%'
-ttnm[0].style.top='6%'
-ttnm[1].style.left='11%'
-ttnm[1].style.top='6%'
+hlcptr[0].style.left=63+'%'
+hlcptr[0].style.top=20+'%'
+hlcptr[0].style.width=22+'%'
+hlcptr[0].style.height=22+'%'
+hlcptr[0].style.zIndex=-1
+hlcptr[0].style.transform=
+ 'scale(0.8) translate(-77%,-77%)'
+hlcptr[1].style.width=100+'%'
+hlcptr[1].style.height=100+'%'
+hlcptr[1].style.borderRadius=55+'%'
+hlcptr[1].style.background=
+ 'radial-gradient(#999,#444)' 
+hlcptr[1].style.opacity=0.2
+hlcptr[2].style.transition=100+'ms'
+hlcptr[2].style.left=-5+'%'
+hlcptr[2].style.top=-13+'%'
+hlcptr[2].style.width=105+'%'
+hlcptr[2].style.height=24+'%'
+hlcptr[2].style.background=
+ 'radial-gradient(#fff,#00f)'
+hlcptr[2].style.borderRadius=55+'%' 
 
-for(i=2;i<8;i++)
-{
- ttnm[i].style.left=(9+i*1)+'%'
- ttnm[i].style.bottom=i*7+'%'
- ttnm[i].style.background='ff0'
- ttnm[i].style.color='f00'
- ttnm[i].style.fontSize='2em'
- ttnm[i].style.cursor='pointer'
-}
 
 mne[0].style.left=59+'%'
 mne[0].style.top=81+'%'
@@ -258,36 +242,15 @@ mne[3].style.background='#400'
 mne[3].style.borderRadius=36+'%'
 mne[3].style.transform='rotate(7deg)'
 
-ttstte[0].style.left=44+'%'
-ttstte[0].style.top=9+'%'
-ttstte[0].style.color='#000'
-ttstte[0].style.transform='scale(0)'
-ttstte[1].style.left=66+'%'
-ttstte[1].style.top=18+'%'
-ttstte[1].style.color='#000'
-ttstte[1].style.transform='scale(0)'
-
-ttmne[0].style.left=77+'%'
-ttmne[0].style.top=77+'%'
-ttmne[0].style.background='#ff0'
-ttmne[0].style.color='#b00'
-ttmne[0].style.opacity=0.5
-ttmne[0].style.transform='scale(0)'
-
-ttcmnd[0].style.left=66+'%'
-ttcmnd[0].style.top=27+'%'
-ttcmnd[0].style.color='#000'
-ttcmnd[0].style.opacity=0
-ttcmnd[1].style.left=77+'%'
-ttcmnd[1].style.top=55+'%'
-ttcmnd[1].style.background='#ff0'
-ttcmnd[1].style.color='#f00'
-ttcmnd[1].style.opacity=0.6
-ttcmnd[1].style.transform='scale(0)'
-
 b=0
 function cl()
 {  
+ hlcptr[0].style.transform=
+  'scale(0.8) translate('+(Math.random()*11)+'%,'+
+  (Math.random()*11)+'%) rotate('+
+  (Math.random()*22-11)+'deg)'
+ hlcptr[2].style.transform='scale('+
+  (1+Math.random()/2)+')' 
  if(b)
  {
   wtr[1].style.transform=
@@ -319,7 +282,7 @@ function cl()
   sh[1].style.transform='scale(1)'
   sh[2].style.transform='scale(1.1)'
   sh[5].style.transform='scale(1.1)'
-  mne[0].style.transform='scale(1.8) '
+  mne[0].style.transform='scale(1.8)'
  }  
     b=!b
 }
@@ -328,6 +291,7 @@ function cl()
 btn[0].onclick=()=>
 {
   b=Math.round(Math.random())
+ sh[0].style.transform='translate(-22%,0)'
  sh[1].style.transform=
   'scale(1,0.6) translate(0,44%)'
  sh[2].style.transform=
@@ -344,28 +308,19 @@ btn[0].onclick=()=>
  slte[0].style.opacity=0.8
  slte[1].style.opacity=0.8
  slte[2].style.opacity=0.8 
- ttcmnd[0].style.opacity=1
- ttcmnd[0].style.transform=
-  'scale(3) translate(-33%,0) skew(-22deg)'
- ttcmnd[0].style.color='#f00'
- 
-  sh[0].style.transform='translate(-22%,0)'
-  slte[0].style.transform=
-   'scale(5) translate('+(Math.random()*888-444)+
-   '%, -322%) '
-  slte[1].style.transform=
-   'scale(5) translate('+(Math.random()*888-444)+
-   '%, -377%) '
-  slte[2].style.transform=
-   'scale(5) translate('+(Math.random()*888-444)+
-   '%, -322%) '
-  
+ slte[0].style.transform=
+  'scale(5) translate('+(Math.random()*888-444)+
+  '%, -322%) '
+ slte[1].style.transform=
+  'scale(5) translate('+(Math.random()*888-444)+
+  '%, -377%) '
+ slte[2].style.transform=
+  'scale(5) translate('+(Math.random()*888-444)+
+  '%, -322%) '
  setTimeout(()=>
  {
   sh[3].style.transform='translate(0,0%)'
   sh[5].style.transform='scale(1)'
-  ttcmnd[0].style.opacity=0
-  ttcmnd[0].style.transform='translate(0%,0%)'
   slte[0].style.transition=0+'s'
   slte[0].style.opacity=0
   slte[0].style.transform='translate(0%,0%)'
@@ -394,11 +349,12 @@ btn[1].onclick=()=>
   slte[4].style.transition=0+'s'
   slte[4].style.opacity=0
   slte[4].style.transform=
-   'scale(1) translate(66%,-466%)'
+   'scale(1.8) translate(266%,-466%)'
   slte[5].style.transition=0+'s' 
+  slte[5].style.opacity=0
  }, 1000)
 }
- inm=0
+
 sh[0].onmouseover=()=>
 {
  sh[0].style.transform='scale(1.3) '
@@ -409,10 +365,10 @@ sh[0].onmouseover=()=>
  slte[3].style.opacity=1
  slte[3].style.transition=1+'s'
  slte[3].style.transform=
-  'scale(3) translate(266%,-188%)'
+  'scale(4) translate(266%,-188%)'
  setTimeout(()=>{
   slte[3].style.transform=
-  'scale(3) translate(366%,488%)'
+  'scale(5) translate(366%,488%)'
   slte[3].style.opacity=0
  }, 999) 
  setTimeout(()=>{ 
@@ -423,18 +379,9 @@ sh[0].onmouseover=()=>
   'scale(1.5) skew(22deg)'
  ttnm[1].style.transform=
   'scale(1.5) skew(-22deg)'
- ttstte[0].style.transform=
-  'scale(2.3) skew(33deg)'
- ttstte[0].style.color='#f00'
- ttstte[1].style.transform=
-  'scale(2.3) skew(-33deg)'
- ttstte[1].style.color='#777'
- mne[0].style.transform='scale(0)'
- mne[0].style.opacity=0
- ttcmnd[1].style.transform=
-  'scale(3) skew(-33deg)'
-  inm=Math.round(Math.random()*6+2)
- ttnm[inm].onmouseover() 
+ hlcptr[0].style.transform='scale(1)'
+ hlcptr[1].style.opacity=1
+
 }
 sh[0].onmouseout=()=>
 {
@@ -442,117 +389,9 @@ sh[0].onmouseout=()=>
  sh[4].style.background='#000'
  ttnm[0].style.transform='scale(1) '
  ttnm[1].style.transform='scale(1) '
- ttstte[0].style.transform=
-  'scale(0) skew(-33deg)'
- ttstte[0].style.color='#000'
- ttstte[1].style.transform='scale(0) '
- ttstte[1].style.color='#000'
- mne[0].style.transform='scale(2)'
- mne[0].style.opacity=1
- ttcmnd[1].style.transform='scale(0)'
- ttnm[inm].onmouseout()
-}
-
-mne[0].onmouseover=()=>
-{
- ttmne[0].style.transform=
-  'scale(3) translate(0,-444%) skew(-22deg)'
-}
-mne[0].onmouseout=()=>
-{
- ttmne[0].style.transform='scale(0) '
-}
-
-ttnm[2].onmouseover=()=>
-{
- ttnm[2].style.zIndex=1
- ttnm[2].style.background='#ff0'
- ttnm[2].style.opacity=0.5
- ttnm[2].style.transform=
-  'scale(1.8) translate(8%,-77%) skew(-22deg)' 
-  ttnm[2].innerHTML='floating airfield'
-}
-ttnm[2].onmouseout=()=>
-{
- ttnm[2].style.zIndex=0
- ttnm[2].style.background='none'
- ttnm[2].style.opacity=1
- ttnm[2].style.transform='scale(1)'
-  ttnm[2].innerHTML='aircraft carrier'
-}
-
-ttnm[3].onmouseover=()=>
-{
- ttnm[3].style.zIndex=1
- ttnm[3].style.background='#ff0'
- ttnm[3].style.opacity=0.5
- ttnm[3].style.transform=
-  'scale(1.8) translate(8%,-77%) skew(-22deg)' 
-  ttnm[3].innerHTML='offline enemy search'
-}
-ttnm[3].onmouseout=()=>
-{
- ttnm[3].style.zIndex=0
- ttnm[3].style.background='none'
- ttnm[3].style.opacity=1
- ttnm[3].style.transform='scale(1)'
-  ttnm[3].innerHTML='cruiser'
-}
-
-ttnm[4].onmouseover=()=>
-{
- ttnm[4].innerHTML='sea landing' 
- ttnm[4].style.transform=
-  'scale(1.8) translate(8%,-77%) skew(-22deg)' 
- ttnm[4].style.color='#ff0' 
-}
-ttnm[4].onmouseout=()=>
-{
- ttnm[4].innerHTML='landing ship'
- ttnm[4].style.transform='scale(1)'
- ttnm[4].style.color='#f00 ' 
-}
-
-ttnm[5].onmouseover=()=>
-{
- ttnm[5].style.transform=
-  'scale(1.8) translate(8%,-77%) skew(-22deg)' 
- ttnm[5].style.color='#550'
-  ttnm[5].innerHTML='mining'
-}
-ttnm[5].onmouseout=()=>
-{
- ttnm[5].style.transform='scale(1)'
- ttnm[5].style.color='#f00' 
-  ttnm[5].innerHTML='destroyer'
-}
-
-ttnm[6].onmouseover=()=>
-{
- ttnm[6].innerHTML='search for submarines'
- ttnm[6].style.transform=
-  'scale(1.8) translate(8%,-77%) skew(-22deg)'
- ttnm[6].style.color='#550' 
-}
-ttnm[6].onmouseout=()=>
-{
- ttnm[6].innerHTML='frigate'
- ttnm[6].style.transform='scale(1)' 
- ttnm[6].style.color='#f00 ' 
-}
-
-ttnm[7].onmouseover=()=>
-{
- ttnm[7].innerHTML='transport convoy'
- ttnm[7].style.transform=
-  'scale(1.8) translate(8%,-77%) skew(-22deg)' 
- ttnm[7].style.color='#550' 
-}
-ttnm[7].onmouseout=()=>
-{
- ttnm[7].innerHTML='corvette'
- ttnm[7].style.transform='scale(1)' 
- ttnm[7].style.color='#f00 ' 
+ hlcptr[0].style.transform=
+  'scale(1) scale(0.8) translate(-77%,-77%)'
+ hlcptr[1].style.opacity=0.2
 }
 
 </script>
