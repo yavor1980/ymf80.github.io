@@ -32,7 +32,7 @@ body
  background:#00b;
 }
 
-.sh
+.sh,#idsh
 {
  position:absolute;
  transition:1s;
@@ -93,7 +93,9 @@ body
 </div>
 
 <div class=hlcptr>
- <div class=hlcptr></div>
+ <div class=hlcptr>
+  <div id=idsh></div> 
+ </div>
  <div class=hlcptr></div>  
  <div class=hlcptr>
   <div class=hlcptr></div>
@@ -234,6 +236,12 @@ hlcptr[4].style.background=
  'radial-gradient(#fff,#00f)'
 hlcptr[4].style.borderRadius=55+'%' 
 hlcptr[4].style.opacity=0.2
+idsh.style.left=22+'%'
+idsh.style.top=22+'%'
+idsh.style.width=55+'%'
+idsh.style.height=34+'%'
+idsh.style.background='#bbb'
+idsh.style.borderRadius=25+'%' 
 
 mne[0].style.left=59+'%'
 mne[0].style.top=81+'%'
