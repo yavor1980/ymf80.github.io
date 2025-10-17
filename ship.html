@@ -93,9 +93,11 @@ body
 </div>
 
 <div class=hlcptr>
+ <div class=hlcptr></div>
+ <div class=hlcptr></div>  
  <div class=hlcptr>
-  <div class=hlcptr></div>  
- </div>
+  <div class=hlcptr></div>
+ </div> 
 </div>
 
 <script>
@@ -199,11 +201,13 @@ hlcptr[0].style.transform=
  'scale(0.8) translate(-77%,-77%)'
 hlcptr[1].style.width=100+'%'
 hlcptr[1].style.height=100+'%'
-hlcptr[1].style.borderRadius=55+'%'
 hlcptr[1].style.background=
  'radial-gradient(#999,#444)' 
+hlcptr[1].style.borderRadius=55+'%'
+hlcptr[1].style.borderBottomLeftRadius=44+'%' 
+hlcptr[1].style.borderBottomRightRadius=44+'%'  
 hlcptr[1].style.opacity=0.2
-hlcptr[2].style.transition=100+'ms'
+hlcptr[2].style.transition=800+'ms'
 hlcptr[2].style.left=-5+'%'
 hlcptr[2].style.top=-13+'%'
 hlcptr[2].style.width=105+'%'
@@ -211,7 +215,25 @@ hlcptr[2].style.height=24+'%'
 hlcptr[2].style.background=
  'radial-gradient(#fff,#00f)'
 hlcptr[2].style.borderRadius=55+'%' 
-
+hlcptr[2].style.opacity=0.2
+hlcptr[3].style.left=33+'%'
+hlcptr[3].style.top=-43+'%'
+hlcptr[3].style.width=20+'%'
+hlcptr[3].style.height=94+'%'
+hlcptr[3].style.border='12px ridge #444'
+hlcptr[3].style.borderTop='transparent' 
+hlcptr[3].style.transform='skew(27deg)'
+hlcptr[3].style.opacity=0.2
+hlcptr[3].style.zIndex=-1
+hlcptr[4].style.transition=800+'ms'
+hlcptr[4].style.left=-40+'%'
+hlcptr[4].style.top=-13+'%'
+hlcptr[4].style.width=185+'%'
+hlcptr[4].style.height=24+'%'
+hlcptr[4].style.background=
+ 'radial-gradient(#fff,#00f)'
+hlcptr[4].style.borderRadius=55+'%' 
+hlcptr[4].style.opacity=0.2
 
 mne[0].style.left=59+'%'
 mne[0].style.top=81+'%'
@@ -251,6 +273,10 @@ function cl()
   (Math.random()*22-11)+'deg)'
  hlcptr[2].style.transform='scale('+
   (1+Math.random()/2)+')' 
+ hlcptr[3].style.transform='skew('+
+  (Math.random()*20-10)+'deg)' 
+ hlcptr[4].style.transform='skew('+
+  (Math.random()*20-10)+'deg)' 
  if(b)
  {
   wtr[1].style.transform=
@@ -381,7 +407,9 @@ sh[0].onmouseover=()=>
   'scale(1.5) skew(-22deg)'
  hlcptr[0].style.transform='scale(1)'
  hlcptr[1].style.opacity=1
-
+ hlcptr[2].style.opacity=1
+ hlcptr[3].style.opacity=1
+ hlcptr[4].style.opacity=1
 }
 sh[0].onmouseout=()=>
 {
@@ -392,6 +420,9 @@ sh[0].onmouseout=()=>
  hlcptr[0].style.transform=
   'scale(1) scale(0.8) translate(-77%,-77%)'
  hlcptr[1].style.opacity=0.2
+ hlcptr[2].style.opacity=0.2
+ hlcptr[3].style.opacity=0.2
+ hlcptr[4].style.opacity=0.2
 }
 
 </script>
