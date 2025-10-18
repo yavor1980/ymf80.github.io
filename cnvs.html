@@ -171,6 +171,18 @@ Iosc=setInterval(()=>{
  }, imtosc)
 }
 
+function fHz()
+{ 
+for(i=0;i<300;i++)
+{
+ cntxt.strokeStyle='#00f'
+ y=Math.random()*88
+ cntxt.moveTo(i*33,y)
+ cntxt.lineTo(i*33,-y)
+ cntxt.stroke()
+} 
+}
+
 cnv[0].onmousemove=()=>
 {
  cnv[0].style.border='11px ridge #ee0'
@@ -260,8 +272,7 @@ btn[8].onclick=()=>
 {
  if(boscll==0)
  {
-  foscll()
-  fHz(1)
+  fHz()
   btn[8].value='Stop'
  }
  else
