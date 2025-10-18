@@ -27,14 +27,14 @@ canvas
 </head>
 
 <body id=idbd>
-<input type=button class=btn value='draw'>
+<input type=button class=btn value='Stop'>
 <input type=button class=btn value='rndline'>
 <input type=button class=btn value='round'>
 <input type=button class=btn value='line'>
 <input type=button class=btn value='clear'>
 <input type=button class=btn  value='axes'>
-<input type=button class=btn value='oscll'>
-<input type=button class=btn value='Smooth'>
+<input type=button class=btn value='Poly'>
+<input type=button class=btn value='Single'>
 <input type=button class=btn value='Hz'>
 <canvas></canvas> 
 <script>
@@ -161,7 +161,7 @@ Iosc=setInterval(()=>{
  scle=22+Math.random()*11
  trvl=11+Math.random()*11
  cntxt.clearRect(0,0,999,999)
- if(b==0) ff+=2 
+ if(b==0) ff+=5
  if(b==1) ff=Math.round(Math.random()*9)
  for(i=0;i<300;i++)
  {
@@ -193,6 +193,10 @@ cnv[0].onclick=()=>
 btn[0].onclick=()=>
 {   
  bcnvs=!bcnvs
+ if(bcnvs)
+  btn[0].value='draw'
+ else
+  btn[0].value='Stop'
 }
 btn[1].onclick=()=>
 {
@@ -230,7 +234,7 @@ btn[6].onclick=()=>
  {
   clearInterval(Iosc)
   ff=0
-  btn[6].value='oscll'
+  btn[6].value='Poly'
  }
  boscll=!boscll
 }
@@ -247,7 +251,24 @@ btn[7].onclick=()=>
  {
   clearInterval(Iosc)
   ff=0
-  btn[7].value='oscll'
+  btn[7].value='Single'
+ }
+ boscll=!boscll
+}
+
+btn[8].onclick=()=>
+{
+ if(boscll==0)
+ {
+  foscll()
+  fHz(1)
+  btn[8].value='Stop'
+ }
+ else
+ {
+  clearInterval(Iosc)
+  ff=0
+  btn[8].value='Hz'
  }
  boscll=!boscll
 }
