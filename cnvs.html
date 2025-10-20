@@ -27,7 +27,7 @@ canvas
 </head>
 
 <body id=idbd>
-<input type=button class=btn value='Stop'>
+<input type=button class=btn value='draw'>
 <input type=button class=btn value='rndline'>
 <input type=button class=btn value='round'>
 <input type=button class=btn value='line'>
@@ -94,7 +94,6 @@ function fdrw()
  cntxt.arc(event.clientX/4,event.clientY/4,
   1,0,2*Math.PI)
  cntxt.fill()
- //cntxt.endPath()
 }
 function frndline()
 {
@@ -112,7 +111,7 @@ function fround()
  cntxt.stroke()
  cntxt.endPath()
 }
-bcnvs=0
+bcnvs=1
 bln=0 
 x=0,y=0
 function fline()
@@ -170,37 +169,20 @@ Iosc=setInterval(()=>{
   cntxt.stroke() 
  }, imtosc)
 }
-
+y=0
 function fHz()
 { 
 for(i=0;i<300;i++)
 {
+ 
  cntxt.strokeStyle='#00f'
- y=Math.random()*88
- cntxt.moveTo(i*33,y)
- cntxt.lineTo(i*33,-y)
+ y=88+Math.random()*8
+ //cntxt.moveTo(i*3,8)
+ cntxt.lineTo(i*3,y)
  cntxt.stroke()
 } 
 }
 
-cnv[0].onmousemove=()=>
-{
- cnv[0].style.border='11px ridge #ee0'
- if(bcnvs==0) fdrw()  
-}
-cnv[0].onmouseout=()=>
-{
- cnv[0].style.border='11px ridge #ff0'
-}
-cnv[0].onclick=()=>
-{ 
- switch(bcnvs) 
- {
-  case 1: frndline(); break;
-  case 2: fround(); break;
-  case 3: fline(); break;
- }  
-}
 
 btn[0].onclick=()=>
 {   
@@ -222,17 +204,14 @@ btn[3].onclick=()=>
 {
  bcnvs=3
 }
-
 btn[4].onclick=()=>
 {
  cntxt.clearRect(0,0,999,999)
 }
-
 btn[5].onclick=()=>
 {
  faxs()
 }
-
 boscll=0
 btn[6].onclick=()=>
 {
@@ -267,7 +246,6 @@ btn[7].onclick=()=>
  }
  boscll=!boscll
 }
-
 btn[8].onclick=()=>
 {
  if(boscll==0)
@@ -282,6 +260,25 @@ btn[8].onclick=()=>
   btn[8].value='Hz'
  }
  boscll=!boscll
+}
+
+cnv[0].onmousemove=()=>
+{
+ cnv[0].style.border='11px ridge #ee0'
+ if(bcnvs==0) fdrw()  
+}
+cnv[0].onmouseout=()=>
+{
+ cnv[0].style.border='11px ridge #ff0'
+}
+cnv[0].onclick=()=>
+{ 
+ switch(bcnvs) 
+ {
+  case 1: frndline(); break;
+  case 2: fround(); break;
+  case 3: fline(); break;
+ }  
 }
 
 //for(var i=0;i<n;i++) 
