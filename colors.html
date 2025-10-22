@@ -5,6 +5,7 @@
 body
 {
  background:radial-gradient(#bf0,#f90);
+ height:177%;
 }
 
 .btn
@@ -42,11 +43,31 @@ body
  text-align:center;
 }
 
+.mndla
+{
+ position:absolute;
+ transition:1s;
+}
+.mndla:hover
+{
+ transform:scale(1.1);
+}
+.rnd
+{
+ position:absolute;
+ transition:1s;
+ width:22%;
+ height:22%;
+ background:#f00;
+ border-radius:55%;
+ opacity:0.1;
+}
+
 </style>
 </head>
 <body>
-<input type=button class=btn value='change'>
-<input type=button class=btn value='color'>
+<input type=button class=btn value='rand'>
+<input type=button class=btn value='set'>
 <input type=button class=btn value='reset'>
 
 <div class=rnge>
@@ -63,10 +84,21 @@ body
 
 <div class=cmmnt></div>
 
+<div class=mndla>
+ <div class=mndla></div>
+ <div class=mndla></div>
+ <div class=rnd></div>
+ <div class=rnd></div>
+ <div class=rnd></div>
+ <div class=rnd></div>
+</div>
+
 <script>
 btn=document.getElementsByClassName('btn')
 rnge=document.getElementsByClassName('rnge')
 cmmnt=document.getElementsByClassName('cmmnt')
+mndla=document.getElementsByClassName('mndla')
+rnd=document.getElementsByClassName('rnd')
 
 btn[0].style.left=76+'%'
 btn[0].style.top=5+'%'
@@ -131,7 +163,7 @@ cmmnt[3].style.cursor='pointer'
 cmmnt[3].style.fontSize=0+'em'
   cmmnt[3].innerHTML='#00f'
 cmmnt[4].style.left=11+'%'
-cmmnt[4].style.top=65+'%'
+cmmnt[4].style.top=62+'%'
 cmmnt[4].style.width=78+'%'
 cmmnt[4].style.height=23+'%'
 cmmnt[4].style.background=
@@ -139,6 +171,37 @@ cmmnt[4].style.background=
 cmmnt[4].style.border='none' 
 cmmnt[4].style.borderRadius=55+'%'
 cmmnt[4].style.cursor='pointer'
+
+mndla[0].style.left=5+'%'
+mndla[0].style.top=93+'%'
+mndla[0].style.width=88+'%'
+mndla[0].style.height=78+'%'
+mndla[0].style.background='#ccc'
+mndla[0].style.borderRadius=55+'%'
+mndla[0].style.border='7px ridge #bbb'
+mndla[0].style.cursor='pointer'
+mndla[1].style.left=5+'%'
+mndla[1].style.top=39+'%'
+mndla[1].style.width=88+'%'
+mndla[1].style.height=17+'%'
+mndla[1].style.background='#ccc'
+mndla[1].style.borderRadius=55+'%'
+mndla[1].style.border='7px ridge #bbb'
+mndla[2].style.left=41+'%'
+mndla[2].style.top=5+'%'
+mndla[2].style.width=17+'%'
+mndla[2].style.height=88+'%'
+mndla[2].style.background='#ccc'
+mndla[2].style.borderRadius=55+'%'
+mndla[2].style.border='7px ridge #bbb'
+rnd[0].style.left=14+'%'
+rnd[0].style.top=14+'%'
+rnd[1].style.left=14+'%'
+rnd[1].style.bottom=14+'%'
+rnd[2].style.right=14+'%'
+rnd[2].style.top=14+'%'
+rnd[3].style.right=14+'%'
+rnd[3].style.bottom=14+'%'
 
 nbtn2=0
 fc='#f00', sc='#f0f', tc='#00f'
@@ -283,6 +346,32 @@ cmmnt[4].onmouseout=()=>
  cmmnt[4].style.border='none'  
  cmmnt[4].style.transform='scale(1)'
 }
+
+mndla[0].onmouseover=()=>
+{  
+ mndla[1].style.background='#f0f'
+ mndla[1].style.borderTop='transparent'
+ mndla[1].style.borderBottom='transparent'
+ mndla[2].style.background='#f0f'
+ mndla[2].style.borderLeft='transparent'
+ mndla[2].style.borderRight='transparent'
+ for(i=0;i<300;i++)
+ {
+  rnd[i].style.opacity=1
+ }
+}
+mndla[0].onmouseout=()=>
+{  
+ mndla[1].style.background='none'
+ mndla[1].style.border='7px ridge #bbb'
+ mndla[2].style.background='none'
+ mndla[2].style.border='7px ridge #bbb'
+ for(i=0;i<300;i++)
+ {
+  rnd[i].style.opacity=0.1
+ }
+}
+
 
 //for(var i=0;i<n;i++) 
 </script> 
