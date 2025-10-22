@@ -58,7 +58,6 @@ body
  transition:1s;
  width:22%;
  height:22%;
- background:#f00;
  border-radius:55%;
  opacity:0.1;
 }
@@ -346,19 +345,25 @@ cmmnt[4].onmouseout=()=>
  cmmnt[4].style.border='none'  
  cmmnt[4].style.transform='scale(1)'
 }
-
+Imndla=0
 mndla[0].onmouseover=()=>
 {  
  mndla[1].style.background='#f0f'
  mndla[1].style.borderTop='transparent'
  mndla[1].style.borderBottom='transparent'
- mndla[2].style.background='#f0f'
+ mndla[2].style.background=
+  'radial-gradient(#ff0,#f0f)'
  mndla[2].style.borderLeft='transparent'
  mndla[2].style.borderRight='transparent'
- for(i=0;i<300;i++)
+ Imndla=setInterval(()=>{
+ for(i=0;i<4;i++)
  {
-  rnd[i].style.opacity=1
+  rnd[i].style.background='#f00'
+  rnd[i].style.opacity=Math.random()
+  rnd[i].style.transform='scale('+
+   (1+Math.random()/5)+')'
  }
+  }, 999)
 }
 mndla[0].onmouseout=()=>
 {  
@@ -366,9 +371,12 @@ mndla[0].onmouseout=()=>
  mndla[1].style.border='7px ridge #bbb'
  mndla[2].style.background='none'
  mndla[2].style.border='7px ridge #bbb'
- for(i=0;i<300;i++)
+ clearInterval(Imndla)
+ for(i=0;i<4;i++)
  {
+  rnd[i].style.background='none'
   rnd[i].style.opacity=0.1
+  rnd[i].style.transform='scale(1)'
  }
 }
 
