@@ -52,14 +52,20 @@ body
 {
  transform:scale(1.1);
 }
-.rnd
+.rnd,.rndl
 {
  position:absolute;
  transition:1s;
  width:22%;
  height:22%;
  border-radius:55%;
+ border:9px ridge #999;
  opacity:0.1;
+}
+.rndl
+{
+ width:8%;
+ height:8%;
 }
 
 </style>
@@ -90,6 +96,14 @@ body
  <div class=rnd></div>
  <div class=rnd></div>
  <div class=rnd></div>
+ <div class=rndl></div>
+ <div class=rndl></div>
+ <div class=rndl></div>
+ <div class=rndl></div>
+ <div class=rndl></div>
+ <div class=rndl></div>
+ <div class=rndl></div>
+ <div class=rndl></div>
 </div>
 
 <script>
@@ -98,6 +112,7 @@ rnge=document.getElementsByClassName('rnge')
 cmmnt=document.getElementsByClassName('cmmnt')
 mndla=document.getElementsByClassName('mndla')
 rnd=document.getElementsByClassName('rnd')
+rndl=document.getElementsByClassName('rndl')
 
 btn[0].style.left=76+'%'
 btn[0].style.top=5+'%'
@@ -201,6 +216,22 @@ rnd[2].style.right=14+'%'
 rnd[2].style.top=14+'%'
 rnd[3].style.right=14+'%'
 rnd[3].style.bottom=14+'%'
+rndl[0].style.left=4+'%'
+rndl[0].style.top=29+'%'
+rndl[1].style.left=29+'%'
+rndl[1].style.top=4+'%'
+rndl[2].style.right=29+'%'
+rndl[2].style.top=4+'%'
+rndl[3].style.right=4+'%'
+rndl[3].style.top=29+'%'
+rndl[4].style.left=4+'%'
+rndl[4].style.bottom=29+'%'
+rndl[5].style.left=29+'%'
+rndl[5].style.bottom=4+'%'
+rndl[6].style.right=29+'%'
+rndl[6].style.bottom=4+'%'
+rndl[7].style.right=4+'%'
+rndl[7].style.bottom=29+'%'
 
 nbtn2=0
 fc='#f00', sc='#f0f', tc='#00f'
@@ -363,6 +394,11 @@ mndla[0].onmouseover=()=>
   rnd[i].style.transform='scale('+
    (1+Math.random()/5)+')'
  }
+ for(i=0;i<8;i++)
+ {
+  rndl[i].style.background='#00f'
+  rndl[i].style.opacity=1
+ }
   }, 999)
 }
 mndla[0].onmouseout=()=>
@@ -377,6 +413,11 @@ mndla[0].onmouseout=()=>
   rnd[i].style.background='none'
   rnd[i].style.opacity=0.1
   rnd[i].style.transform='scale(1)'
+ }
+ for(i=0;i<8;i++)
+ {
+  rndl[i].style.background='none'
+  rndl[i].style.opacity=0.1
  }
 }
 
