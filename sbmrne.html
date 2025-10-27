@@ -72,7 +72,7 @@ body
   <div class=apprts></div>
  </div>
 </div>
-<div class=tsbmrne>submurrine</div>
+<div class=tsbmrne>Submurine</div>
  <div class=tsbmrne>torpedo atack...</div>
 
 <div class=prjctr></div>
@@ -158,10 +158,10 @@ apprts[2].style.left=38+'%'
 apprts[2].style.top=12+'%'
 apprts[2].style.height=32+'%'
 apprts[2].style.background='#000'
-apprts[3].style.zIndex=3
-apprts[3].style.left=36+'%'
-apprts[3].style.top=26+'%'
-apprts[3].style.height=2+'%'
+apprts[3].style.zIndex=1
+apprts[3].style.left=38+'%'
+apprts[3].style.top=2+'%'
+//apprts[3].style.width=124+'%'
 apprts[3].style.background='#ff0'
 apprts[3].style.opacity=0
 
@@ -193,16 +193,29 @@ prjctr[1].style.color='#bbb'
 prjctr[1].style.transform='scale(0) ' 
 
 bsmv=0
+sc=0
 function smv()
 {
+ sc=Math.random()
+ if(bsmv==0)
+ {
    rnd=Math.random()/2+1
   grnd[0].style.transform=
   'scale(1,'+rnd/2+') translate(0%,'+(-rnd/2)+'%)'  
   grnd[3].style.transform='scale('+rnd+',)'
   sbmrne[0].style.transform=
    'scale('+rnd+')'
- 
- 
+ }
+  else 
+ {
+  apprts[0].style.transform='scale('+sc+')'
+  apprts[1].style.transform='scale('+sc+')'
+  apprts[3].style.transform='scale('+(2+sc*8)+
+   ',1.2) translate(0%,-45%)'
+  grnd[3].style.transform=
+   'scale('+(1+Math.random())+
+   ','+(2+Math.random())+') translate(-200%,0%)'
+ } 
 }
    Isbmrne=setInterval(smv, 999)
 
@@ -213,8 +226,7 @@ function pmv()
  prjctr[0].style.transform=
   'translate('+tr+'%,33%) rotate(-28deg) skew(44deg)'+
   'scale('+sc+')' 
- apprts[3].style.transform='scale(8,'+
-  (Math.random()*9+8)+')'  
+ 
 }
    Iprjctr=setInterval(pmv, 666)
 
@@ -259,7 +271,7 @@ sbmrne[0].onmouseover=()=>
  apprts[2].style.background='#ff0'
  apprts[2].style.transform='scale(1.2)'
  apprts[3].style.opacity=0.7
- apprts[3].style.transform=' translate(0,-2000%)'
+ apprts[3].style.transform=' translate(0%,0%)'
  prjctr[0].style.opacity=0.2+Math.random()/2
  prjctr[1].style.transform=
   'scale(5) skew(-11deg) translate(66%,-9%)'
@@ -282,10 +294,10 @@ sbmrne[0].onmouseout=()=>
  sbmrne[3].style.background='#050'
  sbmrne[3].style.transform='scale(1)'
  sbmrne[4].style.background='#050'
- apprts[0].style.opacity=0
- apprts[0].style.transform='scale(0)'
- apprts[1].style.opacity=0
- apprts[1].style.transform='scale(0)'
+ apprts[0].style.opacity=0.1
+ apprts[0].style.transform='scale(1)'
+ apprts[1].style.opacity=0.1
+ apprts[1].style.transform='scale(1)'
  apprts[2].style.background='#000'
  apprts[2].style.transform='scale(1)'
  apprts[3].style.opacity=0
