@@ -53,6 +53,7 @@ body
 <div class=bgrnd>#00f</div>
 <div class=bgrnd>#fff</div>
  <div class=bgrnd>mix color</div>
+ <div class=bgrnd></div>
  
  <div class=tst>
   <div class=tst></div>
@@ -111,6 +112,15 @@ bgrnd[4].style.top=11+'%'
 bgrnd[4].style.color='#000'
 bgrnd[4].style.fontSize='1em'
 bgrnd[4].style.transform='scale(0)'
+bgrnd[5].style.left=58+'%'
+bgrnd[5].style.top=33+'%'
+bgrnd[5].style.width=3+'%'
+bgrnd[5].style.height=12+'%'
+bgrnd[5].style.borderRadius=55+'%'
+bgrnd[5].style.border='3px ridge #000'
+bgrnd[5].style.borderTopColor='transparent'
+bgrnd[5].style.borderBottomColor='transparent'
+bgrnd[5].style.opacity=0
  
 tst[0].style.left=20+'%'
 tst[0].style.top=33+'%'
@@ -119,16 +129,16 @@ tst[0].style.height=55+'%'
 tst[0].style.background=
  'radial-gradient(#f00,#e00)'
 tst[0].style.borderRadius='9%'
-tst[0].style.boxShadow='11px 11px 6px'
 tst[0].style.border='9px ridge #800'
+tst[0].style.boxShadow='11px 11px 6px'
 tst[1].style.left=6+'%'
 tst[1].style.top=6+'%'
 tst[1].style.width=88+'%'
 tst[1].style.height=20+'%'
 tst[1].style.background='#ff0'
+tst[1].style.borderRadius=7+'%'
 tst[1].style.textAlign='center'
-tst[1].style.fontSize='3em'
-tst[1].style.borderRadius='7%'
+tst[1].style.fontSize=3+'em'
 
 btn[0].style.left=9+'%'
 btn[0].style.top=33+'%'
@@ -188,15 +198,15 @@ function actbck(i,b1,b2)
 bgrnd[i].onmouseover=()=>
 {
  bgrnd[i].style.background=b1
- bgrnd[i].style.borderRadius='7%'
- bgrnd[i].style.fontSize='4em'
+ bgrnd[i].style.borderRadius=7+'%'
+ bgrnd[i].style.fontSize=4+'em'
  bgrnd[i].style.transform='scale(1,1.2)'
 } 
 bgrnd[i].onmouseout=()=>
 {
  bgrnd[i].style.background=b2
- bgrnd[i].style.borderRadius='0%'
- bgrnd[i].style.fontSize='0em'
+ bgrnd[i].style.borderRadius=0+'%'
+ bgrnd[i].style.fontSize=0+'em'
  bgrnd[i].style.transform='scale(1)'
 } 
 }
@@ -207,8 +217,8 @@ bgrnd[i].onmouseout=()=>
 bgrnd[3].onmouseover=()=>
 {
  bgrnd[3].style.background='#ddd'
- bgrnd[3].style.borderRadius='7%'
- bgrnd[3].style.fontSize='4em'
+ bgrnd[3].style.borderRadius=7+'%'
+ bgrnd[3].style.fontSize=4+'em'
  bgrnd[3].style.transform='scale(1,1.2)'
  bgrnd[4].style.color='#f00'
  bgrnd[4].style.transform=
@@ -217,8 +227,8 @@ bgrnd[3].onmouseover=()=>
 bgrnd[3].onmouseout=()=>
 {
  bgrnd[3].style.background='#fff'
- bgrnd[3].style.borderRadius='0%'
- bgrnd[3].style.fontSize='0em'
+ bgrnd[3].style.borderRadius=0+'%'
+ bgrnd[3].style.fontSize=0+'em'
  bgrnd[3].style.transform='scale(1)'
  bgrnd[4].style.color='#000'
  bgrnd[4].style.transform='scale(0)'
@@ -229,7 +239,7 @@ tst[0].onmouseover=()=>
 {   
  tst[0].style.boxShadow='none'
  tst[0].style.transform='scale(1.2) skew(22deg)'
- tst[1].style.borderRadius='14%'
+ tst[1].style.borderRadius=14+'%'
  btn[0].style.boxShadow='11px 11px 6px'
  btn[1].style.boxShadow='11px 11px 6px'
  btn[2].style.boxShadow='11px 11px 6px'
@@ -246,6 +256,9 @@ tst[0].onmouseover=()=>
  }
  Itst= setInterval(()=>
  {
+  bgrnd[5].style.opacity=0.4
+  bgrnd[5].style.transform='scale('+
+   (1+Math.random())+')'
   btn[ddgt].style.boxShadow='11px 11px 6px'
   bldng[ddgt+1].style.background='#222'
   tst[1].style.fontSize=3+'em'
@@ -259,6 +272,8 @@ tst[0].onmouseover=()=>
 } 
 tst[0].onmouseout=()=>
 { 
+ bgrnd[5].style.opacity=0
+ bgrnd[5].style.transform='scale(1)'
  tst[0].style.boxShadow='11px 11px 6px'
  tst[0].style.transform='scale(1)'
  tst[1].style.borderRadius='7%'
