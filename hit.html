@@ -35,10 +35,12 @@
  transition:999ms;
  cursor:pointer;
 }
+
 .swrd
 {
  position:absolute;
  transition:999ms;
+ cursor:pointer;
  z-index:1;
 }
 .shld
@@ -178,7 +180,7 @@ btn[0].onmouseout=()=>
 {
  btn[0].style.transform='scale(1)'
 }
-btn[0].onclick=()=>
+btn[0].onmousemove=()=>
 {
   clearInterval(Icl)
  idsw.style.transform=
@@ -211,7 +213,7 @@ btn[1].onmouseout=()=>
 {
  btn[1].style.transform='scale(1)'
 }
-btn[1].onclick=()=>
+btn[1].onmousemove=()=>
 {
  swrd[0].style.transform=
   'scale(0.8) translate(222%,-184%) rotate(-23deg)'
@@ -285,6 +287,18 @@ s[0].onmouseout=()=>
 s[0].onclick=()=>
 {
  s[0].style.background='#870'
+}
+
+swrd[0].onmouseover=()=>
+{
+ swrd[0].style.transform=
+ swrd[0].style.transform='scale(1.2)translate(20%,-88%)'+ 
+  'rotate(-28deg)'
+}
+swrd[0].onmouseout=()=>
+{
+
+ swrd[0].style.transform='scale(1)' 
 }
 
 shld[0].onmouseover=()=>
