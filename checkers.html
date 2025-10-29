@@ -191,10 +191,18 @@ btn[2].onclick=()=>
   bwf=1
   bbf=1
 }	
-bfcl=1
+
 btn[3].onclick=()=>
 { 
- bfcl=0 
+ vlnt=Math.round(Math.random()*12)
+ wf[vlnt].style.background=
+  'radial-gradient(14px,#000,#f00)' 
+ wf[vlnt].style.transform='scale(1.2)' 
+ setTimeout(()=>{
+  wf[vlnt].style.background=
+   'radial-gradient(14px,#999,#ccc)'
+  wf[vlnt].style.transform='scale(1)' 
+ }, 999)
 }	
 	
 function tchw(i)
