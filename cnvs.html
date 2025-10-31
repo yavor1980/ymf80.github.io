@@ -34,7 +34,7 @@ canvas
 <input type=button class=btn value='clear'>
 <input type=button class=btn  value='axes'>
 <input type=button class=btn value='Poly'>
-<input type=button class=btn value='Single'>
+<input type=button class=btn value='Mono'>
 <input type=button class=btn value='Hz'>
 <canvas></canvas> 
 <script>
@@ -68,11 +68,11 @@ btn[5].style.top=4+'%'
 btn[5].style.background='#886'
 btn[5].style.transform='scale(2)'
 btn[6].style.left=91+'%'
-btn[6].style.top=13+'%'
+btn[6].style.top=22+'%'
 btn[6].style.background='#e00'
 btn[6].style.transform='scale(2)'
-btn[7].style.left=93+'%'
-btn[7].style.top=22+'%'
+btn[7].style.left=92+'%'
+btn[7].style.top=13+'%'
 btn[7].style.background='#e00'
 btn[7].style.transform='scale(2)'
 btn[8].style.left=93+'%'
@@ -85,7 +85,7 @@ cnv[0].style.height=97+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
  cntxt=cnv[0].getContext('2d')
- //cntxt.moveTo(0,333)
+ cntxt.moveTo(0,333)
 
 function fdrw()
 {
@@ -111,7 +111,7 @@ function fround()
  cntxt.stroke()
  cntxt.endPath()
 }
-bcnvs=1
+bcnvs=-1
 bln=0 
 x=0,y=0
 function fline()
@@ -162,25 +162,29 @@ Iosc=setInterval(()=>{
  cntxt.clearRect(0,0,999,999)
  if(b==0) ff+=5
  if(b==1) ff=Math.round(Math.random()*9)
- for(i=0;i<300;i++)
+ for(i=0;i<333;i++)
  {
   cntxt.lineTo(i, shft+scle*Math.sin(i*ff/trvl+1))
  } 
   cntxt.stroke() 
  }, imtosc)
 }
-y=0
+Ihz=0
 function fHz()
 { 
-for(i=0;i<300;i++)
-{
- 
- cntxt.strokeStyle='#00f'
- y=88+Math.random()*8
- //cntxt.moveTo(i*3,8)
- cntxt.lineTo(i*3,y)
- cntxt.stroke()
-} 
+Ihz=setInterval(()=>{
+ for(i=0;i<300;i++)
+ {
+  cntxt.strokeStyle='#00f'
+  y=44+Math.random()*8
+  //cntxt.moveTo(i*3,-y)
+  cntxt.lineTo(i*3,33)
+  //cntxt.moveTo(i*3,33)
+  cntxt.lineTo(i*3,y)
+  cntxt.stroke()
+ }
+}, 999) 
+  
 }
 
 
@@ -242,7 +246,7 @@ btn[7].onclick=()=>
  {
   clearInterval(Iosc)
   ff=0
-  btn[7].value='Single'
+  btn[7].value='Mono'
  }
  boscll=!boscll
 }
