@@ -52,7 +52,6 @@
 <div class=ttmthm>
  DIGITS
 </div>
-
 <div class=ttmthm> 
   Each number is 1 more<br>&nbsp 
    than the previous one.
@@ -382,19 +381,22 @@ ttmthm[0].onmouseover=()=>
  ttmthm[0].style.color='#099'
  ttmthm[0].style.transform=
   'scale(3) translate(11%,-11%) skew(-11)'
- ttmthm[0].innerHTML=
-  'natural numbers'
+  ttmthm[0].innerHTML='natural numbers'
+ ttmthm[1].style.background='#909'
  ttmthm[1].style.transform=
-  'scale(2.6) skew(22deg)'
+  'scale(2.6) translate(11%,33%) skew(22deg)'
+ ttmthm[2].style.background='#909' 
  ttmthm[2].style.transform=
-  'scale(2.7) translate(11%,155%) skew(11deg)'
+  'scale(2.7) translate(11%,299%) skew(11deg)'
 }
 ttmthm[0].onmouseout=()=>
 {
  ttmthm[0].style.transform='scale(5)'
  ttmthm[0].style.color='#0bb'
   ttmthm[0].innerHTML='DIGITS'
+ ttmthm[1].style.background='none'  
  ttmthm[1].style.transform='scale(0)'
+ ttmthm[2].style.background='none'
  ttmthm[2].style.transform='scale(0)'
 }  
 
