@@ -145,7 +145,7 @@ Iosc=0
 function foscll()
 { 
  cntxt.strokeStyle='#b00'
- for(i=0;i<300;i++)
+ for(i=0;i<333;i++)
  {
   cntxt.lineTo(i,shft+scle*Math.sin(i/trvl+1))
  } 
@@ -167,14 +167,16 @@ Iosc=setInterval(()=>{
   cntxt.lineTo(i, shft+scle*Math.sin(i*ff/trvl+1))
  } 
   cntxt.stroke() 
+ // cntxt.endPath()
  }, imtosc)
 }
 Ihz=0
 function fHz()
 { 
-Ihz=setInterval(()=>{
+Iosc=setInterval(()=>{
+ cntxt.beginPath()
  for(i=0;i<300;i++)
- {
+ {cntxt.clearRect(0,0,999,999)
   cntxt.strokeStyle='#00f'
   y=44+Math.random()*8
   //cntxt.moveTo(i*3,-y)
@@ -182,11 +184,11 @@ Ihz=setInterval(()=>{
   //cntxt.moveTo(i*3,33)
   cntxt.lineTo(i*3,y)
   cntxt.stroke()
- }
-}, 999) 
   
+ }
+ //cntxt.endPath()
+}, 999)   
 }
-
 
 btn[0].onclick=()=>
 {   
