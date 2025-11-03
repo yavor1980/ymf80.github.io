@@ -17,7 +17,7 @@
  transition:1s;
  cursor:pointer;
 }
-.bin
+.bin,.tres
 {
  text-align:center;
  font-size:2em;
@@ -29,6 +29,7 @@
 <body id=idbd >
 
 <button class=btn>GO</button>
+<button class=btn>O</button>
 
 <div class=indctr>
  <div class=indctr></div>
@@ -79,15 +80,22 @@ btn=document.getElementsByClassName('btn')
 indctr=document.getElementsByClassName('indctr')
 bin=document.getElementsByClassName('bin')
 ttl=document.getElementsByClassName('ttl')
+tres=document.getElementsByClassName('tres')
 
 ttmthm=document.getElementsByClassName('ttmthm')
 ttsrv=document.getElementsByClassName('ttsrv')
 
-btn[0].style.left=84+'%'
+btn[0].style.left=77+'%'
 btn[0].style.top=9+'%'
 btn[0].style.background='#b00'
 btn[0].style.transform='scale(4)'
 btn[0].style.borderRadius=26+'%'
+btn[1].style.left=93+'%'
+btn[1].style.top=9+'%'
+btn[1].style.height=4+'%'
+btn[1].style.background='#b00'
+btn[1].style.transform='scale(4)'
+btn[1].style.borderRadius=26+'%'
 
 function init(nm,i,l,t,w,h)
 {
@@ -337,6 +345,20 @@ btn[0].onclick=()=>
  }
   bbtn=!bbtn
 }
+cnt=0
+btn[1].onmouseover=()=>
+{
+ bin[0].onmouseover()
+}
+btn[1].onmouseout=()=>
+{
+ bin[0].onmouseout()
+}
+btn[1].onclick=()=>
+{
+ cnt++
+  bin[4].innerHTML=cnt
+}
 
 bind=0
 indctr[0].onmouseover=()=>
@@ -409,6 +431,7 @@ ttsrv[0].onmouseover=()=>
   ttsrv[0].innerHTML='Server<=>Client'
  ttsrv[1].style.transform='scale(2)'
  ttsrv[2].style.transform='scale(2) ' 
+ ttsrv[7].style.border='4px  ridge #f00' 
  Isrv= setInterval(()=>{
   if(bsrv){
    ttsrv[3].style.transform=
@@ -448,6 +471,7 @@ ttsrv[0].onmouseout=()=>
  ttsrv[4].style.transform='scale(0)'
  ttsrv[5].style.transform='scale(0)'
  ttsrv[6].style.transform='scale(0)'
+ ttsrv[7].style.border='none' 
  ttsrv[7].style.transform='scale(0)'
   clearInterval(Isrv)
 }  
