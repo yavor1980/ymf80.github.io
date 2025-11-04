@@ -349,15 +349,29 @@ cnt=0
 btn[1].onmouseover=()=>
 {
  bin[0].onmouseover()
+ bin[0].style.transform='scale(1.2)'
 }
 btn[1].onmouseout=()=>
 {
+ cnt=0
  bin[0].onmouseout()
+ bin[0].style.transform='scale(1)'
 }
 btn[1].onclick=()=>
 {
  cnt++
-  bin[4].innerHTML=cnt
+ if(cnt==1)
+  bin[4].innerHTML=1
+ if(cnt==2)
+ {
+  bin[3].innerHTML=1 
+  bin[4].innerHTML=0
+ } 
+ if(cnt==3)
+ {
+  bin[3].innerHTML=1 
+  bin[4].innerHTML=1
+ } 
 }
 
 bind=0
@@ -380,7 +394,7 @@ indctr[0].onmouseover=()=>
 }
 indctr[0].onmouseout=()=>
 {
-  ficlear('#555')
+ ficlear('#555')
 } 
 
 bin[0].onmouseover=()=>
