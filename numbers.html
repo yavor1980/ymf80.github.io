@@ -355,46 +355,73 @@ btn[1].onmouseout=()=>
 {
  cnt=0
  bin[0].onmouseout()
+ indctr[0].onmouseout()
  bin[0].style.transform='scale(1)'
 }
 btn[1].onclick=()=>
 {
  cnt++
  if(cnt==1)
+ {
   bin[4].innerHTML=1
+   indctr[0].onmouseout()
+   fi1('#f00')
+ } 
  if(cnt==2)
  {
   bin[3].innerHTML=1 
   bin[4].innerHTML=0
+   indctr[0].onmouseout()
+   fi2('#f00')
  } 
  if(cnt==3)
  {
   bin[3].innerHTML=1 
   bin[4].innerHTML=1
+   indctr[0].onmouseout()
+   fi3('#f00')
  } 
  if(cnt==4)
  {
   bin[2].innerHTML=1
   bin[3].innerHTML=0
   bin[4].innerHTML=0
+   indctr[0].onmouseout()
+   fi4('#f00')
  } 
  if(cnt==5)
  {
   bin[2].innerHTML=1
   bin[3].innerHTML=0
   bin[4].innerHTML=1
+   indctr[0].onmouseout()
+   fi5('#f00')
  } 
  if(cnt==6)
  {
   bin[2].innerHTML=1
   bin[3].innerHTML=1
   bin[4].innerHTML=0
+   indctr[0].onmouseout()
+   fi6('#f00')
  } 
  if(cnt==7)
  {
   bin[2].innerHTML=1
   bin[3].innerHTML=1
   bin[4].innerHTML=1
+   indctr[0].onmouseout()
+   fi7('#f00')
+ } 
+ if(cnt==8)
+ {
+  bin[1].innerHTML=1
+  bin[2].innerHTML=0
+  bin[3].innerHTML=0
+  bin[4].innerHTML=0
+   indctr[0].onmouseout()
+   fi8('#f00')
+  cnt=0
  } 
 }
 
