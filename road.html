@@ -173,8 +173,9 @@ tl[0].onmouseout=()=>
 cr[0].onmouseover=()=>
 {
  rd[2].style.opacity=1
- rd[2].style.transform='scale(2) translate('+
-  33*Math.random()+'%,'+33*Math.random()+'%)'
+ rd[2].style.transform='scale('+
+  (1+Math.random())+',1) translate('+
+ 33*Math.random()+'%,'+33*Math.random()+'%)'
  cr[0].style.borderBottomLeftRadius=33+'%'
  cr[0].style.borderBottomRightRadius=33+'%'
  cr[0].style.boxShadow='33px 33px'
@@ -189,7 +190,8 @@ cr[0].onmouseover=()=>
  fre[1].style.opacity=0.4
  dlyI=setInterval(()=>
  {
-  rd[2].style.transform='scale(2) translate('+
+  rd[2].style.transform='scale('+
+   (1.4+Math.random())+',1) translate('+
    99*Math.random()+'%,'+99*Math.random()+'%)'
   fre[1].style.opacity=0.5
   fre[1].style.transform='scale('+(1+Math.random())+')'
