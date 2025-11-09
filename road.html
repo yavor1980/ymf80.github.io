@@ -6,15 +6,13 @@ body
  background:linear-gradient(44deg,#ff0,#0ff)
 }
 
-.rd
+.rd,.tl
 {
  position:absolute;
  transition:1s;
 }
 .tl
 {
- position:absolute;
- transition:1s;
  z-index:1;
 }
 .cr
@@ -57,6 +55,7 @@ body
 
 <div class=rd>
  <div class=rd></div>
+ <div class=rd></div>
  <div class=cr>
   <div class=cr></div>
   <div class=cr> 
@@ -87,21 +86,25 @@ function inn(nm,i, l,t, w,h, bkg)
  nm[i].style.background= bkg
 }
 inn(tl,0, 11,22, 9,33, '#000')
- tl[0].style.borderRadius='5%'
+ tl[0].style.borderRadius=5+'%'
 inn(tl,1, 7,9, 88,22, '#f00')
- tl[1].style.borderRadius='55%'
+ tl[1].style.borderRadius=55+'%'
  tl[1].style.cursor='pointer'
 inn(tl,2, 7,33, 88,22, '#ff0')
- tl[2].style.borderRadius='55%'
+ tl[2].style.borderRadius=55+'%'
  tl[2].style.cursor='pointer'
 inn(tl,3, 7,58, 88,22, '#0f0')
- tl[3].style.borderRadius='55%'
+ tl[3].style.borderRadius=55+'%'
  tl[3].style.cursor='pointer'
    
 inn(rd,0, 15,1, 77,99, '#777')
- rd[0].style.borderRadius='5%'
+ rd[0].style.borderRadius=5+'%'
  rd[0].style.transform='skew(-22deg)'
 inn(rd,1, 44,77, 9,22, '#fff')
+inn(rd,2, 66,55, 9,9, '#808')
+rd[2].style.opacity=0.4
+rd[2].style.border='9px ridge #777'
+rd[2].style.borderRadius=55+'%'
 
 inn(cr,1, 2,11, 88,66, 'radial-gradient(#ff0,#550)')
  cr[1].style.borderBottomLeftRadius='55%'
@@ -160,7 +163,6 @@ function cl()
 tl[0].onmouseover=()=>
 {
  tl[0].style.transform='scale(1.2)'
-  'scale(3) skew(-22deg) translate(33%,-44%)'
 }
 tl[0].onmouseout=()=>
 {
@@ -170,15 +172,18 @@ tl[0].onmouseout=()=>
  bdly=0
 cr[0].onmouseover=()=>
 {
- cr[0].style.borderBottomLeftRadius='33%'
- cr[0].style.borderBottomRightRadius='33%'
+ rd[2].style.opacity=1
+ rd[2].style.transform='scale(2) translate('+
+  33*Math.random()+'%,'+33*Math.random()+'%)'
+ cr[0].style.borderBottomLeftRadius=33+'%'
+ cr[0].style.borderBottomRightRadius=33+'%'
  cr[0].style.boxShadow='33px 33px'
- cr[1].style.borderBottomLeftRadius='33%'
- cr[1].style.borderBottomRightRadius='33%'
+ cr[1].style.borderBottomLeftRadius=33+'%'
+ cr[1].style.borderBottomRightRadius=33+'%'
  cr[1].style.transform=
   'scale(2,1) translate(2%, 5%)'
- cr[2].style.borderBottomLeftRadius='44%'
- cr[2].style.borderBottomRightRadius='44%'
+ cr[2].style.borderBottomLeftRadius=44+'%'
+ cr[2].style.borderBottomRightRadius=44+'%'
  fre[0].style.background=
   'radial-gradient(12px,#f00,#f0f)'
  fre[1].style.opacity=0.4
@@ -192,7 +197,9 @@ cr[0].onmouseover=()=>
    dly[0].style.transform='scale(3,5) skew(-33deg)'
    dly[1].style.transform='scale(3,3) skew(33deg)'
    dly[2].style.transform='scale(3,5) skew(-33deg)'
-  }else{
+  }
+   else
+  {
    fre[0].style.transform='scale(1.6)'
    dly[0].style.transform='scale(3,3) skew(33deg)'
    dly[1].style.transform='scale(3,5) skew(-33deg)'
@@ -203,6 +210,8 @@ cr[0].onmouseover=()=>
 }
 cr[0].onmouseout=()=>
 {
+ rd[2].style.opacity=0.4
+ rd[2].style.transform='scale(1)'
  cr[0].style.borderRadius='5%'
  cr[0].style.boxShadow='9px 9px'
  cr[1].style.transform='scale(0.1)'
@@ -210,13 +219,11 @@ cr[0].onmouseout=()=>
  fre[0].style.background='#000'
  fre[0].style.transform='scale(1)'
  fre[1].style.opacity=0
- dly[0].style.transform='scale(0) skew(0deg)'
- dly[1].style.transform='scale(0) skew(0deg)'
- dly[2].style.transform='scale(0) skew(0deg)'
+ dly[0].style.transform='scale(0)'
+ dly[1].style.transform='scale(0)'
+ dly[2].style.transform='scale(0)'
   clearInterval(dlyI)
 }
-
-//d[0].innerHTML+=r
 </script>
 </body>
 </html>

@@ -161,7 +161,6 @@ apprts[2].style.background='#000'
 apprts[3].style.zIndex=1
 apprts[3].style.left=38+'%'
 apprts[3].style.top=2+'%'
-//apprts[3].style.width=124+'%'
 apprts[3].style.background='#ff0'
 apprts[3].style.opacity=0
 
@@ -226,7 +225,7 @@ function pmv()
  sc=Math.random()+2
  prjctr[0].style.transform=
   'scale('+sc+',1) translate('+tr+
-  '%,33%) rotate(-44deg) skew(-4deg)' 
+  '%,'+tr+'%) rotate(-44deg) skew(-4deg)' 
    
 }
    Iprjctr=setInterval(pmv, 666)
@@ -248,7 +247,7 @@ grnd[1].onmouseout=()=>
 }
 
 sbmrne[0].onmouseover=()=>
-{  //Math.round(Math.random()-1*44)+'deg)
+{  
  grnd[1].style.transform=
   'scale(1) translate(0%,-28%)' 
  grnd[2].style.background='#ee0'
