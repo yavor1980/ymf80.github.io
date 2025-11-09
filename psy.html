@@ -73,7 +73,7 @@ body
 <div class=phlsph>outlook</div>
  <div class=phlsph>materialistic</div>
  <div class=phlsph>idealistic</div>
- <div class=phlsph></div>
+ <div class=phlsph>primary</div>
 
 <script>
 psch=document.getElementsByClassName('psch')  
@@ -117,19 +117,27 @@ tmprm[0].style.textAlign='center'
 tmprm[0].style.fontSize='2em'
 tmprm[1].style.left=22+'%'
 tmprm[1].style.top=44+'%'
-tmprm[1].style.color='#f00' 	
+tmprm[1].style.color='#f00'
+tmprm[1].style.borderRight='1px ridge #222'
+tmprm[1].style.borderBottom='1px ridge #222' 	
 tmprm[1].style.transform='scale(0)'
 tmprm[2].style.left=22+'%'
 tmprm[2].style.top=44+'%'
-tmprm[2].style.color='#00f' 
+tmprm[2].style.color='#f0f'
+tmprm[2].style.borderRight='1px ridge #222'
+tmprm[2].style.borderBottom='1px ridge #222' 
 tmprm[2].style.transform='scale(0)'
 tmprm[3].style.left=22+'%'
 tmprm[3].style.top=44+'%'
-tmprm[3].style.color='#f0f'
+tmprm[3].style.color='#00f'
+tmprm[3].style.borderRight='1px ridge #222'
+tmprm[3].style.borderBottom='1px ridge #222' 
 tmprm[3].style.transform='scale(0)'
 tmprm[4].style.left=22+'%'
 tmprm[4].style.top=44+'%'
-tmprm[4].style.color='#0f0'
+tmprm[4].style.color='#070'
+tmprm[4].style.borderRight='1px ridge #222'
+tmprm[4].style.borderBottom='1px ridge #222' 
 tmprm[4].style.transform='scale(0)'
 
 bhvr[0].style.cursor='pointer'
@@ -144,14 +152,20 @@ bhvr[0].style.fontSize='2em'
 bhvr[1].style.left=69+'%'
 bhvr[1].style.top=44+'%'
 bhvr[1].style.color='#f00'
+bhvr[1].style.borderRight='1px ridge #222'
+bhvr[1].style.borderBottom='1px ridge #222' 
 bhvr[1].style.transform='scale(0)'
 bhvr[2].style.left=69+'%'
 bhvr[2].style.top=44+'%'
 bhvr[2].style.color='#00f'
+bhvr[2].style.borderRight='1px ridge #222'
+bhvr[2].style.borderBottom='1px ridge #222'
 bhvr[2].style.transform='scale(0)'
 bhvr[3].style.left=69+'%'
 bhvr[3].style.top=44+'%'
 bhvr[3].style.color='#f0f'
+bhvr[3].style.borderRight='1px ridge #222'
+bhvr[3].style.borderBottom='1px ridge #222'
 bhvr[3].style.transform='scale(0)'  
    
 dfn[0].style.left=11+'%'
@@ -174,6 +188,8 @@ dfn[2].style.background='#088'
 dfn[2].style.color='#bbb'
 dfn[3].style.left=29+'%'
 dfn[3].style.top=66+'%'
+dfn[3].style.borderRight='3px ridge #222'
+dfn[3].style.borderTop='3px ridge #222'
 dfn[3].style.transform='scale(0)'
   
 vctr[0].style.cursor='pointer'
@@ -185,6 +201,8 @@ vctr[0].style.transform='scale(3)'
 vctr[1].style.left=8+'%'
 vctr[1].style.top=39+'%'
 vctr[1].style.color='#330'
+vctr[1].style.borderRight='1px ridge #222'
+vctr[1].style.borderBottom='1px ridge #222'
 vctr[1].style.transform='scale(0)'
  
 phlsph[0].style.left=11+'%'
@@ -203,6 +221,7 @@ phlsph[2].style.transform='scale(0)'
 phlsph[3].style.left=44+'%'
 phlsph[3].style.top=55+'%'
 phlsph[3].style.color='#f00'
+
 phlsph[3].style.transform='scale(0)'
  
 obj='The totality of mental phenomena '
@@ -413,28 +432,32 @@ Idfn=0, bdfn3=0
 adfn3=['interact','education']
 vctr[0].onmouseover=()=>
 {        
+ vctr[0].style.color='#ff0'
  vctr[0].style.transform='scale(4)'
- vctr[0].style.color='#666'
  Idfn=setInterval(()=>{ 
   if(bdfn3)
   {
+   vctr[1].style.borderLeft='1px ridge transparent'
+   vctr[1].style.borderRight='1px ridge #222'
    vctr[1].style.transform=
     'scale(5) translate(121%,121%) skew(11deg)'
 	vctr[1].innerHTML=adfn3[1]
   }
   else
   {
-    vctr[1].style.transform=
-     'scale(5) translate(121%,121%) skew(-11deg'
-	 vctr[1].innerHTML=adfn3[0]
+   vctr[1].style.borderLeft='1px ridge #222'
+   vctr[1].style.borderRight='1px ridge transparent'
+   vctr[1].style.transform=
+    'scale(5) translate(121%,121%) skew(-11deg'
+    vctr[1].innerHTML=adfn3[0]
   }
 	bdfn3=!bdfn3
    }, 999)
 }	  
 vctr[0].onmouseout=()=>
 {  
- vctr[0].style.transform='scale(3)'
  vctr[0].style.color='#0bb'
+ vctr[0].style.transform='scale(3)'
  vctr[1].style.transform='scale(0)'
   vctr[1].innerHTML=''
   clearInterval(Idfn)
@@ -452,14 +475,21 @@ phlsph[0].onmouseover=()=>
   'scale(5) translate(66%,-44%)'
  phlsph[2].style.transform=
   'scale(4) translate(99%,88%)'
-   phlsph[3].innerHTML='primary'
  phlsphI=setInterval(()=>{
   if(bphlsph)
+  { 
+   phlsph[3].style.borderRight='3px ridge #222'
+   phlsph[3].style.borderBottom='3px ridge #222'
    phlsph[3].style.transform=
     'scale(3) translate(99%,-8%) skew(-22deg)' 
+  } 	
   else
+  {
+   phlsph[3].style.borderRight='3px ridge transparent'
+   phlsph[3].style.borderBottom='3px ridge transparent'
    phlsph[3].style.transform=
     'scale(4 ) translate(99%,-8%) skew(-11deg)' 
+  } 	
      bphlsph=!bphlsph
  }, 1111)  
 }
