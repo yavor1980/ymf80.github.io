@@ -29,20 +29,18 @@ body
  box-shadow:9px 9px;
  border-bottom:11px ridge #00f;
 }
-.fre
+.fre,.prpl
 {
  position:absolute;
  transition:1s;
  border-radius:50%;
  z-index:1;
 }
-
-.dly
+.prpl
 {
- position:absolute;
- transition:1s;
- cursor:pointer;
- z-index:1;
+ width:15%;
+ height:111%;
+ background:#008;
 }
 
 </style>
@@ -55,6 +53,16 @@ body
 
 <div class=rd>
  <div class=rd></div>
+ <div class=rd>
+  <div class=rd>
+   <div class=prpl></div>
+   <div class=prpl></div>
+  </div>
+  <div class=rd>
+   <div class=prpl></div>
+   <div class=prpl></div>
+  </div>
+ </div>
  <div class=rd></div>
  <div class=cr>
   <div class=cr></div>
@@ -65,17 +73,13 @@ body
  </div>
 </div>
 
- <div class=dly>vector modelling</div>
- <div class=dly>use browser resource</div>
- <div class=dly>free phantesy</div>
-
 <script>
 tl=document.getElementsByClassName('tl')
 rd=document.getElementsByClassName('rd')
+prpl=document.getElementsByClassName('prpl')
+
 cr=document.getElementsByClassName('cr')
 fre=document.getElementsByClassName('fre')
-
-dly=document.getElementsByClassName('dly')
 
 function inn(nm,i, l,t, w,h, bkg)
 {
@@ -101,37 +105,41 @@ inn(rd,0, 15,1, 77,99, '#777')
  rd[0].style.borderRadius=5+'%'
  rd[0].style.transform='skew(-22deg)'
 inn(rd,1, 44,77, 9,22, '#fff')
-inn(rd,2, 66,55, 9,9, '#808')
-rd[2].style.opacity=0.4
-rd[2].style.border='9px ridge #777'
-rd[2].style.borderRadius=55+'%'
+inn(rd,2, 59,55, 9,9, '#808')
+ rd[2].style.opacity=0.4
+ rd[2].style.border='9px ridge #777'
+ rd[2].style.borderRadius=55+'%'
+inn(rd,3, -19,39, 144,22, '#800')
+ rd[3].style.transform='rotate(-22deg)'
+inn(rd,4, -19,39, 144,22, '#900')
+ rd[4].style.transform='rotate(22deg)'
+ 
+prpl[0].style.left=6+'%'
+prpl[0].style.top=1+'%'
+prpl[0].style.transform='scale(0.4,2)'
+prpl[1].style.left=84+'%'
+prpl[1].style.top=1+'%'
+prpl[1].style.transform='scale(0.4,2) rotate(2deg)'
+prpl[2].style.left=6+'%'
+prpl[2].style.top=1+'%'
+prpl[2].style.transform='scale(0.4,2) rotate(-22deg)'
+prpl[3].style.left=84+'%'
+prpl[3].style.top=1+'%'
+prpl[3].style.transform='scale(0.4,2) rotate(82deg)'
 
 inn(cr,1, 2,11, 88,66, 'radial-gradient(#ff0,#550)')
- cr[1].style.borderBottomLeftRadius='55%'
- cr[1].style.borderBottomRightRadius='55%'
+ cr[1].style.borderBottomLeftRadius=55+'%'
+ cr[1].style.borderBottomRightRadius=55+'%'
  cr[1].style.borderBottom='9px ridge #090'
 inn(cr,2, 3,11, 88,66, 'radial-gradient(#ff0,#550)')
- cr[2].style.borderRadius='5%'
+ cr[2].style.borderRadius=5+'%'
  cr[2].style.borderBottom='9px ridge #000'
 inn(fre,0, 40,40, 29,17,'#000')
 inn(fre,1, -1,-48, 111,17,'radial-gradient(#ff0,#f0f)')
  fre[1].style.opacity=0
- fre[1].style.borderTopLeftRadius='1%'
- fre[1].style.borderTopRightRadius='1%'
+ fre[1].style.borderTopLeftRadius=1+'%'
+ fre[1].style.borderTopRightRadius=1+'%'
  
-dly[0].style.left='66%'
-dly[0].style.top='11%'
-dly[0].style.color='#0ff'
-dly[0].style.transform='scale(0)' 
-dly[1].style.left='66%'
-dly[1].style.top='19%'
-dly[1].style.color='#f0f'
-dly[1].style.transform='scale(0)'
-dly[2].style.left='66%'
-dly[2].style.top='29%'
-dly[2].style.color='#f00'
-dly[2].style.transform='scale(0)'
-  
 bcl=0; v=22; n=0
 function cl()
 {
@@ -176,6 +184,14 @@ cr[0].onmouseover=()=>
  rd[2].style.transform='scale('+
   (1+Math.random())+',1) translate('+
  33*Math.random()+'%,'+33*Math.random()+'%)'
+ prpl[0].style.opacity=0.4
+ prpl[0].style.transform='scale(2)'
+ prpl[1].style.opacity=0.4
+ prpl[1].style.transform='scale(2)'
+ prpl[2].style.opacity=0.4
+ prpl[2].style.transform='scale(2)'
+ prpl[3].style.opacity=0.4
+ prpl[3].style.transform='scale(2)'
  cr[0].style.borderBottomLeftRadius=33+'%'
  cr[0].style.borderBottomRightRadius=33+'%'
  cr[0].style.boxShadow='33px 33px'
@@ -193,21 +209,16 @@ cr[0].onmouseover=()=>
   rd[2].style.transform='scale('+
    (1.4+Math.random())+',1) translate('+
    99*Math.random()+'%,'+99*Math.random()+'%)'
+   
   fre[1].style.opacity=0.5
   fre[1].style.transform='scale('+(1+Math.random())+')'
   if(bdly)
   {
    fre[0].style.transform='scale(2.6)'
-   dly[0].style.transform='scale(3,5) skew(-33deg)'
-   dly[1].style.transform='scale(3,3) skew(33deg)'
-   dly[2].style.transform='scale(3,5) skew(-33deg)'
   }
    else
   {
    fre[0].style.transform='scale(1.6)'
-   dly[0].style.transform='scale(3,3) skew(33deg)'
-   dly[1].style.transform='scale(3,5) skew(-33deg)'
-   dly[2].style.transform='scale(3,3) skew(33deg)'
   }
      bdly=!bdly
  }, 999)	
@@ -216,6 +227,14 @@ cr[0].onmouseout=()=>
 {
  rd[2].style.opacity=0.4
  rd[2].style.transform='scale(1)'
+ prpl[0].style.opacity=1
+ prpl[0].style.transform='scale(0.4,2)'
+ prpl[1].style.opacity=1
+ prpl[1].style.transform='scale(0.4,2)'
+ prpl[2].style.opacity=1
+ prpl[2].style.transform='scale(0.4,2)'
+ prpl[3].style.opacity=1
+ prpl[3].style.transform='scale(0.4,2)'
  cr[0].style.borderRadius='5%'
  cr[0].style.boxShadow='9px 9px'
  cr[1].style.transform='scale(0.1)'
@@ -223,9 +242,6 @@ cr[0].onmouseout=()=>
  fre[0].style.background='#000'
  fre[0].style.transform='scale(1)'
  fre[1].style.opacity=0
- dly[0].style.transform='scale(0)'
- dly[1].style.transform='scale(0)'
- dly[2].style.transform='scale(0)'
   clearInterval(dlyI)
 }
 </script>
