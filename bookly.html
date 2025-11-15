@@ -57,9 +57,9 @@ input
   <div class=bse>seminar</div>
  </div> 
  
- <input type='submit' class=btn value='order'>
- <input type='submit' class=btn value='change'>
- <input type='submit' class=btn value='reject'>
+ <input type='submit' value='order' class=btn >
+ <input type='submit' value='change' class=btn >
+ <input type='submit' value='reject' class=btn >
  
  <div class=dlg>
  <div class=zpr>Order the ticket!</div>
@@ -277,19 +277,16 @@ btn[2].onmouseout=()=>
 } 
 btn[2].onclick=()=>
 { 
-  if(idel>0)
+ zpr[1].style.background='#990'
+    zpr[1].innerHTML='Choose <br>&nbsp from list'
+   zpr[1].style.zIndex=1
+ zpr[1].style.transform=
+  'scale(4) translate(55%,22%) skew(22deg)'
+  if(idel>-1)
   {
    lst[idel].innerHTML=''
     ilst=idel
   } 
-  else
-  {
-   zpr[1].style.background='#990'
-    zpr[1].innerHTML='Choose <br>&nbsp from list'
-   zpr[1].style.zIndex=1
-   zpr[1].style.transform=
-    'scale(4) translate(55%,22%) skew(22deg)'
-  }
 }
 
 dlg[2].onclick=()=>
@@ -348,8 +345,7 @@ dlgr[2].onclick=()=>
  dlgr[1].disabled=1
  dlgr[2].disabled=1
  dlgr[3].disabled=1
-  if(lst[++ilst].innerHTML==0) 
-   ilst++
+
 }
 dlgr[3].onclick=()=>
 { 
