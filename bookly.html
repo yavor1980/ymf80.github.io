@@ -55,6 +55,7 @@ input
   <div class=bse>meeting</div>
   <div class=bse> expo</div>
   <div class=bse>seminar</div>
+  <div class=bse>Events</div>
  </div> 
  
  <input type='submit' value='order' class=btn >
@@ -81,6 +82,7 @@ input
   <div class=lst></div>
   <div class=lst></div>
   <div class=lst></div>
+  <div class=lst>Ordered</div>
  </div>
 </div>  
 
@@ -111,7 +113,7 @@ btn[2].style.transform='scale(2)'
 bse[0].style.left=5+'%'
 bse[0].style.top=7+'%' 
 bse[0].style.width=22+'%' 
-bse[0].style.height=28+'%'
+bse[0].style.height=38+'%'
 bse[0].style.background='#bb0'
 bse[0].style.borderRadius=15+'%'
 function initbse(i,t,clr)
@@ -129,6 +131,10 @@ function initbse(i,t,clr)
  initbse(1,8,'#f0f'), 
  initbse(2,34,'#ff0'),
  initbse(3,60,'#0f0')
+bse[4].style.left=34+'%'
+bse[4].style.top=88+'%' 
+bse[4].style.color='#900' 
+bse[4].style.transform='scale(2)'
 
 dlg[0].style.left=44+'%'
 dlg[0].style.top=25+'%' 
@@ -205,17 +211,23 @@ function initlst(i,t)
 }
  initlst(1,9), initlst(2,26),
  initlst(3,43), initlst(4,60),initlst(5,77)
- //===============================================
+lst[6].style.left=66+'%'
+lst[6].style.top=34+'%' 
+lst[6].style.color='#900' 
+lst[6].style.transform='scale(4)'
+//===============================================
  
 sbse=['meeting','expo','seminar']
 pbse=0
 bse[0].onmouseover=()=>
 { 
  bse[0].style.transform='scale(1.2)'
+ bse[4].style.color='#f00'
 }
  bse[0].onmouseout=()=>
 { 
  bse[0].style.transform='scale(1)'
+ bse[4].style.color='#900'
 }
 function abse(i,pp)
 {  
@@ -231,7 +243,7 @@ function abse(i,pp)
  { 
   dlg[0].style.zIndex=1
   dlg[0].style.transform='scale(2) translate(37%,27%)'
-  pbse=pp
+  //pbse=pp
   m=Math.round(Math.random()*11)
   d=Math.round(Math.random()*30)
    dlg[1].value=d+'.'+m+'.'+'25'
@@ -298,7 +310,7 @@ dlg[2].onclick=()=>
  dlg[1].disabled=1
  dlg[2].disabled=1
  dlg[3].disabled=1
-  if(lst[++ilst].innerHTML==0) 
+  //if(lst[ilst].innerHTML==0) 
    ilst++
 }
 dlg[3].onclick=()=>
@@ -316,10 +328,12 @@ function flst(i)
  lst[i].onmouseover=()=>
  { 
   lst[i].style.transform='scale(2.4)'
+  lst[6].style.color='#f00'
  } 
  lst[i].onmouseout=()=>
  {  
   lst[i].style.transform='scale(2)'
+  lst[6].style.color='#900'
  } 
  lst[i].onclick=()=>
  { 
@@ -339,7 +353,7 @@ function flst(i)
 dlgr[2].onclick=()=>
 { 
  dlgr[0].style.zIndex=0
-  lst[ilst].innerHTML=sbse[pbse]+' '+dlg[1].value
+  lst[ilst].innerHTML=''
   dlgr[1].value='dd.mm.yy' 
  dlgr[0].style.transform='scale(1)'
  dlgr[1].disabled=1
