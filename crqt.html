@@ -31,13 +31,7 @@ button:hover
  transition:555ms;
 } 
 
-.drssl
-{
- position:absolute;
- transition:1s;
-} 
-
-.clma
+.drssl,.clma,.telm,.tprcss
 {
  position:absolute;
  transition:1s;
@@ -45,18 +39,6 @@ button:hover
 .clma:hover
 {
  transform:scale(1.2);
-} 
-
-.telm
-{
- position:absolute;
- transition:1s;
-} 
-
-.tprcss
-{
- position:absolute;
- transition:1s;
 } 
 
 .crrnt
@@ -81,7 +63,7 @@ button:hover
   <div class=telm>Ground</div>  
  <div class=wrs></div>
  <div class=wrs>
-  <div class=elm>>></div>
+  <div class=elm>~</div>
  </div>
  <div class=wrs>
    <div class=elm></div>
@@ -163,23 +145,24 @@ wrs[4].style.background='#000'
  
 elm[0].style.left=-244+'%'
 elm[0].style.top=20+'%'
-elm[0].style.width=399+'%'
-elm[0].style.height=30+'%'
-elm[0].style.background='#999'
+elm[0].style.width=555+'%'
+elm[0].style.height=13+'%'
+elm[0].style.background='#400'
+elm[0].style.color='#fff'
 elm[0].style.borderRadius=55+'%'
-elm[0].style.padding='9px'
-elm[0].style.transform='rotate(-90deg)'
+elm[0].style.paddingLeft=13+'px'
+elm[0].style.paddingBottom=23+'px'
 elm[0].style.fontSize='3em'
 elm[1].style.left=21+'%'
 elm[1].style.top=-222+'%'
 elm[1].style.width=23+'%'
 elm[1].style.height=555+'%'
-elm[1].style.background='#999'
+elm[1].style.background='#400'
 elm[1].style.zIndex=1
 elm[2].style.left=99+'%'
 elm[2].style.top=38+'%'
-elm[2].style.background='#ee0'
-elm[2].style.color='#777'
+elm[2].style.background='#ff0'
+elm[2].style.color='#400'
 elm[2].style.transform=
  'scale(4) rotate(90deg)'
 
@@ -193,8 +176,8 @@ drssl[1].style.width=44+'%'
 drssl[1].style.height=44+'%'
 drssl[1].style.borderRadius='55%'
 drssl[1].style.borderLeft='15px ridge transparent'
-drssl[1].style.borderRight='15px ridge #999'
-drssl[1].style.borderTop='15px ridge #999'
+drssl[1].style.borderRight='15px ridge #300'
+drssl[1].style.borderTop='15px ridge #300'
 drssl[1].style.borderBottom='15px ridge transparent'
 drssl[1].style.transform='rotate(-45deg)'
 drssl[2].style.left=135+'%'
@@ -203,8 +186,8 @@ drssl[2].style.width=44+'%'
 drssl[2].style.height=44+'%'
 drssl[2].style.borderRadius='55%'
 drssl[2].style.borderLeft='15px ridge transparent'
-drssl[2].style.borderRight='15px ridge #999'
-drssl[2].style.borderTop='15px ridge #999'
+drssl[2].style.borderRight='15px ridge #300'
+drssl[2].style.borderTop='15px ridge #300'
 drssl[2].style.borderBottom='15px ridge transparent'
 drssl[2].style.transform='rotate(-45deg)'
 drssl[3].style.left=270+'%'
@@ -213,8 +196,8 @@ drssl[3].style.width=44+'%'
 drssl[3].style.height=44+'%'
 drssl[3].style.borderRadius='55%'
 drssl[3].style.borderLeft='15px ridge transparent'
-drssl[3].style.borderRight='15px ridge #999'
-drssl[3].style.borderTop='15px ridge #999'
+drssl[3].style.borderRight='15px ridge #300'
+drssl[3].style.borderTop='15px ridge #300'
 drssl[3].style.borderBottom='15px ridge transparent'
 drssl[3].style.transform='rotate(-45deg)'
 
@@ -391,8 +374,7 @@ wrs[0].onmouseover=()=>
  wrs[0].style.background='#ff0'
  elm[0].style.background=
   'radial-gradient(28px,#f00,#f0f)'
- elm[0].style.transform=
-  'scale(1.2) rotate(-90deg)'
+ elm[0].style.transform='scale(1.2)'
  elm[1].style.background='#f00'
  elm[2].style.color='#f00'
  drssl[1].style.borderTopColor='#f00'
@@ -456,18 +438,17 @@ wrs[0].onmouseout=()=>
  telm[0].onmouseout()
  wrs[0].style.background='none'
   clearInterval(Ielm)
- elm[0].style.background='#999'
- elm[0].style.transform=
-  'scale(1) rotate(-90deg)'
- elm[1].style.background='#999' 
+ elm[0].style.background='#400'
+ elm[0].style.transform='scale(1)'
+ elm[1].style.background='#400'
  elm[1].style.transform='scale(1)'
- elm[2].style.color='#999' 
- drssl[1].style.borderTopColor='#999'
- drssl[1].style.borderRightColor='#999'
- drssl[2].style.borderTopColor='#999'
- drssl[2].style.borderRightColor='#999'
- drssl[3].style.borderTopColor='#999'
- drssl[3].style.borderRightColor='#999' 
+ elm[2].style.color='#400' 
+ drssl[1].style.borderTopColor='#300'
+ drssl[1].style.borderRightColor='#300'
+ drssl[2].style.borderTopColor='#300'
+ drssl[2].style.borderRightColor='#300'
+ drssl[3].style.borderTopColor='#300'
+ drssl[3].style.borderRightColor='#300'
  crrnt[0].style.background='#0bb'
  crrnt[0].style.transform='scale(1)'
  crrnt[1].style.opacity=0
