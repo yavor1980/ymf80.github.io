@@ -135,6 +135,7 @@ bse[4].style.left=34+'%'
 bse[4].style.top=88+'%' 
 bse[4].style.color='#900' 
 bse[4].style.transform='scale(2)'
+bse[4].style.cursor='pointer' 
 
 dlg[0].style.left=44+'%'
 dlg[0].style.top=25+'%' 
@@ -215,7 +216,8 @@ lst[6].style.left=66+'%'
 lst[6].style.top=34+'%' 
 lst[6].style.color='#900' 
 lst[6].style.transform='scale(4)'
-//===============================================
+lst[6].style.cursor='pointer'
+//===================================================
  
 sbse=['meeting','expo','seminar']
 pbse=0
@@ -243,7 +245,7 @@ function abse(i,pp)
  { 
   dlg[0].style.zIndex=1
   dlg[0].style.transform='scale(2) translate(37%,27%)'
-  //pbse=pp
+  pbse=pp
   m=Math.round(Math.random()*11)
   d=Math.round(Math.random()*30)
    dlg[1].value=d+'.'+m+'.'+'25'
@@ -290,15 +292,10 @@ btn[2].onmouseout=()=>
 btn[2].onclick=()=>
 { 
  zpr[1].style.background='#990'
-    zpr[1].innerHTML='Choose <br>&nbsp from list'
-   zpr[1].style.zIndex=1
+  zpr[1].innerHTML='Choose <br>&nbsp from list'
+ zpr[1].style.zIndex=1
  zpr[1].style.transform=
   'scale(4) translate(55%,22%) skew(22deg)'
-  if(idel>-1)
-  {
-   lst[idel].innerHTML=''
-    ilst=idel
-  } 
 }
 
 dlg[2].onclick=()=>
@@ -353,7 +350,7 @@ function flst(i)
 dlgr[2].onclick=()=>
 { 
  dlgr[0].style.zIndex=0
-  lst[ilst].innerHTML=''
+  lst[idel].innerHTML=''
   dlgr[1].value='dd.mm.yy' 
  dlgr[0].style.transform='scale(1)'
  dlgr[1].disabled=1
