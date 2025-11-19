@@ -349,19 +349,20 @@ function flst(i)
  
 function shft()
 {
- 
+ lst[idel].innerHTML=lst[idel+1].innerHTML
+  lst[idel+1].innerHTML=''
+  pbse=0//idiel-3
 }
 dlgr[2].onclick=()=>
 { 
  dlgr[0].style.zIndex=0
-  lst[idel].innerHTML=lst[idel+1].innerHTML
-  lst[idel+1].innerHTML=''
+  shft()
   dlgr[1].value='dd.mm.yy' 
  dlgr[0].style.transform='scale(1)'
  dlgr[1].disabled=1
  dlgr[2].disabled=1
  dlgr[3].disabled=1
-
+ 
 }
 dlgr[3].onclick=()=>
 { 
@@ -372,7 +373,6 @@ dlgr[3].onclick=()=>
  dlgr[2].disabled=1
  dlgr[3].disabled=1
 }
- 
  
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
