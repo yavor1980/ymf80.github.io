@@ -307,7 +307,7 @@ dlg[2].onclick=()=>
  dlg[1].disabled=1
  dlg[2].disabled=1
  dlg[3].disabled=1
-  //if(lst[ilst].innerHTML==0) 
+  //lst[ilst].innerHTML=''
    ilst++
 }
 dlg[3].onclick=()=>
@@ -347,10 +347,15 @@ function flst(i)
 } 
  flst(1),flst(2),flst(3),flst(4),flst(5)
  
+function shft()
+{
+ 
+}
 dlgr[2].onclick=()=>
 { 
  dlgr[0].style.zIndex=0
-  lst[idel].innerHTML=''
+  lst[idel].innerHTML=lst[idel+1].innerHTML
+  lst[idel+1].innerHTML=''
   dlgr[1].value='dd.mm.yy' 
  dlgr[0].style.transform='scale(1)'
  dlgr[1].disabled=1
