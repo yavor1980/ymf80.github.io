@@ -183,7 +183,9 @@ zpr[0].style.cursor='default'
 zpr[0].style.transform='skew(22deg)'
 zpr[1].style.left=50+'%'
 zpr[1].style.top=20+'%' 
+zpr[1].style.background='#0b0'
 zpr[1].style.color='#900'
+zpr[1].style.opacity=0.6
 zpr[1].style.fontSize=1.2+'em' 
 zpr[1].style.transform='skew(22deg)'
 zpr[2].style.left=9+'%'
@@ -231,6 +233,11 @@ bse[0].onmouseover=()=>
  bse[0].style.transform='scale(1)'
  bse[4].style.color='#900'
 }
+ bse[0].onclick=()=>
+{ 
+ dlg[0].style.transform='scale(2)'
+}
+
 function abse(i,pp)
 {  
  bse[i].onmouseover=()=>
@@ -258,44 +265,54 @@ function abse(i,pp)
  abse(1,0), abse(2,1), abse(3,2)
  
 ilst=1,  idel=-1
-btn[0].onmouseout=()=>
+btn[0].onmouseover=()=>
 { 
- zpr[1].style.background='none'
- zpr[1].style.transform='scale(0)'
-} 
-btn[0].onclick=()=>
-{ 
- zpr[1].style.background='#990'
   zpr[1].innerHTML='Choose <br>&nbsp any event!'
  zpr[1].style.zIndex=1
  zpr[1].style.transform=
   'scale(4) translate(55%,22%) skew(22deg)'
 } 
+btn[0].onmouseout=()=>
+{ 
+ zpr[1].style.transform='scale(0)'
+} 
+btn[0].onclick=()=>
+{ 
+ //for(i=0;i<6;i++)
+  
+}
+
+btn[1].onmouseover=()=>
+{ 
+  zpr[1].innerHTML='Choose <br>&nbsp from list'
+ zpr[1].style.zIndex=1
+ zpr[1].style.transform=
+  'scale(4) translate(55%,22%) '
+} 
 btn[1].onmouseout=()=>
 { 
- zpr[1].style.background='none'
  zpr[1].style.transform='scale(0)'
 } 
 btn[1].onclick=()=>
 { 
- zpr[1].style.background='#990'
+ //for(i=0;i<6;i++)
+  
+}
+btn[2].onmouseover=()=>
+{ 
   zpr[1].innerHTML='Choose <br>&nbsp from list'
  zpr[1].style.zIndex=1
  zpr[1].style.transform=
-  'scale(4) translate(55%,22%) skew(22deg)'
-} 
+  'scale(4) translate(55%,22%) skew(-22deg)'
+}
 btn[2].onmouseout=()=>
 { 
- zpr[1].style.background='none'
  zpr[1].style.transform='scale(0)'
 } 
 btn[2].onclick=()=>
 { 
- zpr[1].style.background='#990'
-  zpr[1].innerHTML='Choose <br>&nbsp from list'
- zpr[1].style.zIndex=1
- zpr[1].style.transform=
-  'scale(4) translate(55%,22%) skew(22deg)'
+ //for(i=0;i<6;i++)
+  
 }
 
 dlg[2].onclick=()=>
@@ -338,7 +355,7 @@ function flst(i)
   dlgr[2].disabled=0
   dlgr[3].disabled=0
   dlgr[0].style.zIndex=1
-  idel=i
+   idel=i
  }
  lst[i].ondblclick=()=>
  { 
@@ -349,9 +366,12 @@ function flst(i)
  
 function shft()
 {
- lst[idel].innerHTML=lst[idel+1].innerHTML
-  lst[idel+1].innerHTML=''
-  pbse=0//idiel-3
+ if(idel<5)
+ {
+  lst[idel].innerHTML=lst[idel+1].innerHTML
+   lst[idel+1].innerHTML=''
+ }  
+  //pbse=0//idiel-3
 }
 dlgr[2].onclick=()=>
 { 
@@ -362,7 +382,6 @@ dlgr[2].onclick=()=>
  dlgr[1].disabled=1
  dlgr[2].disabled=1
  dlgr[3].disabled=1
- 
 }
 dlgr[3].onclick=()=>
 { 
