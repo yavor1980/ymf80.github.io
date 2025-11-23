@@ -421,9 +421,8 @@ cpcty[0].onmouseout=()=>
 trsfrmI=0
 function trsfrmon()
 {
- ttl[0].style.color='#00b'
- ttl[0].style.transform='scale(4) skew(14deg)'
- ttl[1].style.opacity=0.2+Math.random()/2
+ idtrsfrmtr.style.borderLeft='199px ridge #f00'
+ idtrsfrmtr.style.borderRight='199px ridge #f00' 
  for(i=0;i<4;i++)
  { 
   lcoils[i].style.borderColor='#700'
@@ -431,6 +430,9 @@ function trsfrmon()
   rcoils[i].style.borderColor='#900'
   rcoils[i].style.borderTop='transparnt'
  }
+ ttl[0].style.color='#00b'
+ ttl[0].style.transform='scale(4) skew(14deg)'
+ ttl[1].style.opacity=0.2+Math.random()/2
  trsfrmI=setInterval(()=>
  {
     pl=Math.round(Math.random()*4)
@@ -441,16 +443,18 @@ function trsfrmon()
 } 
 function trsfrmoff()
 {
+ idtrsfrmtr.style.borderLeft='199px ridge #444'
+ idtrsfrmtr.style.borderRight='199px ridge #444' 
  for(i=0;i<4;i++)
  { 
-  ttl[0].style.color='#008'
-  ttl[0].style.transform='scale(4)'
-  ttl[1].style.opacity=0
   lcoils[i].style.borderColor='#777'
   lcoils[i].style.borderTop='transparent'
   rcoils[i].style.borderColor='#777'
-  rcoils[i].style.borderTop='transparent'
+  rcoils[i].style.borderTop='transparent' 
  }
+ ttl[0].style.color='#008'
+ ttl[0].style.transform='scale(4)'
+ ttl[1].style.opacity=0 
   clearInterval(cpctyI)
 } 
 idtrsfrmtr.onmouseover=()=>
