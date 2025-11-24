@@ -44,13 +44,13 @@
  cursor:pointer;
 }
 
-#idtrsfrmtr,.lcoils,.rcoils,.ttl
+#idtrsfrmtr,.lcoils,.rcoils,.acoils,.ttl
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
 }
-.lcoils,.rcoils
+.lcoils,.rcoils,.acoils
 {
  width:298px;
  height:11%;
@@ -60,7 +60,7 @@
 }
 .lcoils
 {
- left:-269px;
+ left:-84%;
 }
 .rcoils
 {
@@ -113,6 +113,12 @@
  <div class=rcoils></div>
  <div class=rcoils></div>
  <div class=rcoils></div>
+ <div class=acoils></div>
+ <div class=acoils></div>
+ <div class=acoils></div>
+ <div class=acoils></div>
+ <div class=acoils></div>
+ <div class=acoils></div>
 </div>
 
 <script>
@@ -125,6 +131,7 @@ cpcty=document.getElementsByClassName('cpcty')
 ttl=document.getElementsByClassName('ttl')
 lcoils=document.getElementsByClassName('lcoils')
 rcoils=document.getElementsByClassName('rcoils')
+acoils=document.getElementsByClassName('acoils')
 
 btn[0].style.right=6+'%'
 btn[0].style.top=9+'%'
@@ -276,6 +283,18 @@ lcoils[3].style.top=66+'%'
 rcoils[1].style.top=22+'%'
 rcoils[2].style.top=44+'%'
 rcoils[3].style.top=66+'%'
+acoils[0].style.left=-84+'%'
+acoils[0].style.top=12+'%'
+acoils[1].style.left=-84+'%'
+acoils[1].style.top=32+'%'
+acoils[2].style.left=-84+'%'
+acoils[2].style.top=54+'%'
+acoils[3].style.left=84+'%'
+acoils[3].style.top=12+'%'
+acoils[4].style.left=84+'%'
+acoils[4].style.top=32+'%'
+acoils[5].style.left=84+'%'
+acoils[5].style.top=54+'%'
 
 ttl[0].style.left=22+'%'
 ttl[0].style.top=-44+'%'
@@ -425,10 +444,17 @@ function trsfrmon()
  idtrsfrmtr.style.borderRight='199px ridge #f00' 
  for(i=0;i<4;i++)
  { 
-  lcoils[i].style.borderColor='#700'
   lcoils[i].style.borderTop='transparent'
+  lcoils[i].style.borderColor='#700'
+  rcoils[i].style.borderTop='transparent'
   rcoils[i].style.borderColor='#900'
-  rcoils[i].style.borderTop='transparnt'
+ }
+  for(i=0;i<3;i++)
+ { 
+  acoils[i].style.borderTop='transparent'
+  acoils[i].style.borderColor='#700'
+  acoils[i+3].style.borderTop='transparent'
+  acoils[i+3].style.borderColor='#900'
  }
  ttl[0].style.color='#00b'
  ttl[0].style.transform='scale(4) skew(14deg)'
@@ -436,7 +462,8 @@ function trsfrmon()
  trsfrmI=setInterval(()=>
  {
     pl=Math.round(Math.random()*4)
-   //lcoils[pl].style.opacity=0
+  for(i=0;i<6;i++)	
+   acoils[i].style.opacity=Math.random()
    ttl[1].style.transform='scale('+
     (1+Math.random()/2)+')'
  }, 333)
@@ -452,10 +479,16 @@ function trsfrmoff()
   rcoils[i].style.borderColor='#777'
   rcoils[i].style.borderTop='transparent' 
  }
+ for(i=0;i<6;i++)
+ { 
+  acoils[i].style.opacity=1
+  acoils[i].style.borderColor='#777'
+  acoils[i].style.borderTop='transparent'
+ }
  ttl[0].style.color='#008'
  ttl[0].style.transform='scale(4)'
  ttl[1].style.opacity=0 
-  clearInterval(cpctyI)
+  clearInterval(trsfrmI)
 } 
 idtrsfrmtr.onmouseover=()=>
 {
