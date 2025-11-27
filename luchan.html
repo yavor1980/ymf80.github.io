@@ -7,10 +7,11 @@
 <style>
 #idbd
 {
+ height:199%;
  background:radial-gradient(#990,177px,#333);
 }
 
-.ttl,.glss,.blb
+.ttl,.glss,.blb,.cffee
 {
  position:absolute;   
  transition:1s;
@@ -22,35 +23,41 @@
 }
 
 </style>
-<div class=ttl>
- <div class=ttl>L</div>
- <div class=ttl>U</div>
- <div class=ttl>C</div>
- <div class=ttl>H</div>
- <div class=ttl>A</div>
- <div class=ttl>N</div>
+<div class='ttl'>
+ <div class='ttl'>L</div>
+ <div class='ttl'>U</div>
+ <div class='ttl'>C</div>
+ <div class='ttl'>H</div>
+ <div class='ttl'>A</div>
+ <div class='ttl'>N</div>
 </div>
- <div class=ttl>kraft beer</div>
+ <div class='ttl'>craft beer</div>
 
 
-<div class=glss>
- <div class=glss></div>
- <div class=glss></div>
- <div class=glss></div>
- <div class=glss></div>
- <div class=glss></div>
- <div class=glss></div>
- <div class=blb></div>
- <div class=blb></div>
- <div class=blb></div>
- <div class=blb></div>
- <div class=blb></div>
+<div class='glss'>
+ <div class='glss'></div>
+ <div class='glss'></div>
+ <div class='glss'></div>
+ <div class='glss'></div>
+ <div class='glss'></div>
+ <div class='glss'></div>
+ <div class='blb'></div>
+ <div class='blb'></div>
+ <div class='blb'></div>
+ <div class='blb'></div>
+ <div class='blb'></div>
+</div>
+
+<div class='cffee'> 
+ <div class='cffee'>Coffee</div>
+ <div class='cffee'>Place</div>
 </div>
 
 <script>
-ttl=document.getElementsByClassName('ttl')
-glss=document.getElementsByClassName('glss')
-blb=document.getElementsByClassName('blb')
+var ttl=document.getElementsByClassName('ttl')
+var glss=document.getElementsByClassName('glss')
+var blb=document.getElementsByClassName('blb')
+var cffee=document.getElementsByClassName('cffee')
 
 ttl[0].style.left=11+'%'
 ttl[0].style.top=4+'%'
@@ -59,17 +66,17 @@ ttl[0].style.height=24+'%'
 ttl[0].style.fontSize=11+'em'
 ttl[0].style.padding=20+'px'
 ttl[1].style.left=0+'%'
-ttl[1].style.color='#f'+44
+ttl[1].style.color='#b90'
 ttl[2].style.left=16+'%'
-ttl[2].style.color='#f'+55
+ttl[2].style.color='#b80'
 ttl[3].style.left=32+'%'
-ttl[3].style.color='#f'+77
+ttl[3].style.color='#b70'
 ttl[4].style.left=48+'%'
-ttl[4].style.color='#f'+66
+ttl[4].style.color='#b70'
 ttl[5].style.left=64+'%'
-ttl[5].style.color='#f'+55
+ttl[5].style.color='#b80'
 ttl[6].style.left=80+'%'
-ttl[6].style.color='#f'+44
+ttl[6].style.color='#b90'
 ttl[7].style.zIndex=2
 ttl[7].style.left=22+'%'
 ttl[7].style.top=29+'%'
@@ -176,15 +183,39 @@ blb[4].style.background=
 blb[4].style.borderRadius=55+'%'
 blb[4].style.opacity=0
 
+cffee[0].style.left=41+'%'
+cffee[0].style.top=99+'%'
+cffee[0].style.width=38+'%'
+cffee[0].style.height=9+'%'
+cffee[1].style.left=0+'%'
+cffee[1].style.top=0+'%'
+cffee[1].style.color='#b6b'
+cffee[1].style.transform='scale(11)'
+cffee[2].style.left=67+'%'
+cffee[2].style.top=222+'%'
+cffee[2].style.color='#b8b'
+cffee[2].style.transform='scale(11)'
+
 ttlI=0
 function cl()
 {
- for(i=1;i<7;i++)
+ for(var i=1;i<7;i++)
   ttl[i].style.transform='scale('+(1+Math.random()/4)+')'
 }
  ttlI=setInterval(cl, 999)
 
-Iblb=0
+idbd.onkeydown=()=>
+{
+ switch(event.Key)
+ {
+  case event.VK_UP: glss[0].style.top=22+'%';
+    break
+  case event.VK_DOWN: glss[0].style.top=83+'%';
+    break
+ } 
+}
+
+var Iblb=0
 ttl[0].onmouseover=()=>
 { 
   clearInterval(ttlI)
@@ -254,6 +285,15 @@ glss[0].onmouseover=()=>
 glss[0].onmouseout=()=>
 { 
  ttl[0].onmouseout()
+}
+
+cffee[0].onmouseover=()=>
+{ 
+ cffee[0].style.background='#b00'
+}
+cffee[0].onmouseout=()=>
+{ 
+ cffee[0].style.background='none'
 }
 
 
