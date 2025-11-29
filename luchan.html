@@ -7,7 +7,7 @@
 <style>
 #idbd
 {
- height:199%;
+ height:299%;
  background:radial-gradient(#990,177px,#333);
 }
 
@@ -52,6 +52,9 @@
  <div class='cffee'>Coffee</div>
  <div class='cffee'>Place</div>
 </div>
+
+<div class='cffee'></div>
+
 
 <script>
 var ttl=document.getElementsByClassName('ttl')
@@ -201,6 +204,17 @@ cffee[2].style.top=46+'%'
 cffee[2].style.color='#b8b'
 cffee[2].style.fontSize=9+'em'
 
+cffee[3].style.left=4+'%'
+cffee[3].style.top=190+'%'
+cffee[3].style.width=68+'%'
+cffee[3].style.height=69+'%'
+cffee[3].style.borderRadius=55+'%'
+cffee[3].style.borderBottomLeftRadius=8+'%'
+cffee[3].style.borderBottomRightRadius=8+'%'
+cffee[3].style.border='122px solid #bb8'
+cffee[3].style.borderBottom='122px solid transparent'
+cffee[3].style.opacity=0.7
+
 ttlI=0
 function cl()
 {
@@ -290,7 +304,7 @@ cffee[0].onmouseover=()=>
   ttl[0].onmouseover()
  glss[0].style.zIndex=1
  glss[0].style.top=95+'%'
- glss[0].style.opacity=0.5
+ glss[0].style.opacity=0.7
 }
 cffee[0].onmouseout=()=>
 { 
@@ -303,6 +317,22 @@ cffee[0].onmouseout=()=>
  glss[0].style.opacity=1
 }
 
+cffee[3].onmouseover=()=>
+{ 
+ cffee[3].style.opacity=1
+  ttl[0].onmouseover()
+ glss[0].style.zIndex=1
+ glss[0].style.top=222+'%'
+ 
+}
+cffee[3].onmouseout=()=>
+{ 
+ cffee[3].style.opacity=0.7
+  ttl[0].onmouseout()
+ glss[0].style.zIndex=0
+ glss[0].style.top=44+'%'
+ glss[0].style.opacity=0.7
+}
 
 </script>
 </body>
