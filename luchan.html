@@ -53,8 +53,9 @@
  <div class='cffee'>Place</div>
 </div>
 
-<div class='cffee'></div>
-
+<div class='cffee'>
+ <div class='cffee'></div>
+</div>
 
 <script>
 var ttl=document.getElementsByClassName('ttl')
@@ -215,6 +216,9 @@ cffee[3].style.border='122px solid #bb8'
 cffee[3].style.borderBottom='122px solid transparent'
 cffee[3].style.opacity=0.7
 
+cffee[4].style.left=4+'%'
+cffee[4].style.top=190+'%'
+
 ttlI=0
 function cl()
 {
@@ -295,6 +299,9 @@ glss[0].onmouseout=()=>
  ttl[0].onmouseout()
 }
 
+ttll=[]
+ttll=glss
+cffee[4].innerHTML=ttll
 cffee[0].onmouseover=()=>
 { 
  cffee[0].style.background='#b00'
@@ -323,7 +330,9 @@ cffee[3].onmouseover=()=>
   ttl[0].onmouseover()
  glss[0].style.zIndex=1
  glss[0].style.top=222+'%'
- 
+ glss[0].style.opacity=0.7
+ glss[0].style.transform=
+  'scale(1.2) translate(-49%,-6%)'
 }
 cffee[3].onmouseout=()=>
 { 
@@ -331,7 +340,9 @@ cffee[3].onmouseout=()=>
   ttl[0].onmouseout()
  glss[0].style.zIndex=0
  glss[0].style.top=44+'%'
- glss[0].style.opacity=0.7
+ glss[0].style.opacity=1
+ glss[0].style.transform='scale(1) '
+ 
 }
 
 </script>
