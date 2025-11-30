@@ -7,7 +7,7 @@
 <style>
 #idbd
 {
- background: linear-gradient(#ff8,#024);
+ background:linear-gradient(#ff8,#024);
 }
 
 .lctr
@@ -16,7 +16,6 @@
  transition:2s;
  font-size:0.2em;
 }
-
 .gl
 {
  position:absolute;   
@@ -56,20 +55,12 @@
 .ttl
 {
  position:absolute;  
- transition:3s;
  bottom:0%;
  font-size:0.4em;
  text-align:center;
 }
 
-.tps
-{
- position:absolute;   
- transition:1s;
- cursor:pointer;
-}
-
-.vctr
+.tps,.vctr
 {
  position:absolute;   
  transition:1s;
@@ -109,23 +100,14 @@
 
 <script>
 lctr=document.getElementsByClassName('lctr')
-mth=document.getElementsByClassName('mth')
 gl=document.getElementsByClassName('gl')
 zr=document.getElementsByClassName('zr')
 ns=document.getElementsByClassName('ns')
-tbl=document.getElementsByClassName('tbl')
+mth=document.getElementsByClassName('mth')
 
+tbl=document.getElementsByClassName('tbl')
 tps=document.getElementsByClassName('tps')
 vctr=document.getElementsByClassName('vctr')
-  
-function initj(nm,i,l,t,w,h,bg)
-{
- nm[i].style.left=l+'%'
- nm[i].style.bottom=t+'%'  
- nm[i].style.width=w+'%'
- nm[i].style.height=h+'%'  
- nm[i].style.background=bg
-}  
   
 lctr[0].style.left=61+'%'
 lctr[0].style.top=33+'%'
@@ -133,14 +115,13 @@ lctr[0].style.width=18+'%'
 lctr[0].style.height=44+'%'
 lctr[0].style.background=
  'radial-gradient(#ffc,#f88)'
-lctr[0].style.cursor='pointer'
 lctr[0].style.borderTopLeftRadius=44+'%'
 lctr[0].style.borderTopRightRadius=44+'%'
 lctr[0].style.borderBottomLeftRadius=33+'%'
 lctr[0].style.borderBottomRightRadius=33+'%'
 lctr[0].style.borderTop='16px ridge #333'
 lctr[0].style.borderBottom='6px ridge #648'	
-	
+lctr[0].style.cursor='pointer'
 lctr[1].style.left=-10+'%'
 lctr[1].style.top=22+'%'
 lctr[1].style.width=11+'%'
@@ -148,7 +129,6 @@ lctr[1].style.height=44+'%'
 lctr[1].style.background=
  'radial-gradient(#b99,#f88)'
 lctr[1].style.borderRadius=55+'%' 
-	
 lctr[2].style.left=99+'%'
 lctr[2].style.top=22+'%'
 lctr[2].style.width=11+'%'
@@ -156,7 +136,6 @@ lctr[2].style.height=44+'%'
 lctr[2].style.background=
  'radial-gradient(#b99,#f88)'	
 lctr[2].style.borderRadius=55+'%' 	
-	
 lctr[3].style.left=42+'%'
 lctr[3].style.top=11+'%'
 lctr[3].style.padding=1+'%'
@@ -164,15 +143,22 @@ lctr[3].style.background='#fff'
 lctr[3].style.borderRadius=55+'%' 	
 lctr[3].style.opacity=0.5
 lctr[3].style.transform='scale(0)'	
-	
 lctr[4].style.left=42+'%'
 lctr[4].style.top=11+'%'
 lctr[4].style.padding=1+'%'
 lctr[4].style.background='#eee'	
 lctr[4].style.borderRadius=55+'%' 	
 lctr[4].style.opacity=0.5
-lctr[4].style.transform='scale(0)'		
+lctr[4].style.transform='scale(0)'	
 	
+function initj(nm,i,l,t,w,h,bg)
+{
+ nm[i].style.left=l+'%'
+ nm[i].style.bottom=t+'%'  
+ nm[i].style.width=w+'%'
+ nm[i].style.height=h+'%'  
+ nm[i].style.background=bg
+}  	
 initj(gl,0,18,0,14,22,'#fff')
  gl[0].style.top=17+'%'
  gl[0].style.borderRadius=55+'%'
@@ -231,7 +217,6 @@ function mvd()
  tbl[4].style.borderTopLeftRadius=55+'%'
  tbl[4].style.borderTopRightRadius=55+'%'
  tbl[4].style.height=Math.random()*80+'%'
- tbl[5].style.opacity=1	 
 }
 function mvm()
 { 
@@ -244,26 +229,26 @@ function mvm()
 } 
 Id=0
 Im=0  
-Id=setInterval(mvd,2222)
-Im=setInterval(mvm,666)
+Id=setInterval(mvd, 2222)
+Im=setInterval(mvm, 666)
  
 lctr[0].onmouseover=()=>
 { 
+ lctr[0].style.transform=
+  'scale(1.1) translate(-14%,-10%)'
  lctr[1].style.background=
   'radial-gradient(#ffc,#f88)'
  lctr[2].style.background=
   'radial-gradient(#ffc,#f88)' 
- lctr[0].style.transform=
-  'scale(1.1) translate(-14%)'
   tps[0].onmouseover()
 }
 lctr[0].onmouseout=()=>
 { 
+ lctr[0].style.transform='scale(1)'
  lctr[1].style.background=
   'radial-gradient(#b99,#f88)'
  lctr[2].style.background=
-  'radial-gradient(#b99,#f88)' 
- lctr[0].style.transform='scale(1)' 
+  'radial-gradient(#b99,#f88)'  
   tps[0].onmouseout()
 }
 
@@ -303,7 +288,8 @@ tbl[0].onmouseover=()=>
  vctr[1].style.transform=
   'scale(4) translate(22%,0)'
  Iwng0=setInterval(()=>{
-  if(bwng0){
+  if(bwng0)
+  {
    lctr[4].style.transform=
     'scale(12,6) translate(50%,-99%) skew(13deg)'
    lctr[4].style.borderRadius='22%' 
@@ -313,14 +299,16 @@ tbl[0].onmouseover=()=>
  	vctr[0].innerHTML='fatal'
    vctr[1].style.transform=
     'scale(3) translate(0%,-55%) skew(33deg) ' 
-  }else{
+  }
+  else
+  {
    lctr[4].style.transform=
     'scale(10,6) translate(50%,-99%) skew(10deg)'
    lctr[4].style.borderRadius='22%' 
    vctr[0].style.color='#000'
-   vctr[0].innerHTML='error'
    vctr[0].style.transform=
     'scale(3)  skew(33deg) ' 
+	vctr[0].innerHTML='error' 
    vctr[1].style.transform=
     'scale(3.4) translate(0%,-55%) skew(-33deg)' 
   }
@@ -339,7 +327,7 @@ tbl[0].onmouseout=()=>
  {
   mvd(1); mvd(2); mvd(3); mvd(4); 
  },  2222)
-  Im=setInterval(mvm, 666)
+ Im=setInterval(mvm, 666)
   clearInterval(Iwng0) 
  zr[0].style.left=1+'%'
  zr[1].style.left=1+'%'    
@@ -357,27 +345,27 @@ tps[0].onmouseover=()=>
    'graphical representation of data <br>&nbsp'+ 
     'line segments or geometric shapes'
  tps[1].style.color='#f0f'
- tps[2].style.color='#f0f'
- tps[3].style.color='#f0f'
- tps[4].style.color='#f0f'
  tps[1].style.transform='scale(2) skew(33deg)'
+ tps[2].style.color='#f0f'
  tps[2].style.transform='scale(2) skew(22deg)'
+ tps[3].style.color='#f0f'
  tps[3].style.transform='scale(2) skew(11deg)'
+ tps[4].style.color='#f0f'
  tps[4].style.transform='scale(2) skew(5deg)'
 }
 tps[0].onmouseout=()=>
 { 
  tps[0].style.color='#000'
  tps[0].style.transform='scale(2)'
- tps[0].innerHTML='Diagram'
+  tps[0].innerHTML='Diagram'
  tps[1].style.color='#000'
  tps[2].style.color='#000'
  tps[3].style.color='#000'
  tps[4].style.color='#000'
- tps[1].style.transform='scale(0) skew(0deg)'
- tps[2].style.transform='scale(0) skew(0deg)'
- tps[3].style.transform='scale(0) skew(0deg)'
- tps[4].style.transform='scale(0) skew(0deg)' 
+ tps[1].style.transform='scale(0)'
+ tps[2].style.transform='scale(0)'
+ tps[3].style.transform='scale(0)'
+ tps[4].style.transform='scale(0)' 
 }
 
 </script>
