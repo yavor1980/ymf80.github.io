@@ -33,7 +33,6 @@
 </div>
  <div class='ttl'>craft beer</div>
 
-
 <div class='glss'>
  <div class='glss'></div>
  <div class='glss'></div>
@@ -215,9 +214,13 @@ cffee[3].style.borderBottomRightRadius=8+'%'
 cffee[3].style.border='122px solid #bb8'
 cffee[3].style.borderBottom='122px solid transparent'
 cffee[3].style.opacity=0.7
-
-cffee[4].style.left=4+'%'
-cffee[4].style.top=190+'%'
+cffee[4].style.left=35+'%'
+cffee[4].style.top=-25+'%'
+cffee[4].style.color='#b0b'
+cffee[4].style.opacity=0.2
+cffee[4].style.fontSize=7+'em'
+ ttll=['PUB']
+ cffee[4].innerHTML=ttll[0]
 
 ttlI=0
 function cl()
@@ -299,9 +302,7 @@ glss[0].onmouseout=()=>
  ttl[0].onmouseout()
 }
 
-ttll=[]
-ttll=glss
-cffee[4].innerHTML=ttll
+
 cffee[0].onmouseover=()=>
 { 
  cffee[0].style.background='#b00'
@@ -327,22 +328,23 @@ cffee[0].onmouseout=()=>
 cffee[3].onmouseover=()=>
 { 
  cffee[3].style.opacity=1
+ cffee[4].style.opacity=1
   ttl[0].onmouseover()
  glss[0].style.zIndex=1
  glss[0].style.top=222+'%'
  glss[0].style.opacity=0.7
  glss[0].style.transform=
-  'scale(1.2) translate(-49%,-6%)'
+  'scale(1.2) translate(-9%,-6%)'
 }
 cffee[3].onmouseout=()=>
 { 
  cffee[3].style.opacity=0.7
+ cffee[4].style.opacity=0.2
   ttl[0].onmouseout()
  glss[0].style.zIndex=0
  glss[0].style.top=44+'%'
  glss[0].style.opacity=1
  glss[0].style.transform='scale(1) '
- 
 }
 
 </script>
