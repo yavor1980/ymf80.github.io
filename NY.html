@@ -108,14 +108,14 @@ finit(bckrnd,0,0,'',100,22,'radial-gradient(#099,#eee)')
  bckrnd[0].style.borderTopLeftRadius=29+'%'
  bckrnd[0].style.borderTopRightRadius=29+'%'
  bckrnd[0].style.opacity=0.2
-finit(bckrnd,1,85,7,1,2,'#ee0')
+finit(bckrnd,1,55,16,1,2,'radial-gradient(#78a,#ee0)')
  bckrnd[1].style.borderRadius=55+'%'
  bckrnd[1].style.opacity=0.8
- bckrnd[1].style.transform='scale(0.2)'
-finit(bckrnd,2,55,16,1,2,'radial-gradient(#78a,#ee0)')
+ bckrnd[1].style.transform='scale(5)'
+finit(bckrnd,2,85,7,1,2,'#ee0')
  bckrnd[2].style.borderRadius=55+'%'
  bckrnd[2].style.opacity=0.8
- bckrnd[2].style.transform='scale(5)'
+ bckrnd[2].style.transform='scale(0.2)'
 finit(bckrnd,3,77,22,1,2,'#ee0')
  bckrnd[3].style.borderRadius=55+'%'
  bckrnd[3].style.opacity=0.8
@@ -345,7 +345,7 @@ fcrtr=()=>
   'px,#ff0,#f0f)' 
  crstint[3].style.border=Math.round(8+Math.random()*4)+
   'px ridge #ff0' 
- bckrnd[1].style.transform=
+ bckrnd[2].style.transform=
   'scale('+Math.random()+')' 
  bckrnd[3].style.transform=
   'scale('+Math.random()+')'
@@ -353,9 +353,9 @@ fcrtr=()=>
 crstmtr[0].onmouseover=()=>
 {
  bckrnd[0].style.opacity=0.8
- bckrnd[2].style.background=
+ bckrnd[1].style.background=
   'radial-gradient(5px,#78a,#ee0)'
- bckrnd[2].style.transform='scale(8)'
+ bckrnd[1].style.transform='scale(7)'
  crstmtr[0].style.transform='scale(1.1)'
  crstmtr[6].style.background=
   'radial-gradient(#040,#0d0)'
@@ -379,9 +379,7 @@ crstmtr[0].onmouseover=()=>
 crstmtr[0].onmouseout=()=>
 {
  bckrnd[0].style.opacity=0.2
- bckrnd[2].style.background=
-  'radial-gradient(#78a,#ee0)'
- bckrnd[2].style.transform='scale(7)'  
+ bckrnd[1].style.transform='scale(5)'  
  crstmtr[0].style.transform='scale(1)'
  crstmtr[6].style.background=
   'radial-gradient(#040,#090)'
