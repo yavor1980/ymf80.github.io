@@ -39,7 +39,7 @@
  height:33%;
  border-radius:55%;
 }
-.smint
+.smint,.smintt
 { 
  position:absolute; 
  transition:1s;
@@ -79,7 +79,11 @@
   <div class=smint></div>
  </div>
  <div class=snwmn>
-  <div class=smint></div>
+  <div class=smint>
+   <div class=smintt>
+    <div class=smintt></div>
+   </div>
+  </div>
   <div class=smint></div>
   <div class=smint>Merry christmas!</div>
  </div>
@@ -94,6 +98,7 @@ crstint=document.getElementsByClassName('crstint')
 crstintt=document.getElementsByClassName('crstintt')
 snwmn=document.getElementsByClassName('snwmn') 
 smint=document.getElementsByClassName('smint')
+smintt=document.getElementsByClassName('smintt')
 
 function finit(nm,i,l,t,w,h,bkgr)
 {
@@ -234,7 +239,7 @@ crstintt[1].style.background=
 crstintt[1].style.borderRadius=55+'%' 
 crstintt[1].style.borderTopLeftRadius=29+'%'
 crstintt[1].style.borderTopRightRadius=29+'%'
- 
+
 snwmn[0].style.left=66+'%'
 snwmn[0].style.top=33+'%'
 snwmn[0].style.width=22+'%'
@@ -256,6 +261,7 @@ snwmn[3].style.top=69+'%'
 snwmn[3].style.background=
  'radial-gradient(#888,#bbb)'
 snwmn[3].style.transform='scale(2.2,1.4)' 
+
 smint[0].style.left=27+'%'
 smint[0].style.top=29+'%'
 smint[0].style.width=9+'%'
@@ -293,6 +299,19 @@ smint[5].style.left=8+'%'
 smint[5].style.top=-45+'%'
 smint[5].style.transform='scale(0)'
 smint[5].style.zIndex=3
+
+smintt[0].style.left=88+'%'
+smintt[0].style.top=-858+'%'
+smintt[0].style.width=9+'%'
+smintt[0].style.height=2000+'%'
+smintt[0].style.background='#840'
+smintt[0].style.borderRadius=15+'%'
+smintt[1].style.left=8+'%'
+smintt[1].style.top=58+'%'
+smintt[1].style.width=966+'%'
+smintt[1].style.height=55+'%'
+smintt[1].style.background='#555'
+smintt[1].style.borderRadius=15+'%'
 
 Isnwmn=0
 snwmn[0].onmouseover=()=>
@@ -337,6 +356,12 @@ snwmn[0].onmouseout=()=>
 
 fcrtr=()=>
 {
+ bckrnd[2].style.transform=
+  'scale('+Math.random()+') translate('+
+  Math.random()*677+'%,69%)' 
+ bckrnd[3].style.transform=
+  'scale('+Math.random()+') translate('+
+  Math.random()*677+'%,69%)'
  crstint[2].style.background=
   'radial-gradient('+Math.round(Math.random()*44)+
   'px,#ff0,#f00)'
@@ -345,10 +370,6 @@ fcrtr=()=>
   'px,#ff0,#f0f)' 
  crstint[3].style.border=Math.round(8+Math.random()*4)+
   'px ridge #ff0' 
- bckrnd[2].style.transform=
-  'scale('+Math.random()+')' 
- bckrnd[3].style.transform=
-  'scale('+Math.random()+')'
 }
 crstmtr[0].onmouseover=()=>
 {
