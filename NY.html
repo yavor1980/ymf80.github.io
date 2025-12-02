@@ -306,12 +306,14 @@ smintt[0].style.width=9+'%'
 smintt[0].style.height=2000+'%'
 smintt[0].style.background='#840'
 smintt[0].style.borderRadius=15+'%'
-smintt[1].style.left=8+'%'
+smintt[1].style.left=-387+'%'
 smintt[1].style.top=58+'%'
 smintt[1].style.width=966+'%'
 smintt[1].style.height=55+'%'
 smintt[1].style.background='#555'
-smintt[1].style.borderRadius=15+'%'
+smintt[1].style.borderRadius=55+'%'
+smintt[1].style.borderBottomLeftRadius=25+'%'
+smintt[1].style.borderBottomRightRadius=35+'%'
 
 Isnwmn=0
 snwmn[0].onmouseover=()=>
@@ -325,6 +327,7 @@ snwmn[0].onmouseover=()=>
    'scale(1.5) translate(0%,-116%) rotate(222deg)'
  smint[4].style.transform=
    'scale(1.5) translate(0%,116%) rotate(22deg)'
+ smintt[0].style.transform='scale(1,0.5)'  
  Isnwmn=setInterval(()=>
  {
   smint[3].style.transform=
@@ -351,6 +354,7 @@ snwmn[0].onmouseout=()=>
  smint[4].style.transform='rotate(8deg)'
  smint[5].style.color='#000'
  smint[5].style.transform='scale(0)'
+ smintt[0].style.transform='scale(1)'
   clearInterval(Isnwmn)
 }
 
