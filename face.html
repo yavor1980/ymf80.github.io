@@ -11,7 +11,7 @@
  background:radial-gradient(222px,#bbb,#666);
 }
 
-.fc,.gl,.ns,.mth,.ears,.bgrnd,.elbw
+.fc,.gl,.ns,.mth,.ears,.bgrnd,.elbw,.blt
 {
  position:absolute;   
  transition:1s;
@@ -33,7 +33,11 @@
 
 </style>
 <div class=bgrnd>
- <div class=bgrnd></div>
+ <div class=bgrnd>
+  <div class=blt>
+   <div class=blt></div>
+  </div>
+ </div>
  <div class=bgrnd>
   <div class=elbw></div>
  </div>
@@ -81,6 +85,7 @@
 <script>
 bgrnd=document.getElementsByClassName('bgrnd')
 elbw=document.getElementsByClassName('elbw')
+blt=document.getElementsByClassName('blt')
 fc=document.getElementsByClassName('fc')
 gl=document.getElementsByClassName('gl')
 ns=document.getElementsByClassName('ns')
@@ -103,6 +108,18 @@ bgrnd[1].style.background=
 bgrnd[1].style.borderBottomLeftRadius='25%'
 bgrnd[1].style.borderBottomRightRadius='25%'
 bgrnd[1].style.zIndex=-1 
+blt[0].style.left=10+'%'
+blt[0].style.bottom=-19+'%'  
+blt[0].style.width=80+'%'
+blt[0].style.height=23+'%'
+blt[0].style.background='#008'
+blt[0].style.borderRadius=19+'%'
+blt[1].style.left=40+'%'
+blt[1].style.bottom=-11+'%'  
+blt[1].style.width=24+'%'
+blt[1].style.height=144+'%'
+blt[1].style.background='#f00'
+
 bgrnd[2].style.left=-16+'%'
 bgrnd[2].style.top=7+'%'  
 bgrnd[2].style.width=33+'%'
@@ -117,25 +134,24 @@ bgrnd[3].style.width=33+'%'
 bgrnd[3].style.height=44+'%'
 bgrnd[3].style.background=
  'radial-gradient(#eee,#a5a)'
-bgrnd[3].style.borderBottomLeftRadius='25%'
-bgrnd[3].style.borderBottomRightRadius='25%'
- 
+bgrnd[3].style.borderBottomLeftRadius=25+'%'
+bgrnd[3].style.borderBottomRightRadius=25+'%'
 elbw[0].style.left=-6+'%'
 elbw[0].style.top=62+'%'  
 elbw[0].style.width=99+'%'
 elbw[0].style.height=93+'%' 
 elbw[0].style.background=
  'radial-gradient(#eee,#a5a)'
-elbw[0].style.borderTopLeftRadius='25%'
-elbw[0].style.borderTopRightRadius='25%' 
+elbw[0].style.borderTopLeftRadius=25+'%'
+elbw[0].style.borderTopRightRadius=25+'%'
 elbw[1].style.left=9+'%'
 elbw[1].style.top=62+'%'  
 elbw[1].style.width=99+'%'
 elbw[1].style.height=93+'%' 
 elbw[1].style.background=
  'radial-gradient(#eee,#a5a)' 
-elbw[1].style.borderTopLeftRadius='25%' 
-elbw[1].style.borderTopRightRadius='25%'
+elbw[1].style.borderTopLeftRadius=25+'%'
+elbw[1].style.borderTopRightRadius=25+'%'
 elbw[2].style.left=9+'%'
 elbw[2].style.top=62+'%'  
 elbw[2].style.width=77+'%'
@@ -150,6 +166,7 @@ elbw[3].style.height=44+'%'
 elbw[3].style.background=
  'radial-gradient(#eee,#a5a)'
 elbw[3].style.opacity=0.2 
+
 fc[0].style.left=19+'%'
 fc[0].style.top=22+'%'  
 fc[0].style.width=18+'%'
