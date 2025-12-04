@@ -11,7 +11,7 @@
  background:radial-gradient(222px,#bbb,#666);
 }
 
-.fc,.gl,.ns,.mth,.ears,.bgrnd,.elbw,.blt
+.fc,.gl,.ns,.mth,.ears,.bgrnd,.elbw,.blt,.trsrs
 {
  position:absolute;   
  transition:1s;
@@ -36,6 +36,9 @@
  <div class=bgrnd>
   <div class=blt>
    <div class=blt></div>
+  </div>
+  <div class=trsrs>
+   <div class=trsrs></div>
   </div>
  </div>
  <div class=bgrnd>
@@ -86,6 +89,7 @@
 bgrnd=document.getElementsByClassName('bgrnd')
 elbw=document.getElementsByClassName('elbw')
 blt=document.getElementsByClassName('blt')
+trsrs=document.getElementsByClassName('trsrs')
 fc=document.getElementsByClassName('fc')
 gl=document.getElementsByClassName('gl')
 ns=document.getElementsByClassName('ns')
@@ -119,7 +123,20 @@ blt[1].style.bottom=-11+'%'
 blt[1].style.width=24+'%'
 blt[1].style.height=144+'%'
 blt[1].style.background='#f00'
-
+trsrs[0].style.zIndex=-1
+trsrs[0].style.left=17+'%'
+trsrs[0].style.bottom=-70+'%'  
+trsrs[0].style.width=66+'%'
+trsrs[0].style.height=55+'%'
+trsrs[0].style.background='#004'
+trsrs[0].style.borderRadius=9+'%'
+trsrs[0].style.opacity=0.4
+trsrs[1].style.left=47+'%'
+trsrs[1].style.bottom=0+'%'  
+trsrs[1].style.width=6+'%'
+trsrs[1].style.height=99+'%'
+trsrs[1].style.background='#664'
+trsrs[1].style.borderRadius=9+'%'
 bgrnd[2].style.left=-16+'%'
 bgrnd[2].style.top=7+'%'  
 bgrnd[2].style.width=33+'%'
@@ -338,11 +355,15 @@ fc[0].onmouseover=()=>
 { 
   clearInterval(Icl)
  mth[2].style.transform=
-   'scale(1.0,2.3) translate(11%,-33%) rotate(-9deg)'  
+   'scale(1.0,2.3) translate(11%,-33%) rotate(-9deg)' 
+ smk[0].style.transform=
+  'scale(1.2) translate(-99%,-3%)'
  smk[2].style.opacity=0.4
  smk[3].style.top=0+'%'
  mth[3].style.transform=
-   'scale(2.0,1.0) translate(11%,-6%) rotate(-9deg)'  
+   'scale(2.0,1.0) translate(11%,-6%) rotate(-9deg)' 
+ trsrs[1].style.borderRadius=55+'%'  
+ trsrs[1].style.transform='scale(4,1)'  
  Ifc=setInterval(()=>{ 
   smk[2].style.background=
    'radial-gradient(#ff0,#f00)'
@@ -363,7 +384,7 @@ fc[0].onmouseover=()=>
  ears[0].style.transform='scale(1.3,1.4)'
  ears[1].style.transform='scale(1.3,1.4)'
  bgrnd[2].style.transform='rotate(40deg)'
- bgrnd[3].style.transform='scale(3,1) rotate(-56deg)'
+ bgrnd[3].style.transform='scale(3,1) rotate(-86deg)'
  elbw[0].style.transform=
   'scale(1,1.7) translate(0%,33%) ' 
  elbw[1].style.transform=
@@ -381,9 +402,12 @@ fc[0].onmouseout=()=>
 { 
   cl()
   Icl=setInterval(()=>cl(), 1111)
+ smk[0].style.transform='scale(1)' 
  smk[2].style.opacity=0
  smk[2].style.transform='scale(0)'  
  smk[3].style.top=-8+'%'
+ trsrs[1].style.borderRadius=0+'%'
+ trsrs[1].style.transform='scale(1)' 
  fc[0].style.transform='scale(1)'
  fc[0].style.background=
   'radial-gradient(#eee,#a5a)'
