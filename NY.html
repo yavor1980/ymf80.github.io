@@ -326,8 +326,9 @@ snwmn[0].onmouseover=()=>
  smint[3].style.transform=
    'scale(1.5) translate(0%,-116%) rotate(222deg)'
  smint[4].style.transform=
-   'scale(1.5) translate(0%,116%) rotate(22deg)'
- smintt[0].style.transform='scale(1,0.5)'  
+   'scale(1.5) translate(0%,16%) rotate(22deg)'
+ smintt[0].style.transform=
+  'scale(1,0.5) translate(0%,-10%) rotate(-44deg)'  
  Isnwmn=setInterval(()=>
  {
   smint[3].style.transform=
@@ -361,11 +362,11 @@ snwmn[0].onmouseout=()=>
 fcrtr=()=>
 {
  bckrnd[2].style.transform=
-  'scale('+Math.random()+') translate('+
-  Math.random()*677+'%,69%)' 
+  'scale('+(0.3+Math.random())+') translate('+
+  -Math.random()*677+'%,69%)' 
  bckrnd[3].style.transform=
-  'scale('+Math.random()+') translate('+
-  Math.random()*677+'%,69%)'
+  'scale('+(0.2+Math.random())+') translate('+
+  -Math.random()*677+'%,69%)'
  crstint[2].style.background=
   'radial-gradient('+Math.round(Math.random()*44)+
   'px,#ff0,#f00)'
@@ -404,7 +405,9 @@ crstmtr[0].onmouseover=()=>
 crstmtr[0].onmouseout=()=>
 {
  bckrnd[0].style.opacity=0.2
- bckrnd[1].style.transform='scale(5)'  
+ bckrnd[1].style.transform='scale(5)' 
+ bckrnd[2].style.transform='scale(0.2)' 
+ bckrnd[3].style.transform='scale(0.2)' 
  crstmtr[0].style.transform='scale(1)'
  crstmtr[6].style.background=
   'radial-gradient(#040,#090)'
