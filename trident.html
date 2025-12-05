@@ -22,8 +22,6 @@
 {
  position:absolute;
  transition:1s;
- left:84%;
- top:44%;
  color:#b00;
  opacity:0.1;
 }
@@ -97,6 +95,12 @@ trdnt[4].style.borderTopRightRadius=55+'%'
 trdnt[4].style.borderBottomLeftRadius=35+'%'
 trdnt[4].style.borderBottomRightRadius=35+'%'
 
+for(i=0;i<7;i++)
+{
+ ltra[i].style.left=(84+i*5)+'%'
+ ltra[i].style.top=(34+i*15)+'%'
+}
+ ltra[1].style.left=99+'%'
 ttl[0].style.left=29+'%'
 ttl[0].style.top=5+'%'
 ttl[0].style.color='#444'
@@ -132,27 +136,10 @@ function fcl()
 
 function ftrdnt()
 {
- ltra[0].style.transform=
-  'scale(9) translate(122%,-98%) skew('
-  +(22*Math.random()-11)+'deg)'
- ltra[1].style.transform=
-  'scale(9) translate(233%,-44%) skew('
-  +(44*Math.random()-22)+'deg)'  
- ltra[2].style.transform=
-  'scale(9) translate(166%,-1%) skew('
-  +(33*Math.random()-18)+'deg)'
- ltra[3].style.transform=
-  'scale(9) translate(188%,44%) skew('
-  +(22*Math.random()-11)+'deg)'
- ltra[4].style.transform=
-  'scale(9) translate(208%,88%) skew('
-  +(55*Math.random()-27)+'deg)'
- ltra[5].style.transform=
-  'scale(9) translate(228%,133%) skew('
-  +(33*Math.random()-19)+'deg)'
- ltra[6].style.transform=
-  'scale(9) translate(248%,178%) skew('
-  +(44*Math.random()-21)+'deg)'
+ for(i=0;i<7;i++)
+  ltra[i].style.transform=
+   'scale('+(7+3*Math.random())+') translate(122%,-98%) skew('
+   +(22*Math.random()-11)+'deg)'
 }
  ftrdnt()
  
@@ -162,7 +149,8 @@ function fttl()
   'scale('+(7+3*Math.random())+',7) skew('+
   (27*Math.random())+'deg) translate(7%,48%)'
  ttl[1].style.transform=
-  'scale(7) skew('+(27*Math.random())+'deg)'
+  'scale(7) translate(55%,4%) skew('+
+  (27*Math.random())+'deg)'
  ttl[2].style.background=
   'radial-gradient(#f0f,#ff0)'  
  ttl[2].style.opacity=0.4+Math.random()/7
@@ -180,8 +168,10 @@ trdnt[0].onmouseover=()=>
  trdnt[2].style.background='#ff0'
  trdnt[3].style.background='#ff0'
  trdnt[4].style.background='#ff0'
+ ttl[0].style.background='#f00'
  ttl[0].style.color='#f0f'
   ttl[0].innerHTML= 'Added'
+ ttl[1].style.background='#f0f'
  ttl[1].style.color='#b00'
    ttl[1].innerHTML= 'Value'
    fttl()
@@ -200,9 +190,11 @@ trdnt[0].onmouseout=()=>
  trdnt[2].style.background='#fff'
  trdnt[3].style.background='#fff'
  trdnt[4].style.background='#fff'
+ ttl[0].style.background='none'
  ttl[0].style.color='#444'
  ttl[0].style.transform='scale(7) skew(12deg)'
   ttl[0].innerHTML= 'Resource'
+ ttl[1].style.background='none' 
  ttl[1].style.color='#440' 
  ttl[1].style.transform='scale(7) skew(17deg)'
   ttl[1].innerHTML= 'Curse'
