@@ -64,6 +64,7 @@ body
   </div>
  </div>
  <div id=idvw></div>
+ 
  <div class=cr>
   <div class=cr></div>
   <div class=cr> 
@@ -221,7 +222,9 @@ cr[0].onmouseover=()=>
   rd[2].style.transform='scale('+
    (1.4+Math.random())+',1) translate('+
    99*Math.random()+'%,'+99*Math.random()+'%)'
-   
+  idvw.style.transform='scale('+
+   (2+Math.random())+',1) translate('+
+   33*Math.random()+'%,'+33*Math.random()+'%)' 
   fre[1].style.opacity=0.5
   fre[1].style.transform='scale('+(1+Math.random())+')'
   if(bdly)
