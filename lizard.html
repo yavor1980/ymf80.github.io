@@ -255,6 +255,8 @@ inn(ttagrss,2, 11,19)
  bd=0, bstp=0
 function stp()
 {  
+ grnd[5].style.transform=
+  'scale(1,'+(1+Math.random())+') translate(-9%,-148%)' 
  if(bstp)
  {
   hd[1].style.transform='scale(1.3)'
@@ -292,8 +294,7 @@ function clk()
  grnd[4].style.transform=
   'scale(3,7) translate(0,-14%)'
  grnd[5].style.opacity=0.6
- grnd[5].style.transform=
-  'scale(1.2,1.2) translate(-9%,-148%)' 
+
  mth[0].style.height=22+'%'
  gl[0].style.transform='scale(2)'
  gl[1].style.transform='scale(2)'
