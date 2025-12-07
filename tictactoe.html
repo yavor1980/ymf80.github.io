@@ -15,36 +15,39 @@ body
  position:absolute;
  transition:2s;
  left:17%; 
- top:22%;	 
+ top:11%;	 
  width:66%;	  
- height:55%;
+ height:77%;
  background:#770;
- border:5px ridge #f0f;
- border-radius:50%;
+ border:5px ridge #f00;
+ border-radius:22%;
  text-align:center;
 }
-	 
+	
 .square
 {
- ///position:absolute;
- width:44px;	  
- height:44px;
+ //position:absolute;
  transition:777ms;
+ width:88px;	  
+ height:88px;
+ background:#999;
+ font-size:2em;
  cursor:pointer;
 }
 .square:hover
+
 {
- transform:scale(1.3);
+ transform:scale(1.2);
 }
 	 
 .ttl
 {
- text-align:center;
+ transition:1s;
  color:#609;
  font-size:3em;
- cursor:pointer;
- transition:1s;
+ text-align:center;
  transform:scale(1.1);
+ cursor:pointer;
 }
 .ttl:hover
 {
@@ -78,7 +81,7 @@ class Square extends React.Component
   super(props);    
  }
  render() 
- { //this.props.val*=5
+ { 
   return ( 
     <button
      className="square"
@@ -92,7 +95,8 @@ class Square extends React.Component
 
 class Board extends React.Component 
 {
- constructor(props) {
+ constructor(props) 
+ {
    super(props);
    this.state = {
      s:Array(9).fill(null),
@@ -159,7 +163,8 @@ class Board extends React.Component
    return(
     <div> 
 	 <div  Style='position:relative;top:33px;'>  	   
-      <p class='ttl'> Click any button </p>   
+      <p class='ttl'> Click any cell </p>  
+	  <p>{this.state.win}</p>
      <div>
       {this.renderSquare(0)}
       {this.renderSquare(1)}
@@ -175,7 +180,7 @@ class Board extends React.Component
       {this.renderSquare(7)}
       {this.renderSquare(8)}
      </div>
-	  <p>{this.state.win}</p>
+	  
     </div>
    </div > 
   )
