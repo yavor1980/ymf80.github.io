@@ -9,9 +9,18 @@ body
 {
  background:#070;
 }
-input
-{
- background:#070;
+#idbtn
+{	 
+ position:absolute;
+ cursor:pointer;
+ left:40%; 
+ bottom:11%;	 
+ width:16%;	  
+ height:9%;
+ background:#707;
+ color:#bbb;
+ font-size:2em;
+ border-radius:23%;
 }
 	
 #idcont
@@ -74,8 +83,9 @@ input
 <div class='cell'></div>
 <div class='cell'></div>
 
-  
   <div class='ttl'></div>
+
+<button id='idbtn'>Reset</button>
   
 </div>  
  
@@ -88,9 +98,14 @@ for(k=0;k<9;k++)
  cell[k].style.left=(33+11*i)+'%'
  cell[k].style.top=(33+12*j)+'%'
   i++; 
-  if(i%3==0){ j++; i=0;}
+  if(i%3==0){j++; i=0;}
 }
- 
+
+idbtn.onclick=()=>
+{
+ for(k=0;k<9;k++)
+  cell[k].innerHTML=''
+} 
 idcont.onmouseover=()=>
 {
  idcont.style.transform='scale(1.2)'
@@ -99,13 +114,25 @@ idcont.onmouseout=()=>
 {
  idcont.style.transform='scale(1)'
 }
-/*
-function  handleClick(i) 
+
+
+function  cl(i)
+{
+ cell[i].onclick=()=>
  {
-  const s = this.state.s;  
+  cell[i].innerHTML='X'
+ }
+ 
+}
+ cl(0), cl(1), cl(2)
+ cl(3), cl(4), cl(5)
+ cl(6), cl(7), cl(8)
+
+
+/*   
   if(!s[i]) s[i]='X'; 
   while(s[this.state.st])
-   =Math.round(Math.random()*9); 
+   s=Math.round(Math.random()*9); 
    s[this.state.st]='O';   
   if(((s[0]==s[4])&&(s[8]==s[4]))&&(s[0]=='X'))
    this.setState({win:'winner X'});
