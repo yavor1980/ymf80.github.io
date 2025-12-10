@@ -80,6 +80,7 @@ body
 <div class='cell'></div>
 
   <div class='ttl'>Winner</div>
+  <div class='ttl'>X</div>
 
 <button id='idbtn'>Reset</button>
   
@@ -104,10 +105,14 @@ ttl[0].style.color='#b0b'
 ttl[1].style.left=33+'%'
 ttl[1].style.color='#b00'
 ttl[1].style.transform='scale(0)'
+ttl[2].style.left=33+'%'
+ttl[2].style.color='#500'
+ttl[2].style.transform='scale(0)'
 
 idbtn.onclick=()=>
 {
  ttl[1].style.transform='scale(0)'
+ ttl[2].style.transform='scale(0)' 
  for(k=0;k<9;k++)
   c[k].innerHTML=''
 } 
@@ -138,8 +143,12 @@ function  comb()
   (c[4].innerHTML=='X')&&(c[8].innerHTML=='X')||
   (c[2].innerHTML=='X')&&
   (c[4].innerHTML=='X')&&(c[6].innerHTML=='X') )
+  {
    ttl[1].style.transform=
     'scale(1.7) translate(8%,38%)'
+   ttl[2].style.transform=
+    'scale(1.7) translate(299%,148%)'
+  }
 }
 function  cl(i)
 {
