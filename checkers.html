@@ -23,7 +23,6 @@
  width:400px;
  height:400px; 
  border:2px ridge #909;
- transform:skew(33deg); 
 }
 .cll
 {
@@ -94,7 +93,7 @@ for(i=0;i<8;i++)
  }
  dsk[0].style.border='5px ridge #909' 
  dsk[0].style.transform= 
-   'scale(1.6) translate(11%,11%)'
+  'scale(1.6) translate(11%,11%)'
  
 wf=[], bf=[]
 for(i=0;i<12;i++)    
@@ -132,15 +131,15 @@ function arrfgr()
  ina()
  for(i=0;i<12;i++)    
  {
-   wf[i].style.left=aw[i].x*50+'px'
-   wf[i].style.top=aw[i].y*50+'px'
-   wf[i].style.transform='scale(1)' 
+  wf[i].style.left=aw[i].x*50+'px'
+  wf[i].style.top=aw[i].y*50+'px'
+  wf[i].style.transform='scale(1)' 
  }
  for(i=0;i<12;i++)    
  {
-   bf[i].style.left=ab[i].x*50+'px'
-   bf[i].style.top=ab[i].y*50+'px'
-   bf[i].style.transform='scale(1)'
+  bf[i].style.left=ab[i].x*50+'px'
+  bf[i].style.top=ab[i].y*50+'px'
+  bf[i].style.transform='scale(1)'
  }
 }
   arrfgr()
@@ -192,16 +191,27 @@ btn[2].onclick=()=>
   bbf=1
 }	
 
-btn[3].onclick=()=>
+btn[3].onmouseover=()=>
 { 
- vlnt=Math.round(Math.random()*12)
- wf[vlnt].style.background=
-  'radial-gradient(14px,#000,#f00)' 
- wf[vlnt].style.transform='scale(1.2)' 
+ for(i=0;i<12;i++)
+ { 
+  wf[i].style.background=
+   'radial-gradient(14px,#000,#f00)' 
+  wf[i].style.transform='scale(1.2)' 
+  bf[i].style.background=
+   'radial-gradient(14px,#000,#0f0)' 
+  bf[i].style.transform='scale(1.2)'  
+ } 
  setTimeout(()=>{
-  wf[vlnt].style.background=
-   'radial-gradient(14px,#999,#ccc)'
-  wf[vlnt].style.transform='scale(1)' 
+  for(i=0;i<12;i++)
+  {
+   wf[i].style.background=
+    'radial-gradient(14px,#999,#ccc)'
+   wf[i].style.transform='scale(1)' 
+   bf[i].style.background=
+    'radial-gradient(14px,#555,#222)' 
+   bf[i].style.transform='scale(1)'  
+  } 
  }, 999)
 }	
 	
