@@ -362,19 +362,20 @@ snwmn[0].onmouseout=()=>
 fcrtr=()=>
 {
  bckrnd[2].style.transform=
-  'scale('+(0.3+Math.random())+') translate('+
-  -Math.random()*677+'%,69%)' 
+  'scale('+(0.3+Math.random())+') translate(0,'+
+  Math.random()*677+'%)' 
  bckrnd[3].style.transform=
-  'scale('+(0.2+Math.random())+') translate('+
-  -Math.random()*677+'%,69%)'
+  'scale('+(0.2+Math.random())+') translate(0,'+
+  Math.random()*677+'%)'
  crstint[2].style.background=
   'radial-gradient('+Math.round(Math.random()*44)+
   'px,#ff0,#f00)'
+ crstint[3].style.border=Math.round(8+Math.random()*4)+
+  'px ridge #ff0'   
  crstintt[1].style.background=
   'radial-gradient('+Math.round(Math.random()*44)+
   'px,#ff0,#f0f)' 
- crstint[3].style.border=Math.round(8+Math.random()*4)+
-  'px ridge #ff0' 
+
 }
 crstmtr[0].onmouseover=()=>
 {
