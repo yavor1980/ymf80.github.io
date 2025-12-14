@@ -12,14 +12,14 @@
 button
 {
  position:absolute;
+ transition:1s;
  right:5%;
  top:5%;
  background:#b00;
  color:#ff0;
- transform:scale(1.6);
  font-size:2.3em;
+ transform:scale(1.6);
  border-radius:33%;
- transition:1s;
  cursor:pointer;
 }
 button:hover
@@ -235,7 +235,7 @@ btn[0].onmouseover=()=>
 {
   btn[0].innerHTML='npn'
  pnp[5].style.transform=
-  'rotate(-84deg)translate(-18%,-228%)'
+  'scale(1.2) rotate(-84deg) translate(-18%,-200%)'
 }
 btn[0].onmouseout=()=>
 {
@@ -252,6 +252,8 @@ pnp[0].onmouseover=()=>
   pnp[0].style.transform='scale('+
    (1+Math.random()/9)+')'
   pnp[1].style.background='#'+clr+'00'
+  pnp[5].style.transform='scale('+
+   (1+Math.random())+') rotate(88deg)'
  }, 222)
  tpnp[0].style.color='#f00'
  tpnp[0].style.opacity=1
@@ -283,6 +285,7 @@ pnp[0].onmouseout=()=>
 {
   clearInterval(Ipnp)
  pnp[1].style.background='#707'
+ pnp[5].style.transform='rotate(88deg)'
  tpnp[0].style.color='#000'
  tpnp[1].style.transform='scale(0)'
  tpnp[1].style.color='#f00' 
