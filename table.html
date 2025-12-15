@@ -17,6 +17,7 @@
  height:5%;
  border-radius:22%;
  font-size:1.6em;
+ transform:scale(1.5);
 }
 .tbtn
 {
@@ -55,8 +56,7 @@
 {
  position:absolute;   
  transition:1s;
- border-radius:50%;
-  
+ border-radius:50%; 
 }
 .lg
 {
@@ -86,9 +86,9 @@ td
 </head>
 
 <body id=idbd>
-<button class=btn>bclr</button>
- <div class=tbtn>change td bckgrnd...</div>
 <button class=btn>clr</button>
+ <div class=tbtn>change td bckgrnd...</div>
+<button class=btn>clear</button>
  <div class=tbtn>clear td bckgrnd...</div>
 
 <div id=idfc>
@@ -166,19 +166,19 @@ dgrm=document.getElementsByClassName('dgrm')
 tbl=document.getElementsByClassName('tbl')
 td=document.getElementsByTagName('td')
   
-btn[0].style.left=3+'%'
-btn[0].style.top=3+'%'  
-btn[0].style.color='#f00'
-	 
-btn[1].style.left=14+'%'
-btn[1].style.top=3+'%'  
+btn[0].style.right=7+'%'
+btn[0].style.top=7+'%'  
+btn[0].style.background='#f00'
+btn[0].style.color='#ff0'
+btn[1].style.right=7+'%'
+btn[1].style.top=19+'%' 
+btn[1].style.background='#ddd' 
 btn[1].style.color='#00f'
     
 tbtn[0].style.left=44+'%'
 tbtn[0].style.top=3+'%' 
 tbtn[0].style.color='#f00'
 tbtn[0].style.transform='scale(0)'
-	
 tbtn[1].style.left=44+'%'
 tbtn[1].style.top=3+'%'  
 tbtn[1].style.color='#00f'
@@ -191,19 +191,16 @@ fc[0].style.height=44+'%'
 fc[0].style.background=
  'radial-gradient(#ff0,#000)'         
 fc[0].style.cursor='pointer'
-	
 fc[1].style.left=22+'%'
 fc[1].style.top=22+'%'  
 fc[1].style.width=22+'%'
 fc[1].style.height=22+'%'  
 fc[1].style.background='#fff'
-
 fc[2].style.left=66+'%'
 fc[2].style.top=22+'%'  
 fc[2].style.width=22+'%'
 fc[2].style.height=22+'%'  
 fc[2].style.background='#fff'
-
 fc[3].style.left=44+'%'
 fc[3].style.top=44+'%'  
 fc[3].style.width=22+'%'
@@ -226,25 +223,21 @@ bd[0].style.background=
 bd[0].style.zIndex=-1
 bd[0].style.borderTopLeftRadius=5+'%'
 bd[0].style.borderTopRightRadius=5+'%'
-	 
 bd[1].style.left=-11+'%'	 
 bd[1].style.top=4+'%'
 bd[1].style.width=22+'%'
 bd[1].style.height=38+'%'
 bd[1].style.background='#550'
-
 bd[2].style.left=11+'%'
 bd[2].style.top=66+'%'
 bd[2].style.width=99+'%'
 bd[2].style.height=111+'%'
-bd[2].style.background='#770'
-	 	
+bd[2].style.background='#770'	 	
 bd[3].style.left=88+'%'		
 bd[3].style.top=4+'%'
 bd[3].style.width=22+'%'
 bd[3].style.height=38+'%'
 bd[3].style.background='#550'
-	 
 bd[4].style.left=11+'%'	 
 bd[4].style.top=66+'%'
 bd[4].style.width=99+'%'
@@ -255,19 +248,16 @@ lg[0].style.left=11+'%'
 lg[0].style.top=77+'%'
 lg[0].style.background='#990'	 
 lg[0].style.zIndex=-1
-
 lg[1].style.left=0+'%'
 lg[1].style.top=77+'%'
 lg[1].style.width=99+'%'
 lg[1].style.height=155+'%'
 lg[1].style.background='#bb0'
 lg[1].style.zIndex=-1
-	 
 lg[2].style.left=72+'%' 
 lg[2].style.top=77+'%'
 lg[2].style.background='#990' 
 lg[2].style.zIndex=-1
-
 lg[3].style.left=0+'%'
 lg[3].style.top=77+'%'
 lg[3].style.width=99+'%'
@@ -280,7 +270,6 @@ dgrm[0].style.width=33+'%'
 dgrm[0].style.height=44+'%' 
 dgrm[0].style.background='#0bb'
 dgrm[0].style.borderRadius=11+'%'
-
 dgrm[1].style.left=4+'%'
 dgrm[1].style.top=4+'%' 
 dgrm[1].style.width=16+'%' 
@@ -288,7 +277,6 @@ dgrm[1].style.height=23+'%'
 dgrm[1].style.background='#b00'
 dgrm[1].style.borderRadius=55+'%'
 dgrm[1].style.opacity=0	
-
 dgrm[2].style.left=36+'%'
 dgrm[2].style.top=4+'%' 
 dgrm[2].style.width=16+'%' 
@@ -296,7 +284,6 @@ dgrm[2].style.height=23+'%'
 dgrm[2].style.background='#b00'
 dgrm[2].style.borderRadius=55+'%'
 dgrm[2].style.opacity=0
- 
 dgrm[3].style.left=67+'%'
 dgrm[3].style.top=4+'%' 
 dgrm[3].style.width=16+'%' 
@@ -304,7 +291,6 @@ dgrm[3].style.height=23+'%'
 dgrm[3].style.background='#b00'
 dgrm[3].style.borderRadius=55+'%' 
 dgrm[3].style.opacity=0
-	 
 dgrm[4].style.left=4+'%'
 dgrm[4].style.top=38+'%' 
 dgrm[4].style.width=16+'%' 
@@ -312,7 +298,6 @@ dgrm[4].style.height=23+'%'
 dgrm[4].style.background='#b00'
 dgrm[4].style.borderRadius=55+'%'
 dgrm[4].style.opacity=0	
-
 dgrm[5].style.left=36+'%'
 dgrm[5].style.top=38+'%' 
 dgrm[5].style.width=16+'%' 
@@ -320,7 +305,6 @@ dgrm[5].style.height=23+'%'
 dgrm[5].style.background='#b00'
 dgrm[5].style.borderRadius=55+'%'
 dgrm[5].style.opacity=0
- 
 dgrm[6].style.left=67+'%'
 dgrm[6].style.top=38+'%' 
 dgrm[6].style.width=16+'%' 
@@ -328,7 +312,6 @@ dgrm[6].style.height=23+'%'
 dgrm[6].style.background='#b00'
 dgrm[6].style.borderRadius=55+'%' 
 dgrm[6].style.opacity=0	 
-
 dgrm[7].style.left=4+'%'
 dgrm[7].style.bottom=4+'%' 
 dgrm[7].style.width=16+'%' 
@@ -336,7 +319,6 @@ dgrm[7].style.height=23+'%'
 dgrm[7].style.background='#b00'
 dgrm[7].style.borderRadius=55+'%'
 dgrm[7].style.opacity=0	
-
 dgrm[8].style.left=36+'%'
 dgrm[8].style.bottom=4+'%'
 dgrm[8].style.width=16+'%' 
@@ -344,7 +326,6 @@ dgrm[8].style.height=23+'%'
 dgrm[8].style.background='#b00'
 dgrm[8].style.borderRadius=55+'%'
 dgrm[8].style.opacity=0
- 
 dgrm[9].style.left=67+'%'
 dgrm[9].style.bottom=4+'%' 
 dgrm[9].style.width=16+'%' 
@@ -358,17 +339,14 @@ tbl[0].style.top=22+'%'
 tbl[0].style.border='5px ridge #00f'
 tbl[0].style.cursor='pointer'
 tbl[0].style.transform='scale(2)'
-	
 tbl[1].style.left=7+'%'
 tbl[1].style.top=66+'%' 
 tbl[1].style.color='#f00'
 tbl[1].style.transform='scale(0)'
-	 
 tbl[2].style.left=7+'%'
 tbl[2].style.top=69+'%' 
 tbl[2].style.color='#f0f'
 tbl[2].style.transform='scale(0)'
-	
 tbl[3].style.left=7+'%'
 tbl[3].style.top=77+'%' 
 tbl[3].style.color='#777'
@@ -403,13 +381,13 @@ function cl()
 	  
 btn[0].onmouseover=()=>
 {
- btn[0].style.transform='scale(1.2)'
+ btn[0].style.transform='scale(1.8)'
  tbtn[0].style.transform=
   'scale(2) translate(22%,99%) skew(22deg)'
 }
 btn[0].onmouseout=()=>
 {
- btn[0].style.transform='scale(1)'
+ btn[0].style.transform='scale(1.5)'
  tbtn[0].style.transform='scale(0)'
 }
 btn[0].onclick=()=>
@@ -423,13 +401,13 @@ for(i=0;i<9;i++)
 
 btn[1].onmouseover=()=>
 {
- btn[1].style.transform='scale(1.2)'
+ btn[1].style.transform='scale(1.8)'
  tbtn[1].style.transform=
   'scale(2) translate(22%,99%) skew(-22deg)'
 }
 btn[1].onmouseout=()=>
 {
- btn[1].style.transform='scale(1)'
+ btn[1].style.transform='scale(1.5)'
  tbtn[1].style.transform='scale(0)'
 }
 btn[1].onclick=()=>
@@ -448,10 +426,10 @@ fc[0].onmouseover=()=>
   'scale(1.5) translate('+x+'%,0)'
  fc[1].style.transform='scale(1.6)'
  fc[2].style.transform='scale(1.6)'
- zr[0].style.transform='scale(1.6)'
- zr[1].style.transform='scale(1.6)'
  zr[0].style.background='#f00'
+ zr[0].style.transform='scale(1.6)'
  zr[1].style.background='#f00'
+ zr[1].style.transform='scale(1.6)'
  bd[1].style.transform=
   'scale(2) translate(0,-22%) rotate(88deg)'
  bd[2].style.transform=
