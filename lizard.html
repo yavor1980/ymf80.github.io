@@ -139,12 +139,12 @@ mth=document.getElementsByClassName('mth')
   
 ttagrss=document.getElementsByClassName('ttagrss')
 
-btn[0].style.left=76+'%'
 btn[0].style.top=4+'%'
 btn[0].style.color='#00b'
 btn[0].style.background='#f00'
 btn[0].style.borderTopLeftRadius=33+'%'
-btn[0].style.borderTopRightRadius=33+'%'
+btn[0].style.borderTopRightRadius
+btn[0].style.left=76+'%'
 btn[0].style.borderBottomLeftRadius=111+'%'
 btn[0].style.borderBottomRightRadius=111+'%'
 
@@ -195,6 +195,7 @@ grnd[5].style.background=
  'radial-gradient(#000,#777)' 
 grnd[5].style.borderRadius=55+'%' 
 grnd[5].style.opacity=0  
+grnd[5].style.zIndex=-1
 	  
 function inn(nm,i, l,t, w,h, bkgrd, btlr,btrr,bblr,bbrr)
 {
@@ -293,8 +294,8 @@ function clk()
  grnd[4].style.borderTopRightRadius=17+'%'
  grnd[4].style.transform=
   'scale(3,7) translate(0,-14%)'
- grnd[5].style.opacity=0.6
-
+ grnd[5].style.opacity=Math.random()
+ grnd[5].style.transform='scale('+(0.2+Math.random())+')'
  mth[0].style.height=22+'%'
  gl[0].style.transform='scale(2)'
  gl[1].style.transform='scale(2)'
