@@ -146,16 +146,17 @@ function ftrdnt()
 function fttl()
 { 
  ttl[0].style.transform=
-  'scale('+(7+3*Math.random())+',9) skew('+
-  (27*Math.random())+'deg) translate(7%,48%)'
+  'scale('+(7+3*Math.random())+',7) skew('+
+  (27*Math.random()-13)+'deg) translate(7%,48%)'
  ttl[1].style.transform=
-  'scale(7) translate(55%,4%) skew('+
-  (27*Math.random())+'deg)'
+  'scale(7,20) translate(55%,34%) skew('+
+  (27*Math.random()-13)+'deg)'
  ttl[2].style.background=
   'radial-gradient(#f0f,#ff0)'  
  ttl[2].style.opacity=0.4+Math.random()/7
  ttl[2].style.transform=
-  'scale('+(1+Math.random()/8)+')'   
+  'scale('+(1+Math.random()/8)+
+  ') translate(5%,0) skew(-17deg)'   
 } 
  
 Itrdnt=0
@@ -175,7 +176,11 @@ trdnt[0].onmouseover=()=>
  ttl[1].style.color='#b00'
    ttl[1].innerHTML= 'Value'
    fttl()
+ ttl[2].style.borderRadius=0+'%'   
  ttl[2].style.border='11px ridge #b00'
+ ttl[2].style.borderTop='11px ridge transparent'
+ ttl[2].style.borderBottom='11px ridge transparent'
+ ttl[2].style.transform=' skew(-17deg)'
  for(i=0;i<7;i++)
   ltra[i].style.opacity=1
   ftrdnt()
@@ -200,6 +205,7 @@ trdnt[0].onmouseout=()=>
   ttl[1].innerHTML= 'Curse'
  ttl[2].style.background='#556' 
  ttl[2].style.opacity=0.6 
+ ttl[2].style.borderRadius=55+'%'
  ttl[2].style.border=''
   clearInterval(Itrdnt)
  for(i=0;i<7;i++)
