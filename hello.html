@@ -22,7 +22,7 @@ input
  transform:scale(1.2);
  cursor:pointer;
 }
-.hllo,.wrld
+.hllo,.wrld,.ttl
 {
  position:absolute;   
  transition:1s;
@@ -47,12 +47,14 @@ input
   <div class=wrld>R</div>
   <div class=wrld>L</div>
   <div class=wrld>D</div>
- </div>  
+ </div> 
+  <div class=ttl>!</div>
  
 <script>
 btn=document.getElementsByClassName('btn')
 hllo=document.getElementsByClassName('hllo')
 wrld=document.getElementsByClassName('wrld')
+ttl=document.getElementsByClassName('ttl')
   
 btn[0].style.left=83+'%'
 btn[0].style.top=5+'%'  
@@ -70,6 +72,7 @@ btn[2].style.color='#d08'
 btn[2].style.borderRadius=15+'%'
 btn[2].style.transform='scale(2)'  
 
+hllo[0].style.zIndex=1
 hllo[0].style.left=31+'%'
 hllo[0].style.top=28+'%' 
 hllo[0].style.width=7+'%' 
@@ -102,30 +105,67 @@ wrld[4].style.color='#b00'
 wrld[5].style.left=75+'%'
 wrld[5].style.color='#a00'
 
-btn[0].onclick=()=>
-{ 
+ttl[0].style.left=73+'%'
+ttl[0].style.top=25+'%' 
+ttl[0].style.opacity=0
+ttl[0].style.transform='scale(19)'
 
+btn[0].onmouseover=()=>
+{ 
+ hllo[0].style.transform='scale(9) skew(-44deg)' 
+ wrld[0].style.transform='scale(9) skew(-44deg)'
 }
-btn[1].onclick=()=>
+btn[0].onmouseout=()=>
 { 
- 
-} 
-btn[2].onclick=()=>
+ hllo[0].style.transform='scale(9)' 
+ wrld[0].style.transform='scale(9)'
+}
+
+btn[1].onmouseover=()=>
 { 
- 
-} 
+ hllo[0].style.transform='scale(9,22)' 
+ wrld[0].style.transform='scale(9,22)'
+}
+btn[1].onmouseout=()=>
+{ 
+ hllo[0].style.transform='scale(9)' 
+ wrld[0].style.transform='scale(9)'
+}
+
+btn[2].onmouseover=()=>
+{ 
+ hllo[0].onmouseover()
+ wrld[0].onmouseover()
+ hllo[0].style.borderRadius=55+'%'
+ wrld[0].style.borderRadius=55+'%'
+}
+btn[2].onmouseout=()=>
+{ 
+ hllo[0].onmouseout()
+ wrld[0].onmouseout()
+ hllo[0].style.borderRadius=0+'%'
+ wrld[0].style.borderRadius=0+'%'
+}
 
 hllo[0].onmouseover=()=>
 { 
  hllo[0].style.background='#00d'
  hllo[0].style.borderRadius=25+'%'
  hllo[0].style.border='3px ridge #bb0'
+  wrld[0].onmouseover()
+ ttl[0].style.color='#505'
+ ttl[0].style.opacity=1
+ ttl[0].style.transform='scale(29) translate(0,33%)'  
 } 
 hllo[0].onmouseout=()=>
 { 
  hllo[0].style.background='none'
  hllo[0].style.borderRadius=0+'%'
  hllo[0].style.border='none'
+  wrld[0].onmouseout()
+ ttl[0].style.color='#000'  
+ ttl[0].style.opacity=0
+ ttl[0].style.transform='scale(19)'   
 } 
 wrld[0].onmouseover=()=>
 { 
