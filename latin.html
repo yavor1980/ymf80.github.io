@@ -28,7 +28,6 @@ button:hover
 {
  position:absolute;
  transition:1s;
- text-align:center;
  cursor:pointer;
  transform:scale(5);
 }
@@ -43,7 +42,6 @@ button:hover
 {
  position:absolute;
  transition:1s;
- color:#f00;
  transform:scale(0);
 }
 .bfrz{color:#e0e;}
@@ -94,6 +92,7 @@ button:hover
 <div class=afrz>Ab absurdo</div>
 <div class=afrz>Ab igne ignem </div>
 <div class=afrz>Altera pars </div>
+<div class=afrz>Amicus Plato, sed magis amica veritas</div>
 <div class=afrz>Ante meridiem </div>
 <div class=afrz>Arbiter gratiae</div>
 <div class=afrz>Aut bene, aut nihil </div>
@@ -122,6 +121,7 @@ button:hover
 <div class=cfrz>Credendo vides </div>
 <div class=cfrz>Cui bono?</div>
 
+<div class=dfrz>Dominus et deus noster</div>
 <div class=dfrz>Dira necessitas</div>
 <div class=dfrz>Divide et impera </div>
 <div class=dfrz>Domus propria domus optima</div>
@@ -265,7 +265,6 @@ button:hover
 
 <script>
 btn=document.getElementsByTagName('button')
-
 dv=document.getElementsByTagName('div')
 
 ltra=document.getElementsByClassName('ltra')
@@ -355,7 +354,7 @@ f_sc=()=>
    (4+2*Math.random())+')' 
  }
 }
-  Ifrz=setInterval(f_sc,1111)
+  Ifrz=setInterval(f_sc, 1111)
 
 bbtn=0
 btn[0].onclick=()=>
@@ -382,18 +381,25 @@ function mv(n)
   {
    ltra[i].style.opacity=0
    for(j=0;j<frz[n].length;j++)
+   {
+    frz[n][j].style.background='#ff0'
     frz[n][j].style.transform='scale(2)'
+   }
   } 
   ltra[n].style.opacity=1
   dv[0].style.opacity=0
  }
  ltra[n].onmouseout=()=>
  { 
-  Ifrz=setInterval(f_sc,1111)
+  Ifrz=setInterval(f_sc, 1111)
   for(i=0;i<ltra.length;i++)
+   
    ltra[i].style.opacity=1
    for(j=0;j<frz[n].length;j++)
+   {
+   	frz[n][j].style.background='none'
     frz[n][j].style.transform='scale(0)'
+   }
   dv[0].style.opacity=0.4
  }
 }
