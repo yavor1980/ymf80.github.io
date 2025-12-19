@@ -16,71 +16,53 @@ canvas
  background:#0f0;
 }
 
-.btn
+.btnd,.btn
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
+ right:2%;
+ width:9%;
+ height:7%;
+ background:#f00;
+ color:#fff;
+ font-size:2em;
+}
+.btn
+{
+ background:#00f;
 }
 
 </style>
 </head>
 
-<body id=idbd>
-<input type=button class=btn value='draw'>
-<input type=button class=btn value='rndline'>
-<input type=button class=btn value='round'>
-<input type=button class=btn value='line'>
-<input type=button class=btn value='clear'>
-<input type=button class=btn  value='axes'>
-<input type=button class=btn value='Poly'>
-<input type=button class=btn value='Mono'>
-<input type=button class=btn value='Hz'>
+<body id='idbd'>
+<input type='button' class='btn' value='draw'>
+<input type='button' class='btn' value='rndline'>
+<input type='button' class='btn' value='round'>
+<input type='button' class='btn' value='line'>
+<input type='button' class='btn' value='clear'>
+<input type='button' class='btnd' value='axes'>
+<input type='button' class='btnd' value='Poly'>
+<input type='button' class='btnd' value='Mono'>
+<input type='button' class='btnd' value='Hz'>
 <canvas></canvas> 
 <script>
-cnv=document.getElementsByTagName('canvas')
-btn=document.getElementsByClassName('btn')
+var cnv=document.getElementsByTagName('canvas')
+var btn=document.getElementsByClassName('btn')
+var btnd=document.getElementsByClassName('btnd')
 
-btn[0].style.left=92+'%'
 btn[0].style.bottom=44+'%'
-btn[0].style.background='#f00'
-btn[0].style.color='#ff0'
-btn[0].style.transform='scale(2)'
-btn[1].style.left=91+'%'
 btn[1].style.bottom=12+'%'
-btn[1].style.background='#b00'
-btn[1].style.color='#ff0'
-btn[1].style.transform='scale(2)'
-btn[2].style.left=91+'%'
 btn[2].style.bottom=20+'%'
-btn[2].style.background='#dd0'
-btn[2].style.transform='scale(2)'
-btn[3].style.left=91+'%'
 btn[3].style.bottom=28+'%'
-btn[3].style.background='#ab0'
-btn[3].style.transform='scale(2)'
-btn[4].style.left=91+'%'
 btn[4].style.bottom=36+'%'
-btn[4].style.background='#aba'
-btn[4].style.transform='scale(2)'
-btn[5].style.left=91+'%'
-btn[5].style.top=4+'%'
-btn[5].style.background='#886'
-btn[5].style.transform='scale(2)'
-btn[6].style.left=91+'%'
-btn[6].style.top=22+'%'
-btn[6].style.background='#e00'
-btn[6].style.transform='scale(2)'
-btn[7].style.left=92+'%'
-btn[7].style.top=13+'%'
-btn[7].style.background='#e00'
-btn[7].style.transform='scale(2)'
-btn[8].style.left=93+'%'
-btn[8].style.top=31+'%'
-btn[8].style.background='#e00'
-btn[8].style.transform='scale(2)'
+btnd[0].style.top=4+'%'
+btnd[1].style.top=22+'%'
+btnd[2].style.top=13+'%'
+btnd[3].style.top=31+'%'
 
-cnv[0].style.width=88+'%'
+cnv[0].style.width=86+'%'
 cnv[0].style.height=97+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
@@ -111,9 +93,7 @@ function fround()
  cntxt.stroke()
  cntxt.endPath()
 }
-bcnvs=-1
-bln=0 
-x=0,y=0
+var bcnvs=-1, bln=0 , x=0,y=0
 function fline()
 {
  cntxt.strokeStyle='#770'
@@ -138,55 +118,50 @@ function faxs()
  cntxt.lineTo(145, 100)
   cntxt.stroke()
 }
-shft=66
-scle=22
-trvl=11
-Iosc=0 
+var shft=66, scle=22, trvl=11, Iosc=0 
 function foscll()
 { 
  cntxt.strokeStyle='#b00'
  for(i=0;i<333;i++)
  {
-  cntxt.lineTo(i,shft+scle*Math.sin(i/trvl+1))
+  cntxt.lineTo(i,shft+scle*Math.sin(i/trvl))
  } 
  cntxt.stroke() 
 }
-ff=0
+var ff=0
 function foscllmv(b)
 { 
 Iosc=setInterval(()=>{
  cntxt.beginPath()
  shft=66+Math.random()*11
- scle=22+Math.random()*11
+ scle1=22+Math.random()*11
  trvl=11+Math.random()*11
  cntxt.clearRect(0,0,999,999)
  if(b==0) ff+=5
  if(b==1) ff=Math.round(Math.random()*9)
  for(i=0;i<333;i++)
  {
-  cntxt.lineTo(i, shft+scle*Math.sin(i*ff/trvl+1))
+  cntxt.lineTo(i, shft+scle*Math.sin(i*ff+22))
  } 
   cntxt.stroke() 
  // cntxt.endPath()
  }, imtosc)
 }
-Ihz=0
+var Ihz=0
 function fHz()
 { 
 Iosc=setInterval(()=>{
  cntxt.beginPath()
  for(i=0;i<300;i++)
- {cntxt.clearRect(0,0,999,999)
+ {
+  cntxt.clearRect(0,0,999,999)
   cntxt.strokeStyle='#00f'
   y=44+Math.random()*8
-  //cntxt.moveTo(i*3,-y)
   cntxt.lineTo(i*3,33)
-  //cntxt.moveTo(i*3,33)
+  cntxt.moveTo(i*3,33)
   cntxt.lineTo(i*3,y)
   cntxt.stroke()
-  
  }
- //cntxt.endPath()
 }, 999)   
 }
 
@@ -211,59 +186,59 @@ btn[3].onclick=()=>
  bcnvs=3
 }
 btn[4].onclick=()=>
-{
+{ 
  cntxt.clearRect(0,0,999,999)
 }
-btn[5].onclick=()=>
+btnd[0].onclick=()=>
 {
  faxs()
 }
-boscll=0
-btn[6].onclick=()=>
+var boscll=0
+btnd[1].onclick=()=>
 {
  if(boscll==0)
  {
   foscll()
   foscllmv(0)
-  btn[6].value='Stop'
+  btnd[1].value='Stop'
  }
  else
  {
   clearInterval(Iosc)
   ff=0
-  btn[6].value='Poly'
+  btnd[1].value='Poly'
  }
  boscll=!boscll
 }
 imtosc=666
-btn[7].onclick=()=>
+btnd[2].onclick=()=>
 {
  if(boscll==0)
  {
   foscll()
   foscllmv(1)
-  btn[7].value='Stop'
+  btnd[2].value='Stop'
  }
  else
  {
   clearInterval(Iosc)
   ff=0
-  btn[7].value='Mono'
+  btnd[2].value='Mono'
  }
  boscll=!boscll
 }
-btn[8].onclick=()=>
+btnd[3].onclick=()=>
 {
  if(boscll==0)
  {
   fHz()
-  btn[8].value='Stop'
+  btnd[3].value='Stop'
  }
  else
  {
   clearInterval(Iosc)
   ff=0
-  btn[8].value='Hz'
+  btnd[3].value='Hz'
  }
  boscll=!boscll
 }
