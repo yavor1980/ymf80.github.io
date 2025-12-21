@@ -12,7 +12,7 @@ body
  position:absolute;
  cursor:pointer;
  transition:1s;
- left:77%;
+ left:87%;
  top:8%;
  width:9%;
  height:7%;
@@ -41,9 +41,9 @@ body
 .clds
 {
  position:absolute;
- border-radius:54%;
  transition:1s;
  cursor:pointer;
+ border-radius:54%; 
  font-size:2em;
  text-align:center;
 }
@@ -52,7 +52,13 @@ body
 
 <button id=idb>act</button>
 
+<div class=clds></div>
+<div class=clds></div>
+<div class=clds></div>
+
 <div class=plne>
+ <div class=clds></div>
+ <div class=clds></div>
  <div class=plne></div>
  <div class=plne></div>
  <div class=plne></div>
@@ -64,13 +70,9 @@ body
  </div>
 </div>
 
-<div class=clds>weather</div>
-<div class=clds></div>
-<div class=clds></div>
-
 <script>
-plne=document.getElementsByClassName('plne')
 clds=document.getElementsByClassName('clds')
+plne=document.getElementsByClassName('plne')
 
 plne[1].style.left=2+'%'
 plne[1].style.top=3+'%'
@@ -144,13 +146,16 @@ function inn(blck,i,l,t,w,h,bckrnd)
  blck[i].style.height=h+'%' 
  blck[i].style.background=bckrnd
 } 
- 
 inn(clds,0, 7,39, 33,22,'radial-gradient(#660,#fff)')
  clds[0].style.opacity=0.4
 inn(clds,1, 18,9, 27,18,'radial-gradient(#066,#ff9)')
  clds[1].style.opacity=0.5
 inn(clds,2, 60,55, 20,13,'radial-gradient(#606,#fff)')
- clds[2].style.opacity=0.6
+ clds[2].style.opacity=0.4
+inn(clds,3, 33,44, 2,8,'radial-gradient(#ff0,#f00)')
+ clds[3].style.opacity=0
+inn(clds,4, 67,44, 2,8,'radial-gradient(#ff0,#f00)')
+ clds[4].style.opacity=0
 
 Icl=0
 function cl()
@@ -162,16 +167,28 @@ function cl()
  plne[5].style.transform=
   'scale('+(vgf+3)+')'   
  plne[7].style.transform=
-  'scale('+(vgf+3)+')'   
- clds[0].style.opacity=0.2+Math.random()/2
+  'scale('+(vgf+3)+')' 
+ clds[3].style.transform=
+  'scale(2) translate('+Math.random()*82+
+  '%,'+Math.random()*-992+'%)'  
+ clds[4].style.transform=
+  'scale(2) translate('+Math.random()*82+
+  '%,'+Math.random()*-992+'%)'  
+ clds[0].style.opacity=0.1+Math.random()
  clds[0].style.transform=
-  'scale('+(Math.random()/4+1)+')'
- clds[1].style.opacity=0.2+Math.random()/2
+  'scale('+(Math.random()/2+0.6)+ 
+  ') translate('+Math.random()*82+
+  '%,'+Math.random()*42+'%)' 
+ clds[1].style.opacity=0.1+Math.random()
  clds[1].style.transform=
-  'scale('+(Math.random()/4+1)+')'
- clds[2].style.opacity=0.2+Math.random()/2
+  'scale('+(Math.random()/4+1)+
+  ') translate('+Math.random()*82+
+  '%,'+Math.random()*42+'%)' 
+ clds[2].style.opacity=0.1+Math.random()
  clds[2].style.transform=
-  'scale('+(Math.random()/4+1)+')'
+  'scale('+(Math.random()/4+1)+
+  ')translate('+Math.random()*42+
+  '%,'+Math.random()*42+'%)' 
 }
     Icl=setInterval(cl, 999)
  
@@ -192,7 +209,7 @@ idb.onclick=()=>
   'radial-gradient(#999,#050)'
   plne[5].style.opacity=0.2
   plne[7].style.opacity=0.2
- }  ,888)
+ }  ,88)
 }
  
 plne[0].onmouseover=()=>
@@ -209,6 +226,12 @@ plne[0].onmouseover=()=>
  plne[5].style.transform='scale('+prtr+')'
  plne[7].style.opacity=0.6 
  plne[7].style.transform='scale('+prtr+')'
+ clds[3].style.opacity=0.6
+ clds[3].style.transform=
+  'scale(9)  translate(-99%,-99%)'
+ clds[4].style.opacity=0.6
+ clds[4].style.transform=
+  'scale(9) translate(-99%,-99%)'
 }   
 plne[0].onmouseout=()=>
 {
@@ -223,6 +246,10 @@ plne[0].onmouseout=()=>
  plne[5].style.transform='scale(0)' 
  plne[7].style.opacity=0.2 
  plne[7].style.transform='scale(0)' 
+ clds[3].style.opacity=0
+ clds[3].style.transform='scale(1)'
+ clds[4].style.opacity=0
+ clds[4].style.transform='scale(1)'
 }
 
 clds[0].onmouseover=()=>
@@ -231,14 +258,12 @@ clds[0].onmouseover=()=>
  clds[0].style.textAlign='center'
  clds[0].style.paddingTop='6%'
  clds[0].style.transform='scale(1.2,1)'
-  clds[0].innerHTML='raining...'
 }
 clds[0].onmouseout=()=>
 {	
  clds[0].style.fontSize='2em'
  clds[0].style.paddingTop='0%'
  clds[0].style.transform='scale(1)'
-  clds[0].innerHTML='weather'
 }
 
 clds[1].onmouseover=()=>
