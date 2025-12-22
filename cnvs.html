@@ -30,6 +30,8 @@ canvas
 }
 .btn
 {
+ right:1%;
+ width:10%;
  background:#00f;
 }
 
@@ -49,24 +51,24 @@ canvas
 <canvas></canvas> 
 <script>
 var cnv=document.getElementsByTagName('canvas')
-var btn=document.getElementsByClassName('btn')
 var btnd=document.getElementsByClassName('btnd')
+var btn=document.getElementsByClassName('btn')
 
+btnd[0].style.top=4+'%'
+btnd[1].style.top=22+'%'
+btnd[2].style.top=13+'%'
+btnd[3].style.top=31+'%'
 btn[0].style.bottom=44+'%'
 btn[1].style.bottom=12+'%'
 btn[2].style.bottom=20+'%'
 btn[3].style.bottom=28+'%'
 btn[4].style.bottom=36+'%'
-btnd[0].style.top=4+'%'
-btnd[1].style.top=22+'%'
-btnd[2].style.top=13+'%'
-btnd[3].style.top=31+'%'
 
 cnv[0].style.width=86+'%'
 cnv[0].style.height=97+'%'
 cnv[0].style.border='11px ridge #ff0'
 cnv[0].style.cursor='pointer'
- cntxt=cnv[0].getContext('2d')
+cntxt=cnv[0].getContext('2d')
  cntxt.moveTo(0,333)
 
 function fdrw()
@@ -118,13 +120,14 @@ function faxs()
  cntxt.lineTo(145, 100)
   cntxt.stroke()
 }
-var shft=66, scle=22, trvl=11, Iosc=0 
+var shft=66, scle=22, trvl=1, Iosc=0 
 function foscll()
 { 
+  ff=0
  cntxt.strokeStyle='#b00'
  for(i=0;i<333;i++)
  {
-  cntxt.lineTo(i,shft+scle*Math.sin(i/trvl))
+  cntxt.lineTo(i,shft+scle*Math.sin(i))
  } 
  cntxt.stroke() 
 }
@@ -147,7 +150,7 @@ Iosc=setInterval(()=>{
  // cntxt.endPath()
  }, imtosc)
 }
-var Ihz=0
+var Ihz=0,wd=0
 function fHz()
 { 
 Iosc=setInterval(()=>{
@@ -156,12 +159,11 @@ Iosc=setInterval(()=>{
  {
   cntxt.clearRect(0,0,999,999)
   cntxt.strokeStyle='#00f'
-  y=44+Math.random()*8
-  cntxt.lineTo(i*3,33)
-  cntxt.moveTo(i*3,33)
-  cntxt.lineTo(i*3,y)
+  y=44+Math.random()*25
+  cntxt.moveTo(i*5,33)
+  cntxt.lineTo(i*5,33+y)
   cntxt.stroke()
- }
+ }  
 }, 999)   
 }
 
@@ -189,10 +191,12 @@ btn[4].onclick=()=>
 { 
  cntxt.clearRect(0,0,999,999)
 }
+
 btnd[0].onclick=()=>
 {
  faxs()
 }
+
 var boscll=0
 btnd[1].onclick=()=>
 {
@@ -210,6 +214,7 @@ btnd[1].onclick=()=>
  }
  boscll=!boscll
 }
+
 imtosc=666
 btnd[2].onclick=()=>
 {
@@ -227,6 +232,7 @@ btnd[2].onclick=()=>
  }
  boscll=!boscll
 }
+
 btnd[3].onclick=()=>
 {
  if(boscll==0)
