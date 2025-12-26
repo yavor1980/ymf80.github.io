@@ -167,15 +167,14 @@ for(i=0;i<3;i++)
  fl[i]=document.createElement('div')
  fl[i].className='flme'
  flme[0].appendChild(fl[i]) 
- fl[i].style.position='absolute'
- fl[i].style.left=46+'%'
- fl[i].style.top=86+'%'
- fl[i].style.width=1+'%'
- fl[i].style.height=1+'%'
  fl[i].style.background=
   'radial-gradient(#ff0,#f0f)'
  fl[i].style.borderRadius=55+'%'
  fl[i].style.opacity=0
+ fl[i].style.left=46+'%'
+ fl[i].style.top=86+'%'
+ fl[i].style.width=1+'%'
+ fl[i].style.height=1+'%'
 }
  
 drv[0].style.top=64+'%'
@@ -259,7 +258,7 @@ function cld()
   drv[0].style.transform='rotate(77deg)'
   drv[1].style.transform='rotate(-77deg)'
   flme[0].style.background='#f70' 
-  flme[1].style.borderTopLeftRadius='55%'
+  flme[1].style.borderTopLeftRadius=55+'%'
   flme[1].style.transform=
    'scale(1.5) translate(0,-11%)'
   flme[1].style.zIndex=0
@@ -277,7 +276,7 @@ function cld()
 function clk()
 {
   clearInterval(I)
- idb.style.opacity=0 
+  idb.style.opacity=0 
  flme[0].style.background='#000'
  flme[1].style.transform='scale(0.1)'
  flme[2].style.transform='scale(0.1)'
@@ -343,7 +342,7 @@ flme[0].onclick=()=>
 {    
   for(i=0;i<3;i++)
   {
-   fl[i].style.transition=1+'s'
+   //fl[i].style.transition=1+'s'
   }
   fl[0].style.transform=
    'scale('+(5+Math.random())+
