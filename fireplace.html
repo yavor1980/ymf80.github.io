@@ -19,7 +19,7 @@
  height:5%;
  background:#f00;
  color:#fff;
- border-radius:55%;
+ border-radius:25%;
  font-size:1.2em;
 }
 #idb:hover
@@ -176,6 +176,22 @@ for(i=0;i<3;i++)
  fl[i].style.width=1+'%'
  fl[i].style.height=1+'%'
 }
+function pos()
+{
+ fl[0].style.transform=
+  'scale('+(5+Math.random())+
+  ') translate('+Math.random()*1156+'%,'+
+  -Math.random()*1159+'%)'
+ fl[1].style.transform=
+  'scale('+(5+Math.random())+
+  ') translate('+Math.random()*1156+'%,'+
+  -Math.random()*1159+'%)'
+ fl[2].style.transform=
+  'scale('+(5+Math.random())+
+  ') translate('+Math.random()*1256+'%,'+
+  -Math.random()*1159+'%)'
+}
+ pos()
  
 drv[0].style.top=64+'%'
 drv[0].style.width=4+'%'
@@ -295,6 +311,7 @@ idb.onclick=()=>
 
 flme[0].onmouseover=()=>
 {    
+  pos()
  flme[0].style.border='15px ridge #404'
  flme[1].style.background=
    'radial-gradient(#0ff,#f00)'
@@ -340,22 +357,7 @@ flme[0].onmouseout=()=>
 }
 flme[0].onclick=()=>
 {    
-  for(i=0;i<3;i++)
-  {
-   //fl[i].style.transition=1+'s'
-  }
-  fl[0].style.transform=
-   'scale('+(5+Math.random())+
-   ') translate('+Math.random()*1156+'%,'+
-   -Math.random()*1159+'%)'
-  fl[1].style.transform=
-   'scale('+(5+Math.random())+
-   ') translate('+Math.random()*1156+'%,'+
-   -Math.random()*1159+'%)'
-  fl[2].style.transform=
-   'scale('+(5+Math.random())+
-   ') translate('+Math.random()*1256+'%,'+
-   -Math.random()*1159+'%)' 
+   
  setTimeout(()=>{
   for(i=0;i<3;i++)
   {
