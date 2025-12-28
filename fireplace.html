@@ -191,7 +191,7 @@ function pos()
  fl[3].style.width=31+'%'
  fl[3].style.height=11+'%'
  fl[3].style.background='none'
- fl[3].style.opacity=1
+ fl[3].style.opacity=0.4
  fl[3].style.border='15px ridge #000'
  fl[3].style.borderLeft='transparent'
  fl[3].style.borderBottom='transparent'
@@ -329,7 +329,10 @@ flme[0].onmouseover=()=>
  {
   fl[i].style.opacity=Math.random()
  }
- drts[0].style.transform='skew(0deg)'
+ fl[3].style.opacity=1
+ fl[3].style.transform=
+  'scale(1) translate(0,-99%) rotate(-33deg) skew(33deg)'
+ drts[0].style.transform='skew(1deg)'
  drts[0].style.background=
   'radial-gradient('+(44+Math.random()*33)+'px,#f00,#ff0)'
  hdd[0].style.transform=
@@ -352,6 +355,8 @@ flme[0].onmouseout=()=>
  {
   fl[i].style.opacity=0
  }
+ fl[3].style.opacity=0.4
+ fl[3].style.transform='scale(1)'
  drts[0].style.transform='skew(-16deg)'
  drts[0].style.background='#fff'
  hdd[0].style.transform=
@@ -361,19 +366,6 @@ flme[0].onmouseout=()=>
   'scale(3) rotate(33deg)'
  hdd[1].style.color='#000' 
 }
-flme[0].onclick=()=>
-{    
-   
- setTimeout(()=>{
-  for(i=0;i<3;i++)
-  {
-   //fl[i].style.transition=0+'s'
-   fl[i].style.opacity=0
-   fl[i].style.transform='scale(1)'
-  }
- 
- }, 999)   
-} 
 
 flme[1].onmouseover=()=>
 {    
