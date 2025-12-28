@@ -173,23 +173,20 @@ for(i=0;i<3;i++)
  fl[i].style.opacity=0
  fl[i].style.left=46+'%'
  fl[i].style.top=86+'%'
- fl[i].style.width=1+'%'
- fl[i].style.height=1+'%'
+ fl[i].style.width=31+'%'
+ fl[i].style.height=21+'%'
 }
 function pos()
 {
- fl[0].style.transform=
-  'scale('+(5+Math.random())+
-  ') translate('+Math.random()*1156+'%,'+
-  -Math.random()*1159+'%)'
- fl[1].style.transform=
-  'scale('+(5+Math.random())+
-  ') translate('+Math.random()*1156+'%,'+
-  -Math.random()*1159+'%)'
- fl[2].style.transform=
-  'scale('+(5+Math.random())+
-  ') translate('+Math.random()*1256+'%,'+
-  -Math.random()*1159+'%)'
+ fl[0].style.opacity=Math.random()
+ fl[0].style.transform='scale('+(Math.random())+
+  ') translate(125%,-125%)'
+ fl[1].style.opacity=Math.random()
+ fl[1].style.transform='scale('+(Math.random())+
+  ') translate(125%,-125%)'
+ fl[2].style.opacity=Math.random()
+ fl[2].style.transform='scale('+(Math.random())+
+  ') translate(125%,-125%)'
 }
  pos()
  
@@ -361,7 +358,7 @@ flme[0].onclick=()=>
  setTimeout(()=>{
   for(i=0;i<3;i++)
   {
-   fl[i].style.transition=0+'s'
+   //fl[i].style.transition=0+'s'
    fl[i].style.opacity=0
    fl[i].style.transform='scale(1)'
   }
