@@ -162,7 +162,7 @@ flme[5].style.borderTopLeftRadius=55+'%'
 flme[5].style.borderTopRightRadius=55+'%' 
 flme[5].style.opacity=0
 fl=[3]
-for(i=0;i<3;i++)
+for(i=0;i<4;i++)
 {
  fl[i]=document.createElement('div')
  fl[i].className='flme'
@@ -175,6 +175,7 @@ for(i=0;i<3;i++)
  fl[i].style.top=86+'%'
  fl[i].style.width=31+'%'
  fl[i].style.height=21+'%'
+ fl[i].style.transform='scale(0)'
 }
 function pos()
 {
@@ -185,6 +186,18 @@ function pos()
  fl[2].style.transform='scale('+(Math.random())+
   ') translate(125%,-125%)'
 }
+ fl[3].style.left=14+'%'
+ fl[3].style.bottom=11+'%'
+ fl[3].style.width=31+'%'
+ fl[3].style.height=11+'%'
+ fl[3].style.background='none'
+ fl[3].style.opacity=1
+ fl[3].style.border='15px ridge #000'
+ fl[3].style.borderLeft='transparent'
+ fl[3].style.borderBottom='transparent'
+ fl[3].style.borderRadius=0+'%'
+ fl[3].style.transform=
+  'scale(1) rotate(-33deg) skew(33deg)'
  
 drv[0].style.top=64+'%'
 drv[0].style.width=4+'%'
