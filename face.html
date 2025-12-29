@@ -346,7 +346,8 @@ function cl()
  
 Ifc=0 
 fc[0].onmouseover=()=>
-{ 
+{
+ tfre[0].onmouseover()
   clearInterval(Icl)
  mth[2].style.transform=
    'scale(1.0,2.3) translate(11%,-33%) rotate(-9deg)' 
@@ -382,18 +383,19 @@ fc[0].onmouseover=()=>
  elbw[0].style.transform=
   'scale(1,1.7) translate(0%,33%) rotate(0deg)' 
  elbw[1].style.transform=
-  'scale(0.5,1.7) translate(-24%,35%) rotate(1deg)'
+  'scale(1) translate(-24%,35%) rotate(1deg)'
  elbw[2].style.opacity=1
  elbw[2].style.borderRadius=37+'%'
  elbw[2].style.transform=
-  'scale(2,0.5) translate(0%,-33%)' 
+  'scale(1) translate(0%,-33%)' 
  elbw[3].style.opacity=1
  elbw[3].style.borderRadius=37+'%'
  elbw[3].style.transform=
-  'scale(3,0.4) translate(31%,-122%)'
+  'scale(1) translate(31%,-122%)'
 }
 fc[0].onmouseout=()=>
 { 
+ tfre[0].onmouseout()
   cl()
   Icl=setInterval(()=>cl(), 1111)
  smk[0].style.transform='scale(1)' 
