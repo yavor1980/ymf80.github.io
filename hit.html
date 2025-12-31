@@ -29,25 +29,14 @@
  z-index:1;
 }
 
-.s
-{
- position:absolute;
- transition:999ms;
- cursor:pointer;
-}
-
-.swrd
-{
- position:absolute;
- transition:999ms;
- cursor:pointer;
- z-index:1;
-}
-.shld
+.s,.swrd,.shld,.zbrlo
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
+}
+.shld
+{
  border-radius:55%;
 }
 
@@ -59,6 +48,7 @@
 <img src='img/sword.png' id=idsw >
 
 <div class=s>
+ <div class=zbrlo><div class=zbrlo></div></div>
  <div class=s><div class=s></div></div>
  <div class=s><div class=s></div></div> 
 </div>
@@ -78,6 +68,7 @@
 btn=document.getElementsByClassName('btn')
 
 s=document.getElementsByClassName('s')
+zbrlo=document.getElementsByClassName('zbrlo')
 swrd=document.getElementsByClassName('swrd')
 shld=document.getElementsByClassName('shld')
  
@@ -125,6 +116,14 @@ s[4].style.width=55+'%'
 s[4].style.height=33+'%'
 s[4].style.background='#000'
 s[4].style.borderRadius=55+'%'
+zbrlo[0].style.left=43+'%'
+zbrlo[0].style.top=-63+'%'
+zbrlo[0].style.width=9+'%'
+zbrlo[0].style.height=77+'%'
+zbrlo[0].style.opacity=0.3
+zbrlo[0].style.borderRadius=55+'%'
+zbrlo[0].style.border='20px ridge #444'
+zbrlo[0].style.transform='rotate(88deg)'
 
 swrd[0].style.left=13+'%'
 swrd[0].style.top=77+'%'
