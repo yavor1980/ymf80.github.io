@@ -66,10 +66,12 @@
  <div class=swrd></div>
  <div class=swrd></div>
  <div class=swrd></div>
+ <div class=swrd></div>
 </div> 
 <div class=shld>
- <div class=shld></div>
- <div class=shld>Shield</div>
+ <div class=shld>
+  <div class=shld></div>
+  </div>
 </div> 
 
 <script>
@@ -142,6 +144,12 @@ swrd[3].style.width=100+'%'
 swrd[3].style.height=73+'%'
 swrd[3].style.background='#fff'
 swrd[3].style.transform='skew(-44deg)'
+swrd[4].style.left=-7+'%'
+swrd[4].style.top=-38+'%'
+swrd[4].style.width=22+'%'
+swrd[4].style.height=222+'%'
+swrd[4].style.background='#d60'
+swrd[4].style.borderRadius=22+'%'
 
 shld[0].style.left=33+'%'
 shld[0].style.top=12+'%'
@@ -155,10 +163,12 @@ shld[1].style.height=33+'%'
 shld[1].style.background=
  'radial-gradient(#505,#909)'
 shld[1].style.transform='scale(2.2)'
-shld[2].style.left=34+'%'
-shld[2].style.top=23+'%'
-shld[2].style.color='#ff0'
-shld[2].style.transform='scale(0)'
+shld[2].style.left=38+'%'
+shld[2].style.top=38+'%'
+shld[2].style.width=30+'%'
+shld[2].style.height=30+'%'
+shld[2].style.background=
+ 'radial-gradient(#ff0,#f00)'
 
 b=0
 Icl=0
@@ -304,13 +314,12 @@ swrd[0].onmouseout=()=>
 shld[0].onmouseover=()=>
 {
  shld[0].style.transform='scale(1.2)'
- shld[2].style.transform=
-  'scale(2) translate(200%,-88%) skew(-24deg)'
+ shld[2].style.transform='scale(1.2)'
 }
 shld[0].onmouseout=()=>
 {
  shld[0].style.transform='scale(1)'
- shld[2].style.transform='scale(0)'
+ shld[2].style.transform='scale(1)'
 }
 
 </script>
