@@ -111,6 +111,32 @@ ttl[0].style.top=25+'%'
 ttl[0].style.opacity=0
 ttl[0].style.transform='scale(19)'
 
+Icl=0
+function cl()
+{
+ hllo[1].style.transform='scale('+
+  (0.8+Math.random()/5)+')'
+ hllo[2].style.transform='scale('+
+  (0.8+Math.random()/5)+')'
+ hllo[3].style.transform='scale('+
+  (0.8+Math.random()/5)+')'
+ hllo[4].style.transform='scale('+
+  (0.8+Math.random()/5)+')'
+ hllo[5].style.transform='scale('+
+  (0.8+Math.random()/5)+')'  
+ wrld[1].style.transform='scale('+
+  (0.8+Math.random()/5)+')'
+ wrld[2].style.transform='scale('+
+  (0.8+Math.random()/5)+')'
+ wrld[3].style.transform='scale('+
+  (0.8+Math.random()/5)+')'
+ wrld[4].style.transform='scale('+
+  (0.8+Math.random()/5)+')'  
+ wrld[5].style.transform='scale('+
+  (0.8+Math.random()/5)+')'   
+}
+ Icl=setInterval(cl, 1000) 
+
 btn[0].onmouseover=()=>
 { 
  hllo[0].style.transform='scale(9) skew(-44deg)' 
@@ -121,7 +147,6 @@ btn[0].onmouseout=()=>
  hllo[0].style.transform='scale(9)' 
  wrld[0].style.transform='scale(9)'
 }
-
 btn[1].onmouseover=()=>
 { 
  hllo[0].style.transform='scale(9,22)' 
@@ -132,7 +157,6 @@ btn[1].onmouseout=()=>
  hllo[0].style.transform='scale(9)' 
  wrld[0].style.transform='scale(9)'
 }
-
 btn[2].onmouseover=()=>
 { 
  hllo[0].onmouseover()
@@ -170,18 +194,23 @@ hllo[0].onmouseout=()=>
 } 
 wrld[0].onmouseover=()=>
 { 
+  clearInterval(Icl)
+ for(i=1;i<6;i++)
+ {
+  hllo[i].style.transform='scale(1)'
+  wrld[i].style.transform='scale01)'
+ } 
  wrld[0].style.background='#0b0'
  wrld[0].style.borderRadius=25+'%'
  wrld[0].style.border='3px ridge #bb0'
 } 
 wrld[0].onmouseout=()=>
 { 
+  Icl=setInterval(cl, 1000)
  wrld[0].style.background='none'
  wrld[0].style.borderRadius=0+'%'
  wrld[0].style.border='none'
 } 
-
-
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
 </script>
