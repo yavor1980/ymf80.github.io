@@ -48,7 +48,7 @@
 <img src='img/sword.png' id=idsw >
 
 <div class=s>
- <div class=zbrlo><div class=zbrlo></div></div>
+ <div class=zbrlo></div>
  <div class=s><div class=s></div></div>
  <div class=s><div class=s></div></div> 
 </div>
@@ -116,6 +116,7 @@ s[4].style.width=55+'%'
 s[4].style.height=33+'%'
 s[4].style.background='#000'
 s[4].style.borderRadius=55+'%'
+zbrlo[0].style.zIndex=1
 zbrlo[0].style.left=43+'%'
 zbrlo[0].style.top=-63+'%'
 zbrlo[0].style.width=9+'%'
@@ -270,6 +271,10 @@ s[0].onmouseover=()=>
 {
  s[0].style.background='#666'
  s[0].style.transform='scale(1.1)'
+ zbrlo[0].style.opacity=1
+ zbrlo[0].style.borderRadius=15+'%'
+ zbrlo[0].style.transform=
+  'scale(1,3) translate(7%,17%) rotate(88deg)'
  swrd[0].style.transform=
   'scale(0.7,1) translate(77%,-77%) rotate(-33deg)'
  shld[0].style.transform=
@@ -286,6 +291,10 @@ s[0].onmouseout=()=>
  s[2].style.transform='scale(1)'
  s[4].style.background='#000'
  s[4].style.transform='scale(1)'
+ zbrlo[0].style.opacity=0.3
+ zbrlo[0].style.borderRadius=55+'%'
+ zbrlo[0].style.transform=
+  'scale(1) rotate(88deg)'
  swrd[0].style.transform='scale(1)'
  shld[0].style.transform='scale(1)'
   bs=1
@@ -323,4 +332,4 @@ shld[0].onmouseout=()=>
 
 </script>
 </body>
-</html>
+</html>*
