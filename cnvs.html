@@ -95,7 +95,7 @@ function fround()
  cntxt.arc(event.clientX/4,event.clientY/4,
   9,0,2*Math.PI)
  cntxt.stroke()
- cntxt.endPath()
+ //cntxt.endPath()
 }
 var bcnvs=-1, bln=0 , x=0,y=0
 function fline()
@@ -161,7 +161,7 @@ Iosc=setInterval(()=>{
   cntxt.clearRect(0,0,999,999)
   cntxt.strokeStyle='#00f'
   y=44+Math.random()*25
-  cntxt.moveTo(i*5,33)
+  cntxt.moveTo(i*5,68-y/2)
   cntxt.lineTo(i*5,33+y)
   cntxt.stroke()
  }  
@@ -188,6 +188,7 @@ btn[3].onclick=()=>
 {
  bcnvs=3
 }
+
 btn[4].onclick=()=>
 { 
  cntxt.clearRect(0,0,999,999)
