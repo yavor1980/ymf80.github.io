@@ -170,12 +170,18 @@ Iosc=setInterval(()=>{
 
 btn[0].onclick=()=>
 {   
- btn[0].
+
  bcnvs=!bcnvs
  if(bcnvs)
+ {
+  btn[0].style.background='#090'
   btn[0].value='draw'
+ } 
  else
+ {
+  btn[0].style.background='#b00'
   btn[0].value='Stop'
+ } 
 }
 btn[1].onclick=()=>
 {
