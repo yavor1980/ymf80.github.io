@@ -151,7 +151,8 @@ Iosc=setInterval(()=>{
  // cntxt.endPath()
  }, imtosc)
 }
-var Ihz=0,wd=0
+
+var Ihz=0,dd=5
 function fHz()
 { 
 Iosc=setInterval(()=>{
@@ -161,16 +162,19 @@ Iosc=setInterval(()=>{
   cntxt.clearRect(0,0,999,999)
   cntxt.strokeStyle='#00f'
   y=44+Math.random()*25
-  cntxt.moveTo(i*5,68-y/2)
-  cntxt.lineTo(i*5,33+y)
+  cntxt.moveTo(i*dd,68-y/2)
+  cntxt.lineTo(i*dd,33+y)
   cntxt.stroke()
  }  
 }, 999)   
 }
+function frnd(d)
+{ 
+ dd=d
+}
 
 btn[0].onclick=()=>
 {   
-
  bcnvs=!bcnvs
  if(bcnvs)
  {
@@ -248,6 +252,7 @@ btnd[2].onclick=()=>
 
 btnd[3].onclick=()=>
 {
+ bcnvs=4
  if(boscll==0)
  {
   btnd[3].style.background='#b00'
@@ -268,10 +273,13 @@ cnv[0].onmousemove=()=>
 {
  cnv[0].style.border='11px ridge #ee0'
  if(bcnvs==0) fdrw()  
+ if(bcnvs==4) frnd(22*Math.random())
 }
 cnv[0].onmouseout=()=>
 {
  cnv[0].style.border='11px ridge #ff0'
+ frnd(5)
+ //bcnvs==-1
 }
 cnv[0].onclick=()=>
 { 
@@ -280,6 +288,7 @@ cnv[0].onclick=()=>
   case 1: frndline(); break;
   case 2: fround(); break;
   case 3: fline(); break;
+  //case 4: frnd(); break;
  }  
 }
 
