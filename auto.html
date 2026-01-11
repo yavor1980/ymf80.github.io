@@ -43,10 +43,15 @@
  z-index:-2;
 }
 
-.brd
+.brd,.drn
 {
  position:absolute;
  transition:1s;
+}
+
+.drn
+{
+ transition:2s;
 }
 
 </style>
@@ -54,6 +59,10 @@
 <button class=btn>stop</button>
 <button class=btn>opcty</button>
 <button class=btn>darking</button>
+
+<div class=rd>
+ <div class=rd></div>
+</div>
 
 <div class=whl>
  <div class=brd>
@@ -70,16 +79,20 @@
  </div>
 </div>
 
-<div class=rd>
- <div class=rd></div>
-</div>
+ <div class=drn>
+  <div class=drn></div>
+ </div>
 
 <script>
 btn=document.getElementsByClassName('btn')
+
+rd=document.getElementsByClassName('rd')
+
 whl=document.getElementsByClassName('whl')
 fr=document.getElementsByClassName('fr')
-rd=document.getElementsByClassName('rd')
 brd=document.getElementsByClassName('brd')
+
+drn=document.getElementsByClassName('drn')
    
 btn[0].style.right=5+'%'
 btn[0].style.top=3+'%'
@@ -109,6 +122,19 @@ btn[2].style.background='#900'
 btn[2].style.color='#fff'
 btn[2].style.borderRadius=22+'%'    
    
+rd[0].style.left=0+'%'
+rd[0].style.bottom=0+'%'
+rd[0].style.width=100+'%'
+rd[0].style.height=22+'%'
+rd[0].style.background='#777'
+rd[0].style.borderTopLeftRadius=33+'%'
+rd[0].style.borderTopRightRadius=33+'%' 
+rd[1].style.left=49+'%'
+rd[1].style.top=0+'%' 
+rd[1].style.width=2+'%'
+rd[1].style.height=100+'%'
+rd[1].style.background='#fff'	
+      
 whl[0].style.left=20+'%'
 whl[0].style.top=49+'%'
 whl[0].style.width=38+'%'
@@ -119,7 +145,6 @@ whl[0].style.borderTopLeftRadius=33+'%'
 whl[0].style.borderTopRightRadius=33+'%'
 whl[0].style.borderBottomLeftRadius=22+'%'
 whl[0].style.borderBottomRightRadius=22+'%'  
-whl[0].style.transform='scale(0.7,0.7)'
 whl[1].style.left=3+'%'
 whl[1].style.top=88+'%'  
 whl[1].style.width=11+'%'
@@ -140,8 +165,7 @@ whl[3].style.width=88+'%'
 whl[3].style.height=44+'%'  
 whl[3].style.background=
  'radial-gradient(#222,#000)'
-whl[3].style.borderTopLeftRadius=55+'%'
-whl[3].style.borderTopRightRadius=55+'%'  
+whl[3].style.borderRadius=55+'%'  
 whl[3].style.borderBottomLeftRadius=33+'%'
 whl[3].style.borderBottomRightRadius=33+'%'
 whl[3].style.border='8px ridge #990'   
@@ -152,11 +176,9 @@ whl[4].style.height=40+'%'
 whl[4].style.background=
  'radial-gradient(#ff0,#555)'
 whl[4].style.borderBottom='36px ridge #b00' 
-whl[4].style.borderTopLeftRadius=33+'%'
-whl[4].style.borderTopRightRadius=33+'%' 
+whl[4].style.borderRadius=33+'%'
 whl[4].style.borderBottomLeftRadius=7+'%'
-whl[4].style.borderBottomRightRadius=7+'%' 
-  	 
+whl[4].style.borderBottomRightRadius=7+'%'   	 
 fr[0].style.left=6+'%'
 fr[0].style.top=33+'%'  
 fr[0].style.width=22+'%'
@@ -184,20 +206,6 @@ fr[3].style.height=14+'%'
 fr[3].style.background=
  'radial-gradient(#ff0,#555)'
 fr[3].style.borderRadius=55+'%'
-	 
-rd[0].style.left=0+'%'
-rd[0].style.bottom=0+'%'
-rd[0].style.width=100+'%'
-rd[0].style.height=22+'%'
-rd[0].style.background='#777'
-rd[0].style.borderTopLeftRadius=33+'%'
-rd[0].style.borderTopRightRadius=33+'%' 
-rd[1].style.left=49+'%'
-rd[1].style.top=0+'%' 
-rd[1].style.width=2+'%'
-rd[1].style.height=100+'%'
-rd[1].style.background='#fff'
-	 
 function itbrd(i,l,t,w,h)	 
 {
  brd[i].style.left=l+'%'
@@ -206,14 +214,33 @@ function itbrd(i,l,t,w,h)
  brd[i].style.height=h+'%' 
 }
  itbrd(0,  44,-18,  14,22)
-  brd[0].style.borderRadius=55+'%'
   brd[0].style.background='#900'
+  brd[0].style.borderRadius=55+'%'
   brd[0].style.zIndex=1
  itbrd(1,  0,0,  99,99)
   brd[1].style.background='#f00'
   brd[1].style.opacity=0
   brd[1].style.borderRadius=55+'%'
  	
+drn[0].style.left=50+'%'  
+drn[0].style.top=22+'%'  
+drn[0].style.width=22+'%'
+drn[0].style.height=11+'%'
+drn[0].style.background=
+ 'radial-gradient(#999,#555)'
+drn[0].style.opacity=0.3
+drn[0].style.borderRadius=33+'%'
+drn[0].style.borderBottomLeftRadius=55+'%'
+drn[0].style.borderBottomRightRadius=55+'%'
+drn[0].style.transform='skew(-34deg)'
+drn[1].style.left=14+'%'  
+drn[1].style.top=14+'%'  
+drn[1].style.width=66+'%'
+drn[1].style.height=66+'%'
+drn[1].style.background=
+ 'radial-gradient(#999,#555)'
+drn[1].style.borderRadius=55+'%'	
+	
 o= 
 {
  btr:1, intr:0, bs:0, 
@@ -225,6 +252,8 @@ o=
    'rotate('+(Math.random()*22-11)+'deg)' 
   whl[3].style.background='radial-gradient(#'+
    v+v+v+',#000)'  
+  drn[0].style.transform='skew('+(Math.random()*122-88)+
+   'deg)' 
  },
  clk:function()
  {  
@@ -232,10 +261,10 @@ o=
   btn[0].style.opacity=0
   btn[1].style.opacity=0
   btn[2].style.opacity=0
-  whl[0].style.transform=
-   'rotate(0deg) translate(-33%,0)'
+  whl[0].style.transform='translate(-33%,0)'
   fr[0].style.background='#000'
   fr[1].style.background='#000'
+  drn[0].style.opacity=1
   setTimeout(()=>
   {
     o.intr=setInterval(()=>{o.cl();}, 222);
@@ -244,6 +273,7 @@ o=
    btn[2].style.opacity=1
    fr[0].style.background='#f00'
    fr[1].style.background='#f00'
+   drn[0].style.opacity=0.3
   }, 2000)
  } 
 }   
@@ -280,17 +310,17 @@ btn[2].onclick=()=>
  setTimeout(()=>
  {
   idbd.style.background='linear-gradient(#bb0,#0ff)'
-  fr[0].style.background='#f00'
-  fr[1].style.background='#f00'
   btn[0].style.opacity=1
   btn[1].style.opacity=1
   btn[2].style.opacity=1
+  fr[0].style.background='#f00'
+  fr[1].style.background='#f00'
  }, 2222)
 }
 
 Iwhl0=0
 whl[0].onmouseover=()=>
-{
+{ 
  fr[0].style.background=
   'radial-gradient(#ff0,#f00)'
  fr[1].style.background=
@@ -305,6 +335,7 @@ whl[0].onmouseover=()=>
  brd[0].style.transform='scale(1.3)' 
  brd[1].style.opacity=0.5
  brd[1].style.transform='scale('+(2+3*Math.random())+')'
+ drn[0].style.opacity=1
 }
 whl[0].onmouseout=()=>
 {
@@ -316,6 +347,7 @@ whl[0].onmouseout=()=>
  brd[0].style.transform='scale(1)'	
  brd[1].style.opacity=0
  brd[1].style.transform='scale(1)'
+ drn[0].style.opacity=0.3
 }
 
 </script>
