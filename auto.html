@@ -81,6 +81,7 @@
 
  <div class=drn>
   <div class=drn></div>
+  <div class=drn></div>
  </div>
 
 <script>
@@ -239,7 +240,14 @@ drn[1].style.width=66+'%'
 drn[1].style.height=66+'%'
 drn[1].style.background=
  'radial-gradient(#999,#555)'
-drn[1].style.borderRadius=55+'%'	
+drn[1].style.borderRadius=55+'%'
+drn[2].style.left=-33+'%' 
+drn[2].style.top=-33+'%'  
+drn[2].style.width=166+'%'
+drn[2].style.height=166+'%'	
+drn[2].style.borderRadius=55+'%'
+drn[2].style.opacity=0
+drn[2].style.borderBottom='12px ridge #ff0'
 	
 o= 
 {
@@ -248,12 +256,14 @@ o=
  {  
   v=Math.round(Math.random()*3)
   whl[0].style.transform=
-   'scale('+(Math.random()+0.4)+') translate(0,11%)'+
+   'scale('+(Math.random()+0.4)+') translate('+
    'rotate('+(Math.random()*22-11)+'deg)' 
   whl[3].style.background='radial-gradient(#'+
    v+v+v+',#000)'  
-  drn[0].style.transform='skew('+(Math.random()*122-88)+
-   'deg)' 
+  drn[0].style.transform='skew('+
+   (Math.random()*122-88)+'deg)' 
+  drn[2].style.transform='skew('+
+   (Math.random()*122-88)+'deg)'  
  },
  clk:function()
  {  
@@ -336,6 +346,7 @@ whl[0].onmouseover=()=>
  brd[1].style.opacity=0.5
  brd[1].style.transform='scale('+(2+3*Math.random())+')'
  drn[0].style.opacity=1
+ drn[2].style.opacity=1 
 }
 whl[0].onmouseout=()=>
 {
@@ -348,6 +359,7 @@ whl[0].onmouseout=()=>
  brd[1].style.opacity=0
  brd[1].style.transform='scale(1)'
  drn[0].style.opacity=0.3
+ drn[2].style.opacity=0
 }
 
 </script>
