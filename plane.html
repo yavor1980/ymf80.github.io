@@ -214,7 +214,7 @@ idb.onclick=()=>
  
 plne[0].onmouseover=()=>
 {
-  prtr=3+3*Math.random()
+  prtr=3//+3*Math.random()
  plne[0].style.transform='scale(1.5)'
  plne[1].style.background=
   'radial-gradient(#0f0,#000)'
@@ -228,10 +228,15 @@ plne[0].onmouseover=()=>
  plne[7].style.transform='scale('+prtr+')'
  clds[3].style.opacity=0.6
  clds[3].style.transform=
-  'scale(9)  translate(-99%,-99%)'
+  'scale(9) translate(-333%,-33%)'
  clds[4].style.opacity=0.6
  clds[4].style.transform=
-  'scale(9) translate(-99%,-99%)'
+  'scale(9) translate(333%,-33%)'
+ setTimeout(()=>
+ { 
+  clds[3].style.opacity=0
+  clds[4].style.opacity=0
+ }, 999)
 }   
 plne[0].onmouseout=()=>
 {
