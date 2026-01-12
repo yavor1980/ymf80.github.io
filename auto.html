@@ -223,8 +223,8 @@ function itbrd(i,l,t,w,h)
   brd[1].style.opacity=0
   brd[1].style.borderRadius=55+'%'
  	
-drn[0].style.left=50+'%'  
-drn[0].style.top=22+'%'  
+drn[0].style.left=39+'%'  
+drn[0].style.top=12+'%'  
 drn[0].style.width=22+'%'
 drn[0].style.height=11+'%'
 drn[0].style.background=
@@ -259,10 +259,12 @@ o=
    'scale('+(Math.random()+0.4)+') translate('+
    'rotate('+(Math.random()*22-11)+'deg)' 
   whl[3].style.background='radial-gradient(#'+
-   v+v+v+',#000)'  
-  drn[0].style.transform='skew('+
-   (Math.random()*122-88)+'deg)' 
-  drn[2].style.transform='skew('+
+   v+v+v+',#000)' 
+  drn[0].style.transform='translate('+
+   (Math.random()*88)+'%,0%) skew('+
+   (Math.random()*122-66)+'deg)' 
+  drn[2].style.transform='translate(0%,'+
+   (Math.random()*88)+'%) skew('+
    (Math.random()*122-88)+'deg)'  
  },
  clk:function()
