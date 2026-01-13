@@ -223,6 +223,7 @@ function itbrd(i,l,t,w,h)
   brd[1].style.opacity=0
   brd[1].style.borderRadius=55+'%'
  	
+drn[0].style.zIndex=0	
 drn[0].style.left=39+'%'  
 drn[0].style.top=12+'%'  
 drn[0].style.width=22+'%'
@@ -247,7 +248,7 @@ drn[2].style.width=166+'%'
 drn[2].style.height=166+'%'	
 drn[2].style.borderRadius=55+'%'
 drn[2].style.opacity=0
-drn[2].style.borderBottom='12px ridge #ff0'
+drn[2].style.borderBottom='7px ridge #ff0'
 	
 o= 
 {
@@ -263,6 +264,7 @@ o=
   drn[0].style.transform='translate('+
    (Math.random()*88)+'%,0%) skew('+
    (Math.random()*122-66)+'deg)' 
+  drn[2].style.opacity=Math.random()
   drn[2].style.transform='translate(0%,'+
    (Math.random()*88)+'%) skew('+
    (Math.random()*122-88)+'deg)'  
@@ -348,7 +350,6 @@ whl[0].onmouseover=()=>
  brd[1].style.opacity=0.5
  brd[1].style.transform='scale('+(2+3*Math.random())+')'
  drn[0].style.opacity=1
- drn[2].style.opacity=1 
 }
 whl[0].onmouseout=()=>
 {
