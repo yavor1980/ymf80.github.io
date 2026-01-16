@@ -303,21 +303,21 @@ btn[2].onmouseout=()=>
 { 
  zpr[1].style.transform='scale(0)'
 } 
-function fzpr()
+function fzpr(v)
 {
  zpr[1].style.opacity=1
  zpr[1].style.borderRadius=15+'%'
  zpr[1].style.border='7px ridge #000'
  zpr[1].style.transform=
-  'scale(3) translate(-55%,-52%)'
-  zpr[1].innerHTML='Your ticket<br> is ordered!'
+  'scale(5) translate(-35%,-5%)'
+  zpr[1].innerHTML='Your ticket<br> is '+v
   setTimeout(()=>{
    zpr[1].style.transform='scale(0)'
   }, 1111)
 }
 dlg[2].onclick=()=>
 { 
-  fzpr()
+  fzpr('ordered!')
  dlg[0].style.zIndex=0
   lst[ilst].innerHTML=sbse[pbse]+' '+dlg[1].value
   dlg[1].value='dd.mm.yy' 
@@ -375,7 +375,7 @@ function shft()
 }
 dlgr[2].onclick=()=>
 { 
-
+  fzpr('rejected!')
  dlgr[0].style.zIndex=0
   shft()
   dlgr[1].value='dd.mm.yy' 
