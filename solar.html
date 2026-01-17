@@ -34,13 +34,9 @@
 .sol
 {
  position:absolute;   
- left:22%;
- top:22%;
- width:27%;
- height:55%;
+ transition:2s;
  background: radial-gradient(#bb0,#f00);
  border-radius:55%; 
- transition:2s;
  transition-timing-function:linear;
 }
 .plnt
@@ -48,10 +44,9 @@
  position:absolute;  
  transition:4s;
  border-radius:55%; 
- z-index:0; 
  transition-timing-function:linear;
+ cursor:pointer;
 }
-
 
 .strs
 {
@@ -59,29 +54,20 @@
  transition:2s;
  width:0.4%;
  height:1%;
+ background:#ff0;
  border-radius:55%;
  z-index:-1;
 }
 
-.shtl
+.shtl,.flm,.spce
 {
  position:absolute;  
  transition:1s;
+ cursor:pointer;
 }
 .flm
 {
- position:absolute;  
- transition:1s;
- width:11%;
- height:5%;  
  border-radius:55%;
-}
-
-.spce
-{ 
- position:absolute;
- transition:1s;
- cursor:pointer;
 }
 
 </style>
@@ -108,21 +94,23 @@
 <div class=strs></div>
 
 <div class=spce>Galaxy</div>
-<div class=spce>redshift</div>
-<div class=spce>radio galaxy</div>
-<div class=spce>Researching</div>
-<div class=spce></div>
+ <div class=spce></div>
 
 <script>
+strs=document.getElementsByClassName('strs')
+
 sol=document.getElementsByClassName('sol')
 plnt=document.getElementsByClassName('plnt')
 shtl=document.getElementsByClassName('shtl')
 flm=document.getElementsByClassName('flm')
-strs=document.getElementsByClassName('strs')
-  
+
 spce=document.getElementsByClassName('spce')
+
+sol[0].style.left=22+'%'
+sol[0].style.top=22+'%'  
+sol[0].style.width=27+'%'
+sol[0].style.height=55+'%'  
   
-sol[1].style.zIndex=-1
 sol[1].style.left=-6+'%'
 sol[1].style.top=-6+'%'  
 sol[1].style.width=111+'%'
@@ -206,47 +194,18 @@ flm[2].style.borderLeft='9px ridge #b09'
 flm[2].style.borderTop='9px ridge #b09'
 flm[2].style.opacity=0
 
-strs[0].style.left=11+'%'
-strs[0].style.top=55+'%'
-strs[0].style.background='#ff0'
-strs[1].style.left=77+'%'
-strs[1].style.top=22+'%'
-strs[1].style.background='#ff0';
-strs[2].style.left=22+'%'
-strs[2].style.top=22+'%'
-strs[2].style.background='#ff0';
-strs[3].style.left=44+'%'
-strs[3].style.top=88+'%'
-strs[3].style.background='#ff0';
-strs[4].style.left=88+'%'
-strs[4].style.top=77+'%'
-strs[4].style.background='#ff0';
-	 
-spce[0].style.left=11+'%'
-spce[0].style.top=5+'%'
+for(i=0;i<5;i++)
+{ 
+ strs[i].style.left=88*Math.random()+'%'
+ strs[i].style.top=88*Math.random()+'%'
+}
+ 
+spce[0].style.left=22+'%'
+spce[0].style.top=9+'%'
 spce[0].style.color='#ff0'
 spce[0].style.transform=
- 'scale(2.5) skew(-11deg)'
-spce[1].style.left=11+'%'
-spce[1].style.top=12+'%'
-spce[1].style.color='#d0d'
-spce[1].style.transform=
- 'scale(2.5) skew(-22deg)' 
-spce[2].style.left=11+'%'
-spce[2].style.top=19+'%'
-spce[2].style.color='#099'
-spce[2].style.transform=
- 'scale(2.5) skew(-22deg)'
-spce[3].style.left=11+'%'
-spce[3].style.top=29+'%'
-spce[3].style.color='#099'
-spce[3].style.transform=
- 'scale(2.5) skew(-22deg)'
-spce[4].style.left=45+'%'
-spce[4].style.top=63+'%'
-spce[4].style.color='#fff'
-spce[4].style.transform='scale(0) '
-	  
+ 'scale(3) skew(-22deg)'
+	 
 bclsh=0 
 function clsh()
 {
@@ -334,23 +293,19 @@ shtl[0].onmouseout=()=>
      
 shtl[2].onmouseover=()=>
 {
- shtl[2].style.cursor='pointer'
-}
-shtl[2].onclick=()=>
-{
-  idb.onmousedown() 	
+ 
 }
 
 plnt[0].onmouseover=()=>
 {
- spce[4].innerHTML='green<br> planet'
- spce[4].style.transform=
+ spce[1].innerHTML='green<br> planet'
+ spce.style.transform=
    'scale(3) translate(66%,-99%)'
- spce[4].style.color='#0f7'
+ spce.style.color='#0f7'
 }
 plnt[0].onmouseout=()=>
 {
- spce[4].style.transform='scale(0) '
+ spce.style.transform='scale(0) '
 }
 
 plnt[1].onmouseover=()=>
@@ -391,67 +346,11 @@ spce[0].onmouseover=()=>
 spce[0].onmouseout=()=>
 {
  spce[0].style.transform=
-  'scale(2.5) skew(-22deg)'
+  'scale(3) skew(-22deg)'
  spce[0].innerHTML='Galaxy'
  spce[0].style.color='#ff0'
  spce[0].style.zIndex=0
 }
-
-spce[1].onmouseover=()=>
-{
- spce[1].style.transform=
-  'scale(1.9) translate(22%,0)'
- spce[1].style.zIndex=1
- spce[1].style.color='#ccc'
-  spce[1].innerHTML=
-   'Lowering the radiation frequencies,<br>'+ 
-   'when dynamically deleting sources. <br>'+  
-   'Non-stationarity of the Metagalaxy..'	   	   
-}
-spce[1].onmouseout=()=>
-{
- spce[1].style.transform=
-  'scale(2.5) skew(-22deg)'
- spce[1].style.color='#d0d' 
- spce[1].style.zIndex=0
-  spce[1].innerHTML='кedshift'
-}
- 
-spce[2].onmouseover=()=>
-{
- spce[2].style.transform=
-   'scale(1.9) translate(22%,0)'
- spce[2].style.zIndex=1
- spce[2].style.color='#eee'
-  spce[2].innerHTML=
-  'Increased radio emission '+ 
-  '(10<sup>37</sup>10<sup>38</sup> erg/s)' 	   
-}
-spce[2].onmouseout=()=>
-{
- spce[2].style.transform=
-  'scale(2.5) skew(-22deg)'
- spce[2].style.color='#099' 
- spce[2].style.zIndex=0 
-  spce[2].innerHTML='radio galaxy'
-} 
-
-spce[3].onmouseover=()=>
-{
- spce[3].style.transform=
-   'scale(1.9) translate(22%,0)'
- spce[3].style.zIndex=1
- spce[3].style.color='#ddd'
-  spce[3].innerHTML='by complex observation...' 	   
-}
-spce[3].onmouseout=()=>
-{
- spce[3].style.transform=
-  'scale(2.5) skew(-22deg)'
- spce[3].style.color='#099' 
- spce[3].style.zIndex=0 
-  spce[3].innerHTML='Researching'
-}  
 
 </script>
 </body>
