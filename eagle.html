@@ -33,6 +33,7 @@
 {
  position:absolute;   
  transition:1s; 
+ z-index:-2; 
 }
 
 .eagle
@@ -84,7 +85,7 @@
  transform:scale(2,0.2);
 }
 
-.wrd
+.wrd,.blb
 {
  position:absolute;
  transition:2s;
@@ -99,7 +100,9 @@
 <div class=bgrnd></div>
 <div class=bgrnd></div>
 <div class=bgrnd>
- <div class=bgrnd></div>
+ <div class=bgrnd>
+  <div class=blb></div>
+ </div>
 </div>
 <div class=bgrnd></div>
 
@@ -130,6 +133,7 @@
 <script>
 btn=document.getElementsByClassName('btn')
 bgrnd=document.getElementsByClassName('bgrnd')
+blb=document.getElementsByClassName('blb')
 eagle=document.getElementsByClassName('eagle')
 hd=document.getElementsByClassName('hd')
 mth=document.getElementsByClassName('mth')
@@ -169,7 +173,8 @@ var eagl=
   bgrnd[2].style.bottom=0+'%'
   bgrnd[2].style.width=100+'%' 
   bgrnd[2].style.height=22+'%'
-  bgrnd[2].style.background='#080'
+  bgrnd[2].style.background=
+   'radial-gradient(#0c0,#080)'
   bgrnd[2].style.borderTopLeftRadius=22+'%'
   bgrnd[2].style.borderTopRightRadius=44+'%'
   bgrnd[2].style.opacity=0.7
@@ -178,9 +183,10 @@ var eagl=
   bgrnd[3].style.bottom=38+'%'
   bgrnd[3].style.width=17+'%' 
   bgrnd[3].style.height=22+'%'
-  bgrnd[3].style.background='#0ff'
+  bgrnd[3].style.background=
+   'radial-gradient(#0ff,#099)'
   bgrnd[3].style.borderRadius=55+'%'
-  bgrnd[3].style.opacity=0.3
+  bgrnd[3].style.opacity=0.9
   bgrnd[4].style.left=3+'%' 
   bgrnd[4].style.bottom=8+'%'
   bgrnd[4].style.width=47+'%' 
@@ -190,7 +196,14 @@ var eagl=
   bgrnd[4].style.borderTopRightRadius=11+'%'
   bgrnd[4].style.borderBottomLeftRadius=25+'%'
   bgrnd[4].style.borderBottomRightRadius=19+'%'
-  bgrnd[4].style.opacity=0.3
+  bgrnd[4].style.opacity=0.8
+  blb[0].style.left=13+'%' 
+  blb[0].style.top=13+'%'
+  blb[0].style.width=66+'%' 
+  blb[0].style.height=66+'%'
+  blb[0].style.background=
+   'radial-gradient(#009,#00b)' 
+  blb[0].style.borderRadius=55+'%' 
    
   eagle[1].style.left=1+'%'
   eagle[1].style.top=0+'%' 	 
@@ -258,57 +271,57 @@ var eagl=
   mth[1].style.background=
    'radial-gradient(#900,#d00)'
   
-  lwng[0].style.left='-89%'
-  lwng[0].style.top='6%'  
-  lwng[0].style.width='99%'
-  lwng[0].style.height='122%'
+  lwng[0].style.left=-89+'%'
+  lwng[0].style.top=6+'%'  
+  lwng[0].style.width=99+'%'
+  lwng[0].style.height=122+'%'
   lwng[0].style.background=
    'radial-gradient(#444,#000)'
-  lwng[1].style.left='-33%'
-  lwng[1].style.top='0%'  
-  lwng[1].style.width='99%'
-  lwng[1].style.height='99%'
+  lwng[1].style.left=-33+'%'
+  lwng[1].style.top=0+'%'  
+  lwng[1].style.width=99+'%'
+  lwng[1].style.height=99+'%'
   lwng[1].style.background=
    'radial-gradient(#444,#000)'	  
   
-  rwng[0].style.left='90%'
-  rwng[0].style.top='6%'  
-  rwng[0].style.width='99%'
-  rwng[0].style.height='122%'
+  rwng[0].style.left=90+'%'
+  rwng[0].style.top=6+'%'  
+  rwng[0].style.width=99+'%'
+  rwng[0].style.height=122+'%'
   rwng[0].style.background=
    'radial-gradient(#444,#000)'
-  rwng[1].style.left='33%'
-  rwng[1].style.top='0%'  
-  rwng[1].style.width='99%'
-  rwng[1].style.height='99%'
+  rwng[1].style.left=33+'%'
+  rwng[1].style.top=0+'%'  
+  rwng[1].style.width=99+'%'
+  rwng[1].style.height=99+'%'
   rwng[1].style.background=
    'radial-gradient(#444,#000)'
   
-  pws[0].style.left='8%' 
-  pws[0].style.top='77%'
-  pws[1].style.left='64%' 
-  pws[1].style.top='77%'
+  pws[0].style.left=8+'%' 
+  pws[0].style.top=77+'%'
+  pws[1].style.left=64+'%' 
+  pws[1].style.top=77+'%'
   
-  wrd[0].style.left='44%' 
-  wrd[0].style.top='6%'  
+  wrd[0].style.left=44+'%' 
+  wrd[0].style.top=6+'%'  
   wrd[0].style.color='#ff0' 
   wrd[0].style.opacity=0
-  wrd[0].style.fontSize='3em' 
-  wrd[1].style.left='55%'
-  wrd[1].style.top='17%'
+  wrd[0].style.fontSize=3+'em' 
+  wrd[1].style.left=55+'%'
+  wrd[1].style.top=17+'%'
   wrd[1].style.color='#404'
   wrd[1].style.opacity=0
-  wrd[1].style.fontSize='3em' 
-  wrd[2].style.left='66%' 
-  wrd[2].style.top='26%'
+  wrd[1].style.fontSize=3+'em' 
+  wrd[2].style.left=66+'%' 
+  wrd[2].style.top=26+'%'
   wrd[2].style.color='#0ff'
   wrd[2].style.opacity=0
-  wrd[2].style.fontSize='3em' 
-  wrd[3].style.left='71%' 
-  wrd[3].style.top='36%'
+  wrd[2].style.fontSize=3+'em' 
+  wrd[3].style.left=71+'%' 
+  wrd[3].style.top=36+'%'
   wrd[3].style.color='#f00'
   wrd[3].style.opacity=0	  
-  wrd[3].style.fontSize='3em'
+  wrd[3].style.fontSize=3+'em'
  },
  cl:function()
  { 
@@ -330,7 +343,7 @@ var eagl=
    (33+Math.random()*22)+'%'
   bgrnd[1].style.opacity=0.5
   bgrnd[1].style.transform= 'skew(33deg)'
-  bgrnd[3].style.opacity=0.6
+  bgrnd[3].style.opacity=0.9
   bgrnd[3].style.transform=
    'scale(1.5) translate(40%,0%)'
   bgrnd[4].style.opacity=1.0
@@ -372,9 +385,9 @@ var eagl=
   bgrnd[1].style.opacity=0
   bgrnd[1].style.transform= 
    'scale(1)  skew(30deg)'
-  bgrnd[3].style.opacity=0.3
+  bgrnd[3].style.opacity=0.8
   bgrnd[3].style.transform='scale(1)'
-  bgrnd[4].style.opacity=0.3
+  bgrnd[4].style.opacity=0.8
   bgrnd[4].style.width=47+'%'
   eagle[2].style.borderBottomLeftRadius=39+'%' 
   eagle[2].style.borderBottomRightRadius=39+'%'
