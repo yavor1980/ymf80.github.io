@@ -59,13 +59,13 @@
  z-index:-1;
 }
 
-.shtl,.flm,.spce
+.shtl,.flme,.spce
 {
  position:absolute;  
  transition:1s;
  cursor:pointer;
 }
-.flm
+.flme
 {
  border-radius:55%;
 }
@@ -73,6 +73,8 @@
 </style>
 
 <button id=idb>fire</button>
+
+<div class=spce>Galaxy</div>
 
 <div class=sol>
  <div class=sol></div>
@@ -82,9 +84,9 @@
 </div>
 
 <div class=shtl>
- <div class=shtl><div class=flm></div></div>
- <div class=shtl><div class=flm></div></div>
- <div class=shtl><div class=flm ></div></div>
+ <div class=shtl><div class=flme></div></div>
+ <div class=shtl><div class=flme></div></div>
+ <div class=shtl><div class=flme></div></div>
 </div>
 
 <div class=strs></div>
@@ -93,16 +95,13 @@
 <div class=strs></div>
 <div class=strs></div>
 
-<div class=spce>Galaxy</div>
- <div class=spce></div>
-
 <script>
 strs=document.getElementsByClassName('strs')
 
 sol=document.getElementsByClassName('sol')
 plnt=document.getElementsByClassName('plnt')
 shtl=document.getElementsByClassName('shtl')
-flm=document.getElementsByClassName('flm')
+flme=document.getElementsByClassName('flme')
 
 spce=document.getElementsByClassName('spce')
 
@@ -110,7 +109,6 @@ sol[0].style.left=22+'%'
 sol[0].style.top=22+'%'  
 sol[0].style.width=27+'%'
 sol[0].style.height=55+'%'  
-  
 sol[1].style.left=-6+'%'
 sol[1].style.top=-6+'%'  
 sol[1].style.width=111+'%'
@@ -118,26 +116,26 @@ sol[1].style.height=111+'%'
 sol[1].style.opacity='0.2'
 sol[1].style.transform='scale(1)'
  
-plnt[0].style.background=
- 'radial-gradient(#0f0,#333)'
 plnt[0].style.left=Math.random()*77+'%'
 plnt[0].style.top=Math.random()*77+'%'  
 plnt[0].style.width=44+'%'
 plnt[0].style.height=44+'%'
+plnt[0].style.background=
+ 'radial-gradient(#0f0,#333)'
 plnt[0].style.cursor='pointer'
-plnt[1].style.background=
- 'radial-gradient(#f00,#000)';
 plnt[1].style.left=Math.random()*77+'%'
 plnt[1].style.top=Math.random()*77+'%'  
 plnt[1].style.width=33+'%'
 plnt[1].style.height=33+'%'
+plnt[1].style.background=
+ 'radial-gradient(#f00,#000)'
 plnt[1].style.cursor='pointer'
-plnt[2].style.background=
- 'radial-gradient(#ff0,#333)';
 plnt[2].style.left=Math.random()*77+'%'
 plnt[2].style.top=Math.random()*77+'%'  
 plnt[2].style.width=22+'%'
 plnt[2].style.height=22+'%'  
+plnt[2].style.background=
+ 'radial-gradient(#ff0,#333)'
 plnt[2].style.cursor='pointer'
 	 
 shtl[0].style.left=66+'%'
@@ -152,54 +150,52 @@ shtl[1].style.width=99+'%'
 shtl[1].style.height=33+'%'
 shtl[1].style.background=
  'radial-gradient(#090,#444)'
-shtl[1].style.transform=
- 'rotate(0deg)  skew(0deg)'
 shtl[1].style.borderTopLeftRadius=55+'%'
 shtl[1].style.borderBottomLeftRadius=55+'%' 
-shtl[2].style.background=
- 'radial-gradient(#080,#444)' 
+shtl[1].style.transform=
+ 'rotate(0deg)  skew(0deg)'
 shtl[2].style.left=55+'%'
 shtl[2].style.top=-22+'%'  
 shtl[2].style.width=55+'%'
 shtl[2].style.height=144+'%'	
+shtl[2].style.background=
+ 'radial-gradient(#080,#444)' 
 shtl[2].style.borderRadius=22+'%'
-shtl[3].style.background=
-'radial-gradient(#090,#444)';  
 shtl[3].style.left=5+'%'
 shtl[3].style.top=77+'%'  
 shtl[3].style.width=99+'%'
 shtl[3].style.height=33+'%'	
+shtl[3].style.background=
+'radial-gradient(#090,#444)'
 shtl[3].style.borderTopLeftRadius=55+'%'
 shtl[3].style.borderBottomLeftRadius=55+'%'
 shtl[3].style.zIndex=-1
 	
-flm[0].style.left=-44+'%'
-flm[0].style.top=7+'%'  
-flm[0].style.width=33+'%'
-flm[0].style.height=99+'%'
-flm[0].style.borderLeft='9px ridge #b09'
-flm[0].style.borderTop='9px ridge #b09'
-flm[0].style.opacity=0
-flm[1].style.left=11+'%'
-flm[1].style.top=6+'%'  
-flm[1].style.width=22+'%'
-flm[1].style.height=88+'%'
-flm[1].style.borderLeft='22px ridge #b99'
-flm[1].style.opacity=0
-flm[2].style.left=-44+'%'
-flm[2].style.top=7+'%'  
-flm[2].style.width=33+'%'
-flm[2].style.height=99+'%'
-flm[2].style.borderLeft='9px ridge #b09'
-flm[2].style.borderTop='9px ridge #b09'
-flm[2].style.opacity=0
-
+flme[0].style.left=-44+'%'
+flme[0].style.top=7+'%'  
+flme[0].style.width=33+'%'
+flme[0].style.height=99+'%'
+flme[0].style.borderLeft='9px ridge #b09'
+flme[0].style.borderTop='9px ridge #b09'
+flme[0].style.opacity=0.2
+flme[1].style.left=11+'%'
+flme[1].style.top=6+'%'  
+flme[1].style.width=22+'%'
+flme[1].style.height=88+'%'
+flme[1].style.borderLeft='22px ridge #b99'
+flme[1].style.opacity=0
+flme[2].style.left=-44+'%'
+flme[2].style.top=7+'%'  
+flme[2].style.width=33+'%'
+flme[2].style.height=99+'%'
+flme[2].style.borderLeft='9px ridge #b09'
+flme[2].style.borderTop='9px ridge #b09'
+flme[2].style.opacity=0.2
 for(i=0;i<5;i++)
 { 
  strs[i].style.left=88*Math.random()+'%'
  strs[i].style.top=88*Math.random()+'%'
 }
- 
 spce[0].style.left=22+'%'
 spce[0].style.top=9+'%'
 spce[0].style.color='#ff0'
@@ -209,6 +205,8 @@ spce[0].style.transform=
 bclsh=0 
 function clsh()
 {
+ flme[0].style.transform='scale('+(1+Math.random())+')'
+ flme[2].style.transform='scale('+(1+Math.random())+')'
  if(bclsh) 
   shtl[0].style.transform=
    'scale(1.1) skew(44deg)'
@@ -224,26 +222,26 @@ function clpl()
   'scale('+(1.1+Math.random()/2)+')'  
  plnt[0].style.left=Math.random()*77+'%'
  plnt[0].style.top=Math.random()*77+'%'  
- plnt[0].style.transform='scale('+Math.random()*2	 
+ plnt[0].style.transform='scale('+Math.random()*2+')'
  plnt[1].style.left=Math.random()*77+'%'
  plnt[1].style.top=Math.random()*77+'%'  
- plnt[1].style.transform='scale('+Math.random()*2
+ plnt[1].style.transform='scale('+Math.random()*2+')'
  plnt[2].style.left=Math.random()*77+'%'
  plnt[2].style.top=Math.random()*77+'%'  
- plnt[2].style.transform='scale('+Math.random()*2
- strs[0].style.transform='scale('+Math.random()*2
+ plnt[2].style.transform='scale('+Math.random()*2+')'
+ strs[0].style.transform='scale('+Math.random()*2+')'
  strs[1].style.transform=
   'scale('+Math.random()*2+
-  'translate'+Math.random()*88+'%'
+  ') translate('+Math.random()*88+'%,0%)'
  strs[2].style.transform=
   'scale('+Math.random()*2+
-  'translate'+Math.random()*88+'%'
+  ' translate('+Math.random()*88+'%,0%)'
  strs[3].style.transform=
   'scale('+Math.random()*2+
-  'translate'+Math.random()*88+'%'
+  'translate('+Math.random()*88+'%,0%)'
  strs[4].style.transform=
   'scale('+Math.random()*2+
-  'translate'+Math.random()*88+'%'
+  'translate('+Math.random()*88+'%,0%)'
 }	  
    setInterval(()=>clsh(),2000)
    setInterval(()=>clpl(),999)
@@ -251,33 +249,34 @@ function clpl()
 function clksh()
 {
  shtl[0].style.transform=
-  'skew(22deg) scale(1.1) translate(11%,11%)' 
+  'scale(1.1) translate(11%,11%) skew(22deg)' 
 }
+
 idb.onclick=()=>
 {  
   clksh()
- flm[0].style.transition='1s'
- flm[0].style.opacity=0.7
- flm[0].style.transform=
+ flme[0].style.transition='1s'
+ flme[0].style.opacity=0.7
+ flme[0].style.transform=
   'scale(3,7) translate(-144%,0%) skew(44deg)'
- flm[1].style.opacity=0.7
- flm[2].style.transition='1s'
- flm[2].style.opacity=0.7
- flm[2].style.transform=
+ flme[1].style.opacity=0.7
+ flme[2].style.transition='1s'
+ flme[2].style.opacity=0.7
+ flme[2].style.transform=
   'scale(3,7) translate(-144%,0%) skew(44deg)'   
  shtl[2].style.borderRadius='55%'
  setTimeout(()=>{
-  shtl[2].style.borderRadius='22%'
   shtl[0].style.transform=
-   'translate(-11%,-11%) skew(44deg)'
-  flm[0].style.transition='0s'
-  flm[0].style.opacity=0
-  flm[0].style.transform=
+   'translate(-11%,-11%) skew(44deg)' 
+  shtl[2].style.borderRadius='22%'
+  flme[0].style.transition='0s'
+  flme[0].style.opacity=0.2
+  flme[0].style.transform=
    'translate(0%,0%) skew(44deg)'
-  flm[1].style.opacity=0
-  flm[2].style.transition='0s'
-  flm[2].style.opacity=0
-  flm[2].style.transform=
+  flme[1].style.opacity=0
+  flme[2].style.transition='0s'
+  flme[2].style.opacity=0.2
+  flme[2].style.transform=
    'translate(0%,0%) skew(44deg)'
  }, 1111)            
 }   
@@ -289,55 +288,17 @@ shtl[0].onmouseover=()=>
 shtl[0].onmouseout=()=>
 {
  shtl[0].style.transform='scale(1) skew(44deg)'   	
-}
-     
+}    
 shtl[2].onmouseover=()=>
 {
  
 }
 
-plnt[0].onmouseover=()=>
-{
- spce[1].innerHTML='green<br> planet'
- spce.style.transform=
-   'scale(3) translate(66%,-99%)'
- spce.style.color='#0f7'
-}
-plnt[0].onmouseout=()=>
-{
- spce.style.transform='scale(0) '
-}
-
-plnt[1].onmouseover=()=>
-{
- spce[4].innerHTML='red<br> planet'
- spce[4].style.transform=
-   'scale(3) translate(66%,-99%)'
- spce[4].style.color='#f07'
-}
-plnt[1].onmouseout=()=>
-{
- spce[4].style.transform='scale(0) '
-}
-
-plnt[2].onmouseover=()=>
-{
- spce[4].innerHTML='yellow<br> planet'
- spce[4].style.transform=
-   'scale(3) translate(66%,-99%)'
- spce[4].style.color='#ff7'
-}
-plnt[2].onmouseout=()=>
-{
- spce[4].style.transform='scale(0) '
-}
-
 spce[0].onmouseover=()=>
 {
+ spce[0].style.color='#ddd'
  spce[0].style.transform=
   'scale(1.9) translate(22%,0)'
- spce[0].style.zIndex=1
- spce[0].style.color='#ddd'
   spce[0].innerHTML=
    'A gravitationally bound system of stars,<br>'+
    'star clusters, interstellar gas <br>'+ 
@@ -345,11 +306,10 @@ spce[0].onmouseover=()=>
 }
 spce[0].onmouseout=()=>
 {
+ spce[0].style.color='#ff0'
  spce[0].style.transform=
   'scale(3) skew(-22deg)'
- spce[0].innerHTML='Galaxy'
- spce[0].style.color='#ff0'
- spce[0].style.zIndex=0
+  spce[0].innerHTML='Galaxy'
 }
 
 </script>
