@@ -23,7 +23,7 @@ input
  transform:scale(1.2);
  cursor:pointer;
 }
-.hllo,.wrld,.ttl
+.hllo,.wrld,.ttl,.wlcme
 {
  position:absolute;   
  transition:1s;
@@ -50,12 +50,23 @@ input
   <div class=wrld>D</div>
  </div> 
   <div class=ttl>!</div>
+ <div class=wlcme>
+  <div class=wlcme>W</div>
+  <div class=wlcme>E</div>
+  <div class=wlcme>L</div>
+  <div class=wlcme>L</div>
+  <div class=wlcme>C</div>
+  <div class=wlcme>O</div>
+  <div class=wlcme>M</div>
+  <div class=wlcme>E</div>
+ </div>  
  
 <script>
 btn=document.getElementsByClassName('btn')
 hllo=document.getElementsByClassName('hllo')
 wrld=document.getElementsByClassName('wrld')
 ttl=document.getElementsByClassName('ttl')
+wlcme=document.getElementsByClassName('wlcme')
   
 btn[0].style.left=83+'%'
 btn[0].style.top=5+'%'  
@@ -75,23 +86,23 @@ btn[2].style.transform='scale(2)'
 
 hllo[0].style.zIndex=1
 hllo[0].style.left=31+'%'
-hllo[0].style.top=28+'%' 
+hllo[0].style.top=16+'%' 
 hllo[0].style.width=7+'%' 
 hllo[0].style.height=3+'%'
 hllo[0].style.transform='scale(9)' 
 hllo[1].style.left=6+'%'
 hllo[1].style.color='#800'
 hllo[2].style.left=25+'%'
-hllo[2].style.color='#900'
+hllo[2].style.color='#a00'
 hllo[3].style.left=41+'%'
-hllo[3].style.color='#a00'
+hllo[3].style.color='#c00'
 hllo[4].style.left=57+'%'
-hllo[4].style.color='#900'
+hllo[4].style.color='#a00'
 hllo[5].style.left=71+'%'
 hllo[5].style.color='#800'
 
 wrld[0].style.left=38+'%'
-wrld[0].style.top=55+'%' 
+wrld[0].style.top=50+'%' 
 wrld[0].style.width=7+'%' 
 wrld[0].style.height=3+'%'
 wrld[0].style.transform='scale(9)'
@@ -110,6 +121,36 @@ ttl[0].style.left=73+'%'
 ttl[0].style.top=25+'%' 
 ttl[0].style.opacity=0
 ttl[0].style.transform='scale(19)'
+
+wlcme[0].style.left=-7+'%'
+wlcme[0].style.top=60+'%' 
+wlcme[0].style.width=88+'%' 
+wlcme[0].style.height=7+'%'
+wlcme[0].style.fontSize=9+'em'
+wlcme[1].style.left=22+'%'
+wlcme[1].style.top=60+'%' 
+wlcme[1].style.color='#505'
+wlcme[2].style.left=37+'%'
+wlcme[2].style.top=60+'%' 
+wlcme[2].style.color='#707'
+wlcme[3].style.left=47+'%'
+wlcme[3].style.top=60+'%' 
+wlcme[3].style.color='#909'
+wlcme[4].style.left=57+'%'
+wlcme[4].style.top=60+'%' 
+wlcme[4].style.color='#b0b'
+wlcme[5].style.left=67+'%'
+wlcme[5].style.top=60+'%' 
+wlcme[5].style.color='#b0b'
+wlcme[6].style.left=77+'%'
+wlcme[6].style.top=60+'%' 
+wlcme[6].style.color='#909'
+wlcme[7].style.left=87+'%'
+wlcme[7].style.top=60+'%' 
+wlcme[7].style.color='#707'
+wlcme[8].style.left=99+'%'
+wlcme[8].style.top=60+'%' 
+wlcme[8].style.color='#505'
 
 Icl=0
 function cl()
@@ -178,9 +219,10 @@ hllo[0].onmouseover=()=>
  hllo[0].style.borderRadius=25+'%'
  hllo[0].style.border='3px ridge #bb0'
   wrld[0].onmouseover()
- ttl[0].style.color='#505'
+ ttl[0].style.color='#f00'
  ttl[0].style.opacity=1
- ttl[0].style.transform='scale(29) translate(0,33%)'  
+ ttl[0].style.transform='scale(29) translate(0,30%)'  
+ wlcme[0].style.transform='scale(1.2) translate(-5%,33%)' 
 } 
 hllo[0].onmouseout=()=>
 { 
@@ -190,7 +232,8 @@ hllo[0].onmouseout=()=>
   wrld[0].onmouseout()
  ttl[0].style.color='#000'  
  ttl[0].style.opacity=0
- ttl[0].style.transform='scale(19)'   
+ ttl[0].style.transform='scale(19)'  
+ wlcme[0].style.transform='scale(1)'
 } 
 wrld[0].onmouseover=()=>
 { 
