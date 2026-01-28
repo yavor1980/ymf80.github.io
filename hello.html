@@ -215,29 +215,40 @@ btn[2].onmouseout=()=>
 
 hllo[0].onmouseover=()=>
 { 
+  clearInterval(Icl)
  hllo[0].style.background='#00d'
  hllo[0].style.borderRadius=25+'%'
  hllo[0].style.border='3px ridge #bb0'
-  wrld[0].onmouseover()
+ for(i=1;i<6;i++)
+ {
+  hllo[i].style.transform='scale(1)'
+  wrld[i].style.transform='scale01)'
+ } 
+ wrld[0].style.background='#0b0'
+ wrld[0].style.borderRadius=25+'%'
+ wrld[0].style.border='3px ridge #bb0'
  ttl[0].style.color='#f00'
  ttl[0].style.opacity=1
  ttl[0].style.transform='scale(29) translate(0,30%)'  
- wlcme[0].style.transform='scale(1.2) translate(0%,28%)' 
+ wlcme[0].style.transform='scale(1.2) translate(0%,0%)' 
  wlcme[1].style.transform='scale(1.2) translate(-5%,3%)'
- wlcme[2].style.transform='scale(1.2) translate(-5%,3%)'
- wlcme[3].style.transform='scale(1.2) translate(-5%,3%)' 
- wlcme[4].style.transform='scale(1.2) translate(-5%,3%)'
- wlcme[5].style.transform='scale(1.2) translate(-5%,3%)'
- wlcme[6].style.transform='scale(1.2) translate(-5%,3%)' 
+ wlcme[2].style.transform='scale(1.2) translate(-5%,6%)'
+ wlcme[3].style.transform='scale(1.2) translate(-5%,9%)' 
+ wlcme[4].style.transform='scale(1.2) translate(-5%,12%)'
+ wlcme[5].style.transform='scale(1.2) translate(-5%,9%)'
+ wlcme[6].style.transform='scale(1.2) translate(-5%,6%)' 
  wlcme[7].style.transform='scale(1.2) translate(-5%,3%)'
- wlcme[8].style.transform='scale(1.2) translate(-5%,3%)' 
+ wlcme[8].style.transform='scale(1.2) translate(0%,0%)' 
 } 
 hllo[0].onmouseout=()=>
 { 
+  Icl=setInterval(cl, 1000)
  hllo[0].style.background='none'
  hllo[0].style.borderRadius=0+'%'
  hllo[0].style.border='none'
-  wrld[0].onmouseout()
+  wrld[0].style.background='none'
+  wrld[0].style.borderRadius=0+'%'
+  wrld[0].style.border='none'
  ttl[0].style.color='#000'  
  ttl[0].style.opacity=0
  ttl[0].style.transform='scale(19)'  
@@ -253,22 +264,11 @@ hllo[0].onmouseout=()=>
 } 
 wrld[0].onmouseover=()=>
 { 
-  clearInterval(Icl)
- for(i=1;i<6;i++)
- {
-  hllo[i].style.transform='scale(1)'
-  wrld[i].style.transform='scale01)'
- } 
- wrld[0].style.background='#0b0'
- wrld[0].style.borderRadius=25+'%'
- wrld[0].style.border='3px ridge #bb0'
+ hllo[0].onmouseover()
 } 
 wrld[0].onmouseout=()=>
 { 
-  Icl=setInterval(cl, 1000)
- wrld[0].style.background='none'
- wrld[0].style.borderRadius=0+'%'
- wrld[0].style.border='none'
+ hllo[0].onmouseout()
 } 
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
