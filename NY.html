@@ -217,7 +217,8 @@ crstint[3].style.opacity=0.6
 crstint[3].style.borderTopLeftRadius=55+'%' 
 crstint[3].style.borderTopRightRadius=44+'%'
 crstint[3].style.transform=
- 'scale(3.4,2.1) skew(0deg)' 
+ 'scale(3.4,2.1) skew(0deg)'
+crstint[4].style.zIndex=1
 crstint[4].style.left=1+'%'
 crstint[4].style.top=33+'%'
 crstint[4].style.transform='scale(0)'
@@ -383,8 +384,8 @@ fcrtr=()=>
 }
 crstmtr[0].onmouseover=()=>
 {
- bckrnd[1].style.transform='scale(7)'
- //crstmtr[0].style.transform='scale(1.01)'
+ bckrnd[1].style.transform='scale(6)'
+ crstmtr[0].style.transform='scale(1.01)'
  crstmtr[7].style.background=
   'radial-gradient(#040,#0d0)'
  crstmtr[8].style.background=
@@ -396,11 +397,11 @@ crstmtr[0].onmouseover=()=>
  crstintt[0].style.background=
   'radial-gradient(#ff0,#bb0)'
  crstint[4].style.color='#f00' 
- //crstint[4].style.transform=
+ crstint[4].style.transform=
   'scale(4) translate(88%,-66%) skew(11deg)'
   fcrtr()
   Itr=setInterval(fcrtr, 999)
-  snwmn[0].onmouseover()
+  //snwmn[0].onmouseover()
 } 
 crstmtr[0].onmouseout=()=>
 {
