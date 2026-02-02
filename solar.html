@@ -202,21 +202,7 @@ spce[0].style.top=9+'%'
 spce[0].style.color='#ff0'
 spce[0].style.transform=
  'scale(3) skew(-22deg)'
-	 
-bclsh=0 
-function clsh()
-{
- flme[0].style.transform='scale('+(2,1+2*Math.random())+')'
- flme[2].style.transform='scale('+(2,1+2*Math.random())+')'
- if(bclsh) 
-  shtl[0].style.transform=
-   'scale(1.1) skew(44deg)'
- else 
-  shtl[0].style.transform=
-   'scale(0.9) skew(55deg) '
-     bclsh=!bclsh
-}
-
+ 
 function clpl()
 {
  sol[1].style.transform=
@@ -232,23 +218,35 @@ function clpl()
  plnt[2].style.transform='scale('+Math.random()*2+')'
  for(i=0;i<3;i++)
  {
-  flme[i].style.transition=1+'s'
+ // flme[i].style.transition=1+'s'
   strs[i].style.transform=
    'scale('+Math.random()*5+
    ') translate('+Math.random()*88+'%,0%)'
  } 
 }	  
-   setInterval(()=>clsh(),2000)
-   setInterval(()=>clpl(),1111)
-
-function clksh()
+	 
+bclsh=0 
+function clsh()
 {
- shtl[0].style.transform=
-  'scale(1.1) translate(11%,11%) skew(22deg)' 
+ flme[0].style.transition=1+'s'
+ flme[0].style.transform='scale('+(2,1+2*Math.random())+')'
+ flme[2].style.transition=1+'s'
+ flme[2].style.transform='scale('+(2,1+2*Math.random())+')'
+ if(bclsh) 
+  shtl[0].style.transform=
+   'scale(1.1) skew(44deg)'
+ else 
+  shtl[0].style.transform=
+   'scale(0.9) skew(55deg) '
+     bclsh=!bclsh
 }
+   setInterval(()=>clpl(),1111)
+   setInterval(()=>clsh(),2000)
+   
 idb.onmousemove=()=>
 {  
-  clksh()
+ shtl[0].style.transform=
+  'scale(1.1) translate(11%,11%) skew(22deg)' 
  flme[0].style.transition=1+'s'
  flme[0].style.opacity=0.7
  flme[0].style.transform=
@@ -278,12 +276,13 @@ idb.onmouseout=()=>
    
 shtl[0].onmouseover=()=>
 {
-  //clksh()
  shtl[0].style.transform='scale(2) skew(22deg)'
+ flme[1].style.opacity=1
 }
 shtl[0].onmouseout=()=>
 {
- shtl[0].style.transform='scale(1) skew(44deg)'   	
+ shtl[0].style.transform='scale(1) skew(44deg)'  
+ flme[1].style.opacity=0
 }    
 shtl[2].onmouseover=()=>
 {
