@@ -2,9 +2,7 @@
 <html>
 <head>
 <meta charset='utf-8'>
-
 </head>
-
 <body id=idbd>
 <style>
 #idbd
@@ -203,6 +201,7 @@ spce[0].style.color='#ff0'
 spce[0].style.transform=
  'scale(3) skew(-22deg)'
  
+strsX=111, strsY=111
 function clpl()
 {
  sol[1].style.transform=
@@ -216,12 +215,12 @@ function clpl()
  plnt[2].style.left=Math.random()*77+'%'
  plnt[2].style.top=Math.random()*77+'%'  
  plnt[2].style.transform='scale('+Math.random()*2+')'
- for(i=0;i<3;i++)
+ for(i=0;i<5;i++)
  {
- // flme[i].style.transition=1+'s'
   strs[i].style.transform=
    'scale('+Math.random()*5+
-   ') translate('+Math.random()*88+'%,0%)'
+   ') translate('+Math.random()*strsX+'%,'+
+   Math.random()*strsY+'%)'
  } 
 }	  
 	 
@@ -276,18 +275,16 @@ idb.onmouseout=()=>
    
 shtl[0].onmouseover=()=>
 {
+  strsX=777, strsY=666
  shtl[0].style.transform='scale(2) skew(22deg)'
  flme[1].style.opacity=1
 }
 shtl[0].onmouseout=()=>
 {
+  strsX=111, strsY=111
  shtl[0].style.transform='scale(1) skew(44deg)'  
  flme[1].style.opacity=0
 }    
-shtl[2].onmouseover=()=>
-{
- 
-}
 
 spce[0].onmouseover=()=>
 {
