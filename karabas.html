@@ -10,7 +10,7 @@
  background:linear-gradient(#dd0,177px,#333);
 }
 
-.kttl,.bttl,.blb,.ttl,.pna,.cncr,.lcncrcl,.rcncrcl
+.kttl,.bttl,.blb,.ttl,.pna,.cncr,.lcncrcl,.rcncrcl,.tl
 {
  position:absolute;   
  transition:1s;
@@ -49,6 +49,7 @@
  <div class=cncr></div>
  <div class=cncr></div>
  <div class=cncr></div>
+ <div class=tl></div>
  <div class=cncr>
   <div class=cncr></div>
  </div>
@@ -68,6 +69,7 @@ ttl=document.getElementsByClassName('ttl')
 blb=document.getElementsByClassName('blb')
 pna=document.getElementsByClassName('pna')
 cncr=document.getElementsByClassName('cncr')
+tl=document.getElementsByClassName('tl')
 lcncrcl=document.getElementsByClassName('lcncrcl')
 rcncrcl=document.getElementsByClassName('rcncrcl')
 
@@ -141,7 +143,6 @@ blb[2].style.left=-30+'%'
 blb[2].style.top=13+'%'
 blb[2].style.width=30+'%'
 blb[2].style.height=60+'%'
-blb[2].style.height=60+'%'
 blb[2].style.borderRadius=55+'%'
 blb[2].style.border='22px ridge #ddd'
 blb[2].style.zIndex=-1
@@ -209,6 +210,15 @@ cncr[5].style.border='7px ridge #000'
 cncr[5].style.borderTop='7px ridge transparent'
 cncr[5].style.borderRadius=55+'%'
 cncr[5].style.zIndex=-1
+tl[0].style.left=5+'%'
+tl[0].style.top=109+'%'
+tl[0].style.width=98+'%'
+tl[0].style.height=43+'%'
+tl[0].style.background=
+ 'radial-gradient(#f00,#cc0)'
+tl[0].style.borderRadius=55+'%' 
+tl[0].style.borderBottomLeftRadius=22+'%'
+tl[0].style.borderBottomRightRadius=22+'%'
 lcncrcl[0].style.left=-55+'%'
 lcncrcl[0].style.top=-33+'%'
 lcncrcl[0].style.width=68+'%'
@@ -226,8 +236,6 @@ lcncrcl[1].style.height=69+'%'
 lcncrcl[1].style.background=
  'linear-gradient(#dd0,#333)'
 lcncrcl[1].style.borderRadius=44+'%'
-//lcncrcl[1].style.borderTopLeftRadius=14+'%'
-//lcncrcl[1].style.borderTopRightRadius=14+'%'
 rcncrcl[0].style.left=90+'%'
 rcncrcl[0].style.top=-34+'%'
 rcncrcl[0].style.width=68+'%'
@@ -279,6 +287,8 @@ function fkmv()
   (33+22*Math.random())+'%'  
  pna[1].style.transform='scale('+(1+Math.random())+
   ','+(1+Math.random())+')'
+ tl[0].style.transform='scale(1,'+(1+Math.random()/5)+')'+
+ +'translate(0%,-99%)'  
  lcncrcl[0].style.transform='rotate(-11deg) scale('+
   (1+Math.random())+') '
  lcncrcl[1].style.borderBottom='8px ridge #000'
