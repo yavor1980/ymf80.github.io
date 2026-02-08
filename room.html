@@ -32,7 +32,7 @@ button:hover
  border-radius:5%; 
 }
 
-.drn
+.drn,.prplr
 {
  position:absolute;
  cursor:pointer; 
@@ -40,13 +40,11 @@ button:hover
 }
 .prplr
 {
- position:absolute;
- cursor:pointer; 
  transition:2s;
  opacity:0.5;
 }
 
-.vctr,.frz
+.vctr
 {
  position:absolute;
  cursor:pointer; 
@@ -273,10 +271,13 @@ function fdrn()
 {
  if(bbtn0==0)
  {
-  imgg[0].style.opacity=0
-  imgg[1].style.opacity=0
-  imgg[2].style.opacity=0
-  btn[1].onclick()
+  imgg[0].style.opacity=Math.random()///6
+  imgg[0].style.transform='scale('+Math.random()+')'
+  imgg[1].style.opacity=Math.random()
+  imgg[1].style.transform='scale('+Math.random()+')'
+  imgg[2].style.opacity=Math.random()
+  imgg[2].style.transform='scale('+Math.random()+')'
+   btn[1].onclick()
   drn[0].style.border='11px ridge #400'
   drn[1].style.background='#400'
   drn[2].style.background='#300'
@@ -319,8 +320,11 @@ function fdrn()
  else
  {
   imgg[0].style.opacity=1
+  imgg[0].style.transform='scale(1)'
   imgg[1].style.opacity=1
+  imgg[1].style.transform='scale(1)'
   imgg[2].style.opacity=1
+  imgg[2].style.transform='scale(1)'
   drn[0].style.border='9px ridge #900'
   drn[0].style.transform='scale(1.4)'
   drn[1].style.background='#800'
