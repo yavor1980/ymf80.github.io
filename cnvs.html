@@ -178,7 +178,7 @@ btn[0].onclick=()=>
  bcnvs=!bcnvs
  if(bcnvs)
  {
-  btn[0].style.background='#090'
+  btn[0].style.background='#00f'
   btn[0].value='draw'
  } 
  else
@@ -187,8 +187,14 @@ btn[0].onclick=()=>
   btn[0].value='Stop'
  } 
 }
+bcl=0
 btn[1].onclick=()=>
 {
+ if(bcl)
+  btn[1].style.background='#090'
+ else
+  btn[1].style.background='#b00'
+   bcl=!bcl
  bcnvs=1
 }
 btn[2].onclick=()=>
