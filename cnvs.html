@@ -187,22 +187,28 @@ btn[0].onclick=()=>
   btn[0].value='Stop'
  } 
 }
+function fcl(i)
+{ 
+ if(bcl)
+  btn[i].style.background='#00f'
+ else
+  btn[i].style.background='#f00'
+   bcl=!bcl
+}
 bcl=0
 btn[1].onclick=()=>
 {
- if(bcl)
-  btn[1].style.background='#090'
- else
-  btn[1].style.background='#b00'
-   bcl=!bcl
+  fcl(1)
  bcnvs=1
 }
 btn[2].onclick=()=>
 {
+  fcl(2)
  bcnvs=2
 }
 btn[3].onclick=()=>
 {
+  fcl(3)
  bcnvs=3
 }
 
