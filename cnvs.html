@@ -125,7 +125,7 @@ function faxs()
 var shft=66, scle=22, trvl=1, Iosc=0, ff=22
 function foscll()
 { 
-  ff=0
+  ff=1
  cntxt.strokeStyle='#b00'
  for(i=0;i<333;i++)
  {
@@ -168,50 +168,15 @@ Iosc=setInterval(()=>{
  }  
 }, 999)   
 }
-function frnd(d)
+function fbtn(i)
 { 
- dd=d
+ btn[i].onclick=()=>
+ {   
+   bcnvs=i
+  btn[i].style.background='#b00'
+ }
 }
-function fcl(i)
-{ 
- if(bcl)
-  btn[i].style.background='#00f'
- else
-  btn[i].style.background='#f00'
-   bcl=!bcl
-}
-
-btn[0].onclick=()=>
-{   
- bcnvs=!bcnvs
- if(bcnvs)
- {
-  btn[0].style.background='#00f'
-  btn[0].value='draw'
- } 
- else
- {
-  btn[0].style.background='#b00'
-  btn[0].value='Stop'
- } 
-}
-
-bcl=0
-btn[1].onclick=()=>
-{
-  fcl(1)
- bcnvs=1
-}
-btn[2].onclick=()=>
-{
-  fcl(2)
- bcnvs=2
-}
-btn[3].onclick=()=>
-{
-  fcl(3)
- bcnvs=3
-}
+ fbtn(0), fbtn(1), fbtn(2), fbtn(3)
 
 btn[4].onclick=()=>
 { 
@@ -236,7 +201,7 @@ btnd[1].onclick=()=>
  else
  {
   btnd[1].style.background='#090'
-  clearInterval(Iosc)
+   clearInterval(Iosc)
   ff=0
    btnd[1].value='Mono'
  }
@@ -256,7 +221,7 @@ btnd[2].onclick=()=>
  else
  {
   btnd[2].style.background='#090'
-  clearInterval(Iosc)
+   clearInterval(Iosc)
   ff=0
   btnd[2].value='Poly'
  }
@@ -279,20 +244,23 @@ btnd[3].onclick=()=>
   ff=0
   btnd[3].value='Hz'
  }
- boscll=!boscll
+   boscll=!boscll
 }
 
 cnv[0].onmousemove=()=>
 {
  cnv[0].style.border='11px ridge #ee0'
- if(bcnvs==0) fdrw()  
- if(bcnvs==4) frnd(22*Math.random())
+  if(bcnvs==0) fdrw()  
+  if(bcnvs==4) frnd(22*Math.random())
 }
 cnv[0].onmouseout=()=>
 {
+ for(i=0;i<4;i++)
+ {
+  btn[i].style.background='#00f'
+ } 
  cnv[0].style.border='11px ridge #ff0'
- frnd(5)
- //bcnvs==-1
+  bcnvs=-1
 }
 cnv[0].onclick=()=>
 { 
