@@ -37,7 +37,10 @@ body
 {
  border-radius:54%; 
 }
-
+.bllts
+{
+ z-index:-1; 
+}
 
 </style>
 
@@ -78,6 +81,22 @@ bllts[0].style.borderTopRightRadius=49+'%'
 bllts[0].style.background=
  'linear-gradient(#333,#900)'
 bllts[0]. style.opacity=0.2
+bllts[1].style.left=Math.random()*77+'%'
+bllts[1].style.top=Math.random()*66+'%'
+bllts[1].style.width=9+'%'
+bllts[1].style.height=4+'%' 
+bllts[1].style.borderRadius=55+'%'
+bllts[1].style.background=
+ 'linear-gradient(#333,#900)'
+bllts[1].style.opacity=0.2
+bllts[2].style.left=Math.random()*77+'%'
+bllts[2].style.top=Math.random()*66+'%'
+bllts[2].style.width=9+'%'
+bllts[2].style.height=4+'%' 
+bllts[2].style.borderRadius=55+'%'
+bllts[2].style.background=
+ 'linear-gradient(#333,#900)'
+bllts[2].style.opacity=0.2
 
 plne[0].style.left=33+'%'
 plne[0].style.top=33+'%'
@@ -169,6 +188,14 @@ Icl=0
 function cl()
 {   
  vgf=Math.random()/2
+ bllts[1].style.transform=
+  'scale('+(Math.random()/2+1)+ ') translate('+
+  (Math.random()*144-77) +'%,0%) rotate('+
+  (Math.random()*44-22)+'deg)'
+ bllts[2].style.transform=
+  'scale('+(Math.random()/2+1)+ ') translate('+
+  (Math.random()*144-77) +'%,0%) rotate('+
+  (Math.random()*44-22)+'deg)'  
  plne[0].style.transform=
   'scale('+(Math.random()/5+1)+ ') rotate('+
   (Math.random()*44-22)+'deg)'
