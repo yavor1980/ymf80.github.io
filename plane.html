@@ -27,26 +27,17 @@ body
  transform:scale(1.2);
 }
 
-.plne
+.plne,.clds,.bllts
 {
  position:absolute;
- cursor:pointer;
  transition:1s;
- left:33%;
- top:33%;
- width:33%;
- height:8%;
+ cursor:pointer;
 }
-
 .clds
 {
- position:absolute;
- transition:1s;
- cursor:pointer;
  border-radius:54%; 
- font-size:2em;
- text-align:center;
 }
+
 
 </style>
 
@@ -70,10 +61,28 @@ body
  </div>
 </div>
 
-<script>
-clds=document.getElementsByClassName('clds')
-plne=document.getElementsByClassName('plne')
+<div class=bllts></div>
+<div class=bllts></div>
+<div class=bllts></div>
 
+<script>
+bllts=document.getElementsByClassName('bllts')
+plne=document.getElementsByClassName('plne')
+clds=document.getElementsByClassName('clds')
+
+bllts[0].style.bottom=0+'%'
+bllts[0].style.width=99+'%'
+bllts[0].style.height=11+'%' 
+bllts[0].style.borderTopLeftRadius=29+'%'
+bllts[0].style.borderTopRightRadius=49+'%'
+bllts[0].style.background=
+ 'linear-gradient(#333,#900)'
+bllts[0]. style.opacity=0.2
+
+plne[0].style.left=33+'%'
+plne[0].style.top=33+'%'
+plne[0].style.width=33+'%'
+plne[0].style.height=8+'%' 
 plne[1].style.left=2+'%'
 plne[1].style.top=3+'%'
 plne[1].style.width=100+'%'
@@ -189,10 +198,11 @@ function cl()
   ')translate('+Math.random()*42+
   '%,'+Math.random()*42+'%)' 
 }
-    Icl=setInterval(cl, 999)
+  Icl=setInterval(cl, 999)
  
 idb.onclick=()=>
 { 
+
   clearInterval(Icl)
  plne[0].style.transform=
   'scale(2) translate(0,99%) rotate(0deg)'
@@ -202,6 +212,7 @@ idb.onclick=()=>
  plne[7].style.opacity=0.6
  setTimeout(()=>
  {
+  
    Icl=setInterval(cl,999);
   plne[3].style.transform='scale(1)'
   plne[3].style.background=
@@ -211,12 +222,20 @@ idb.onclick=()=>
  }  ,88)
 }
  
+Ibllts=0
 plne[0].onmouseover=()=>
 {
+ Ibllts=setInterval(()=>
+ { 
+  bllts[0].style.opacity=Math.random()
+  plne[1].style.transform='skew('+
+  (Math.random()*110-55)+'deg)'
+ }, 999)
   prtr=3+3*Math.random()
  plne[0].style.transform='scale(1.5)'
  plne[1].style.background=
   'radial-gradient(#0f0,#000)'
+ plne[1].style.transform='skew(55deg)' 
  plne[2].style.background=
   'radial-gradient(#0f0,#000)'
  plne[3].style.background=
@@ -243,9 +262,12 @@ plne[0].onmouseover=()=>
 }   
 plne[0].onmouseout=()=>
 {
+  clearInterval(Ibllts)
+ bllts[0].style.opacity=0.2
  plne[0].style.transform='scale(1)' 
  plne[1].style.background=
   'linear-gradient(#0b0,#000)'
+ plne[1].style.transform='skew(-55deg)' 
  plne[2].style.background=
   'linear-gradient(#0b0,#000)'
  plne[3].style.background=
