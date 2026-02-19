@@ -92,7 +92,6 @@ plne[2].style.borderTopLeftRadius=44+'%'
 plne[2].style.borderTopRightRadius=44+'%'
 plne[2].style.borderBottomLeftRadius=33+'%'
 plne[2].style.borderBottomRightRadius=33+'%'
-plne[2].style.transform='skew(0deg)'
 plne[2].style.zIndex=-1  
 plne[3].style.left=40+'%'
 plne[3].style.top=18+'%'
@@ -162,8 +161,8 @@ function cl()
 {   
  vgf=Math.random()/2
  plne[0].style.transform=
-   'rotate('+(Math.random()*44-22)+'deg)'
-   +'scale('+(Math.random()/5+1)+')'  
+  'scale('+(Math.random()/5+1)+ ') rotate('+
+  (Math.random()*44-22)+'deg)'
  plne[5].style.transform=
   'scale('+(vgf+3)+')'   
  plne[7].style.transform=
@@ -214,7 +213,7 @@ idb.onclick=()=>
  
 plne[0].onmouseover=()=>
 {
-  prtr=3//+3*Math.random()
+  prtr=3+3*Math.random()
  plne[0].style.transform='scale(1.5)'
  plne[1].style.background=
   'radial-gradient(#0f0,#000)'
@@ -226,17 +225,21 @@ plne[0].onmouseover=()=>
  plne[5].style.transform='scale('+prtr+')'
  plne[7].style.opacity=0.6 
  plne[7].style.transform='scale('+prtr+')'
+ clds[3].style.transition=1+'s'
  clds[3].style.opacity=0.6
  clds[3].style.transform=
   'scale(9) translate(-333%,-33%)'
+ clds[4].style.transition=1+'s' 
  clds[4].style.opacity=0.6
  clds[4].style.transform=
   'scale(9) translate(333%,-33%)'
  setTimeout(()=>
  { 
+  clds[3].style.transition=0+'s'
   clds[3].style.opacity=0
+  clds[4].style.transition=0+'s'
   clds[4].style.opacity=0
- }, 999)
+ }, 899)
 }   
 plne[0].onmouseout=()=>
 {
@@ -257,45 +260,19 @@ plne[0].onmouseout=()=>
  clds[4].style.transform='scale(1)'
 }
 
-clds[0].onmouseover=()=>
-{	
- clds[0].style.fontSize='3em'
- clds[0].style.textAlign='center'
- clds[0].style.paddingTop='6%'
- clds[0].style.transform='scale(1.2,1)'
-}
-clds[0].onmouseout=()=>
-{	
- clds[0].style.fontSize='2em'
- clds[0].style.paddingTop='0%'
- clds[0].style.transform='scale(1)'
-}
+function clcld(i)
+{
+ clds[i].onmouseover=()=>
+ {  	
+  clds[i].style.transform='scale(1.2,1)'
+ }
+ clds[i].onmouseout=()=>
+ {	
+  clds[i].style.transform='scale(1)'
+ }
+} 
+ clcld(0), clcld(1), clcld(2)
 
-clds[1].onmouseover=()=>
-{	
- clds[1].style.fontSize='3em'
- clds[1].style.paddingTop='6%'
- clds[1].style.transform='scale(1.2,1)'
-}
-clds[1].onmouseout=()=>
-{	
- clds[1].style.fontSize='2em'
- clds[1].style.paddingTop='0%'
- clds[1].style.transform='scale(1)'
-}
-
-clds[2].onmouseover=()=>
-{	
- clds[2].style.fontSize='2em'
- clds[2].style.textAlign='center'
- clds[2].style.transform='scale(2,1)'
-}
-clds[2].onmouseout=()=>
-{	
- clds[2].style.fontSize='2em'
- clds[2].style.paddingTop='1%'
- clds[2].style.transform='scale(1)'
-}
 
 </script>
 </body>
