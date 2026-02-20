@@ -85,18 +85,18 @@ bllts[1].style.left=Math.random()*77+'%'
 bllts[1].style.top=Math.random()*66+'%'
 bllts[1].style.width=9+'%'
 bllts[1].style.height=4+'%' 
-bllts[1].style.borderRadius=55+'%'
+bllts[1].style.borderRadius=29+'%'
 bllts[1].style.background=
  'linear-gradient(#333,#900)'
-bllts[1].style.opacity=0.2
+bllts[1].style.opacity=0.6
 bllts[2].style.left=Math.random()*77+'%'
 bllts[2].style.top=Math.random()*66+'%'
 bllts[2].style.width=9+'%'
 bllts[2].style.height=4+'%' 
-bllts[2].style.borderRadius=55+'%'
+bllts[2].style.borderRadius=28+'%'
 bllts[2].style.background=
  'linear-gradient(#333,#900)'
-bllts[2].style.opacity=0.2
+bllts[2].style.opacity=0.6
 
 plne[0].style.left=33+'%'
 plne[0].style.top=33+'%'
@@ -191,11 +191,11 @@ function cl()
  bllts[1].style.transform=
   'scale('+(Math.random()/2+1)+ ') translate('+
   (Math.random()*144-77) +'%,0%) rotate('+
-  (Math.random()*44-22)+'deg)'
+  (Math.random()*44-22)+'deg) skew(44deg)'
  bllts[2].style.transform=
   'scale('+(Math.random()/2+1)+ ') translate('+
   (Math.random()*144-77) +'%,0%) rotate('+
-  (Math.random()*44-22)+'deg)'  
+  (Math.random()*44-22)+'deg) skew(44deg)'  
  plne[0].style.transform=
   'scale('+(Math.random()/5+1)+ ') rotate('+
   (Math.random()*44-22)+'deg)'
@@ -255,6 +255,8 @@ plne[0].onmouseover=()=>
  Ibllts=setInterval(()=>
  { 
   bllts[0].style.opacity=Math.random()
+  bllts[1].style.transform='translate(0,777%) skew(-44deg)'
+  bllts[2].style.transform='translate(0,777%) skew(-44deg)'
   plne[1].style.transform='skew('+
   (Math.random()*110-55)+'deg)'
  }, 999)
