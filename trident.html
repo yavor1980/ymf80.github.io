@@ -67,6 +67,7 @@ trdnt[1].style.height=14+'%'
 trdnt[1].style.background='#fff'
 trdnt[1].style.borderBottomLeftRadius=55+'%'
 trdnt[1].style.borderBottomRightRadius=55+'%'
+trdnt[1].style.borderBottom='11px ridge #ff9'
 trdnt[2].style.left=44+'%'
 trdnt[2].style.top=7+'%'
 trdnt[2].style.width=14+'%'
@@ -94,6 +95,14 @@ trdnt[4].style.borderTopLeftRadius=55+'%'
 trdnt[4].style.borderTopRightRadius=55+'%'
 trdnt[4].style.borderBottomLeftRadius=35+'%'
 trdnt[4].style.borderBottomRightRadius=35+'%'
+trdnt[5].style.zIndex=-1
+trdnt[5].style.left=36+'%'
+trdnt[5].style.top=88+'%'
+trdnt[5].style.width=22+'%'
+trdnt[5].style.height=22+'%'
+trdnt[5].style.borderRadius=55+'%'
+trdnt[5].style.opacity=0.2
+trdnt[5].style.border='11px ridge #ff9'
 
 for(i=0;i<7;i++)
 {
@@ -120,7 +129,7 @@ ttl[2].style.height=22+'%'
 ttl[2].style.background='#556'
 ttl[2].style.borderRadius=55+'%'
 ttl[2].style.opacity=0.6
-ttl[2].style.zIndex=-1
+ttl[2].style.zIndex=-2
 
 Icl=0
 function fcl()
@@ -166,14 +175,21 @@ trdnt[0].onmouseover=()=>
  trdnt[0].style.background='#008'
  trdnt[0].style.border='11px ridge #990'
  trdnt[1].style.background='#ff0'
+ trdnt[1].style.borderBottom='28px ridge #ff9'
  trdnt[2].style.background='#ff0'
  trdnt[3].style.background='#ff0'
  trdnt[4].style.background='#ff0'
+ trdnt[5].style.opacity=1
+ trdnt[5].style.transform='scale(1.2) translate(7%,0)'
  ttl[0].style.background='#f00'
  ttl[0].style.color='#f0f'
+ ttl[0].style.borderBottom='2px ridge #f9f'
+ ttl[0].style.borderRight='2px ridge #f9f'
   ttl[0].innerHTML= 'Added'
  ttl[1].style.background='#f0f'
  ttl[1].style.color='#b00'
+ ttl[1].style.borderBottom='1px ridge #000'
+ ttl[1].style.borderRight='1px ridge #000'
    ttl[1].innerHTML= 'Value'
    fttl()
  ttl[2].style.borderRadius=0+'%'   
@@ -192,15 +208,20 @@ trdnt[0].onmouseout=()=>
  trdnt[0].style.background='#999'
  trdnt[0].style.border='11px ridge #fff'
  trdnt[1].style.background='#fff'
+ trdnt[1].style.borderBottom='11px ridge #ff9'
  trdnt[2].style.background='#fff'
  trdnt[3].style.background='#fff'
  trdnt[4].style.background='#fff'
+ trdnt[5].style.opacity=0.2
+ trdnt[5].style.transform='scale(1) '
  ttl[0].style.background='none'
  ttl[0].style.color='#444'
+ ttl[0].style.border='none'
  ttl[0].style.transform='scale(7) skew(12deg)'
   ttl[0].innerHTML= 'Resource'
  ttl[1].style.background='none' 
  ttl[1].style.color='#440' 
+ ttl[1].style.border='none'
  ttl[1].style.transform='scale(7) skew(17deg)'
   ttl[1].innerHTML= 'Curse'
  ttl[2].style.background='#556' 
