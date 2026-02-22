@@ -152,7 +152,7 @@ Iosc=setInterval(()=>{
  }, imtosc)
 }
 
-var Ihz=0,dd=5
+var Ihz=0,dd=5, ddd=1
 function fHz()
 { 
 Iosc=setInterval(()=>{
@@ -165,6 +165,8 @@ Iosc=setInterval(()=>{
   cntxt.moveTo(i*dd,68-y/2)
   cntxt.lineTo(i*dd,33+y)
   cntxt.stroke()
+  // ddd++; dd+=ddd
+ // if(ddd>33) ddd=-1*ddd 
  }  
 }, 999)   
 }
@@ -264,7 +266,8 @@ cnv[0].onmouseout=()=>
   btn[i].style.background='#00f'
  } 
  cnv[0].style.border='11px ridge #ff0'
-  bcnvs=-1
+ // bcnvs=-1
+  dd=5
 }
 cnv[0].onclick=()=>
 { 
@@ -273,7 +276,7 @@ cnv[0].onclick=()=>
   case 1: frndline(); break;
   case 2: fround(); break;
   case 3: fline(); break;
-  //case 4: frnd(); break;
+  case 4: frnd(); break;
  }  
 }
 
