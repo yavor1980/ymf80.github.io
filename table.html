@@ -23,7 +23,7 @@
 {
  position:absolute;
  transition:1s;
- transform:scale(2);
+ z-index:1;
 }
 
 #idfc
@@ -73,6 +73,11 @@
  transition:1s; 
  cursor:pointer;
 }
+.tbl
+{
+ z-index:1;
+}
+
 td
 {
  transition:1s; 
@@ -131,15 +136,9 @@ td
   <td>0</td>
  </tr>
 </table>
-<div class=tbl>
- How to improve it?
-</div>
-<div class=tbl>
- n-dimensial table
-</div>
-<div class=tbl>
- to define dimentions
-</div>
+<div class=tbl></div>
+<div class=tbl></div>
+<div class=tbl></div>
 
 <div class=dgrm>
  <div class=dgrm></div>
@@ -177,11 +176,13 @@ btn[1].style.color='#00f'
     
 tbtn[0].style.left=44+'%'
 tbtn[0].style.top=3+'%' 
+tbtn[0].style.background='#ff0'
 tbtn[0].style.color='#f00'
 tbtn[0].style.transform='scale(0)'
 tbtn[1].style.left=44+'%'
 tbtn[1].style.top=3+'%'  
-tbtn[1].style.color='#00f'
+tbtn[1].style.background='#ff0'
+tbtn[1].style.color='#f0f'
 tbtn[1].style.transform='scale(0)'
 
 fc[0].style.left=22+'%'
@@ -382,12 +383,14 @@ function cl()
 btn[0].onmouseover=()=>
 {
  btn[0].style.transform='scale(1.8)'
+ tbtn[0].style.borderRadius=22+'%'
  tbtn[0].style.transform=
-  'scale(2) translate(22%,99%) skew(22deg)'
+  'scale(4) translate(20%,99%) skew(22deg)'
 }
 btn[0].onmouseout=()=>
 {
  btn[0].style.transform='scale(1.5)'
+ tbtn[0].style.borderRadius=0+'%' 
  tbtn[0].style.transform='scale(0)'
 }
 btn[0].onclick=()=>
@@ -402,12 +405,14 @@ for(i=0;i<9;i++)
 btn[1].onmouseover=()=>
 {
  btn[1].style.transform='scale(1.8)'
+ tbtn[1].style.borderRadius=22+'%'
  tbtn[1].style.transform=
-  'scale(2) translate(22%,99%) skew(-22deg)'
+  'scale(4) translate(22%,99%) skew(-22deg)'
 }
 btn[1].onmouseout=()=>
 {
  btn[1].style.transform='scale(1.5)'
+ tbtn[1].style.borderRadius=0+'%' 
  tbtn[1].style.transform='scale(0)'
 }
 btn[1].onclick=()=>
@@ -489,8 +494,6 @@ tbl[0].onmouseover=()=>
  dgrm[7].style.opacity=0.2
  dgrm[8].style.opacity=0.2
  dgrm[9].style.opacity=0.2
- tbl[1].style.transform=
-  'scale(2) translate(33%,-177%) skew(19deg)'
  Itbl0=setInterval(()=>
  {
   dgrm[1].style.opacity=Math.random()
@@ -502,20 +505,6 @@ tbl[0].onmouseover=()=>
   dgrm[7].style.opacity=Math.random()
   dgrm[8].style.opacity=Math.random()
   dgrm[9].style.opacity=Math.random()
-  if(btbl0){
-   tbl[2].style.transform=
-    'scale(2) translate(33%,-77%) skew(-19deg)'
-   tbl[3].style.transform=
-    'scale(3) translate(33%,-77%) skew(19deg)'
-  }
-  else
-  {
-   tbl[2].style.transform=
-    'scale(3) translate(33%,-77%) skew(19deg) '
-   tbl[3].style.transform=
-    'scale(2) translate(33%,-77%) skew(-19deg)'
-  }
-    btbl0=!btbl0
  }, 999)
 }
 tbl[0].onmouseout=()=>
@@ -531,9 +520,6 @@ tbl[0].onmouseout=()=>
  dgrm[7].style.opacity=0
  dgrm[8].style.opacity=0
  dgrm[9].style.opacity=0
- tbl[1].style.transform='scale(0)'
- tbl[2].style.transform='scale(0)'
- tbl[3].style.transform='scale(0)'
   clearInterval(Itbl0)
 } 
 tbl[0].onclick=()=>
