@@ -6,30 +6,13 @@ body
 {
  background:linear-gradient(0deg,#000,#303);
 }
-button
-{
- position:absolute;
- cursor:pointer;
-}
-
-.grnd
-{
- position:absolute;
- transition:1s;
-}
-
-.pzr
+button,.grnd,.pzr,.hd,.frz,.prgrss,.scty
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
 }
 
-.hd
-{
- position:absolute;
- transition:1s; 
-}
 .pw,.bpw
 {
  position:absolute;
@@ -37,12 +20,6 @@ button
  width:33%;
  height:22%;
  border-radius:22%;
-}
-.frz,.prgrss,.scty
-{
- position:absolute;
- transition:1s;
- cursor:pointer;
 }
 
 </style>
@@ -68,33 +45,21 @@ button
   <div class=hd></div> 
  </div>
 </div>
- <div class=></div> 
-<div class=frz>
- PROGRESS<br> CAN'T BE<br> STOPPED
-</div>
-<div class=frz>
- turtle is symbol
-</div>
 
-<div class=prgrss>
- Progress
-</div>
-<div class=prgrss>
- Increasing the level<br> of organization
-</div>
-<div class=prgrss>
- The complexity<br> of the organization
-</div>
+ <div class=frz>PROGRESS<br> CAN'T BE<br> STOPPED</div>
+ <div class=frz>turtle is symbol</div>
 
-<div class=scty>
- PostIndustrial<br> society 
-</div>
-<div class=scty>
- Innovation<br> economy
-</div>
-<div class=scty>
- Venture business
-</div>
+<div class=prgrss>Progress</div>
+ <div class=prgrss>
+  Increasing the level<br> of organization
+ </div>
+ <div class=prgrss>
+  The complexity<br> of the organization
+ </div>
+
+<div class=scty></div>
+<div class=scty></div>
+<div class=scty></div>
  
 <script>
 bdy=document.getElementsByTagName('body')
@@ -228,25 +193,25 @@ frz[1].style.left=44+'%'
 frz[1].style.top=20+'%'
 frz[1].style.transform='scale(0)'
  
-prgrss[0].style.left=11+'%' 
-prgrss[0].style.top=7+'%'
+prgrss[0].style.left=21+'%' 
+prgrss[0].style.top=9+'%'
 prgrss[0].style.color='#0f0'
-prgrss[0].style.transform='scale(2)'
+prgrss[0].style.transform='scale(5) skew(22deg)'
 prgrss[0].style.cursor='pointer' 
 prgrss[1].style.left=11+'%' 
 prgrss[1].style.top=12+'%'
-prgrss[1].style.color='#0f0' 
+prgrss[1].style.color='#000' 
 prgrss[1].style.transform='scale(0)'
 prgrss[2].style.left=11+'%' 
 prgrss[2].style.top=6+'%'
-prgrss[2].style.color='#0f0' 
+prgrss[2].style.color='#000' 
 prgrss[2].style.transform='scale(0)'
   
 scty[0].style.left=62+'%' 
 scty[0].style.top=9+'%'
 scty[0].style.color='#0f0' 
 scty[0].style.transform='scale(2)'
-scty[1].style.left=19+'%' 
+scty[1].style.left=66+'%' 
 scty[1].style.top=22+'%'
 scty[1].style.color='#ff0' 
 scty[1].style.transform='scale(2)'
@@ -293,8 +258,6 @@ Ipzr0=0
 bpzr0=0
 pzr[0].onmouseover=()=>
 { 
- bdy[0].style.background=
-  'linear-gradient(0deg,#000,#505)' 
  grnd[1].style.background=
   'radial-gradient(#220,#080)'
  grnd[2].style.opacity=0.8
@@ -339,8 +302,6 @@ pzr[0].onmouseover=()=>
 }
 pzr[0].onmouseout=()=>
 {
- bdy[0].style.background=
-  'linear-gradient(0deg,#000,#303)'
  grnd[1].style.background=
   'radial-gradient(#440,#0b0)'
  grnd[2].style.opacity=0.1
@@ -359,80 +320,32 @@ pzr[0].onmouseout=()=>
 prgrss[0].onmouseover=()=>
 {
  prgrss[0].style.zIndex=1
+ prgrss[0].style.borderRadius=22+'%'
+ prgrss[0].style.background='#ff0'
  prgrss[0].style.color='#f00'
  prgrss[0].style.transform=
   'scale(2.4) translate(11%,0)' 
   prgrss[0].innerHTML=
    'development direction<br> from lowest to highest'
- prgrss[1].style.color='#880'
+ prgrss[1].style.background='#ff0'
  prgrss[1].style.transform=
   'scale(2) translate(0,88%) skew(-12deg)' 
- prgrss[2].style.color='#bb0'
+ prgrss[2].style.background='#ff0'
  prgrss[2].style.transform=
   'scale(2) translate(0,233%) skew(-12deg)'
 }
 prgrss[0].onmouseout=()=>
 {
  prgrss[0].style.zIndex=0
+ prgrss[0].style.borderRadius=0+'%'
+ prgrss[0].style.background='none'
  prgrss[0].style.color='#0f0'
- prgrss[0].style.transform='scale(2)' 
+ prgrss[0].style.transform='scale(5) skew(22deg)' 
   prgrss[0].innerHTML='Progress'
  prgrss[1].style.transform='scale(0)' 
  prgrss[2].style.transform='scale(0)'    
 }      
 
-scty[0].onmouseover=()=>
-{
-  scty[0].innerHTML=
-   'the economy is dominated<br> '+
-   'by an innovative sector with<br> '+
-   'high-performance industry' 
- scty[0].style.zIndex=1
- scty[0].style.transform='scale(2.4) skew(-12deg)' 
- scty[0].style.color='#f0f'
-}
-scty[0].onmouseout=()=>
-{
- scty[0].style.zIndex=0
- scty[0].style.transform='scale(2)' 
- scty[0].style.color='#0f0'
-  scty[0].innerHTML='PostIndustrial<br> society'
-}   
-  
-scty[1].onmouseover=()=>
-{
-  scty[1].innerHTML=
-   'Innovations demanded<br> by the consumer'
- scty[1].style.transform='scale(2.4) skew(-12deg)' 
- scty[1].style.color='#0f0'
- scty[1].style.zIndex=1
-}
-scty[1].onmouseout=()=>
-{
- scty[1].innerHTML=
-  'Innovation<br>economy'
- scty[1].style.transform='scale(2)' 
- scty[1].style.color='#ff0'
- scty[1].style.zIndex=0
-}  
-
-scty[2].onmouseover=()=>
-{
-  scty[2].innerHTML=
-    'introduction of advanced<br>'+  
-	'technologies into production'
- scty[2].style.transform=
-  'scale(2.4) translate(11%,0) skew(-12deg)' 
- scty[2].style.color='#0ff'
- scty[2].style.zIndex=1
-}
-scty[2].onmouseout=()=>
-{
-  scty[2].innerHTML='Venture business'
- scty[2].style.transform='scale(2) ' 
- scty[2].style.color='#00f'
- scty[2].style.zIndex=0
-}  
 
 </script>
 </body>
