@@ -29,8 +29,9 @@ button,.grnd,.pzr,.hd,.frz,.prgrss,.scty
 <div class=grnd>
  <div class=grnd></div>
 </div>
-<div class=grnd></div>
-<div class=grnd></div>
+<div class=grnd>
+ <div class=grnd></div>
+</div>
  
 <div class=pzr>
  <div class=pzr></div>
@@ -56,10 +57,6 @@ button,.grnd,.pzr,.hd,.frz,.prgrss,.scty
  <div class=prgrss>
   The complexity<br> of the organization
  </div>
-
-<div class=scty></div>
-<div class=scty></div>
-<div class=scty></div>
  
 <script>
 bdy=document.getElementsByTagName('body')
@@ -109,6 +106,13 @@ grnd[2].style.background=
  'radial-gradient(#444,#bbb)'
 grnd[2].style.opacity=0.1
 grnd[2].style.borderRadius=55+'%'
+grnd[3].style.left=33+'%'
+grnd[3].style.top=12+'%'
+grnd[3].style.width=33+'%'
+grnd[3].style.height=33+'%'
+grnd[3].style.background=
+ 'radial-gradient(#fff,#bb0)'
+grnd[3].style.borderRadius=55+'%'  
   
 pzr[0].style.left=33+'%' 
 pzr[0].style.top=49+'%'
@@ -207,19 +211,6 @@ prgrss[2].style.top=6+'%'
 prgrss[2].style.color='#000' 
 prgrss[2].style.transform='scale(0)'
   
-scty[0].style.left=62+'%' 
-scty[0].style.top=9+'%'
-scty[0].style.color='#0f0' 
-scty[0].style.transform='scale(2)'
-scty[1].style.left=66+'%' 
-scty[1].style.top=22+'%'
-scty[1].style.color='#ff0' 
-scty[1].style.transform='scale(2)'
-scty[2].style.left=33+'%' 
-scty[2].style.top=9+'%' 
-scty[2].style.color='#00f'
-scty[2].style.transform='scale(2)'  
-  
 Ig=0
 bg=0
 function mv()
@@ -261,12 +252,14 @@ pzr[0].onmouseover=()=>
  grnd[1].style.background=
   'radial-gradient(#220,#080)'
  grnd[2].style.opacity=0.8
- grnd[2].style.transform='translate(0%, -33%)'  
+ grnd[2].style.border='11px ridge #ff7'
+ grnd[3].style.border='11px ridge #ff7'
  frz[0].style.color='#f00'
  frz[1].style.color='#f80'
   b=Math.round(Math.random())
  if(b)
  {
+  grnd[2].style.transform='translate(0%, -44%)'
   hd[0].style.transform=
    'scale(1.4) translate(-33%, -33%)'  
   pzr[1].style.transform=
@@ -274,7 +267,7 @@ pzr[0].onmouseover=()=>
   pw[0].style.transform=
    'scale(1) translate(-7%, -3%)'   
   pw[1].style.transform=
-   'scale(1) translate(-7%, -3%)'  
+   'scale(1) translate(-7%, -3%)'    
   frz[0].style.transform=
    'scale(3) skew(-33deg) translate(33%, 22%)' 
   frz[0].style.zIndex=1
@@ -283,6 +276,7 @@ pzr[0].onmouseover=()=>
  }
   else
  {
+  grnd[2].style.transform='translate(0%, -55%)' 
   hd[0].style.transform=
    'scale(1.4) translate(33%, -33%)'
   pzr[1].style.transform=
@@ -305,7 +299,9 @@ pzr[0].onmouseout=()=>
  grnd[1].style.background=
   'radial-gradient(#440,#0b0)'
  grnd[2].style.opacity=0.1
-  grnd[2].style.transform='translate(0%, 0%)'
+ grnd[2].style.border='none'
+ grnd[2].style.transform='translate(0%, 0%)'
+ grnd[3].style.border='none' 
  hd[0].style.transform='scale(1)' 
  pzr[1].style.transform='scale(1)'
  pw[0].style.transform='scale(1)'
