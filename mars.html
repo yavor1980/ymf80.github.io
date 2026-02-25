@@ -27,7 +27,6 @@
  border-radius:55%;
  cursor:pointer;
 }
-
 .star
 {
  position:absolute;
@@ -361,10 +360,10 @@ ss=
   {
    hd[0].style.transform='rotate(-44deg)'
    llg[0].style.transform= 
-	'translate(0%,19%) scale(1,1.1)' 
+	'scale(1,1.1) translate(0%,19%)' 
    llg[1].style.transform='scale(1)' 
    rlg[0].style.transform= 
-	'translate(0%,-19%) scale(1.6,0.9)' 
+	'scale(1.6,0.9) translate(0%,-19%)' 
    rlg[1].style.transform='scale(1,2.6)'	
   }	
     ss.b=!ss.b
@@ -378,17 +377,44 @@ idsI=0
 bids=0
 ids.onmouseover=()=>
 {
- lhnd[2].style.transform='scale('+(4+Math.random())+')'
- rhnd[2].style.transform='scale('+(4+Math.random())+')'
+ lhnd[0].style.transform=
+  'scale(1.5,0.5) translate(-96%,-63%) rotate(72deg)'
+ rhnd[0].style.transform=
+  'scale(1.5,0.5) translate(22%,-63%) rotate(-15deg)' 
  idsI=setInterval(()=>{
   for(i=0;i<5;i++)
    fids[i]=Math.round(Math.random()) 
+ ids.style.background=
+  'radial-gradient(#909,#ff0)' 
+ lhnd[0].style.transform=
+  'scale(1.5,0.5) translate(-16%,-63%) rotate('+
+  (77*Math.random()-4)+'deg)'
+ lhnd[1].style.background=
+  'radial-gradient(#909,#000)'
+ lhnd[1].style.transform=
+  'scale(2,2) rotate(-55deg)'
+ rhnd[0].style.transform=
+  'scale(1.5,0.5) translate(22%,-63%) rotate(-15deg)'
+ rhnd[1].style.background=
+  'radial-gradient(#909,#000)' 
+ rhnd[1].style.transform=
+  'scale(1.2,1.2) rotate(-55deg)'
+ hd[0].style.transform=
+  'scale(3,3) translate(0%,0%)'
+ hd[1].style.transform='scale(2,2)'
+ hd[1].style.background=
+  'radial-gradient(#303,#d00)'
+ hd[2].style.transform='scale(2,2)'
+ hd[2].style.background=
+  'radial-gradient(#303,#d00)'
+ hd[3].style.height='28%'  
   me[0].innerHTML=fids[0]+''+fids[1]+''+fids[2]+''+
    fids[3]+''+fids[4]   
   if(bids)
   {
    lhnd[2].style.transform=
-    'scale('+(4+2*Math.random())+') rotate(44deg)'
+    'scale('+(4+2*Math.random())+') rotate('+
+	(44*Math.random()-88)+'deg)'
    rhnd[2].style.transform=
     'scale('+(4+2*Math.random())+') rotate(99deg)'    
    me[0].style.transform=
@@ -422,29 +448,7 @@ ids.onmouseover=()=>
   me[1].innerHTML='Hi!'
  me[1].style.transform=
   'scale(3) translate(4px,-66px) skew(22deg)'
- ids.style.background=
-  'radial-gradient(#909,#ff0)' 
- lhnd[0].style.transform=
-  'scale(1.5,0.5) translate(-96%,-63%) rotate(72deg)'
- lhnd[1].style.background=
-  'radial-gradient(#909,#000)'
- lhnd[1].style.transform=
-  'scale(2,2) rotate(-55deg)'
- rhnd[0].style.transform=
-  'scale(1.5,0.5) translate(22%,-63%) rotate(-15deg)'
- rhnd[1].style.background=
-  'radial-gradient(#909,#000)' 
- rhnd[1].style.transform=
-  'scale(1.2,1.2) rotate(-55deg)'
- hd[0].style.transform=
-  'scale(3,3) translate(0%,0%)'
- hd[1].style.transform='scale(2,2)'
- hd[1].style.background=
-  'radial-gradient(#303,#d00)'
- hd[2].style.transform='scale(2,2)'
- hd[2].style.background=
-  'radial-gradient(#303,#d00)'
- hd[3].style.height='28%' 
+ 
 }   
 ids.onmouseout=()=>{
  for(i=0;i<5;i++)
