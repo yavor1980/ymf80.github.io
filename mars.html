@@ -231,6 +231,10 @@ ss=
   hd[0].style.top=-33+'%'
   hd[0].style.width=44+'%'
   hd[0].style.height=44+'%'  
+  hd[0].style.borderTopLeftRadius=5+'%' 
+  hd[0].style.borderTopRightRadius=5+'%'  
+  hd[0].style.borderBottomLeftRadius=5+'%' 
+  hd[0].style.borderBottomRightRadius=5+'%' 
   hd[1].style.left=29+'%'
   hd[1].style.top=29+'%'
   hd[1].style.width=11+'%'
@@ -382,6 +386,17 @@ ids.onmouseover=()=>
    fids[i]=Math.round(Math.random()) 
  ids.style.background=
   'radial-gradient(#909,#ff0)' 
+ hd[0].style.borderBottomLeftRadius=55+'%' 
+ hd[0].style.borderBottomRightRadius=55+'%' 
+ hd[0].style.transform=
+  'scale(3,3) translate(0%,0%)'
+ hd[1].style.transform='scale(2,2)'
+ hd[1].style.background=
+  'radial-gradient(#303,#d00)'
+ hd[2].style.transform='scale(2,2)'
+ hd[2].style.background=
+  'radial-gradient(#303,#d00)'
+ hd[3].style.height='28%'   
  lhnd[0].style.transform=
   'scale(1.5,0.5) translate(-16%,-63%) rotate('+
   (77*Math.random()-4)+'deg)'
@@ -395,15 +410,6 @@ ids.onmouseover=()=>
   'radial-gradient(#909,#000)' 
  rhnd[1].style.transform=
   'scale(1.2,1.2) rotate(-55deg)'
- hd[0].style.transform=
-  'scale(3,3) translate(0%,0%)'
- hd[1].style.transform='scale(2,2)'
- hd[1].style.background=
-  'radial-gradient(#303,#d00)'
- hd[2].style.transform='scale(2,2)'
- hd[2].style.background=
-  'radial-gradient(#303,#d00)'
- hd[3].style.height='28%'  
   me[0].innerHTML=fids[0]+''+fids[1]+''+fids[2]+''+
    fids[3]+''+fids[4]   
   if(bids)
@@ -449,11 +455,15 @@ ids.onmouseout=()=>{
  for(i=0;i<5;i++)
   fids[i]=0
  ids.style.background='radial-gradient(#555,#ff0)'
- me[0].style.transform='scale(0)'
- me[0].style.color='#fff' 
- me[1].style.transform='scale(0) translate(0,-1px)'
- me[2].style.transform='scale(0) '
-  me[1].innerHTML='Bye!'
+ hd[0].style.borderBottomLeftRadius=5+'%' 
+ hd[0].style.borderBottomRightRadius=5+'%' 
+ hd[0].style.transform=
+  'scale(1,1) translate(0%,0%)'
+ hd[1].style.background='#900'
+ hd[1].style.transform='scale(1,1)'
+ hd[2].style.background='#900'
+ hd[2].style.transform='scale(1,1)'
+ hd[3].style.height='11%'
  lhnd[0].style.transform='scale(1,1) rotate(0deg)'
  rhnd[0].style.transform='scale(1,1) rotate(0deg)'
  lhnd[1].style.background=
@@ -464,13 +474,11 @@ ids.onmouseout=()=>{
   'linear-gradient(#444,#000)'
  rhnd[1].style.transform='scale(1,1) rotate(0deg)'
  rhnd[2].style.transform='scale(1)'
- hd[0].style.transform=
-  'scale(1,1) translate(0%,0%)'
- hd[1].style.background='#900'
- hd[1].style.transform='scale(1,1)'
- hd[2].style.background='#900'
- hd[2].style.transform='scale(1,1)'
- hd[3].style.height='11%'
+ me[0].style.transform='scale(0)'
+ me[0].style.color='#fff' 
+ me[1].style.transform='scale(0) translate(0,-1px)'
+ me[2].style.transform='scale(0) '
+  me[1].innerHTML='Bye!'
   clearInterval(idsI)
 } 
 
