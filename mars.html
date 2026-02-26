@@ -91,6 +91,7 @@
  position:absolute;
  transition:1s;
  cursor:pointer;
+ color:#500;
  font-size:2em;
  text-align:center;
 }
@@ -133,12 +134,11 @@
 </div>
 
 <div class=inf>what?</div>
-<div class=inf>how?</div>
 <div class=inf>who?</div>
  <div class=inf>new order!</div>
  <div class=inf>disorgnzsd!</div>
- <div class=me></div>
- <div class=me></div>
+  <div class=me></div>
+  <div class=me></div>
   <div class=me>answer me!</div>
 
 <script>
@@ -183,15 +183,15 @@ grd=
   kr3[1].style.top=20+'%'
   kr3[1].style.width=55+'%' 
   kr3[1].style.height=55+'%'
-  star[0].style.left=Math.random()*88+'%' 
+  star[0].style.left=Math.random()*44+'%' 
   star[0].style.top=Math.random()*44+'%'     
-  star[1].style.left=Math.random()*88+'%' 
+  star[1].style.left=Math.random()*44+'%' 
   star[1].style.top=Math.random()*44+'%'
-  star[2].style.left=Math.random()*88+'%' 
+  star[2].style.left=Math.random()*44+'%' 
   star[2].style.top=Math.random()*44+'%'
-  star[3].style.left=Math.random()*88+'%' 
+  star[3].style.left=Math.random()*44+'%' 
   star[3].style.top=Math.random()*44+'%'
-  star[4].style.left=Math.random()*88+'%' 
+  star[4].style.left=Math.random()*44+'%' 
   star[4].style.top=Math.random()*44+'%'
  },
  cl:function()
@@ -312,33 +312,29 @@ ss=
   rhnd[2].style.opacity=0.4
   
   inf[0].style.left=70+'%'
-  inf[0].style.top=9+'%'
+  inf[0].style.top=3+'%'
   inf[0].style.width=22+'%'
   inf[0].style.height=11+'%'
   inf[0].style.background='#ff0'
   inf[0].style.opacity=0.3
   inf[1].style.left=70+'%'
-  inf[1].style.top=33+'%'
+  inf[1].style.top=22+'%'
   inf[1].style.width=22+'%'
   inf[1].style.height=11+'%'
-  inf[1].style.background='#f60'
-  inf[1].style.opacity=0.4
+  inf[1].style.background='#ff0'
+  inf[1].style.opacity=0.3
   inf[2].style.left=44+'%'
   inf[2].style.top=7+'%'
   inf[2].style.width=22+'%'
   inf[2].style.height=11+'%'
-  inf[2].style.background='#f60'
+  inf[2].style.transform='scale(0)'
   inf[2].style.opacity=0.3
   inf[3].style.left=22+'%'
   inf[3].style.top=7+'%'
   inf[3].style.width=22+'%'
   inf[3].style.height=11+'%'
   inf[3].style.transform='scale(0)'
-  inf[4].style.left=22+'%'
-  inf[4].style.top=7+'%'
-  inf[4].style.width=22+'%'
-  inf[4].style.height=11+'%'
-  inf[4].style.transform='scale(0)'
+
  },
  cl:function()
  {
@@ -448,7 +444,6 @@ ids.onmouseover=()=>
   me[1].innerHTML='Hi!'
  me[1].style.transform=
   'scale(3) translate(4px,-66px) skew(22deg)'
- 
 }   
 ids.onmouseout=()=>{
  for(i=0;i<5;i++)
@@ -497,76 +492,62 @@ kr3[0].onmouseover=()=>
 
 inf[0].onmouseover=()=>
 {   
- inf[0].style.fontSize='2em'
+ inf[0].style.height=16+'%'
  inf[0].style.color='#f00'
- inf[0].style.opacity= 1 
- inf[0].style.height= 16+'%'
+ inf[0].style.fontSize=2.8+'em'
  inf[0].style.border='9px ridge #f0f'
+ inf[0].style.opacity=1 
   inf[0].innerHTML= 
-   '&nbsp martian<br> &nbsp &nbsp &nbsp landform '
+   'martian<br> &nbsp &nbsp landform '
 }     
 inf[0].onmouseout=()=>
 {   
- inf[0].innerHTML= 'what?'
- inf[0].style.color='#000'
- inf[0].style.opacity= 0.3
- inf[0].style.height= 11+'%'
- inf[0].style.border='' 
-} 
-
-inf[1].onmouseover=()=>
-{   
- inf[1].style.height= 16+'%'
- inf[1].style.color= '#0f0'
- inf[1].style.border='9px ridge #0ff'
- inf[1].style.opacity=1 
- inf[1].style.fontSize='2em'
-  inf[1].innerHTML= 'focus<br> civiliztn'
-}     
-inf[1].onmouseout=()=>
-{ 
- inf[1].style.height= 11+'%'
- inf[1].style.border='none'
- inf[1].style.opacity= 0.3
-  inf[1].innerHTML= 'how?'
+ inf[0].style.height=11+'%'
+ inf[0].style.color='#500'
+ inf[0].style.fontSize=2+'em'
+ inf[0].style.border='none' 
+ inf[0].style.opacity=0.3
+  inf[0].innerHTML= 'what?'
 } 
 
 inf2I=0
 binf2=1
-inf[2].onmouseover=()=>
+inf[1].onmouseover=()=>
 {   
- inf[2].style.opacity=1 
- inf[2].style.color='#0f0'
- inf[2].style.fontSize='2em'
- inf[2].style.border='9px ridge #ff0'
- inf[2].style.transform=
+ inf[1].style.opacity=1
+ inf[1].style.color='#f00'
+ inf[1].style.fontSize=2.8+'em'
+ inf[1].style.border='9px ridge #f0f'
+ inf[1].style.transform=
   'scale(1.2) translate(0,-22%)'
- inf[3].style.transform= 
+ inf[2].style.zIndex=4 
+ inf[2].style.color='#f00'
+ inf[2].style.transform= 
   'scale(2) translate(-11%,39%) rotate(-33deg)'
- inf[3].style.color='#f00'
- inf[3].style.zIndex=4
- inf[4].style.transform=
+ inf[3].style.transform=
   'scale(2) translate(-33%,199%) skew(-33deg)'
- inf[4].style.color='#ff0'
- inf[4].style.zIndex=1
- inf2I= setInterval(()=>{
+ inf[3].style.color='#ff0'
+ inf[3].style.zIndex=1
+ inf2I=setInterval(()=>{
   if(binf2)
-   inf[2].innerHTML= "who's me?"
+   inf[1].innerHTML= "who's me?"
   else
-   inf[2].innerHTML= "tell me it!"
+   inf[1].innerHTML= "tell me it!"
     binf2=!binf2
  },  1222)   
 }     
-inf[2].onmouseout=()=>
+inf[1].onmouseout=()=>
 {   
- inf[2].style.opacity=0.3
- inf[2].style.border='none'
- inf[2].style.transform='scale(1)'
-  inf[2].innerHTML= 'who?'
- inf[3].style.transform='scale(0)'
+ inf[1].style.color='#500'
+ inf[1].style.opacity=0.3
+ inf[1].style.fontSize=2+'em'
+ inf[1].style.border='none'
+ inf[1].style.transform='scale(1)'
+  inf[1].innerHTML= 'who?'
+ inf[2].style.transform='scale(0)'
+ inf[2].style.color='#000'
+ inf[3].style.transform='scale(0) '
  inf[3].style.color='#000'
- inf[4].style.transform='scale(0) '
- inf[4].style.color='#000'
   clearInterval(inf2I)
   binf2=1
 } 
