@@ -23,13 +23,14 @@
 {
  position:absolute;
  transition:2s;
+ cursor:pointer;
  background:radial-gradient(#f00,#000);
  border-radius:55%;
- cursor:pointer;
 }
 .star
 {
  position:absolute;
+ transition:1s;
  width:1%;
  height:1%;
  background:#ff0;
@@ -50,7 +51,6 @@
  border-top-right-radius:22%;
  border-bottom-left-radius:35%;
  border-bottom-right-radius:35%;
- z-index:1;
 }
 .hd
 {
@@ -58,7 +58,6 @@
  transition:2s;
  background:linear-gradient(-89deg,#555,#ff0);
  border-radius:4%; 
- z-index:1;
 }
 .lhnd,.rhnd
 {
@@ -383,7 +382,11 @@ ids.onmouseover=()=>
   'scale(1.5,0.5) translate(22%,-63%) rotate(-15deg)' 
  idsI=setInterval(()=>{
   for(i=0;i<5;i++)
+  {
    fids[i]=Math.round(Math.random()) 
+   star[i].style.transform='translate('+
+    1289*Math.random()+'%,'+1289*Math.random()+'%)'
+  }
  ids.style.background=
   'radial-gradient(#909,#ff0)' 
  hd[0].style.borderBottomLeftRadius=55+'%' 
@@ -457,7 +460,10 @@ ids.onmouseover=()=>
 }   
 ids.onmouseout=()=>{
  for(i=0;i<5;i++)
+ {
   fids[i]=0
+  star[i].style.transform='scale(1)'
+ }
  ids.style.background='radial-gradient(#555,#ff0)'
  hd[0].style.borderBottomLeftRadius=5+'%' 
  hd[0].style.borderBottomRightRadius=5+'%' 
