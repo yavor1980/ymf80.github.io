@@ -23,28 +23,13 @@
  transform:scale(1.3);
 }
 
-.jws
-{
- position:absolute;   
- transition:1s;
- cursor:pointer;
- left:33%;
- top:8%; 
- width:16%;
- height:44%;
- background:radial-gradient(#bbb,#660);
- border-top-left-radius:77%;
- border-top-right-radius:77%;  
- border-bottom-left-radius:33%;
- border-bottom-right-radius:33%; 
-}
-.mth,.gl,.ns,.lwng,.rwng,.plh
+.jws,.mth,.gl,.ns,.lwng,.rwng,.plh
 {
  position:absolute;   
  transition:1s;
 }
 
-.exctr
+.texctr
 {
  position:absolute;    
  transition:1s;
@@ -86,24 +71,23 @@
 
 <div class=shrm>Sentence...</div> 
  
-<div class=exctr >Executnr </div> 
-<div class=exctr >Execute(vctm)</div>
+<div class=texctr >Executnr </div> 
+ <div class=texctr >Execute(vctm)</div>
 
 <script>
-btn=document.getElementsByClassName('btn')
+var btn=document.getElementsByClassName('btn')
    
-jws=document.getElementsByClassName('jws')
-gl=document.getElementsByClassName('gl')
-ns=document.getElementsByClassName('ns')
-mth=document.getElementsByClassName('mth')
-lwng=document.getElementsByClassName('lwng')
-rwng=document.getElementsByClassName('rwng')
-plh=document.getElementsByClassName('plh')
-shrm=document.getElementsByClassName('shrm')
-   
-exctr=document.getElementsByClassName('exctr')
-vctr=document.getElementsByClassName('vctr')
-   
+var jws=document.getElementsByClassName('jws')
+var gl=document.getElementsByClassName('gl')
+var ns=document.getElementsByClassName('ns')
+var mth=document.getElementsByClassName('mth')
+var lwng=document.getElementsByClassName('lwng')
+var rwng=document.getElementsByClassName('rwng')
+var plh=document.getElementsByClassName('plh')
+
+var shrm=document.getElementsByClassName('shrm')
+var texctr=document.getElementsByClassName('texctr'  )
+
 btn[0].style.right=5+'%'
 btn[0].style.top=5+'%'  
 btn[0].style.width=9+'%'
@@ -119,6 +103,26 @@ btn[1].style.background=
  'radial-gradient(#f00,#620)';
 btn[1].style.borderRadius=44+'%'
 
+jws[0].style.cursor='pointer'
+jws[0].style.left=33+'%'
+jws[0].style.top=8+'%'  
+jws[0].style.width=18+'%'
+jws[0].style.height=44+'%'  
+jws[0].style.background=
+ 'radial-gradient(#bbb,#660)'  
+jws[0].style.borderRadius=77+'%'
+jws[0].style.borderBottomLeftRadius=33+'%'
+jws[0].style.borderBottomRightRadius=33+'%'
+jws[1].style.left=-33+'%'
+jws[1].style.top=88+'%'  
+jws[1].style.width=166+'%'
+jws[1].style.height=101+'%'  
+jws[1].style.background=
+ 'radial-gradient(#bbb,#660)'
+jws[1].style.borderRadius=1+'%'
+jws[1].style.borderTopLeftRadius=11+'%'
+jws[1].style.borderTopRightRadius=11+'%' 
+jws[1].style.opacity=0.6 
 gl[0].style.left=18+'%'
 gl[0].style.top=17+'%'  
 gl[0].style.width=14+'%'
@@ -141,9 +145,8 @@ gl[3].style.left=22+'%'
 gl[3].style.top=26+'%'  
 gl[3].style.width=44+'%'
 gl[3].style.height=44+'%'  
-gl[3].style.background='#f00';
+gl[3].style.background='#f00'
 gl[3].style.borderRadius=55+'%'
-	
 ns[0].style.left=38+'%'
 ns[0].style.top=22+'%'  
 ns[0].style.width=22+'%'
@@ -156,18 +159,8 @@ ns[1].style.top=77+'%'
 ns[1].style.width=166+'%'
 ns[1].style.height=33+'%'  
 ns[1].style.background=
- 'radial-gradient(#bbb,#660)';
+ 'radial-gradient(#bbb,#660)'
 ns[1].style.borderRadius=55+'%'
-  
-jws[1].style.left=-33+'%'
-jws[1].style.top=88+'%'  
-jws[1].style.width=166+'%'
-jws[1].style.height=101+'%'  
-jws[1].style.borderRadius=1+'%'
-jws[1].style.borderTopLeftRadius=11+'%'
-jws[1].style.borderTopRightRadius=11+'%' 
-jws[1].style.opacity=0.6 
-  
 lwng[0].style.left=-18+'%'
 lwng[0].style.top=2+'%'  
 lwng[0].style.width=22+'%'
@@ -181,8 +174,7 @@ lwng[1].style.width=88+'%'
 lwng[1].style.height=22+'%'  
 lwng[1].style.background=   
  'radial-gradient(#bbb,#ff0)'
-lwng[1].style.borderRadius=33+'%'
-	 
+lwng[1].style.borderRadius=33+'%'	 
 rwng[0].style.left=95+'%'
 rwng[0].style.top=2+'%'  
 rwng[0].style.width=22+'%'
@@ -234,14 +226,14 @@ shrm[0].style.opacity=0.2
 shrm[0].style.borderRadius=22+'%'
 shrm[0].style.fontSize=0
 	
-exctr[0].style.left=62+'%'
-exctr[0].style.top=14+'%' 
-exctr[0].style.color='#f00'
-exctr[0].style.transform='scale(3)'
-exctr[1].style.left=55+'%'
-exctr[1].style.top=11+'%'  
-exctr[1].style.color='#b00'
-exctr[1].style.transform='scale(0)'
+texctr[0].style.left=62+'%'
+texctr[0].style.top=13+'%' 
+texctr[0].style.color='#f00'
+texctr[0].style.transform='scale(3)'
+texctr[1].style.left=55+'%'
+texctr[1].style.top=11+'%'  
+texctr[1].style.color='#b00'
+texctr[1].style.transform='scale(0)'
 
 jwI=0   
 bst=0
@@ -372,16 +364,16 @@ shrm[0].onclick=()=>
  shrm[0].style.fontSize='3em'
 }
 
-exctr[0].onmouseover=()=>
+texctr[0].onmouseover=()=>
 { 
- exctr[0].style.transform='scale(4)'
- exctr[1].style.transform=
+ texctr[0].style.transform='scale(4)'
+ texctr[1].style.transform=
   'scale(3) translate(37%,-77%) skew(22deg)'
 }
-exctr[0].onmouseout=()=>
+texctr[0].onmouseout=()=>
 { 
- exctr[0].style.transform='scale(3)'
- exctr[1].style.transform='scale(0)'
+ texctr[0].style.transform='scale(3)'
+ texctr[1].style.transform='scale(0)'
 }
  
 </script>
