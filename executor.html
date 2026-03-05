@@ -221,7 +221,7 @@ rwng[1].style.background=
  'radial-gradient(#bbb,#ff0)'
 rwng[1].style.borderRadius=33+'%'
 	  
-plh[0].style.left=33+'%'
+plh[0].style.left=17+'%'
 plh[0].style.top=-888+'%'  
 plh[0].style.width=88+'%'
 plh[0].style.height=999+'%'  
@@ -297,14 +297,16 @@ function cl()
 function clk()
 {	 
  rwng[1].style.transform='rotate('+
-  (Math.random()*66)+'deg)'
+  (Math.random()*23)+'deg)'
+ plh[0].style.left=8+'%'   
  plh[1].style.transform='scale(1.7,1.6)' 
  plh[2].style.transform='scale(1.7,1.6)'
    setTimeout(sto, 1111)
 }
 function sto()
 {
- rwng[1].style.transform='rotate(0deg)'  
+ rwng[1].style.transform='rotate(0deg)'
+ plh[0].style.left=17+'%'
 }           
 		
 btn[0].onmouseover=()=>
@@ -335,12 +337,14 @@ btn[1].onclick=()=>
   'translate(99%,0) rotate(-44deg)'
  rwng[0].style.transform=
   'translate(-99%,0) rotate(44deg)'
+ plh[0].style.left=10+'%' 
  plh[0].style.transform=
-  'translate(-99%,0) rotate(-19deg)'
+  'translate(-8%,0) rotate(-9deg)'
  setTimeout(()=>{
    btn[1].style.opacity=1
    lwng[0].style.transform='rotate(0deg)'
    rwng[0].style.transform='rotate(0deg)'
+   plh[0].style.left=3+'%'  
    plh[0].style.transform='rotate(0deg)'
   }, 999)
 }
@@ -362,8 +366,9 @@ jws[0].onmouseover=()=>
    '%,0) rotate('+(4-9*Math.random())+
    'deg) '
   jws[4].style.opacity=Math.random()
+  jws[4].style.borderWidth=4+'px'
   jws[4].style.transform='scale(1,'+
-   (2+3*Math.random())+') translate(40%,2%) skew(33deg)'  
+   (2+3*Math.random())+') translate(40%,2%) skew(33deg)'   
   plh[3].style.opacity=Math.random()
   plh[3].style.transform='scale('+
    (0.5+Math.random()*2)+','+
@@ -378,7 +383,8 @@ jws[0].onmouseout=()=>
  jws[2].style.transform='scale(1)'
  jws[3].style.transform='scale(1)'
  jws[4].style.opacity=0
- jws[4].style.transform='scale(1)'
+ jws[4].style.borderWidth=5+'px'
+ jws[4].style.transform='scale(1,0)'
  plh[1].style.opacity=1
  plh[2].style.opacity=1
  plh[3].style.opacity=0
