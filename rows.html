@@ -65,7 +65,6 @@
 
 <script>
 btn=document.getElementsByClassName('btn')
-
 rw0=document.getElementsByClassName('rw0')
 rw1=document.getElementsByClassName('rw1')
 rw2=document.getElementsByClassName('rw2')
@@ -115,21 +114,21 @@ init(rw2,3, 71,6, 22,88,'#f0f')
  rw2[3].style.fontSize='0em'
  rw2[3].style.cursor='pointer'
 	   
-rw2[4].style.left='77%'
-rw2[4].style.top='3%'
-rw2[4].style.width='22%'
-rw2[4].style.height='77%'	 
+rw2[4].style.left=77+'%'
+rw2[4].style.top=3+'%'
+rw2[4].style.width=22+'%'
+rw2[4].style.height=77+'%'	 
 rw2[4].style.background='#808'
 rw2[4].style.cursor='pointer'
 	 
 function clk(nm)
 {  
- nm[1].style.fontSize='2em'
+ nm[1].style.fontSize=2+'em'
  nm[1].style.transform='scale('+(1+Math.random()/5)+')'
  nm[2].style.transform='scale('+(1+Math.random()/5)+')'
- nm[2].style.fontSize='2em'
+ nm[2].style.fontSize=2+'em'
  nm[3].style.transform='scale('+(1+Math.random()/5)+')'
- nm[3].style.fontSize='2em'
+ nm[3].style.fontSize=2+'em'
 }
 btn[0].onmouseover=()=>
 { 
@@ -183,12 +182,16 @@ function mv(nm,fnt)
 {
  nm.onmousemove=()=>
  {
+  nm.style.zIndex=1
+  nm.style.padding=8+'px'
   nm.style.transform='scale(1.2)'
   nm.style.color='#800'
   nm.style.fontSize=fnt
  }
  nm.onmouseout=()=>
  {
+  nm.style.zIndex=0
+  nm.style.padding=0+'px'
   nm.style.transform='scale(1)'
   nm.style.color='#000'
   nm.style.fontSize='0em'
@@ -200,9 +203,9 @@ mv(rw0[3],'3em')
 mv(rw1[1],'3em')
 mv(rw1[2],'3em')
 mv(rw1[3],'3em') 
-mv(rw2[1],'2em')
-mv(rw2[2],'2em')
-mv(rw2[3],'2em') 
+mv(rw2[1],'3em')
+mv(rw2[2],'3em')
+mv(rw2[3],'2.4em') 
 
 add=[]
 idir=0
@@ -247,12 +250,12 @@ fdir(rw2[3],'rght-bm')
 
 rw2[4].onmouseover=()=>
 {
- rw2[4].style.height='88%'
+ rw2[4].style.height=88+'%'
  rw2[4].style.background='#a0a'
 }
 rw2[4].onmouseout=()=>
 { 
- rw2[4].style.height='77%'
+ rw2[4].style.height=77+'%'
  rw2[4].style.background='#808'
 }
 
