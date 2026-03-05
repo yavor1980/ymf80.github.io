@@ -68,6 +68,7 @@
   </div> 
   <div class=jws></div> 
   <div class=jws></div> 
+  <div class=jws></div> 
  </div>
 </div>
 
@@ -143,6 +144,15 @@ jws[3].style.background=
 jws[3].style.borderTopLeftRadius=5+'%'
 jws[3].style.borderTopRightRadius=55+'%' 
 jws[3].style.opacity=0.9 
+jws[4].style.left=77+'%'
+jws[4].style.top=38+'%'  
+jws[4].style.width=67+'%'
+jws[4].style.height=15+'%'  
+jws[4].style.border='9px ridge #ff0'
+jws[4].style.borderTop='9px ridge transparent'
+jws[4].style.borderBottom='5px ridge transparent'
+jws[4].style.opacity=0
+jws[4].style.transform='skew(15deg)' 
 
 gl[0].style.left=18+'%'
 gl[0].style.top=17+'%'  
@@ -349,10 +359,15 @@ jws[0].onmouseover=()=>
   jws[2].style.transform='translate('+(4-9*Math.random())+
    '%,0) rotate('+(4-9*Math.random())+'deg)'
   jws[3].style.transform='translate('+(4-9*Math.random())+
-   '%,0) rotate('+(4-9*Math.random())+'deg)'
+   '%,0) rotate('+(4-9*Math.random())+
+   'deg) '
+  jws[4].style.opacity=Math.random()
+  jws[4].style.transform='scale(1,'+
+   (2+3*Math.random())+') translate(40%,2%) skew(33deg)'  
   plh[3].style.opacity=Math.random()
   plh[3].style.transform='scale('+
-   (0.5+Math.random()/2)+',1)'
+   (0.5+Math.random()*2)+','+
+   (0.5+Math.random()/2)+') translate(0,-40%)'
  }, 1000)
 } 
 jws[0].onmouseout=()=>
@@ -362,6 +377,8 @@ jws[0].onmouseout=()=>
   shrm[0].onmouseout()
  jws[2].style.transform='scale(1)'
  jws[3].style.transform='scale(1)'
+ jws[4].style.opacity=0
+ jws[4].style.transform='scale(1)'
  plh[1].style.opacity=1
  plh[2].style.opacity=1
  plh[3].style.opacity=0
