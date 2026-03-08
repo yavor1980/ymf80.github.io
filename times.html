@@ -42,14 +42,7 @@ select
  font-size:1.5em;
 }
 
-.srvr
-{
- position:absolute;
- transition:1s;
- font-size:1.5em;
-}
-
-.vctr
+.srvr,.vctr
 {
  position:absolute;
  transition:1s;
@@ -78,10 +71,6 @@ select
   <option>perfect continuous</option>  
  </select>
  <div class=tms >future in the past</div>
- 
- <div class=srvr >server</div>
-  <div class=srvr >login</div>
-  <div class=srvr >pssword</div>  
  
  <div class=vctr >VCTR</div>
   <div class=vctr >intractve</div>
@@ -140,16 +129,6 @@ inn(tms,1, 33,11, 44,22,'#777')
 inn(tms,2, 3,11, 22,33,'#f00')
  tms[2].style.cursor='pointer'
  
-inn(srvr,0, 11,44,0,0,'')
- srvr[0].style.cursor='pointer'
- srvr[0].style.color='#900'
-inn(srvr,1, 22,55,0,0,'')
- srvr[1].style.color='#dd0'
- srvr[1].style.transform='scale(0)'
-inn(srvr,2, 22,66,0,0,'')
- srvr[2].style.color='#ff0'
- srvr[2].style.transform='scale(0)'
- 
 inn(vctr,0, 44,55,0,0,'')
  vctr[0].style.cursor='pointer'
  vctr[0].style.color='#908'  
@@ -163,6 +142,7 @@ Icl=0
 bcl=0
 function cl()
 {
+ prjct[0].style.transform='scale(1.6) '
  if(bcl){
   hd[2].style.transform='scale(1)'
   hd[1].style.transform='scale(1.2)'
@@ -182,6 +162,7 @@ function act(i,l)
  {  
   hd[i].style.zIndex=1 
   hd[i].style.border='4px ridge #f60'
+  hd[i].style.borderRadius=22+'%'
  if(i==1){ 
   hd[2].style.zIndex=0
   hd[3].style.zIndex=0 
@@ -254,29 +235,17 @@ function act(i,l)
   hd[i].style.fontSize='1.4em'
   hd[i].style.color='#000'
   hd[i].style.border='none'
+  hd[i].style.borderRadius=0+'%'
   hd[1].innerHTML='past'
   hd[2].innerHTML='present'
   hd[3].innerHTML='future' 
    cl()
-   Icl=setInterval(cl,999)
+   Icl=setInterval(cl, 999)
  }
 }	
   act(1,11)
   act(2,37)
   act(3,65)
-		
-bpr4=0	
-setInterval(()=>{
- if(bpr4)
- {
-  prjct[0].style.transform='scale(1.6) '
- }
- else
- {
-  prjct[0].style.transform='scale(2.0)'
- }
-  bpr4=!bpr4
-}, 999)
 	
 pr1I=0		
 bpr1=0	
@@ -323,7 +292,9 @@ drns0I=setInterval(()=>{
   drns[2].style.color='#f0f'
   drns[2].style.transform=
    'scale(2.6) translate(-22px,-27px)'
- }else{
+ }
+  else
+ {
   drns[1].style.color='#f00'
   drns[1].style.transform=
    'scale(1.6) translate(22px,-27px)' 
@@ -365,26 +336,6 @@ tms[2].onmouseout=()=>
  tms[2].style.color='#000'
  tms[2].style.border='none'
   tms[2].innerHTML='future in the past'
-}
-
-srvr[0].onmouseover=()=>
-{
- srvr[0].style.transform=
-  'scale(2) translate(22%)'
- srvr[0].style.color='#f00'
-  srvr[0].innerHTML='autorizing'
- srvr[1].style.transform=
-  'scale(2) translate(22%)'
- srvr[2].style.transform=
-  'scale(2) translate(22%)'
-}
-srvr[0].onmouseout=()=>
-{
- srvr[0].style.transform='scale(1)' 
- srvr[0].style.color='#900'
-  srvr[0].innerHTML='server'
- srvr[1].style.transform='scale(0) '
- srvr[2].style.transform='scale(0) '
 }
 
 bvctr0=1
