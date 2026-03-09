@@ -55,12 +55,8 @@ select
  <div class=hd>past</div>
  <div class=hd>present</div>
  <div class=hd>future</div>
- 
  <div class=prjct>project</div>
   <div class=prjct></div>
- <div class=drns>drones</div>
- <div class=drns>operate</div>
- <div class=drns>mchip</div>
 </div>
 
 <div class=tms>
@@ -72,18 +68,12 @@ select
  </select>
  <div class=tms >future in the past</div>
  
- <div class=vctr >VCTR</div>
-  <div class=vctr >intractve</div>
-  <div class=vctr >splash</div>
 </div>
 
 <script>
 hd=document.getElementsByClassName('hd') 
 prjct=document.getElementsByClassName('prjct')
-drns=document.getElementsByClassName('drns')
 tms=document.getElementsByClassName('tms')
-srvr=document.getElementsByClassName('srvr')
-vctr=document.getElementsByClassName('vctr')
  
 function inn(nm,i,l,t,w,h,bkgr) 
 {
@@ -108,20 +98,10 @@ inn(prjct,0, 11,55, 0,0,'')
  prjct[0].style.transform='scale(4)'
  prjct[0].style.cursor='pointer'
 inn(prjct,1, 30,55, 0,0,'')
+ prjct[1].style.zIndex=1
  prjct[1].style.color='#0ff'
  prjct[1].style.transform='scale(0)'
  prjct[1].style.cursor='pointer'
- 
-inn(drns,0, 55,77, 0,0,'')
- drns[0].style.color='#f0f'
- drns[0].style.transform='scale(1.4)'
- drns[0].style.cursor='pointer'
-inn(drns,1, 66,77, 0,0,'')
- drns[1].style.color='#f0f'
- drns[1].style.transform='scale(0)'
-inn(drns,2, 72,77, 0,0,'')
- drns[2].style.color='#f0f'
- drns[2].style.transform='scale(0)'  
  
 inn(tms,0, 1,37, 98,62,'radial-gradient(#0f0,#000)')
  tms[0].style.zIndex=0
@@ -129,15 +109,6 @@ inn(tms,1, 33,11, 44,22,'#777')
  tms[1].style.cursor='pointer'
 inn(tms,2, 3,11, 22,33,'#f00')
  tms[2].style.cursor='pointer'
- 
-inn(vctr,0, 44,55,0,0,'')
- vctr[0].style.cursor='pointer'
- vctr[0].style.color='#908'  
-inn(vctr,1, 59,59,0,0,'')
- vctr[1].style.transform='scale(0)'
-inn(vctr,2, 66,81, 0,0,'')
- vctr[2].style.color='#f0f'
- vctr[2].style.transform='scale(0)'
    
 Icl=0 
 bcl=0
@@ -252,75 +223,33 @@ pr1I=0
 bpr1=0	
 prjct[0].onmouseover=()=>
 {
- prjct[0].style.transform='scale(1.8) translate(22%)'
+ prjct[0].style.transform='scale(4) translate(22%)'
   prjct[0].innerHTML='@intrface<br> @implemnttn'
   prjct[1].innerHTML='initialization'
  pr1I=setInterval(()=>{
-  if(bpr1){
+  if(bpr1)
+  {
    prjct[1].style.top='55%'
-   prjct[1].style.transform='scale(2.0)'
+   prjct[1].style.transform='scale(6)'
    prjct[1].innerHTML='initialization'
-   }else{
+  }
+   else
+  {
    prjct[1].style.top='77%'
    prjct[1].style.transform=
-    'scale(1.6)  translate(333%)'
+    'scale(6)  translate(333%)'
     prjct[1].innerHTML='realisation'  
-   }
+  }
     bpr1=!bpr1
   },999)
 }
 prjct[0].onmouseout=()=>
 {
- prjct[0].style.transform='scale(1.4)'
+ prjct[0].style.transform='scale(4)'
   prjct[0].innerHTML='project'
  prjct[1].style.transform='scale(0)'
   clearInterval(pr1I)
 }      
-
-drns0I=0		
-bdrns0=0
-drns[0].onmouseover=()=>
-{
- drns[0].style.transform=
-  'scale(2.6) translate(-45px,-27px)'
- drns[0].style.color='#0ff'
-  drns[0].innerHTML='define directns'
-drns0I=setInterval(()=>{
- if(bdrns0){
-  drns[1].style.color='#f0f'
-  drns[1].style.transform=
-   'scale(2.6) translate(-22px,-27px)'
-  drns[2].style.color='#f0f'
-  drns[2].style.transform=
-   'scale(2.6) translate(-22px,-27px)'
- }
-  else
- {
-  drns[1].style.color='#f00'
-  drns[1].style.transform=
-   'scale(1.6) translate(22px,-27px)' 
- }
- drns[2].style.color='#0f0'
- drns[2].style.transform=
-  'scale(2.6) translate(-22px,-4px)'
-   bdrns0=!bdrns0
- }, 1111) 
-}      
-drns[0].onmouseout=()=>
-{
- drns[0].style.transform='scale(1.6)'
- drns[0].style.color='#f0f'
-  drns[0].innerHTML='drones'
- drns[1].style.transform='scale(0) '
- drns[1].style.color='#f0f'
- drns[2].style.transform='scale(0) '
-  clearInterval(drns0I)
-}          			
-drns[0].onclick=()=>
-{
- drns[0].style.color='#f0f'
-  drns[0].innerHTML='many interrptns'	 
-}
 				 
 tms[2].onmouseover=()=>
 {
@@ -339,45 +268,7 @@ tms[2].onmouseout=()=>
  tms[2].style.borderRadius=0+'%'
  tms[2].style.transform='scale(1)'
   tms[2].innerHTML='future in the past'
-}
-
-bvctr0=1
-Ivctr0=0
-vctr[0].onmouseover=()=>
-{
- vctr[0].style.transform=
-  'scale(2) translate(-22px,-33px)'
- vctr[0].style.color='#f07'
-  vctr[0].innerHTML='vector modeling'
- vctr[1].style.transform=
-  'scale(2) translate(22px,-33px)'
- vctr[1].style.color='#fff'
- Ivctr0=setInterval(()=>{
-  if(bvctr0){
-   vctr[2].style.transform=
-    'scale(2) translate(22px,-33px)'
-   vctr[2].style.color='#f0f'
-  }else{
-   vctr[2].style.transform=
-    'scale(1) translate(22px,-33px)'
-   vctr[2].style.color='#f07'
- }
-  bvctr0=!bvctr0
-}, 999)
-}
-vctr[0].onmouseout=()=>
-{
- vctr[0].style.transform='scale(1)'
- vctr[0].style.color='#908'
-  vctr[0].innerHTML='VCTR'
- vctr[1].style.transform='scale(0) '
- vctr[1].style.color='#000'
- vctr[2].style.transform='scale(0) '
- vctr[2].style.color='#000'
-  clearInterval(Ivctr0)
-  bvctr0=1
-}                 
-					
+}			
  // Math.round(Math.random())
 </script>
 </body>
