@@ -16,36 +16,24 @@ select
 {
  position:absolute;
  transition:1s;
- text-align:center;
- font-size:1.4em;
  padding-top: 11px;
-}
-
-.prjct
-{
- position:absolute;
- transition:1s;
-}
-
-.drns
-{
- position:absolute;
- transition:1s;
- z-index:1;
-}
-
-.tms
-{
- position:absolute;
- transition: 1s;
  text-align:center;
  font-size:1.5em;
 }
 
-.srvr,.vctr
+.prjct,.vctr,.tms
 {
  position:absolute;
  transition:1s;
+}
+.vctr
+{
+ cursor:pointer;
+ font-size:3em;
+}
+.tms
+{
+ text-align:center;
  font-size:1.5em;
 }
 
@@ -55,9 +43,9 @@ select
  <div class=hd>past</div>
  <div class=hd>present</div>
  <div class=hd>future</div>
- <div class=prjct>project</div>
-  <div class=prjct></div>
 </div>
+<div class=prjct>project</div>
+ <div class=prjct></div>
 
 <div class=tms>
  <select class=tms id=idsl >
@@ -67,13 +55,20 @@ select
   <option>perfect continuous</option>  
  </select>
  <div class=tms >future in the past</div>
- 
+</div>
+
+<div class=vctr>
+<div class=vctr>V</div>
+<div class=vctr>C</div>
+<div class=vctr>T</div>
+<div class=vctr>R</div>
 </div>
 
 <script>
 hd=document.getElementsByClassName('hd') 
 prjct=document.getElementsByClassName('prjct')
 tms=document.getElementsByClassName('tms')
+vctr=document.getElementsByClassName('vctr')
  
 function inn(nm,i,l,t,w,h,bkgr) 
 {
@@ -83,7 +78,7 @@ function inn(nm,i,l,t,w,h,bkgr)
  nm[i].style.height=h+'%'
  nm[i].style.background=bkgr
 }
-  
+
 inn(hd,0, 1,1, 98,35,'radial-gradient(#f00,#000)') 
 inn(hd,1, 11,22, 22,22,'#777')
  hd[1].style.cursor='pointer'
@@ -92,16 +87,16 @@ inn(hd,2, 37,22, 22,22,'#0ff')
 inn(hd,3, 65,22, 22,22,'#ff0')
  hd[3].style.cursor='pointer'
  
-inn(prjct,0, 11,55, 0,0,'')
+inn(prjct,0, 11,25, 0,0,'')
  prjct[0].style.zIndex=1
  prjct[0].style.color='#ff0'
  prjct[0].style.transform='scale(4)'
  prjct[0].style.cursor='pointer'
-inn(prjct,1, 30,55, 0,0,'')
+inn(prjct,1, 44,25, 0,0,'')
  prjct[1].style.zIndex=1
  prjct[1].style.color='#0ff'
+ prjct[1].style.color='#0ff'
  prjct[1].style.transform='scale(0)'
- prjct[1].style.cursor='pointer'
  
 inn(tms,0, 1,37, 98,62,'radial-gradient(#0f0,#000)')
  tms[0].style.zIndex=0
@@ -109,6 +104,20 @@ inn(tms,1, 33,11, 44,22,'#777')
  tms[1].style.cursor='pointer'
 inn(tms,2, 3,11, 22,33,'#f00')
  tms[2].style.cursor='pointer'
+ 
+vctr[0].style.left=44+'%'
+vctr[0].style.top=70+'%'
+vctr[0].style.width=27+'%'
+vctr[0].style.height=12+'%'
+vctr[0].style.background=''
+vctr[1].style.left=2+'%'
+vctr[1].style.color='#220'
+vctr[2].style.left=28+'%'
+vctr[2].style.color='#440'
+vctr[3].style.left=54+'%'
+vctr[3].style.color='#440'
+vctr[4].style.left=80+'%'
+vctr[4].style.color='#220'
    
 Icl=0 
 bcl=0
@@ -130,8 +139,19 @@ function cl()
  
 function act(i,l)
 { 
+ 
  hd[i].onmouseover=()=>
- {  
+ {
+ vctr[0].style.transform=
+  'scale(1.8,1.2) translate(0,-22%)'
+ vctr[1].style.transform=
+  'scale(1.2)  skew(22deg)'
+ vctr[2].style.transform=
+  'scale(1.4) skew(22deg)'
+ vctr[3].style.transform=
+  'scale(1.4) skew(-22deg)'
+ vctr[4].style.transform=
+  'scale(1.2) skew(-22deg)'  
   hd[i].style.zIndex=1 
   hd[i].style.border='4px ridge #f60'
   hd[i].style.borderRadius=22+'%'
@@ -200,6 +220,11 @@ function act(i,l)
  }	  
  hd[i].onmouseout=()=>
  {
+  vctr[0].style.transform='scale(1)'
+  vctr[1].style.transform='scale(1)'
+  vctr[2].style.transform='scale(1)'
+  vctr[3].style.transform='scale(1)'
+  vctr[4].style.transform='scale(1)'
   hd[i].style.width='22%'
   hd[i].style.height='22%'
   hd[i].style.left=l+'%'
@@ -229,16 +254,15 @@ prjct[0].onmouseover=()=>
  pr1I=setInterval(()=>{
   if(bpr1)
   {
-   prjct[1].style.top='55%'
-   prjct[1].style.transform='scale(6)'
-   prjct[1].innerHTML='initialization'
+   prjct[1].style.transform=
+    'scale(6) translate(333%,333%) skew(22deg)'
+    prjct[1].innerHTML='initilzatn'
   }
    else
   {
-   prjct[1].style.top='77%'
-   prjct[1].style.transform=
-    'scale(6)  translate(333%)'
-    prjct[1].innerHTML='realisation'  
+    prjct[1].style.transform=
+     'scale(6) translate(-333%,-633%) skew(-22deg)'
+     prjct[1].innerHTML='realstn'  
   }
     bpr1=!bpr1
   },999)
@@ -269,7 +293,29 @@ tms[2].onmouseout=()=>
  tms[2].style.transform='scale(1)'
   tms[2].innerHTML='future in the past'
 }			
- // Math.round(Math.random())
+
+vctr[0].onmouseover=()=>
+{
+ vctr[0].style.transform=
+  'scale(1.8,1.2) translate(0,-22%)'
+ vctr[1].style.transform=
+  'scale(1.2)  skew(22deg)'
+ vctr[2].style.transform=
+  'scale(1.4) skew(22deg)'
+ vctr[3].style.transform=
+  'scale(1.4) skew(-22deg)'
+ vctr[4].style.transform=
+  'scale(1.2) skew(-22deg)'
+}
+vctr[0].onmouseout=()=>
+{
+ vctr[0].style.transform='scale(1)'
+ vctr[1].style.transform='scale(1)'
+ vctr[2].style.transform='scale(1)'
+ vctr[3].style.transform='scale(1)'
+ vctr[4].style.transform='scale(1)'
+}	
+
 </script>
 </body>
 </html>
