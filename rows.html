@@ -18,8 +18,8 @@
 {
  position:absolute;   
  transition:1s;
- cursor:pointer;
  font-size:2em;
+ cursor:pointer;
 }
 .btn:hover
 {
@@ -42,26 +42,28 @@
 }
 
 </style>
-<button class=btn>bottom</button>
+
 <div class=rw0>
  <div class=rw0>lft-tp</div>
  <div class=rw0>top </div>
- <div class=rw0>rght-tp</div>
+ <div class=rw0>rgt-tp</div>
 </div>
+<button class=btn>bttm</button>
 <button class=btn>center</button>
+<button class=btn>top</button>
 <div class=rw1>
  <div class=rw1>left </div>
  <div class=rw1>center</div>
  <div class=rw1>right </div>
 </div>
-<button class=btn>top</button>
 <div class=rw2>
- <div class=rw2>lft-bttm</div>
+ <div class=rw2>lt-bm</div>
  <div class=rw2>bottom</div>
- <div class=rw2>rght-bttm</div>
+ <div class=rw2>rt-bm</div>
 </div>
 <div class=rw2></div>
 <button class=btn>reset</button>
+<button class=btn>rand</button>
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -79,9 +81,15 @@ function init(c,i, l,t, w,h,bkg)
  c[i].style.background=bkg;
 }   
 init(btn,0, 35,26, 12,6,'#b50')
+ btn[0].style.color='#000'
 init(btn,1, 49,26, 12,6,'#095')
+ btn[1].style.color='#000'
 init(btn,2, 63,26, 12,6,'#bb0')
+ btn[2].style.color='#000'
 init(btn,3, 57,57, 12,6,'#b00')
+ btn[3].style.color='#000'
+init(btn,4, 44,57, 12,6,'#b00')
+ btn[4].style.color='#000'
  
 init(rw0,0, 7,3, 66,22,'#660')
 init(rw0,1, 6,3, 22,88,'#00f')
@@ -123,12 +131,12 @@ rw2[4].style.cursor='pointer'
 	 
 function clk(nm)
 {  
- nm[1].style.fontSize=2+'em'
+ nm[1].style.fontSize=4+'em'
  nm[1].style.transform='scale('+(1+Math.random()/5)+')'
+ nm[2].style.fontSize=4+'em'
  nm[2].style.transform='scale('+(1+Math.random()/5)+')'
- nm[2].style.fontSize=2+'em'
+ nm[3].style.fontSize=+4+'em'
  nm[3].style.transform='scale('+(1+Math.random()/5)+')'
- nm[3].style.fontSize=2+'em'
 }
 btn[0].onmouseover=()=>
 { 
@@ -185,7 +193,7 @@ function mv(nm,fnt)
   nm.style.zIndex=1
   nm.style.padding=8+'px'
   nm.style.transform='scale(1.2)'
-  nm.style.color='#800'
+  nm.style.color='#888'
   nm.style.fontSize=fnt
  }
  nm.onmouseout=()=>
@@ -194,18 +202,18 @@ function mv(nm,fnt)
   nm.style.padding=0+'px'
   nm.style.transform='scale(1)'
   nm.style.color='#000'
-  nm.style.fontSize='0em'
+  nm.style.fontSize=0+'em'
  }
 }
-mv(rw0[1],'3em')  
-mv(rw0[2],'3em') 
-mv(rw0[3],'3em') 
-mv(rw1[1],'3em')
-mv(rw1[2],'3em')
-mv(rw1[3],'3em') 
-mv(rw2[1],'3em')
-mv(rw2[2],'3em')
-mv(rw2[3],'2.4em') 
+mv(rw0[1],4+'em')  
+mv(rw0[2],4+'em') 
+mv(rw0[3],4+'em') 
+mv(rw1[1],4+'em')
+mv(rw1[2],4+'em')
+mv(rw1[3],4+'em') 
+mv(rw2[1],4+'em')
+mv(rw2[2],4+'em')
+mv(rw2[3],4+'em') 
 
 add=[]
 idir=0
