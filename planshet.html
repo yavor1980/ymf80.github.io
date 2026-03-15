@@ -53,10 +53,11 @@ dsply=document.getElementsByClassName('dsply')
 pnel=document.getElementsByClassName("pnel") 
 
 btn[0].style.left=86+'%'
-btn[0].style.top=4+'%'
+btn[0].style.top=3+'%'
 btn[0].style.background='#f00'
 btn[0].style.color='#ff0'
-btn[0].style.transform='scale(2)'
+btn[0].style.borderRadius=33+'%'
+btn[0].style.transform='scale(4,2)'
 
 csvg[0].style.left=66+'%'
 csvg[0].style.top=55+'%'
@@ -194,6 +195,7 @@ dsply[0].onmouseover=()=>
   'scale(3) translate(33%,-33%)  skew(33deg)'
  csvg[0].style.opacity=1
  csvg[0].style.border='7px ridge #bb0'
+ csvg[0].style.borderRadius=22+'%'
  csvg[0].style.transform=
   'scale(1.7) translate(-12%,-69%)'
  csvg[3].style.color='#f00'
@@ -218,6 +220,7 @@ dsply[0].onmouseout=()=>
  pnel[7].style.transform='scale(0)'
  csvg[0].style.opacity=0.4
  csvg[0].style.border='none'
+ csvg[0].style.borderRadius=0+'%'
  csvg[0].style.transform='scale(1)'
  csvg[3].style.color='#000'
  csvg[3].style.transform='scale(0)'
