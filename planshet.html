@@ -24,12 +24,6 @@
 
 <button class=btn>circle</button>
 
-<svg class=csvg>
- <circle class=csvg />
- <rect class=csvg />
-</svg>
- <div class=csvg>SVG</div>
- 
 <div class=pnel>
  <div class=pnel></div>
  <div class=pnel></div>
@@ -37,7 +31,7 @@
  <div class=pnel></div>
  <div class=pnel></div>
  <div class=pnel></div>
-  <div class=pnel>solar<br> panel...</div>
+  <div class=pnel>solar</div>
 </div>  
  
 <div class=dsply>
@@ -45,6 +39,12 @@
  <div class=dsply></div>
  <div class=dsply></div>
 </div>
+
+<svg class=csvg>
+ <circle class=csvg />
+ <rect class=csvg />
+</svg>
+ <div class=csvg>SVG</div>
 
 <script>
 btn=document.getElementsByClassName("btn")
@@ -59,6 +59,7 @@ btn[0].style.color='#ff0'
 btn[0].style.borderRadius=33+'%'
 btn[0].style.transform='scale(4,2)'
 
+csvg[0].style.zIndex=-1
 csvg[0].style.left=66+'%'
 csvg[0].style.top=55+'%'
 csvg[0].style.width=24+'%'
@@ -179,6 +180,13 @@ function fdsply()
   '#'+Math.round(Math.random()*9)+'00'
  pnel[6].style.background=
   '#'+Math.round(Math.random()*9)+'00' 
+ pnel[7].style.background='skew('+
+  Math.round(66-Math.random()*33)+'deg)' 
+ pnel[7].style.transform=
+ pnel[7].style.transform=
+  'scale('+(6+Math.random())+
+  ') translate(33%,-33%)  skew('+
+ (33*Math.random())+'deg)'
 }
 dsply[0].onmouseover=()=>
 {
@@ -190,9 +198,9 @@ dsply[0].onmouseover=()=>
  dsply[3].style.background=
   'linear-gradient(90deg,#055,#111,#555,#111,#055)'
  pnel[0].style.transform='scale(1.1)'
- pnel[7].style.color='#f0f'
+ pnel[7].style.color='#ff0'
  pnel[7].style.transform=
-  'scale(3) translate(33%,-33%)  skew(33deg)'
+  'scale(6) translate(33%,-33%)  skew(33deg)'
  csvg[0].style.opacity=1
  csvg[0].style.border='7px ridge #bb0'
  csvg[0].style.borderRadius=22+'%'
