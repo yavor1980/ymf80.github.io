@@ -3,7 +3,6 @@
 <head>
  <meta charset='utf-8'>
 </head>
-
 <body id=idbd>
 <style>
 #idbd
@@ -48,7 +47,6 @@
  position:absolute;
  transition:1s;
 }
-
 .drn
 {
  transition:2s;
@@ -142,8 +140,8 @@ whl[0].style.width=38+'%'
 whl[0].style.height=30+'%'
 whl[0].style.background=
  'radial-gradient(#ff0,#333)'
-whl[0].style.borderTopLeftRadius=33+'%'
-whl[0].style.borderTopRightRadius=33+'%'
+whl[0].style.borderTopLeftRadius=39+'%'
+whl[0].style.borderTopRightRadius=39+'%'
 whl[0].style.borderBottomLeftRadius=22+'%'
 whl[0].style.borderBottomRightRadius=22+'%'  
 whl[1].style.left=3+'%'
@@ -255,7 +253,7 @@ o=
  btr:1, intr:0, bs:0, 
  cl:function()
  {  
-  v=Math.round(Math.random()*3)
+   v=Math.round(Math.random()*3)
   whl[0].style.transform=
    'scale('+(Math.random()+0.4)+') translate(30%,0)'+
    'rotate('+(Math.random()*22-11)+'deg)' 
@@ -324,17 +322,20 @@ btn[2].onclick=()=>
  setTimeout(()=>
  {
   idbd.style.background='linear-gradient(#bb0,#0ff)'
+  fr[0].style.background='#f00'
+  fr[1].style.background='#f00'
   btn[0].style.opacity=1
   btn[1].style.opacity=1
   btn[2].style.opacity=1
-  fr[0].style.background='#f00'
-  fr[1].style.background='#f00'
  }, 2222)
 }
 
 Iwhl0=0
 whl[0].onmouseover=()=>
 { 
+ whl[0].style.borderBottomLeftRadius=55+'%'
+ whl[0].style.borderBottomRightRadius=55+'%'  
+ whl[4].style.transform='scale(1.1,1)' 
  fr[0].style.background=
   'radial-gradient(#ff0,#f00)'
  fr[1].style.background=
@@ -350,9 +351,13 @@ whl[0].onmouseover=()=>
  brd[1].style.opacity=0.5
  brd[1].style.transform='scale('+(2+3*Math.random())+')'
  drn[0].style.opacity=1
+ drn[2].style.opacity=1
 }
 whl[0].onmouseout=()=>
 {
+ whl[0].style.borderBottomLeftRadius=22+'%'
+ whl[0].style.borderBottomRightRadius=22+'%'  
+ whl[4].style.transform='scale(1,1)' 
  fr[0].style.background='#f00'
  fr[1].style.background='#f00'
  fr[2].style.background='#777'
