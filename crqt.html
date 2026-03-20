@@ -70,7 +70,7 @@ button:hover
    <div class=clma></div>
   </div>
   <div class=wrs>
-   <div class=elm>||</div>
+   <div class=elm></div>
    <div class=drssl>
     <div class=drssl></div>
 	<div class=drssl></div>
@@ -159,12 +159,14 @@ elm[1].style.width=23+'%'
 elm[1].style.height=555+'%'
 elm[1].style.background='#400'
 elm[1].style.zIndex=1
-elm[2].style.left=99+'%'
+elm[2].style.left=-355+'%'
 elm[2].style.top=38+'%'
+elm[2].style.width=800+'%'
+elm[2].style.height=4+'%'
 elm[2].style.background='#ff0'
-elm[2].style.color='#400'
-elm[2].style.transform=
- 'scale(4) rotate(90deg)'
+elm[2].style.border='8px ridge #000'
+elm[2].style.borderLeft='transparent'
+elm[2].style.borderRight='transparent'
 
 drssl[0].style.left=299+'%'
 drssl[0].style.top=-9+'%'
@@ -324,13 +326,12 @@ btn[0].onclick=()=>
   elm[1].style.transform=
    'translate(130%,233%) rotate(90deg)'
   elm[2].style.transform=
-   'scale(4) translate(-399%,-133%) rotate(0deg)'
+   'translate(-399%,-133%) rotate(0deg)'
  }
  else
  {
   elm[1].style.transform='rotate(0deg)'
-  elm[2].style.transform=
-   'scale(4)  rotate(90deg)'
+  elm[2].style.transform='rotate(90deg)'
  }
   bbtn0=!bbtn0
 }
@@ -376,7 +377,8 @@ wrs[0].onmouseover=()=>
   'radial-gradient(28px,#f00,#f0f)'
  elm[0].style.transform='scale(1.2)'
  elm[1].style.background='#f00'
- elm[2].style.color='#f00'
+ elm[2].style.borderTopColor='#f00'
+ elm[2].style.borderBottomColor='#f00'
  drssl[1].style.borderTopColor='#f00'
  drssl[1].style.borderRightColor='#f00'
  drssl[2].style.borderTopColor='#f00'
@@ -388,7 +390,7 @@ wrs[0].onmouseover=()=>
   elm[1].style.transform=
    'scale('+(0.8+Math.random()/2)+')'
   elm[2].style.transform=
-   'scale('+(3.8+Math.random()/2)+') rotate(90deg)' 
+   'scale('+(1+Math.random()/2)+')' 
   drssl[0].style.transform=
    'scale('+(0.8+Math.random()/2)+')' 
   crrnt[0].style.background=
@@ -442,7 +444,9 @@ wrs[0].onmouseout=()=>
  elm[0].style.transform='scale(1)'
  elm[1].style.background='#400'
  elm[1].style.transform='scale(1)'
- elm[2].style.color='#400' 
+ elm[2].style.borderTopColor='#000'
+ elm[2].style.borderBottomColor='#000'
+ elm[2].style.transform='scale(1)'
  drssl[1].style.borderTopColor='#300'
  drssl[1].style.borderRightColor='#300'
  drssl[2].style.borderTopColor='#300'
