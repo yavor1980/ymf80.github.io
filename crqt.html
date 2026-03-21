@@ -78,10 +78,10 @@ button:hover
    </div>
    <div class=clma></div>
   </div> 
- 
   <div class=tprcss>Fluctuations...</div>
   <div class=tprcss>pulse<br>&nbsp smoothing...</div>
   <div class=tprcss>moving<br>&nbsp charged...</div>
+  <div class=tprcss>Polar changed!</div>
 </div> 
 
 <div class=crrnt>
@@ -251,6 +251,9 @@ tprcss[2].style.top=24+'%'
 tprcss[2].style.color='#b00'
 tprcss[2].style.zIndex=1
 tprcss[2].style.transform='scale(0)'
+tprcss[3].style.color='#b00'
+tprcss[3].style.zIndex=1
+tprcss[3].style.transform='scale(0)'
 
 crrnt[0].style.left=67+'%'
 crrnt[0].style.top=36+'%'
@@ -325,10 +328,12 @@ btn[0].onmouseover=()=>
  elm[2].style.background='#f00'
  elm[2].style.border='none'
  elm[2].style.transform='translate(20%,0)'
+ tprcss[3].style.transform=
+  'scale(4) translate(40%,0) skew(22deg)'
 }
 btn[0].onmouseout=()=>
 {
- btn[0].style.color='#0b0'
+ btn[0].style.color='#ff0'
  elm[1].style.width=23+'%'
  elm[1].style.height=555+'%'
  elm[1].style.background='#000'
@@ -340,12 +345,14 @@ btn[0].onmouseout=()=>
  elm[2].style.border='8px ridge #000'
  elm[2].style.borderLeft='transparent'
  elm[2].style.borderRight='transparent'
-  elm[2].style.transform='scale(1)'
+ elm[2].style.transform='scale(1)'
+ tprcss[3].style.transform='scale(0)'
 }
 
 btn[1].onmouseover=()=>
 {
- telm[1].style.color='#d00'
+ btn[1].style.color='#0f0'
+ telm[1].style.color='#0f0'
  telm[1].style.transform=
   'scale(3) translate(-39%,-13%) skew(-11deg)'
  telm[2].style.color='#080'
@@ -353,7 +360,7 @@ btn[1].onmouseover=()=>
   'scale(3) translate(-39%,-13%) skew(-11deg)' 
  telm[3].style.color='#00d'
  telm[3].style.transform=
-  'scale(3) translate(-39%,-13%) skew(-11deg)' 
+  'scale(3) translate(39%,-33%) skew(-11deg)' 
  telm[4].style.color='#880'
  telm[4].style.transform=
   'scale(3) translate(-39%,-13%) skew(-11deg)' 
@@ -363,7 +370,8 @@ btn[1].onmouseover=()=>
 }
 btn[1].onmouseout=()=>
 {
- telm[1].style.color='#000'
+ btn[1].style.color='#ff0'
+ telm[1].style.color='#ff0'
  telm[1].style.transform='scale(0)'
  telm[2].style.color='#000'
  telm[2].style.transform='scale(0)'
