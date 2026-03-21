@@ -11,7 +11,7 @@ button
  position:absolute;
  transition:1s;
  cursor:pointer;
- font-size:1.5em;
+ font-size:2em;
 }
 button:hover
 {
@@ -105,17 +105,17 @@ crrnt=document.getElementsByClassName('crrnt')
 
 btn[0].style.right=4+'%'
 btn[0].style.top=5+'%'
-btn[0].style.width=7+'%'
-btn[0].style.height=5+'%'
+btn[0].style.width=12+'%'
+btn[0].style.height=7+'%'
 btn[0].style.background='#b0b'
-btn[0].style.color='#0b0'
+btn[0].style.color='#ff0'
 btn[0].style.borderRadius=22+'%'
 btn[1].style.right=4+'%'
-btn[1].style.top=13+'%'
-btn[1].style.width=7+'%'
-btn[1].style.height=5+'%'
+btn[1].style.top=15+'%'
+btn[1].style.width=12+'%'
+btn[1].style.height=7+'%'
 btn[1].style.background='#909'
-btn[1].style.color='#0b0'
+btn[1].style.color='#ff0'
 btn[1].style.borderRadius=13+'%' 
  
 wrs[0].style.left=10+'%'
@@ -299,7 +299,7 @@ crrnt[4].style.background=
 crrnt[4].style.borderRadius=55+'%'
 crrnt[4].style.transform='scale(2)'
 crrnt[4].style.opacity=0
-//crrnt[5].style.transition=555+'ms'
+crrnt[5].style.transition=555+'ms'
 crrnt[5].style.left=4+'%'
 crrnt[5].style.top=74+'%'
 crrnt[5].style.width=58+'%'
@@ -307,33 +307,40 @@ crrnt[5].style.height=22+'%'
 crrnt[5].style.background='#fff'
 crrnt[5].style.opacity=0.3
 crrnt[5].style.zIndex=-1
- //const cnvs=0
  cnvs=crrnt[5].getContext('2d')
 
 bbtn0=1 
 btn[0].onmouseover=()=>
 {
  btn[0].style.color='#0f0'
+ elm[1].style.width=2+'%'
+ elm[1].style.height=666+'%'
+ elm[1].style.background='#ff0'
+ elm[1].style.border='8px ridge #f00'
+ elm[1].style.borderTop='transparent'
+ elm[1].style.borderBottom='transparent'
+ elm[1].style.transform='translate(0,-11%)'
+ elm[2].style.width=600+'%'
+ elm[2].style.height=35+'%'
+ elm[2].style.background='#f00'
+ elm[2].style.border='none'
+ elm[2].style.transform='translate(20%,0)'
 }
 btn[0].onmouseout=()=>
 {
  btn[0].style.color='#0b0'
-}
-btn[0].onclick=()=>
-{
- if(bbtn0)
- {
-  elm[1].style.transform=
-   'translate(130%,233%) rotate(90deg)'
-  elm[2].style.transform=
-   'translate(-399%,-133%) rotate(0deg)'
- }
- else
- {
-  elm[1].style.transform='rotate(0deg)'
-  elm[2].style.transform='rotate(90deg)'
- }
-  bbtn0=!bbtn0
+ elm[1].style.width=23+'%'
+ elm[1].style.height=555+'%'
+ elm[1].style.background='#000'
+ elm[1].style.border='none'
+ elm[1].style.transform='scale(1)'
+ elm[2].style.width=800+'%'
+ elm[2].style.height=4+'%'
+ elm[2].style.background='#ff0'
+ elm[2].style.border='8px ridge #000'
+ elm[2].style.borderLeft='transparent'
+ elm[2].style.borderRight='transparent'
+  elm[2].style.transform='scale(1)'
 }
 
 btn[1].onmouseover=()=>
@@ -437,7 +444,7 @@ wrs[0].onmouseover=()=>
 }
 wrs[0].onmouseout=()=>
 {
- telm[0].onmouseout()
+  telm[0].onmouseout()
  wrs[0].style.background='none'
   clearInterval(Ielm)
  elm[0].style.background='#400'
@@ -472,11 +479,13 @@ wrs[0].onclick=()=>
 telm[0].onmouseover=()=>
 {
  telm[0].style.transform='scale(5)'
+ telm[0].style.borderRadius=33+'%'
  telm[0].style.border='4px ridge #099'
 }
 telm[0].onmouseout=()=>
 {
  telm[0].style.transform='scale(4)'
+ telm[0].style.borderRadius=0+'%'
  telm[0].style.border='none'
 }
 
