@@ -117,7 +117,7 @@ bgrnd[5].style.top=33+'%'
 bgrnd[5].style.width=3+'%'
 bgrnd[5].style.height=12+'%'
 bgrnd[5].style.borderRadius=55+'%'
-bgrnd[5].style.border='11px ridge #ff0'
+bgrnd[5].style.border='7px ridge #ff0'
 bgrnd[5].style.borderTopColor='transparent'
 bgrnd[5].style.borderBottomColor='transparent'
 bgrnd[5].style.opacity=0
@@ -138,7 +138,7 @@ tst[1].style.height=20+'%'
 tst[1].style.background='#ff0'
 tst[1].style.borderRadius=7+'%'
 tst[1].style.textAlign='center'
-tst[1].style.fontSize=3+'em'
+tst[1].style.fontSize=4+'em'
 btn[0].style.left=9+'%'
 btn[0].style.top=33+'%'
 btn[1].style.left=39+'%'
@@ -248,6 +248,7 @@ tst[0].onmouseover=()=>
  btn[6].style.boxShadow='11px 11px 6px'
  btn[7].style.boxShadow='11px 11px 6px'
  btn[8].style.boxShadow='11px 11px 6px'
+ bldng[0].style.transform='scale(1.1)'
  for(i=0;i<3;i++)
  {
   bgrnd[i].style.transform='scale(1.1)'
@@ -255,16 +256,12 @@ tst[0].onmouseover=()=>
  }
  Itst= setInterval(()=>
  {
-  if(Math.random()>0.5)
-   bgrnd[5].style.opacity=0.9
-  else
-   bgrnd[5].style.opacity=0
-  bgrnd[5].style.borderWidth=13+'px'
+  bgrnd[5].style.opacity=Math.random()//0.9
   bgrnd[5].style.transform='scale('+
-   (1+Math.random())+') translate(-22%,0)'
+   (1+Math.random())+',2) translate(-22%,0)'
   btn[ddgt].style.boxShadow='11px 11px 6px'
   bldng[ddgt+1].style.background='#222'
-  tst[1].style.fontSize=3+'em'
+  tst[1].style.fontSize=4+'em'
    dgt=Math.round(Math.random()*8)
   btn[dgt].style.boxShadow='none'
   bldng[dgt+1].style.background='#ff0'
@@ -276,8 +273,8 @@ tst[0].onmouseover=()=>
 tst[0].onmouseout=()=>
 { 
  bgrnd[5].style.opacity=0
- bgrnd[5].style.borderWidth=3+'px'
  bgrnd[5].style.transform='scale(1)'
+ bldng[0].style.transform='scale(1)'
  tst[0].style.boxShadow='11px 11px 6px'
  tst[0].style.transform='scale(1)'
  tst[1].style.borderRadius='7%'
