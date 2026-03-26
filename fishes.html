@@ -196,6 +196,7 @@ jlly[3].style.height=76+'%'
 jlly[3].style.background=
  'radial-gradient(#ca0,#0bb)'
 jlly[3].style.opacity=0.5
+jlly[3].style.zIndex=-1
 
 t_wtr[0].style.left=20+'%'
 t_wtr[0].style.top=6+'%'
@@ -321,6 +322,8 @@ fsh[0].onmouseover=()=>
   jlly[2].style.opacity=1
   jlly[2].style.transform=
    'scale(2,1.5) translate(99%,-144%) skew(22deg)' 
+  jlly[3].style.transform=
+   'scale(2,1.5) translate(-19%,24%) skew(22deg)'   
   setTimeout(()=>{
    fns[0].style.transform='scale(0.8,1)'
    fns[1].style.transform='scale(0.8,1)'
@@ -358,7 +361,8 @@ fsh[0].onmouseout=()=>
  jlly[1].style.transform='scale(1)'
  jlly[2].style.opacity=0
  jlly[2].style.transform='scale(0)'
-} 
+ jlly[3].style.transform='scale(1)'
+}  
 
 t_wtr[0].onmouseover=()=>
 {
