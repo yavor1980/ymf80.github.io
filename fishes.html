@@ -58,12 +58,16 @@
 <button id=idbtn>come</button>
 <img id=idaq src='img/aquarium.png'   >
 
+
+
 <div class=fsh>
  <div class=fsh>
   <div class=fsh> 
    <div class=fc></div>
    <div class=fc></div>
    <div class=fc></div>
+   <div class=bbl></div>
+   <div class=bbl></div>
    <div class=bbl></div>
    <div class=bbl></div>
    <div class=bbl></div>
@@ -78,6 +82,7 @@
 <div class=jlly>
  <div class=jlly></div>
  <div class=jlly>jelly fish</div>
+ <div class=jlly></div>
 </div>
 
 <div class=t_wtr></div>
@@ -156,27 +161,16 @@ fns[1].style.background=
 fns[1].style.opacity=0.4 
 fns[1].style.transform='scale(0.8,1)'
 
-bbl[0].style.left=45+'%'
-bbl[0].style.top=66+'%'
-bbl[0].style.width=5+'%'
-bbl[0].style.height=5+'%'
-bbl[0].style.background=
+for(i=0;i<5;i++)
+{
+bbl[i].style.left=45+'%'
+bbl[i].style.top=66+'%'
+bbl[i].style.width=5+'%'
+bbl[i].style.height=5+'%'
+bbl[i].style.background=
  'radial-gradient(#00f,#fff)'
-bbl[0].style.transform='scale(0)' 
-bbl[1].style.left=45+'%'
-bbl[1].style.top=66+'%'
-bbl[1].style.width=5+'%'
-bbl[1].style.height=5+'%'
-bbl[1].style.background=
- 'radial-gradient(#00b,#fff)'
-bbl[1].style.transform='scale(0)' 
-bbl[2].style.left=45+'%'
-bbl[2].style.top=66+'%'
-bbl[2].style.width=5+'%'
-bbl[2].style.height=5+'%'
-bbl[2].style.background=
- 'radial-gradient(#009,#fff)'
-bbl[2].style.transform='scale(0)'
+bbl[i].style.transform='scale(0)' 
+}
 
 jlly[0].style.left=70+'%'
 jlly[0].style.top=76+'%'
@@ -195,6 +189,13 @@ jlly[1].style.opacity=0.5
 jlly[2].style.color='#b00'
 jlly[2].style.opacity=0
 jlly[2].style.transform='scale(0)'
+jlly[3].style.left=24+'%'
+jlly[3].style.top=13+'%'
+jlly[3].style.width=76+'%'
+jlly[3].style.height=76+'%'
+jlly[3].style.background=
+ 'radial-gradient(#ca0,#0bb)'
+jlly[3].style.opacity=0.5
 
 t_wtr[0].style.left=20+'%'
 t_wtr[0].style.top=6+'%'
@@ -289,13 +290,19 @@ fsh[0].onmouseover=()=>
    'scale('+2.8*Math.random()+',1)' 
   bbl[0].style.transition='1s'
   bbl[0].style.transform=
-   'scale(6) translate('+Math.random()*333+'%,-222%)'
+   'scale(6) translate('+Math.random()*666+'%,-222%)'
   bbl[1].style.transition='1s'
   bbl[1].style.transform=
-   'scale(5) translate('+Math.random()*333+'%,-111%)'
+   'scale(5) translate('+Math.random()*666+'%,-111%)'
   bbl[2].style.transition='1s'
   bbl[2].style.transform=
-   'scale(4) translate('+Math.random()*333+'%,-11%)'
+   'scale(4) translate('+Math.random()*666+'%,-166%)'
+  bbl[3].style.transition='1s'
+  bbl[3].style.transform=
+   'scale(5) translate('+Math.random()*666+'%,-411%)'
+  bbl[4].style.transition='1s'
+  bbl[4].style.transform=
+   'scale(4) translate('+Math.random()*666+'%,-433%)' 
   jlly[0].style.opacity=0.8
   jlly[0].style.borderTopLeftRadius=
    (22+Math.random()*33)+'%'
@@ -323,6 +330,10 @@ fsh[0].onmouseover=()=>
    bbl[1].style.transform='scale(0)'
    bbl[2].style.transition='0s'
    bbl[2].style.transform='scale(0)'
+   bbl[3].style.transition='0s'
+   bbl[3].style.transform='scale(0)' 
+   bbl[4].style.transition='0s'
+   bbl[4].style.transform='scale(0)'   
   },  1000) 
  },  1050)
 }
