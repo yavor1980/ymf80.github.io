@@ -53,7 +53,10 @@ body
 <div class=bgrnd>#00f</div>
 <div class=bgrnd>#fff</div>
  <div class=bgrnd>mix color</div>
- <div class=bgrnd></div>
+ 
+ <div class=bgrnd>
+  <div class=bgrnd></div>
+ </div>
  
  <div class=tst>
   <div class=tst></div>
@@ -121,6 +124,14 @@ bgrnd[5].style.border='7px ridge #ff0'
 bgrnd[5].style.borderTopColor='transparent'
 bgrnd[5].style.borderBottomColor='transparent'
 bgrnd[5].style.opacity=0
+bgrnd[6].style.left=22+'%'
+bgrnd[6].style.width=166+'%'
+bgrnd[6].style.height=99+'%'
+bgrnd[6].style.borderRadius=55+'%'
+bgrnd[6].style.border='7px ridge #ff0'
+bgrnd[6].style.borderTopColor='transparent'
+bgrnd[6].style.borderBottomColor='transparent'
+bgrnd[6].style.opacity=0
  
 tst[0].style.left=20+'%'
 tst[0].style.top=33+'%'
@@ -259,6 +270,9 @@ tst[0].onmouseover=()=>
   bgrnd[5].style.opacity=Math.random()//0.9
   bgrnd[5].style.transform='scale('+
    (1+Math.random())+',2) translate(-22%,0)'
+  bgrnd[6].style.opacity=Math.random()//0.9
+  bgrnd[6].style.transform='scale('+
+   (1+1.2*Math.random())+',2) translate(-22%,0)'  
   btn[ddgt].style.boxShadow='11px 11px 6px'
   bldng[ddgt+1].style.background='#222'
   tst[1].style.fontSize=4+'em'
