@@ -323,7 +323,15 @@ fsh[0].onmouseover=()=>
   jlly[2].style.transform=
    'scale(2,1.5) translate(99%,-144%) skew(22deg)' 
   jlly[3].style.transform=
-   'scale(2,1.5) translate(-19%,24%) skew(22deg)'   
+   'scale(2,1.5) translate(-19%,24%) skew(22deg)'  
+  jlly[3].style.borderTopLeftRadius=
+   (22+Math.random()*33)+'%'
+  jlly[3].style.borderTopRightRadius=
+   (22+Math.random()*33)+'%'
+  jlly[3].style.borderBottomLeftRadius=
+   (22+Math.random()*33)+'%'
+  jlly[3].style.borderBottomRightRadius=
+   (22+Math.random()*33)+'%' 
   setTimeout(()=>{
    fns[0].style.transform='scale(0.8,1)'
    fns[1].style.transform='scale(0.8,1)'
