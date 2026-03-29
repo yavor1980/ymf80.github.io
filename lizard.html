@@ -96,9 +96,10 @@
  <div class=pw><div class=hvs></div></div>
  <div class=pw><div class=hvs></div></div>
 </div>
-<div class=ttagrss>Agressive one</div>
-<div class=ttagrss>Aggression is vectorless</div>
-<div class=ttagrss>Emotional<br> irritation</div>
+
+<div class=ttagrss></div>
+<div class=ttagrss></div>
+<div class=ttagrss></div>
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -233,11 +234,14 @@ inn(hvs,0, 2,93, 88,22,
 inn(hvs,1, 2,93, 88,22,
  'radial-gradient(#333,#222)',55,55,5,5)
  
-inn(ttagrss,0, 3,2, 23,12,'#0ff')
+inn(ttagrss,0, 3,2, 23,12,
+ 'radial-gradient(#0ff,#00f)')
  ttagrss[0].style.borderRadius=55+'%'
-inn(ttagrss,1, 23,10, 23,12,'#0dd')
+inn(ttagrss,1, 23,10, 23,12,
+' radial-gradient(#0ff,#00f)')
  ttagrss[1].style.borderRadius=55+'%'
-inn(ttagrss,2, 4,19, 23,12,'#0ee')
+inn(ttagrss,2, 4,19, 23,12,
+ 'radial-gradient(#0ff,#00f)')
  ttagrss[2].style.borderRadius=55+'%'
 		
  bd=0, bstp=0
@@ -342,9 +346,12 @@ function clk()
   grnd[5].style.transform='scale(1)'
   grnd[6].style.opacity=0
   grnd[6].style.transform='scale(1)'
-  ttagrss[0].style.background='#0ff'
-  ttagrss[1].style.background='#0dd'
-  ttagrss[2].style.background='#0ee'
+  ttagrss[0].style.background=
+   'radial-gradient(#0ff,#00f)'
+  ttagrss[1].style.background=
+   'radial-gradient(#0ff,#00f)'
+  ttagrss[2].style.background=
+   'radial-gradient(#0ff,#00f)'
   mth[0].style.height='1%'
   hd[2].style.transform=
    'scale(1) translate(0%,0)'
