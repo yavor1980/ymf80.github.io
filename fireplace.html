@@ -368,14 +368,16 @@ function act(nm,i,clrr,clrrr)
 {
  nm[i].onmouseover=()=>
  {    
-  nm[i].style.color='#fff'
-  nm[i].style.transform='scale(3) skew(-5deg)'
+  nm[i].style.zIndex=1
+  nm[i].style.color='#eee'
+  nm[i].style.transform='scale(4) skew(-5deg)'
    nm[i].innerHTML=clr[i]
   flme[1].style.background=clrr
   flme[2].style.background=clrr
  } 
  nm[i].onmouseout=()=>
  {    
+  nm[i].style.zIndex=0
   nm[i].style.color='#00f'
   nm[i].style.transform='scale(2)'
    nm[i].innerHTML=clrrr
