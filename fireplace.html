@@ -10,64 +10,34 @@
 
 #idb
 {
- position:absolute;
- transition:1s;
+ position:absolute; transition:1s;
  cursor:pointer;
- left:88%;
- top:9%;
- width:7%;
- height:5%;
- background:#f00;
- color:#fff;
- border-radius:25%;
- font-size:1.2em;
+ left:78%; top:5%;
+ background:#f00; color:#ff0;
+ border-radius:25%; font-size:2em;
 }
-#idb:hover
-{
- transform:scale(1.3);
-}
+#idb:hover {transform:scale(1.2);}
 
-.flme
+.flme,.drv
 {
- position:absolute;
- transition:999ms;
- transform:scale(1.2);
+ position:absolute; transition:999ms;
 }
 .drv
 {
- position:absolute;
- transition:2s;
- left:44%;
- z-index:0;
+ transition:2s; left:44%;
 }
 
-.drts
+.drts,.frz,.hdd
 {
- position:absolute;
- transition:1s;
+ position:absolute; transition:1s;
 }
-
 .frz
 {
- position:absolute;
- transition:1s;
- cursor: pointer;
- color:#00f;
- transform:scale(2);
- font-size:1.2em;
- z-index:1;
+ color:#00f; font-size:1.2em;
+ transform:scale(2); cursor: pointer;
 }
-.frz:hover
-{
- transform:scale(2);
-}
-
-.hdd
-{
- position:absolute;
- transition:1s;
- cursor:pointer; 
-}
+.frz:hover {transform:scale(2);}
+.hdd {cursor:pointer;}
 
 </style>
 
@@ -218,12 +188,12 @@ drv[2].style.background='#440'
 drv[2].style.transform='rotate(0deg)'
 drv[2].style.borderRadius=22+'%' 
 
-drts[0].style.left='79%'
-drts[0].style.top='22%'
-drts[0].style.width='12%'
-drts[0].style.height='32%'
+drts[0].style.left=79+'%'
+drts[0].style.top=22+'%'
+drts[0].style.width=12+'%'
+drts[0].style.height=32+'%'
 drts[0].style.background='#bbb'
-drts[0].style.borderRadius='55%'
+drts[0].style.borderRadius=55+'%'
 drts[0].style.border='15px ridge #000'
 drts[0].style.transform='skew(-16deg)'
 
@@ -244,7 +214,7 @@ frz[2].style.left=33+Math.random()*7+'%'
 frz[2].style.top=27+'%'
 frz[3].style.left=33+Math.random()*7+'%'
 frz[3].style.top=37+'%'
-frz[4].style.left=8+Math.random()*7+'%'
+frz[4].style.left=13+Math.random()*7+'%'
 frz[4].style.top=47+'%'
 frz[5].style.left=33+Math.random()*7+'%'
 frz[5].style.top=57+'%'
@@ -268,7 +238,7 @@ function cld()
   flme[1].style.transform=
    'scale(2.1) translate(0,-11%) '
   flme[1].style.zIndex=1 
-  flme[2].style.borderTopRightRadius='55%'
+  flme[2].style.borderTopRightRadius=55+'%'
   flme[2].style.transform=
    'scale(1.5) translate(0,-11%)'
   flme[2].style.zIndex=0
@@ -315,7 +285,6 @@ idb.onclick=()=>
  clk() 
 }  
 
-
 flme[0].onmouseover=()=>
 {    
  flme[0].style.border='15px ridge #404'
@@ -331,7 +300,7 @@ flme[0].onmouseover=()=>
  }
  fl[3].style.opacity=1
  fl[3].style.transform=
-  'scale(1) translate(0,-99%) rotate(-33deg) skew(33deg)'
+  'scale(1) translate(0,-99%) rotate(-23deg) skew(33deg)'
  drts[0].style.transform='skew(1deg)'
  drts[0].style.background=
   'radial-gradient('+(44+Math.random()*33)+'px,#f00,#ff0)'
@@ -342,6 +311,7 @@ flme[0].onmouseover=()=>
   'scale(4) rotate(33deg) skew(33deg)'
  hdd[1].style.color='#f00' 
 } 
+
 flme[0].onmouseout=()=>
 {    
  flme[0].style.border='15px ridge #404'
@@ -356,7 +326,8 @@ flme[0].onmouseout=()=>
   fl[i].style.opacity=0
  }
  fl[3].style.opacity=0.4
- fl[3].style.transform='scale(1)'
+ fl[3].style.transform=
+  'scale(1) rotate(-33deg) skew(33deg)'
  drts[0].style.transform='skew(-16deg)'
  drts[0].style.background='#fff'
  hdd[0].style.transform=
@@ -397,13 +368,15 @@ function act(nm,i,clrr,clrrr)
 {
  nm[i].onmouseover=()=>
  {    
-  nm[i].style.transform='scale(2.3) skew(-5deg)'
+  nm[i].style.color='#fff'
+  nm[i].style.transform='scale(3) skew(-5deg)'
    nm[i].innerHTML=clr[i]
   flme[1].style.background=clrr
   flme[2].style.background=clrr
  } 
  nm[i].onmouseout=()=>
  {    
+  nm[i].style.color='#00f'
   nm[i].style.transform='scale(2)'
    nm[i].innerHTML=clrrr
   flme[1].style.background=
