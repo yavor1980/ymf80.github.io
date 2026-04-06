@@ -36,7 +36,6 @@
  color:#00f; font-size:1.2em;
  transform:scale(2); cursor: pointer;
 }
-.frz:hover {transform:scale(2);}
 .hdd {cursor:pointer;}
 
 </style>
@@ -147,6 +146,16 @@ for(i=0;i<4;i++)
  fl[i].style.height=21+'%'
  fl[i].style.transform='scale(0)'
 }
+ fl[3].style.left=14+'%'
+ fl[3].style.bottom=11+'%'
+ fl[3].style.width=44+'%'
+ fl[3].style.height=19+'%'
+ fl[3].style.background='none'
+ fl[3].style.opacity=0
+ fl[3].style.border='15px ridge #000'
+ fl[3].style.borderLeft='transparent'
+ fl[3].style.borderBottom='transparent'
+ fl[3].style.borderRadius=0+'%'
 function pos()
 {
  fl[0].style.transform='scale('+(Math.random())+
@@ -155,20 +164,10 @@ function pos()
   ') translate(125%,-125%)'
  fl[2].style.transform='scale('+(Math.random())+
   ') translate(125%,-125%)'
+ fl[3].style.transform='scale('+(1+Math.random()/2)+
+  ') translate(12%,-125%) rotate(66deg) skew(22deg)'  
 }
- fl[3].style.left=14+'%'
- fl[3].style.bottom=11+'%'
- fl[3].style.width=31+'%'
- fl[3].style.height=11+'%'
- fl[3].style.background='none'
- fl[3].style.opacity=0.4
- fl[3].style.border='15px ridge #000'
- fl[3].style.borderLeft='transparent'
- fl[3].style.borderBottom='transparent'
- fl[3].style.borderRadius=0+'%'
- fl[3].style.transform=
-  'scale(1) rotate(-33deg) skew(33deg)'
- 
+
 drv[0].style.top=64+'%'
 drv[0].style.width=4+'%'
 drv[0].style.height=44+'%'
@@ -279,7 +278,6 @@ function clk()
   idb.style.opacity=1
  }, 999)  
 }
-
 idb.onclick=()=>
 {    
  clk() 
@@ -325,7 +323,7 @@ flme[0].onmouseout=()=>
  {
   fl[i].style.opacity=0
  }
- fl[3].style.opacity=0.4
+ fl[3].style.opacity=0//.4
  fl[3].style.transform=
   'scale(1) rotate(-33deg) skew(33deg)'
  drts[0].style.transform='skew(-16deg)'
