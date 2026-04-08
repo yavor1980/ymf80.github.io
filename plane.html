@@ -9,44 +9,25 @@ body
 }
 #idb
 {
- position:absolute;
- cursor:pointer;
- transition:1s;
- left:87%;
- top:8%;
- width:9%;
- height:7%;
- background:#ff0;
- color:#999;
- border-radius:22%;
- font-size:2em;
+ position:absolute; transition:1s; cursor:pointer;
+ left:87%; top:8%; width:9%; height:7%;
+ background:#ff0; color:#999;
+ border-radius:22%; font-size:2em;
 }
 #idb:hover
 {
- color:#900;
- transform:scale(1.2);
+ color:#900; transform:scale(1.2);
 }
 
 .plne,.clds,.bllts,.tle
 {
- position:absolute;
- transition:1s;
- cursor:pointer;
+ position:absolute; transition:1s; cursor:pointer;
 }
-.clds
-{
- border-radius:54%; 
-}
-.bllts
-{
- z-index:-1; 
-}
+.clds {border-radius:54%;}
+.bllts {z-index:-1 }
 .tle
 {
- left:44%; 
- top:-77%; 
- width:18%; 
- height:88%; 
+ left:44%; top:-77%; width:18%; height:88%; 
  background:#333; 
  border-top-left-radius:55%; 
  border-top-right-radius:55%; 
@@ -83,35 +64,35 @@ body
 </div>
 
 <script>
+plne=document.getElementsByClassName('plne')
 bllts=document.getElementsByClassName('bllts')
 tle=document.getElementsByClassName('tle')
-plne=document.getElementsByClassName('plne')
 clds=document.getElementsByClassName('clds')
 
 bllts[0].style.bottom=0+'%'
 bllts[0].style.width=99+'%'
 bllts[0].style.height=11+'%' 
-bllts[0].style.borderTopLeftRadius=29+'%'
-bllts[0].style.borderTopRightRadius=49+'%'
 bllts[0].style.background=
  'linear-gradient(#333,#900)'
 bllts[0]. style.opacity=0.2
+bllts[0].style.borderTopLeftRadius=29+'%'
+bllts[0].style.borderTopRightRadius=49+'%'
 bllts[1].style.left=Math.random()*77+'%'
 bllts[1].style.top=Math.random()*66+'%'
 bllts[1].style.width=9+'%'
 bllts[1].style.height=2+'%' 
-bllts[1].style.borderRadius=29+'%'
 bllts[1].style.background=
  'linear-gradient(#333,#900)'
-bllts[1].style.opacity=0.6
+bllts[1].style.opacity=0.6 
+bllts[1].style.borderRadius=29+'%'
 bllts[2].style.left=Math.random()*77+'%'
 bllts[2].style.top=Math.random()*66+'%'
 bllts[2].style.width=9+'%'
 bllts[2].style.height=3+'%' 
-bllts[2].style.borderRadius=28+'%'
 bllts[2].style.background=
  'linear-gradient(#333,#900)'
 bllts[2].style.opacity=0.6
+bllts[2].style.borderRadius=28+'%'
 
 plne[0].style.left=33+'%'
 plne[0].style.top=33+'%'
@@ -195,9 +176,9 @@ inn(clds,1, 18,9, 27,18,'radial-gradient(#066,#ff9)')
 inn(clds,2, 60,55, 20,13,'radial-gradient(#606,#fff)')
  clds[2].style.opacity=0.4
 inn(clds,3, 33,44, 2,8,'radial-gradient(#ff0,#f00)')
- clds[3].style.opacity=0
+ //clds[3].style.opacity=0
 inn(clds,4, 67,44, 2,8,'radial-gradient(#ff0,#f00)')
- clds[4].style.opacity=0
+ //clds[4].style.opacity=0
 
 Icl=0
 function cl()
@@ -220,12 +201,6 @@ function cl()
   'scale('+(vgf+3)+')'   
  plne[7].style.transform=
   'scale('+(vgf+3)+')' 
- clds[3].style.transform=
-  'scale(2) translate('+Math.random()*82+
-  '%,'+Math.random()*-992+'%)'  
- clds[4].style.transform=
-  'scale(2) translate('+Math.random()*82+
-  '%,'+Math.random()*-992+'%)'  
  clds[0].style.opacity=0.1+Math.random()
  clds[0].style.transform=
   'scale('+(Math.random()/2+0.6)+ 
@@ -241,12 +216,26 @@ function cl()
   'scale('+(Math.random()/4+1)+
   ')translate('+Math.random()*42+
   '%,'+Math.random()*42+'%)' 
-}
+ clds[3].style.transition=1+'s'
+ clds[3].style.opacity=0.6
+ clds[3].style.transform=
+  'scale(9) translate(-333%,-33%)'
+ clds[4].style.transition=1+'s' 
+ clds[4].style.opacity=0.6
+ clds[4].style.transform=
+  'scale(9) translate(333%,-33%)'
+ setTimeout(()=>
+ { 
+  clds[3].style.transition=0+'s'
+  clds[3].style.opacity=0
+  clds[4].style.transition=0+'s'
+  clds[4].style.opacity=0
+ }, 799) 
+} 
   Icl=setInterval(cl, 999)
  
 idb.onclick=()=>
 { 
-
   clearInterval(Icl)
  plne[0].style.transform=
   'scale(2) translate(0,99%) rotate(0deg)'
@@ -289,21 +278,7 @@ plne[0].onmouseover=()=>
  plne[5].style.transform='scale('+prtr+')'
  plne[7].style.opacity=0.6 
  plne[7].style.transform='scale('+prtr+')'
- clds[3].style.transition=1+'s'
- clds[3].style.opacity=0.6
- clds[3].style.transform=
-  'scale(9) translate(-333%,-33%)'
- clds[4].style.transition=1+'s' 
- clds[4].style.opacity=0.6
- clds[4].style.transform=
-  'scale(9) translate(333%,-33%)'
- setTimeout(()=>
- { 
-  clds[3].style.transition=0+'s'
-  clds[3].style.opacity=0
-  clds[4].style.transition=0+'s'
-  clds[4].style.opacity=0
- }, 899)
+
 }   
 plne[0].onmouseout=()=>
 {
