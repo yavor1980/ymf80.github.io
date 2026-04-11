@@ -363,6 +363,7 @@ idsI=0
 bids=0
 ids.onmouseover=()=>
 {
+ inf[0].onmouseover()
  hd[0].style.borderTop='8px ridge #900'
  hd[0].style.borderBottom='8px ridge #900'
  lhnd[0].style.transform=
@@ -446,9 +447,10 @@ ids.onmouseover=()=>
   'scale(1,3) translate(0,-144%)'
  kr3[1].style.transform=
   'scale(1,3) translate(0,-144%)' 	
-
 }   
-ids.onmouseout=()=>{ 
+ids.onmouseout=()=>
+{ 
+ inf[0].onmouseout()
  for(i=0;i<5;i++)
  {
   fids[i]=0
