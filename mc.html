@@ -156,11 +156,11 @@ inn(antnn,2, 48,-400,5,933, '#000','')
 inn(antnn,3, 90,-400,5,933, '#000','')
  antnn[3].style.borderRadius=55+'%'
 inn(antnn,4, -22,-749,140,1600, '','')
- antnn[4].style.border='2px ridge #f0f'
- antnn[4].style.borderLeft='2px ridge transparent'
- antnn[4].style.borderRight='2px ridge transparent'
  antnn[4].style.opacity=0
  antnn[4].style.borderRadius=55+'%'
+ antnn[4].style.border='4px ridge #f00'
+ antnn[4].style.borderLeft='2px ridge transparent'
+ antnn[4].style.borderRight='2px ridge transparent'
  
 inn(cmnd,0, 9,12)
 inn(cmnd,1, 9,16)
@@ -245,6 +245,7 @@ function clk()
    'scale(2,1.2) translate(0,11%)'
   sp[1].style.transform='scale(1)'
    icmnd=Math.round(Math.random()*3)
+  //cmnd[icmnd].style.color='#f00'
   cmnd[icmnd].style.transform=
    'scale(2) translate(33%,0)'
  }
@@ -255,6 +256,7 @@ function clk()
   sp[0].style.transform='scale(1) '
   sp[1].style.transform=
    'scale(2,1.2) translate(0,11%)'
+  //cmnd[icmnd].style.color='#000' 
   cmnd[icmnd].style.transform='scale(1.5)'
  }
   bcl=!bcl   
@@ -265,6 +267,7 @@ prcssr[0].onmouseover=()=>
 { 
   clk()
   Ip=setInterval(clk, 999)
+  snd[0].onmouseover()
 }
 prcssr[0].onmouseout=()=>
 {
@@ -290,6 +293,7 @@ prcssr[0].onmouseout=()=>
  antnn[4].style.opacity=0
  cmnd[icmnd].style.transform='scale(1.5)'
   bcl=1
+  snd[0].onmouseout()
 }
 
 function fcmnd(i,frz)
@@ -298,7 +302,7 @@ function fcmnd(i,frz)
  {
   cmnd[i].style.transform=
    'scale(2.6) translate(22%,0%)'
-  cmnd[i].style.color='#808'
+  cmnd[i].style.color='#b00'
   cmnd[4].style.transform=
    'scale(3) translate(36%,7%)'
    cmnd[4].innerHTML=frz
