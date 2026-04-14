@@ -31,7 +31,7 @@
  transition:1s;
  cursor:pointer;
  transform:scale(2);
- text-align:center;
+ z-index:1;
 }
 
 .snd
@@ -169,6 +169,7 @@ inn(cmnd,3, 9,24)
 inn(cmnd,4, 5,5,'','','','#f00')
 
 inn(rgstr,0, 31,7,'','','','#ff0')
+ rgstr[0].style.background='#f0f'
  rgstr[0].style.transform='scale(3)'
 inn(rgstr,1, 45,7,'','','','#f00')
  rgstr[1].style.transform='scale(0)'
@@ -182,6 +183,7 @@ inn(rgstr,2, 63,3,'','','','#f0f')
   
 snd[0].style.left=66+'%'
 snd[0].style.top=7+'%'
+snd[0].style.background='#ff0'
 snd[0].style.color='#900'
 snd[0].style.cursor='pointer'
 snd[0].style.transform='scale(3)'
@@ -245,7 +247,7 @@ function clk()
    'scale(2,1.2) translate(0,11%)'
   sp[1].style.transform='scale(1)'
    icmnd=Math.round(Math.random()*3)
-  //cmnd[icmnd].style.color='#f00'
+  cmnd[icmnd].style.color='#f00'
   cmnd[icmnd].style.transform=
    'scale(2) translate(33%,0)'
  }
@@ -256,7 +258,7 @@ function clk()
   sp[0].style.transform='scale(1) '
   sp[1].style.transform=
    'scale(2,1.2) translate(0,11%)'
-  //cmnd[icmnd].style.color='#000' 
+  cmnd[icmnd].style.color='#000' 
   cmnd[icmnd].style.transform='scale(1.5)'
  }
   bcl=!bcl   
@@ -276,6 +278,7 @@ prcssr[0].onmouseout=()=>
  {
   lp[i].style.transform= 'scale(1)'
   rp[i].style.transform= 'scale(1)'
+  cmnd[i].style.color='#000' 
  }
  prcssr[0].style.background= '#333'
  prcssr[0].style.transform= 'scale(1)'
@@ -325,6 +328,7 @@ brgstr=0
 brgstr1=0
 rgstr[0].onmouseover=()=>
 {
+ rgstr[0].style.background='none'
  rgstr[0].style.transform='scale(4)'
  rgstr[0].style.color='#666'
  rgstr[1].style.opacity=1
@@ -332,7 +336,7 @@ rgstr[0].onmouseover=()=>
  rgstr[3].style.transform='scale(3)'
  Irgstr= setInterval(()=>
  {   
-  rgstr[0].innerHTML=argstr[ia]
+   rgstr[0].innerHTML=argstr[ia]
   if(brgstr1)
   {
    rgstr[1].style.transform='scale(3)'
@@ -352,6 +356,7 @@ rgstr[0].onmouseout=()=>
 {
   clearInterval(Irgstr)
   ia=0
+ rgstr[0].style.background='#f0f'
  rgstr[0].style.transform='scale(3)'
  rgstr[0].style.color='#ff0'
   rgstr[0].innerHTML='rgstrs'
@@ -365,6 +370,7 @@ Isnd0=0
 bsnd0=0
 snd[0].onmouseover=()=>
 {
+ snd[0].style.background='none'
  snd[0].style.transform='scale(3.1)'
   snd[0].innerHTML='20Hz...20kHz'
  Isnd0=setInterval(()=>{
@@ -384,6 +390,7 @@ snd[0].onmouseover=()=>
 } 
 snd[0].onmouseout=()=>
 {
+ snd[0].style.background='#ff0'
  snd[0].style.transform='scale(3)'
   snd[0].innerHTML='Sound'
  snd[1].style.transform='scale(0)'
