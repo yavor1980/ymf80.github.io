@@ -22,6 +22,8 @@ button:hover
  transition:1s;
  border-radius:55%;
 }
+.ttl
+{border-radius:0%;}
 
 .tbe
 {
@@ -85,18 +87,21 @@ snk=
 ttl[0].style.left=6+'%'
 ttl[0].style.top=6+'%'
 ttl[0].style.color='#099'
-ttl[0].style.fontSize='3em'
+ttl[0].style.fontSize=3+'em'
+ttl[0].style.background='#ff0'
 ttl[0].style.opacity=0.8
+ttl[0].style.borderRadius=7+'%'
 ttl[0].style.cursor='pointer'
-ttl[0].style.zIndex=1
 ttl[1].style.left=0+'%'
 ttl[1].style.bottom=0+'%'
 ttl[1].style.width=100+'%'
 ttl[1].style.height=22+'%'
-ttl[1].style.borderBottomLeftRadius=0+'%'
-ttl[1].style.borderBottomRightRadius=0+'%'
 ttl[1].style.background=
  'radial-gradient(#960,#999)'
+ttl[1].style.borderTopLeftRadius=6+'%'
+ttl[1].style.borderTopRightRadius=31+'%'
+ttl[1].style.borderBottomLeftRadius=0+'%'
+ttl[1].style.borderBottomRightRadius=0+'%'
 ttl[2].style.left=70+'%'
 ttl[2].style.bottom=5+'%'
 ttl[2].style.width=22+'%'
@@ -104,6 +109,7 @@ ttl[2].style.height=10+'%'
 ttl[2].style.background=
  'radial-gradient(#0ff,#00f)'
 ttl[2].style.opacity=0.7 
+ttl[2].style.borderRadius=55+'%'
 ttl[3].style.left=33+'%'
 ttl[3].style.top=33+'%'
 ttl[3].style.width=33+'%'
@@ -111,6 +117,7 @@ ttl[3].style.height=33+'%'
 ttl[3].style.background=
  'radial-gradient(#0ff,#00f)'
 ttl[3].style.opacity=0.7 
+ttl[3].style.borderRadius=55+'%'
 
 function init(nm,i,l,t,w,h)
 {
@@ -223,7 +230,7 @@ tbe[2].style.zIndex=-1
 tbe[2].style.left=33+'%'
 tbe[2].style.top=-777+'%' 
 tbe[2].style.width=44+'%'
-tbe[2].style.height=855+'%'
+tbe[2].style.height=155
 tbe[2].style.background=
  'radial-gradient(#f80,#444)'
 tbe[2].style.borderBottomLeftRadius=0+'%'
@@ -253,7 +260,7 @@ function cl()
   tbe[0].style.transform=
   'scale('+(1+Math.random()/5)+
   ') rotate('+(62+Math.random()*5)+'deg)'
-  tbe[3].style.transition='0s'
+  tbe[3].style.transition=0+'s'
   tbe[3].style.transform='translate(0,0)'
  }
   else
@@ -268,7 +275,7 @@ function cl()
   tbe[0].style.transform=
   'scale('+(1+Math.random()/8)+
   ') rotate('+(62+Math.random()*5)+'deg)'
-  tbe[3].style.transition='1s'
+  tbe[3].style.transition=1+'s'
   tbe[3].style.transform=
    'scale(2,1) translate(0,199%) rotate(3deg)'
   tbe[3].style.opacity=0.8
@@ -288,12 +295,14 @@ hd[1].onmousemove=()=>
 
 ttl[0].onmouseover=()=>
 {
+ ttl[0].style.background='none'
  ttl[0].style.color='#f00'
  ttl[0].style.transform='skew(23deg)'
   ttl[0].innerHTML=snk	
 }
 ttl[0].onmouseout=()=>
 {
+ ttl[0].style.background='#ff0'
  ttl[0].style.color='#099'
  ttl[0].style.transform='skew(0deg)'
   ttl[0].innerHTML='SNAKES' 
@@ -329,11 +338,9 @@ function clk()
  ttl[3].style.opacity=0 
  ttl[3].style.transform=
   'scale(3,2) translate(0,-322%)'
- ttl[0].onmouseover() 
+  ttl[0].onmouseover() 
  setTimeout(()=>{
   idb.style.opacity=1
-  ttl[2].style.transform='scale(1)'
-  ttl[3].style.opacity=0.7
   hd[2].style.background=
    'radial-gradient(7px,#ff0,#fff)'
   hd[3].style.background=
@@ -349,6 +356,8 @@ function clk()
   bd[2].style.borderTopRightRadius='55%'
   bd[3].style.transform='scale(1,1)' 
   tbe[3].style.transform='scale(1)'
+  ttl[2].style.transform='scale(1)'
+  ttl[3].style.opacity=0.7
   ttl[3].style.background=
   'radial-gradient(#0ff,#00f)'
   ttl[0].onmouseout()
