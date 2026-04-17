@@ -117,7 +117,6 @@ sol[1].style.top=-6+'%'
 sol[1].style.width=111+'%'
 sol[1].style.height=111+'%'
 sol[1].style.opacity=0.2
-sol[1].style.transform='scale(1)'
  
 plnt[0].style.left=Math.random()*77+'%'
 plnt[0].style.top=Math.random()*77+'%'  
@@ -172,6 +171,14 @@ shtl[3].style.background=
 shtl[3].style.borderTopLeftRadius=55+'%'
 shtl[3].style.borderBottomLeftRadius=55+'%'
 shtl[3].style.zIndex=-1
+shtl[4].style.left=33+'%'
+shtl[4].style.top=+33+'%'  
+shtl[4].style.width=49+'%'
+shtl[4].style.height=43+'%'	
+shtl[4].style.background=
+'radial-gradient(#f50,#444)'	
+shtl[4].style.borderRadius=27+'%'
+shtl[4].style.zIndex=-2
 	
 flme[0].style.left=-44+'%'
 flme[0].style.top=7+'%'  
@@ -227,7 +234,6 @@ function clpl()
   // if(strsY>)
  } 
 }	  
-	 
 bclsh=0 
 function clsh()
 {
@@ -255,13 +261,12 @@ idb.onmousemove=()=>
  flme[0].style.transition=1+'s'
  flme[0].style.opacity=0.7
  flme[0].style.transform=
-  'scale(3,7) translate(-144%,0%) skew(44deg)'
+  'scale(3,9) translate(-144%,0%) skew(44deg)'
  flme[1].style.opacity=0.7
  flme[2].style.transition=1+'s'
  flme[2].style.opacity=0.7
  flme[2].style.transform=
-  'scale(3,7) translate(-144%,0%) skew(44deg)'   
-
+  'scale(3,9) translate(-144%,0%) skew(44deg)'   
 }
 idb.onmouseout=()=>
 {  
@@ -273,34 +278,16 @@ idb.onmouseout=()=>
  flme[0].style.transition=0+'s'
  flme[0].style.opacity=0.2
  flme[0].style.transform=
-  'translate(0%,0%) skew(44deg)'
+  ' translate(0%,0%) skew(44deg)'
  flme[1].style.opacity=0
  flme[2].style.transition=0+'s'
  flme[2].style.opacity=0.2
  flme[2].style.transform=
-  'translate(0%,0%) skew(44deg)'     
+  ' translate(0%,0%) skew(44deg)'     
 }   
-   
-shtl[0].onmouseover=()=>
-{
-  strsX=777, strsY=-666 
- shtl[0].style.transform=
-  'scale(2) translate(-19%,0%) skew(22deg)'
- shtl[2].style.borderTopLeftRadius=55+'%'
- shtl[2].style.borderBottomLeftRadius=55+'%' 
- flme[1].style.opacity=1
-}
-shtl[0].onmouseout=()=>
-{
-  strsX=111, strsY=111
- shtl[0].style.transform='scale(1)  skew(44deg)' 
-  shtl[2].style.borderRadius=22+'%'
- flme[1].style.opacity=0
-}    
 
-spce[0].onmouseover=()=>
+ spce[0].onmouseover=()=>
 {
- spce[0].style.color='#ddd'
  spce[0].style.transform=
   'scale(1.9) translate(22%,0)'
   spce[0].innerHTML=
@@ -310,11 +297,34 @@ spce[0].onmouseover=()=>
 }
 spce[0].onmouseout=()=>
 {
- spce[0].style.color='#ff0'
  spce[0].style.transform=
   'scale(3) skew(-22deg)'
   spce[0].innerHTML='Galaxy'
+}  
+
+shtl[0].onmouseover=()=>
+{
+  strsX=777, strsY=-666 
+ shtl[0].style.transform=
+  'scale(2) translate(-19%,0%) skew(22deg)'
+ shtl[2].style.borderTopLeftRadius=55+'%'
+ shtl[2].style.borderBottomLeftRadius=55+'%' 
+ shtl[4].style.transform=
+  'scale(2) translate(3%,23%)'
+ flme[0].style.opacity=1
+ flme[1].style.opacity=1
+ flme[2].style.opacity=1
 }
+shtl[0].onmouseout=()=>
+{
+  strsX=111, strsY=111
+ shtl[0].style.transform='scale(1)  skew(44deg)' 
+ shtl[2].style.borderRadius=22+'%'
+ shtl[4].style.transform='scale(1)'
+ flme[0].style.opacity=0
+ flme[1].style.opacity=0
+ flme[2].style.opacity=0
+}    
 
 </script>
 </body>
