@@ -105,6 +105,7 @@
 <div id=idtrsfrmtr>
  <div class=ttl>Transformation</div>
  <div class=ttl></div>
+ <div class=ttl></div>
  <div class=lcoils></div>
  <div class=lcoils></div>
  <div class=lcoils></div>
@@ -304,11 +305,20 @@ ttl[1].style.left=28+'%'
 ttl[1].style.top=8+'%'
 ttl[1].style.width=43+'%'
 ttl[1].style.height=80+'%'
-ttl[1].style.border='4px ridge #f0f'
+ttl[1].style.border='9px ridge #f0f'
 ttl[1].style.borderTopColor='transparent'
 ttl[1].style.borderBottomColor='transparent'
 ttl[1].style.borderRadius=35+'%'
 ttl[1].style.opacity=0
+ttl[2].style.left=38+'%'
+ttl[2].style.top=8+'%'
+ttl[2].style.width=23+'%'
+ttl[2].style.height=70+'%'
+ttl[2].style.border='9px ridge #f0f'
+ttl[2].style.borderTopColor='transparent'
+ttl[2].style.borderBottomColor='transparent'
+ttl[2].style.borderRadius=35+'%'
+ttl[2].style.opacity=0
 
 btn[0].onmouseover=()=>
 {
@@ -459,6 +469,7 @@ function trsfrmon()
  ttl[0].style.color='#00b'
  ttl[0].style.transform='scale(4) skew(14deg)'
  ttl[1].style.opacity=0.2+Math.random()/2
+ ttl[2].style.opacity=0.2+Math.random()/2
  trsfrmI=setInterval(()=>
  {
     pl=Math.round(Math.random()*4)
@@ -466,6 +477,9 @@ function trsfrmon()
    acoils[i].style.opacity=Math.random()
    ttl[1].style.transform='scale('+
     (1+Math.random()/2)+')'
+   ttl[2].style.transform='scale('+
+    (1+Math.random()/2)+')'
+   
  }, 333)
 } 
 function trsfrmoff()
@@ -488,6 +502,7 @@ function trsfrmoff()
  ttl[0].style.color='#008'
  ttl[0].style.transform='scale(4)'
  ttl[1].style.opacity=0 
+ ttl[2].style.opacity=0 
   clearInterval(trsfrmI)
 } 
 idtrsfrmtr.onmouseover=()=>
