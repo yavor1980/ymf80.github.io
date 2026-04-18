@@ -234,12 +234,19 @@ bbtn=1
 btn[0].onmouseover=()=>
 {
   btn[0].innerHTML='npn'
- pnp[5].style.transform=
-  'scale(1.2) rotate(-84deg) translate(-18%,-200%)'
+ pnp[5].style.left=0+'%'
+ pnp[5].style.top=-77+'%'
+ pnp[5].style.borderBottom='0px solid #000'
+ pnp[5].style.borderTop='44px solid #800' 
+ pnp[5].style.transform='rotate(90deg)'
 }
 btn[0].onmouseout=()=>
 {
   btn[0].innerHTML='pnp'
+ pnp[5].style.left=77+'%'
+ pnp[5].style.top=-77+'%'
+ pnp[5].style.borderTop='0px solid #000'
+ pnp[5].style.borderBottom='44px solid #800'  
  pnp[5].style.transform='rotate(88deg)'
 }
 
