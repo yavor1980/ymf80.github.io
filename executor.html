@@ -97,7 +97,7 @@ btn[0].style.width=9+'%'
 btn[0].style.height=7+'%'
 btn[0].style.background=
  'radial-gradient(#f00,#840)';
-btn[0].style.borderRadius=33+'%'
+btn[0].style.borderRadius=44+'%'
 btn[1].style.right=5+'%'
 btn[1].style.top=15+'%'  
 btn[1].style.width=9+'%'
@@ -294,6 +294,11 @@ function cl()
 }
    jwI=setInterval(cl, 1000)
 
+function sto()
+{
+ rwng[1].style.transform='rotate(0deg)'
+ plh[0].style.left=17+'%'
+}  
 function clk()
 {	 
  rwng[1].style.transform='rotate('+
@@ -303,19 +308,14 @@ function clk()
  plh[2].style.transform='scale(1.7,1.6)'
    setTimeout(sto, 1111)
 }
-function sto()
-{
- rwng[1].style.transform='rotate(0deg)'
- plh[0].style.left=17+'%'
-}           
-		
+         	
 btn[0].onmouseover=()=>
 { 
- btn[0].style.borderRadius=33+'%'
+ btn[0].style.borderRadius=11+'%'
 }
 btn[0].onmouseout=()=>
 { 
- btn[0].style.borderRadius=55+'%'
+ btn[0].style.borderRadius=44+'%'
 } 
 btn[0].onclick=()=>
 { 
@@ -339,7 +339,7 @@ btn[1].onclick=()=>
   'translate(-99%,0) rotate(44deg)'
  plh[0].style.left=10+'%' 
  plh[0].style.transform=
-  'translate(-8%,0) rotate(-9deg)'
+  'scale(1,0.3) translate(-28%,0) rotate(-49deg)'
  setTimeout(()=>{
    btn[1].style.opacity=1
    lwng[0].style.transform='rotate(0deg)'
