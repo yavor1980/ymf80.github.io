@@ -23,18 +23,10 @@
  transform:scale(1.3);
 }
 
-.jws,.mth,.gl,.ns,.lwng,.rwng,.plh
+.jws,.mth,.gl,.ns,.lwng,.rwng,.plh,.texctr
 {
  position:absolute;   
  transition:1s;
-}
-
-.texctr
-{
- position:absolute;    
- transition:1s;
- cursor:pointer;
- transform:scale(2);
 }
 
 .shrm
@@ -74,8 +66,10 @@
 
 <div class=shrm>Sentence...</div> 
  
-<div class=texctr >Executnr </div> 
- <div class=texctr >Execute(vctm)</div>
+<div class=texctr >
+ <div class=texctr ></div>
+ <div class=texctr ></div>
+</div> 
 
 <script>
 var btn=document.getElementsByClassName('btn')
@@ -183,7 +177,7 @@ ns[0].style.top=22+'%'
 ns[0].style.width=22+'%'
 ns[0].style.height=33+'%'  
 ns[0].style.background=
- 'radial-gradient(#bbb,#660)';
+ 'radial-gradient(#bbb,#660)'
 ns[0].style.borderRadius=55+'%'
 ns[1].style.left=-33+'%'
 ns[1].style.top=77+'%'  
@@ -257,14 +251,22 @@ shrm[0].style.opacity=0.2
 shrm[0].style.borderRadius=22+'%'
 shrm[0].style.fontSize=0
 	
-texctr[0].style.left=62+'%'
-texctr[0].style.top=13+'%' 
-texctr[0].style.color='#f00'
-texctr[0].style.transform='scale(3)'
-texctr[1].style.left=55+'%'
-texctr[1].style.top=11+'%'  
-texctr[1].style.color='#b00'
-texctr[1].style.transform='scale(0)'
+texctr[0].style.left=72+'%'
+texctr[0].style.top=73+'%' 
+texctr[0].style.width=8+'%'
+texctr[0].style.height=17+'%' 
+texctr[1].style.width=100+'%'
+texctr[1].style.height=100+'%' 
+texctr[1].style.background=
+ 'radial-gradient(#500,#800)'
+texctr[1].style.borderRadius=33+'%'
+texctr[2].style.left=4+'%'
+texctr[2].style.top=0+'%'  
+texctr[2].style.width=99+'%'
+texctr[2].style.height=37+'%'
+texctr[2].style.background=
+ 'radial-gradient(#500,#800)'
+texctr[2].style.borderRadius=55+'%'
 
 jwI=0   
 bst=0
@@ -339,7 +341,7 @@ btn[1].onclick=()=>
   'translate(-99%,0) rotate(44deg)'
  plh[0].style.left=10+'%' 
  plh[0].style.transform=
-  'scale(1,0.3) translate(-28%,0) rotate(-49deg)'
+  'scale(1,0.3) translate(-138%,118%) rotate(-49deg)'
  setTimeout(()=>{
    btn[1].style.opacity=1
    lwng[0].style.transform='rotate(0deg)'
@@ -357,6 +359,7 @@ jws[0].onmouseover=()=>
   shrm[0].onmouseover()  
  jws[2].style.transform='translate(-6%,-7%) rotate(12deg)'
  jws[3].style.transform='translate(6%,-7%) rotate(-12deg)'
+ texctr[0].style.transform='scale(1.4)'
  plh[1].style.opacity=0
  plh[2].style.opacity=0
  vctrI=setInterval(()=>{
@@ -388,6 +391,7 @@ jws[0].onmouseout=()=>
  plh[1].style.opacity=1
  plh[2].style.opacity=1
  plh[3].style.opacity=0
+ texctr[0].style.transform='scale(1)'
 } 
 jws[0].onclick=()=>
 { 
@@ -414,18 +418,6 @@ shrm[0].onclick=()=>
 { 
  shrm[0].style.background='#0f0'
  shrm[0].style.fontSize='3em'
-}
-
-texctr[0].onmouseover=()=>
-{ 
- texctr[0].style.transform='scale(4)'
- texctr[1].style.transform=
-  'scale(3) translate(37%,-77%) skew(22deg)'
-}
-texctr[0].onmouseout=()=>
-{ 
- texctr[0].style.transform='scale(3)'
- texctr[1].style.transform='scale(0)'
 }
  
 </script>
