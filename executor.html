@@ -265,7 +265,7 @@ texctr[2].style.top=0+'%'
 texctr[2].style.width=99+'%'
 texctr[2].style.height=37+'%'
 texctr[2].style.background=
- 'radial-gradient(#500,#800)'
+ 'radial-gradient(#555,#999)'
 texctr[2].style.borderRadius=55+'%'
 
 jwI=0   
@@ -359,7 +359,7 @@ jws[0].onmouseover=()=>
   shrm[0].onmouseover()  
  jws[2].style.transform='translate(-6%,-7%) rotate(12deg)'
  jws[3].style.transform='translate(6%,-7%) rotate(-12deg)'
- texctr[0].style.transform='scale(1.4)'
+ texctr[0].style.transform='scale('+(1+Math.random())+')'
  plh[1].style.opacity=0
  plh[2].style.opacity=0
  vctrI=setInterval(()=>{
@@ -371,7 +371,8 @@ jws[0].onmouseover=()=>
   jws[4].style.opacity=Math.random()
   jws[4].style.borderWidth=(13+26*Math.random())+'px'
   jws[4].style.transform='scale(1,'+
-   (2+2*Math.random())+') translate(40%,2%) skew(33deg)'   
+   (2+2*Math.random())+') translate(40%,2%) skew(33deg)' 
+  texctr[0].style.transform='scale('+(1.2+Math.random())+')'  
   plh[3].style.opacity=Math.random()
   plh[3].style.transform='scale('+
    (0.5+Math.random()*2)+','+
