@@ -10,15 +10,9 @@
  background:linear-gradient(#ff8,#024);
 }
 
-.lctr
+.lctr,.gl,.mth
 {
  position:absolute; 
- transition:2s;
- font-size:0.2em;
-}
-.gl
-{
- position:absolute;   
  transition:2s;
 }
 .zr
@@ -36,11 +30,6 @@
 {
  position:absolute;   
  transition:4s;
-}
-.mth
-{
- position:absolute;    
- transition:2s;
 }
 
 .tbl
@@ -60,7 +49,7 @@
  text-align:center;
 }
 
-.tps,.vctr
+.tps
 {
  position:absolute;   
  transition:1s;
@@ -72,8 +61,8 @@
 <div class=lctr>  
  <div class=lctr></div>
  <div class=lctr></div>
- <div class=lctr>colors...</div>
- <div class=lctr>0...255</div>
+ <div class=lctr></div>
+ <div class=lctr></div>
  <div class=gl><div class=zr></div></div>
  <div class=gl><div class=zr></div></div>
  <div class=ns><div class=ns></div></div>
@@ -95,9 +84,6 @@
  <div class=tps>Circles</div>
  <div class=tps>Graphs</div>
 
- <div class=vctr>fatal<br>&nbsp error</div>
- <div class=vctr>404</div>
-
 <script>
 lctr=document.getElementsByClassName('lctr')
 gl=document.getElementsByClassName('gl')
@@ -107,7 +93,6 @@ mth=document.getElementsByClassName('mth')
 
 tbl=document.getElementsByClassName('tbl')
 tps=document.getElementsByClassName('tps')
-vctr=document.getElementsByClassName('vctr')
   
 lctr[0].style.left=61+'%'
 lctr[0].style.top=33+'%'
@@ -138,17 +123,19 @@ lctr[2].style.background=
 lctr[2].style.borderRadius=55+'%' 	
 lctr[3].style.left=42+'%'
 lctr[3].style.top=11+'%'
-lctr[3].style.padding=1+'%'
-lctr[3].style.background='#fff'	
-lctr[3].style.borderRadius=55+'%' 	
+lctr[3].style.width=24+'%'
+lctr[3].style.height=11+'%'	
+lctr[3].style.background='#fff'
 lctr[3].style.opacity=0.5
+lctr[3].style.borderRadius=55+'%' 
 lctr[3].style.transform='scale(0)'	
 lctr[4].style.left=42+'%'
 lctr[4].style.top=11+'%'
-lctr[4].style.padding=1+'%'
-lctr[4].style.background='#eee'	
-lctr[4].style.borderRadius=55+'%' 	
+lctr[4].style.width=24+'%'
+lctr[4].style.height=11+'%'
+lctr[4].style.background='#fff'
 lctr[4].style.opacity=0.5
+lctr[4].style.borderRadius=55+'%' 
 lctr[4].style.transform='scale(0)'	
 	
 function initj(nm,i,l,t,w,h,bg)
@@ -194,13 +181,12 @@ function initfrz(nm,i,l,t,sc)
  nm[i].style.top=t+'%'
  nm[i].style.transform='scale('+sc+')'
 } 
-initfrz(tps,0,22,17,2)
+initfrz(tps,0,22,17,5)
+ tps[0].style.transform='scale(5) skew(-22deg)'
 initfrz(tps,1,33,4,0)
 initfrz(tps,2,44,8,0)
 initfrz(tps,3,55,4,0)
 initfrz(tps,4,66,8,0)
-initfrz(vctr,0,35,23,0)
-initfrz(vctr,1,35,23,0)
    
 function mvd()
 {   
@@ -259,10 +245,9 @@ tbl[0].onmouseover=()=>
   clearInterval(Id)
   clearInterval(Im)
  lctr[3].style.transform=
-  'scale(12,6) translate(0,-177%) skew(-13deg)'
- lctr[3].style.borderRadius='33%'
+  'scale(2) translate(0,-177%) skew(-13deg)'
  lctr[4].style.color='#900' 
- tbl[0].style.transform='skew(0deg)'
+ tbl[0].style.transform='skew(-22deg)'
  tbl[1].style.borderTopLeftRadius=0+'%'
  tbl[1].style.borderTopRightRadius=0+'%'
  tbl[1].style.height=9+'%'
@@ -281,36 +266,16 @@ tbl[0].onmouseover=()=>
  zr[0].style.left=22+'%'
  zr[1].style.left=22+'%'
  mth[0].style.height=1+'%'
- vctr[0].style.color='#f0f' 
- vctr[0].style.transform=
-  'scale(2) translate(22%,0)'   
- vctr[1].style.color='#0ff' 
- vctr[1].style.transform=
-  'scale(4) translate(22%,0)'
  Iwng0=setInterval(()=>{
   if(bwng0)
   {
-   lctr[4].style.transform=
-    'scale(12,6) translate(50%,-99%) skew(13deg)'
-   lctr[4].style.borderRadius='22%' 
-   vctr[0].style.color='#778'
-   vctr[0].style.transform=
-    'scale(3.4) skew(-33deg)'
- 	vctr[0].innerHTML='fatal'
-   vctr[1].style.transform=
-    'scale(3) translate(0%,-55%) skew(33deg) ' 
+   lctr[3].style.transform='scale(2) translate(0,-177%)'
+   lctr[4].style.transform='scale(1) translate(200%,-333%)'
   }
   else
   {
-   lctr[4].style.transform=
-    'scale(10,6) translate(50%,-99%) skew(10deg)'
-   lctr[4].style.borderRadius='22%' 
-   vctr[0].style.color='#000'
-   vctr[0].style.transform=
-    'scale(3)  skew(33deg) ' 
-	vctr[0].innerHTML='error' 
-   vctr[1].style.transform=
-    'scale(3.4) translate(0%,-55%) skew(-33deg)' 
+   lctr[3].style.transform='scale(2.5) translate(0,-177%)'
+   lctr[4].style.transform='scale(2) translate(200%,-333%)'
   }
     bwng0=!bwng0
  },  999)
@@ -332,12 +297,11 @@ tbl[0].onmouseout=()=>
  zr[0].style.left=1+'%'
  zr[1].style.left=1+'%'    
  tbl[5].style.opacity=1  
- vctr[0].style.transform='scale(0)'
- vctr[1].style.transform='scale(0)'
 }
    
 tps[0].onmouseover=()=>
 { 
+ tps[0].style.background='#0ff'
  tps[0].style.color='#f00'
  tps[0].style.transform=
   'scale(2.3) translate(2%,0) skew(-33deg)'
@@ -355,8 +319,9 @@ tps[0].onmouseover=()=>
 }
 tps[0].onmouseout=()=>
 { 
+ tps[0].style.background='none'
  tps[0].style.color='#000'
- tps[0].style.transform='scale(2)'
+ tps[0].style.transform='scale(5) skew(-22deg)'
   tps[0].innerHTML='Diagram'
  tps[1].style.color='#000'
  tps[2].style.color='#000'
