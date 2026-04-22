@@ -64,10 +64,10 @@ body
 </div>
 
 <script>
+clds=document.getElementsByClassName('clds')
 plne=document.getElementsByClassName('plne')
 bllts=document.getElementsByClassName('bllts')
 tle=document.getElementsByClassName('tle')
-clds=document.getElementsByClassName('clds')
 
 bllts[0].style.bottom=0+'%'
 bllts[0].style.width=99+'%'
@@ -257,6 +257,10 @@ plne[0].onmouseover=()=>
 {
  Ibllts=setInterval(()=>
  { 
+  bllts[1].style.left=Math.random()*77+'%'
+  bllts[1].style.top=Math.random()*66+'%'
+  bllts[2].style.left=Math.random()*77+'%'
+  bllts[2].style.top=Math.random()*66+'%'  
   bllts[0].style.opacity=Math.random()
   bllts[1].style.transform='translate(0,777%) skew(-44deg)'
   bllts[2].style.transform='translate(0,777%) skew(-44deg)'
