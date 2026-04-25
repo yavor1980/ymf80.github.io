@@ -8,74 +8,36 @@
  background:linear-gradient(#0ff,44%,#ff0);
 }
 
-.btn
+.btn,.tbtn,#idfc,.fc,.zr,.bd,.lg
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
+}
+.btn
+{
  width:7%;
  height:5%;
  border-radius:22%;
  font-size:1.6em;
  transform:scale(1.5);
 }
-.tbtn
-{
- position:absolute;
- transition:1s;
- z-index:1;
-}
-
-#idfc
-{
- position:absolute;  
- transition:1s;
- left:5%;
- top:33%;
- width:55%;
- height:55%;
-}
-.fc
-{
- position:absolute; 
- transition:1s;
- border-radius:50%;
-}
+.tbtn{ z-index:1;}
+#idfc{ left:5%; top:33%; width:55%; height:55%;}
+.fc{ border-radius:50%;}
 .zr
 {
- position:absolute;   
- transition:1s;
- left:33%;
- top:33%;
- width:33%;
- height:33%;
- background:#000;
- border-radius:50%;
+ left:33%; top:33%; width:33%; height:33%;
+ background:#000; border-radius:50%;
 }
-.bd
-{
- position:absolute;   
- transition:1s;
- border-radius:50%; 
-}
-.lg
-{
- position:absolute;  
- transition:1s;
- width:22%;
- height:33%;
- border-radius:50%;
-}
+.bd{ border-radius:50%;} 
+.lg{ width:22%; height:33%; border-radius:50%;}
 
 .dgrm,.tbl
 {
  position:absolute;
  transition:1s; 
  cursor:pointer;
-}
-.tbl
-{
- z-index:1;
 }
 
 td
@@ -136,9 +98,8 @@ td
   <td>0</td>
  </tr>
 </table>
-<div class=tbl></div>
-<div class=tbl></div>
-<div class=tbl></div>
+<div class=tbl>Controller..</div>
+<div class=tbl>Indicator..</div>
 
 <div class=dgrm>
  <div class=dgrm></div>
@@ -208,7 +169,6 @@ fc[3].style.width=22+'%'
 fc[3].style.height=22+'%' 
 fc[3].style.background=
  'radial-gradient(#ff0,#000)'
-	 
 zr[2].style.left=33+'%'
 zr[2].style.top=77+'%'  
 zr[2].style.width=33+'%'
@@ -340,18 +300,15 @@ tbl[0].style.top=22+'%'
 tbl[0].style.border='5px ridge #00f'
 tbl[0].style.cursor='pointer'
 tbl[0].style.transform='scale(2)'
-tbl[1].style.left=7+'%'
-tbl[1].style.top=66+'%' 
+tbl[1].style.left=18+'%'
+tbl[1].style.top=6+'%' 
 tbl[1].style.color='#f00'
-tbl[1].style.transform='scale(0)'
-tbl[2].style.left=7+'%'
-tbl[2].style.top=69+'%' 
+tbl[1].style.transform='scale(3) skew(-22deg)'
+tbl[2].style.left=60+'%'
+tbl[2].style.top=17+'%' 
 tbl[2].style.color='#f0f'
-tbl[2].style.transform='scale(0)'
-tbl[3].style.left=7+'%'
-tbl[3].style.top=77+'%' 
-tbl[3].style.color='#777'
-tbl[3].style.transform='scale(0)'
+tbl[2].style.opacity=0.2	
+tbl[2].style.transform='scale(3) skew(-22deg)'
 	
 b=0
 function cl()
@@ -494,6 +451,9 @@ tbl[0].onmouseover=()=>
  dgrm[7].style.opacity=0.2
  dgrm[8].style.opacity=0.2
  dgrm[9].style.opacity=0.2
+ tbl[1].style.transform='scale(3)'
+ tbl[2].style.opacity=1
+ tbl[2].style.transform='scale(3)'
  Itbl0=setInterval(()=>
  {
   dgrm[1].style.opacity=Math.random()
@@ -520,6 +480,9 @@ tbl[0].onmouseout=()=>
  dgrm[7].style.opacity=0
  dgrm[8].style.opacity=0
  dgrm[9].style.opacity=0
+ tbl[1].style.transform='scale(3) skew(-22deg)'
+ tbl[2].style.opacity=0.2
+ tbl[2].style.transform='scale(3) skew(-22deg)'
   clearInterval(Itbl0)
 } 
 tbl[0].onclick=()=>
