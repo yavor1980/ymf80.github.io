@@ -97,7 +97,9 @@
 <div class=strs></div>
 <div class=strs></div>
 <div class=strs></div>
-
+<div class=spce>
+ <div class=spce></div>
+</div>
 <script>
 strs=document.getElementsByClassName('strs')
 
@@ -176,7 +178,7 @@ shtl[4].style.top=+33+'%'
 shtl[4].style.width=49+'%'
 shtl[4].style.height=43+'%'	
 shtl[4].style.background=
-'radial-gradient(#f50,#444)'	
+'radial-gradient(#666,#444)'	
 shtl[4].style.borderRadius=27+'%'
 shtl[4].style.zIndex=-2
 	
@@ -210,6 +212,15 @@ spce[0].style.top=9+'%'
 spce[0].style.color='#ff0'
 spce[0].style.transform=
  'scale(3) skew(-22deg)'
+spce[1].style.left=67+'%'
+spce[1].style.top=22+'%'
+spce[1].style.width=12+'%'
+spce[1].style.height=9+'%'
+spce[1].style.background=
+ 'radial-gradient(#990,#404)'
+spce[1].style.borderRadius=44+'%'
+spce[1].style.transform=
+ 'scale(0.4) translate(-599%,-199%) skew(-22deg)'
  
 strsX=111, strsY=-111, strsS=5
 function clpl()
@@ -304,7 +315,8 @@ spce[0].onmouseout=()=>
 
 shtl[0].onmouseover=()=>
 {
-  strsX=777, strsY=-666 
+ spce[1].style.transform=
+  'scale(1) translate(-19%,0%) skew(22deg)'
  shtl[0].style.transform=
   'scale(2) translate(-19%,0%) skew(22deg)'
  shtl[2].style.borderTopLeftRadius=55+'%'
@@ -317,7 +329,8 @@ shtl[0].onmouseover=()=>
 }
 shtl[0].onmouseout=()=>
 {
-  strsX=111, strsY=111
+ spce[1].style.transform=
+  'scale(0.4)translate(-199%,-199%) skew(-22deg)'
  shtl[0].style.transform='scale(1)  skew(44deg)' 
  shtl[2].style.borderRadius=22+'%'
  shtl[4].style.transform='scale(1)'
