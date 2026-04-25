@@ -13,9 +13,9 @@ body
  position:absolute;
  transition:1s;
  color:#fff;
- cursor:pointer;
  font-size:0em;
  text-align:center;
+ cursor:pointer;
 }
 
 .tst
@@ -260,11 +260,17 @@ tst[0].onmouseover=()=>
  btn[7].style.boxShadow='11px 11px 6px'
  btn[8].style.boxShadow='11px 11px 6px'
  bldng[0].style.transform='scale(1.1)'
- for(i=0;i<3;i++)
+ for(i=0;i<4;i++)
  {
   bgrnd[i].style.transform='scale(1.1)'
   bgrnd[i].style.fontSize=3+'em'
  }
+   bgrnd[5].style.opacity=Math.random()//0.9
+  bgrnd[5].style.transform='scale('+
+   (1+Math.random())+',2) translate(-22%,0)'
+  bgrnd[6].style.opacity=Math.random()//0.9
+  bgrnd[6].style.transform='scale('+
+   (1+1.2*Math.random())+',2) translate(-22%,0)'  
  Itst= setInterval(()=>
  {
   bgrnd[5].style.opacity=Math.random()//0.9
@@ -300,7 +306,7 @@ tst[0].onmouseout=()=>
   btn[i].style.boxShadow='none'
   bldng[i+1].style.background='#222'
  } 
- for(i=0;i<3;i++)
+ for(i=0;i<4;i++)
  {
   bgrnd[i].style.transform='scale(1)'
   bgrnd[i].style.fontSize=0+'em'
