@@ -50,6 +50,7 @@ body
  position:absolute;
  transition:1s;
  cursor:pointer;
+ z-index:1;
 }
 
 </style>
@@ -81,6 +82,9 @@ body
  <div class=dvce>debet </div>
  <div class=dvce>credit </div>
  <div class=dvce></div>
+ <div class=dvce>$</div>
+ <div class=dvce>$</div>
+ <div class=dvce>$</div>
  <div class=dvce>$</div>
  <div class=dvce>$</div>
  <div class=dvce>$</div>
@@ -224,6 +228,18 @@ dvce[6].style.left=44+'%'
 dvce[6].style.top=44+'%'
 dvce[6].style.color='#0f0'
 dvce[6].style.transform='scale(0)'
+dvce[7].style.left=44+'%'
+dvce[7].style.top=44+'%'
+dvce[7].style.color='#0f0'
+dvce[7].style.transform='scale(0)'
+dvce[8].style.left=44+'%'
+dvce[8].style.top=44+'%'
+dvce[8].style.color='#0f0'
+dvce[8].style.transform='scale(0)'
+dvce[9].style.left=44+'%'
+dvce[9].style.top=44+'%'
+dvce[9].style.color='#0f0'
+dvce[9].style.transform='scale(0)'
 
 nme[0].style.left=66+'%'
 nme[0].style.top=11+'%'
@@ -350,23 +366,27 @@ dvce[0].onmouseover=()=>
   'scale(1.4) translate(-22%,-22%) skew(22deg)' 
  dvce[3].style.opacity=1
  Idvs=setInterval(()=>{
+  dvce[4].style.transform=
+   'scale('+(4+4*Math.random())+') translate(-192%,-99%)' 
   dvce[5].style.transform=
-   'scale('+(4+Math.random())+') translate(-292%,-99%)'
+   'scale('+(4+4*Math.random())+') translate(-292%,-199%)'
   dvce[6].style.transform=
-   'scale('+(4+Math.random())+') translate(221%,-98%)' 
+   'scale('+(4+4*Math.random())+') translate(121%,-208%)' 
+  dvce[7].style.transform=
+   'scale('+(4+4*Math.random())+') translate(-192%,-209%)' 
+  dvce[8].style.transform=
+   'scale('+(4+4*Math.random())+') translate(-292%,-199%)'
+  dvce[9].style.transform=
+   'scale('+(4+4*Math.random())+') translate(121%,-98%)'   
   if(bdvs)
   {
    dvce[1].style.fontSize='2em'
    dvce[2].style.fontSize='1.5em'
-   dvce[4].style.transform=
-    'scale(4) translate(0,-99%)'
   }
    else
   {
    dvce[1].style.fontSize='1.5em'
    dvce[2].style.fontSize='2em'	
-   dvce[4].style.transform=
-    'scale(5) translate(0,-99%)'
   }	
    bdvs=!bdvs
  }, 888)
@@ -381,6 +401,9 @@ dvce[0].onmouseout=()=>
  dvce[4].style.transform='scale(0)'
  dvce[5].style.transform='scale(0)'
  dvce[6].style.transform='scale(0)'
+ dvce[7].style.transform='scale(0)'
+ dvce[8].style.transform='scale(0)'
+ dvce[9].style.transform='scale(0)'
   clearInterval(Idvs)
 }	 
 	  // inme=Math.round(Math.random()*5)
