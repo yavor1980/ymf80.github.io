@@ -44,6 +44,8 @@ body
 <div class=plne>
  <div class=clds></div>
  <div class=clds></div>
+ <div class=clds></div>
+ <div class=clds></div>
  <div class=plne></div>
  <div class=plne></div>
  <div class=plne></div>
@@ -54,6 +56,8 @@ body
   <div class=plne></div>
  </div>
 </div>
+
+
 
 <div class=bllts></div>
 <div class=bllts>
@@ -179,6 +183,10 @@ inn(clds,3, 33,44, 2,8,'radial-gradient(#ff0,#f00)')
  clds[3].style.opacity=0
 inn(clds,4, 67,44, 2,8,'radial-gradient(#ff0,#f00)')
  clds[4].style.opacity=0
+inn(clds,5, 33,44, 2,8,'radial-gradient(#ff0,#f0f)')
+ clds[5].style.opacity=0
+inn(clds,6, 67,44, 2,8,'radial-gradient(#ff0,#f0f)')
+ clds[6].style.opacity=0
 
 Icl=0
 function cl()
@@ -222,12 +230,22 @@ function cl()
  clds[4].style.transition=1+'s' 
  clds[4].style.transform=
   'scale(9) translate(333%,-33%)'
+ clds[5].style.transition=1+'s'
+ clds[5].style.transform='scale(9) translate('+
+  Math.random()*-427+'%,'+Math.random()*-427+'%)'
+ clds[6].style.transition=1+'s' 
+ clds[6].style.transform='scale(9) translate('+
+  Math.random()*426+'%,'+Math.random()*-427+'%)' 
  setTimeout(()=>
  { 
   clds[3].style.transition=0+'s'
   clds[3].style.transform='scale(1)'
   clds[4].style.transition=0+'s'
   clds[4].style.transform='scale(1)'
+  clds[5].style.transition=0+'s'
+  clds[5].style.transform='scale(1)'
+  clds[6].style.transition=0+'s'
+  clds[6].style.transform='scale(1)' 
  }, 799) 
 } 
   Icl=setInterval(cl, 999)
@@ -249,7 +267,7 @@ idb.onclick=()=>
   'radial-gradient(#999,#050)'
   plne[5].style.opacity=0.2
   plne[7].style.opacity=0.2
- }  ,88)
+ }, 88)
 }
  
 Ibllts=0
@@ -282,6 +300,8 @@ plne[0].onmouseover=()=>
  plne[7].style.transform='scale('+prtr+')'
  clds[3].style.opacity=1
  clds[4].style.opacity=1
+ clds[5].style.opacity=1
+ clds[6].style.opacity=1
 }   
 plne[0].onmouseout=()=>
 {
@@ -301,6 +321,8 @@ plne[0].onmouseout=()=>
  plne[7].style.transform='scale(0)' 
  clds[3].style.opacity=0
  clds[4].style.opacity=0
+ clds[5].style.opacity=0
+ clds[6].style.opacity=0
 }
 
 function clcld(i)
