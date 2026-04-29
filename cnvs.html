@@ -141,7 +141,7 @@ Iosc=setInterval(()=>{
  }, imtosc)
 }
 
-var Ihz=0,dd=5, ddd=1
+var Ihz=0,dd=5,ddd=0.1
 function fHz()
 { 
 Iosc=setInterval(()=>{
@@ -154,15 +154,12 @@ Iosc=setInterval(()=>{
   cntxt.moveTo(i*dd,68-y/2)
   cntxt.lineTo(i*dd,33+y)
   cntxt.stroke()
-  // ddd++; dd+=ddd
- // if(ddd>33) ddd=-1*ddd 
+   dd+=ddd
+   if((dd>5.1)||(dd<4.9)) ddd=-1*ddd
  }  
 }, 999)   
 }
-function frnd(d)
-{ 
- dd=d
-}
+
 function fbtn(i)
 { 
  btn[i].onclick=()=>
@@ -246,7 +243,7 @@ cnv[0].onmousemove=()=>
 {
  cnv[0].style.border='11px ridge #ee0'
   if(bcnvs==0) fdrw()  
-  if(bcnvs==4) frnd(22*Math.random())
+  
 }
 cnv[0].onmouseout=()=>
 {
@@ -255,11 +252,11 @@ cnv[0].onmouseout=()=>
   btn[i].style.background='#00f'
  } 
  cnv[0].style.border='11px ridge #ff0'
- // bcnvs=-1
   dd=5
 }
 cnv[0].onclick=()=>
 { 
+ if(bcnvs==4) dd=22*Math.random()
  switch(bcnvs) 
  {
   case 1: frndline(); break;
