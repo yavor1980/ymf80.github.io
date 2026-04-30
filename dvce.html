@@ -5,6 +5,7 @@
 <style>
 body
 {
+ height:209%;
  background:linear-gradient(#550,#0ff);
 }
 
@@ -18,7 +19,7 @@ body
  cursor:pointer;
 }
 
-.tst
+.tst,.nro
 {
  position:absolute;
  transition:1s;
@@ -82,12 +83,19 @@ body
   <div class=bldng></div>
   <div class=bldng></div>
  </div>
+ 
+ <div class=nro>
+  <div class=nro></div>
+  <div class=nro>PERCEPTRON</div>
+  <div class=nro></div>
+</div>
 
 <script>
 bgrnd=document.getElementsByClassName('bgrnd')
 tst=document.getElementsByClassName('tst')
 btn=document.getElementsByClassName('btn')
 bldng=document.getElementsByClassName('bldng')
+nro=document.getElementsByClassName('nro')
 
 bgrnd[0].style.left=3+'%'
 bgrnd[0].style.top=4+'%'
@@ -202,6 +210,40 @@ bldng[8].style.background='#222'
 bldng[9].style.left=6+'%'
 bldng[9].style.top=83+'%'
 bldng[9].style.background='#222'  
+ 
+nro[0].style.left=3+'%'
+nro[0].style.top=111+'%'
+nro[0].style.width=92+'%'
+nro[0].style.height=90+'%'
+nro[0].style.borderRadius=22+'%'
+nro[0].style.border='4px ridge #800'
+nro[1].style.left=34+'%'
+nro[1].style.top=4+'%'
+nro[1].style.width=33+'%'
+nro[1].style.height=89+'%'
+nro[1].style.background='#f0f'
+nro[1].style.borderRadius=9+'%'
+nro[2].style.left=45+'%'
+nro[2].style.top=-13+'%'
+nro[2].style.color='#b00'
+nro[2].style.opacity=0.1
+nro[2].style.transform='scale(8)skew(22deg) '
+
+el=[7],ele=[7]
+for(i=0;i<7;i++)
+{
+ el[i]=document.createElement('div')
+ el[i].className='nro'
+ nro[0].appendChild(el[i])
+ el[i].style.cursor='grab'
+ el[i].style.left=(30+30*Math.random())+'%'
+ el[i].style.top=(3+80*Math.random())+'%'
+ el[i].style.width=9+'%'
+ el[i].style.height=9+'%'
+ el[i].style.background='#0f0'
+ el[i].style.borderRadius=55+'%'
+}
+
  
 function actbck(i,b1,b2)
 {
@@ -332,6 +374,24 @@ bldng[0].onmouseout=()=>
   bldng[i+1].style.border='none'
   bldng[i+1].style.borderRadius='0%'
  } 
+}
+
+nro[0].onmouseover=()=>
+{ 
+ nro[1].style.transform='scale(2,1)'
+ nro[2].style.transform='scale(8)skew(-12deg) '
+ nro[2].style.opacity=1
+ for(i=0;i<7;i++)
+ {
+  el[i].style.left=(30+30*Math.random())+'%'
+  el[i].style.top=(3+80*Math.random())+'%'
+ }
+}
+nro[0].onmouseout=()=>
+{ 
+ nro[1].style.transform='scale(1)'
+ nro[2].style.transform='scale(8)skew(22deg) '
+ nro[2].style.opacity=0.1
 }
 
 </script>
