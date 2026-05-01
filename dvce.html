@@ -19,12 +19,22 @@ body
  cursor:pointer;
 }
 
-.tst,.nro
+.tst,.nro,.nds
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
 }
+.nds
+{
+ width:100%;
+ height:18;
+ background:#ff0;
+ border-radius:55%;
+ border-top-left-radius:8%;
+ border-bottom-left-radius:8%;
+}
+
 .btn
 {
  position:absolute;
@@ -96,6 +106,7 @@ tst=document.getElementsByClassName('tst')
 btn=document.getElementsByClassName('btn')
 bldng=document.getElementsByClassName('bldng')
 nro=document.getElementsByClassName('nro')
+nds=document.getElementsByClassName('nds')
 
 bgrnd[0].style.left=3+'%'
 bgrnd[0].style.top=4+'%'
@@ -229,22 +240,34 @@ nro[2].style.color='#b00'
 nro[2].style.opacity=0.1
 nro[2].style.transform='scale(8)skew(22deg) '
 
-el=[7],ele=[7]
+el=[7]
 for(i=0;i<7;i++)
-{
+{                   ele=[2]
  el[i]=document.createElement('div')
  el[i].className='nro'
  nro[0].appendChild(el[i])
+ //el[i].style.transition=0+'s'
  el[i].style.cursor='grab'
- el[i].style.left=(30+30*Math.random())+'%'
- el[i].style.top=(3+80*Math.random())+'%'
+ el[i].style.left=(266+150*Math.round(3*Math.random()))+'px'
+ el[i].style.top=(90+150*Math.round(3*Math.random()))+'px'
  el[i].style.width=9+'%'
  el[i].style.height=9+'%'
  el[i].style.background='#0f0'
  el[i].style.borderRadius=55+'%'
+ ele[0]=document.createElement('div')
+ ele[0].className='nds'
+ el[i].appendChild(ele[0])
+ ele[0].style.left=98+'%'
+ ele[0].style.top=-29+'%'
+ ele[0].style.transform='rotate(-33deg)'
+ ele[1]=document.createElement('div')
+ ele[1].className='nds'
+ el[i].appendChild(ele[1])
+ ele[1].style.left=98+'%'
+ ele[1].style.top=119+'%'
+ ele[1].style.transform='rotate(33deg)'
 }
 
- 
 function actbck(i,b1,b2)
 {
 bgrnd[i].onmouseover=()=>
@@ -383,8 +406,8 @@ nro[0].onmouseover=()=>
  nro[2].style.opacity=1
  for(i=0;i<7;i++)
  {
-  el[i].style.left=(30+30*Math.random())+'%'
-  el[i].style.top=(3+80*Math.random())+'%'
+  el[i].style.left=(266+50*Math.round(7*Math.random()))+'px'
+  el[i].style.top=(3+50*Math.round(7*Math.random()))+'px'
  }
 }
 nro[0].onmouseout=()=>
