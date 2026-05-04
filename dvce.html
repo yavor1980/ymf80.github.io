@@ -399,15 +399,16 @@ bldng[0].onmouseout=()=>
  } 
 }
 
-nro[0].onmouseover=()=>
+nro[0].onmousemove=()=>
 { 
  nro[1].style.transform='scale(2,1)'
  nro[2].style.transform='scale(8)skew(-12deg) '
  nro[2].style.opacity=1
  for(i=0;i<7;i++)
  {
-  el[i].style.left=(266+50*Math.round(7*Math.random()))+'px'
-  el[i].style.top=(3+50*Math.round(7*Math.random()))+'px'
+  el[i].style.transform='scale('+(1+Math.random())+') '
+  ele[0].style.transform='scale(1.2) rotate(-33deg)'
+  ele[1].style.transform='scale(1.2) rotate(-33deg)'
  }
 }
 nro[0].onmouseout=()=>
@@ -415,6 +416,12 @@ nro[0].onmouseout=()=>
  nro[1].style.transform='scale(1)'
  nro[2].style.transform='scale(8)skew(22deg) '
  nro[2].style.opacity=0.1
+ for(i=0;i<7;i++)
+ {
+  el[i].style.transform='scale(1) '
+  ele[0].style.transform='scale(1) '
+  ele[1].style.transform='scale(1) '
+ }
 }
 
 </script>
