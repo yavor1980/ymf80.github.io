@@ -242,7 +242,7 @@ nro[2].style.transform='scale(8)skew(22deg) '
 
 el=[7]
 for(i=0;i<7;i++)
-{                   ele=[2]
+{                ele=[2], elcrd=[[7][7]]
  el[i]=document.createElement('div')
  el[i].className='nro'
  nro[0].appendChild(el[i])
@@ -409,8 +409,10 @@ nro[0].onmouseover=()=>
   for(i=0;i<7;i++)
   {
    el[i].style.transform='scale('+(1+Math.random()/2)+') '
-   ele[0].style.transform='scale(1.2) rotate(-33deg)'
-   ele[1].style.transform='scale(1.2) rotate(33deg)'
+   ele[0].style.transform='scale(1.2) rotate('+
+   (-33*Math.random())+'deg)'
+   ele[1].style.transform='scale(1.2) rotate('+
+   (33*Math.random())+'deg)'
   }
  }, 999)
 }
