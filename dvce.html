@@ -97,6 +97,7 @@ body
  <div class=nro>
   <div class=nro></div>
   <div class=nro>PERCEPTRON</div>
+  <div class=nro>HIDDEN</div>
   <div class=nro></div>
 </div>
 
@@ -239,18 +240,22 @@ nro[2].style.top=-13+'%'
 nro[2].style.color='#b00'
 nro[2].style.opacity=0.1
 nro[2].style.transform='scale(8)skew(22deg) '
+nro[3].style.left=45+'%'
+nro[3].style.top=13+'%'
+nro[3].style.color='#b00'
+nro[3].style.opacity=0.1
+nro[3].style.transform='scale(5)skew(-22deg) '
 
-el=[7]
+el=[7], els0=[7], els1=[7]
 for(i=0;i<7;i++)
-{                ele=[2], elcrd=[[7][7]]
+{             ele=[2]   
  el[i]=document.createElement('div')
  el[i].className='nro'
  nro[0].appendChild(el[i])
- //el[i].style.transition=0+'s'
  el[i].style.cursor='grab'
- el[i].style.left=(166+150*Math.round(3*Math.random()))+'px'
+ el[i].style.left=(166+100*i)+'px'
  el[i].style.top=(90+144*Math.round(3*Math.random()))+'px'
- el[i].style.width=9+'%'
+ el[i].style.width=5+'%'
  el[i].style.height=9+'%'
  el[i].style.background='#0f0'
  el[i].style.borderRadius=55+'%'
@@ -260,12 +265,14 @@ for(i=0;i<7;i++)
  ele[0].style.left=98+'%'
  ele[0].style.top=-29+'%'
  ele[0].style.transform='rotate(-33deg)'
+  els0[i]=ele[0]
  ele[1]=document.createElement('div')
  ele[1].className='nds'
  el[i].appendChild(ele[1])
  ele[1].style.left=98+'%'
  ele[1].style.top=119+'%'
  ele[1].style.transform='rotate(33deg)'
+  els1[i]=ele[1]
 }
 
 function actbck(i,b1,b2)
@@ -405,13 +412,15 @@ nro[0].onmouseover=()=>
  nro[1].style.transform='scale(2,1)'
  nro[2].style.transform='scale(8)skew(-12deg) '
  nro[2].style.opacity=1
+ nro[3].style.transform='scale(8)skew(12deg) '
+ nro[3].style.opacity=1
  Inro=setInterval(()=>{
   for(i=0;i<7;i++)
   {
    el[i].style.transform='scale('+(1+Math.random()/2)+') '
-   ele[0].style.transform='scale(1.2) rotate('+
+   els0[i].style.transform='scale(1.2) rotate('+
    (-33*Math.random())+'deg)'
-   ele[1].style.transform='scale(1.2) rotate('+
+   els1[i].style.transform='scale(1.2) rotate('+
    (33*Math.random())+'deg)'
   }
  }, 999)
@@ -421,12 +430,14 @@ nro[0].onmouseout=()=>
  nro[1].style.transform='scale(1)'
  nro[2].style.transform='scale(8)skew(22deg) '
  nro[2].style.opacity=0.1
+ nro[3].style.transform='scale(5)skew(-22deg) '
+ nro[3].style.opacity=0.1
   clearInterval(Inro)
  for(i=0;i<7;i++)
  {
   el[i].style.transform='scale(1) '
-  ele[0].style.transform='scale(1) rotate(-33deg)'
-  ele[1].style.transform='scale(1) rotate(33deg)'
+  els0[i].style.transform='scale(1) rotate(-33deg)'
+  els1[i].style.transform='scale(1) rotate(33deg)'
  }
 }
 
