@@ -525,7 +525,11 @@ inf[0].onmouseover=()=>
  inf[1].style.border='19px ridge #f07'
  inf[1].style.opacity=1   
  inf[1].style.borderRadius=55+'%'
- inf[1].style.transform='translate(0,66%) skew(-22deg)'
+  infI=setInterval(()=>{
+   inf[1].style.transform=
+    'translate(0,'+66*Math.random()+
+	'%) skew('+(22-44*Math.random())+'deg)'
+  }, 999) 
   inf[1].innerHTML='' 
 }     
 inf[0].onmouseout=()=>
@@ -541,6 +545,7 @@ inf[0].onmouseout=()=>
  inf[1].style.borderRadius=0+'%'
  inf[1].style.transform='translate(0,0%)' 
   inf[1].innerHTML= 'who?'
+  clearInterval(infI)
 } 
      
 </script>
