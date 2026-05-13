@@ -111,7 +111,7 @@ function faxs()
  cntxt.lineTo(145, 134)
   cntxt.stroke()
 }
-var shft=66, scle=22, trvl=1, Iosc=0, ff=22
+var shft=66, scle=22, trvl=1, Iosc=0, ff=0
 function foscll()
 { 
   ff=1
@@ -130,14 +130,13 @@ Iosc=setInterval(()=>{
  scle1=22+Math.random()*11
  trvl=11+Math.random()*11
  cntxt.clearRect(0,0,999,999)
+ //if(b==0) ff=Math.round(Math.random()*9) 
  if(b==1) ff+=5
- if(b==0) ff=Math.round(Math.random()*9)
  for(i=0;i<333;i++)
  {
   cntxt.lineTo(i, shft+scle*Math.sin(i/ff))
  } 
-  cntxt.stroke() 
- // cntxt.endPath()
+  cntxt.stroke()
  }, imtosc)
 }
 
@@ -149,7 +148,6 @@ Iosc=setInterval(()=>{
  for(i=0;i<300;i++)
  {
   cntxt.clearRect(0,0,999,999)
-  cntxt.strokeStyle='#00f'
   y=44+Math.random()*25
   cntxt.moveTo(i*dd,68-y/2)
   cntxt.lineTo(i*dd,33+y)
@@ -187,7 +185,7 @@ btnd[1].onclick=()=>
  {
   btnd[1].style.background='#b00'
   foscll()
-  foscllmv(0)
+  foscllmv()
    btnd[1].value='Stop'
  }
  else
@@ -207,7 +205,7 @@ btnd[2].onclick=()=>
  {
   btnd[2].style.background='#b00'
   foscll()
-  foscllmv(7)
+  foscllmv(1)
   btnd[2].value='Stop'
  }
  else
@@ -256,7 +254,6 @@ cnv[0].onmouseout=()=>
 }
 cnv[0].onclick=()=>
 { 
- if(bcnvs==4) dd=22*Math.random()
  switch(bcnvs) 
  {
   case 1: frndline(); break;
