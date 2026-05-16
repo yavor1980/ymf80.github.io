@@ -98,7 +98,7 @@ body
   <div class=nro></div>
   <div class=nro>PERCEPTRON</div>
   <div class=nro>HIDDEN</div>
-  <div class=nro></div>
+  <div class=nro>AI</div>
 </div>
 
 <script>
@@ -245,6 +245,11 @@ nro[3].style.top=13+'%'
 nro[3].style.color='#b00'
 nro[3].style.opacity=0.1
 nro[3].style.transform='scale(5)skew(-22deg) '
+nro[4].style.left=5+'%'
+nro[4].style.top=13+'%'
+nro[4].style.color='#00b'
+nro[4].style.opacity=0.1
+nro[4].style.transform='scale(8)skew(-22deg) '
 
 el=[7], els0=[7], els1=[7]
 for(i=0;i<7;i++)
@@ -415,8 +420,11 @@ nro[0].onmouseover=()=>
  nro[3].style.transform='scale(8)skew(12deg) '
  nro[3].style.opacity=1
  Inro=setInterval(()=>{
+  nro[4].style.transform=
+   'scale(18) translate(42%,42%) skew(12deg) '
+  nro[4].style.opacity=1
   for(i=0;i<7;i++)
-  {
+  { 
    el[i].style.transform='scale('+(1+Math.random()/2)+') '
    els0[i].style.transform='scale(1.2) rotate('+
    (-33*Math.random())+'deg)'
@@ -432,6 +440,8 @@ nro[0].onmouseout=()=>
  nro[2].style.opacity=0.1
  nro[3].style.transform='scale(5)skew(-22deg) '
  nro[3].style.opacity=0.1
+ nro[4].style.transform='scale(8)skew(-22deg) '
+ nro[4].style.opacity=0.1
   clearInterval(Inro)
  for(i=0;i<7;i++)
  {
