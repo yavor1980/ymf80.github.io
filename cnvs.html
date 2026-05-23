@@ -84,9 +84,8 @@ function fround()
  cntxt.arc(event.clientX/3,event.clientY/4.5,
   22*Math.random(),0,2*Math.PI)
  cntxt.stroke()
- //cntxt.endPath()
 }
-var bcnvs=-1, bln=0 , x=0,y=0
+var bcnvs=-1, bln=0// , x=0,y=0
 function fline()
 {
  cntxt.strokeStyle='#770'
@@ -100,7 +99,7 @@ function fline()
   cntxt.lineTo(event.clientX/3,event.clientY/4.5)
   cntxt.stroke()
  } 
- bln=1
+  bln=1
 }
 function faxs()
 {
@@ -111,10 +110,9 @@ function faxs()
  cntxt.lineTo(145, 134)
   cntxt.stroke()
 }
-var shft=66, scle=22, trvl=1, Iosc=0, ff=0
+var shft=66, scle=22, trvl=1, Iosc=0, ff=6, fff=0.01
 function foscll()
 { 
-  ff=1
  cntxt.strokeStyle='#b00'
  for(i=0;i<333;i++)
  {
@@ -125,35 +123,42 @@ function foscll()
 function foscllmv(b)
 { 
 Iosc=setInterval(()=>{
+ cntxt.clearRect(0,0,999,999)
  cntxt.beginPath()
  shft=66+Math.random()*11
  scle1=22+Math.random()*11
  trvl=11+Math.random()*11
- cntxt.clearRect(0,0,999,999)
- //if(b==0) ff=Math.round(Math.random()*9) 
- if(b==1) ff+=5
- for(i=0;i<333;i++)
- {
-  cntxt.lineTo(i, shft+scle*Math.sin(i/ff))
- } 
+ if(b==0)
+  for(i=0;i<333;i++)
+  {
+   cntxt.lineTo(i, shft+scle*Math.sin(i/ff))
+    ff+=fff
+	if(ff>-2||f<2)  fff*=-1
+  }
+ if(b==1)
+  for(i=0;i<333;i++)
+  {
+   cntxt.lineTo(i, shft+scle*Math.sin(i*ff))
+    ff++
+  }
   cntxt.stroke()
  }, imtosc)
 }
 
-var Ihz=0,dd=5,ddd=0.1
+var Ihz=0, dd=0.1,ddd=0.1
 function fHz()
 { 
-Iosc=setInterval(()=>{
- cntxt.beginPath()
+Ihz=setInterval(()=>{ 
+ cntxt.clearRect(0,0,999,999)
  for(i=0;i<300;i++)
  {
-  cntxt.clearRect(0,0,999,999)
+  cntxt.beginPath()
   y=44+Math.random()*25
   cntxt.moveTo(i*dd,68-y/2)
   cntxt.lineTo(i*dd,33+y)
   cntxt.stroke()
    dd+=ddd
-   if((dd>5.1)||(dd<4.9)) ddd=-1*ddd
+   if((dd>-6)||(dd<6)) ddd=-1*ddd
  }  
 }, 999)   
 }
@@ -185,7 +190,7 @@ btnd[1].onclick=()=>
  {
   btnd[1].style.background='#b00'
   foscll()
-  foscllmv()
+  foscllmv(0)
    btnd[1].value='Stop'
  }
  else
@@ -230,7 +235,7 @@ btnd[3].onclick=()=>
  else
  {
   btnd[3].style.background='#090'
-  clearInterval(Iosc)
+  clearInterval(Ihz)
   ff=0
   btnd[3].value='Hz'
  }
@@ -241,7 +246,6 @@ cnv[0].onmousemove=()=>
 {
  cnv[0].style.border='11px ridge #ee0'
   if(bcnvs==0) fdrw()  
-  
 }
 cnv[0].onmouseout=()=>
 {
