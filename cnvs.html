@@ -158,7 +158,7 @@ Ihz=setInterval(()=>{
   cntxt.lineTo(i*dd,33+y)
   cntxt.stroke()
    dd+=ddd
-   if((dd>-6)||(dd<6)) ddd=-1*ddd
+   if((dd>-1)||(dd<1)) ddd=-1*ddd
  }  
 }, 999)   
 }
@@ -258,6 +258,7 @@ cnv[0].onmouseout=()=>
 }
 cnv[0].onclick=()=>
 { 
+ dd=Math.random()*24
  switch(bcnvs) 
  {
   case 1: frndline(); break;
