@@ -145,7 +145,7 @@ Iosc=setInterval(()=>{
  }, imtosc)
 }
 
-var Ihz=0, dd=1,ddd=0.1
+var Ihz=0, dd=1,ddd=0.1, dy=25
 function fHz()
 { 
 Ihz=setInterval(()=>{ 
@@ -153,11 +153,12 @@ Ihz=setInterval(()=>{
  for(i=0;i<300;i++)
  {
   cntxt.beginPath()
-  y=44+Math.random()*25
+  y=44+Math.random()*dy
   cntxt.moveTo(i*dd,68-y/2)
   cntxt.lineTo(i*dd,33+y)
   cntxt.stroke()
-   dd=Math.random()*3
+   ddd=Math.random()*8
+   dd=Math.random()*ddd
    //if((dd>-1)||(dd<1)) ddd=-1*ddd 
  }  
 }, 999)   
@@ -254,10 +255,12 @@ cnv[0].onmouseout=()=>
   btn[i].style.background='#00f'
  } 
  cnv[0].style.border='11px ridge #ff0'
+  dy=25
   dd=5
 }
 cnv[0].onclick=()=>
-{ 
+{    
+ dy=25+Math.random()*28
  dd=Math.random()*24
  switch(bcnvs) 
  {
