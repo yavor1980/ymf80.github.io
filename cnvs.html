@@ -133,7 +133,7 @@ Iosc=setInterval(()=>{
   {
    cntxt.lineTo(i, shft+scle*Math.sin(i/ff))
     ff+=fff
-	if(ff>-2||f<2)  fff*=-1
+	if(ff>-1||f<1)  fff*=-1
   }
  if(b==1)
   for(i=0;i<333;i++)
@@ -145,7 +145,7 @@ Iosc=setInterval(()=>{
  }, imtosc)
 }
 
-var Ihz=0, dd=0.1,ddd=0.1
+var Ihz=0, dd=1,ddd=0.1
 function fHz()
 { 
 Ihz=setInterval(()=>{ 
@@ -157,8 +157,8 @@ Ihz=setInterval(()=>{
   cntxt.moveTo(i*dd,68-y/2)
   cntxt.lineTo(i*dd,33+y)
   cntxt.stroke()
-   dd+=ddd
-   if((dd>-1)||(dd<1)) ddd=-1*ddd
+   dd=Math.random()*3
+   //if((dd>-1)||(dd<1)) ddd=-1*ddd 
  }  
 }, 999)   
 }
