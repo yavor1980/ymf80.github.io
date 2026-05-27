@@ -450,6 +450,8 @@ cpcty[0].onmouseout=()=>
 trsfrmI=0
 function trsfrmon()
 {
+ ttl[0].style.color='#fff'
+ ttl[0].style.transform='scale(6) translate(0,40%) skew(14deg)'
  idtrsfrmtr.style.borderLeft='199px ridge #f00'
  idtrsfrmtr.style.borderRight='199px ridge #f00' 
  for(i=0;i<4;i++)
@@ -466,8 +468,7 @@ function trsfrmon()
   acoils[i+3].style.borderTop='transparent'
   acoils[i+3].style.borderColor='#900'
  }
- ttl[0].style.color='#00b'
- ttl[0].style.transform='scale(4) skew(14deg)'
+
  ttl[1].style.opacity=0.2+Math.random()/2
  ttl[2].style.opacity=0.2+Math.random()/2
  trsfrmI=setInterval(()=>
