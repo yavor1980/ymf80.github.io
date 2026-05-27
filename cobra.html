@@ -16,7 +16,7 @@ button:hover
  transform:scale(2.6);
 }
 
-.hd,.mth,.tng,.bd,.ttl,.tbe
+.hd,.mth,.tng,.bd,.ttl,.bkgrnd,.tbe
 {
  position:absolute;
  transition:1s;
@@ -39,6 +39,10 @@ button:hover
 <div class=ttl>
  <div class=ttl></div>
 </div>
+<div class=bkgrnd>
+ <div class=bkgrnd></div>
+</div>
+
 
 <div class=hd>
  <div class=hd>
@@ -64,11 +68,13 @@ button:hover
   <div class=tbe></div>
  </div>
  <div class=tbe></div>
+ <div class=tbe></div>
 </div>
  
 </body >
 <script>
 ttl=document.getElementsByClassName('ttl')
+bkgrnd=document.getElementsByClassName('bkgrnd')
 
 hd=document.getElementsByClassName('hd')
 mth=document.getElementsByClassName('mth')
@@ -242,12 +248,21 @@ tbe[3].style.height=88+'%'
 tbe[3].style.border='7px ridge transparent'
 tbe[3].style.borderBottom='3px solid #f00'
 tbe[3].style.opacity=0
+tbe[4].style.left=9+'%'
+tbe[4].style.top=266+'%' 
+tbe[4].style.width=79+'%'
+tbe[4].style.height=88+'%'
+tbe[4].style.border='7px ridge transparent'
+tbe[4].style.borderBottom='3px solid #f00'
+tbe[4].style.opacity=0
 
   bcl=0
 function cl()
 {
  ttl[3].style.transform='scale('+
   (1+Math.random())+')'
+ tbe[4].style.opacity=0.8 
+ tbe[4].style.transform='scale('+(1+Math.random())+')'
  if(bcl)
  {
   hd[1].style.transform='scale(1.3)'
@@ -278,7 +293,7 @@ function cl()
   tbe[3].style.transition=1+'s'
   tbe[3].style.transform=
    'scale(2,1) translate(0,199%) rotate(3deg)'
-  tbe[3].style.opacity=0.8
+  tbe[3].style.opacity=0.8  
  } 
  bcl=!bcl
 }
@@ -333,6 +348,8 @@ function clk()
  bd[2].style.borderTopRightRadius='22%'
  bd[3].style.transform='scale(1,1.5)'
  tbe[3].style.transform='scale(2,5)'
+ tbe[4].style.borderWidth=9+'px'
+ tbe[4].style.transform='scale(2,1)'
  ttl[3].style.background=
   'radial-gradient(#088,#00f)'
  ttl[3].style.opacity=0 
@@ -356,6 +373,8 @@ function clk()
   bd[2].style.borderTopRightRadius='55%'
   bd[3].style.transform='scale(1,1)' 
   tbe[3].style.transform='scale(1)'
+  tbe[4].style.borderWidth=3+'px'
+  tbe[4].style.transform='scale(1)'
   ttl[2].style.transform='scale(1)'
   ttl[3].style.opacity=0.7
   ttl[3].style.background=
