@@ -256,13 +256,12 @@ function fdir(nm,fr)
            dd[idir].style.borderTopRightRadius=55+'%';
            dd[idir].style.borderBottomRightRadius=55+'%'; break;
    case 'lft-bttm': dd[idir].style.borderRadius=0+'%'; 
-           dd[idir].style.borderTopLeftRadius=55+'%';
-           dd[idir].style.borderBottomLeftRadius=55+'%'; break;
+           dd[idir].style.borderTopLeftRadius=55+'%'; break;
    case 'bottom': dd[idir].style.borderRadius=0+'%'; 
            dd[idir].style.borderBottomLeftRadius=55+'%'; 
 		   dd[idir].style.borderBottomRightRadius=55+'%'; break; 
    case 'rght-bttm': dd[idir].style.borderRadius=0+'%'; 
-           dd[idir].style.borderBottomRightRadius=55+'%'; break;		   
+           dd[idir].style.borderTopRightRadius=55+'%'; break;		   
   }  
    idir++
  }
@@ -278,7 +277,7 @@ fdir(rw1[3],'right' )
 
 fdir(rw2[1],'lft-bttm')
 fdir(rw2[2],'bottom')
-fdir(rw2[3],'rght-bm')
+fdir(rw2[3],'rght-bttm')
 
 rw2[4].onmouseover=()=>
 {
