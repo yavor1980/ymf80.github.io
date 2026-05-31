@@ -46,7 +46,7 @@
 <div class=rw0>
  <div class=rw0>lft-tp</div>
  <div class=rw0>top </div>
- <div class=rw0>rgt-tp</div>
+ <div class=rw0>rght-tp</div>
 </div>
 <button class=btn>bttm</button>
 <button class=btn>center</button>
@@ -57,9 +57,9 @@
  <div class=rw1>right </div>
 </div>
 <div class=rw2>
- <div class=rw2>lt-bm</div>
+ <div class=rw2>lft-bm</div>
  <div class=rw2>bottom</div>
- <div class=rw2>rt-bm</div>
+ <div class=rw2>rght-bm</div>
 </div>
 <div class=rw2></div>
 <button class=btn>reset</button>
@@ -228,7 +228,7 @@ adr=[]
 function fdir(nm,fr)
 {
  nm.onclick=()=>
- {
+ {   
    if(idir>7)
    { 
     for(i=0;i<8;i++)
@@ -236,15 +236,39 @@ function fdir(nm,fr)
     idir=0
    }
   dd[idir].style.opacity=1
-  dd[idir].style.borderRadius=44+'%'
-  
+  adr[idir]=fr
   dd[idir].style.fontSize=2.6+'em'
    dd[idir].innerHTML=fr
+  switch(adr[idir])
+  {
+   case 'lft-tp': dd[idir].style.borderRadius=0+'%'; 
+           dd[idir].style.borderBottomLeftRadius=55+'%'; break;
+   case 'top': dd[idir].style.borderRadius=0+'%'; 
+           dd[idir].style.borderTopLeftRadius=55+'%'; 
+		   dd[idir].style.borderTopRightRadius=55+'%'; break; 
+   case 'rght-tp': dd[idir].style.borderRadius=0+'%'; 
+           dd[idir].style.borderBottomRightRadius=55+'%'; break;
+   case 'left': dd[idir].style.borderRadius=0+'%'; 
+           dd[idir].style.borderTopLeftRadius=55+'%';
+           dd[idir].style.borderBottomLeftRadius=55+'%'; break;
+   case 'center': dd[idir].style.borderRadius=55+'%'; break; 
+   case 'right': dd[idir].style.borderRadius=0+'%'; 
+           dd[idir].style.borderTopRightRadius=55+'%';
+           dd[idir].style.borderBottomRightRadius=55+'%'; break;
+   case 'lft-bttm': dd[idir].style.borderRadius=0+'%'; 
+           dd[idir].style.borderTopLeftRadius=55+'%';
+           dd[idir].style.borderBottomLeftRadius=55+'%'; break;
+   case 'bottom': dd[idir].style.borderRadius=0+'%'; 
+           dd[idir].style.borderBottomLeftRadius=55+'%'; 
+		   dd[idir].style.borderBottomRightRadius=55+'%'; break; 
+   case 'rght-bttm': dd[idir].style.borderRadius=0+'%'; 
+           dd[idir].style.borderBottomRightRadius=55+'%'; break;		   
+  }  
    idir++
  }
 }
 /**/
-fdir(rw0[1],'lft-to')
+fdir(rw0[1],'lft-tp')
 fdir(rw0[2],'top')
 fdir(rw0[3],'rght-tp')
 
@@ -280,13 +304,7 @@ btn[4].onclick=()=>
 { 
  for(i=0;i<idir;i++)
  {
-  switch(adr[i])
-  {
-   case 0: dd[i].style.borderRadius=0+'%'; 
-           dd[i].style.borderBottomLedftRadius=55+'%'; break;
-    
-   
-  }  
+  
  }
  idir=0
 }
