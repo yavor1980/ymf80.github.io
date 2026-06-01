@@ -296,6 +296,7 @@ btn[3].onclick=()=>
  {
   dd[i].style.opacity=0.2 
   dd[i].style.borderRadius=0+'%' 
+  dd[i].style.transform='scale(1)'
  }
   idir=0
 }
@@ -303,9 +304,8 @@ btn[4].onclick=()=>
 { 
  for(i=0;i<idir;i++)
  {
-  
+  dd[i].style.transform='translate('+(-244-122*Math.random())+'%,0%)'
  }
- idir=0
 }
 
 function cld(i)
