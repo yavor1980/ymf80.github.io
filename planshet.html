@@ -4,9 +4,10 @@
 #idbd
 {
  background:radial-gradient(#090,#888);
+ height:155%;
 }
 
-.btn,.dsply,.pnel
+.btn,.dsply,.pnel,.trmo
 {
  position:absolute;
  transition:1s;
@@ -45,12 +46,19 @@
  <rect class=csvg />
 </svg>
  <div class=csvg>SVG</div>
+ 
+<div class=trmo>
+ <div class=trmo>ThermoCouple</div>
+ <div class=trmo></div>
+ <div class=trmo></div>
+</div> 
 
 <script>
 btn=document.getElementsByClassName("btn")
 csvg=document.getElementsByClassName("csvg")
 dsply=document.getElementsByClassName('dsply')
 pnel=document.getElementsByClassName("pnel") 
+trmo=document.getElementsByClassName("trmo")
 
 btn[0].style.left=86+'%'
 btn[0].style.top=3+'%'
@@ -112,7 +120,6 @@ dsply[2].style.bottom=2+'%'
 dsply[2].style.width=14+'%'
 dsply[2].style.height=10+'%'
 dsply[2].style.background='#222'
-dsply[2].style.color='#fff'
 dsply[2].style.borderRadius=50+'%'
 dsply[3].style.left=7+'%'
 dsply[3].style.bottom=2+'%'
@@ -144,6 +151,30 @@ inp(5,31,50,37,44,'#333')
 inp(6,72,50,26,44,'#333')
 inp(7,99,44,'','','')
  pnel[7].style.transform='scale(0)'
+ 
+trmo[0].style.left=9+'%'
+trmo[0].style.top=90+'%'
+trmo[0].style.width=82+'%'
+trmo[0].style.height=65+'%' 
+trmo[0].style.background='#ff0'
+trmo[0].style.borderRadius=5+'%'
+trmo[1].style.left=17+'%'
+trmo[1].style.top=4+'%'
+trmo[1].style.transform='scale(3)'
+trmo[2].style.zIndex=1
+trmo[2].style.left=56+'%'
+trmo[2].style.top=37+'%'
+trmo[2].style.width=111+'px'
+trmo[2].style.height=111+'px'
+trmo[2].style.borderTop='33px ridge #990'
+trmo[2].style.borderRight='33px ridge #990'
+trmo[2].style.transform='rotate(45deg)'
+trmo[3].style.left=29+'%'
+trmo[3].style.top=30+'%'
+trmo[3].style.width=299+'px'
+trmo[3].style.height=99+'px'
+trmo[3].style.borderTop='55px solid  #000'
+trmo[3].style.borderBottom='55px solid #000' 
  
 bbtn=1
 btn[0].onclick=()=>
@@ -232,6 +263,18 @@ dsply[0].onmouseout=()=>
  csvg[0].style.transform='scale(1)'
  csvg[3].style.color='#000'
  csvg[3].style.transform='scale(0)'
+}
+
+
+trmo[0].onmouseover=()=>
+{
+ trmo[2].style.borderTop='33px ridge #f00'
+ trmo[2].style.borderRight='33px ridge #f00'
+}
+trmo[0].onmouseout=()=>
+{
+ trmo[2].style.borderTop='33px ridge #990'
+ trmo[2].style.borderRight='33px ridge #990'
 }
 
 </script>
