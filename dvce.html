@@ -94,11 +94,12 @@ body
   <div class=bldng></div>
  </div>
  
- <div class=nro>
+ <div class=nro> 
   <div class=nro></div>
   <div class=nro>PERCEPTRON</div>
   <div class=nro>HIDDEN</div>
   <div class=nro>AI</div>
+  <button class=nro>Restart</button>
 </div>
 
 <script>
@@ -250,8 +251,13 @@ nro[4].style.top=13+'%'
 nro[4].style.color='#00b'
 nro[4].style.opacity=0.1
 nro[4].style.transform='scale(8)skew(-22deg) '
+nro[5].style.left=89+'%'
+nro[5].style.top=3+'%'
+nro[5].style.transform='scale(2)'
 
 el=[7], els0=[7], els1=[7]
+function fel()
+{
 for(i=0;i<7;i++)
 {             ele=[2]   
  el[i]=document.createElement('div')
@@ -279,6 +285,8 @@ for(i=0;i<7;i++)
  ele[1].style.transform='rotate(33deg)'
   els1[i]=ele[1]
 }
+}
+ fel()
 
 function actbck(i,b1,b2)
 {
@@ -427,9 +435,9 @@ nro[0].onmouseover=()=>
   for(i=0;i<7;i++)
   { 
    el[i].style.transform='scale('+(1+Math.random()/2)+') '
-   els0[i].style.transform='scale(1.2) rotate('+
+   els0[i].style.transform='scale(1.3,1) rotate('+
    (-33*Math.random())+'deg)'
-   els1[i].style.transform='scale(1.2) rotate('+
+   els1[i].style.transform='scale(1.3,1) rotate('+
    (33*Math.random())+'deg)'
   }
  }, 999)
@@ -449,6 +457,14 @@ nro[0].onmouseout=()=>
   el[i].style.transform='scale(1) '
   els0[i].style.transform='scale(1) rotate(-33deg)'
   els1[i].style.transform='scale(1) rotate(33deg)'
+ }
+}
+
+nro[0].onclick=()=>
+{
+ for(i=0;i<7;i++){
+  el[i].style.left=(166+100*i)+'px'
+  el[i].style.top=(90+144*Math.round(3*Math.random()))+'px'
  }
 }
 
