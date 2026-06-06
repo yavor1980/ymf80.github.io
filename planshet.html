@@ -160,10 +160,11 @@ trmo[0].style.background='#ff0'
 trmo[0].style.borderRadius=5+'%'
 trmo[1].style.left=17+'%'
 trmo[1].style.top=4+'%'
+trmo[1].style.color='#099'
 trmo[1].style.transform='scale(3)'
 trmo[2].style.zIndex=1
-trmo[2].style.left=56+'%'
-trmo[2].style.top=37+'%'
+trmo[2].style.left=468+'px'
+trmo[2].style.top=168+'px'
 trmo[2].style.width=111+'px'
 trmo[2].style.height=111+'px'
 trmo[2].style.borderTop='33px ridge #990'
@@ -265,16 +266,20 @@ dsply[0].onmouseout=()=>
  csvg[3].style.transform='scale(0)'
 }
 
-
 trmo[0].onmouseover=()=>
 {
+ trmo[1].style.transform=
+  'scale(6) translate(53%,23%)  skew(-23deg)'
  trmo[2].style.borderTop='33px ridge #f00'
  trmo[2].style.borderRight='33px ridge #f00'
+ trmo[2].style.transform='scale(1.2) rotate(45deg)'
 }
 trmo[0].onmouseout=()=>
 {
+ trmo[1].style.transform='scale(3)'
  trmo[2].style.borderTop='33px ridge #990'
  trmo[2].style.borderRight='33px ridge #990'
+ trmo[2].style.transform='scale(1) rotate(45deg)'
 }
 
 </script>
