@@ -320,6 +320,8 @@ function cl()
  mgun[2].style.transform='scale('+(1+Math.random())+')'
  mgun[3].style.transform='scale('+(3+Math.random())+
   ',1) translate(0,67%)'
+ mne[0].style.transform='scale(2) translate('+
+ 155*Math.random()+'%,'+ 55*Math.random()+'%)' 
  if(b)
  {
   wtr[1].style.transform=
@@ -333,10 +335,6 @@ function cl()
   sh[1].style.transform='scale(1.1)'
   sh[2].style.transform='scale(1)'
   sh[5].style.transform='scale(1)'
-  mne[0].style.transform=
-   'scale(2) translate('+
-   Math.random()*44+'%,'+
-   Math.random()*44+'%)'
  }
  else
  {
@@ -351,7 +349,6 @@ function cl()
   sh[1].style.transform='scale(1)'
   sh[2].style.transform='scale(1.1)'
   sh[5].style.transform='scale(1.1)'
-  mne[0].style.transform='scale(1.8)'
  }  
     b=!b
 }
@@ -476,6 +473,8 @@ sh[0].onmouseover=()=>
  hlcptr[3].style.opacity=1
  mgun[2].style.opacity=0.2
  mgun[3].style.opacity=0.8
+ mne[0].style.opacity=0
+
 }
 sh[0].onmouseout=()=>
 {
@@ -490,6 +489,7 @@ sh[0].onmouseout=()=>
  hlcptr[3].style.opacity=0.2
  mgun[2].style.opacity=0
  mgun[3].style.opacity=0
+ mne[0].style.opacity=1
 }
 
 </script>
