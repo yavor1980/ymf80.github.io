@@ -43,13 +43,17 @@ body
  height:33%;
  cursor:pointer;
 }
-.slte,.mgun
+.slte,.mgun,.sltee
 {
  position:absolute;
  width:5%;
  height:5%;
  border-radius:55%;
  z-index:-1;
+}
+.sltee
+{ 
+ background:radial-gradient(#ff0,#f0f);
 }
 
 .mne,.hlcptr,.ttnm
@@ -80,6 +84,8 @@ body
  <div class=sh><div class=ttnm >SHIP</div></div>
  <div class=sh><div class=sh></div></div>
  <div class=sh></div>
+ <div class=sltee></div>
+ <div class=sltee></div>
  <div class=slte></div>
  <div class=slte></div>
  <div class=slte></div> 
@@ -112,6 +118,7 @@ btn=document.getElementsByClassName('btn')
 wtr=document.getElementsByClassName('wtr')
 sh=document.getElementsByClassName('sh')
 slte=document.getElementsByClassName('slte')
+sltee=document.getElementsByClassName('sltee')
 mne=document.getElementsByClassName('mne')
 ttnm=document.getElementsByClassName('ttnm')
 
@@ -177,26 +184,26 @@ sh[4].style.top=17+'%'
 sh[4].style.width=77+'%'
 sh[4].style.height=44+'%' 
 sh[4].style.background='#000'
-sh[5].style.left='-2%'
-sh[5].style.top='-12%'
-sh[5].style.width='103%'
-sh[5].style.height='112%' 
+sh[5].style.left=-2+'%'
+sh[5].style.top=-12+'%'
+sh[5].style.width=103+'%'
+sh[5].style.height=112+'%' 
 sh[5].style.background='#383'
-sh[5].style.borderRadius='55%'
+sh[5].style.borderRadius=55+'%'
 sh[5].style.borderTopLeftRadius='5%'
 sh[5].style.borderTopRightRadius='5%'
 sh[5].style.zIndex=-2
-ttnm[0].style.left='51%'
-ttnm[0].style.top='6%'
-ttnm[1].style.left='11%'
-ttnm[1].style.top='6%'
+ttnm[0].style.left=51+'%'
+ttnm[0].style.top=6+'%'
+ttnm[1].style.left=11+'%'
+ttnm[1].style.top=6+'%'
 slte[4].style.left=77+'%'
 slte[4].style.top=44+'%'
 slte[4].style.height=11+'%'
 slte[4].style.borderBottomLeftRadius='5%'
 slte[4].style.borderBottomRightRadius='5%'
 slte[5].style.background=
- 'radial-gradient(#b00,#f00)' 
+ 'radial-gradient(#bb0,#f00)' 
 slte[5].style.zIndex=-1 
 slte[5].style.transform='scale(0)' 
    
@@ -361,28 +368,44 @@ btn[0].onclick=()=>
  sh[3].style.transform='translate(0,33%)'
  sh[5].style.transform=
   'scale(1,0.6) translate(0,44%)'
- slte[0].style.background='radial-gradient(#ff0,#f00)'
- slte[1].style.background='radial-gradient(#ff0,#f00)'
- slte[2].style.background='radial-gradient(#ff0,#f00)'
- slte[0].style.transition='1s'
- slte[1].style.transition='1s'
- slte[2].style.transition='1s'
- slte[0].style.opacity=0.8
- slte[1].style.opacity=0.8
- slte[2].style.opacity=0.8 
- slte[0].style.transform=
-  'scale(5) translate('+(Math.random()*666-333)+
+ sltee[0].style.transition=1+'s' 
+ sltee[0].style.opacity=1
+ sltee[0].style.transform=
+  'scale(6,5) translate('+(Math.random()*333-666)+
   '%, -322%) '
+ sltee[1].style.transition=1+'s'  
+ sltee[1].style.opacity=1
+ sltee[1].style.transform=
+  'scale(6,5) translate('+(Math.random()*333-666)+
+  '%, -322%) '
+ slte[0].style.transition=1+'s'
+ slte[0].style.background='radial-gradient(#ff0,#f00)'
+ slte[0].style.opacity=0.8
+  slte[0].style.transform=
+  'scale(6,5) translate('+(Math.random()*222-55)+
+  '%, -322%) '
+ slte[1].style.transition=1+'s'
+ slte[1].style.background='radial-gradient(#ff0,#f00)'
+  slte[1].style.opacity=0.8
  slte[1].style.transform=
-  'scale(5) translate('+(Math.random()*666-333)+
+  'scale(6,5) translate('+(Math.random()*444-222)+
   '%, -377%) '
+ slte[2].style.transition=1+'s'
+ slte[2].style.background='radial-gradient(#ff0,#f00)'
+ slte[2].style.opacity=0.8 
  slte[2].style.transform=
-  'scale(5) translate('+(Math.random()*666-333)+
+  'scale(6,5) translate('+(Math.random()*299-33)+
   '%, -322%) '
  setTimeout(()=>
  {
   sh[3].style.transform='translate(0,0%)'
   sh[5].style.transform='scale(1)'
+  sltee[0].style.transition=0+'s'
+  sltee[0].style.opacity=0
+  sltee[0].style.transform='translate(0%,0%)'
+  sltee[1].style.transition=0+'s'
+  sltee[1].style.opacity=0
+  sltee[1].style.transform='translate(0%,0%)' 
   slte[0].style.transition=0+'s'
   slte[0].style.opacity=0
   slte[0].style.transform='translate(0%,0%)'
@@ -442,7 +465,7 @@ sh[0].onmouseover=()=>
  slte[3].style.opacity=1
  slte[3].style.transition=1+'s'
  slte[3].style.transform=
-  'scale(4) translate(266%,-188%)'
+  'scale(5) translate(266%,-188%)'
  ttnm[0].style.transform=
   'scale(1.5) skew(22deg)'
  ttnm[1].style.transform=
