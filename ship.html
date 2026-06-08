@@ -54,6 +54,7 @@ body
 .sltee
 { 
  background:radial-gradient(#ff0,#f0f);
+ z-index:-7;
 }
 
 .mne,.hlcptr,.ttnm
@@ -82,6 +83,8 @@ body
 <div class=sh> 
  <div class=sh><div class=ttnm >SHIP</div></div>
  <div class=sh><div class=ttnm >SHIP</div></div>
+ <div class=sltee></div>
+ <div class=sltee></div>
  <div class=sh><div class=sh></div></div>
  <div class=sh></div>
  <div class=sltee></div>
@@ -200,12 +203,28 @@ ttnm[1].style.top=6+'%'
 slte[4].style.left=77+'%'
 slte[4].style.top=44+'%'
 slte[4].style.height=11+'%'
-slte[4].style.borderBottomLeftRadius='5%'
-slte[4].style.borderBottomRightRadius='5%'
+slte[4].style.borderBottomLeftRadius=5+'%'
+slte[4].style.borderBottomRightRadius=5+'%'
 slte[5].style.background=
  'radial-gradient(#bb0,#f00)' 
 slte[5].style.zIndex=-1 
 slte[5].style.transform='scale(0)' 
+sltee[2].style.left=19+'%'
+sltee[2].style.top=-44+'%'
+sltee[2].style.width=19+'%'
+sltee[2].style.height=16+'%'
+sltee[2].style.background='none'
+sltee[2].style.borderRadius=33+'%'
+sltee[2].style.borderTopLeftRadius=3+'%'
+sltee[2].style.border='44px ridge #333'
+sltee[2].style.borderBottom='22px ridge #999'
+sltee[2].style.borderRight='22px ridge #999'
+sltee[2].style.transform='rotate(45deg)' 
+sltee[3].style.left=42+'%'
+sltee[3].style.top=-56+'%'
+sltee[3].style.width=11+'%'
+sltee[3].style.height=11+'%'   
+sltee[3].style.background='#f00'
    
 hlcptr[0].style.left=63+'%'
 hlcptr[0].style.top=20+'%'
@@ -369,12 +388,12 @@ btn[0].onclick=()=>
  sltee[0].style.opacity=1
  sltee[0].style.transform=
   'scale(6,5) translate('+(Math.random()*333-666)+
-  '%, -322%) '
+  '%, -2%) '
  sltee[1].style.transition=1+'s'  
  sltee[1].style.opacity=1
  sltee[1].style.transform=
   'scale(6,5) translate('+(Math.random()*333-666)+
-  '%, -322%) '
+  '%, 32%) '
  slte[0].style.transition=1+'s'
  slte[0].style.background='radial-gradient(#ff0,#f00)'
  slte[0].style.opacity=0.8
