@@ -19,7 +19,6 @@ input
 button,select
 {
  cursor:pointer; 
- transform:scale(3); 
 }
 select
 {
@@ -51,6 +50,7 @@ button
  <input type=submit class=btn value='ownership' >
  <input type=submit class=btn value='auto'>
  <input type=submit class=btn value='tourism'>
+ <div class=btn>What must be insuranced?</div>
 </div>
 <div class=pnl>
  <div class=ttl>Insurance</div>
@@ -69,7 +69,7 @@ button
   </select>
  <div class=term>
   You are insured!
-  <button class=term></button> 
+  <button class=term>OK</button> 
  </div>  
 </div>
 <script>
@@ -117,6 +117,10 @@ btn[4].style.left=77+'%'
 btn[4].style.top=55+'%'
 btn[4].style.background='#f0b'
 btn[4].style.transform='scale(2)'  
+btn[5].style.left=29+'%'
+btn[5].style.top=15+'%'
+btn[5].style.color='#f0b'
+btn[5].style.transform='scale(3) skew(-12deg)' 
 
 ttl[0].style.left=49+'%'
 ttl[0].style.top=11+'%'
@@ -147,40 +151,48 @@ mnge[1].style.left=35+'%'
 mnge[1].style.top=76+'%' 
 mnge[1].style.background='#770'
 mnge[1].style.fontSize=0.6+'%' 
+mnge[1].style.transform='scale(3)'
 mnge[2].style.left=49+'%'
 mnge[2].style.top=76+'%' 
 mnge[2].style.background='#660' 
 mnge[2].style.fontSize=0.6+'%' 
+mnge[2].style.transform='scale(3)'
 
 term[0].style.left=13+'%'
 term[0].style.top=13+'%' 
 term[0].style.borderRadius=13+'%' 
+term[0].style.transform='scale(3)'
 term[1].style.left=73+'%'
-term[1].style.top=13+'%'
+term[1].style.top=8+'%'
 term[1].style.width=13+'%'
 term[1].style.height=19+'%'
 term[1].style.background='#b00' 
 term[1].style.borderRadius=13+'%' 
-term[1].style.transform='scale(0.2)'
-term[2].style.left=33+'%'
-term[2].style.top=73+'%'
-
+term[2].style.left=7+'%'
+term[2].style.top=60+'%'
+term[2].style.width=88+'%'
+term[2].style.height=33+'%'
 
 function abtn(i,clr,str)
 {
  btn[i].onmouseover=()=>
  { 
   btn[i].style.transform='scale(2.2)'
+  ttl[3].style.transform='scale(5) skew(-12deg)'
  }
  btn[i].onmouseout=()=>
  { 
   btn[i].style.transform='scale(2)'
+  ttl[3].style.transform='scale(3) skew(-12deg)'
  }
  btn[i].onclick=()=>
  { 
    mnge[1].disabled=0
    mnge[2].disabled=0
+  ttl[0].style.zIndex=1
+  ttl[0].style.transform='scale(5) skew(-8deg)'
   ttl[3].style.color=clr 
+  ttl[3].style.transform='scale(5) skew(-12deg)'
    ttl[3].innerHTML=str 
  } 
 }
@@ -196,8 +208,7 @@ ttl[0].onmouseover=()=>
 ttl[0].onmouseout=()=>
 { 
  ttl[0].style.color='#600'
- ttl[0].style.transform=
-  'scale(3) skew(-12deg)'
+ ttl[0].style.transform='scale(3) skew(-12deg)'
 }  
 
 ttl[2].onclick=()=>
@@ -230,7 +241,7 @@ mnge[2].onmouseout=()=>
 
 term[2].onclick=()=>
 { 
- term[1].style.transform='scale(0.2)'
+ term[1].style.transform='scale(1)'
 }  
  
 //Ittl0=setInterval(()=>{
