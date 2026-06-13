@@ -54,7 +54,7 @@ body
 .sltee
 { 
  background:radial-gradient(#ff0,#f0f);
- z-index:-7;
+ z-index:-2;
 }
 
 .mne,.hlcptr,.ttnm
@@ -225,6 +225,7 @@ sltee[3].style.top=-56+'%'
 sltee[3].style.width=11+'%'
 sltee[3].style.height=11+'%'   
 sltee[3].style.background='#f00'
+sltee[3].style.opacity=0.2
    
 hlcptr[0].style.left=63+'%'
 hlcptr[0].style.top=20+'%'
@@ -388,12 +389,12 @@ btn[0].onclick=()=>
  sltee[0].style.opacity=1
  sltee[0].style.transform=
   'scale(6,5) translate('+(Math.random()*333-666)+
-  '%, -2%) '
+  '%, -322%) '
  sltee[1].style.transition=1+'s'  
  sltee[1].style.opacity=1
  sltee[1].style.transform=
   'scale(6,5) translate('+(Math.random()*333-666)+
-  '%, 32%) '
+  '%, -322%) '
  slte[0].style.transition=1+'s'
  slte[0].style.background='radial-gradient(#ff0,#f00)'
  slte[0].style.opacity=0.8
@@ -482,6 +483,8 @@ sh[0].onmouseover=()=>
  slte[3].style.transition=1+'s'
  slte[3].style.transform=
   'scale(5) translate(266%,-188%)'
+ sltee[3].style.opacity=0.3
+ sltee[3].style.transform='scale('+(6+2*Math.random())+')' 
  ttnm[0].style.transform=
   'scale(1.5) skew(22deg)'
  ttnm[1].style.transform=
@@ -493,12 +496,13 @@ sh[0].onmouseover=()=>
  mgun[2].style.opacity=0.2
  mgun[3].style.opacity=0.8
  mne[0].style.opacity=0
-
 }
 sh[0].onmouseout=()=>
 {
  sh[0].style.transform='scale(1) '
  sh[4].style.background='#000'
+ sltee[3].style.opacity=0.2
+ sltee[3].style.transform='scale(1) '
  ttnm[0].style.transform='scale(1) '
  ttnm[1].style.transform='scale(1) '
  hlcptr[0].style.transform=
