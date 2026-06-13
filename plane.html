@@ -19,7 +19,7 @@ body
  color:#900; transform:scale(1.2);
 }
 
-.plne,.clds,.bllts,.tle
+.plne,.clds,.bllts,.tle,.mgne
 {
  position:absolute; transition:1s; cursor:pointer;
 }
@@ -31,6 +31,13 @@ body
  background:#333; 
  border-top-left-radius:55%; 
  border-top-right-radius:55%; 
+}
+.mgne
+{
+ left:-4%; top:77%; width:92%; height:188%; 
+ border-left:9px ridge #f00; 
+ border-right:9px ridge #f00; 
+ opacity:0.2;
 }
 
 </style>
@@ -57,14 +64,14 @@ body
  </div>
 </div>
 
-
-
 <div class=bllts></div>
 <div class=bllts>
  <div class=tle></div>
+ <div class=mgne></div>
 </div>
 <div class=bllts>
  <div class=tle></div>
+ <div class=mgne></div>
 </div>
 
 <script>
@@ -72,6 +79,7 @@ clds=document.getElementsByClassName('clds')
 plne=document.getElementsByClassName('plne')
 bllts=document.getElementsByClassName('bllts')
 tle=document.getElementsByClassName('tle')
+mgne=document.getElementsByClassName('mgne')
 
 bllts[0].style.bottom=0+'%'
 bllts[0].style.width=99+'%'
@@ -273,6 +281,8 @@ idb.onclick=()=>
 Ibllts=0
 plne[0].onmouseover=()=>
 {
+  mgne[0].style.opacity=1
+  mgne[1].style.opacity=1
  Ibllts=setInterval(()=>
  { 
   bllts[1].style.left=Math.random()*77+'%'
@@ -282,6 +292,7 @@ plne[0].onmouseover=()=>
   bllts[0].style.opacity=Math.random()
   bllts[1].style.transform='translate(0,777%) skew(-44deg)'
   bllts[2].style.transform='translate(0,777%) skew(-44deg)'
+
   plne[1].style.transform='skew('+
   (Math.random()*110-55)+'deg)'
  }, 999)
@@ -307,6 +318,8 @@ plne[0].onmouseout=()=>
 {
   clearInterval(Ibllts)
  bllts[0].style.opacity=0.2
+ mgne[0].style.opacity=0.2
+ mgne[1].style.opacity=0.2
  plne[0].style.transform='scale(1)' 
  plne[1].style.background=
   'linear-gradient(#0b0,#000)'
