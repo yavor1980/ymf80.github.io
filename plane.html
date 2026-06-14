@@ -37,7 +37,7 @@ body
  left:-4%; top:77%; width:92%; height:188%; 
  border-left:9px ridge #f00; 
  border-right:9px ridge #f00; 
- opacity:0.2;
+ opacity:0;
 }
 
 </style>
@@ -281,8 +281,10 @@ idb.onclick=()=>
 Ibllts=0
 plne[0].onmouseover=()=>
 {
-  mgne[0].style.opacity=1
-  mgne[1].style.opacity=1
+ mgne[0].style.opacity=Math.random()
+ mgne[0].style.height=(144+188*Math.random())+'%'
+ mgne[1].style.opacity=Math.random()
+ mgne[1].style.height=(144+188*Math.random())+'%'
  Ibllts=setInterval(()=>
  { 
   bllts[1].style.left=Math.random()*77+'%'
@@ -292,7 +294,6 @@ plne[0].onmouseover=()=>
   bllts[0].style.opacity=Math.random()
   bllts[1].style.transform='translate(0,777%) skew(-44deg)'
   bllts[2].style.transform='translate(0,777%) skew(-44deg)'
-
   plne[1].style.transform='skew('+
   (Math.random()*110-55)+'deg)'
  }, 999)
@@ -318,8 +319,8 @@ plne[0].onmouseout=()=>
 {
   clearInterval(Ibllts)
  bllts[0].style.opacity=0.2
- mgne[0].style.opacity=0.2
- mgne[1].style.opacity=0.2
+ mgne[0].style.opacity=0
+ mgne[1].style.opacity=0
  plne[0].style.transform='scale(1)' 
  plne[1].style.background=
   'linear-gradient(#0b0,#000)'
