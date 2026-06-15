@@ -48,6 +48,16 @@ body
 <div class=clds></div>
 <div class=clds></div>
 
+<div class=bllts></div>
+<div class=bllts>
+ <div class=tle></div>
+ <div class=mgne></div>
+</div>
+<div class=bllts>
+ <div class=tle></div>
+ <div class=mgne></div>
+</div>
+
 <div class=plne>
  <div class=clds></div>
  <div class=clds></div>
@@ -62,16 +72,6 @@ body
  <div class=plne>
   <div class=plne></div>
  </div>
-</div>
-
-<div class=bllts></div>
-<div class=bllts>
- <div class=tle></div>
- <div class=mgne></div>
-</div>
-<div class=bllts>
- <div class=tle></div>
- <div class=mgne></div>
 </div>
 
 <script>
@@ -282,9 +282,9 @@ Ibllts=0
 plne[0].onmouseover=()=>
 {
  mgne[0].style.opacity=Math.random()
- mgne[0].style.height=(144+188*Math.random())+'%'
+ mgne[0].style.height=(99+333*Math.random())+'%'
  mgne[1].style.opacity=Math.random()
- mgne[1].style.height=(144+188*Math.random())+'%'
+ mgne[1].style.height=(99+333*Math.random())+'%'
  Ibllts=setInterval(()=>
  { 
   bllts[1].style.left=Math.random()*77+'%'
@@ -294,6 +294,12 @@ plne[0].onmouseover=()=>
   bllts[0].style.opacity=Math.random()
   bllts[1].style.transform='translate(0,777%) skew(-44deg)'
   bllts[2].style.transform='translate(0,777%) skew(-44deg)'
+  clds[0].style.left=Math.random()*44+'%'
+  clds[0].style.top=Math.random()*66+'%'
+  clds[1].style.left=Math.random()*44+'%'
+  clds[1].style.top=Math.random()*66+'%'
+  clds[2].style.left=Math.random()*44+'%'
+  clds[2].style.top=Math.random()*66+'%'
   plne[1].style.transform='skew('+
   (Math.random()*110-55)+'deg)'
  }, 999)
