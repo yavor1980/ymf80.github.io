@@ -19,7 +19,7 @@ body
  color:#900; transform:scale(1.2);
 }
 
-.plne,.clds,.bllts,.tle,.mgne
+.plne,.clds,.bllts,.tle,.mgne,.enmy
 {
  position:absolute; transition:1s; cursor:pointer;
 }
@@ -47,6 +47,9 @@ body
 <div class=clds></div>
 <div class=clds></div>
 <div class=clds></div>
+<div class=enmy></div>
+<div class=enmy></div>
+<div class=enmy></div>
 
 <div class=bllts></div>
 <div class=bllts>
@@ -76,6 +79,7 @@ body
 
 <script>
 clds=document.getElementsByClassName('clds')
+enmy=document.getElementsByClassName('enmy')
 plne=document.getElementsByClassName('plne')
 bllts=document.getElementsByClassName('bllts')
 tle=document.getElementsByClassName('tle')
@@ -195,6 +199,15 @@ inn(clds,5, 33,44, 2,8,'radial-gradient(#ff0,#f0f)')
  clds[5].style.opacity=0
 inn(clds,6, 67,44, 2,8,'radial-gradient(#ff0,#f0f)')
  clds[6].style.opacity=0
+inn(enmy,0, 44*Math.random(),67*Math.random(), 8,2,'radial-gradient(#f00,#ff0)')
+ enmy[0].style.opacity=0
+ enmy[0].style.borderRadius=55+'%'
+inn(enmy,1, 67*Math.random(),44*Math.random(), 9,2,'radial-gradient(#f00,#ff0)')
+ enmy[1].style.opacity=0
+ enmy[1].style.borderRadius=55+'%'
+inn(enmy,2, 7*Math.random(),44*Math.random(), 9,2,'radial-gradient(#f00,#ff0)')
+ enmy[2].style.opacity=0
+ enmy[2].style.borderRadius=55+'%'
 
 Icl=0
 function cl()
@@ -287,6 +300,7 @@ plne[0].onmouseover=()=>
  mgne[1].style.height=(99+333*Math.random())+'%'
  Ibllts=setInterval(()=>
  { 
+  bllts[0].style.height=(7+Math.random()*7)+'%'
   bllts[1].style.left=Math.random()*77+'%'
   bllts[1].style.top=Math.random()*66+'%'
   bllts[2].style.left=Math.random()*77+'%'
@@ -294,6 +308,15 @@ plne[0].onmouseover=()=>
   bllts[0].style.opacity=Math.random()
   bllts[1].style.transform='translate(0,777%) skew(-44deg)'
   bllts[2].style.transform='translate(0,777%) skew(-44deg)'
+  enmy[0].style.left=Math.random()*77+'%'
+  enmy[0].style.top=Math.random()*66+'%'
+  enmy[0].style.opacity=1
+  enmy[1].style.left=Math.random()*77+'%'
+  enmy[1].style.top=Math.random()*66+'%'
+  enmy[1].style.opacity=1
+  enmy[2].style.left=Math.random()*77+'%'
+  enmy[2].style.top=Math.random()*66+'%'
+  enmy[2].style.opacity=1
   clds[0].style.left=Math.random()*44+'%'
   clds[0].style.top=Math.random()*66+'%'
   clds[1].style.left=Math.random()*44+'%'
@@ -322,9 +345,13 @@ plne[0].onmouseover=()=>
  clds[6].style.opacity=1
 }   
 plne[0].onmouseout=()=>
-{
+{  
   clearInterval(Ibllts)
+ bllts[0].style.height=11+'%' 
  bllts[0].style.opacity=0.2
+ enmy[0].style.opacity=0
+ enmy[1].style.opacity=0 
+ enmy[2].style.opacity=0 
  mgne[0].style.opacity=0
  mgne[1].style.opacity=0
  plne[0].style.transform='scale(1)' 
