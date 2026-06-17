@@ -50,6 +50,7 @@ body
 <div class=enmy></div>
 <div class=enmy></div>
 <div class=enmy></div>
+<div class=enmy></div>
 
 <div class=bllts></div>
 <div class=bllts>
@@ -208,7 +209,15 @@ inn(enmy,1, 67*Math.random(),44*Math.random(), 9,2,'radial-gradient(#f00,#ff0)')
 inn(enmy,2, 7*Math.random(),44*Math.random(), 9,2,'radial-gradient(#f00,#ff0)')
  enmy[2].style.opacity=0
  enmy[2].style.borderRadius=55+'%'
-
+inn(enmy,3, 40,72, 8,18,'')
+ enmy[3].style.borderBottomLeftRadius=33+'%'
+ enmy[3].style.borderBottomRightRadius=33+'%'
+ enmy[3].style.borderTop='33px ridge transparent' 
+ enmy[3].style.borderBottom='33px ridge #020'
+ enmy[3].style.borderLeft='59px ridge #060'
+ enmy[3].style.borderRight='59px ridge #060'
+ enmy[3].style.transform='scale(1,0.4) skew(44deg)' 
+ 
 Icl=0
 function cl()
 {   
@@ -291,7 +300,7 @@ idb.onclick=()=>
  }, 88)
 }
  
-Ibllts=0
+Ibllts=0, enmycl=0
 plne[0].onmouseover=()=>
 {
  mgne[0].style.opacity=Math.random()
@@ -311,12 +320,17 @@ plne[0].onmouseover=()=>
   enmy[0].style.left=Math.random()*77+'%'
   enmy[0].style.top=Math.random()*66+'%'
   enmy[0].style.opacity=1
+  enmy[0].style.transform='scale('+(1+Math.random())+')'
   enmy[1].style.left=Math.random()*77+'%'
   enmy[1].style.top=Math.random()*66+'%'
   enmy[1].style.opacity=1
+  enmy[1].style.transform='scale('+(1+Math.random())+')'
   enmy[2].style.left=Math.random()*77+'%'
   enmy[2].style.top=Math.random()*66+'%'
   enmy[2].style.opacity=1
+  enmy[2].style.transform='scale('+(1+Math.random())+')'
+  enmy[3].style.transform='scale(1) skew('+
+   (44*Math.random())+'deg)'
   clds[0].style.left=Math.random()*44+'%'
   clds[0].style.top=Math.random()*66+'%'
   clds[1].style.left=Math.random()*44+'%'
@@ -324,7 +338,7 @@ plne[0].onmouseover=()=>
   clds[2].style.left=Math.random()*44+'%'
   clds[2].style.top=Math.random()*66+'%'
   plne[1].style.transform='skew('+
-  (Math.random()*110-55)+'deg)'
+   (Math.random()*110-55)+'deg)'
  }, 999)
   prtr=3+3*Math.random()
  plne[0].style.transform='scale(1.5)'
@@ -352,6 +366,7 @@ plne[0].onmouseout=()=>
  enmy[0].style.opacity=0
  enmy[1].style.opacity=0 
  enmy[2].style.opacity=0 
+ enmy[3].style.transform='scale(1,0.4) skew(44deg)' 
  mgne[0].style.opacity=0
  mgne[1].style.opacity=0
  plne[0].style.transform='scale(1)' 
