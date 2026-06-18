@@ -19,7 +19,7 @@
  border-radius:55%;
 }
 
-.smk,.tfre
+.smk,.tfre,.bldng
 {
  position:absolute;
  transition:1s; 
@@ -72,6 +72,10 @@
  <div class=smk></div>
 </div>
 
+<div class=bldng>
+ <div class=bldng></div>
+</div>
+
 <div class=tfre>flame</div>
  <div class=tfre>
   Intensive oxidation process,<br>
@@ -91,6 +95,7 @@ mth=document.getElementsByClassName('mth')
 ears=document.getElementsByClassName('ears')
 
 smk=document.getElementsByClassName('smk')
+bldng=document.getElementsByClassName('bldng')
 tfre=document.getElementsByClassName('tfre')
  
 bgrnd[0].style.left=12+'%'
@@ -311,6 +316,27 @@ smk[3].style.background='#bb0'
 smk[3].style.borderBottomRightRadius=55+'%'
 smk[3].style.borderTopLeftRadius=5+'%'
 	 
+bldng[0].style.zIndex=-1
+bldng[0].style.left=49+'%'
+bldng[0].style.top=37+'%'  
+bldng[0].style.width=22+'%'
+bldng[0].style.height=22+'%' 
+bldng[0].style.background='#808'
+bldng[0].style.borderRadius=17+'%' 
+bldng[1].style.left=4+'%'
+bldng[1].style.top=3+'%'  
+bldng[1].style.width=88+'%'
+bldng[1].style.height=88+'%' 
+bldng[1].style.background='#200'
+bldng[1].style.borderRadius=7+'%' 
+	 
+tfre[0].style.left=66+'%'
+tfre[0].style.top=11+'%'
+tfre[0].style.color='#b00'
+tfre[0].style.transform=
+ 'scale(3) skew(-11deg)'
+tfre[0].style.cursor='pointer'	 
+	 
 tfre[0].style.left=66+'%'
 tfre[0].style.top=11+'%'
 tfre[0].style.color='#b00'
@@ -357,6 +383,8 @@ fc[0].onmouseover=()=>
  smk[3].style.top=0+'%'
  mth[3].style.transform=
    'scale(2.0,1.0) translate(11%,-6%) rotate(-9deg)'
+ bldng[0].style.transform='scale(1.4) translate(71%,-33%)'  
+ bldng[1].style.background='radial-gradient(#ff0,#f00)'
  trsrs[0].style.borderRadius=15+'%'   
  trsrs[1].style.borderRadius=55+'%'  
  trsrs[1].style.transform='scale(4,1)'  
@@ -403,6 +431,8 @@ fc[0].onmouseout=()=>
  smk[2].style.opacity=0
  smk[2].style.transform='scale(0)'  
  smk[3].style.top=-8+'%'
+ bldng[0].style.transform='scale(1)' 
+ bldng[1].style.background='#000'
  trsrs[0].style.borderRadius=0+'%' 
  trsrs[1].style.borderRadius=0+'%'
  trsrs[1].style.transform='scale(1)' 
