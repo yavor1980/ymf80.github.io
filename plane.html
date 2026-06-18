@@ -19,12 +19,13 @@ body
  color:#900; transform:scale(1.2);
 }
 
-.plne,.clds,.bllts,.tle,.mgne,.enmy
+.plne,.clds,.bllts,.tle,.mgne,.enmy,.enfre
 {
  position:absolute; transition:1s; cursor:pointer;
 }
 .clds {border-radius:54%;}
-.bllts {z-index:-1 }
+.bllts {z-index:-1; }
+.enfre {border-radius:55%; }
 .tle
 {
  left:44%; top:-77%; width:18%; height:88%; 
@@ -50,7 +51,10 @@ body
 <div class=enmy></div>
 <div class=enmy></div>
 <div class=enmy></div>
-<div class=enmy></div>
+<div class=enmy>
+<div class=enfre></div>
+<div class=enfre></div>
+</div>
 
 <div class=bllts></div>
 <div class=bllts>
@@ -81,6 +85,8 @@ body
 <script>
 clds=document.getElementsByClassName('clds')
 enmy=document.getElementsByClassName('enmy')
+enfre=document.getElementsByClassName('enfre')
+
 plne=document.getElementsByClassName('plne')
 bllts=document.getElementsByClassName('bllts')
 tle=document.getElementsByClassName('tle')
@@ -217,7 +223,10 @@ inn(enmy,3, 40,72, 8,18,'')
  enmy[3].style.borderLeft='59px ridge #060'
  enmy[3].style.borderRight='59px ridge #060'
  enmy[3].style.transform='scale(1,0.4) skew(44deg)' 
- 
+inn(enfre,0, -12,-72, 22,18,'#f00')
+ enfre[0].style.opacity=0.4
+inn(enfre,1, 112,-72, 22,18,'#f00') 
+ enfre[1].style.opacity=0.4
 Icl=0
 function cl()
 {   
@@ -331,6 +340,8 @@ plne[0].onmouseover=()=>
   enmy[2].style.transform='scale('+(1+Math.random())+')'
   enmy[3].style.transform='scale(1) skew('+
    (44*Math.random())+'deg)'
+  enfre[0].style.transform='scale('+(2+6*Math.random())+')' 
+  enfre[1].style.transform='scale('+(2+6*Math.random())+')' 
   clds[0].style.left=Math.random()*44+'%'
   clds[0].style.top=Math.random()*66+'%'
   clds[1].style.left=Math.random()*44+'%'
@@ -367,6 +378,8 @@ plne[0].onmouseout=()=>
  enmy[1].style.opacity=0 
  enmy[2].style.opacity=0 
  enmy[3].style.transform='scale(1,0.4) skew(44deg)' 
+ enfre[0].style.transform='scale(1)' 
+ enfre[1].style.transform='scale(1)' 
  mgne[0].style.opacity=0
  mgne[1].style.opacity=0
  plne[0].style.transform='scale(1)' 
