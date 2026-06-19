@@ -6,7 +6,7 @@ body
  background:linear-gradient(44deg,#ff0,#0ff)
 }
 
-.rd,.tl,#idvw
+.rd,.tl,.vw
 {
  position:absolute;
  transition:1s;
@@ -63,7 +63,8 @@ body
    <div class=prpl></div>
   </div>
  </div>
- <div id=idvw></div>
+ <div class=vw></div>
+ <div class=vw></div>
  
  <div class=cr>
   <div class=cr></div>
@@ -78,6 +79,7 @@ body
 tl=document.getElementsByClassName('tl')
 rd=document.getElementsByClassName('rd')
 prpl=document.getElementsByClassName('prpl')
+vw=document.getElementsByClassName('vw')
 
 cr=document.getElementsByClassName('cr')
 fre=document.getElementsByClassName('fre')
@@ -114,15 +116,14 @@ inn(rd,3, -19,39, 144,22, '#800')
  rd[3].style.transform='rotate(-22deg)'
 inn(rd,4, -19,39, 144,22, '#900')
  rd[4].style.transform='rotate(22deg)'
-idvw.style.zIndex=-1 
-idvw.style.left=26+'%' 
-idvw.style.top=67+'%'
-idvw.style.width=22+'%' 
-idvw.style.height=22+'%'
-idvw.style.borderRadius=55+'%'
-idvw.style.background='#ff0'
-idvw.style.opacity=0.1
- 
+inn(vw,0, 26,67, 22,22, '#ff0') 
+ vw[0].style.zIndex=-1 
+ vw[0].style.borderRadius=55+'%'
+ vw[0].style.opacity=0.1 
+inn(vw,1, 66,24, 11,11, '#ff0') 
+ vw[1].style.zIndex=-1 
+ vw[1].style.borderRadius=55+'%'
+ vw[1].style.opacity=0.1  
 prpl[0].style.left=6+'%'
 prpl[0].style.top=1+'%'
 prpl[0].style.transform='scale(0.4,2)'
@@ -190,11 +191,11 @@ tl[0].onmouseout=()=>
  bdly=0
 cr[0].onmouseover=()=>
 {
- rd[2].style.opacity=1
+ rd[2].style.acity=1
  rd[2].style.transform='scale('+
   (2+Math.random())+',2) translate('+
   33*Math.random()+'%,'+33*Math.random()+'%)'
- idvw.style.transform='scale('+
+ vw[0].style.transform='scale('+
   (2+Math.random())+',1) translate('+
   33*Math.random()+'%,'+33*Math.random()+'%)'
  prpl[0].style.opacity=0.4
@@ -205,7 +206,8 @@ cr[0].onmouseover=()=>
  prpl[2].style.transform='scale(2)'
  prpl[3].style.opacity=0.4
  prpl[3].style.transform='scale(2)'
- idvw.style.opacity=0.4
+ vw[0].style.opacity=0.4
+ vw[1].style.opacity=0.4
  cr[0].style.borderBottomLeftRadius=33+'%'
  cr[0].style.borderBottomRightRadius=33+'%'
  cr[0].style.boxShadow='33px 33px'
@@ -224,9 +226,12 @@ cr[0].onmouseover=()=>
   rd[2].style.transform='scale('+
    (1.4+Math.random())+',1) translate('+
    99*Math.random()+'%,'+99*Math.random()+'%)'
-  idvw.style.transform='scale('+
+  vw[0].style.transform='scale('+
    (2+Math.random())+',1) translate('+
    33*Math.random()+'%,'+33*Math.random()+'%)' 
+  vw[1].style.transform='scale('+
+   (2+Math.random())+',1) translate('+
+   33*Math.random()+'%,'+33*Math.random()+'%)'  
   fre[1].style.opacity=0.5
   fre[1].style.transform='scale('+(1+Math.random())+')'
   if(bdly)
@@ -252,8 +257,10 @@ cr[0].onmouseout=()=>
  prpl[2].style.transform='scale(0.4,2)'
  prpl[3].style.opacity=1
  prpl[3].style.transform='scale(0.4,2)'
- idvw.style.opacity=0.1
- idvw.style.transform='scale(1)'
+ vw[0].style.opacity=0.1
+ vw[0].style.transform='scale(1)'
+ vw[1].style.opacity=0.1
+ vw[1].style.transform='scale(1)'
  cr[0].style.borderRadius='5%'
  cr[0].style.boxShadow='9px 9px'
  cr[1].style.transform='scale(0.1)'
