@@ -31,17 +31,17 @@
  height:14%;
  transform:scale(2);
 }
-.fld
+.fld,.cpcty,.dbbl
 {
  position:absolute;
  transition:333ms;
- transform:scale(0);
 }
-.cpcty
+.cpcty{cursor:pointer;}
+.fld,.dbbl{transform:scale(0);}
+.dbbl
 {
- position:absolute;
- transition:333ms;
- cursor:pointer;
+ left:-38%; width:188%; height:128%;
+ border-radius:55%; border:3px solid #ff0;
 }
 
 #idtrsfrmtr,.lcoils,.rcoils,.acoils,.ttl
@@ -80,6 +80,8 @@
  <div class=coil></div>
  <div class=coil></div>
  <div class=coil></div>
+ <div class=dbbl></div>
+ <div class=dbbl></div>
  <div class=fld></div>
  <div class=fld></div>
  <div class=fld>U=</div>
@@ -100,7 +102,6 @@
  <div class=cpcty></div>
  <div class=cpcty></div>
 </div>
-
 
 <div id=idtrsfrmtr>
  <div class=ttl>Transformation</div>
@@ -126,6 +127,7 @@
 btn=document.getElementsByClassName('btn')
 coil=document.getElementsByClassName('coil')
 fld=document.getElementsByClassName('fld')
+dbbl=document.getElementsByClassName('dbbl')
 
 cpcty=document.getElementsByClassName('cpcty')
 
@@ -212,10 +214,14 @@ fld[6].style.top=5+'%'
 fld[6].style.width=122+'%'
 fld[6].style.height=66+'%'
 fld[6].style.background='#777'
-fld[6].style.opacity=0
+fld[6].style.opacity=0.4
 fld[6].style.borderRadius=22+'%'
 fld[6].style.transform='scale(1)'
 fld[6].style.zIndex=-1
+dbbl[0].style.top=-88+'%'
+dbbl[0].style.borderBottom='3px solid transparent'
+dbbl[1].style.top=44+'%'
+dbbl[1].style.borderTop='3px solid transparent'
 
 cpcty[0].style.left=57+'%'
 cpcty[0].style.top=24+'%'
@@ -357,6 +363,8 @@ function fcoilon()
    p=1+Math.random()/11
   fld[0].style.transform='scale('+p+')'
   fld[1].style.transform='scale('+p+')'
+  dbbl[0].style.transform='scale('+p+')'
+  dbbl[1].style.transform='scale('+p+')'
   fld[2].style.transform=
    'scale('+(p+1)+') translate(15%,0)'
   fld[3].style.transform=
@@ -379,13 +387,15 @@ function fcoiloff()
  coil[7].style.border='none'
  fld[0].style.transform='scale(0)'
  fld[1].style.transform='scale(0)'
+ dbbl[0].style.transform='scale(0)'
+ dbbl[1].style.transform='scale(0)'
  fld[2].style.transform='scale(0)'
  fld[3].style.transform='scale(0)'
  fld[4].style.transform='scale(0)'
  fld[5].style.color='#00b'
  fld[5].style.transform=
   'scale(2) translate(0,-222%)'
- fld[6].style.opacity=0
+ fld[6].style.opacity=0.4
  fld[6].style.transform='translate(0%,0)'
   clearInterval(coilI)
 }
