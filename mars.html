@@ -106,6 +106,9 @@
 <div class=star></div>
 <div class=star></div>
 <div class=star></div>
+<div class=star>
+ <div class=star></div>
+</div>
 
 <div id=ids>
  <div class=hd>
@@ -190,6 +193,17 @@ grd=
   star[3].style.top=Math.random()*39+'%'
   star[4].style.left=Math.random()*39+'%' 
   star[4].style.top=Math.random()*39+'%'
+  star[5].style.left=Math.random()*39+'%' 
+  star[5].style.top=Math.random()*39+'%'
+  star[5].style.width=5+'%' 
+  star[5].style.height=2+'%'
+  star[5].style.background='#099'
+  star[6].style.left=20+'%' 
+  star[6].style.top=20+'%'
+  star[6].style.width=55+'%' 
+  star[6].style.height=55+'%'
+  star[6].style.background=
+   'radial-gradient(#fff,#990)'
  },
  cl:function()
  {
@@ -201,6 +215,8 @@ grd=
   star[2].style.opacity=Math.random() 
   star[3].style.opacity=Math.random() 
   star[4].style.opacity=Math.random() 
+  star[6].style.transform='translate('+
+   15*Math.random() +'%,'+Math.random() +'%)' 
  },   
 }
     grd.init()
@@ -336,7 +352,7 @@ ss=
   {
    hd[0].style.transform='rotate(44deg)'
    llg[0].style.transform= 
-	'translate(0%,-19%) scale(1.6, 0.9)' 
+	'scale(1.6, 0.9) translate(0%,-19%) ' 
    llg[1].style.transform='scale(1,2.6)'
    rlg[0].style.transform= 
     'translate(0%,19%) scale(1, 1.1)' 
@@ -363,7 +379,7 @@ idsI=0
 bids=0
 ids.onmouseover=()=>
 {
- inf[0].onmouseover()
+  inf[0].onmouseover()
  hd[0].style.borderTop='8px ridge #900'
  hd[0].style.borderBottom='8px ridge #900'
  lhnd[0].style.transform=
@@ -380,10 +396,13 @@ ids.onmouseover=()=>
   for(i=0;i<5;i++)
   {
    fids[i]=Math.round(Math.random()) 
-   star[i].style.transform='scale('+(1+Math.random())+
+   star[i].style.transform='scale('+(1+2*Math.random())+
    ') translate('+1289*Math.random()+'%,'+
     1289*Math.random()+'%)'
   }
+ star[5].style.transform=
+  'scale(5) translate('+198*Math.random()+'%,'+
+    28*Math.random()+'%)'
  ids.style.background=
   'radial-gradient(#909,#ff0)' 
  hd[0].style.borderBottomLeftRadius=55+'%' 
@@ -462,6 +481,7 @@ ids.onmouseout=()=>
   fids[i]=0
   star[i].style.transform='scale(1)'
  }
+ star[5].style.transform='scale(1)'
  ids.style.background='radial-gradient(#555,#ff0)'
  hd[0].style.borderTop='none'
  hd[0].style.borderBottom='none'
