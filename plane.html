@@ -52,8 +52,8 @@ body
 <div class=enmy></div>
 <div class=enmy></div>
 <div class=enmy>
-<div class=enfre></div>
-<div class=enfre></div>
+ <div class=enfre></div>
+ <div class=enfre></div>
 </div>
 
 <div class=bllts></div>
@@ -223,10 +223,12 @@ inn(enmy,3, 40,72, 8,18,'')
  enmy[3].style.borderLeft='59px ridge #060'
  enmy[3].style.borderRight='59px ridge #060'
  enmy[3].style.transform='scale(1,0.4) skew(44deg)' 
-inn(enfre,0, -12,-72, 22,18,'#f00')
- enfre[0].style.opacity=0.4
-inn(enfre,1, 112,-72, 22,18,'#f00') 
- enfre[1].style.opacity=0.4
+inn(enfre,0, -12,-72, 22,18,
+ 'radial-gradient(#f00,#ff0)')
+  enfre[0].style.opacity=0.8
+inn(enfre,1, 112,-72, 22,18,
+ 'radial-gradient(#f00,#ff0)')
+  enfre[1].style.opacity=0.8
 Icl=0
 function cl()
 {   
@@ -324,8 +326,10 @@ plne[0].onmouseover=()=>
   bllts[2].style.left=Math.random()*77+'%'
   bllts[2].style.top=Math.random()*66+'%'  
   bllts[0].style.opacity=Math.random()
-  bllts[1].style.transform='translate(0,777%) skew(-44deg)'
-  bllts[2].style.transform='translate(0,777%) skew(-44deg)'
+  bllts[1].style.transform=
+   'translate(0,777%) skew(-44deg)'
+  bllts[2].style.transform=
+   'translate(0,777%) skew(-44deg)'
   enmy[0].style.left=Math.random()*77+'%'
   enmy[0].style.top=Math.random()*66+'%'
   enmy[0].style.opacity=1
@@ -340,8 +344,9 @@ plne[0].onmouseover=()=>
   enmy[2].style.transform='scale('+(1+Math.random())+')'
   enmy[3].style.transform='scale(1) skew('+
    (44*Math.random())+'deg)'
-  enfre[0].style.transform='scale('+(2+6*Math.random())+')' 
-  enfre[1].style.transform='scale('+(2+6*Math.random())+')' 
+    venfre=(2+6*Math.random())
+  enfre[0].style.transform='scale('+venfre+')' 
+  enfre[1].style.transform='scale('+venfre+')' 
   clds[0].style.left=Math.random()*44+'%'
   clds[0].style.top=Math.random()*66+'%'
   clds[1].style.left=Math.random()*44+'%'
