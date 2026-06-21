@@ -32,31 +32,13 @@
  transition:2s;
  cursor:pointer;
 }
-.flwr
+.flwr,.cld,.gl,.frz,.btrfly
 {
  position:absolute;   
  transition:1s;
  cursor:pointer;
 }
-
-.cld
-{
- position:absolute;   
- transition:2s;
- border-radius:50%;
-}
-.gl
-{
- position:absolute;   
- transition:1s;
- border-radius:50%;
-}
-
-.frz
-{
- position:absolute;   
- transition:3s;
-}
+.cld,.gl,.btrfly{border-radius:55%;}
 
 </style>
 
@@ -78,6 +60,11 @@
  <div class=flwr></div>
 </div>
 
+<div class=btrfly> 
+ <div class=btrfly></div>
+ <div class=btrfly></div>
+</div>
+
 <div class=cld> 
  <div class=gl></div>
  <div class=gl></div>
@@ -95,6 +82,7 @@
 bgrnd=document.getElementsByClassName('bgrnd')
 plnt=document.getElementsByClassName('plnt')
 flwr=document.getElementsByClassName('flwr')
+btrfly=document.getElementsByClassName('btrfly')
 cld=document.getElementsByClassName('cld')
 gl=document.getElementsByClassName('gl')
    
@@ -190,6 +178,28 @@ flwr[3].style.height=111+'%'
 flwr[3].style.background='#f0f'	
 flwr[3].style.borderRadius=55+'%'
 	
+btrfly[0].style.left=16+'%'
+btrfly[0].style.top=13+'%'  
+btrfly[0].style.width=9+'%'
+btrfly[0].style.height=4+'%'
+btrfly[0].style.background=
+ 'radial-gradient(#550,#f0f)' 
+btrfly[0].style.borderTopRightRadius=19+'%'
+btrfly[1].style.left=16+'%'
+btrfly[1].style.top=-199+'%'  
+btrfly[1].style.width=44+'%'
+btrfly[1].style.height=244+'%'
+btrfly[1].style.background='#fff'
+btrfly[1].style.opacity=0.9
+btrfly[1].style.transform='rotate(-36deg) '
+btrfly[2].style.left=56+'%'
+btrfly[2].style.top=-199+'%'  
+btrfly[2].style.width=44+'%'
+btrfly[2].style.height=244+'%'
+btrfly[2].style.background='#fff'
+btrfly[2].style.opacity=0.9
+btrfly[2].style.transform='rotate(36deg) '
+	
 cld[0].style.left=66+'%'
 cld[0].style.top=33+'%'  
 cld[0].style.width=9+'%'
@@ -235,6 +245,9 @@ frz[3].style.cursor='pointer'
 Ifr=0,bfr=0
 function ffl()
 {
+ btrfly[0].style.transform=
+  'scale('+(1+Math.random())+') translate('+
+  333*Math.random()+'%,'+333*Math.random()+'%)'
  if(bfr)
  { 
   flwr[0].style.transform='scale(1.2)'
@@ -276,6 +289,7 @@ o=
   gl[2].style.height=11+'%'  
   gl[2].style.background='#a00' 
   gl[2].style.borderRadius=23+'%'
+  btrfly[0].style.opacity=0
   if(o.bcl==0)
   {
    frz[2].style.transform='scale(1)'
@@ -345,6 +359,7 @@ plnt[0].onmouseout=()=>
  flwr[1].style.background='#f00'
  flwr[2].style.background='#f00'
  flwr[3].style.background='#f0f'
+ btrfly[0].style.opacity=1
  frz[0].style.transform='scale(0)'
  frz[1].style.transform='scale(0)'
  frz[2].style.transform='scale(0)'
