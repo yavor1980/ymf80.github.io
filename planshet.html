@@ -51,6 +51,7 @@
  <div class=trmo>ThermoCouple</div>
  <div class=trmo></div>
  <div class=trmo></div>
+ <div class=trmo></div>
 </div> 
 
 <script>
@@ -176,6 +177,14 @@ trmo[3].style.width=299+'px'
 trmo[3].style.height=99+'px'
 trmo[3].style.borderTop='55px solid  #000'
 trmo[3].style.borderBottom='55px solid #000' 
+trmo[4].style.left=24+'%'
+trmo[4].style.top=49+'%'
+trmo[4].style.width=96+'px'
+trmo[4].style.height=9+'px'
+trmo[4].style.opacity=0
+trmo[4].style.borderRadius=55+'%'
+trmo[4].style.borderTop='15px solid  #f00'
+trmo[4].style.borderBottom='15px solid #f00'  
  
 bbtn=1
 btn[0].onclick=()=>
@@ -273,6 +282,8 @@ trmo[0].onmouseover=()=>
  trmo[2].style.borderTop='33px ridge #f00'
  trmo[2].style.borderRight='33px ridge #f00'
  trmo[2].style.transform='scale(1.2) rotate(45deg)'
+ trmo[4].style.opacity=1
+ trmo[4].style.transform='scale(2)'
 }
 trmo[0].onmouseout=()=>
 {
@@ -280,6 +291,8 @@ trmo[0].onmouseout=()=>
  trmo[2].style.borderTop='33px ridge #990'
  trmo[2].style.borderRight='33px ridge #990'
  trmo[2].style.transform='scale(1) rotate(45deg)'
+ trmo[4].style.opacity=0
+  trmo[4].style.transform='scale(1)'
 }
 
 </script>
