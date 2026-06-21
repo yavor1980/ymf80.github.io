@@ -201,6 +201,12 @@ lst[6].style.cursor='pointer'
  lst[6].innerHTML='EMPTY'
 //===================================================
  
+I=setInterval(()=>{
+ lst[6].style.transform='scale('+
+  (4+2*Math.random())+')translate(12%,0) '
+ 
+}, 999) 
+ 
 sbse=['meeting','expo','seminar']
 pbse=0
 bse[0].onmouseover=()=>
@@ -313,6 +319,7 @@ dlg[3].onclick=()=>
  dlg[3].disabled=1
 }
 
+alst=[]
 function flst(i)
 { 
  lst[i].onmouseover=()=>
