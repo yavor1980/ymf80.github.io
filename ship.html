@@ -324,9 +324,11 @@ mne[3].style.background='#400'
 mne[3].style.borderRadius=36+'%'
 mne[3].style.transform='rotate(7deg)'
 
-b=0
+b=0,mcht=0
 function cl()
 {  
+ sltee[3].style.transform='scale('+
+  (mcht+2*Math.random())+')' 
  hlcptr[0].style.transform=
   'scale(0.8) translate('+(Math.random()*11)+'%,'+
   (Math.random()*11)+'%) rotate('+
@@ -458,7 +460,7 @@ btn[1].onclick=()=>
 }
 
 sh[0].onmouseover=()=>
-{
+{    mcht=7
  setTimeout(()=>{ 
   btn[1].onclick()
  }, 444)
@@ -484,7 +486,7 @@ sh[0].onmouseover=()=>
  slte[3].style.transform=
   'scale(5) translate(266%,-188%)'
  sltee[3].style.opacity=0.3
- sltee[3].style.transform='scale('+(6+2*Math.random())+')' 
+
  ttnm[0].style.transform=
   'scale(1.5) skew(22deg)'
  ttnm[1].style.transform=
@@ -498,7 +500,7 @@ sh[0].onmouseover=()=>
  mne[0].style.opacity=0
 }
 sh[0].onmouseout=()=>
-{
+{   mcht=0
  sh[0].style.transform='scale(1) '
  sh[4].style.background='#000'
  sltee[3].style.opacity=0.2
