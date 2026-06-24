@@ -49,9 +49,11 @@
  
 <div class=trmo>
  <div class=trmo>ThermoCouple</div>
- <div class=trmo></div>
- <div class=trmo></div>
- <div class=trmo></div>
+ <div class=trmo>
+  <div class=trmo></div>
+  <div class=trmo></div>
+  <div class=trmo></div>
+ </div>
 </div> 
 
 <script>
@@ -163,22 +165,22 @@ trmo[1].style.left=17+'%'
 trmo[1].style.top=4+'%'
 trmo[1].style.color='#099'
 trmo[1].style.transform='scale(3)'
-trmo[2].style.zIndex=1
-trmo[2].style.left=47+'%'
-trmo[2].style.top=37+'%'
-trmo[2].style.width=111+'px'
-trmo[2].style.height=111+'px'
-trmo[2].style.borderTop='33px ridge #990'
-trmo[2].style.borderRight='33px ridge #990'
-trmo[2].style.transform='rotate(45deg)'
-trmo[3].style.left=29+'%'
-trmo[3].style.top=30+'%'
-trmo[3].style.width=299+'px'
-trmo[3].style.height=99+'px'
-trmo[3].style.borderTop='55px solid  #000'
-trmo[3].style.borderBottom='55px solid #000' 
-trmo[4].style.left=24+'%'
-trmo[4].style.top=49+'%'
+trmo[2].style.left=44+'%'
+trmo[2].style.top=30+'%'
+trmo[2].style.width=299+'px'
+trmo[2].style.height=99+'px'
+trmo[2].style.borderTop='55px solid  #000'
+trmo[2].style.borderBottom='55px solid #000' 
+trmo[3].style.zIndex=1
+trmo[3].style.left=47+'%'
+trmo[3].style.top=-22+'%'
+trmo[3].style.width=111+'px'
+trmo[3].style.height=111+'px'
+trmo[3].style.borderTop='33px ridge #990'
+trmo[3].style.borderRight='33px ridge #990'
+trmo[3].style.transform='rotate(45deg)'
+trmo[4].style.left=-14+'%'
+trmo[4].style.top=28+'%'
 trmo[4].style.width=96+'px'
 trmo[4].style.height=9+'px'
 trmo[4].style.opacity=0
@@ -192,12 +194,12 @@ btn[0].onclick=()=>
  if(bbtn)
  {
   btn[0].innerHTML='rect'
-  insvgrnd(1,44)
+   insvgrnd(1,44)
  } 
   else
  {
   btn[0].innerHTML='circle'
-  insvgrect(1)
+   insvgrect(1)
  } 
    bbtn=!bbtn
 }
@@ -227,7 +229,7 @@ function fdsply()
  pnel[7].style.transform=
   'scale('+(6+Math.random())+
   ') translate(33%,-33%)  skew('+
- (33*Math.random())+'deg)'
+  (33*Math.random())+'deg)'
 }
 dsply[0].onmouseover=()=>
 {
@@ -275,26 +277,35 @@ dsply[0].onmouseout=()=>
  csvg[3].style.transform='scale(0)'
 }
 
-trmo[0].onmouseover=()=>
+trmo[1].onmouseover=()=>
 {
  trmo[1].style.transform=
   'scale(6) translate(53%,23%)  skew(-23deg)'
- trmo[2].style.borderTop='33px ridge #f00'
- trmo[2].style.borderRight='33px ridge #f00'
- trmo[2].style.transform='scale(1.2) rotate(45deg)'
+ trmo[2].style.transform=
+  'scale(1.2) translate(27%,0)' 
+ trmo[3].style.borderTop='33px ridge #f00'
+ trmo[3].style.borderRight='33px ridge #f00'
+
  trmo[4].style.opacity=1
  trmo[4].style.transform='scale(2)'
 }
-trmo[0].onmouseout=()=>
+trmo[1].onmouseout=()=>
 {
  trmo[1].style.transform='scale(3)'
- trmo[2].style.borderTop='33px ridge #990'
- trmo[2].style.borderRight='33px ridge #990'
- trmo[2].style.transform='scale(1) rotate(45deg)'
+ trmo[2].style.transform='scale(1) '
+ trmo[3].style.borderTop='33px ridge #990'
+ trmo[3].style.borderRight='33px ridge #990'
  trmo[4].style.opacity=0
   trmo[4].style.transform='scale(1)'
 }
-
+trmo[2].onmouseover=()=>
+{
+ trmo[1].onmouseover()
+}
+trmo[2].onmouseout=()=>
+{
+ trmo[1].onmouseout()
+}
 </script>
 </body>
 </html>
