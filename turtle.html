@@ -32,6 +32,7 @@ button,.grnd,.pzr,.hd,.frz,.prgrss,.scty
 <div class=grnd>
  <div class=grnd></div>
 </div>
+<div class=grnd></div>
  
 <div class=pzr>
  <div class=pzr></div>
@@ -113,6 +114,14 @@ grnd[3].style.height=33+'%'
 grnd[3].style.background=
  'radial-gradient(#fff,#bb0)'
 grnd[3].style.borderRadius=55+'%'  
+grnd[4].style.left=43+'%'
+grnd[4].style.top=12+'%'
+grnd[4].style.width=33+'%'
+grnd[4].style.height=11+'%'
+grnd[4].style.background=
+ 'radial-gradient(88px,#ff0,#0ff)'
+grnd[4].style.borderRadius=55+'%' 
+grnd[4].style.opacity=0.4  
   
 pzr[0].style.left=33+'%' 
 pzr[0].style.top=49+'%'
@@ -259,18 +268,20 @@ btn[0].onmouseout=()=>
 Ipzr0=0
 bpzr0=0
 pzr[0].onmouseover=()=>
-{ 
+{  
  grnd[1].style.background=
   'radial-gradient(#220,#080)'
  grnd[2].style.opacity=0.8
  grnd[2].style.border='11px ridge #ff7'
  grnd[3].style.border='11px ridge #ff7'
+ grnd[4].style.opacity=0.9
+ grnd[4].style.transform='translate(0%,-44%)'
  frz[0].style.color='#f00'
  frz[1].style.color='#f80'
   b=Math.round(Math.random())
  if(b)
  {
-  grnd[2].style.transform='translate(0%, -44%)'
+  grnd[2].style.transform='translate(0%,-44%)'
   hd[0].style.transform=
    'scale(1.4) translate(-33%, -33%)'  
   pzr[1].style.transform=
@@ -313,6 +324,8 @@ pzr[0].onmouseout=()=>
  grnd[2].style.border='none'
  grnd[2].style.transform='translate(0%, 0%)'
  grnd[3].style.border='none' 
+ grnd[4].style.opacity=0.4
+ grnd[4].style.transform='translate(0%,0%)'
  hd[0].style.transform='scale(1)' 
  pzr[1].style.transform='scale(1)'
  pw[0].style.transform='scale(1)'
