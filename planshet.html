@@ -281,6 +281,8 @@ trmo[1].onmouseover=()=>
 {
  trmo[1].style.transform=
   'scale(6) translate(53%,23%)  skew(-23deg)'
+ trmo[2].style.borderTop='55px solid #400'
+ trmo[2].style.borderBottom='55px solid #400'  
  trmo[2].style.transform=
   'scale(1.2) translate(27%,0)' 
  trmo[3].style.borderTop='33px ridge #f00'
@@ -291,13 +293,15 @@ trmo[1].onmouseover=()=>
  {
   trmo[3].style.transform='scale('+
    (1+Math.random()/2)+') rotate(45deg)'
-  trmo[4].style.transform='scale(2,'+
-   (2+2*Math.random())+')'
+  trmo[4].style.transform='scale('+
+   (2+2*Math.random())+',2)'
  }, 999)
 }
 trmo[1].onmouseout=()=>
 {
  trmo[1].style.transform='scale(3)'
+ trmo[2].style.borderTop='55px solid #000'
+ trmo[2].style.borderBottom='55px solid #000'
  trmo[2].style.transform='scale(1)'
  trmo[3].style.borderTop='33px ridge #990'
  trmo[3].style.borderRight='33px ridge #990'
