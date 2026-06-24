@@ -285,18 +285,26 @@ trmo[1].onmouseover=()=>
   'scale(1.2) translate(27%,0)' 
  trmo[3].style.borderTop='33px ridge #f00'
  trmo[3].style.borderRight='33px ridge #f00'
-
  trmo[4].style.opacity=1
  trmo[4].style.transform='scale(2)'
+ Itrmo=setInterval(()=>
+ {
+  trmo[3].style.transform='scale('+
+   (1+Math.random()/2)+') rotate(45deg)'
+  trmo[4].style.transform='scale(2,'+
+   (2+2*Math.random())+')'
+ }, 999)
 }
 trmo[1].onmouseout=()=>
 {
  trmo[1].style.transform='scale(3)'
- trmo[2].style.transform='scale(1) '
+ trmo[2].style.transform='scale(1)'
  trmo[3].style.borderTop='33px ridge #990'
  trmo[3].style.borderRight='33px ridge #990'
+ trmo[3].style.transform='scale(1) rotate(45deg)'
  trmo[4].style.opacity=0
-  trmo[4].style.transform='scale(1)'
+ trmo[4].style.transform='scale(1)'
+  clearInterval(Itrmo)
 }
 trmo[2].onmouseover=()=>
 {
