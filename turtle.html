@@ -231,12 +231,22 @@ function mv()
  if(bg)
  {
   grnd[1].style.transform='scale(1,1.2)'
+  grnd[4].style.borderTopLeftRadius=55+'%' 
+  grnd[4].style.borderBottomLeftRadius=55+'%'
+  grnd[4].style.borderTopRightRadius=0+'%' 
+  grnd[4].style.borderBottomRightRadius=0+'%' 
+  grnd[4].style.transform='translate(-22%, 0%)'
   pw[0].style.transform='translate(0, 22%)'
   pw[1].style.transform='translate(0, -11%)'
  }
   else
  {
   grnd[1].style.transform='scale(1,1)'
+  grnd[4].style.borderTopLeftRadius=0+'%' 
+  grnd[4].style.borderBottomLeftRadius=0+'%'
+  grnd[4].style.borderTopRightRadius=55+'%' 
+  grnd[4].style.borderBottomRightRadius=55+'%' 
+    grnd[4].style.transform='translate(22%, 0%)'
   pw[0].style.transform='translate(0, -11%)'
   pw[1].style.transform='translate(0, 22%)'
  }	 
