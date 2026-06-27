@@ -393,6 +393,7 @@ scle=8
 wrs[0].onmouseover=()=>
 {
   telm[0].onmouseover()
+  btn[1].onmouseover()
  wrs[0].style.background='#ff0'
  elm[0].style.background=
   'radial-gradient(28px,#f00,#f0f)'
@@ -445,8 +446,9 @@ wrs[0].onmouseover=()=>
   'scale(3) translate(199%,333%) skew(-8deg)'
 }
 wrs[0].onmouseout=()=>
-{
+{ 
   telm[0].onmouseout()
+  btn[1].onmouseout()
  wrs[0].style.background='none'
   clearInterval(Ielm)
  elm[0].style.background='#400'
