@@ -38,27 +38,17 @@
  cursor:pointer;
  z-index:1;
 }
-.plls,.fc,.fns,.bbl,.jlly
+.plls,.fc,.fns,.bbl,.jlly,.stns
 { 
  position:absolute; 
  transition:2s;
  border-radius:55%;
 }
-
-.t_wtr
-{ 
- position:absolute; 
- transition:1s;
- text-align:center;
- cursor:pointer;
-}
-
+.jlly{z-index:1;}
 </style>
 
 <button id=idbtn>come</button>
 <img id=idaq src='img/aquarium.png'   >
-
-
 
 <div class=fsh>
  <div class=fsh>
@@ -77,16 +67,16 @@
  <div class=fns></div>
  <div class=fns></div>
 </div>
-<div class=fsh>floating fish</div>
+<div class=fsh></div>
 
 <div class=jlly>
- <div class=jlly></div>
- <div class=jlly>jelly fish</div>
- <div class=jlly></div>
+ <div class=jlly>
+  <div class=jlly></div>
+ </div>
 </div>
 
-<div class=t_wtr></div>
-<div class=t_wtr></div>
+<div class=stns></div>
+<div class=stns></div>
 
 <script>
 fsh=document.getElementsByClassName('fsh') 
@@ -95,7 +85,7 @@ fns=document.getElementsByClassName('fns')
 bbl=document.getElementsByClassName('bbl')
 jlly=document.getElementsByClassName('jlly')
 
-t_wtr=document.getElementsByClassName('t_wtr')
+stns=document.getElementsByClassName('stns')
 
 fsh[0].style.left=30+'%'
 fsh[0].style.top=22+'%'
@@ -175,47 +165,38 @@ bbl[i].style.transform='scale(0)'
 jlly[0].style.left=70+'%'
 jlly[0].style.top=76+'%'
 jlly[0].style.width=19+'%'
-jlly[0].style.height=7+'%'
+jlly[0].style.height=11+'%'
 jlly[0].style.background=
- 'radial-gradient(#0f0,#00f)'
+ 'radial-gradient(#0aa,#aa0)'
 jlly[0].style.opacity=0.5
 jlly[1].style.left=24+'%'
 jlly[1].style.top=13+'%'
 jlly[1].style.width=46+'%'
 jlly[1].style.height=56+'%'
 jlly[1].style.background=
- 'radial-gradient(#0a0,#00b)'
-jlly[1].style.opacity=0.5
-jlly[2].style.color='#b00'
-jlly[2].style.opacity=0
-jlly[2].style.transform='scale(0)'
-jlly[3].style.left=24+'%'
-jlly[3].style.top=13+'%'
-jlly[3].style.width=76+'%'
-jlly[3].style.height=76+'%'
-jlly[3].style.background=
- 'radial-gradient(#ca0,#0bb)'
-jlly[3].style.opacity=0.5
-jlly[3].style.zIndex=-1
-
-t_wtr[0].style.left=20+'%'
-t_wtr[0].style.top=6+'%'
-t_wtr[0].style.width=44+'%'
-t_wtr[0].innerHTML= 
- 'Gases dissolved in water: nitrogen, oxygen, argon,'+    
- 'carbon dioxide - and other impurities in the air.'+ 
- 'The properties of the solvent are especially  '+
- 'pronounced in marine water, in which almost all'+ 
- 'substances dissolve.' 
-t_wtr[1].style.left=47+'%'
-t_wtr[1].style.top=22+'%'
-t_wtr[1].innerHTML= 
- 'heavy water (DO)<br>'+
- 'superheavy water (TO)<br>'+
- 'tritium-deuterium water (TDO)<br>'+
- 'tritium-protium water (THO)<br>'+
- 'deuterium-protium water (DHO)<br>'
+ 'radial-gradient(#0bb,#bb0)'
+jlly[2].style.width=76+'%'
+jlly[2].style.height=56+'%'
+jlly[2].style.background=
+ 'radial-gradient(#0ff,#ff0)'
  
+stns[0].style.left=0+'%'
+stns[0].style.top=83+'%'
+stns[0].style.width=100+'%'
+stns[0].style.height=11+'%'
+stns[0].style.background=
+ 'radial-gradient(#b00,#b0b)'
+stns[0].style.opacity=0.5
+stns[0].style.borderRadius=26+'%'
+stns[1].style.left=0+'%'
+stns[1].style.top=91+'%'
+stns[1].style.width=100+'%'
+stns[1].style.height=9+'%'
+stns[1].style.background=
+ 'radial-gradient(#b00,#b0b)'
+stns[1].style.opacity=0.5 
+stns[1].style.borderRadius=16+'%'
+
 b=0
 function cl()
 {
@@ -304,7 +285,7 @@ fsh[0].onmouseover=()=>
   bbl[4].style.transition='1s'
   bbl[4].style.transform=
    'scale(4) translate('+Math.random()*666+'%,-433%)' 
-  jlly[0].style.opacity=0.8
+  jlly[0].style.opacity=1
   jlly[0].style.borderTopLeftRadius=
    (22+Math.random()*33)+'%'
   jlly[0].style.borderTopRightRadius=
@@ -319,19 +300,21 @@ fsh[0].onmouseover=()=>
   jlly[1].style.transform='scale('+(1+
    Math.random()/2)+') translate(0%,'+
    Math.random()*(-33)+'%' 
-  jlly[2].style.opacity=1
   jlly[2].style.transform=
-   'scale(2,1.5) translate(99%,-144%) skew(22deg)' 
-  jlly[3].style.transform=
-   'scale(2,1.5) translate(-19%,24%) skew(22deg)'  
-  jlly[3].style.borderTopLeftRadius=
+   'scale(0.6) translate(39%,24%) '  
+  jlly[2].style.borderTopLeftRadius=
    (22+Math.random()*33)+'%'
-  jlly[3].style.borderTopRightRadius=
+  jlly[2].style.borderTopRightRadius=
    (22+Math.random()*33)+'%'
-  jlly[3].style.borderBottomLeftRadius=
+  jlly[2].style.borderBottomLeftRadius=
    (22+Math.random()*33)+'%'
-  jlly[3].style.borderBottomRightRadius=
+  jlly[2].style.borderBottomRightRadius=
    (22+Math.random()*33)+'%' 
+  stns[0].style.transform=
+   'scale(1,2) translate(0,-33%)'
+  stns[1].style.transform=
+   'scale(1,2) translate(0,-55%)'
+   
   setTimeout(()=>{
    fns[0].style.transform='scale(0.8,1)'
    fns[1].style.transform='scale(0.8,1)'
@@ -367,34 +350,10 @@ fsh[0].onmouseout=()=>
  jlly[0].style.borderRadius=55+'%'
  jlly[0].style.transform='scale(1)'
  jlly[1].style.transform='scale(1)'
- jlly[2].style.opacity=0
- jlly[2].style.transform='scale(0)'
- jlly[3].style.transform='scale(1)'
+ jlly[2].style.transform='scale(1)'
+ stns[0].style.transform='scale(1)'
+ stns[1].style.transform='scale(1)'
 }  
-
-t_wtr[0].onmouseover=()=>
-{
- t_wtr[0].style.color='#220'
- t_wtr[0].style.transform=
-  'scale(1.7) translate(6%,0)'
-}
-t_wtr[0].onmouseout=()=>
-{
- t_wtr[0].style.color='#000'
- t_wtr[0].style.transform='scale(1)'
-}
- 
-t_wtr[1].onmouseover=()=>
-{ 
- t_wtr[1].style.color='#110'
- t_wtr[1].style.transform=
-  'scale(1.7) translate(23%,0)'
-}
-t_wtr[1].onmouseout=()=>
-{
- t_wtr[1].style.color='#000'
- t_wtr[1].style.transform='scale(1)'
-}
  
 </script>
 </body>
