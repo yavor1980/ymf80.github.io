@@ -16,7 +16,7 @@ button:hover
  transform:scale(2.6);
 }
 
-.hd,.mth,.tng,.bd,.ttl,.bkgrnd,.tbe
+.hd,.mth,.tng,.bd,.ttl,.bkgrnd,.tbe,.insct
 {
  position:absolute;
  transition:1s;
@@ -70,6 +70,12 @@ button:hover
  <div class=tbe></div>
  <div class=tbe></div>
 </div>
+
+<div class=insct>
+ <div class=insct></div>
+ <div class=insct></div>
+ <div class=insct></div>
+</div>
  
 </body >
 <script>
@@ -81,6 +87,7 @@ mth=document.getElementsByClassName('mth')
 tng=document.getElementsByClassName('tng')
 bd=document.getElementsByClassName('bd')
 tbe=document.getElementsByClassName('tbe')
+insct=document.getElementsByClassName('insct')
 
 idbd.style.background=
  'linear-gradient(-199deg,#ff0,#00f,#0ff)'
@@ -246,15 +253,35 @@ tbe[3].style.top=266+'%'
 tbe[3].style.width=79+'%'
 tbe[3].style.height=88+'%'
 tbe[3].style.border='7px ridge transparent'
-tbe[3].style.borderBottom='3px solid #f00'
+tbe[3].style.borderBottom='6px solid #f00'
 tbe[3].style.opacity=0
 tbe[4].style.left=9+'%'
 tbe[4].style.top=266+'%' 
 tbe[4].style.width=79+'%'
 tbe[4].style.height=88+'%'
 tbe[4].style.border='7px ridge transparent'
-tbe[4].style.borderBottom='3px solid #f00'
+tbe[4].style.borderBottom='6px solid #f00'
 tbe[4].style.opacity=0
+
+insct[0].style.left=44+'%'
+insct[0].style.top=15+'%'
+insct[0].style.width=3+'%'
+insct[0].style.height=9+'%'
+insct[0].style.opacity=0.4
+insct[1].style.width=199+'%'
+insct[1].style.height=60+'%'
+insct[1].style.background='#900'
+insct[2].style.left=99+'%'
+insct[2].style.top=-95+'%'
+insct[2].style.width=93+'%'
+insct[2].style.height=139+'%'
+insct[2].style.background='#fff'
+insct[2].style.transform='rotate(22deg)'
+insct[3].style.top=-95+'%'
+insct[3].style.width=93+'%'
+insct[3].style.height=139+'%'
+insct[3].style.background='#fff'
+insct[3].style.transform='rotate(-22deg)'
 
   bcl=0
 function cl()
@@ -262,7 +289,15 @@ function cl()
  ttl[3].style.transform='scale('+
   (1+Math.random())+')'
  tbe[4].style.opacity=0.8 
- tbe[4].style.transform='scale('+(1+Math.random())+')'
+ tbe[4].style.transform='scale('+
+  (1+Math.random())+')'
+ insct[0].style.transform='translate('+
+  (844*Math.random()-444)+'%,'+(84*Math.random())+'%)'
+ insct[2].style.transform='rotate('+
+  (22*Math.random())+'deg)'
+ insct[3].style.transform='rotate('+
+  (22*Math.random())+'deg)' 
+ 
  if(bcl)
  {
   hd[1].style.transform='scale(1.3)'
@@ -342,14 +377,17 @@ function clk()
  tng[1].style.transform=
   'scale(22,0.4) translate(0,-44%)'
  bd[1].style.transform='scale(5,3)'   
- bd[1].style.borderTopLeftRadius='22%'
- bd[1].style.borderTopRightRadius='22%'  
- bd[2].style.borderTopLeftRadius='22%'
- bd[2].style.borderTopRightRadius='22%'
+ bd[1].style.borderTopLeftRadius=22+'%'
+ bd[1].style.borderTopRightRadius=22+'%'  
+ bd[2].style.borderTopLeftRadius=22+'%'
+ bd[2].style.borderTopRightRadius=22+'%'
  bd[3].style.transform='scale(1,1.5)'
  tbe[3].style.transform='scale(2,5)'
  tbe[4].style.borderWidth=9+'px'
  tbe[4].style.transform='scale(2,1)'
+ insct[0].style.opacity=1
+ insct[2].style.transform='translate(0,-24%)'
+ insct[3].style.transform='translate(0,-24%)'
  ttl[3].style.background=
   'radial-gradient(#088,#00f)'
  ttl[3].style.opacity=0 
@@ -367,14 +405,17 @@ function clk()
   tng[0].style.transform='scale(1,1)'
   tng[1].style.transform='scale(1,1) translate(0,0)'
   bd[1].style.transform='scale(1)'
-  bd[1].style.borderTopLeftRadius='55%'
-  bd[1].style.borderTopRightRadius='55%'
-  bd[2].style.borderTopLeftRadius='55%'
-  bd[2].style.borderTopRightRadius='55%'
+  bd[1].style.borderTopLeftRadius=55+'%'
+  bd[1].style.borderTopRightRadius=55+'%'
+  bd[2].style.borderTopLeftRadius=55+'%'
+  bd[2].style.borderTopRightRadius=55+'%'
   bd[3].style.transform='scale(1,1)' 
   tbe[3].style.transform='scale(1)'
   tbe[4].style.borderWidth=3+'px'
   tbe[4].style.transform='scale(1)'
+  insct[0].style.opacity=0.4
+  insct[2].style.transform='scale(1)'
+  insct[3].style.transform='scale(1)'
   ttl[2].style.transform='scale(1)'
   ttl[3].style.opacity=0.7
   ttl[3].style.background=
