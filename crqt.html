@@ -37,9 +37,9 @@ button:hover
  transition:1s;
 } 
 .clma:hover
-{
- transform:scale(1.2);
-} 
+{transform:scale(1.2);} 
+.telm
+{z-index:5;} 
 
 .crrnt
 {
@@ -349,12 +349,12 @@ btn[0].onmouseout=()=>
  tprcss[3].style.transform='scale(0)'
 }
 
+Ibtn1=0,v=0,lv=0
 btn[1].onmouseover=()=>
 {
  btn[1].style.color='#0f0'
- telm[1].style.color='#0f0'
  telm[1].style.transform=
-  'scale(3) translate(-39%,-13%) skew(-11deg)'
+  'scale(3) translate(-22%,-13%) skew(-11deg)'
  telm[2].style.color='#080'
  telm[2].style.transform=
   'scale(3) translate(-39%,-13%) skew(-11deg)' 
@@ -366,12 +366,17 @@ btn[1].onmouseover=()=>
   'scale(3) translate(-39%,-13%) skew(-11deg)' 
  telm[5].style.color='#d0f'
  telm[5].style.transform=
-  'scale(3) translate(-39%,-13%) skew(-11deg)' 
+  'scale(3) translate(-12%,-133%) skew(-11deg)' 
+ Ibtn1=setInterval(()=>{
+  telm[lv].style.transform='scale(3)'
+   v=Math.round(Math.random()*5+1)
+  telm[v].style.transform='scale(6)'
+   lv=v
+ }, 999)
 }
 btn[1].onmouseout=()=>
 {
  btn[1].style.color='#ff0'
- telm[1].style.color='#ff0'
  telm[1].style.transform='scale(0)'
  telm[2].style.color='#000'
  telm[2].style.transform='scale(0)'
@@ -381,6 +386,7 @@ btn[1].onmouseout=()=>
  telm[4].style.transform='scale(0)'
  telm[5].style.color='#000'
  telm[5].style.transform='scale(0)'
+  clearInterval(Ibtn1)
 }
 
 scle=8
@@ -411,26 +417,14 @@ wrs[0].onmouseover=()=>
   crrnt[0].style.background=
   'radial-gradient('+(Math.random()*33+66)+
    'px,#220,#0bb)' 
-  crrnt[1].style.opacity=Math.random()
-  crrnt[1].style.transform=
-   'scale(2) translate('+
-   (111*Math.random()/2)+'%,'+
-    (88*Math.random()/2)+'%)'
-  crrnt[2].style.opacity=Math.random()
-  crrnt[2].style.transform=
-   'scale('+3*Math.random()+') translate('+
+  for(i=1;i<5;i++)
+  {
+   crrnt[i].style.opacity=Math.random()
+   crrnt[i].style.transform=
+    'scale(2) translate('+
     (111*Math.random()/2)+'%,'+
     (88*Math.random()/2)+'%)'
-  crrnt[3].style.opacity=Math.random()
-  crrnt[3].style.transform=
-   'scale('+3*Math.random()+') translate('+
-    (111*Math.random()/2)+'%,'+
-    (88*Math.random()/2)+'%)' 
-  crrnt[4].style.opacity=Math.random()
-  crrnt[4].style.transform=
-   'scale('+3*Math.random()+') translate('+
-   (111*Math.random()/2)+'%,'+
-    (88*Math.random()/2)+'%)' 	
+  } 
   cnvs.beginPath()
   cnvs.strokeStyle='#b00'
   scle=Math.random()*28 
@@ -444,7 +438,7 @@ wrs[0].onmouseover=()=>
  }, 555)
  crrnt[5].style.opacity=1
  tprcss[0].style.transform=
-  'scale(3) translate(-44%,-99%) skew(11deg)'
+  'scale(3) translate(-64%,-99%) skew(11deg)'
  tprcss[1].style.transform=
   'scale(3) translate(44%,-99%) skew(-11deg)'
  tprcss[2].style.transform=
@@ -484,12 +478,17 @@ wrs[0].onclick=()=>
 {
  cnvs.clearRect(0,0,999,999)
 }
+
 telm[0].onmouseover=()=>
 {
  telm[0].style.background='#0f0'
  telm[0].style.border='4px ridge #099'
  telm[0].style.borderRadius=33+'%'
  telm[0].style.transform='scale(5)'
+ for(i=0;i<4;i++){
+  tprcss[i].style.background='#0f0'
+  tprcss[i].style.border='2px ridge #ff0'
+ }
 }
 telm[0].onmouseout=()=>
 {
@@ -497,6 +496,10 @@ telm[0].onmouseout=()=>
  telm[0].style.border='none'
  telm[0].style.borderRadius=0+'%'
  telm[0].style.transform='scale(4)'
+ for(i=0;i<4;i++){
+  tprcss[i].style.background='none'
+  tprcss[i].style.border='none'
+ } 
 }
 
 </script>
