@@ -50,6 +50,7 @@
 <div class=bckrnd></div>
 <div class=bckrnd></div>
 <div class=bckrnd></div>
+<div class=bckrnd></div>
 
 <div class=crstmtr>
  <div class=crstmtr>
@@ -119,11 +120,15 @@ finit(bckrnd,1,55,16,1,2,'radial-gradient(#78a,#ee0)')
 finit(bckrnd,2,49,47,1,2,'#ee0')
  bckrnd[2].style.borderRadius=55+'%'
  bckrnd[2].style.opacity=0.8
- bckrnd[2].style.transform='scale(0.2)'
+ bckrnd[2].style.transform='scale(0.5)'
 finit(bckrnd,3,7,12,1,2,'#ee0')
  bckrnd[3].style.borderRadius=55+'%'
  bckrnd[3].style.opacity=0.8
- bckrnd[3].style.transform='scale(0.2)' 
+ bckrnd[3].style.transform='scale(0.5)'
+finit(bckrnd,4,6,33,1,2,'#ee0')
+ bckrnd[4].style.borderRadius=55+'%'
+ bckrnd[4].style.opacity=0.8 
+ bckrnd[4].style.transform='scale(0.5)'
  
 crstmtr[0].style.left=22+'%'
 crstmtr[0].style.top=16+'%'
@@ -367,10 +372,14 @@ snwmn[0].onmouseout=()=>
 fcrtr=()=>
 {
  bckrnd[2].style.transform=
-  'scale('+(0.3+Math.random())+') translate(0,'+
-  Math.random()*177+'%)' 
+  'scale('+(0.5+Math.random())+') translate('+
+  (Math.random()*1000-600)+'%,'+
+  (Math.random()*1000-600)+'%)' 
  bckrnd[3].style.transform=
-  'scale('+(0.2+Math.random())+') translate(227%,'+
+  'scale('+(0.5+Math.random())+') translate(227%,'+
+  Math.random()*177+'%)'
+ bckrnd[4].style.transform= 
+ 'scale('+(0.5+Math.random())+') translate(227%,'+ 
   Math.random()*177+'%)'
  crstint[2].style.background=
   'radial-gradient('+Math.round(Math.random()*44)+
@@ -407,8 +416,9 @@ crstmtr[0].onmouseout=()=>
   snwmn[0].onmouseout()
  bckrnd[0].style.opacity=0.2
  bckrnd[1].style.transform='scale(5)' 
- bckrnd[2].style.transform='scale(0.2)' 
- bckrnd[3].style.transform='scale(0.2)' 
+ bckrnd[2].style.transform='scale(0.5)' 
+ bckrnd[3].style.transform='scale(0.5)' 
+ bckrnd[4].style.transform='scale(0.5)' 
  crstmtr[0].style.transform='scale(1)'
  crstmtr[6].style.background=
   'radial-gradient(#040,#090)'
