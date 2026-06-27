@@ -77,6 +77,7 @@
 
 <div class=stns></div>
 <div class=stns></div>
+<div class=stns></div>
 
 <script>
 fsh=document.getElementsByClassName('fsh') 
@@ -181,13 +182,12 @@ jlly[2].style.background=
  'radial-gradient(#0ff,#ff0)'
  
 stns[0].style.left=0+'%'
-stns[0].style.top=83+'%'
+stns[0].style.bottom=0+'%'
 stns[0].style.width=100+'%'
 stns[0].style.height=11+'%'
 stns[0].style.background=
- 'radial-gradient(#b00,#b0b)'
-stns[0].style.opacity=0.5
-stns[0].style.borderRadius=26+'%'
+ 'radial-gradient(#220,#660)'
+stns[0].style.borderRadius=0+'%'
 stns[1].style.left=0+'%'
 stns[1].style.top=91+'%'
 stns[1].style.width=100+'%'
@@ -196,6 +196,13 @@ stns[1].style.background=
  'radial-gradient(#b00,#b0b)'
 stns[1].style.opacity=0.5 
 stns[1].style.borderRadius=16+'%'
+stns[2].style.left=0+'%'
+stns[2].style.top=9+'%'
+stns[2].style.width=100+'%'
+stns[2].style.height=9+'%'
+stns[2].style.background=
+ 'radial-gradient(#999,#fff)'
+stns[2].style.opacity=0.5 
 
 b=0
 function cl()
@@ -310,11 +317,12 @@ fsh[0].onmouseover=()=>
    (22+Math.random()*33)+'%'
   jlly[2].style.borderBottomRightRadius=
    (22+Math.random()*33)+'%' 
-  stns[0].style.transform=
-   'scale(1,2) translate(0,-33%)'
+  stns[1].style.borderRadius=44+'%'
   stns[1].style.transform=
    'scale(1,2) translate(0,-55%)'
-   
+  stns[2].style.opacity=0.9
+  stns[2].style.transform=
+   'scale(1,2) translate(0,61%)'
   setTimeout(()=>{
    fns[0].style.transform='scale(0.8,1)'
    fns[1].style.transform='scale(0.8,1)'
@@ -351,8 +359,11 @@ fsh[0].onmouseout=()=>
  jlly[0].style.transform='scale(1)'
  jlly[1].style.transform='scale(1)'
  jlly[2].style.transform='scale(1)'
- stns[0].style.transform='scale(1)'
+ stns[1].style.borderRadius=16+'%'
  stns[1].style.transform='scale(1)'
+ stns[1].style.opacity=0.5
+ stns[2].style.opacity=0.5
+ stns[2].style.transform='scale(1)'
 }  
  
 </script>
