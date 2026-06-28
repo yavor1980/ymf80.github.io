@@ -20,7 +20,7 @@ body
  border-top-right-radius:22%;
 }
 
-.sbmrne
+.sbmrne,.apprts
 {   
  position:absolute;
  transition:1s;
@@ -32,8 +32,6 @@ body
 }
 .apprts
 {   
- position:absolute;
- transition:1s;
  width:29%;
  height:33%;
  background:radial-gradient(#000,#f00,#ff0);
@@ -94,8 +92,8 @@ grnd[1].style.width=34+'%'
 grnd[1].style.height=33+'%'
 grnd[1].style.background=
  'radial-gradient(#0c0,#060)' 
+grnd[1].style.opacity=0.7 
 grnd[1].style.borderRadius=55+'%'
-grnd[1].style.opacity=0.7
 grnd[2].style.left=39+'%'
 grnd[2].style.top=25+'%'
 grnd[2].style.width=18+'%'
@@ -113,6 +111,7 @@ grnd[4].style.left=17+'%'
 grnd[4].style.top=77+'%'
 grnd[4].style.width=66+'%'
 grnd[4].style.height=8+'%'
+grnd[4].style.background='#444'
 grnd[4].style.borderRadius=55+'%' 
  
 sbmrne[1].style.left=6+'%'
@@ -257,7 +256,7 @@ sbmrne[0].onmouseover=()=>
  grnd[3].style.opacity=0.7
  grnd[3].style.transform=
   'scale(0.9,2.2) translate(-200%,0%)'
- grnd[4].style.background='#660'
+ grnd[4].style.background='#f00'
  grnd[4].style.opacity=0.7
  grnd[4].style.borderBottomLeftRadius=11+'%' 
  grnd[4].style.borderBottomRightRadius=11+'%'
@@ -286,8 +285,7 @@ sbmrne[0].onmouseout=()=>
  grnd[2].style.transform='scale(1)' 
  grnd[3].style.opacity=0
  grnd[3].style.transform='scale(1)' 
- grnd[4].style.background='#070'
- grnd[4].style.opacity=1
+ grnd[4].style.background='#444'
  grnd[4].style.borderRadius=55+'%'
  grnd[4].style.transform='scale(1)' 
  sbmrne[0].style.opacity=0.9
