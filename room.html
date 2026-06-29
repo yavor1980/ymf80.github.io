@@ -75,8 +75,8 @@ button:hover
  <div class=drn></div>
 </div>
 
-<div class=vctr>VCTR</div>
- <div class=vctr>creative </div>
+<div class=vctr></div>
+<div class=vctr></div>
 
 <script>
 btn=document.getElementsByTagName('button')
@@ -247,16 +247,7 @@ vctr[1].style.color='#000'
    
 function cl()
 {
- imgg[0].style.transform=
-  'scale('+(1+Math.random()/5)
- imgg[1].style.transform=
-  'scale('+(1+Math.random()/5)
- imgg[2].style.transform=
-  'scale('+(1+Math.random()/5)
- wls[0].style.transform=
-  'scale('+(Math.random()/5+0.8)+') skew(22deg)'
- wls[1].style.transform=
-  'scale('+(Math.random()/5+0.8)+')'
+
 }
 
 bbtn0=0, vw=0
@@ -264,11 +255,11 @@ function fdrn()
 {
  if(bbtn0==0)
  {
-  imgg[0].style.opacity=Math.random()///6
+  imgg[0].style.opacity=0.4
   imgg[0].style.transform='scale('+Math.random()+')'
-  imgg[1].style.opacity=Math.random()
+  imgg[1].style.opacity=0.4
   imgg[1].style.transform='scale('+Math.random()+')'
-  imgg[2].style.opacity=Math.random()
+  imgg[2].style.opacity=0.4
   imgg[2].style.transform='scale('+Math.random()+')'
    btn[1].onclick()
   drn[0].style.border='11px ridge #400'
@@ -286,8 +277,17 @@ function fdrn()
  }, 1111)
  w=0,h=0,b=0
  drnI=setInterval(()=>{ 
-   w-=1; h-=1
-    b++   
+  imgg[0].style.transform=
+   'scale('+(1+Math.random()/5)
+  imgg[1].style.transform=
+   'scale('+(1+Math.random()/5)
+  imgg[2].style.transform=
+   'scale('+(1+Math.random()/5)
+  wls[0].style.transform=
+   'scale('+(Math.random()/5+0.8)+') skew(22deg)'
+  wls[1].style.transform=
+   'scale('+(Math.random()/5+0.8)+')'
+   w-=1; h-=0; b++   
   prplr[0].style.transform='scale('+(1+Math.random())+')'
   prplr[1].style.transform='scale('+(1+Math.random())+')'
   prplr[2].style.transform='scale('+(1+Math.random())+')'
