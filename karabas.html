@@ -10,7 +10,8 @@
  background:linear-gradient(#dd0,177px,#333);
 }
 
-.kttl,.bttl,.blb,.ttl,.pna,.cncr,.lcncrcl,.rcncrcl,.tl
+.kttl,.bttl,.blb,.ttl,.pna,
+.cncr,.lcncrcl,.rcncrcl,.tl
 {
  position:absolute;   
  transition:1s;
@@ -157,7 +158,6 @@ pna[0].style.borderRadius=55+'%'
 pna[0].style.borderBottomLeftRadius=8+'%'
 pna[0].style.borderBottomRightRadius=8+'%'
 pna[0].style.opacity=0
-//pna[1].style.zIndex=-1
 pna[1].style.left=33+'%'
 pna[1].style.width=44+'%'
 pna[1].style.height=44+'%'
@@ -168,7 +168,7 @@ pna[1].style.borderBottomRightRadius=33+'%'
 pna[1].style.opacity=0
 
 cncr[0].style.left=14+'%'
-cncr[0].style.top=48+'%'
+cncr[0].style.top=44+'%'
 cncr[0].style.width=14+'%'
 cncr[0].style.height=33+'%'
 cncr[0].style.cursor='pointer'
@@ -264,11 +264,16 @@ function mv()
   bttl[i].style.transform='scale(9) skew('+
    (Math.random()*33-11)+'deg)'
  } 
- blb[0].style.transform='scale('+(1+Math.random()/9)+')'
+ blb[0].style.transform='scale('+
+  (1+Math.random()/9)+')'
+ cncr[0].style.transform='scale('+
+  (1+Math.random()/9)+') translate(0%,'+
+  (-Math.random()*19)+'%)' 
 }
-  mv()
+ mv()
  Imv=setInterval(mv, 999)
  
+ i=1,li=1
 function fkmv()
 {
  cncr[5].style.transform='scale('+
@@ -287,7 +292,6 @@ function fkmv()
   (33+22*Math.random())+'%'  
  pna[1].style.transform='scale('+(1+Math.random())+
   ','+(1+Math.random())+')'
-  
  tl[0].style.transform='scale(1,'+(0.8+Math.random()/5)+') '+
   'translate(0%,-19%)'  
  lcncrcl[0].style.transform='rotate(-11deg) scale('+
@@ -314,8 +318,7 @@ kttl[0].onmouseover=()=>
   'radial-gradient(#770,#bb0)'
  pna[0].style.opacity=0.8
  pna[1].style.opacity=0.8
-  fkmv()
-  Ipna=setInterval(fkmv, 999)
+  fkmv();  Ipna=setInterval(fkmv, 999)
  ttl[0].style.transform=
   'scale(3,4) translate(39%,99%) skew(22deg)'
  ttl[1].style.transform=
