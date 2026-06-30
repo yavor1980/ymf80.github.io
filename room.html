@@ -73,10 +73,10 @@ button:hover
  <div class=drn></div>
  <div class=drn></div>
  <div class=drn></div>
+ <div class=drn></div>
 </div>
 
-<div class=vctr></div>
-<div class=vctr></div>
+ <div class=vctr></div>
 
 <script>
 btn=document.getElementsByTagName('button')
@@ -225,7 +225,7 @@ prplr[2].style.width=22+'%'
 prplr[2].style.height=144+'%'
 prplr[2].style.background=
  'radial-gradient(#880,#00f)'
-prplr[2].style.borderRadius='55%'
+prplr[2].style.borderRadius=55+'%'
 prplr[2].style.transform='scale(0)'
 prplr[3].style.left=75+'%'
 prplr[3].style.top=-13+'%'
@@ -233,22 +233,17 @@ prplr[3].style.width=22+'%'
 prplr[3].style.height=144+'%'
 prplr[3].style.background=
  'radial-gradient(#880,#00f)'
-prplr[3].style.borderRadius='55%'
+prplr[3].style.borderRadius=55+'%'
 prplr[3].style.transform='scale(0)'
 
-vctr[0].style.left=20+'%'
+vctr[0].style.left=22+'%'
 vctr[0].style.top=7+'%'
-vctr[0].style.transform='scale(3)'
-vctr[0].style.color='#060'
-vctr[1].style.left=22+'%'
-vctr[1].style.top=12+'%'
-vctr[1].style.transform='scale(0)'
-vctr[1].style.color='#000'
-   
-function cl()
-{
-
-}
+vctr[0].style.width=12+'%'
+vctr[0].style.height=17+'%'
+vctr[0].style.border='22px ridge #f60'
+vctr[0].style.borderBottom='9px ridge transparent'
+vctr[0].style.transform='skew(33deg)'
+vctr[0].style.opacity=0
 
 bbtn0=0, vw=0
 function fdrn()
@@ -365,74 +360,17 @@ btn[4].onclick=()=>
   drn[5].style.opacity=0
   drn[5].style.transform='scale(0)'  
  }, 222)
-} 
-
-Iwls=0  
-wls[0].onmouseover=()=>
-{
- cl()
- Iwls=setInterval(cl, 444)
-} 
-wls[0].onmouseout=()=>
-{
-  clearInterval(Iwls) 
- wls[0].style.transform=
-  'translate(2%) skew(22deg) rotate(0deg)'
- wls[1].style.transform=
-  'skew(0deg) rotate(0deg)' 
-}  
-
-wls[1].onmouseover=()=>
-{
- wls[0].onmouseover()
-} 
-wls[1].onmouseout=()=>
-{
- wls[0].onmouseout()
 }  
 
 drn[0].onmouseover=()=>
 {
  drn[0].style.transform='scale(1.8,1.4)'
+ vctr[0].style.opacity=1
 }
 drn[0].onmouseout=()=>
 {
  drn[0].style.transform='scale(1.4)'
-} 
-
-Ivctr=0
-bvctr=0
-vctr[0].onmouseover=()=>
-{
- vctr[0].style.color='#f00'
- vctr[0].style.transform='scale(4)'
-  vctr[0].innerHTML='new line!!'
- vctr[1].style.color='#ff0'
- Ivctr=setInterval(()=>{
-  if(bvctr)
-  {
-   vctr[1].style.transform=
-    'scale(4) translate(33%,55%) skew(22deg)'
-    vctr[1].innerHTML='modelling'
-  }
-  else
-  {
-   vctr[1].style.transform=
-    'scale(4) translate(33%,55%) skew(-22deg)'
-    vctr[1].innerHTML='interactive'
-  } 
-   bvctr=!bvctr
- }, 999)
-} 
-vctr[0].onmouseout=()=>
-{
- vctr[0].style.color='#060'
- vctr[0].style.transform='scale(3)'
- vctr[0].innerHTML='VCTR'
- vctr[1].style.transform='scale(0)'
- vctr[1].style.color='#000'
-  vctr[1].innerHTML='creative'
-  clearInterval(Ivctr)
+ vctr[0].style.opacity=0
 } 
  
 </script>
