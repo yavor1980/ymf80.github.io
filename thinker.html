@@ -125,17 +125,20 @@ d[1].style.top=2+'%'
 d[1].style.width=22+'%'
 d[1].style.height=33+'%'
 d[1].style.background='#fff'
+d[1].style.borderTop='11px ridge #900' 
 d[2].style.left=66+'%'
 d[2].style.top=2+'%'
 d[2].style.width=22+'%'
 d[2].style.height=33+'%'
 d[2].style.background='#fff'
+d[2].style.borderTop='11px ridge #900' 
 d[3].style.left=29+'%';
 d[3].style.top=72+'%';
 d[3].style.width=44+'%';
 d[3].style.height=11+'%';
 d[3].style.background=
  'radial-gradient(#000,#f00)'
+d[3].style.borderTop='11px ridge #100' 
 d[4].style.left=39+'%'
 d[4].style.top=24+'%'
 d[4].style.width=22+'%'
@@ -366,6 +369,12 @@ dvce[0].onmouseover=()=>
   'scale(1.4) translate(-22%,-22%) skew(22deg)' 
  dvce[3].style.opacity=1
  Idvs=setInterval(()=>{
+  nme[1].style.transform='scale(1.5) rotate(-22deg)'
+  nme[2].style.transform=
+  'scale(1.5) rotate(-22deg) translate(0,33%)'
+  nme[3].style.transform='scale(2.5) rotate(-22deg)'
+  nme[4].style.transform='scale(2.5) rotate(22deg)'
+  nme[5].style.transform='scale(2.5) rotate(22deg)'
   dvce[4].style.transform=
    'scale('+(4+4*Math.random())+') translate(-192%,-99%)' 
   dvce[5].style.transform=
