@@ -206,7 +206,6 @@ function itbrd(i,l,t,w,h)
  itbrd(0,  44,-18,  14,22)
   brd[0].style.background='#900'
   brd[0].style.borderRadius=55+'%'
-  brd[0].style.zIndex=1
  itbrd(1,  0,0,  99,99)
   brd[1].style.background='#f00'
   brd[1].style.opacity=0
@@ -273,7 +272,6 @@ o=
   drn[3].style.left=63*Math.random()+'%' 
   drn[3].style.top=33*Math.random()+'%' 
   drn[3].style.width=9+'%' 
-  drn[3].sstyle.height=16*Math.random()+'%'
  },
  clk:function()
  {  
@@ -297,7 +295,7 @@ o=
   }, 2000)
  } 
 }   
-   o.intr=setInterval(()=>{o.cl();}, 222);
+   o.intr=setInterval(()=>{o.cl();}, 222)
        	   
 btn[0].onclick=()=>
 {
@@ -341,6 +339,8 @@ btn[2].onclick=()=>
 Iwhl0=0
 whl[0].onmouseover=()=>
 { 
+ rd[1].style.transform='translate('+
+  (444*Math.random()-222)+'%,0)' 
  whl[0].style.borderBottomLeftRadius=55+'%'
  whl[0].style.borderBottomRightRadius=55+'%'  
  whl[4].style.transform='scale(1.1,1)' 
@@ -349,7 +349,7 @@ whl[0].onmouseover=()=>
  fr[1].style.background=
   'radial-gradient(#ff0,#f00)'
  fr[2].style.background='#bbb'
-  fr[2].innerHTML='<b>TO</b>'+
+ fr[2].innerHTML='<b>TO</b>'+
    Math.round(Math.random()*9)+''+
    Math.round(Math.random()*9)+''+
    Math.round(Math.random()*9)+''+
@@ -365,6 +365,7 @@ whl[0].onmouseover=()=>
 }
 whl[0].onmouseout=()=>
 {
+ rd[1].style.transform='scale(1)' 
  whl[0].style.borderBottomLeftRadius=22+'%'
  whl[0].style.borderBottomRightRadius=22+'%'  
  whl[4].style.transform='scale(1,1)' 
