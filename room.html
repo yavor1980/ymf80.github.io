@@ -76,7 +76,10 @@ button:hover
  <div class=drn></div>
 </div>
 
- <div class=vctr></div>
+ <div class=vctr>
+  <div class=vctr></div>
+  <div class=vctr></div>
+ </div>
 
 <script>
 btn=document.getElementsByTagName('button')
@@ -240,10 +243,24 @@ vctr[0].style.left=22+'%'
 vctr[0].style.top=7+'%'
 vctr[0].style.width=12+'%'
 vctr[0].style.height=17+'%'
-vctr[0].style.border='22px ridge #f60'
+vctr[0].style.border='22px ridge #400'
 vctr[0].style.borderBottom='9px ridge transparent'
 vctr[0].style.transform='skew(33deg)'
 vctr[0].style.opacity=0
+vctr[1].style.left=-22+'%'
+vctr[1].style.top=122+'%'
+vctr[1].style.width=24+'%'
+vctr[1].style.height=35+'%'
+vctr[1].style.background=
+ 'radial-gradient(#f00,#ff0)'
+vctr[1].style.borderRadius=55+'%' 
+vctr[2].style.left=100+'%'
+vctr[2].style.top=122+'%'
+vctr[2].style.width=24+'%'
+vctr[2].style.height=35+'%'
+vctr[2].style.background=
+ 'radial-gradient(#f00,#ff0)'
+vctr[2].style.borderRadius=55+'%' 
 
 bbtn0=0, vw=0
 function fdrn()
@@ -256,6 +273,10 @@ function fdrn()
   imgg[1].style.transform='scale('+Math.random()+')'
   imgg[2].style.opacity=0.4
   imgg[2].style.transform='scale('+Math.random()+')'
+  vctr[1].style.transform='scale('+
+   (1+Math.random())+')'
+  vctr[2].style.transform='scale('+
+   (1+Math.random())+')'
    btn[1].onclick()
   drn[0].style.border='11px ridge #400'
   drn[1].style.background='#400'
@@ -278,6 +299,10 @@ function fdrn()
    'scale('+(1+Math.random()/5)
   imgg[2].style.transform=
    'scale('+(1+Math.random()/5)
+  vctr[1].style.transform='scale('+
+   (1+Math.random())+')'
+  vctr[2].style.transform='scale('+
+   (1+Math.random())+')' 
   wls[0].style.transform=
    'scale('+(Math.random()/5+0.8)+') skew(22deg)'
   wls[1].style.transform=
