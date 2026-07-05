@@ -16,9 +16,9 @@ select
 {
  position:absolute;
  transition:1s;
- padding-top: 11px;
+ //padding-top: 11px;
  text-align:center;
- font-size:1.5em;
+ font-size:2em;
 }
 
 .prjct,.vctr,.tms
@@ -80,19 +80,22 @@ function inn(nm,i,l,t,w,h,bkgr)
 }
 
 inn(hd,0, 1,1, 98,35,'radial-gradient(#f00,#000)') 
-inn(hd,1, 11,22, 22,22,'#777')
+inn(hd,1, 11,22, 22,44,'#777')
  hd[1].style.cursor='pointer'
-inn(hd,2, 37,22, 22,22,'#0ff')
+ hd[1].style.boxShadow='-9px 9px #300'
+inn(hd,2, 37,22, 22,44,'#0ff')
  hd[2].style.cursor='pointer'
-inn(hd,3, 65,22, 22,22,'#ff0')
+ hd[2].style.boxShadow='-9px 9px #300'
+inn(hd,3, 65,22, 22,44,'#ff0')
  hd[3].style.cursor='pointer'
- 
-inn(prjct,0, 11,25, 0,0,'')
+ hd[3].style.boxShadow='-9px 9px #300'
+
+inn(prjct,0, 11,69, 0,0,'')
  prjct[0].style.zIndex=1
  prjct[0].style.color='#ff0'
  prjct[0].style.transform='scale(4)'
  prjct[0].style.cursor='pointer'
-inn(prjct,1, 44,25, 0,0,'')
+inn(prjct,1, 44,69, 0,0,'')
  prjct[1].style.zIndex=1
  prjct[1].style.color='#0ff'
  prjct[1].style.color='#0ff'
@@ -104,6 +107,8 @@ inn(tms,1, 33,11, 44,22,'#777')
  tms[1].style.cursor='pointer'
 inn(tms,2, 3,11, 22,33,'#f00')
  tms[2].style.cursor='pointer'
+ tms[2].style.fontSize=2+'em'
+ tms[2].style.boxShadow='-9px 9px #300'
  
 vctr[0].style.left=44+'%'
 vctr[0].style.top=70+'%'
@@ -139,7 +144,6 @@ function cl()
  
 function act(i,l)
 { 
- 
  hd[i].onmouseover=()=>
  {
  vctr[0].style.transform=
@@ -225,11 +229,6 @@ function act(i,l)
   vctr[2].style.transform='scale(1)'
   vctr[3].style.transform='scale(1)'
   vctr[4].style.transform='scale(1)'
-  hd[i].style.width='22%'
-  hd[i].style.height='22%'
-  hd[i].style.left=l+'%'
-  hd[i].style.top='22%'
-  hd[i].style.fontSize='1.4em'
   hd[i].style.color='#000'
   hd[i].style.border='none'
   hd[i].style.borderRadius=0+'%'
