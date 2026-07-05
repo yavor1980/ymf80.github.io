@@ -34,7 +34,7 @@ select
 .tms
 {
  text-align:center;
- font-size:1.5em;
+ font-size:2em;
 }
 
 </style>
@@ -105,9 +105,8 @@ inn(tms,0, 1,37, 98,62,'radial-gradient(#0f0,#000)')
  tms[0].style.zIndex=0
 inn(tms,1, 33,11, 44,22,'#777')
  tms[1].style.cursor='pointer'
-inn(tms,2, 3,11, 22,33,'#f00')
+inn(tms,2, 3,11, 22,53,'#f00')
  tms[2].style.cursor='pointer'
- tms[2].style.fontSize=2+'em'
  tms[2].style.boxShadow='-9px 9px #300'
  
 vctr[0].style.left=44+'%'
@@ -281,7 +280,7 @@ tms[2].onmouseover=()=>
  tms[2].style.border='6px ridge #f60'
  tms[2].style.borderRadius=33+'%'
  tms[2].style.transform=
-  'scale(2) translate(22%,0)'
+  'scale(1.2) translate(22%,-30%)'
   tms[2].innerHTML='I thought I would be tomorrow'
 }
 tms[2].onmouseout=()=>
