@@ -456,10 +456,12 @@ nro[1].onmouseover=()=>
   for(i=0;i<7;i++)
   { 
    el[i].style.transform='scale('+(1+Math.random()/2)+') '
-   els0[i].style.transform='scale(1.3,1) rotate('+
-   (-33*Math.random())+'deg)'
-   els1[i].style.transform='scale(1.3,1) rotate('+
-   (33*Math.random())+'deg)'
+   els0[i].style.transform='scale('+
+    (3*Math.random())+',1) rotate('+
+    (-33*Math.random())+'deg)'
+   els1[i].style.transform='scale('+
+    (3*Math.random())+',1) rotate('+
+    (33*Math.random())+'deg)'
   }
  }, 999)
 }
