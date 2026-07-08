@@ -162,9 +162,9 @@ tst[0].style.width=28+'%'
 tst[0].style.height=55+'%'
 tst[0].style.background=
  'radial-gradient(#f00,#e00)'
-tst[0].style.borderRadius='9%'
+tst[0].style.borderRadius=9+'%'
 tst[0].style.border='9px ridge #800'
-tst[0].style.boxShadow='11px 11px 6px'
+tst[0].style.boxShadow='18px 10px'
 tst[1].style.left=6+'%'
 tst[1].style.top=6+'%'
 tst[1].style.width=88+'%'
@@ -282,7 +282,8 @@ for(i=0;i<7;i++)
  nro[0].appendChild(el[i])
  el[i].style.cursor='grab'
  el[i].style.left=(166+80*i)+'px'
- el[i].style.top=(90+144*Math.round(3*Math.random()))+'px'
+ el[i].style.top=(90+
+  144*Math.round(3*Math.random()))+'px'
  el[i].style.width=5+'%'
  el[i].style.height=9+'%'
  el[i].style.background='#0f0'
@@ -397,7 +398,7 @@ tst[0].onmouseout=()=>
  bgrnd[5].style.opacity=0
  bgrnd[5].style.transform='scale(1)'
  bldng[0].style.transform='scale(1)'
- tst[0].style.boxShadow='11px 11px 6px'
+ tst[0].style.boxShadow='18px 10px'
  tst[0].style.transform='scale(1)'
  tst[1].style.borderRadius='7%'
  tst[1].style.boxShadow='none'
@@ -437,7 +438,7 @@ bldng[0].onmouseout=()=>
 }
 
 Inro=0
-nro[0].onmouseover=()=>
+nro[1].onmouseover=()=>
 { 
  nro[1].style.transform='scale(2,1)'
  nro[2].style.transform='scale(8)skew(-12deg) '
@@ -461,7 +462,7 @@ nro[0].onmouseover=()=>
   }
  }, 999)
 }
-nro[0].onmouseout=()=>
+nro[1].onmouseout=()=>
 { 
  nro[1].style.transform='scale(1)'
  nro[2].style.transform='scale(8)skew(22deg) '
@@ -481,7 +482,7 @@ nro[0].onmouseout=()=>
  }
 }
 
-nro[0].onclick=()=>
+nro[5].onclick=()=>
 {
  for(i=0;i<7;i++){
   el[i].style.left=(166+80*i)+'px'
