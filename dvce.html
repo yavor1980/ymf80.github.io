@@ -23,8 +23,8 @@ body
 {
  position:absolute;
  transition:1s;
- cursor:pointer;
 }
+.tst,.nds{cursor:pointer;}
 .nds
 {
  width:100%;
@@ -232,6 +232,7 @@ nro[0].style.width=92+'%'
 nro[0].style.height=90+'%'
 nro[0].style.borderRadius=22+'%'
 nro[0].style.border='4px ridge #800'
+nro[1].style.cursor='pointer'
 nro[1].style.left=34+'%'
 nro[1].style.top=4+'%'
 nro[1].style.width=33+'%'
@@ -253,6 +254,7 @@ nro[4].style.top=13+'%'
 nro[4].style.color='#00b'
 nro[4].style.opacity=0.1
 nro[4].style.transform='scale(8)skew(-22deg) '
+nro[5].style.cursor='pointer'
 nro[5].style.left=89+'%'
 nro[5].style.top=3+'%'
 nro[5].style.width=13+'%'
@@ -283,7 +285,7 @@ for(i=0;i<7;i++)
  el[i].style.cursor='grab'
  el[i].style.left=(166+80*i)+'px'
  el[i].style.top=(90+
-  144*Math.round(3*Math.random()))+'px'
+  120*Math.round(3*Math.random()))+'px'
  el[i].style.width=5+'%'
  el[i].style.height=9+'%'
  el[i].style.background='#0f0'
@@ -326,7 +328,6 @@ bgrnd[i].onmouseout=()=>
  actbck(0, '#d00', '#f00') 
  actbck(1, '#0d0', '#0f0')
  actbck(2, '#00d', '#00f')
-
 bgrnd[3].onmouseover=()=>
 {
  bgrnd[3].style.background='#ddd'
