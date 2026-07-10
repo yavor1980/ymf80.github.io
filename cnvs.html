@@ -55,12 +55,11 @@ btnd[1].style.top=64+'%'
 btnd[2].style.top=73+'%'
 btnd[3].style.top=81+'%'
 
+cnv[0].style.cursor='pointer'
 cnv[0].style.width=86+'%'
 cnv[0].style.height=97+'%'
 cnv[0].style.border='11px ridge #ff0'
-cnv[0].style.cursor='pointer'
 cntxt=cnv[0].getContext('2d')
- cntxt.moveTo(0,333)
 
 function fdrw()
 {
@@ -108,9 +107,9 @@ function faxs()
  cntxt.lineTo(333, 79)
  cntxt.moveTo(145, 0)
  cntxt.lineTo(145, 134)
-  cntxt.stroke()
+ cntxt.stroke()
 }
-var shft=66, scle=22, trvl=1, Iosc=0, ff=6, fff=0.01
+var shft=66, scle=22, trvl=1, Iosc=0, ff=1, fff=0.01
 function foscll()
 { 
  cntxt.strokeStyle='#b00'
@@ -145,7 +144,7 @@ Iosc=setInterval(()=>{
  }, imtosc)
 }
 
-var Ihz=0, dd=1,ddd=0.1, dy=25
+var Ihz=0, dd=0, ddd=-0.1
 function fHz()
 { 
 Ihz=setInterval(()=>{ 
@@ -157,9 +156,8 @@ Ihz=setInterval(()=>{
   cntxt.moveTo(i*dd,68-y/2)
   cntxt.lineTo(i*dd,33+y)
   cntxt.stroke()
-   ddd=Math.random()*8
-   dd=Math.random()*ddd
-   //if((dd>-1)||(dd<1)) ddd=-1*ddd 
+   dd+=ddd;
+   if((dd>-178)||(dd<168)) ddd=-1*ddd 
  }  
 }, 999)   
 }
@@ -177,12 +175,10 @@ function fbtn(i)
 btn[4].onclick=()=>
 { 
  cntxt.clearRect(0,0,999,999)
+  bcnvs=-1
 }
 
-btnd[0].onclick=()=>
-{
- faxs()
-}
+btnd[0].onclick=()=>{ faxs();}
 
 var boscll=0
 btnd[1].onclick=()=>
@@ -237,29 +233,27 @@ btnd[3].onclick=()=>
  {
   btnd[3].style.background='#090'
   clearInterval(Ihz)
-  ff=0
   btnd[3].value='Hz'
  }
    boscll=!boscll
 }
 
 cnv[0].onmousemove=()=>
-{
+{ ff+=0.2
  cnv[0].style.border='11px ridge #ee0'
   if(bcnvs==0) fdrw()  
 }
 cnv[0].onmouseout=()=>
-{
+{  
  for(i=0;i<4;i++)
  {
   btn[i].style.background='#00f'
  } 
  cnv[0].style.border='11px ridge #ff0'
-  dy=25
-  dd=5
+  dy=25;dd=5
 }
 cnv[0].onclick=()=>
-{    
+{    ff=1
  dy=25+Math.random()*28
  dd=Math.random()*24
  switch(bcnvs) 
@@ -271,6 +265,5 @@ cnv[0].onclick=()=>
  }  
 }
 
-//for(var i=0;i<n;i++) 
 </script> 
 </html>
