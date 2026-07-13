@@ -17,12 +17,12 @@ body
  font-size:1.7em;
 }
 
-.tmprm,.vctr,.phlsph,.brne,.izv
+.tmprm,.vctr,.phlsph,.brne,.izv,.dizv
 {
  position:absolute;
  transition:1s;
 }
-.izv
+.izv,.dizv
 {
  left:22%;
  top:22%;
@@ -95,6 +95,7 @@ body
  </div>
  <div class=izv></div>
 </div>
+<div class=brne>BRAINSTORM</div>
 
 <script>
 psch=document.getElementsByClassName('psch')  
@@ -270,8 +271,23 @@ brne[2].style.height=44+'%'
 brne[2].style.background=
  'radial-gradient(#f00,#900)'
 brne[2].style.borderRadius=55+'%' 
+brne[3].style.left=84+'%'
+brne[3].style.top=99+'%'
+brne[3].style.transform='scale(0)'
 
 
+
+dizv=[]/**/
+for(i=0;i<8;i++)
+{
+ dizv[i]=document.createElement("div")
+ dizv[i].className='dizv'
+ brne[1].appendChild(dizv[i])
+ dizv[i].style.left=(23+Math.random()*48)+'%'
+ dizv[i].style.top=(23+Math.random()*48)+'%'
+ dizv[i].style.width=(3+Math.random()*18)+'%'
+ dizv[i].style.height=(3+Math.random()*18)+'%' 
+} 
  
 obj='The totality of mental phenomena '
 tsk=
@@ -280,7 +296,7 @@ tsk=
  '-learn to manage <br>&nbsp them'
 mthd=
  '-organizational'+'<br>'+ 
- '-empirical'+'<br>'+ 
+ '-empiiical'+'<br>'+ 
  '-observation'+'<br>'+ 
  '-experiment'+'<br>'+
  '-statistical'+'<br>'
@@ -558,32 +574,47 @@ brneI=0
 brne[0].onmouseover=()=>
 {  
  brne[0].style.transform='scale(1.05)' 
+ brne[3].style.transform=
+  'scale(5)translate(-39%,0%) skew(-14deg)' 
  izv[0].style.opacity=1
  izv[1].style.opacity=1
  izv[2].style.opacity=1
+ dizv[0].style.opacity=1
  brneI=setInterval(()=>{
   izv[0].style.transform=
    'scale('+Math.random()+')' 
   izv[1].style.transform=
    'scale('+Math.random()+')' 
   izv[2].style.transform=
-   'scale('+Math.random()+') translate(-49%,0%)' 
- 
+   'scale('+Math.random()+') translate(-39%,0%)' 
+ for(i=0;i<8;i++)
+ {   
+  dizv[i].style.opacity=1
+  dizv[i].style.transform='scale('+
+   Math.random()+')'  
+ }    
  }, 999)
 }
 brne[0].onmouseout=()=>
 {  
  brne[0].style.transform='scale(1)' 
+ brne[3].style.transform='scale(0)'
  izv[0].style.opacity=0
  izv[0].style.transform='scale(1)'
  izv[1].style.opacity=0
  izv[1].style.transform='scale(1)'
  izv[2].style.opacity=0
  izv[2].style.transform='scale(1)'
+ dizv[0].style.opacity=0
+ dizv[0].style.transform='scale(1)'
+ for(i=0;i<8;i++)
+ {   
+  dizv[i].style.opacity=0
+  dizv[i].style.transform='scale(1)'  
+ }   
   clearInterval(brneI)
 }
 
- 
 </script>
 </body>
 </html>
