@@ -68,7 +68,6 @@
  background:linear-gradient(-88deg,#555,#ff0);
  border-radius:33%;
 }
-
 .llg,.rlg
 {
  position:absolute;
@@ -382,6 +381,10 @@ ids.onmouseover=()=>
   inf[0].onmouseover()
  hd[0].style.borderTop='8px ridge #900'
  hd[0].style.borderBottom='8px ridge #900'
+ hd[1].style.borderTop='1px ridge #900'
+ hd[2].style.borderTop='1px ridge #900'
+ hd[3].style.borderTop='1px ridge #900'
+ hd[4].style.borderTop='8px ridge #900'
  lhnd[0].style.transform=
   'scale(1.5,0.5) translate(-96%,-63%) rotate(72deg)'
  rhnd[0].style.transform=
@@ -399,10 +402,11 @@ ids.onmouseover=()=>
    star[i].style.transform='scale('+(1+2*Math.random())+
    ') translate('+1289*Math.random()+'%,'+
     1289*Math.random()+'%)'
-  }
+  } 
  star[5].style.transform=
   'scale(5) translate('+198*Math.random()+'%,'+
     28*Math.random()+'%)'
+ star[6].style.border='3px ridge #d00'
  ids.style.background=
   'radial-gradient(#909,#ff0)' 
  hd[0].style.borderBottomLeftRadius=55+'%' 
@@ -482,8 +486,13 @@ ids.onmouseout=()=>
   star[i].style.transform='scale(1)'
  }
  star[5].style.transform='scale(1)'
+ star[6].style.border=''
  ids.style.background='radial-gradient(#555,#ff0)'
  hd[0].style.borderTop='none'
+ hd[1].style.borderTop='none'
+ hd[2].style.borderTop='none'
+ hd[3].style.borderTop='none'
+ hd[4].style.borderTop='none'
  hd[0].style.borderBottom='none'
  hd[0].style.borderBottomLeftRadius=19+'%' 
  hd[0].style.borderBottomRightRadius=19+'%' 
