@@ -30,6 +30,7 @@
 
 <button class=btn>GO</button>
 <button class=btn>O</button>
+<input type=number min=0 max=9 value=0 class=btn>
 
 <div class=indctr>
  <div class=indctr></div>
@@ -96,6 +97,11 @@ btn[1].style.height=4+'%'
 btn[1].style.background='#b00'
 btn[1].style.transform='scale(4)'
 btn[1].style.borderRadius=26+'%'
+btn[2].style.left=79+'%'
+btn[2].style.top=55+'%'
+btn[2].style.textAlign='center'
+btn[2].style.transform='scale(4)'
+
 
 function init(nm,i,l,t,w,h)
 {
@@ -104,7 +110,6 @@ function init(nm,i,l,t,w,h)
  nm[i].style.width=w+'%'
  nm[i].style.height=h+'%'
 }
-
 init(indctr,0,11,39,7,18)
  indctr[0].style.background='#bb0'
  indctr[0].style.borderRadius=7+'%'
@@ -240,10 +245,10 @@ function fi3(clr)
   indctr[i].style.background=clr
  indctr[6].style.background=clr
  indctr[7].style.background=clr
- bin[1].innerHTML='0' 
- bin[2].innerHTML='0'
- bin[3].innerHTML='1'
- bin[4].innerHTML='1'
+  bin[1].innerHTML='0' 
+  bin[2].innerHTML='0'
+  bin[3].innerHTML='1'   
+  bin[4].innerHTML='1'
 }
 function fi4(clr)
 {
@@ -303,14 +308,14 @@ function fi8(clr)
 function fi9(clr)
 {
  for(i=1;i<4;i++)
-  indctr[i].style.background=clr
+ indctr[i].style.background=clr
  indctr[4].style.background=clr
  indctr[6].style.background=clr
  indctr[7].style.background=clr
  bin[1].innerHTML='1' 
  bin[2].innerHTML='0'
- bin[3].innerHTML='1'
- bin[4].innerHTML= '0' 
+ bin[3].innerHTML='0'
+ bin[4].innerHTML= '1' 
 }
 function ficlear(clr)
 {
@@ -423,6 +428,23 @@ btn[1].onclick=()=>
    fi8('#f00')
   cnt=0
  } 
+}
+
+btn[2].onchange=()=>
+{
+  switch(btn[2].value)
+ {
+  case 0: fi0('#f00'); break;
+  case 1: fi1('#f00'); break;
+  case 2: fi2('#f00'); break;
+  case 3: fi3('#f00'); break;
+  case 4: fi4('#f00'); break;
+  case 5: fi5('#f00'); break;
+  case 6: fi6('#f00'); break;
+  case 7: fi7('#f00'); break;
+  case 8: fi8('#f00'); break;
+  case 9: fi9('#f00'); break;
+ }
 }
 
 bind=0
