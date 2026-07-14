@@ -7,23 +7,13 @@
  background:radial-gradient(222px,#999,#333);
 }
 
-.hd
+.hd,.slte,.ppp
 {
  position:absolute;
  transition:1s; 
 }
-
-.slte
+.slte,.ppp
 {
- position:absolute;
- transition:1s;
- border-radius:55%;
-}
-
-.ppp
-{
- position:absolute;
- transition:1s;
  border-radius:55%;
 }
 
@@ -46,6 +36,7 @@
  <div class=ppp></div>
  <div class=ppp></div>
 </div>
+<div class=ppp></div>
 
 <script>
 hd=document.getElementsByClassName('hd')  
@@ -141,6 +132,13 @@ ppp[3].style.background=
 ppp[3].style.borderRadius=22+'%' 
 ppp[3].style.transform=
  'scale(1.8) rotate(45deg)'
+ppp[4].style.left=18+'%'
+ppp[4].style.top=11+'%'
+ppp[4].style.width=70+'%'
+ppp[4].style.height=7+'%'
+ppp[4].style.borderTop='22px ridge #f00'
+ppp[4].style.borderRadius=55+'%'  
+ppp[4].style.opacity=0
  
 Icl=0
 bcl=0
@@ -169,6 +167,11 @@ function sltcl()
   ppp[0].style.transform='scale('+(1.6*Math.random()+5)+
    ') translate(-66%,-93%)'+
    'rotate('+(Math.random()*444-222)+'deg)' 
+  ppp[4].style.opacity=1
+  ppp[4].style.transform='scale('+(1+Math.random()/4)+ 
+   ') translate(0%,'+(-76*Math.random())+'%)'
+
+  
   setTimeout(()=>{
    slte[1].style.transition='444ms'
    slte[1].style.opacity=0.5
@@ -244,6 +247,7 @@ hd[0].onmouseout=()=>
   'scale(0) translate(0%,0%)'
  hd[0].style.color='#b00'
  ppp[0].style.transform='scale(0)'
+ ppp[4].style.opacity=0
   hd[0].innerHTML='Waiting...' 
   hd[1].innerHTML='When?..'
  hd[2].style.opacity=0
