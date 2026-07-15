@@ -16,7 +16,7 @@ button:hover
  transform:scale(2.6);
 }
 
-.hd,.mth,.tng,.bd,.ttl,.bkgrnd,.tbe,.insct
+.hd,.mth,.tng,.bd,.ttl,.tbe,.insct
 {
  position:absolute;
  transition:1s;
@@ -34,9 +34,7 @@ button:hover
 <div class=ttl></div>
 <div class=ttl>
  <div class=ttl></div>
-</div>
-<div class=bkgrnd>
- <div class=bkgrnd></div>
+ <div class=ttl></div>
 </div>
 
 <div class=hd>
@@ -76,7 +74,6 @@ button:hover
 </body >
 <script>
 ttl=document.getElementsByClassName('ttl')
-bkgrnd=document.getElementsByClassName('bkgrnd')
 
 hd=document.getElementsByClassName('hd')
 mth=document.getElementsByClassName('mth')
@@ -127,6 +124,15 @@ ttl[3].style.background=
  'radial-gradient(#0ff,#00f)'
 ttl[3].style.opacity=0.7 
 ttl[3].style.borderRadius=55+'%'
+ttl[4].style.left=33+'%'
+ttl[4].style.top=33+'%'
+ttl[4].style.width=33+'%'
+ttl[4].style.height=33+'%'
+ttl[4].style.background=
+ 'radial-gradient(#0ff,#009)'
+ttl[4].style.opacity=0.7 
+ttl[4].style.borderRadius=55+'%'
+
 
 function init(nm,i,l,t,w,h)
 {
@@ -378,9 +384,11 @@ function clk()
   'scale(1.2) rotate(45deg) skew(33deg)'
  ttl[3].style.background=
   'radial-gradient(#088,#00f)'
- ttl[3].style.opacity=0 
+ ttl[3].style.opacity=0.8
  ttl[3].style.transform=
-  'scale(3,2) translate(0,-322%)'
+  'scale(3,2) translate(0,-522%)'
+ ttl[4].style.transform=
+  'scale(3,2) translate(-82%,-322%)' 
   ttl[0].onmouseover() 
  setTimeout(()=>{
   idb.style.opacity=1
@@ -409,6 +417,7 @@ function clk()
   ttl[3].style.opacity=0.7
   ttl[3].style.background=
   'radial-gradient(#0ff,#00f)'
+  ttl[4].style.transform='scale(1)' 
   ttl[0].onmouseout()
  }, 999)
 }
