@@ -70,6 +70,7 @@ button:hover
  <div class=insct></div>
  <div class=insct></div>
  <div class=insct></div>
+ <div class=insct></div>
 </div>
  
 </body >
@@ -279,6 +280,17 @@ insct[3].style.height=139+'%'
 insct[3].style.background=
  'radial-gradient(#0ff,#80f)'
 insct[3].style.transform='rotate(-22deg)'
+insct[4].style.zIndex=-1
+insct[4].style.left=29+'%'
+insct[4].style.top=5+'%'
+insct[4].style.width=103+'%'
+insct[4].style.height=40+'%'
+insct[4].style.borderRadius=0+'%'
+insct[4].style.border='11px ridge #000'
+insct[4].style.borderLeft='11px ridge transparent'
+insct[4].style.borderTop='11px ridge transparent'
+insct[4].style.transform='rotate(45deg) skew(33deg)'
+insct[4].style.transform='scale(0)'
 
   bcl=0
 function cl()
@@ -358,8 +370,12 @@ function clk()
  tbe[4].style.borderWidth=9+'px'
  tbe[4].style.transform='scale(2,1)'
  insct[0].style.opacity=1
+ insct[0].style.transform=
+  'scale(2) translate(0,44%)'
  insct[2].style.transform='translate(0,-24%)'
  insct[3].style.transform='translate(0,-24%)'
+ insct[4].style.transform=
+  'scale(1.2) rotate(45deg) skew(33deg)'
  ttl[3].style.background=
   'radial-gradient(#088,#00f)'
  ttl[3].style.opacity=0 
@@ -388,6 +404,7 @@ function clk()
   insct[0].style.opacity=0.4
   insct[2].style.transform='scale(1)'
   insct[3].style.transform='scale(1)'
+  insct[4].style.transform='scale(0)'
   ttl[2].style.transform='scale(1)'
   ttl[3].style.opacity=0.7
   ttl[3].style.background=
