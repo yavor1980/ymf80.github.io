@@ -6,7 +6,7 @@ body
 {
  background:linear-gradient(0deg,#000,#303);
 }
-button,.grnd,.pzr,.hd,.frz,.prgrss,.scty
+button,.grnd,.pzr,.hd,.frz,.prgrss,.scty,.hlls
 {
  position:absolute;
  transition:1s;
@@ -33,6 +33,9 @@ button,.grnd,.pzr,.hd,.frz,.prgrss,.scty
  <div class=grnd></div>
 </div>
 <div class=grnd></div>
+
+<div class=hlls></div>
+<div class=hlls></div>
  
 <div class=pzr>
  <div class=pzr></div>
@@ -64,6 +67,7 @@ bdy=document.getElementsByTagName('body')
 btn=document.getElementsByTagName('button')
 
 grnd=document.getElementsByClassName('grnd')
+hlls=document.getElementsByClassName('hlls')
 pzr=document.getElementsByClassName('pzr')
 hd=document.getElementsByClassName('hd')
 pw=document.getElementsByClassName('pw')
@@ -121,7 +125,26 @@ grnd[4].style.height=11+'%'
 grnd[4].style.background=
  'radial-gradient(88px,#ff0,#0ff)'
 grnd[4].style.borderRadius=55+'%' 
-grnd[4].style.opacity=0.4  
+grnd[4].style.opacity=0 
+  
+hlls[0].style.zIndex=-2
+hlls[0].style.left=3+'%' 
+hlls[0].style.top=49+'%'
+hlls[0].style.width=22+'%'
+hlls[0].style.height=13+'%'
+hlls[0].style.background=
+ 'radial-gradient(#f0f,#909)' 
+hlls[0].style.borderRadius=55+'%'
+hlls[0].style.opacity=0
+hlls[1].style.zIndex=-2
+hlls[1].style.left=73+'%' 
+hlls[1].style.top=60+'%'
+hlls[1].style.width=22+'%'
+hlls[1].style.height=13+'%'
+hlls[1].style.background=
+ 'radial-gradient(#099,#055)' 
+hlls[1].style.borderRadius=35+'%'
+hlls[1].style.opacity=0.2
   
 pzr[0].style.left=33+'%' 
 pzr[0].style.top=49+'%'
@@ -226,6 +249,9 @@ function mv()
 {
  grnd[3].style.transform='scale('+
   (1+Math.random())+')'
+ hlls[0].style.transform='scale('+
+  (1+Math.random())+' ) translate(0,'+
+ (-88*Math.random()) +'%)'
  hd[0].style.transform= 'scale(1.4) translate('+
    (44-88*Math.random())+'%, -33%)'
  if(bg)
@@ -286,6 +312,9 @@ pzr[0].onmouseover=()=>
  grnd[3].style.border='11px ridge #ff7'
  grnd[4].style.opacity=0.9
  grnd[4].style.transform='translate(0%,-44%)'
+ hlls[0].style.opacity=1
+ hlls[1].style.opacity=1
+ hlls[1].style.transform='translate(0%,-94%)'
  frz[0].style.color='#f00'
  frz[1].style.color='#f80'
   b=Math.round(Math.random())
@@ -334,8 +363,11 @@ pzr[0].onmouseout=()=>
  grnd[2].style.border='none'
  grnd[2].style.transform='translate(0%, 0%)'
  grnd[3].style.border='none' 
- grnd[4].style.opacity=0.4
+ grnd[4].style.opacity=0
  grnd[4].style.transform='translate(0%,0%)'
+ hlls[0].style.opacity=0
+ hlls[1].style.opacity=0.2
+ hlls[1].style.transform='scale(1)' 
  hd[0].style.transform='scale(1)' 
  pzr[1].style.transform='scale(1)'
  pw[0].style.transform='scale(1)'
