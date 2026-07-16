@@ -44,6 +44,7 @@
 <button class=btn>drop</button>
 
 <div class=bgrnd></div> 
+<div class=bgrnd></div>
 
 <div class=jws>  
  <div class=gl><div class=gl></div></div>
@@ -106,12 +107,20 @@ btn[1].style.borderRadius=44+'%'
 bgrnd[0].style.zIndex=-1
 bgrnd[0].style.bottom=0+'%'  
 bgrnd[0].style.width=100+'%'
-bgrnd[0].style.height=12+'%'  
+bgrnd[0].style.height=15+'%'  
 bgrnd[0].style.background=
  'radial-gradient(#050,#009)' 
 bgrnd[0].style.borderTopLeftRadius=44+'%'
 bgrnd[0].style.borderTopRightRadius=33+'%'
-
+bgrnd[1].style.zIndex=1
+bgrnd[1].style.left=13+'%'
+bgrnd[1].style.top=15+'%'  
+bgrnd[1].style.width=10+'%'
+bgrnd[1].style.height=45+'%' 
+bgrnd[1].style.borderLeft='9px ridge #ff0'
+bgrnd[1].style.borderRadius=55+'%'
+bgrnd[1].style.transform='rotate(-30deg)' 
+bgrnd[1].style.opacity=0
 
 jws[0].style.cursor='pointer'
 jws[0].style.left=33+'%'
@@ -370,21 +379,26 @@ jws[0].onmouseover=()=>
 { 
   clearInterval(jwI)  
   shrm[0].onmouseover()  
- jws[2].style.transform='translate(-6%,-7%) rotate(12deg)'
- jws[3].style.transform='translate(6%,-7%) rotate(-12deg)'
+ jws[2].style.transform=
+  'translate(-6%,-7%) rotate(12deg)'
+ jws[3].style.transform=
+  'translate(6%,-7%) rotate(-12deg)'
  texctr[0].style.transform='scale(1.6)'
  plh[1].style.opacity=0
  plh[2].style.opacity=0
  vctrI=setInterval(()=>{
+  bgrnd[1].style.opacity=Math.random()
+  bgrnd[1].style.transform='translate('+(2+
+   111*Math.random())+'%,2%) rotate(-30deg)' 
   jws[2].style.transform='translate('+(4-9*Math.random())+
    '%,0) rotate('+(4-9*Math.random())+'deg)'
   jws[3].style.transform='translate('+(4-9*Math.random())+
-   '%,0) rotate('+(4-9*Math.random())+
-   'deg) '
+   '%,0) rotate('+(4-9*Math.random())+'deg)'
   jws[4].style.opacity=Math.random()
   jws[4].style.borderWidth=(13+26*Math.random())+'px'
   jws[4].style.transform='scale(1,'+
-   (2+2*Math.random())+') translate(40%,2%) skew(33deg)' 
+   (2+2*Math.random())+
+   ') translate(40%,2%) skew(33deg)' 
   texctr[0].style.transform='scale('+(1.2+Math.random())+',1.6)'  
   plh[3].style.opacity=Math.random()
   plh[3].style.transform='scale('+
@@ -397,6 +411,7 @@ jws[0].onmouseout=()=>
   clearInterval(vctrI)
   jwI=setInterval(cl, 1000)
   shrm[0].onmouseout()
+ bgrnd[1].style.opacity=0
  jws[2].style.transform='scale(1)'
  jws[3].style.transform='scale(1)'
  jws[4].style.opacity=0
