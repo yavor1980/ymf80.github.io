@@ -65,6 +65,7 @@ body
  </div>
  <div class=vw></div>
  <div class=vw></div>
+ <div class=vw></div>
  
  <div class=cr>
   <div class=cr></div>
@@ -116,14 +117,25 @@ inn(rd,3, -19,39, 144,22, '#800')
  rd[3].style.transform='rotate(-22deg)'
 inn(rd,4, -19,39, 144,22, '#900')
  rd[4].style.transform='rotate(22deg)'
-inn(vw,0, 26,67, 22,22, '#ff0') 
+inn(vw,0, 26,67, 22,22, '') 
  vw[0].style.zIndex=-1 
+ vw[0].style.background=
+  'radial-gradient(#fff,#ff0)'
  vw[0].style.borderRadius=55+'%'
  vw[0].style.opacity=0.1 
-inn(vw,1, 66,24, 11,11, '#ff0') 
+inn(vw,1, 66,24, 11,11, '') 
  vw[1].style.zIndex=-1 
+ vw[1].style.background=
+  'radial-gradient(#fff,#ff0)'
  vw[1].style.borderRadius=55+'%'
  vw[1].style.opacity=0.1  
+inn(vw,2, 46,56, 11,11, '') 
+ vw[2].style.zIndex=-1 
+ vw[2].style.background=
+  'radial-gradient(#f00,#0f0)'
+ vw[2].style.borderRadius=55+'%'
+ vw[2].style.opacity=0
+ 
 prpl[0].style.left=6+'%'
 prpl[0].style.top=1+'%'
 prpl[0].style.transform='scale(0.4,2)'
@@ -234,7 +246,11 @@ cr[0].onmouseover=()=>
    33*Math.random()+'%,'+33*Math.random()+'%)' 
   vw[1].style.transform='scale('+
    (2+Math.random())+',1) translate('+
-   33*Math.random()+'%,'+33*Math.random()+'%)'  
+   33*Math.random()+'%,'+33*Math.random()+'%)' 
+  vw[2].style.opacity=0.9
+  vw[2].style.transform='scale('+
+   (2+Math.random())+',1) translate('+
+   33*Math.random()+'%,'+33*Math.random()+'%)' 
   fre[1].style.opacity=0.5
   fre[1].style.transform='scale('+(1+Math.random())+')'
   if(bdly)
@@ -264,6 +280,7 @@ cr[0].onmouseout=()=>
  vw[0].style.transform='scale(1)'
  vw[1].style.opacity=0.1
  vw[1].style.transform='scale(1)'
+ vw[2].style.opacity=0
  cr[0].style.borderRadius='5%'
  cr[0].style.boxShadow='9px 9px'
  cr[1].style.borderLeft=''
