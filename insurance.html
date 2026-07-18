@@ -16,18 +16,13 @@ input
 :text-align:center;
  transform:scale(1,2); 
 }
-button,select
-{
- cursor:pointer; 
-}
 select
 {
  background:#0ff; 
 }
-button
+select:hover
 {
  cursor:pointer;
- border-radius:21%; 
 }
 
 .btn
@@ -126,7 +121,7 @@ ttl[0].style.left=49+'%'
 ttl[0].style.top=11+'%'
 ttl[0].style.color='#600'
 ttl[0].style.transform='scale(3) skew(-12deg)'
-ttl[0].style.cursor='pointer'
+ttl[0].style.cursor='default'
 ttl[1].style.left=7+'%'
 ttl[1].style.top=8+'%'
 ttl[1].style.color='#bbb'
@@ -150,11 +145,13 @@ mnge[0].style.borderBottomRightRadius=12+'%'
 mnge[1].style.left=35+'%'
 mnge[1].style.top=76+'%' 
 mnge[1].style.background='#770'
+mnge[1].style.color='#f00'
 mnge[1].style.fontSize=0.6+'%' 
 mnge[1].style.transform='scale(3)'
 mnge[2].style.left=49+'%'
 mnge[2].style.top=76+'%' 
 mnge[2].style.background='#660' 
+mnge[2].style.color='#f00'
 mnge[2].style.fontSize=0.6+'%' 
 mnge[2].style.transform='scale(3)'
 
@@ -172,6 +169,7 @@ term[2].style.left=7+'%'
 term[2].style.top=60+'%'
 term[2].style.width=88+'%'
 term[2].style.height=33+'%'
+ term[2].disabled=1
 
 function abtn(i,clr,str)
 {
@@ -190,60 +188,61 @@ function abtn(i,clr,str)
    mnge[1].disabled=0
    mnge[2].disabled=0
   ttl[0].style.zIndex=1
-  ttl[0].style.transform='scale(5) skew(-8deg)'
+  ttl[0].style.transform=
+   'scale(5) translate(0,-52%) skew(-8deg)'
   ttl[3].style.color=clr 
   ttl[3].style.transform='scale(5) skew(-12deg)'
    ttl[3].innerHTML=str 
-  mnge[1].style.transform='scale(4)' 
+  mnge[1].style.cursor='pointer' 
+  mnge[1].style.transform=
+   'scale(5) translate(-25%,-25%)' 
+  mnge[2].style.cursor='pointer' 
  } 
 }
  abtn(0,'#f00','life'), abtn(1,'#00f','health'), 
  abtn(2,'#0f0','ownership'), abtn(3,'#fb0','auto'), 
  abtn(4,'#f0b','tourism')
  
-ttl[0].onmouseover=()=>
-{ 
- ttl[0].style.color='#900'
- ttl[0].style.transform='scale(3.4)'
-}
-ttl[0].onmouseout=()=>
-{ 
- ttl[0].style.color='#600'
- ttl[0].style.transform='scale(3) skew(-12deg)'
-}  
-
 ttl[2].onclick=()=>
 { 
  ttl[2].value='2000' 
 }  
 
+mnge[1].onmouseout=()=>
+{ 
+ ttl[0].innerHTML='Insurance'
+} 
 mnge[1].onclick=()=>
 { 
- ttl[0].innerHTML='You are insured!'
- ttl[3].innerHTML=''
- mnge[1].disabled=1
- mnge[2].disabled=1
+  ttl[0].innerHTML='You are insured!'
+  ttl[3].innerHTML=''
+ mnge[1].style.cursor='default' 
+  mnge[1].disabled=1
+ mnge[2].style.cursor='default'  
+  mnge[2].disabled=1
  term[1].style.transform='scale(2) translate(-53%,69%)'
- mnge[1].style.transform='scale(3)' 
+ mnge[1].style.transform='scale(3)'
+ term[2].style.cursor='pointer' 
+  term[2].disabled=0
 }
-mnge[1].onmouseout=()=>
+
+mnge[2].onmouseout=()=>
 { 
  ttl[0].innerHTML='Insurance'
 }  
 mnge[2].onclick=()=>
 { 
+ ttl[0].style.transform='scale(3) skew(-12deg)'
  ttl[3].innerHTML=''
  mnge[1].disabled=1
  mnge[2].disabled=1
-}  
-mnge[2].onmouseout=()=>
-{ 
- ttl[0].innerHTML='Insurance'
 }  
 
 term[2].onclick=()=>
 { 
  term[1].style.transform='scale(1)'
+ term[2].style.cursor='default' 
+  term[2].disabled=1
 }  
  
 //Ittl0=setInterval(()=>{
