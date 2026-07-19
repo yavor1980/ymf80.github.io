@@ -426,6 +426,12 @@ fet[0].onmouseover=()=>
   'scale(1,3) translate(0,-31%)'
  pin[2].style.opacity=1
  pin[2].style.transform='scale(1.2,1)'
+ Ifet=setInterval(()=>{
+  fet[1].style.transform='scale(1,'+
+   (3+Math.random())+') translate(0,31%)'
+  fet[2].style.transform='scale(1,'+
+   (3+Math.random())+') translate(0,-31%)'
+ }, 999)
 }
 fet[0].onmouseout=()=>
 {
@@ -435,6 +441,7 @@ fet[0].onmouseout=()=>
  fet[2].style.transform='scale(1)'
  pin[2].style.opacity=0.2 
  pin[2].style.transform='scale(1)'
+  clearInterval(Ifet)
 }
 
 
