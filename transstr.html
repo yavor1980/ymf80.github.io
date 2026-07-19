@@ -5,8 +5,8 @@
 
 #idbd
 {
- height:155%;
- background:linear-gradient(#bb0,#033); 
+ height:243%;
+ background:linear-gradient(#bb0,#066); 
 }
 
 button
@@ -35,7 +35,7 @@ button:hover
  z-index:1;
 }
 
-.tpnp,.fnctn,.smcndctr,.els,.pin
+.tpnp,.fnctn,.smcndctr,.els,.pin,.fet
 {
  position:absolute;
  transition:1s;
@@ -50,7 +50,7 @@ button:hover
 </style>
 
 <button>pnp</button>
-<div class=tpnp>bipolar<br>&nbsp transistor</div>
+<div class=tpnp>Bipolar<br>&nbsp transistor</div>
 
 <div class=pnp>
  <div class=pnp></div>
@@ -79,6 +79,14 @@ button:hover
  <div class=smcndctr></div>
 </div>
 
+<div class=fnctn>Field-effect <br>&nbsp &nbsp 
+  transistor</div>
+<div class=fet>
+ <div class=fet></div>
+ <div class=fet></div>
+ <div class=pin></div>
+</div>
+
 <script>
 btn=document.getElementsByTagName('button')
 pnp=document.getElementsByClassName('pnp')
@@ -87,6 +95,8 @@ fnctn=document.getElementsByClassName('fnctn')
 smcndctr=document.getElementsByClassName('smcndctr')
 pin=document.getElementsByClassName('pin')
 els=document.getElementsByClassName('els')
+
+fet=document.getElementsByClassName('fet')
 
 pnp[0].style.left=33+'%'
 pnp[0].style.top=33+'%'
@@ -131,8 +141,9 @@ pnp[5].style.transform='rotate(88deg)'
 
 tpnp[0].style.left=16+'%'
 tpnp[0].style.top=14+'%'
+tpnp[0].style.color='#fff'
 tpnp[0].style.cursor='pointer'
-tpnp[0].style.transform='scale(3) skew(-22deg)'
+tpnp[0].style.transform='scale(4) skew(-22deg)'
 tpnp[1].style.left=-57+'%'
 tpnp[1].style.top=23+'%'
 tpnp[1].style.opacity=0
@@ -166,6 +177,10 @@ fnctn[1].style.transform='scale(0)'
 fnctn[2].style.left=66+'%'
 fnctn[2].style.top=30+'%'
 fnctn[2].style.transform='scale(0)'
+fnctn[3].style.left=74+'%'
+fnctn[3].style.top=166+'%'
+fnctn[3].style.color='#fff'
+fnctn[3].style.transform='scale(4) skew(-22deg)'
 
 smcndctr[0].style.left=33+'%'
 smcndctr[0].style.top=107+'%'
@@ -208,13 +223,46 @@ pin[1].style.border='1px ridge #f00'
 pin[1].style.borderTop='12px ridge transparent'
 pin[1].style.borderBottom='12px ridge transparent'
 pin[1].style.opacity=0
+pin[2].style.left=37+'%'
+pin[2].style.top=-13+'%'
+pin[2].style.width=22+'%'
+pin[2].style.height=109+'%'
+pin[2].style.border='22px ridge #f00'
+pin[2].style.borderLeft='12px ridge transparent'
+pin[2].style.borderRight='12px ridge transparent'
+pin[2].style.opacity=0.2
 
-el=[7],ele=[7]
+fet[0].style.cursor='pointer'
+fet[0].style.left=23+'%'
+fet[0].style.top=187+'%'
+fet[0].style.width=55+'%'
+fet[0].style.height=39+'%'
+fet[0].style.background='#b00'
+fet[0].style.borderRadius=5+'%'
+fet[1].style.left=22+'%'
+fet[1].style.top=0+'%'
+fet[1].style.width=55+'%'
+fet[1].style.height=11+'%'
+fet[1].style.background='#ff0'
+fet[1].style.borderRadius=55+'%'
+fet[1].style.borderTopLeftRadius=5+'%'
+fet[1].style.borderTopRightRadius=5+'%'
+fet[2].style.left=22+'%'
+fet[2].style.top=89+'%'
+fet[2].style.width=55+'%'
+fet[2].style.height=11+'%'
+fet[2].style.background='#ff0'
+fet[2].style.borderRadius=55+'%'
+fet[2].style.borderBottomLeftRadius=5+'%'
+fet[2].style.borderBottomRightRadius=5+'%'
+
+
+el=[],ele=[]
 for(i=0;i<7;i++)
 {
  el[i]=document.createElement('div')
  el[i].className='els'
- smcndctr[0].appendChild(el[i])
+  smcndctr[0].appendChild(el[i])
  el[i].style.left=(10+30*Math.random())+'%'
  el[i].style.top=(5+90*Math.random())+'%'
  el[i].style.borderRadius=55+'%'
@@ -223,7 +271,7 @@ for(i=0;i<7;i++)
 {
  ele[i]=document.createElement('div')
  ele[i].className='els'
- smcndctr[3].appendChild(ele[i])
+  smcndctr[3].appendChild(ele[i])
  ele[i].style.left=(40+30*Math.random())+'%'
  ele[i].style.top=(5+90*Math.random())+'%'
  ele[i].style.borderRadius=55+'%'
@@ -254,6 +302,7 @@ Ipnp=0
 clr=0
 pnp[0].onmouseover=()=>
 {
+ tpnp[0].onmouseover()
  clr=7+Math.round(2*Math.random())
  Ipnp=setInterval(()=>{
   pnp[0].style.transform='scale('+
@@ -262,8 +311,6 @@ pnp[0].onmouseover=()=>
   pnp[5].style.transform='scale('+
    (1+Math.random())+') rotate(88deg)'
  }, 222)
- tpnp[0].style.color='#f00'
- tpnp[0].style.opacity=1
  tpnp[1].style.transform='scale(3) skew(22deg)'
  tpnp[1].style.color='#0f0' 
  tpnp[1].style.opacity=1
@@ -290,10 +337,10 @@ pnp[0].onmouseover=()=>
 }
 pnp[0].onmouseout=()=>
 {
+ tpnp[0].onmouseout()
   clearInterval(Ipnp)
  pnp[1].style.background='#707'
  pnp[5].style.transform='rotate(88deg)'
- tpnp[0].style.color='#000'
  tpnp[1].style.transform='scale(0)'
  tpnp[1].style.color='#f00' 
  tpnp[1].style.opacity=0
@@ -320,13 +367,13 @@ tpnp[0].onmouseover=()=>
 {
  tpnp[0].style.color='#b0b'
  tpnp[0].style.transform=
-  'scale(4) skew(-11deg)'
+  'scale(5) skew(-11deg)'
 }
 tpnp[0].onmouseout=()=>
 {
- tpnp[0].style.color='#000'
+ tpnp[0].style.color='#fff'
  tpnp[0].style.transform=
-  'scale(3) skew(-22deg)'
+  'scale(4) skew(-22deg)'
 }
 
 Ism=0
@@ -368,6 +415,28 @@ smcndctr[0].onmouseout=()=>
   ele[i].style.opacity=0
  } 
 }
+
+fet[0].onmouseover=()=>
+{
+ fnctn[3].style.color='#f0f'
+ fet[0].style.transform='scale(1.1)'
+ fet[1].style.transform=
+  'scale(1,3) translate(0,31%)'
+ fet[2].style.transform=
+  'scale(1,3) translate(0,-31%)'
+ pin[2].style.opacity=1
+ pin[2].style.transform='scale(1.2,1)'
+}
+fet[0].onmouseout=()=>
+{
+ fnctn[3].style.color='#fff'
+ fet[0].style.transform='scale(1)'
+ fet[1].style.transform='scale(1)'
+ fet[2].style.transform='scale(1)'
+ pin[2].style.opacity=0.2 
+ pin[2].style.transform='scale(1)'
+}
+
 
 </script>
 </body>
