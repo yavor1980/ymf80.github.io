@@ -75,6 +75,9 @@
 <div class=bldng>
  <div class=bldng></div>
 </div>
+<div class=bldng>
+ <div class=bldng></div>
+</div>
 
 <div class=tfre>flame</div>
  <div class=tfre>
@@ -111,6 +114,22 @@ bgrnd[1].style.background=
 bgrnd[1].style.borderBottomLeftRadius='25%'
 bgrnd[1].style.borderBottomRightRadius='25%'
 bgrnd[1].style.zIndex=-1 
+bgrnd[2].style.left=-16+'%'
+bgrnd[2].style.top=7+'%'  
+bgrnd[2].style.width=33+'%'
+bgrnd[2].style.height=44+'%'
+bgrnd[2].style.background=
+ 'radial-gradient(#eee,#a5a)'
+bgrnd[2].style.borderBottomLeftRadius='25%'
+bgrnd[2].style.borderBottomRightRadius='25%'
+bgrnd[3].style.left=83+'%'
+bgrnd[3].style.top=7+'%'  
+bgrnd[3].style.width=33+'%'
+bgrnd[3].style.height=44+'%'
+bgrnd[3].style.background=
+ 'radial-gradient(#eee,#a5a)'
+bgrnd[3].style.borderBottomLeftRadius=25+'%'
+bgrnd[3].style.borderBottomRightRadius=25+'%'
 blt[0].style.left=10+'%'
 blt[0].style.bottom=-19+'%'  
 blt[0].style.width=80+'%'
@@ -137,22 +156,7 @@ trsrs[1].style.width=6+'%'
 trsrs[1].style.height=99+'%'
 trsrs[1].style.background='#664'
 trsrs[1].style.borderRadius=9+'%'
-bgrnd[2].style.left=-16+'%'
-bgrnd[2].style.top=7+'%'  
-bgrnd[2].style.width=33+'%'
-bgrnd[2].style.height=44+'%'
-bgrnd[2].style.background=
- 'radial-gradient(#eee,#a5a)'
-bgrnd[2].style.borderBottomLeftRadius='25%'
-bgrnd[2].style.borderBottomRightRadius='25%'
-bgrnd[3].style.left=83+'%'
-bgrnd[3].style.top=7+'%'  
-bgrnd[3].style.width=33+'%'
-bgrnd[3].style.height=44+'%'
-bgrnd[3].style.background=
- 'radial-gradient(#eee,#a5a)'
-bgrnd[3].style.borderBottomLeftRadius=25+'%'
-bgrnd[3].style.borderBottomRightRadius=25+'%'
+
 elbw[0].style.left=-6+'%'
 elbw[0].style.top=62+'%'  
 elbw[0].style.width=99+'%'
@@ -288,7 +292,6 @@ smk[0].style.borderTopLeftRadius=17+'%'
 smk[0].style.borderTopRightRadius=33+'%'
 smk[0].style.borderBottomLeftRadius=12+'%'
 smk[0].style.borderBottomRightRadius=12+'%'
-smk[0].style.cursor='pointer'
 smk[1].style.left=19+'%'
 smk[1].style.top=-13+'%'  
 smk[1].style.width=33+'%'
@@ -330,20 +333,27 @@ bldng[1].style.width=88+'%'
 bldng[1].style.height=88+'%' 
 bldng[1].style.background='#200'
 bldng[1].style.borderRadius=7+'%' 
+
+bldng[2].style.zIndex=-2
+bldng[2].style.left=70+'%'
+bldng[2].style.top=18+'%'  
+bldng[2].style.width=22+'%'
+bldng[2].style.height=18+'%' 
+bldng[2].style.background='#880'
+bldng[2].style.borderRadius=17+'%' 
+bldng[3].style.left=4+'%'
+bldng[3].style.top=3+'%'  
+bldng[3].style.width=88+'%'
+bldng[3].style.height=88+'%' 
+bldng[3].style.background='#200'
+bldng[3].style.borderRadius=7+'%' 
 	 
-tfre[0].style.left=66+'%'
-tfre[0].style.top=11+'%'
-tfre[0].style.color='#b00'
-tfre[0].style.transform=
- 'scale(3) skew(-11deg)'
-tfre[0].style.cursor='pointer'	 
-	 
-tfre[0].style.left=66+'%'
-tfre[0].style.top=11+'%'
-tfre[0].style.color='#b00'
-tfre[0].style.transform=
- 'scale(3) skew(-11deg)'
 tfre[0].style.cursor='pointer'
+tfre[0].style.left=66+'%'
+tfre[0].style.top=11+'%'
+tfre[0].style.color='#b00'
+tfre[0].style.transform=
+ 'scale(3) skew(-11deg)'
 tfre[1].style.left=55+'%'
 tfre[1].style.top=12+'%' 
 tfre[1].style.color='#f00'
@@ -384,20 +394,30 @@ fc[0].onmouseover=()=>
  smk[3].style.top=0+'%'
  mth[3].style.transform=
    'scale(2.0,1.0) translate(11%,-6%) rotate(-9deg)'
- bldng[0].style.transform='scale(1.4) translate(71%,-33%)'  
- bldng[1].style.background='radial-gradient(#ff0,#f00)'
+ bldng[0].style.transform=
+  'scale(1.4) translate(71%,-33%)'  
+ bldng[1].style.background=
+  'radial-gradient(#ff0,#f00)'
+ bldng[2].style.transform=
+  'scale(1.4) translate(-7%,193%)'  
+ bldng[3].style.background=
+  'radial-gradient(#f0f,#900)'
  trsrs[0].style.borderRadius=15+'%'   
  trsrs[1].style.borderRadius=55+'%'  
  trsrs[1].style.transform='scale(4,1)'  
  Ifc=setInterval(()=>{ 
     vfce=Math.random()*100+33
   bldng[1].style.background=
-  'radial-gradient('+vfce+
-  'px,#ff0,#f00)'
+   'radial-gradient('+vfce+
+   'px,#ff0,#f00)'
+  bldng[3].style.background=
+   'radial-gradient('+vfce+
+   'px,#f0f,#900)'
   smk[2].style.background=
    'radial-gradient(#ff0,#f00)'
   smk[2].style.borderTopLeftRadius=Math.random()*44+'%'
-  smk[2].style.borderTopRightRadius=Math.random()*44+'%'
+  smk[2].style.borderTopRightRadius=
+   Math.random()*44+'%'
   smk[2].style.transform='scale('+(0.4+Math.random())+
    ') translate(0,-55%)'
  }, 999) 
@@ -438,6 +458,8 @@ fc[0].onmouseout=()=>
  smk[3].style.top=-8+'%'
  bldng[0].style.transform='scale(1)' 
  bldng[1].style.background='#000'
+ bldng[2].style.transform='scale(1)' 
+ bldng[3].style.background='#000' 
  trsrs[0].style.borderRadius=0+'%' 
  trsrs[1].style.borderRadius=0+'%'
  trsrs[1].style.transform='scale(1)' 
@@ -462,22 +484,6 @@ fc[0].onmouseout=()=>
  elbw[3].style.opacity=0.2
  elbw[3].style.transform='scale(1)'
   clearInterval(Ifc)
-}
-
-smk[0].onmouseover=()=>
-{   
- smk[0].style.transform='scale(1.1)'
- smk[2].style.opacity=0.4
- smk[2].style.transform=
-  'scale(1) translate(0,-55%)'
-  fc[0].onmouseover()
-}  
-smk[0].onmouseout=()=>
-{   
- smk[0].style.transform='scale(1)'
- smk[2].style.opacity=0
- smk[2].style.transform='scale(0)'
-  fc[0].onmouseout()
 }
 
 tfre[0].onmouseover=()=>
