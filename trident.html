@@ -4,7 +4,7 @@
 <style>
 #idb
 {
- height:187%;
+ height:198%;
  background:radial-gradient(#333,#999);
 }
 
@@ -252,16 +252,23 @@ trdnt[0].onmouseout=()=>
  }
 }
  
+Ifngrs=0
 fngrs[0].onmouseover=()=>
 {
  fngrs[0].style.background=
   'radial-gradient(#ff0,#00f,#f00,#000,#f00)'
- fngrs[0].style.transform='scale(1.2)'
+ Ifngrs=setInterval(()=>{
+  fngrs[0].style.transform='scale('+
+   (1+Math.random()/4)+')'
+  }, 999)
+  
+  fngrs[0].style.transform='scale(1.2)'
 }
 fngrs[0].onmouseout=()=>
 {
  fngrs[0].style.background='#900'
  fngrs[0].style.transform='scale(1)'
+  clearInterval(Ifngrs)
 }
 
 //for(var i=0;i<n;i++
