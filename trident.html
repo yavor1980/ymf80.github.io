@@ -4,6 +4,7 @@
 <style>
 #idb
 {
+ height:187%;
  background:radial-gradient(#333,#999);
 }
 
@@ -13,7 +14,7 @@
  transition:1s;
  cursor:pointer;
 }
-.ttl
+.ttl,.fngrs
 {
  position:absolute;
  transition:1s;
@@ -48,10 +49,15 @@
 <div class=ttl></div> 
 <div class=ttl></div>
 
+<div class=fngrs></div> 
+<div class=fngrs></div> 
+<div class=fngrs></div>
+
 <script>
 trdnt=document.getElementsByClassName('trdnt')
 ltra=document.getElementsByClassName('ltra')
 ttl=document.getElementsByClassName('ttl')
+fngrs=document.getElementsByClassName('fngrs')
 
 trdnt[0].style.left=16+'%'
 trdnt[0].style.top=6+'%'
@@ -112,6 +118,7 @@ for(i=0;i<7;i++)
  ltra[i].style.top=(34+i*15)+'%'
 }
  ltra[1].style.left=99+'%'
+ 
 ttl[0].style.left=29+'%'
 ttl[0].style.top=5+'%'
 ttl[0].style.color='#444'
@@ -133,11 +140,18 @@ ttl[2].style.borderRadius=55+'%'
 ttl[2].style.opacity=0.6
 ttl[2].style.zIndex=-2
 
+fngrs[0].style.cursor='pointer'
+fngrs[0].style.left=12+'%'
+fngrs[0].style.top=107+'%'
+fngrs[0].style.width=77+'%'
+fngrs[0].style.height=77+'%'
+fngrs[0].style.background='#900'
+fngrs[0].style.borderRadius=55+'%'
+
 Icl=0
 function fcl()
 {
  vcl=1+Math.random()/2
- //trdnt[1].style.transform='scale('+vcl+')'
  trdnt[2].style.transform='scale('+vcl+',1)'
  trdnt[3].style.transform='scale('+vcl+',1)'
  trdnt[4].style.transform='scale('+vcl+',1)'
@@ -149,10 +163,10 @@ function ftrdnt()
 {
  for(i=0;i<7;i++)
   ltra[i].style.transform=
-   'scale('+(7+3*Math.random())+') translate(122%,-98%) skew('
+   'scale('+(7+3*Math.random())+
+   ') translate(122%,-98%) skew('
    +(22*Math.random()-11)+'deg)'
-}
- ftrdnt()
+} ftrdnt()
  
 function fttl()
 { 
@@ -233,8 +247,19 @@ trdnt[0].onmouseout=()=>
  ttl[2].style.borderRadius=55+'%'
  ttl[2].style.border=''
   clearInterval(Itrdnt)
- for(i=0;i<7;i++)
+ for(i=0;i<7;i++){
   ltra[i].style.opacity=0.1
+ }
+}
+ 
+fngrs[0].onmouseover=()=>
+{
+ fngrs[0].style.background=
+  'radial-gradient(#f00,#000,#f00,#000)'
+}
+fngrs[0].onmouseout=()=>
+{
+ fngrs[0].style.background='#900'
 }
 
 //for(var i=0;i<n;i++
