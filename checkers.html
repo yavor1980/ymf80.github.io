@@ -4,6 +4,7 @@
 <style>
 #idbd
 {
+ height:199%;
  background:radial-gradient(#0bb,#bb0);
 }
 
@@ -45,6 +46,12 @@
 {
  position:absolute;
  transition:1s;
+ left:11%;
+ top:111%;
+ width:66%;
+ height:66%;
+ border:33px ridge #800;
+ border-radius:55%;
 }
 
 </style>
@@ -55,7 +62,10 @@
 
 <div class=dsk></div>
 
-<div class=grscpe></div>
+<div class=grscpe>
+ <div class=grscpe></div>
+ <div class=grscpe></div>
+</div>
 
 <script>
 btn=document.getElementsByClassName("btn")
@@ -340,6 +350,27 @@ clb(0); clb(1); clb(2);
 clb(3); clb(4); clb(5);
 clb(6); clb(7); clb(8);
 clb(9); clb(10); clb(11);	
+
+grscpe[0].style.cursor='pointer'
+grscpe[1].style.top=11+'%'
+grscpe[1].style.transform='scale(1.25)'
+grscpe[2].style.top=11+'%'
+grscpe[2].style.transform='scale(0.9)'
+
+Igrscpe=0, bgrscpe=0
+grscpe[0].onmouseover=()=>
+{ 
+if(bgrscpe) 
+ grscpe[0].style.transform='scale('+
+  Math.random()+',1)'
+else  
+ grscpe[0].style.transform='scale(1,'+Math.random()+')'
+    bgrscpe=Math.round(Math.random())
+}
+grscpe[0].onmouseout=()=>
+{ 
+ 
+}	
 
 </script>
 </body>
