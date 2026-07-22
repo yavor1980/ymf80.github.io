@@ -38,22 +38,31 @@
  width:50px;
  height:50px;
  border-radius:50%;
- font-size:2em;
  text-align:center;
+}
+
+.grscpe
+{
+ position:absolute;
+ transition:1s;
 }
 
 </style>
 <button class=btn >Go..</button>
 <button class=btn >Stay</button>
 <button class=btn >Mix</button>
-<button class=btn >Step</button>
+<button class=btn >Lux</button>
 
 <div class=dsk></div>
 
+<div class=grscpe></div>
+
 <script>
 btn=document.getElementsByClassName("btn")
-dsk=document.getElementsByClassName("dsk")
 ttpl=document.getElementsByClassName("ttpl")
+dsk=document.getElementsByClassName("dsk")
+
+grscpe=document.getElementsByClassName("grscpe")
    
 btn[0].style.right=5+'%'
 btn[0].style.top=11+'%'
@@ -77,6 +86,9 @@ btn[3].style.color='#eee'
 btn[3].style.transform='scale(3)' 
    
 cl=[], icl=[], jcl=[]
+dsk[0].style.border='5px ridge #909' 
+dsk[0].style.transform= 
+ 'scale(1.6) translate(11%,11%)'
 for(i=0;i<8;i++)
  for(j=0;j<8;j++)
  {
@@ -91,10 +103,7 @@ for(i=0;i<8;i++)
    cl[i].style.background='#aaa'
   }  
  }
- dsk[0].style.border='5px ridge #909' 
- dsk[0].style.transform= 
-  'scale(1.6) translate(11%,11%)'
- 
+  
 wf=[], bf=[]
 for(i=0;i<12;i++)    
 { 
@@ -144,7 +153,6 @@ function arrfgr()
 }
   arrfgr()
 
-Isi=0
 bmv=1
 function mv()
 {
@@ -156,7 +164,6 @@ function mv()
    'scale(1.2) translate(0,15%) skew(-33deg)'
  bmv=!bmv
 }
-
 bbtn0=0 
 btn[0].onclick=()=>
 {
@@ -197,24 +204,24 @@ btn[3].onclick=()=>
  { 
   wf[i].style.background=
    'radial-gradient(14px,#000,#b00)' 
-  wf[i].style.transform='scale(1.2)' 
   wf[i].style.border='2px ridge #800'
+  wf[i].style.transform='scale(1.2)' 
   bf[i].style.background=
    'radial-gradient(14px,#000,#0b0)' 
+  bf[i].style.border='2px ridge #800' 
   bf[i].style.transform='scale(1.2)' 
-  bf[i].style.border='2px ridge #800'
  } 
  setTimeout(()=>{
   for(i=0;i<12;i++)
   {
    wf[i].style.background=
     'radial-gradient(14px,#999,#ccc)'
-   wf[i].style.transform='scale(1)' 
    wf[i].style.border='none'
+   wf[i].style.transform='scale(1)' 
    bf[i].style.background=
     'radial-gradient(14px,#555,#222)' 
-   bf[i].style.transform='scale(1)'  
    bf[i].style.border='none'
+   bf[i].style.transform='scale(1)'  
   } 
  }, 999)
 }	
