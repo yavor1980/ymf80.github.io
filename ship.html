@@ -61,7 +61,6 @@ body
 {
  position:absolute;
  transition:1s;
- cursor:pointer;
 }
 .ttnm
 {
@@ -117,6 +116,7 @@ body
  <div class=hlcptr>
   <div class=hlcptr></div>
   <div class=mgun></div> 
+   <div class=mgun></div> 
  </div> 
 </div>
 
@@ -300,6 +300,12 @@ mgun[3].style.borderRadius=55+'%'
 mgun[3].style.border='12px ridge #500' 
 mgun[3].style.borderBottom='transparent' 
 mgun[3].style.opacity=0.2
+mgun[4].style.top=249+'%'
+mgun[4].style.width=299+'%'
+mgun[4].style.height=9+'%'
+mgun[4].style.borderRadius=55+'%' 
+mgun[4].style.borderBottom='4px ridge #f00' 
+mgun[4].style.opacity=0
 
 prscpe[0].style.zIndex=-1
 prscpe[0].style.left=12+'%'
@@ -367,6 +373,7 @@ function cl()
  mgun[2].style.transform='scale('+(1+Math.random())+')'
  mgun[3].style.transform='scale('+(3+Math.random())+
   ',1) translate(0,67%)'
+ mgun[4].style.transform='scale('+(1+Math.random())+')' 
  mne[0].style.transform='scale(2) translate('+
  155*Math.random()+'%,'+ 55*Math.random()+'%)' 
  if(b)
@@ -523,6 +530,7 @@ sh[0].onmouseover=()=>
  hlcptr[3].style.opacity=1
  mgun[2].style.opacity=0.2
  mgun[3].style.opacity=0.8
+ mgun[4].style.opacity=0.8
  mne[0].style.opacity=0
 }
 sh[0].onmouseout=()=>
@@ -542,6 +550,7 @@ sh[0].onmouseout=()=>
  hlcptr[3].style.opacity=0.2
  mgun[2].style.opacity=0
  mgun[3].style.opacity=0.2
+ mne[0].style.opacity=0
  mne[0].style.opacity=1
 }
 
