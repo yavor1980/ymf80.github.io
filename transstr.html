@@ -85,7 +85,10 @@ button:hover
  <div class=fet></div>
  <div class=fet></div>
  <div class=pin></div>
+
 </div>
+<div class=pin></div>
+
 
 <script>
 btn=document.getElementsByTagName('button')
@@ -141,7 +144,7 @@ pnp[5].style.transform='rotate(88deg)'
 
 tpnp[0].style.left=16+'%'
 tpnp[0].style.top=14+'%'
-tpnp[0].style.color='#fff'
+tpnp[0].style.color='#ddd'
 tpnp[0].style.cursor='pointer'
 tpnp[0].style.transform='scale(4) skew(-22deg)'
 tpnp[1].style.left=-57+'%'
@@ -179,7 +182,7 @@ fnctn[2].style.top=30+'%'
 fnctn[2].style.transform='scale(0)'
 fnctn[3].style.left=74+'%'
 fnctn[3].style.top=166+'%'
-fnctn[3].style.color='#fff'
+fnctn[3].style.color='#ddd'
 fnctn[3].style.transform='scale(4) skew(-22deg)'
 
 smcndctr[0].style.left=33+'%'
@@ -231,6 +234,13 @@ pin[2].style.border='22px ridge #f00'
 pin[2].style.borderLeft='12px ridge transparent'
 pin[2].style.borderRight='12px ridge transparent'
 pin[2].style.opacity=0.2
+pin[3].style.zIndex=-1
+pin[3].style.left=8+'%'
+pin[3].style.top=202+'%'
+pin[3].style.width=82+'%'
+pin[3].style.height=9+'%'
+pin[3].style.background='#700'
+pin[3].style.borderRadius=9+'%'
 
 fet[0].style.cursor='pointer'
 fet[0].style.left=23+'%'
@@ -255,7 +265,6 @@ fet[2].style.background='#ff0'
 fet[2].style.borderRadius=55+'%'
 fet[2].style.borderBottomLeftRadius=5+'%'
 fet[2].style.borderBottomRightRadius=5+'%'
-
 
 el=[],ele=[]
 for(i=0;i<7;i++)
@@ -365,13 +374,13 @@ pnp[0].onmouseout=()=>
 
 tpnp[0].onmouseover=()=>
 {
- tpnp[0].style.color='#b0b'
+ tpnp[0].style.color='#fff'
  tpnp[0].style.transform=
   'scale(5) skew(-11deg)'
 }
 tpnp[0].onmouseout=()=>
 {
- tpnp[0].style.color='#fff'
+ tpnp[0].style.color='#ddd'
  tpnp[0].style.transform=
   'scale(4) skew(-22deg)'
 }
@@ -418,7 +427,8 @@ smcndctr[0].onmouseout=()=>
 
 fet[0].onmouseover=()=>
 {
- fnctn[3].style.color='#f0f'
+ fnctn[3].style.color='#fff'
+ fnctn[3].style.transform='scale(5) skew(-11deg)'
  fet[0].style.transform='scale(1.1)'
  fet[1].style.transform=
   'scale(1,3) translate(0,31%)'
@@ -431,16 +441,20 @@ fet[0].onmouseover=()=>
    (3+Math.random())+') translate(0,31%)'
   fet[2].style.transform='scale(1,'+
    (3+Math.random())+') translate(0,-31%)'
+  pin[3].style.transform='scale('+
+   (1+Math.random()/5)+')' 
  }, 999)
 }
 fet[0].onmouseout=()=>
 {
- fnctn[3].style.color='#fff'
+ fnctn[3].style.color='#ddd'
+ fnctn[3].style.transform='scale(4) skew(-22deg)'
  fet[0].style.transform='scale(1)'
  fet[1].style.transform='scale(1)'
  fet[2].style.transform='scale(1)'
  pin[2].style.opacity=0.2 
  pin[2].style.transform='scale(1)'
+ pin[3].style.transform='scale(1)'
   clearInterval(Ifet)
 }
 
