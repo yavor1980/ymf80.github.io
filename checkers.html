@@ -66,6 +66,7 @@
  <div class=grscpe></div>
  <div class=grscpe></div>
 </div>
+<div class=grscpe>Gyroscope</div>
 
 <script>
 btn=document.getElementsByClassName("btn")
@@ -356,20 +357,39 @@ grscpe[1].style.top=11+'%'
 grscpe[1].style.transform='scale(1.25)'
 grscpe[2].style.top=11+'%'
 grscpe[2].style.transform='scale(0.9)'
+grscpe[3].style.top=71+'%'
+grscpe[3].style.width=0+'%'
+grscpe[3].style.height=0+'%'
+grscpe[3].style.border='none'
+grscpe[3].style.transform='scale(3)'
 
 Igrscpe=0, bgrscpe=0
 grscpe[0].onmouseover=()=>
 { 
-if(bgrscpe) 
+Igrscpe=setInterval(()=>{
+if(bgrscpe) {
  grscpe[0].style.transform='scale('+
   Math.random()+',1)'
-else  
+ grscpe[1].style.transform='scale('+
+  Math.random()+',1)'
+ grscpe[2].style.transform='scale('+
+  Math.random()+',1)' 
+}else{  
  grscpe[0].style.transform='scale(1,'+Math.random()+')'
-    bgrscpe=Math.round(Math.random())
+   bgrscpe=Math.round(Math.random())
+ grscpe[1].style.transform='scale(1,'+Math.random()+')'
+   bgrscpe=Math.round(Math.random())	
+  grscpe[2].style.transform='scale(1,'+Math.random()+')'
+   bgrscpe=Math.round(Math.random())	
+ }	
+ }, 999)
 }
 grscpe[0].onmouseout=()=>
 { 
- 
+  clearInterval(Igrscpe)
+ grscpe[0].style.transform='scale(1)'
+ grscpe[1].style.transform='scale(1.25)'
+ grscpe[2].style.transform='scale(0.9)'
 }	
 
 </script>
