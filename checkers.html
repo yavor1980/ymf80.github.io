@@ -47,7 +47,7 @@
  position:absolute;
  transition:1s;
  left:11%;
- top:111%;
+ top:122%;
  width:66%;
  height:66%;
  border:33px ridge #800;
@@ -357,15 +357,22 @@ grscpe[1].style.top=11+'%'
 grscpe[1].style.transform='scale(1.25)'
 grscpe[2].style.top=11+'%'
 grscpe[2].style.transform='scale(0.9)'
-grscpe[3].style.top=71+'%'
+grscpe[3].style.left=66+'%'
+grscpe[3].style.top=105+'%'
 grscpe[3].style.width=0+'%'
 grscpe[3].style.height=0+'%'
 grscpe[3].style.border='none'
+grscpe[3].style.color='#009'
+grscpe[3].style.opacity=0.4
 grscpe[3].style.transform='scale(3)'
 
 Igrscpe=0, bgrscpe=0
 grscpe[0].onmouseover=()=>
 { 
+grscpe[3].style.color='#00f'
+grscpe[3].style.opacity=1
+grscpe[3].style.transform=
+ 'scale(4) translate(-37px,-4px) skew(-22deg)'
 Igrscpe=setInterval(()=>{
 if(bgrscpe) {
  grscpe[0].style.transform='scale('+
@@ -390,6 +397,9 @@ grscpe[0].onmouseout=()=>
  grscpe[0].style.transform='scale(1)'
  grscpe[1].style.transform='scale(1.25)'
  grscpe[2].style.transform='scale(0.9)'
+ grscpe[3].style.color='#009'
+ grscpe[3].style.opacity=0.4
+ grscpe[3].style.transform='scale(3)'
 }	
 
 </script>
