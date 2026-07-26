@@ -4,7 +4,7 @@
 <style>
 #idb
 {
- height:198%;
+ height:200%;
  background:radial-gradient(#333,#999);
 }
 
@@ -50,7 +50,7 @@
 <div class=ttl></div>
 
 <div class=fngrs></div> 
-<div class=fngrs></div> 
+<div class=fngrs>Gradient fill</div> 
 <div class=fngrs></div>
 
 <script>
@@ -142,11 +142,15 @@ ttl[2].style.zIndex=-2
 
 fngrs[0].style.cursor='pointer'
 fngrs[0].style.left=12+'%'
-fngrs[0].style.top=107+'%'
+fngrs[0].style.top=120+'%'
 fngrs[0].style.width=77+'%'
 fngrs[0].style.height=77+'%'
 fngrs[0].style.background='#900'
 fngrs[0].style.borderRadius=55+'%'
+fngrs[1].style.left=72+'%'
+fngrs[1].style.top=100+'%'
+fngrs[1].style.color='#090'
+fngrs[1].style.opacity=0.6
 
 Icl=0
 function fcl()
@@ -257,17 +261,24 @@ fngrs[0].onmouseover=()=>
 {
  fngrs[0].style.background=
   'radial-gradient(#ff0,#00f,#f00,#000,#f00)'
+ fngrs[0].style.transform=
+  'scale(1.2) translate(-22px,0)'  
+ fngrs[1].style.color='#0f0'
+ fngrs[1].style.opacity=1
+ fngrs[1].style.transform=
+  'scale(5) translate(-22px,-8px) skew(-22deg)'
  Ifngrs=setInterval(()=>{
   fngrs[0].style.transform='scale('+
-   (1+Math.random()/4)+')'
+   (1+Math.random()/4)+') translate(0,-22px)'
   }, 999)
-  
-  fngrs[0].style.transform='scale(1.2)'
 }
 fngrs[0].onmouseout=()=>
-{
+{ 
  fngrs[0].style.background='#900'
  fngrs[0].style.transform='scale(1)'
+ fngrs[1].style.color='#090'
+ fngrs[1].style.opacity=0.6
+ fngrs[1].style.transform='scale(3)'
   clearInterval(Ifngrs)
 }
 
