@@ -7,6 +7,7 @@
 <style>
 #idbd
 {
+ height:200%;
  background:radial-gradient(#666,#bbb);
 }
 input
@@ -68,7 +69,9 @@ input
   <div class=wlcme>O</div>
   <div class=wlcme>M</div>
   <div class=wlcme>E</div>
- </div>  
+ </div> 
+ 
+<div class=ttl></div>
  
 <script>
 btn=document.getElementsByClassName('btn')
@@ -156,6 +159,14 @@ wlcme[7].style.color='#707'
 wlcme[8].style.left=99+'%'
 wlcme[8].style.top=60+'%' 
 wlcme[8].style.color='#505'
+
+ttl[3].style.left=4+'%'
+ttl[3].style.top=111+'%'
+ttl[3].style.width=90+'%'
+ttl[3].style.height=60+'%'
+ttl[3].style.background='#505'
+ttl[3].style.opacity=1
+ttl[3].style.borderRadius=7+'%'
 
 var Icl=0
 function cl()
@@ -288,6 +299,30 @@ wrld[0].onmouseover=()=>
 wrld[0].onmouseout=()=>
 { 
  hllo[0].onmouseout()
+} 
+
+Ittl=0
+ttl[3].onmouseover=()=>
+{  
+ ttl[3].style.background=
+  'radial-gradient(#505,#900)'
+Ittl=setInterval(()=>{
+ ttl[3].style.borderTopLeftRadius=
+  55*Math.random()+'%'
+ ttl[3].style.borderTopRightRadius=
+  55*Math.random()+'%' 
+ ttl[3].style.borderBottomLeftRadius=
+  55*Math.random()+'%' 
+ ttl[3].style.borderBottomRightRadius=
+  55*Math.random()+'%' 
+ }, 1000) 
+  
+} 
+ttl[3].onmouseout=()=>
+{ 
+    clearInterval(Ittl)
+ ttl[3].style.background='#505'	
+ ttl[3].style.borderRadius=7+'%'
 } 
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
