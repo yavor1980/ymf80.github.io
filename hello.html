@@ -39,7 +39,7 @@ input
 }
 .dts
  {
-  top:95%;
+  top:116%;
   width:20%;
   height:9%;
   background:#fff;
@@ -86,6 +86,7 @@ input
 <div class=dts></div>
 <div class=dts></div>
 <div class=dts></div>
+<div class=dts>DEGREES:</div>
  
 <script>
 btn=document.getElementsByClassName('btn')
@@ -176,7 +177,7 @@ wlcme[8].style.top=60+'%'
 wlcme[8].style.color='#505'
 
 ttl[3].style.left=4+'%'
-ttl[3].style.top=111+'%'
+ttl[3].style.top=133+'%'
 ttl[3].style.width=90+'%'
 ttl[3].style.height=60+'%'
 ttl[3].style.background='#505'
@@ -186,6 +187,12 @@ dts[0].style.left=4+'%'
 dts[1].style.right=4+'%'
 dts[2].style.left=28+'%'
 dts[3].style.left=52+'%'
+dts[4].style.left=26+'%'
+dts[4].style.top=92+'%'
+dts[4].style.background='none'
+dts[4].style.color='#ff0'
+dts[4].style.opacity=0
+dts[4].style.transform='scale(2.4) Skew(-22deg)'
 
 var Icl=0
 function cl()
@@ -333,6 +340,7 @@ ttl[3].onmouseover=()=>
  dts[2].innerHTML=0
  dts[3].style.opacity=1 
  dts[3].innerHTML=0
+ dts[4].style.opacity=1
 Ittl=setInterval(()=>{
  c1=55*Math.random()
  ttl[3].style.borderTopLeftRadius=c1+'%'
@@ -351,7 +359,7 @@ Ittl=setInterval(()=>{
  c4=Math.round(c4)
   dts[3].innerHTML=c4
  }, 1000) 
-  
+
 } 
 ttl[3].onmouseout=()=>
 { 
@@ -366,6 +374,7 @@ ttl[3].onmouseout=()=>
  dts[2].innerHTML=''
  dts[3].style.opacity=0.4
  dts[3].innerHTML=''
+ dts[4].style.opacity=0
 } 
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
