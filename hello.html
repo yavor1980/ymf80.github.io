@@ -24,7 +24,7 @@ input
  transform:scale(1.2);
  cursor:pointer;
 }
-.hllo,.wrld,.ttl,.wlcme
+.hllo,.wrld,.ttl,.wlcme,.dts
 {
  position:absolute;   
  transition:1s;
@@ -37,6 +37,16 @@ input
  top:25%;
  opacity:0;
 }
+.dts
+ {
+  top:95%;
+  width:20%;
+  height:9%;
+  background:#fff;
+  opacity:0.4;
+  font-size:4em;
+  text-align:center;
+ }
  
 </style>
 <input type='submit' value='Skew' class='btn' >
@@ -72,6 +82,10 @@ input
  </div> 
  
 <div class=ttl></div>
+<div class=dts></div>
+<div class=dts></div>
+<div class=dts></div>
+<div class=dts></div>
  
 <script>
 btn=document.getElementsByClassName('btn')
@@ -79,6 +93,7 @@ hllo=document.getElementsByClassName('hllo')
 wrld=document.getElementsByClassName('wrld')
 ttl=document.getElementsByClassName('ttl')
 wlcme=document.getElementsByClassName('wlcme')
+dts=document.getElementsByClassName('dts')  
   
 btn[0].style.left=83+'%'
 btn[0].style.top=5+'%'  
@@ -167,6 +182,10 @@ ttl[3].style.height=60+'%'
 ttl[3].style.background='#505'
 ttl[3].style.opacity=1
 ttl[3].style.borderRadius=7+'%'
+dts[0].style.left=4+'%'
+dts[1].style.right=4+'%'
+dts[2].style.left=28+'%'
+dts[3].style.left=52+'%'
 
 var Icl=0
 function cl()
@@ -306,15 +325,31 @@ ttl[3].onmouseover=()=>
 {  
  ttl[3].style.background=
   'radial-gradient(#505,#900)'
+ dts[0].style.opacity=1
+ dts[0].innerHTML=0
+ dts[1].style.opacity=1
+ dts[1].innerHTML=0
+ dts[2].style.opacity=1
+ dts[2].innerHTML=0
+ dts[3].style.opacity=1 
+ dts[3].innerHTML=0
 Ittl=setInterval(()=>{
- ttl[3].style.borderTopLeftRadius=
-  55*Math.random()+'%'
- ttl[3].style.borderTopRightRadius=
-  55*Math.random()+'%' 
- ttl[3].style.borderBottomLeftRadius=
-  55*Math.random()+'%' 
- ttl[3].style.borderBottomRightRadius=
-  55*Math.random()+'%' 
+ c1=55*Math.random()
+ ttl[3].style.borderTopLeftRadius=c1+'%'
+ c1=Math.round(c1)
+  dts[0].innerHTML=c1
+ c2=55*Math.random()
+ ttl[3].style.borderTopRightRadius=c2+'%' 
+ c2=Math.round(c2)
+  dts[1].innerHTML=c2
+ c3=55*Math.random()
+ ttl[3].style.borderBottomLeftRadius=c3+'%' 
+ c3=Math.round(c3)
+  dts[2].innerHTML=c3
+ c4=55*Math.random()
+ ttl[3].style.borderBottomRightRadius=c4+'%' 
+ c4=Math.round(c4)
+  dts[3].innerHTML=c4
  }, 1000) 
   
 } 
@@ -323,6 +358,14 @@ ttl[3].onmouseout=()=>
     clearInterval(Ittl)
  ttl[3].style.background='#505'	
  ttl[3].style.borderRadius=7+'%'
+ dts[0].style.opacity=0.4
+ dts[0].innerHTML=''
+ dts[1].style.opacity=0.4
+ dts[1].innerHTML=''
+ dts[2].style.opacity=0.4
+ dts[2].innerHTML=''
+ dts[3].style.opacity=0.4
+ dts[3].innerHTML=''
 } 
 
 //  ii0=setInterval(()=>clk(rw0), 1000)
