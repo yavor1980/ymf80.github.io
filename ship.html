@@ -116,7 +116,8 @@ body
  <div class=hlcptr>
   <div class=hlcptr></div>
   <div class=mgun></div> 
-   <div class=mgun></div> 
+   <div class=mgun></div>
+   <div class=mgun></div>
  </div> 
 </div>
 
@@ -304,8 +305,14 @@ mgun[4].style.top=249+'%'
 mgun[4].style.width=299+'%'
 mgun[4].style.height=9+'%'
 mgun[4].style.borderRadius=55+'%' 
-mgun[4].style.borderBottom='4px ridge #f00' 
+mgun[4].style.borderBottom='9px ridge #f00' 
 mgun[4].style.opacity=0
+mgun[5].style.top=222+'%'
+mgun[5].style.width=299+'%'
+mgun[5].style.height=9+'%'
+mgun[5].style.borderRadius=55+'%' 
+mgun[5].style.borderBottom='9px ridge #f00' 
+mgun[5].style.opacity=0
 
 prscpe[0].style.zIndex=-1
 prscpe[0].style.left=12+'%'
@@ -376,6 +383,9 @@ function cl()
  mgun[4].style.transform='scale('+(1+
   Math.random())+') translate(0,'+
   575*Math.random()+'%)'
+ mgun[5].style.transform='scale('+(1+
+  Math.random())+') translate(0,'+
+  575*Math.random()+'%)' 
  mne[0].style.transform='scale(2) translate('+
  155*Math.random()+'%,'+ 55*Math.random()+'%)' 
  if(b)
@@ -402,7 +412,6 @@ function cl()
    'scale(1) translate(-11%,0)'
   sh[0].style.transform=
    'scale(1) rotate(-3deg)'
-  sh[1].style.transform='scale(1)'
   sh[2].style.transform='scale(1.1)'
   sh[5].style.transform='scale(1.1)'
  }  
@@ -533,6 +542,7 @@ sh[0].onmouseover=()=>
  mgun[2].style.opacity=0.2
  mgun[3].style.opacity=0.8
  mgun[4].style.opacity=0.8
+ mgun[5].style.opacity=0.8
  mne[0].style.opacity=0
 }
 sh[0].onmouseout=()=>
@@ -553,6 +563,7 @@ sh[0].onmouseout=()=>
  mgun[2].style.opacity=0
  mgun[3].style.opacity=0.2
  mgun[4].style.opacity=0
+ mgun[5].style.opacity=0
  mne[0].style.opacity=0
  mne[0].style.opacity=1
 }
