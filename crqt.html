@@ -1,8 +1,9 @@
 <DOCTYPE html>
 <html>
 <style>
-body
+#idbd
 {
+ height:229%;
  background:#ee0;
 }
 
@@ -31,7 +32,7 @@ button:hover
  transition:555ms;
 } 
 
-.drssl,.clma,.telm,.tprcss
+.drssl,.clma,.telm,.tprcss,.dsl
 {
  position:absolute;
  transition:1s;
@@ -93,6 +94,15 @@ button:hover
 
 <canvas class=crrnt></canvas>
 
+<div class=dsl>
+ <div class=dsl>
+  <div class=dsl></div>
+ </div>
+ <div class=dsl>
+  <div class=dsl></div>
+ </div>
+</div>
+
 <script>
 btn=document.getElementsByTagName('button')
 wrs=document.getElementsByClassName('wrs')
@@ -102,6 +112,8 @@ clma=document.getElementsByClassName('clma')
 telm=document.getElementsByClassName('telm')
 tprcss=document.getElementsByClassName('tprcss')
 crrnt=document.getElementsByClassName('crrnt')
+
+dsl=document.getElementsByClassName('dsl')
 
 btn[0].style.right=4+'%'
 btn[0].style.top=5+'%'
@@ -311,6 +323,15 @@ crrnt[5].style.background='#fff'
 crrnt[5].style.opacity=0.3
 crrnt[5].style.zIndex=-1
  cnvs=crrnt[5].getContext('2d')
+ 
+dsl[0].style.cursor='pointer'
+dsl[0].style.left=8+'%'
+dsl[0].style.top=118+'%'
+dsl[0].style.width=84+'%'
+dsl[0].style.height=99+'%'
+dsl[0].style.background='#f0f'
+dsl[0].style.border='9px ridge #000'
+dsl[0].style.borderRadius=55+'%'
 
 bbtn0=1 
 btn[0].onmouseover=()=>
@@ -502,6 +523,15 @@ telm[0].onmouseout=()=>
   tprcss[i].style.background='none'
   tprcss[i].style.border='none'
  } 
+}
+
+dsl[0].onmouseover=()=>
+{
+ dsl[0].style.transform='scale(1.1)'
+}
+dsl[0].onmouseout=()=>
+{
+ dsl[0].style.transform='scale(1)'
 }
 
 </script>
