@@ -96,10 +96,10 @@ button:hover
 
 <div class=dsl>
  <div class=dsl>
-  <div class=dsl></div>
+  <div class></div>
  </div>
  <div class=dsl>
-  <div class=dsl></div>
+  <div class></div>
  </div>
 </div>
 
@@ -332,6 +332,23 @@ dsl[0].style.height=99+'%'
 dsl[0].style.background='#f0f'
 dsl[0].style.border='9px ridge #000'
 dsl[0].style.borderRadius=55+'%'
+dsl[0].style.borderTopLeftRadius=11+'%'
+dsl[0].style.borderTopRightRadius=11+'%'
+dsl[1].style.left=-12+'%'
+dsl[1].style.top=34+'%'
+dsl[1].style.width=74+'%'
+dsl[1].style.height=28+'%'
+dsl[1].style.background='#888'
+dsl[1].style.borderRadius=15+'%'
+dsl[1].style.transform='rotate(66deg)'
+dsl[2].style.left=39+'%'
+dsl[2].style.top=34+'%'
+dsl[2].style.width=74+'%'
+dsl[2].style.height=28+'%'
+dsl[2].style.background='#888'
+dsl[2].style.borderRadius=15+'%'
+dsl[2].style.transform='rotate(-66deg)'
+
 
 bbtn0=1 
 btn[0].onmouseover=()=>
@@ -528,10 +545,16 @@ telm[0].onmouseout=()=>
 dsl[0].onmouseover=()=>
 {
  dsl[0].style.transform='scale(1.1)'
+ dsl[1].style.background=
+  'radial-gradient(#ff0,#f00)'
+ dsl[2].style.background=
+  'radial-gradient(#ff0,#f00)'
 }
 dsl[0].onmouseout=()=>
 {
  dsl[0].style.transform='scale(1)'
+ dsl[1].style.background='#555'
+ dsl[2].style.background='#555'
 }
 
 </script>
