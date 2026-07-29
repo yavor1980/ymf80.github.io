@@ -1,8 +1,8 @@
 <html>
-<body >
+<body id=idbd>
 <style>
 
-body
+#idbd
 {
  background:radial-gradient(166px,#ff0,#000);
 }
@@ -305,6 +305,8 @@ Ipzr0=0
 bpzr0=0
 pzr[0].onmouseover=()=>
 {  
+ idbd.style.background=
+  'radial-gradient(222px,#ff0,#000)'
  grnd[1].style.background=
   'radial-gradient(#220,#080)'
  grnd[2].style.opacity=0.8
@@ -357,6 +359,8 @@ pzr[0].onmouseover=()=>
 }
 pzr[0].onmouseout=()=>
 {
+ idbd.style.background=
+  'radial-gradient(166px,#ff0,#000)'
  grnd[1].style.background=
   'radial-gradient(#440,#0b0)'
  grnd[2].style.opacity=0.4
