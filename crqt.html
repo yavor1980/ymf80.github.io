@@ -32,15 +32,21 @@ button:hover
  transition:555ms;
 } 
 
-.drssl,.clma,.telm,.tprcss,.dsl
+.drssl,.clma,.telm,.tprcss,.dsl,.prshn
 {
  position:absolute;
  transition:1s;
 } 
 .clma:hover
 {transform:scale(1.2);} 
-.telm
-{z-index:5;} 
+.telm{z-index:5;} 
+.prshn
+{
+ width:22%;
+ height:99%;
+ background:#777;
+ border-radius:15%;
+} 
 
 .crrnt
 {
@@ -96,10 +102,10 @@ button:hover
 
 <div class=dsl>
  <div class=dsl>
-  <div class></div>
+  <div class=prshn></div>
  </div>
  <div class=dsl>
-  <div class></div>
+  <div class=prshn></div>
  </div>
 </div>
 
@@ -114,6 +120,7 @@ tprcss=document.getElementsByClassName('tprcss')
 crrnt=document.getElementsByClassName('crrnt')
 
 dsl=document.getElementsByClassName('dsl')
+prshn=document.getElementsByClassName('prshn')
 
 btn[0].style.right=4+'%'
 btn[0].style.top=5+'%'
@@ -349,6 +356,7 @@ dsl[2].style.background='#888'
 dsl[2].style.borderRadius=15+'%'
 dsl[2].style.transform='rotate(-66deg)'
 
+prshn[0].style.right=0+'%'
 
 bbtn0=1 
 btn[0].onmouseover=()=>
@@ -542,6 +550,7 @@ telm[0].onmouseout=()=>
  } 
 }
 
+Idsl=0,bdsl=1
 dsl[0].onmouseover=()=>
 {
  dsl[0].style.transform='scale(1.1)'
@@ -549,12 +558,24 @@ dsl[0].onmouseover=()=>
   'radial-gradient(#ff0,#f00)'
  dsl[2].style.background=
   'radial-gradient(#ff0,#f00)'
+ Idsl=setInterval(()=>{
+  if(bdsl){
+   prshn[0].style.left=78+'%'
+   prshn[1].style.left=0+'%'
+  }else{
+   prshn[0].style.left=0+'%'
+   prshn[1].style.left=78+'%'
+  }  bdsl=!bdsl
+ }, 999)
 }
 dsl[0].onmouseout=()=>
 {
+   clearInterval(Idsl)
  dsl[0].style.transform='scale(1)'
  dsl[1].style.background='#555'
  dsl[2].style.background='#555'
+ //prshn[0].style.right=0+'%'
+// prshn[0].style.left=0+'%'
 }
 
 </script>
