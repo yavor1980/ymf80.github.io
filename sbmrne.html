@@ -76,6 +76,9 @@ body
 <div class=prjctr></div>
  <div class=prjctr>sonar</div>
  
+ <div class=prjctr></div>
+ <div class=prjctr></div> 
+ 
 <script> 
 grnd=document.getElementsByClassName('grnd')
 sbmrne=document.getElementsByClassName('sbmrne')
@@ -177,7 +180,7 @@ prjctr[0].style.left=55+'%'
 prjctr[0].style.top=22+'%'
 prjctr[0].style.width=11+'%'
 prjctr[0].style.height=13+'%'
-prjctr[0].style.border='9px ridge #ff0'
+prjctr[0].style.border='4px ridge #ff0'
 prjctr[0].style.borderTopColor='transparent'
 prjctr[0].style.borderRightColor='transparent'
 prjctr[0].style.borderRadius=55+'%'
@@ -189,9 +192,24 @@ prjctr[1].style.left=55+'%'
 prjctr[1].style.top=9+'%'
 prjctr[1].style.color='#bbb'
 prjctr[1].style.transform='scale(0) ' 
+prjctr[2].style.zIndex=-1
+prjctr[2].style.left=5+(77*Math.random())+'%'
+prjctr[2].style.top=12+'%'
+prjctr[2].style.width=7+'%'
+prjctr[2].style.height=13+'%'
+prjctr[2].style.background='#500'
+prjctr[2].style.opacity=0
+prjctr[2].style.borderRadius=55+'%'
+prjctr[3].style.zIndex=-1
+prjctr[3].style.left=5+(77*Math.random())+'%'
+prjctr[3].style.top=12+'%'
+prjctr[3].style.width=7+'%'
+prjctr[3].style.height=13+'%'
+prjctr[3].style.background='#500'
+prjctr[3].style.opacity=0
+prjctr[3].style.borderRadius=55+'%'
 
-bsmv=0
-sc=0
+bsmv=0, sc=0
 function smv()
 {
  sc=Math.random()
@@ -217,13 +235,16 @@ function smv()
 }
    Isbmrne=setInterval(smv, 999)
 
+bpmv=0
 function pmv()
 {
- tr=Math.random()*99-44
+ tr=Math.random()*99-66
  sc=Math.random()+1
  prjctr[0].style.transform=
   'scale('+sc+',1) translate('+tr+
   '%,'+tr+'%) rotate(-44deg)' 
+ prjctr[2].style.top=5+(37*Math.random())+'%'
+
 }
    Iprjctr=setInterval(pmv, 666)
 
@@ -275,9 +296,11 @@ sbmrne[0].onmouseover=()=>
  apprts[3].style.opacity=0.7
  apprts[3].style.transform=' translate(0%,0%)'
  prjctr[0].style.width=(11+Math.random()*11)+'%' 
- prjctr[0].style.borderWidth=11+Math.random()*5
+ prjctr[0].style.borderWidth=4+Math.random()*5
  prjctr[1].style.transform=
   'scale(5) skew(-11deg) translate(66%,-9%)'
+ prjctr[2].style.left=5+(77*Math.random())+'%'
+ prjctr[2].style.opacity=0.7
   bsmv=1 
 }
 sbmrne[0].onmouseout=()=>
@@ -308,8 +331,9 @@ sbmrne[0].onmouseout=()=>
  apprts[3].style.opacity=0
  apprts[3].style.transform='scale(1)'
  prjctr[0].style.width=11+'%'
- prjctr[0].style.borderWidth=9
+ prjctr[0].style.borderWidth=4
  prjctr[1].style.transform='scale(0)' 
+ prjctr[2].style.opacity=0
   bsmv=0
 }
 
