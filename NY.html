@@ -51,6 +51,7 @@
 <div class=bckrnd></div>
 <div class=bckrnd></div>
 <div class=bckrnd></div>
+<div class=bckrnd></div>
 
 <div class=crstmtr>
  <div class=crstmtr>
@@ -130,6 +131,11 @@ finit(bckrnd,4,6,33,1,2,'#ee0')
  bckrnd[4].style.borderRadius=55+'%'
  bckrnd[4].style.opacity=0.8 
  bckrnd[4].style.transform='scale(0.5)'
+finit(bckrnd,5,65,8,33,22,'#ee0')
+ bckrnd[5].style.borderRadius=55+'%'
+ bckrnd[5].style.background=
+  'radial-gradient(#ff0,#f0f)'
+ bckrnd[5].style.opacity=0.4
  
 crstmtr[0].style.left=22+'%'
 crstmtr[0].style.top=16+'%'
@@ -374,15 +380,11 @@ snwmn[0].onmouseout=()=>
 fcrtr=()=>
 {
  bckrnd[2].style.transform=
-  'scale('+(0.5+Math.random())+') translate('+
-  (Math.random()*100-60)+'%,'+
-  (Math.random()*100-60)+'%)' 
+  'scale('+(0.5+Math.random())+')'
  bckrnd[3].style.transform=
-  'scale('+(0.5+Math.random())+') translate(227%,'+
-  Math.random()*177+'%)'
+  'scale('+(0.5+Math.random())+')'
  bckrnd[4].style.transform= 
- 'scale('+(0.5+Math.random())+') translate(227%,'+ 
-  Math.random()*177+'%)'
+ 'scale('+(0.5+Math.random())+')'
  crstint[2].style.background=
   'radial-gradient('+Math.round(Math.random()*44)+
   'px,#ff0,#f00)'
@@ -395,7 +397,11 @@ fcrtr=()=>
 crstmtr[0].onmouseover=()=>
 {
   snwmn[0].onmouseover()
- bckrnd[1].style.transform='scale(6)'
+ bckrnd[1].style.transform=
+  'scale(6) translate(-99%,-33%)'
+ bckrnd[5].style.opacity=1
+ bckrnd[5].style.transform=
+  'scale(1.2) translate(-14%,-3%)'  
  crstmtr[0].style.transform='scale(1.01)'
  crstmtr[7].style.background=
   'radial-gradient(#040,#0d0)'
@@ -414,13 +420,15 @@ crstmtr[0].onmouseover=()=>
   Itr=setInterval(fcrtr, 999)
 } 
 crstmtr[0].onmouseout=()=>
-{
+{ 
   snwmn[0].onmouseout()
  bckrnd[0].style.opacity=0.2
  bckrnd[1].style.transform='scale(5)' 
  bckrnd[2].style.transform='scale(0.5)' 
  bckrnd[3].style.transform='scale(0.5)' 
  bckrnd[4].style.transform='scale(0.5)' 
+ bckrnd[5].style.opacity=0.4
+ bckrnd[5].style.transform='scale(1)' 
  crstmtr[0].style.transform='scale(1)'
  crstmtr[6].style.background=
   'radial-gradient(#040,#090)'
