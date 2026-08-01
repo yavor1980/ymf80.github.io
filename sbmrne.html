@@ -213,17 +213,14 @@ bsmv=0, sc=0
 function smv()
 {
  sc=Math.random()
- if(bsmv==0)
- {
+ if(bsmv==0){
    rnd=Math.random()/2+1
   grnd[0].style.transform=
   'scale(1,'+rnd/2+') translate(0%,'+(-rnd/2)+'%)'  
   grnd[3].style.transform='scale('+rnd+',)'
   sbmrne[0].style.transform=
    'scale('+rnd+') translate(0%,'+(-rnd*2)+'%)'
- }
-  else 
- {
+ }else{
   grnd[3].style.transform=
    'scale('+(1+Math.random())+
    ','+(2+Math.random())+') translate(-200%,0%)'
@@ -237,14 +234,26 @@ function smv()
 
 bpmv=0
 function pmv()
-{
+{ 
+ bpmv=Math.round(Math.random())
  tr=Math.random()*99-66
  sc=Math.random()+1
  prjctr[0].style.transform=
   'scale('+sc+',1) translate('+tr+
   '%,'+tr+'%) rotate(-44deg)' 
  prjctr[2].style.top=5+(37*Math.random())+'%'
-
+ prjctr[3].style.top=5+(37*Math.random())+'%'
+ if(bpmv==0){
+  prjctr[2].style.background='#f00'
+  prjctr[2].style.transform='scale(2)'
+  prjctr[3].style.background='#f00'
+  prjctr[3].style.transform='scale(2)'
+ }else{
+  prjctr[2].style.background='#500'
+  prjctr[2].style.transform='scale(1)'
+  prjctr[3].style.background='#500'
+  prjctr[3].style.transform='scale(1)'
+ } 
 }
    Iprjctr=setInterval(pmv, 666)
 
@@ -300,7 +309,8 @@ sbmrne[0].onmouseover=()=>
  prjctr[1].style.transform=
   'scale(5) skew(-11deg) translate(66%,-9%)'
  prjctr[2].style.left=5+(77*Math.random())+'%'
- prjctr[2].style.opacity=0.7
+ prjctr[2].style.opacity=0.5
+ prjctr[3].style.opacity=0.4
   bsmv=1 
 }
 sbmrne[0].onmouseout=()=>
@@ -334,6 +344,7 @@ sbmrne[0].onmouseout=()=>
  prjctr[0].style.borderWidth=4
  prjctr[1].style.transform='scale(0)' 
  prjctr[2].style.opacity=0
+ prjctr[3].style.opacity=0
   bsmv=0
 }
 
