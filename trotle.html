@@ -11,7 +11,7 @@
 #idbd
 {
  background:linear-gradient(44deg,#330,#cc0);
- height:200%;
+ height:333%;
 }
 
 .btn
@@ -44,7 +44,7 @@
  border-radius:55%; border:3px solid #ff0;
 }
 
-#idtrsfrmtr,.lcoils,.rcoils,.acoils,.ttl
+#idtrsfrmtr,.lcoils,.rcoils,.acoils,.ttl,.elmtr
 {
  position:absolute;
  transition:1s;
@@ -58,14 +58,8 @@
  border:22px ridge #777;
  border-top:22px ridge transparent;
 }
-.lcoils
-{
- left:-84%;
-}
-.rcoils
-{
- left:84%;
-}
+.lcoils{left:-84%;}
+.rcoils{ left:84%;}
 
 </style>
 </head>
@@ -123,6 +117,10 @@
  <div class=acoils></div>
 </div>
 
+<div class=elmtr>
+ <div class=elmtr></div>
+</div>
+
 <script>
 btn=document.getElementsByClassName('btn')
 coil=document.getElementsByClassName('coil')
@@ -135,6 +133,8 @@ ttl=document.getElementsByClassName('ttl')
 lcoils=document.getElementsByClassName('lcoils')
 rcoils=document.getElementsByClassName('rcoils')
 acoils=document.getElementsByClassName('acoils')
+
+elmtr=document.getElementsByClassName('elmtr')
 
 btn[0].style.right=6+'%'
 btn[0].style.top=9+'%'
@@ -214,7 +214,6 @@ fld[6].style.top=5+'%'
 fld[6].style.width=122+'%'
 fld[6].style.height=66+'%'
 fld[6].style.background='#777'
-fld[6].style.opacity=0.4
 fld[6].style.borderRadius=22+'%'
 fld[6].style.transform='scale(1)'
 fld[6].style.zIndex=-1
@@ -325,6 +324,20 @@ ttl[2].style.borderBottomColor='transparent'
 ttl[2].style.borderRadius=35+'%'
 ttl[2].style.opacity=0
 
+elmtr[0].style.left=9+'%'
+elmtr[0].style.top=218+'%'
+elmtr[0].style.width=66+'%'
+elmtr[0].style.height=70+'%'
+elmtr[0].style.border='99px ridge #777'
+elmtr[0].style.borderRadius=55+'%'
+elmtr[1].style.left=11+'%'
+elmtr[1].style.top=9+'%'
+elmtr[1].style.width=77+'%'
+elmtr[1].style.height=82+'%'
+elmtr[1].style.background='#777'
+elmtr[1].style.borderRadius=55+'%'
+elmtr[1].style.transform='scale(0.4,1)'
+
 btn[0].onmouseover=()=>
 {
  fcoilon()
@@ -357,6 +370,7 @@ function fcoilon()
  fld[5].style.transform=
   'scale(2) translate(0,-222%) skew(-11deg)'
  fld[6].style.opacity=0.8 
+ fld[6].style.background='#f00'
  fld[6].style.transform='translate(-25%,0)' 
  coilI=setInterval(()=>{
    p=1+Math.random()/11
@@ -394,7 +408,7 @@ function fcoiloff()
  fld[5].style.color='#00b'
  fld[5].style.transform=
   'scale(2) translate(0,-222%)'
- fld[6].style.opacity=0.4
+ fld[6].style.background='#777'
  fld[6].style.transform='translate(0%,0)'
   clearInterval(coilI)
 }
@@ -521,6 +535,20 @@ idtrsfrmtr.onmouseover=()=>
 idtrsfrmtr.onmouseout=()=>
 {
  trsfrmoff()
+}
+
+elmtr[0].onmouseover=()=>
+{
+ elmtr[0].style.border='99px ridge #f00'
+ elmtr[0].style.transform='scale(' +
+  (1+Math.random()/9)+')'
+ elmtr[1].style.background='#f00'
+}
+elmtr[0].onmouseout=()=>
+{
+ elmtr[0].style.border='99px ridge #777'
+ elmtr[0].style.transform='scale(1)'
+ elmtr[1].style.background='#777'
 }
 
 </script>
