@@ -119,6 +119,7 @@
 
 <div class=elmtr>
  <div class=elmtr></div>
+ <div class=elmtr></div>
 </div>
 
 <script>
@@ -335,8 +336,17 @@ elmtr[1].style.top=9+'%'
 elmtr[1].style.width=77+'%'
 elmtr[1].style.height=82+'%'
 elmtr[1].style.background='#777'
-elmtr[1].style.borderRadius=55+'%'
+elmtr[1].style.borderRadius=35+'%'
 elmtr[1].style.transform='scale(0.4,1)'
+elmtr[2].style.left=11+'%'
+elmtr[2].style.top=9+'%'
+elmtr[2].style.width=77+'%'
+elmtr[2].style.height=82+'%'
+//elmtr[2].style.background='#777'
+elmtr[2].style.borderRadius=35+'%'
+elmtr[2].style.transform=
+ 'scale(0.4,1) rotate(199deg)'
+
 
 btn[0].onmouseover=()=>
 {
@@ -542,7 +552,9 @@ elmtr[0].onmouseover=()=>
  elmtr[0].style.border='99px ridge #f00'
  elmtr[0].style.transform='scale(' +
   (1+Math.random()/9)+')'
- elmtr[1].style.background='#f00'
+ elmtr[1].style.background=
+  'radial-gradient(#ff0,#f00)'
+  
 }
 elmtr[0].onmouseout=()=>
 {
