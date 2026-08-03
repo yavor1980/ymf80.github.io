@@ -11,7 +11,7 @@
 #idbd
 {
  background:linear-gradient(44deg,#330,#cc0);
- height:333%;
+ height:444%;
 }
 
 .btn
@@ -118,6 +118,8 @@
 </div>
 
 <div class=elmtr>
+ <div class=elmtr></div>
+ <div class=elmtr></div>
  <div class=elmtr></div>
  <div class=elmtr></div>
 </div>
@@ -326,27 +328,38 @@ ttl[2].style.borderRadius=35+'%'
 ttl[2].style.opacity=0
 
 elmtr[0].style.left=9+'%'
-elmtr[0].style.top=218+'%'
+elmtr[0].style.top=228+'%'
 elmtr[0].style.width=66+'%'
 elmtr[0].style.height=70+'%'
 elmtr[0].style.border='99px ridge #777'
 elmtr[0].style.borderRadius=55+'%'
-elmtr[1].style.left=11+'%'
-elmtr[1].style.top=9+'%'
+elmtr[1].style.left=12+'%'
+elmtr[1].style.top=34+'%'
 elmtr[1].style.width=77+'%'
-elmtr[1].style.height=82+'%'
+elmtr[1].style.height=33+'%'
 elmtr[1].style.background='#777'
 elmtr[1].style.borderRadius=35+'%'
-elmtr[1].style.transform='scale(0.4,1)'
-elmtr[2].style.left=11+'%'
-elmtr[2].style.top=9+'%'
-elmtr[2].style.width=77+'%'
-elmtr[2].style.height=82+'%'
-//elmtr[2].style.background='#777'
+elmtr[2].style.zIndex=-1
+elmtr[2].style.left=34+'%'
+elmtr[2].style.top=12+'%'
+elmtr[2].style.width=33+'%'
+elmtr[2].style.height=77+'%'
+elmtr[2].style.background='#777'
 elmtr[2].style.borderRadius=35+'%'
-elmtr[2].style.transform=
- 'scale(0.4,1) rotate(199deg)'
-
+elmtr[3].style.left=-16+'%'
+elmtr[3].style.top=-66+'%'
+elmtr[3].style.width=100+'%'
+elmtr[3].style.height=7+'%'
+elmtr[3].style.border='99px ridge #777'
+elmtr[3].style.borderTop='27px ridge transparent'
+elmtr[3].style.borderRadius=3+'%'
+elmtr[4].style.left=-16+'%'
+elmtr[4].style.top=133+'%'
+elmtr[4].style.width=100+'%'
+elmtr[4].style.height=7+'%'
+elmtr[4].style.border='99px ridge #777'
+elmtr[4].style.borderBottom='27px ridge transparent'
+elmtr[4].style.borderRadius=3+'%'
 
 btn[0].onmouseover=()=>
 {
@@ -547,6 +560,7 @@ idtrsfrmtr.onmouseout=()=>
  trsfrmoff()
 }
 
+Ielmtr=0
 elmtr[0].onmouseover=()=>
 {
  elmtr[0].style.border='99px ridge #f00'
@@ -554,13 +568,32 @@ elmtr[0].onmouseover=()=>
   (1+Math.random()/9)+')'
  elmtr[1].style.background=
   'radial-gradient(#ff0,#f00)'
-  
+ elmtr[2].style.background=
+  'radial-gradient(#ff0,#f00)' 
+ elmtr[3].style.border='99px ridge #f00' 
+ elmtr[3].style.borderTop='27px ridge transparent'
+ elmtr[4].style.border='99px ridge #f00' 
+ elmtr[4].style.borderBottom='27px ridge transparent'
+ Ielmtr=setInterval(()=>{
+  elmtr[1]. style.transform=
+   'rotate('+(Math.random()*90)+'deg)'
+  elmtr[2].style.transform=
+   'rotate('+(Math.random()*90)+'deg)' 
+ }, 999)
 }
 elmtr[0].onmouseout=()=>
 {
+  clearInterval(Ielmtr)
  elmtr[0].style.border='99px ridge #777'
  elmtr[0].style.transform='scale(1)'
  elmtr[1].style.background='#777'
+ elmtr[1].style.transform='scale(1)'
+ elmtr[2].style.background='#777'
+ elmtr[2].style.transform='scale(1)'
+ elmtr[3].style.border='99px ridge #777'
+ elmtr[3].style.borderTop='27px ridge transparent'
+ elmtr[4].style.border='99px ridge #777'
+ elmtr[4].style.borderBottom='27px ridge transparent'
 }
 
 </script>
