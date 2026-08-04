@@ -7,11 +7,18 @@
  height:155%;
 }
 
-.btn,.dsply,.pnel,.trmo
+.btn,.dsply,.pnel,.trmo,.clma
 {
  position:absolute;
  transition:1s;
  cursor:pointer;
+}
+.clma
+{
+ width:14%;
+ height:14%;
+ border:12px ridge #888;
+ border-radius:55%;
 }
 
 .csvg
@@ -52,7 +59,10 @@
  <div class=trmo>
   <div class=trmo></div>
   <div class=trmo></div>
-  <div class=trmo></div>
+  <div class=trmo>
+   <div class=clma></div>
+   <div class=clma></div>
+  </div>
  </div>
 </div> 
 
@@ -61,7 +71,9 @@ btn=document.getElementsByClassName("btn")
 csvg=document.getElementsByClassName("csvg")
 dsply=document.getElementsByClassName('dsply')
 pnel=document.getElementsByClassName("pnel") 
+
 trmo=document.getElementsByClassName("trmo")
+clma=document.getElementsByClassName("clma")
 
 btn[0].style.left=86+'%'
 btn[0].style.top=3+'%'
@@ -187,6 +199,17 @@ trmo[4].style.opacity=0
 trmo[4].style.borderRadius=55+'%'
 trmo[4].style.borderTop='15px solid  #f00'
 trmo[4].style.borderBottom='15px solid #f00'  
+trmo[5].style.left=-14+'%'
+trmo[5].style.top=-28+'%'
+trmo[5].style.width=96+'px'
+trmo[5].style.height=122+'px'
+trmo[5].style.opacity=0.4
+trmo[5].style.borderTop='15px solid  #900'
+trmo[5].style.borderBottom='15px solid #900'  
+clma[0].style.left=-18+'%'
+clma[0].style.top=-23+'%'
+clma[1].style.left=-18+'%'
+clma[1].style.top=88+'%'
  
 bbtn=1
 btn[0].onclick=()=>
@@ -289,12 +312,15 @@ trmo[1].onmouseover=()=>
  trmo[3].style.borderRight='33px ridge #f00'
  trmo[4].style.opacity=1
  trmo[4].style.transform='scale(2)'
+ trmo[5].style.opacity=1
  Itrmo=setInterval(()=>
  {
   trmo[3].style.transform='scale('+
    (1+Math.random()/2)+') rotate(45deg)'
   trmo[4].style.transform='scale('+
    (2+2*Math.random())+',2)'
+  trmo[5].style.transform='scale('+
+   (1+Math.random())+',1) translate(-22%,0)'  
  }, 999)
 }
 trmo[1].onmouseout=()=>
@@ -308,6 +334,8 @@ trmo[1].onmouseout=()=>
  trmo[3].style.transform='scale(1) rotate(45deg)'
  trmo[4].style.opacity=0
  trmo[4].style.transform='scale(1)'
+ trmo[5].style.opacity=0.4
+ trmo[5].style.transform='scale(1)'
   clearInterval(Itrmo)
 }
 trmo[2].onmouseover=()=>
