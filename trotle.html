@@ -122,6 +122,8 @@
  <div class=elmtr></div>
  <div class=elmtr></div>
  <div class=elmtr></div>
+ <div class=elmtr></div>
+ <div class=elmtr></div>
 </div>
 
 <script>
@@ -328,7 +330,7 @@ ttl[2].style.borderRadius=35+'%'
 ttl[2].style.opacity=0
 
 elmtr[0].style.left=9+'%'
-elmtr[0].style.top=228+'%'
+elmtr[0].style.top=266+'%'
 elmtr[0].style.width=66+'%'
 elmtr[0].style.height=70+'%'
 elmtr[0].style.border='99px ridge #777'
@@ -347,19 +349,37 @@ elmtr[2].style.height=77+'%'
 elmtr[2].style.background='#777'
 elmtr[2].style.borderRadius=35+'%'
 elmtr[3].style.left=-16+'%'
-elmtr[3].style.top=-66+'%'
+elmtr[3].style.top=-77+'%'
 elmtr[3].style.width=100+'%'
 elmtr[3].style.height=7+'%'
 elmtr[3].style.border='99px ridge #777'
 elmtr[3].style.borderTop='27px ridge transparent'
 elmtr[3].style.borderRadius=3+'%'
 elmtr[4].style.left=-16+'%'
-elmtr[4].style.top=133+'%'
+elmtr[4].style.top=144+'%'
 elmtr[4].style.width=100+'%'
 elmtr[4].style.height=7+'%'
 elmtr[4].style.border='99px ridge #777'
 elmtr[4].style.borderBottom='27px ridge transparent'
 elmtr[4].style.borderRadius=3+'%'
+elmtr[5].style.left=-5+'%'
+elmtr[5].style.top=-38+'%'
+elmtr[5].style.width=100+'%'
+elmtr[5].style.height=7+'%'
+elmtr[5].style.border='9px ridge #ff0'
+elmtr[5].style.borderLeft='27px ridge transparent'
+elmtr[5].style.borderRight='27px ridge transparent'
+elmtr[5].style.opacity=0
+elmtr[5].style.borderRadius=55+'%'
+elmtr[6].style.left=-6+'%'
+elmtr[6].style.top=126+'%'
+elmtr[6].style.width=100+'%'
+elmtr[6].style.height=7+'%'
+elmtr[6].style.border='9px ridge #ff0'
+elmtr[6].style.borderLeft='27px ridge transparent'
+elmtr[6].style.borderRight='27px ridge transparent'
+elmtr[6].style.opacity=0
+elmtr[6].style.borderRadius=55+'%'
 
 btn[0].onmouseover=()=>
 {
@@ -563,22 +583,28 @@ idtrsfrmtr.onmouseout=()=>
 Ielmtr=0
 elmtr[0].onmouseover=()=>
 {
- elmtr[0].style.border='99px ridge #f00'
+ elmtr[0].style.border='99px ridge #a00'
  elmtr[0].style.transform='scale(' +
   (1+Math.random()/9)+')'
  elmtr[1].style.background=
   'radial-gradient(#ff0,#f00)'
  elmtr[2].style.background=
   'radial-gradient(#ff0,#f00)' 
- elmtr[3].style.border='99px ridge #f00' 
+ elmtr[3].style.border='99px ridge #900' 
  elmtr[3].style.borderTop='27px ridge transparent'
- elmtr[4].style.border='99px ridge #f00' 
+ elmtr[4].style.border='99px ridge #900' 
  elmtr[4].style.borderBottom='27px ridge transparent'
+ elmtr[5].style.opacity=0.8
+ elmtr[6].style.opacity=0.8
  Ielmtr=setInterval(()=>{
   elmtr[1]. style.transform=
    'rotate('+(Math.random()*90)+'deg)'
   elmtr[2].style.transform=
    'rotate('+(Math.random()*90)+'deg)' 
+  elmtr[5].style.transform='scale('+
+   (1+Math.random()/4)+')'
+  elmtr[6].style.transform='scale('+
+   (1+Math.random()/4)+')'
  }, 999)
 }
 elmtr[0].onmouseout=()=>
@@ -594,6 +620,10 @@ elmtr[0].onmouseout=()=>
  elmtr[3].style.borderTop='27px ridge transparent'
  elmtr[4].style.border='99px ridge #777'
  elmtr[4].style.borderBottom='27px ridge transparent'
+ elmtr[5].style.opacity=0
+ elmtr[5].style.transform='scale(1)'
+ elmtr[6].style.opacity=0
+ elmtr[6].style.transform='scale(1)' 
 }
 
 </script>
