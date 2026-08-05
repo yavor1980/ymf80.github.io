@@ -110,6 +110,10 @@
 <div class=brd>
  <div class=brd></div>
  <div class=brd></div>
+ <div class=brd>
+  <div class=brd></div>
+ </div>
+ <div class=brd></div>
 </div>
 
 <div class=eagle>
@@ -198,7 +202,7 @@ var eagl=
   bgrnd[4].style.bottom=8+'%'
   bgrnd[4].style.width=47+'%' 
   bgrnd[4].style.height=33+'%'
- bgrnd[4].style.background=
+  bgrnd[4].style.background=
    'radial-gradient(#900,#330)'
   bgrnd[4].style.borderTopLeftRadius=37+'%'
   bgrnd[4].style.borderTopRightRadius=11+'%'
@@ -226,7 +230,7 @@ var eagl=
   brd[1].style.width=66+'%' 
   brd[1].style.height=66+'%'
   brd[1].style.background=
-   'radial-gradient(#999,#666)' 
+   'radial-gradient(#0f0,#090)' 
   brd[1].style.borderRadius=55+'%' 
   brd[1].style.borderTopRightRadius=5+'%' 
   brd[1].style.transform='rotate(22deg)'
@@ -235,10 +239,36 @@ var eagl=
   brd[2].style.width=66+'%' 
   brd[2].style.height=66+'%'
   brd[2].style.background=
-   'radial-gradient(#999,#666)' 
+   'radial-gradient(#0f0,#090)' 
   brd[2].style.borderRadius=55+'%' 
   brd[2].style.borderTopLeftRadius=5+'%'  
   brd[2].style.transform='rotate(-22deg)'
+  brd[3].style.left=44+'%' 
+  brd[3].style.top=6+'%'	
+  brd[3].style.width=26+'%' 
+  brd[3].style.height=66+'%'
+  brd[3].style.background=
+   'radial-gradient(#900,#600)' 
+  brd[3].style.borderRadius=55+'%' 
+  brd[4].style.left=44+'%' 
+  brd[4].style.top=6+'%'	
+  brd[4].style.width=26+'%' 
+  brd[4].style.height=66+'%'
+  brd[4].style.background=
+   'radial-gradient(4px,#00f,#fff)' 
+  brd[4].style.borderRadius=55+'%' 
+  brd[5].style.zIndex=-8
+  brd[5].style.left=33+'%' 
+  brd[5].style.top=56+'%'	
+  brd[5].style.width=36+'%' 
+  brd[5].style.height=99+'%'
+  brd[5].style.background=
+   'radial-gradient(#0f0,#090)' 
+  brd[5].style.borderRadius=55+'%' 
+  brd[5].style.transform='skew(-22deg)' 
+  
+  
+  
    
   eagle[1].style.left=1+'%'
   eagle[1].style.top=0+'%' 	 
@@ -395,7 +425,9 @@ var eagl=
   brd[0].style.transform='scale(1.4) translate('+
    Math.random()*227+'%,'+Math.random()*122+'%)'
   brd[1].style.transform='scale(1.4,2) '
-  brd[2].style.transform='scale(1.4,2) '  
+  brd[2].style.transform='scale(1.4,2) ' 
+  brd[3].style.transform='scale(2) '
+  brd[4].style.transform='scale(3,1) '
   eagle[0].style.transform=
    'skew('+(Math.random()*44-22)+'deg)'
   eagle[2].style.borderRadius=55+'%'
@@ -441,6 +473,8 @@ var eagl=
   blb[0].style.transform='scale(1)'
   blb[1].style.transform='scale(1)'
   brd[0].style.transform='scale(1)'
+  brd[3].style.transform='scale(1)'
+  brd[4].style.transform='scale(1)'
   eagle[2].style.borderBottomLeftRadius=39+'%' 
   eagle[2].style.borderBottomRightRadius=39+'%'
   eagle[2].style.transform='scale(1)'
