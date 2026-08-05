@@ -36,7 +36,10 @@
   </div>
  </div>
  <div class=bgrnd>
-  <div class=elbw></div>
+  <div class=elbw>
+   <div class=blt></div>
+   <div class=blt></div>
+  </div>
  </div>
  <div class=bgrnd>
   <div class=elbw>
@@ -142,6 +145,21 @@ blt[1].style.width=24+'%'
 blt[1].style.height=144+'%'
 blt[1].style.background=
  'radial-gradient(#ff0,#f00)'
+blt[2].style.left=10+'%'
+blt[2].style.top=55+'%'  
+blt[2].style.width=80+'%'
+blt[2].style.height=63+'%'
+blt[2].style.background=
+ 'radial-gradient(#eee,#a5a)'
+blt[2].style.opacity=0.4
+blt[2].style.borderRadius=44+'%'
+blt[3].style.left=40+'%'
+blt[3].style.top=59+'%'    
+blt[3].style.width=54+'%'
+blt[3].style.height=44+'%'
+blt[3].style.background=
+ 'radial-gradient(#eee,#a5a)' 
+blt[3].style.opacity=0.4 
 trsrs[0].style.zIndex=-1
 trsrs[0].style.left=17+'%'
 trsrs[0].style.bottom=-70+'%'  
@@ -179,14 +197,14 @@ elbw[2].style.width=77+'%'
 elbw[2].style.height=63+'%' 
 elbw[2].style.background=
  'radial-gradient(#eee,#a5a)'
-elbw[2].style.opacity=0.2  
+elbw[2].style.opacity=0.4
 elbw[3].style.left=39+'%'
 elbw[3].style.top=72+'%'
 elbw[3].style.width=44+'%'
 elbw[3].style.height=44+'%' 
 elbw[3].style.background=
  'radial-gradient(#eee,#a5a)'
-elbw[3].style.opacity=0.2 
+elbw[3].style.opacity=0.4
 
 fc[0].style.left=19+'%'
 fc[0].style.top=22+'%'  
@@ -432,7 +450,7 @@ fc[0].onmouseover=()=>
  gl[3].style.background='#f00'
  ears[0].style.transform='scale(1.3,1.4)'
  ears[1].style.transform='scale(1.3,1.4)'
- bgrnd[2].style.transform='scale(1,1.4) rotate(40deg)'
+ bgrnd[2].style.transform='scale(1,1.4) rotate(-40deg)'
  bgrnd[3].style.transform='scale(2.3,1.9) rotate(-116deg)'
  elbw[0].style.transform=
   'scale(1,1.7) translate(0%,33%) rotate(0deg)' 
@@ -446,6 +464,12 @@ fc[0].onmouseover=()=>
  elbw[3].style.borderRadius=37+'%'
  elbw[3].style.transform=
   'scale(1) translate(31%,-122%) '
+ blt[2].style.opacity=1 
+ blt[2].style.transform=
+  'scale(1.5) translate(24%,-30%) rotate(47deg)' 
+ blt[3].style.opacity=1
+ blt[3].style.transform=
+  'scale(1.5) translate(24%,-30%) rotate(47deg)'
 }
 fc[0].onmouseout=()=>
 { 
@@ -478,11 +502,15 @@ fc[0].onmouseout=()=>
  bgrnd[3].style.transform='scale(1)'
  elbw[0].style.transform='scale(1)'
  elbw[1].style.transform='scale(1)'
- elbw[2].style.opacity=0.2
+ elbw[2].style.opacity=0.4
  elbw[2].style.transform='scale(1)'
  elbw[2].style.borderRadius=55+'%'
- elbw[3].style.opacity=0.2
+ elbw[3].style.opacity=0.4
  elbw[3].style.transform='scale(1)'
+ blt[2].style.opacity=0.4
+ blt[2].style.transform='scale(1)'
+ blt[3].style.opacity=0.4
+ blt[3].style.transform='scale(1)'
   clearInterval(Ifc)
 }
 
