@@ -459,14 +459,8 @@ function fcoiloff()
  fld[6].style.transform='translate(0%,0)'
   clearInterval(coilI)
 }
-coil[0].onmouseover=()=>
-{
- fcoilon()
-}  
-coil[0].onmouseout=()=>
-{
- fcoiloff()
-}    
+coil[0].onmouseover=()=>{ fcoilon();}  
+coil[0].onmouseout=()=>{ fcoiloff();}
 
 cpctyI=0
 function fcpctyon()
@@ -508,14 +502,8 @@ function fcpctyoff()
  cpcty[9].style.opacity=0
   clearInterval(cpctyI)
 }
-cpcty[0].onmouseover=()=>
-{
- fcpctyon()
-}
-cpcty[0].onmouseout=()=>
-{
- fcpctyoff()
-}
+cpcty[0].onmouseover=()=>{ fcpctyon();}
+cpcty[0].onmouseout=()=>{ fcpctyoff();}
 
 trsfrmI=0
 function trsfrmon()
@@ -575,14 +563,8 @@ function trsfrmoff()
  ttl[2].style.opacity=0 
   clearInterval(trsfrmI)
 } 
-idtrsfrmtr.onmouseover=()=>
-{
- trsfrmon()
-}
-idtrsfrmtr.onmouseout=()=>
-{
- trsfrmoff()
-}
+idtrsfrmtr.onmouseover=()=>{ trsfrmon();}
+idtrsfrmtr.onmouseout=()=>{ trsfrmoff();}
 
 Ielmtr=0
 elmtr[0].onmouseover=()=>
@@ -594,9 +576,9 @@ elmtr[0].onmouseover=()=>
   'radial-gradient(#ff0,#f00)'
  elmtr[2].style.background=
   'radial-gradient(#ff0,#f00)' 
- elmtr[3].style.border='99px ridge #900' 
+ elmtr[3].style.border='99px ridge #500' 
  elmtr[3].style.borderTop='27px ridge transparent'
- elmtr[4].style.border='99px ridge #900' 
+ elmtr[4].style.border='99px ridge #500' 
  elmtr[4].style.borderBottom='27px ridge transparent'
  elmtr[5].style.opacity=0.8
  elmtr[6].style.opacity=0.8
