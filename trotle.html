@@ -118,6 +118,7 @@
 </div>
 
 <div class=elmtr>
+ <div class=ttl>ElectroMotor</div>
  <div class=elmtr></div>
  <div class=elmtr></div>
  <div class=elmtr></div>
@@ -328,9 +329,12 @@ ttl[2].style.borderTopColor='transparent'
 ttl[2].style.borderBottomColor='transparent'
 ttl[2].style.borderRadius=35+'%'
 ttl[2].style.opacity=0
+ttl[3].style.left=44+'%'
+ttl[3].style.top=-108+'%'
+ttl[3].style.transform='scale(5) skew(-8deg)'
 
 elmtr[0].style.left=9+'%'
-elmtr[0].style.top=266+'%'
+elmtr[0].style.top=277+'%'
 elmtr[0].style.width=66+'%'
 elmtr[0].style.height=70+'%'
 elmtr[0].style.border='99px ridge #777'
@@ -596,6 +600,8 @@ elmtr[0].onmouseover=()=>
  elmtr[4].style.borderBottom='27px ridge transparent'
  elmtr[5].style.opacity=0.8
  elmtr[6].style.opacity=0.8
+ ttl[3].style.color='#700'
+ ttl[3].style.transform='scale(5) skew(-8deg)' 
  Ielmtr=setInterval(()=>{
   elmtr[1]. style.transform=
    'rotate('+(Math.random()*90)+'deg)'
@@ -623,7 +629,9 @@ elmtr[0].onmouseout=()=>
  elmtr[5].style.opacity=0
  elmtr[5].style.transform='scale(1)'
  elmtr[6].style.opacity=0
- elmtr[6].style.transform='scale(1)' 
+ elmtr[6].style.transform='scale(1)'
+ ttl[3].style.color='#000'
+ ttl[3].style.transform='scale(5) skew(8deg)' 
 }
 
 </script>
