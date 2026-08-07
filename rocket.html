@@ -3,32 +3,31 @@
 <body id=idbd>
 <style>
 
-#idbd
-{
+#idbd{
  background:linear-gradient(-144deg,#ff0,#0bb)
 }
 
-.cld
-{
+.cld{
  position:absolute;
  transition:1s;
 }
 
-.rckt
-{
+.rckt{
  position:absolute;
  transition:222ms;
  cursor:pointer;
 }
-.trckt,.btn,.shtl
-{
+.trckt,.btn,.shtl{
  position:absolute;
  transition:1s;
 }
 
 </style>
 <div class=btn>T</div>
-<div class=btn></div> 
+<div class=btn>
+ <div class=btn></div>
+ <div class=btn></div>
+</div> 
 
 <div class=cld></div>
 <div class=cld></div>
@@ -69,16 +68,31 @@ btn[0].style.border='4px ridge #ff0'
 btn[0].style.color='#b00'
 btn[0].style.fontSize=4+'em'
 btn[0].style.textAlign='center'
-btn[1].style.left=73+'%'
+btn[1].style.left=66+'%'
 btn[1].style.top=7+'%'
 btn[1].style.width=18+'%'
 btn[1].style.height=15+'%' 
 btn[1].style.background=
  'radial-gradient(44px,#000,#800)'
+btn[1].style.borderBottom='8px ridge #ff0'
 btn[1].style.borderRadius=55+'%'
 btn[1].style.borderTopLeftRadius=22+'%'
 btn[1].style.borderTopRightRadius=22+'%'
 btn[1].style.transform='skew(-22deg)'
+btn[2].style.left=-16+'%'
+btn[2].style.top=-6+'%'
+btn[2].style.width=133+'%'
+btn[2].style.height=45+'%' 
+btn[2].style.background=
+ 'radial-gradient(44px,#999,#040)'
+btn[2].style.borderBottom='24px ridge #ff0' 
+btn[2].style.borderRadius=45+'%'
+btn[3].style.top=100+'%'
+btn[3].style.width=73+'%'
+btn[3].style.height=45+'%' 
+btn[3].style.borderBottom='4px ridge #f0f' 
+btn[3].style.borderRadius=55+'%'
+btn[3].style.opacity=0
 
 cld[0].style.left=9+'%'
 cld[0].style.top=27+'%'
@@ -192,8 +206,8 @@ shtl[1].style.border='2px ridge #dd0'
 shtl[2].style.width=66+'%'
 shtl[2].style.height=66+'%'
 shtl[2].style.borderRadius=55+'%'
-shtl[2].style.borderBottom='2px ridge #00f'
-shtl[2].style.borderTop='2px ridge #00f'
+shtl[2].style.borderBottom='2px ridge #f0f'
+shtl[2].style.borderTop='2px ridge #f0f'
 shtl[2].style.opacity=0
 
 setInterval(()=>{
@@ -234,6 +248,11 @@ rckt[0].onmouseover=()=>
   dn--; if(dn<0)dn=9
  }, 555)
  Irckt=setInterval(()=>{
+  btn[3].style.opacity=1
+  btn[3].style.transform='scale('+
+  (1+Math.random())+')'
+  
+  
   rckt[0].style.transform=
    'scale('+(Math.random()+1)+',1)'
   rckt[4].style.background='#555' 
@@ -254,6 +273,8 @@ rckt[0].onmouseover=()=>
 rckt[0].onmouseout=()=>
 {
  btn[1].style.transform='skew(-22deg)'
+ btn[3].style.opacity=0
+ btn[3].style.transform='scale(1)'
  shtl[0].style.transform='scale(1)'
  shtl[2].style.opacity=0
  shtl[2].style.transform='scale(1)'
