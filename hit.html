@@ -4,6 +4,7 @@
 
 #idbd
 {
+ height:200%;
  background:linear-gradient(0deg,#00f,#0f0);
 }
 
@@ -35,10 +36,7 @@
  transition:1s;
  cursor:pointer;
 }
-.shld
-{
- border-radius:55%;
-}
+.shld{ border-radius:55%;}
 
 </style>
 
@@ -61,8 +59,15 @@
 <div class=shld>
  <div class=shld>
   <div class=shld></div>
-  </div>
+ </div>
 </div> 
+
+<div class=zbrlo>
+ <div class=zbrlo></div>
+<div class=zbrlo></div>
+<div class=zbrlo></div>
+<div class=zbrlo></div>
+</div>
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -125,6 +130,15 @@ zbrlo[0].style.opacity=0.3
 zbrlo[0].style.borderRadius=55+'%'
 zbrlo[0].style.border='20px ridge #444'
 zbrlo[0].style.transform='rotate(88deg)'
+zbrlo[1].style.left=22+'%'
+zbrlo[1].style.top=112+'%'
+zbrlo[1].style.width=59+'%'
+zbrlo[1].style.height=67+'%'
+zbrlo[1].style.background='#ff9'
+zbrlo[1].style.borderRadius=55+'%'
+zbrlo[1].style.borderTopLeftRadius=24+'%'
+zbrlo[1].style.borderTopRightRadius=24+'%'
+zbrlo[1].style.borderBottomLeftRadius=24+'%'
 
 swrd[0].style.left=13+'%'
 swrd[0].style.top=77+'%'
@@ -328,6 +342,15 @@ shld[0].onmouseout=()=>
 {
  shld[0].style.transform='scale(1)'
  shld[2].style.transform='scale(1)'
+}
+
+zbrlo[1].onmouseover=()=>
+{
+ zbrlo[1].style.transform='scale(1.2)'
+}
+zbrlo[1].onmouseout=()=>
+{
+ zbrlo[1].style.transform='scale(1)'
 }
 
 </script>
