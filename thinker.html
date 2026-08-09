@@ -3,13 +3,17 @@
 <style>
 body
 {
+ height:199%;
  background:linear-gradient(44deg,blue,yellow);
 }
 
-.d,.glss,.gls,.hd
+.d,.glss,.gls,.hd,.schty
 {
  position:absolute;
  transition:1s;
+}
+.d,.glss,.gls,.hd
+{
  border-radius:55%;
 }
 .gls
@@ -91,11 +95,16 @@ body
 </div> 
 
 <div class=nme>Market</div> 
- <div class=nme>raw materials</div> 
- <div class=nme>labor</div> 
- <div class=nme>goods</div> 
- <div class=nme>currency</div> 
- <div class=nme>shares</div> 
+ <div class=nme>Raw Materials</div> 
+ <div class=nme>Labor</div> 
+ <div class=nme>Goods</div> 
+ <div class=nme>Currency</div> 
+ <div class=nme>Shares</div> 
+  
+<div class=schty>
+ <div class=schty></div> 
+ <div class=schty></div> 
+</div> 
   
 <script>
 d=document.getElementsByClassName('d')
@@ -108,6 +117,7 @@ thts=document.getElementsByClassName('thts')
 
 nme=document.getElementsByClassName('nme')
 dvce=document.getElementsByClassName('dvce')
+schty=document.getElementsByClassName('schty')
   
 d[0].style.left=11+'%'
 d[0].style.top=30+'%'
@@ -269,6 +279,27 @@ nme[5].style.left=77+'%';
 nme[5].style.top=30+'%';
 nme[5].style.color='#0bb';
 nme[5].style.transform='scale(0)'
+
+schty[0].style.cursor='pointer'
+schty[0].style.left=6+'%'
+schty[0].style.top=109+'%'
+schty[0].style.width=70+'%'
+schty[0].style.height=67+'%'
+schty[0].style.border='77px ridge #f00'
+schty[1].style.left=-5+'%'
+schty[1].style.top=14+'%'
+schty[1].style.width=88+'%'
+schty[1].style.height=70+'%'
+schty[1].style.border='7px ridge #fff'
+schty[1].style.borderLeft='77px ridge transparent'
+schty[1].style.borderRight='77px ridge transparent'
+schty[2].style.left=-5+'%'
+schty[2].style.top=36+'%'
+schty[2].style.width=88+'%'
+schty[2].style.height=25+'%'
+schty[2].style.border='7px ridge #fff'
+schty[2].style.borderLeft='77px ridge transparent'
+schty[2].style.borderRight='77px ridge transparent'
 
 b=0
 function clk()
