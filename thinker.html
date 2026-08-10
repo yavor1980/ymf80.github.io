@@ -102,8 +102,14 @@ body
  <div class=nme>Shares</div> 
   
 <div class=schty>
- <div class=schty></div> 
- <div class=schty></div> 
+ <div class=schty>
+  <div class=thts></div>
+  <div class=thts></div>
+ </div> 
+ <div class=schty>
+  <div class=thts></div>
+  <div class=thts></div>
+ </div> 
 </div> 
   
 <script>
@@ -207,6 +213,35 @@ thts[0].style.background='#fff';
 thts[0].style.opacity=0.1
 thts[0].style.borderRadius=55+'%'
 thts[0].style.textAlign='center'
+thts[1].style.left=0+'%';
+thts[1].style.top=-15+'%';
+thts[1].style.width=6+'%';
+thts[1].style.height=28+'%';
+thts[1].style.background='#000';
+thts[1].style.opacity=0.2
+thts[1].style.borderRadius=55+'%'
+thts[2].style.zIndex=1
+thts[2].style.left=0+'%';
+thts[2].style.top=15+'%';
+thts[2].style.width=6+'%';
+thts[2].style.height=28+'%';
+thts[2].style.background='#000';
+thts[2].style.opacity=0.2
+thts[2].style.borderRadius=55+'%'
+thts[3].style.left=0+'%';
+thts[3].style.top=62+'%';
+thts[3].style.width=6+'%';
+thts[3].style.height=78+'%';
+thts[3].style.background='#000';
+thts[3].style.opacity=0.2
+thts[3].style.borderRadius=55+'%'
+thts[4].style.left=0+'%';
+thts[4].style.top=154+'%';
+thts[4].style.width=6+'%';
+thts[4].style.height=78+'%';
+thts[4].style.background='#000';
+thts[4].style.opacity=0.2
+thts[4].style.borderRadius=55+'%' 
  
 dvce[0].style.left=60+'%'
 dvce[0].style.top=66+'%';
@@ -450,6 +485,37 @@ dvce[0].onmouseout=()=>
  dvce[9].style.transform='scale(0)'
   clearInterval(Idvs)
 }	 
+
+Ischty=0
+schty[0].onmouseover=()=>
+{
+ thts[1].style.opacity=1
+ thts[2].style.opacity=1
+ thts[3].style.opacity=1
+ thts[4].style.opacity=1
+ Ischty=setInterval(()=>{
+  thts[1].style.transform='translate('+
+   1555*Math.random()+'%,0%)'
+  thts[2].style.transform='translate('+
+   1555*Math.random()+'%,0%)'
+  thts[3].style.transform='translate('+
+   1555*Math.random()+'%,0%)'
+  thts[4].style.transform='translate('+
+   1555*Math.random()+'%,0%)'
+ }, 999)
+}
+schty[0].onmouseout=()=>
+{
+  clearInterval(Ischty)
+ thts[1].style.opacity=0.2
+ thts[1].style.transform='scale(1)'
+ thts[2].style.opacity=0.2
+ thts[2].style.transform='scale(1)'
+ thts[3].style.opacity=0.2
+ thts[3].style.transform='scale(1)'
+ thts[4].style.opacity=0.2
+ thts[4].style.transform='scale(1)'
+}
 	  // inme=Math.round(Math.random()*5)
 </script>
 </body>
