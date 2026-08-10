@@ -4,7 +4,7 @@
 
 #idbd
 {
- height:200%;
+ height:222%;
  background:linear-gradient(0deg,#00f,#0f0);
 }
 
@@ -70,6 +70,7 @@
  <div class=zbrlo></div>
  <div class=zbrlo>Palm</div>
  <div class=zbrlo>Fist</div>
+ <div class=zbrlo></div>
 </div>
 
 <script>
@@ -182,8 +183,16 @@ zbrlo[6].style.transform=
  'translate(-28%,0) rotate(-44deg)'
 zbrlo[7].style.color='#f00' 
 zbrlo[7].style.transform=
- 'scale(5) translate(-2%,-188%) skew(4deg)'
+ 'scale(5) translate(-122%,-188%) skew(4deg)'
 zbrlo[8].style.transform='scale(0)'
+zbrlo[9].style.left=-95+'%'
+zbrlo[9].style.top=-2+'%'
+zbrlo[9].style.width=33+'%'
+zbrlo[9].style.height=97+'%'
+zbrlo[9].style.background=
+ 'radial-gradient(#444,#999)'
+zbrlo[9].style.borderRadius=35+'%' 
+zbrlo[9].style.opacity=0
 
 swrd[0].style.left=13+'%'
 swrd[0].style.top=77+'%'
@@ -389,9 +398,11 @@ shld[0].onmouseout=()=>
  shld[2].style.transform='scale(1)'
 }
 
+Izbrlo=0
 zbrlo[1].onmouseover=()=>
 {
- zbrlo[1].style.transform='scale(1.1)'
+ zbrlo[1].style.transform= 
+  'scale(1.1) translate(22%,-11%)'
  zbrlo[2].style.transform=
   'scale(0.4,1) translate(88%,0)'
  zbrlo[3].style.transform=
@@ -406,10 +417,17 @@ zbrlo[1].onmouseover=()=>
  zbrlo[7].style.transform='scale(0)'
  zbrlo[8].style.color='#f00'
  zbrlo[8].style.transform=  
-  'scale(5) translate(-2%,-188%) skew(-4deg)'
+  'scale(5) translate(-188%,-144%) skew(-4deg)'
+ zbrlo[9].style.opacity=1
+ Izbrlo=setInterval(()=>{
+  zbrlo[9].style.transform='scale('+
+  (Math.random()/4+1)+')'
+ 
+ }, 999)
 }
 zbrlo[1].onmouseout=()=>
 {
+  clearInterval(Izbrlo)
  zbrlo[1].style.transform='scale(1)'
  zbrlo[2].style.transform='scale(1)'
  zbrlo[3].style.transform='scale(1)'
@@ -419,9 +437,11 @@ zbrlo[1].onmouseout=()=>
   'translate(-28%,0) rotate(-44deg)'
  zbrlo[7].style.color='#f00'
  zbrlo[7].style.transform=
-  'scale(5) translate(-2%,-188%) skew(4deg)'
+  'scale(5) translate(-122%,-188%) skew(4deg)'
  zbrlo[8].style.color='#000' 
  zbrlo[8].style.transform='scale(0)' 
+ zbrlo[9].style.opacity=0
+ zbrlo[9].style.transform='scale(1)'
 }
 
 </script>
