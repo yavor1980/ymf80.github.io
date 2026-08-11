@@ -4,7 +4,7 @@
 <style>
 #idbd
 {
- height:199%;
+ height:222%;
  background:radial-gradient(#0bb,#bb0);
 }
 
@@ -46,7 +46,7 @@
 {
  position:absolute;
  transition:1s;
- left:11%;
+ left:12%;
  top:122%;
  width:66%;
  height:66%;
@@ -67,6 +67,7 @@
  <div class=grscpe></div>
 </div>
 <div class=grscpe>Gyroscope</div>
+<div class=grscpe></div>
 
 <script>
 btn=document.getElementsByClassName("btn")
@@ -365,6 +366,12 @@ grscpe[3].style.border='none'
 grscpe[3].style.color='#009'
 grscpe[3].style.opacity=0.4
 grscpe[3].style.transform='scale(3)'
+grscpe[4].style.zIndex=-1
+grscpe[4].style.left=12+'%'
+grscpe[4].style.top=122+'%'
+grscpe[4].style.opacity=0.1
+grscpe[4].style.border='44px ridge #008'
+grscpe[4].style.transform='scale(1.3)'
 
 Igrscpe=0, bgrscpe=0
 grscpe[0].onmouseover=()=>
@@ -373,6 +380,7 @@ grscpe[3].style.color='#f00'
 grscpe[3].style.opacity=1
 grscpe[3].style.transform=
  'scale(5) translate(-37px,-4px) skew(-22deg)'
+grscpe[4].style.opacity=1
 Igrscpe=setInterval(()=>{
 if(bgrscpe) {
  grscpe[0].style.transform='scale('+
@@ -400,6 +408,7 @@ grscpe[0].onmouseout=()=>
  grscpe[3].style.color='#009'
  grscpe[3].style.opacity=0.4
  grscpe[3].style.transform='scale(3)'
+ grscpe[4].style.opacity=0.1
 }	
 
 </script>
