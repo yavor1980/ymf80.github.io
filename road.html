@@ -132,7 +132,7 @@ inn(vw,1, 66,24, 11,11, '')
 inn(vw,2, 46,56, 11,11, '') 
  vw[2].style.zIndex=-1 
  vw[2].style.background=
-  'radial-gradient(#f00,#0f0)'
+  'radial-gradient(#ff0,#f00)'
  vw[2].style.borderRadius=55+'%'
  vw[2].style.opacity=0
  
@@ -176,6 +176,7 @@ function cl()
   rd[1].style.transform='translate(0,-33%)'
   rd[1].style.transition='0s'
   rd[1].style.opacity=0
+  vw[2].style.opacity=1	
  }   
   else
  {
@@ -187,6 +188,7 @@ function cl()
   rd[1].style.transform='translate(0,-388%)'
   rd[1].style.transition='2s'
   rd[1].style.opacity=1	
+  vw[2].style.opacity=0
  }  
      bcl=!bcl
 }
