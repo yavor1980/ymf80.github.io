@@ -27,6 +27,7 @@
 <div class=btn>
  <div class=btn></div>
  <div class=btn></div>
+ <div class=btn></div> 
 </div> 
 
 <div class=cld></div>
@@ -47,6 +48,7 @@
 <div class=trckt>Score: 0</div>
 
 <div class=shtl> 
+ <div class=shtl></div>
  <div class=shtl></div>
  <div class=shtl></div>
 </div>
@@ -78,7 +80,8 @@ btn[1].style.borderBottom='8px ridge #ff0'
 btn[1].style.borderRadius=55+'%'
 btn[1].style.borderTopLeftRadius=22+'%'
 btn[1].style.borderTopRightRadius=22+'%'
-btn[1].style.transform='skew(-22deg)'
+btn[1].style.transform='scale(0.4) skew(-22deg)'
+btn[1].style.opacity=0.6
 btn[2].style.left=-16+'%'
 btn[2].style.top=-6+'%'
 btn[2].style.width=133+'%'
@@ -93,6 +96,12 @@ btn[3].style.height=45+'%'
 btn[3].style.borderBottom='4px ridge #f0f' 
 btn[3].style.borderRadius=55+'%'
 btn[3].style.opacity=0
+btn[4].style.top=100+'%'
+btn[4].style.width=73+'%'
+btn[4].style.height=95+'%' 
+btn[4].style.borderBottom='4px ridge #f0f' 
+btn[4].style.borderRadius=55+'%'
+btn[4].style.opacity=0
 
 cld[0].style.left=9+'%'
 cld[0].style.top=27+'%'
@@ -209,6 +218,12 @@ shtl[2].style.borderRadius=55+'%'
 shtl[2].style.borderBottom='2px ridge #f0f'
 shtl[2].style.borderTop='2px ridge #f0f'
 shtl[2].style.opacity=0
+shtl[3].style.width=66+'%'
+shtl[3].style.height=66+'%'
+shtl[3].style.borderRadius=55+'%'
+shtl[3].style.borderLeft='2px ridge #f0f'
+shtl[3].style.borderRight='2px ridge #f0f'
+shtl[3].style.opacity=0
 
 setInterval(()=>{
  cld[0].style.opacity=(Math.random()/6+0.2)
@@ -229,7 +244,8 @@ sclbtn0=bbtn0=Irckt=nrckt=nrckt=0
 dn=9
 rckt[0].onmouseover=()=>
 { dn=9
-  btn[1].style.transform='skew(-46deg)'
+  btn[1].style.opacity=1
+  btn[1].style.transform='scale(1) skew(-46deg)'
   Ibtn0=setInterval(()=>{
    sclbtn0=Math.random()/22+0.7
    shtl[0].style.transform=
@@ -239,6 +255,8 @@ rckt[0].onmouseover=()=>
    shtl[1].style.transform='scale('+sclbtn0+')'
    shtl[2].style.opacity=0.8
    shtl[2].style.transform='scale('+6*Math.random()+')'
+   shtl[3].style.opacity=0.8
+   shtl[3].style.transform='scale('+6*Math.random()+')'
   }, 1111)
   btn[0].innerHTML=dn
  rckt[1].style.borderRight='2px ridge #f00'
@@ -251,6 +269,9 @@ rckt[0].onmouseover=()=>
   btn[3].style.opacity=1
   btn[3].style.transform='scale('+
   (1+Math.random())+')'
+  btn[4].style.opacity=1
+  btn[4].style.transform='scale('+
+  (1+Math.random())+')' 
   rckt[0].style.transform=
    'scale('+(Math.random()+1)+',1)'
   rckt[4].style.background='#555' 
@@ -270,12 +291,17 @@ rckt[0].onmouseover=()=>
 }
 rckt[0].onmouseout=()=>
 {
- btn[1].style.transform='skew(-22deg)'
+ btn[1].style.opacity=0.6
+ btn[1].style.transform='scale(0.4) skew(-22deg)'
  btn[3].style.opacity=0
  btn[3].style.transform='scale(1)'
+ btn[4].style.opacity=0
+ btn[4].style.transform='scale(1)'
  shtl[0].style.transform='scale(1)'
  shtl[2].style.opacity=0
  shtl[2].style.transform='scale(1)'
+ shtl[3].style.opacity=0
+ shtl[3].style.transform='scale(1)' 
   clearInterval(Ibtn0)
  btn[0].style.transform='scale(1)'
   btn[0].innerHTML='T'
