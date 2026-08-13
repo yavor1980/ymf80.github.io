@@ -35,9 +35,9 @@
 .tbl
 {
  position:absolute;   
+ transition:3s;
  font-size:3em;
  text-align:center;
- transition:3s;
  cursor:pointer;
 }
 
@@ -94,6 +94,7 @@ mth=document.getElementsByClassName('mth')
 tbl=document.getElementsByClassName('tbl')
 tps=document.getElementsByClassName('tps')
   
+lctr[0].style.cursor='pointer'  
 lctr[0].style.left=61+'%'
 lctr[0].style.top=33+'%'
 lctr[0].style.width=18+'%'
@@ -106,7 +107,6 @@ lctr[0].style.borderBottomLeftRadius=33+'%'
 lctr[0].style.borderBottomRightRadius=33+'%'
 lctr[0].style.borderTop='16px ridge #333'
 lctr[0].style.borderBottom='6px ridge #648'	
-lctr[0].style.cursor='pointer'
 lctr[1].style.left=-10+'%'
 lctr[1].style.top=22+'%'
 lctr[1].style.width=11+'%'
@@ -155,8 +155,8 @@ initj(gl,1,66,0,14,22,'#fff')
  gl[1].style.borderRadius=55+'%'
  gl[1].style.borderTop='16px ridge #886'
 initj(ns,0,44,0,11,36,'radial-gradient(#ffc,#f88)')
- ns[0].style.borderRadius=55+'%'
  ns[0].style.top=17+'%'
+ ns[0].style.borderRadius=55+'%'
 initj(ns,1,-44,-7,199,33,'radial-gradient(#ffc,#f88)')
  ns[1].style.borderRadius=55+'%'
 initj(mth,0,22,22,55,1,'radial-gradient(#000,#f00)')
@@ -247,6 +247,7 @@ tbl[0].onmouseover=()=>
  lctr[3].style.transform=
   'scale(2) translate(0,-177%) skew(-13deg)'
  lctr[4].style.color='#900' 
+ tbl[0].style.borderTop='16px ridge #088'
  tbl[0].style.transform='skew(-22deg)'
  tbl[1].style.borderTopLeftRadius=0+'%'
  tbl[1].style.borderTopRightRadius=0+'%'
@@ -287,6 +288,7 @@ tbl[0].onmouseout=()=>
  lctr[4].style.color='#000'
  lctr[4].style.transform='scale(0)'
  lctr[4].style.borderRadius='55%'
+  tbl[0].style.borderTop='6px ridge #088'
  tbl[0].style.transform='skew(44deg)' 
  Id=setInterval(()=>
  {
