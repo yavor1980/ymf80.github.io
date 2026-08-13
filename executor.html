@@ -45,6 +45,8 @@
 
 <div class=bgrnd></div> 
 <div class=bgrnd></div>
+<div class=bgrnd></div> 
+<div class=bgrnd></div>
 
 <div class=jws>  
  <div class=gl><div class=gl></div></div>
@@ -104,7 +106,7 @@ btn[1].style.background=
  'radial-gradient(#f00,#620)';
 btn[1].style.borderRadius=44+'%'
 
-bgrnd[0].style.zIndex=-1
+bgrnd[0].style.zIndex=-3
 bgrnd[0].style.bottom=0+'%'  
 bgrnd[0].style.width=100+'%'
 bgrnd[0].style.height=15+'%'  
@@ -121,6 +123,24 @@ bgrnd[1].style.borderLeft='9px ridge #ff0'
 bgrnd[1].style.borderRadius=55+'%'
 bgrnd[1].style.transform='rotate(-30deg)' 
 bgrnd[1].style.opacity=0
+bgrnd[2].style.zIndex=1
+bgrnd[2].style.left=13+'%'
+bgrnd[2].style.top=15+'%'  
+bgrnd[2].style.width=10+'%'
+bgrnd[2].style.height=45+'%' 
+bgrnd[2].style.borderLeft='9px ridge #ff0'
+bgrnd[2].style.borderRadius=55+'%'
+bgrnd[2].style.transform='rotate(-30deg)' 
+bgrnd[2].style.opacity=0
+bgrnd[3].style.zIndex=1
+bgrnd[3].style.left=13+'%'
+bgrnd[3].style.top=15+'%'  
+bgrnd[3].style.width=10+'%'
+bgrnd[3].style.height=45+'%' 
+bgrnd[3].style.borderLeft='9px ridge #ff0'
+bgrnd[3].style.borderRadius=55+'%'
+bgrnd[3].style.transform='rotate(-30deg)' 
+bgrnd[3].style.opacity=0
 
 jws[0].style.cursor='pointer'
 jws[0].style.left=33+'%'
@@ -390,6 +410,12 @@ jws[0].onmouseover=()=>
   bgrnd[1].style.opacity=Math.random()
   bgrnd[1].style.transform='translate('+(2+
    111*Math.random())+'%,2%) rotate(-30deg)' 
+  bgrnd[2].style.opacity=Math.random()
+  bgrnd[2].style.transform='translate('+(2+
+   111*Math.random())+'%,2%) rotate(-30deg)'    
+  bgrnd[3].style.opacity=Math.random()
+  bgrnd[3].style.transform='translate('+(2+
+   111*Math.random())+'%,2%) rotate(-30deg)'    
   jws[2].style.transform='translate('+(4-9*Math.random())+
    '%,0) rotate('+(4-9*Math.random())+'deg)'
   jws[3].style.transform='translate('+(4-9*Math.random())+
@@ -412,6 +438,8 @@ jws[0].onmouseout=()=>
   jwI=setInterval(cl, 1000)
   shrm[0].onmouseout()
  bgrnd[1].style.opacity=0
+ bgrnd[2].style.opacity=0
+ bgrnd[3].style.opacity=0
  jws[2].style.transform='scale(1)'
  jws[3].style.transform='scale(1)'
  jws[4].style.opacity=0
@@ -424,7 +452,7 @@ jws[0].onmouseout=()=>
 } 
 jws[0].onclick=()=>
 { 
-  shrm[0].onclick()
+ shrm[0].onclick()
 }
 
 shrm[0].onmouseover=()=>
