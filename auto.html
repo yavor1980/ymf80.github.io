@@ -69,6 +69,7 @@
   <div class=drn></div>
   <div class=drn></div>
   <div class=drn></div>
+  <div class=drn></div>
  </div>
  
 <script>
@@ -258,15 +259,22 @@ drn[2].style.top=-33+'%'
 drn[2].style.width=166+'%'
 drn[2].style.height=166+'%'	
 drn[2].style.borderRadius=55+'%'
-drn[2].style.opacity=0
 drn[2].style.borderBottom='7px ridge #ff0'
+drn[2].style.opacity=0
 drn[3].style.left=53+'%' 
 drn[3].style.top=33+'%'  
 drn[3].style.width=6+'%'
 drn[3].style.height=6+'%'	
 drn[3].style.background=
- 'radial-gradient(#0f0,#00f)'
+ 'radial-gradient(2px,#040,#fff)'
 drn[3].style.borderRadius=55+'%'
+drn[4].style.left=-33+'%' 
+drn[4].style.top=-33+'%'  
+drn[4].style.width=166+'%'
+drn[4].style.height=166+'%'	
+drn[4].style.borderRadius=55+'%'
+drn[4].style.borderBottom='7px ridge #ff0'
+drn[4].style.opacity=0
 	
 o= 
 {
@@ -391,6 +399,8 @@ whl[0].onmouseover=()=>
  drn[2].style.opacity=1
  drn[2].style.borderWidth=(11+22*Math.random())+'px'
  drn[3].style.transform='scale(6)' 
+ drn[4].style.opacity=1
+ drn[4].style.borderWidth=(11+22*Math.random())+'px'
 }
 whl[0].onmouseout=()=>
 {
@@ -416,6 +426,8 @@ whl[0].onmouseout=()=>
  drn[2].style.borderWidth=7+'px'
  drn[3].style.left=53+'%' 
  drn[3].style.transform='scale(1)'
+ drn[4].style.opacity=0
+ drn[4].style.borderWidth=7+'px'
 }
 
 </script>
