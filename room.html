@@ -80,6 +80,7 @@ button:hover
  <div class=vctr></div>
  <div class=vctr></div>
  <div class=vctr></div>
+ <div class=vctr></div>
  </div>
 
 <script>
@@ -266,10 +267,18 @@ vctr[3].style.left=-107+'%'
 vctr[3].style.top=-20+'%'
 vctr[3].style.width=299+'%'
 vctr[3].style.height=99+'%'
-vctr[3].style.border='4px ridge #ff0'
+vctr[3].style.border='8px ridge #ff0'
 vctr[3].style.borderTop='8px ridge transparent'
 vctr[3].style.borderBottom='2px ridge transparent'
 vctr[3].style.borderRadius=55+'%' 
+vctr[4].style.left=-107+'%'
+vctr[4].style.top=-20+'%'
+vctr[4].style.width=299+'%'
+vctr[4].style.height=99+'%'
+vctr[4].style.border='8px ridge #ff0'
+vctr[4].style.borderTop='8px ridge transparent'
+vctr[4].style.borderBottom='2px ridge transparent'
+vctr[4].style.borderRadius=55+'%' 
 
 bbtn0=0, vw=0
 function fdrn()
@@ -309,7 +318,7 @@ function fdrn()
   vctr[2].style.transform='scale('+
    (1+Math.random())+')' 
   vctr[3].style.transform='scale('+
-   (1+Math.random()/2)+')'   
+   (1+Math.random()/3)+')'   
   wls[0].style.transform=
    'scale('+(Math.random()/5+0.8)+') skew(22deg)'
   wls[1].style.transform=
