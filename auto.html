@@ -44,7 +44,10 @@
 
 <div class=rd>
  <div class=rd></div>
+ <div class=rd></div>
+ <div class=rd></div>
 </div>
+
 
 <div class=whl>
  <div class=brd>
@@ -104,7 +107,6 @@ btn[2].style.background='#900'
 btn[2].style.color='#fff'
 btn[2].style.borderRadius=22+'%'    
    
-rd[0].style.left=0+'%'
 rd[0].style.bottom=0+'%'
 rd[0].style.width=100+'%'
 rd[0].style.height=22+'%'
@@ -112,11 +114,32 @@ rd[0].style.background='#777'
 rd[0].style.borderTopLeftRadius=33+'%'
 rd[0].style.borderTopRightRadius=33+'%' 
 rd[1].style.left=49+'%'
-rd[1].style.top=0+'%' 
-rd[1].style.width=2+'%'
+rd[1].style.top=0+'%'
+rd[1].style.width=4+'%'
 rd[1].style.height=100+'%'
-rd[1].style.background='#fff'	
-      
+rd[1].style.background='#fff'
+rd[1].style.borderRadius=4+'%'  
+rd[2].style.left=91+'%'
+rd[2].style.top=-55+'%'
+rd[2].style.width=9+'%'
+rd[2].style.height=99+'%'
+rd[2].style.background=
+ 'radial-gradient(#0f0,#090)'
+rd[2].style.opacity=0.1     
+rd[2].style.borderRadius=44+'%' 
+rd[2].style.borderTTopRightRadius=0+'%' 
+rd[2].style.borderBottomRightRadius=0+'%' 
+rd[3].style.left=0+'%'
+rd[3].style.top=-55+'%'
+rd[3].style.width=9+'%'
+rd[3].style.height=99+'%'
+rd[3].style.background=
+ 'radial-gradient(#0f0,#090)'
+rd[3].style.opacity=0.1  
+rd[3].style.borderRadius=44+'%' 
+rd[3].style.borderTTopLeftRadius=0+'%' 
+rd[3].style.borderBottomLeftRadius=0+'%' 
+    
 whl[0].style.left=20+'%'
 whl[0].style.top=49+'%'
 whl[0].style.width=38+'%'
@@ -251,6 +274,10 @@ o=
  cl:function()
  {  
    v=Math.round(Math.random()*3)
+  rd[2].style.transform=
+   'scale(1,'+(2*Math.random()+0.4)+')'
+  rd[3].style.transform=
+   'scale(1,'+(2*Math.random()+0.4)+')' 
   whl[0].style.transform=
    'scale('+(Math.random()+0.4)+') translate(30%,0)'+
    'rotate('+(Math.random()*22-11)+'deg)' 
@@ -340,7 +367,9 @@ Iwhl0=0
 whl[0].onmouseover=()=>
 { 
  rd[1].style.transform='translate('+
-  (444*Math.random()-222)+'%,0)' 
+  (444*Math.random()-222)+'%,0)'
+ rd[2].style.opacity=1 
+ rd[3].style.opacity=1 
  whl[0].style.borderBottomLeftRadius=55+'%'
  whl[0].style.borderBottomRightRadius=55+'%'  
  whl[4].style.transform='scale(1.1,1)' 
@@ -366,6 +395,8 @@ whl[0].onmouseover=()=>
 whl[0].onmouseout=()=>
 {
  rd[1].style.transform='scale(1)' 
+ rd[2].style.opacity=0.1 
+ rd[3].style.opacity=0.1 
  whl[0].style.borderBottomLeftRadius=22+'%'
  whl[0].style.borderBottomRightRadius=22+'%'  
  whl[4].style.transform='scale(1,1)' 
