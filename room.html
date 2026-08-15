@@ -74,6 +74,7 @@ button:hover
  <div class=drn></div>
  <div class=drn></div>
  <div class=drn></div>
+ <div class=drn></div>
 </div>
 
 <div class=vctr>
@@ -173,7 +174,7 @@ drn[2].style.top=33+'%'
 drn[2].style.width=111+'%'
 drn[2].style.height=22+'%'
 drn[2].style.background='#600'
-drn[2].style.borderRadius='15%'
+drn[2].style.borderRadius=15+'%'
 drn[2].style.transform='rotate(-11deg)'
 drn[3].style.left=38+'%'
 drn[3].style.top=33+'%'
@@ -181,7 +182,7 @@ drn[3].style.width=22+'%'
 drn[3].style.height=22+'%'
 drn[3].style.background=
  'radial-gradient(5px,#000,#808)'
-drn[3].style.borderRadius='22%'
+drn[3].style.borderRadius=22+'%'
 drn[3].style.opacity=0.4
 drn[3].style.transform='scale(2)'
 drn[4].style.left=40+'%'
@@ -207,6 +208,15 @@ drn[5].style.borderLeft='2px solid transparent'
 drn[5].style.borderRight='2px solid transparent'
 drn[5].style.transform='scale(0)'
 drn[5].style.transition=666+'ms'
+drn[6].style.left=33+'%'
+drn[6].style.top=33+'%'
+drn[6].style.width=22+'%'
+drn[6].style.height=22+'%'
+drn[6].style.borderRadius=55+'%'
+drn[6].style.border='4px ridge #ff0'
+drn[6].style.borderTop='2px solid transparent'
+drn[6].style.borderBottom='2px solid transparent'
+drn[6].style.transform='scale(0)'
  
 prplr[0].style.left=4+'%'
 prplr[0].style.top=-13+'%'
@@ -324,6 +334,8 @@ function fdrn()
   wls[1].style.transform=
    'scale('+(Math.random()/5+0.8)+')'
    w-=1; h-=0; b++   
+  drn[6].style.transform='scale('+
+   (7+Math.random())+')'  
   prplr[0].style.transform='scale('+(1+Math.random())+')'
   prplr[1].style.transform='scale('+(1+Math.random())+')'
   prplr[2].style.transform='scale('+(1+Math.random())+')'
@@ -373,6 +385,7 @@ function fdrn()
    clearInterval(drn0I)
    clearInterval(drnI)
    btn[0].innerHTML='GO'
+  drn[6].style.transform='scale(0)'
  }  
      bbtn0=!bbtn0
 }
