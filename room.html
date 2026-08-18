@@ -14,10 +14,7 @@ button
  transform:scale(2.2);
  cursor:pointer;
 }
-button:hover
-{
- border-radius:33%;
-}
+button:hover{ border-radius:33%;}
 
 #idplt,.imgg
 {
@@ -35,7 +32,6 @@ button:hover
 .drn,.prplr,.vctr
 {
  position:absolute;
- cursor:pointer; 
  transition:1s;
 }
 .prplr
@@ -43,7 +39,6 @@ button:hover
  transition:2s;
  opacity:0.5;
 }
-
 </style>
 
 <div id=idplt>
@@ -191,10 +186,7 @@ drn[4].style.width=22+'%'
 drn[4].style.height=22+'%'
 drn[4].style.borderRadius=55+'%'
 drn[4].style.opacity=0
-drn[4].style.border='8px solid #f00'
-drn[4].style.borderTop='2px solid transparent'
-drn[4].style.borderLeft='2px solid transparent'
-drn[4].style.borderRight='2px solid transparent'
+drn[4].style.borderBottom='8px solid #f00'
 drn[4].style.transform='scale(2)'
 drn[4].style.transition=666+'ms'
 drn[5].style.left=40+'%'
@@ -202,10 +194,7 @@ drn[5].style.top=44+'%'
 drn[5].style.width=22+'%'
 drn[5].style.height=22+'%'
 drn[5].style.borderRadius=55+'%'
-drn[5].style.border='18px ridge #ff0'
-drn[5].style.borderTop='2px solid transparent'
-drn[5].style.borderLeft='2px solid transparent'
-drn[5].style.borderRight='2px solid transparent'
+drn[5].style.borderBottom='18px ridge #ff0'
 drn[5].style.transform='scale(0)'
 drn[5].style.transition=666+'ms'
 drn[6].style.left=33+'%'
@@ -334,8 +323,8 @@ function fdrn()
   wls[1].style.transform=
    'scale('+(Math.random()/5+0.8)+')'
    w-=1; h-=0; b++   
-  drn[6].style.transform='scale('+
-   (7+Math.random())+')'  
+  drn[6].style.transform='scale(7,'+
+   (8+Math.random())+')'  
   prplr[0].style.transform='scale('+(1+Math.random())+')'
   prplr[1].style.transform='scale('+(1+Math.random())+')'
   prplr[2].style.transform='scale('+(1+Math.random())+')'
