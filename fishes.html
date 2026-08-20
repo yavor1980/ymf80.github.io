@@ -77,7 +77,10 @@
 
 <div class=stns></div>
 <div class=stns></div>
+
 <div class=stns>
+ <div class=stns></div>
+ <div class=stns></div>
  <div class=stns></div>
 </div>
 
@@ -170,18 +173,18 @@ jlly[0].style.top=76+'%'
 jlly[0].style.width=19+'%'
 jlly[0].style.height=11+'%'
 jlly[0].style.background=
- 'radial-gradient(#0aa,#aa0)'
+ 'radial-gradient(#a0a,#aa0)'
 jlly[0].style.opacity=0.5
 jlly[1].style.left=24+'%'
 jlly[1].style.top=13+'%'
 jlly[1].style.width=46+'%'
 jlly[1].style.height=56+'%'
 jlly[1].style.background=
- 'radial-gradient(#0bb,#bb0)'
+ 'radial-gradient(#b0b,#bb0)'
 jlly[2].style.width=76+'%'
 jlly[2].style.height=56+'%'
 jlly[2].style.background=
- 'radial-gradient(#0ff,#ff0)'
+ 'radial-gradient(8px,#099,#f0f)'
  
 stns[0].style.left=0+'%'
 stns[0].style.bottom=0+'%'
@@ -198,20 +201,31 @@ stns[1].style.background=
  'radial-gradient(#b00,#b0b)'
 stns[1].style.opacity=0.5 
 stns[1].style.borderRadius=16+'%'
+
 stns[2].style.left=3+'%'
 stns[2].style.top=9+'%'
 stns[2].style.width=33+'%'
 stns[2].style.height=9+'%'
-stns[2].style.background=
- 'radial-gradient(#900,#f00)'
-stns[2].style.opacity=0.5 
-stns[3].style.left=33+'%'
-stns[3].style.top=13+'%'
-stns[3].style.width=33+'%'
-stns[3].style.height=66+'%'
+stns[2].style.opacity=0.5
+stns[3].style.width=100+'%'
+stns[3].style.height=100+'%'
 stns[3].style.background=
- 'radial-gradient(22px,#00f,#fff)'
-
+ 'radial-gradient(#900,#f00)'
+stns[3].style.opacity=0.8
+stns[4].style.left=33+'%'
+stns[4].style.top=13+'%'
+stns[4].style.width=33+'%'
+stns[4].style.height=66+'%'
+stns[4].style.background=
+ 'radial-gradient(22px,#00f,#0ff)' 
+stns[5].style.zIndex=-1
+stns[5].style.left=38+'%'
+stns[5].style.top=13+'%'
+stns[5].style.width=19+'%'
+stns[5].style.height=133+'%'
+stns[5].style.background=
+ 'radial-gradient(22px,#f00,#f0f)'  
+ 
 b=0
 function cl()
 {
@@ -314,7 +328,9 @@ fsh[0].onmouseover=()=>
   (-45+Math.random()*(-52)) +'%)'
   jlly[1].style.transform='scale('+(1+
    Math.random()/2)+') translate(0%,'+
-   Math.random()*(-33)+'%' 
+   Math.random()*(-33)+'%'
+  jlly[2].style.background=
+   'radial-gradient(8px,#099,#fff)'
   jlly[2].style.transform='scale(0.6) translate('+
    (45+Math.random()*(-92))+'%,24%) '  
   jlly[2].style.borderTopLeftRadius=
@@ -335,6 +351,12 @@ fsh[0].onmouseover=()=>
   stns[3].style.transform='scale(1,'
    +(0.3+Math.random())+') translate('+ 
    (33*Math.random())+'%,2%)'
+  stns[4].style.transform='scale(1,'
+   +(0.3+Math.random())+') translate('+ 
+   (33*Math.random())+'%,2%)'  
+  stns[5].style.transform='scale(1,'
+   +(0.3+Math.random())+') translate(2%,'+ 
+   (-93*Math.random())+'%)'   
   setTimeout(()=>{
    fns[0].style.transform='scale(0.8,1)'
    fns[1].style.transform='scale(0.8,1)'
@@ -360,16 +382,18 @@ fsh[0].onmouseout=()=>
  fc[0].style.transform='scale(1)'
  fc[1].style.transform='scale(1)'	  
  fc[2].style.transform='scale(1,1)'
- bbl[0].style.transition='0s'
+ bbl[0].style.transition=0+'s'
  bbl[0].style.transform='scale(0)'
- bbl[1].style.transition='0s'
+ bbl[1].style.transition=0+'s'
  bbl[1].style.transform='scale(0)'
- bbl[2].style.transition='0s'
+ bbl[2].style.transition=0+'s'
  bbl[2].style.transform='scale(0)'
  jlly[0].style.opacity=0.5
  jlly[0].style.borderRadius=55+'%'
  jlly[0].style.transform='scale(1)'
  jlly[1].style.transform='scale(1)'
+ jlly[2].style.background=
+  'radial-gradient(8px,#0ff,#f0f)'
  jlly[2].style.transform='scale(1)'
  stns[1].style.borderRadius=16+'%'
  stns[1].style.transform='scale(1)'
@@ -377,6 +401,8 @@ fsh[0].onmouseout=()=>
  stns[2].style.opacity=0.5
  stns[2].style.transform='scale(1)'
  stns[3].style.transform='scale(1)'
+ stns[4].style.transform='scale(1)' 
+ stns[5].style.transform='scale(1)'  
 }  
  
 </script>
