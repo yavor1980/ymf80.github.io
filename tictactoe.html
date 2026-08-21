@@ -120,13 +120,12 @@ ttl[2].style.color='#500'
 ttl[2].style.transform='scale(0)'
 
 sbtl[0].style.cursor='pointer'
-sbtl[0].style.left=16+'%'
-sbtl[0].style.top=99+'%'
+sbtl[0].style.left=12+'%'
+sbtl[0].style.top=111+'%'
 sbtl[0].style.width=76+'%'
 sbtl[0].style.height=77+'%'
 sbtl[0].style.background='#000'
 sbtl[0].style.border='8px ridge #ff0'
-
 
 idcont.onmouseover=()=>
 {
@@ -196,6 +195,14 @@ function  clk(i)
  clk(3), clk(4), clk(5)
  clk(6), clk(7), clk(8)
 
+sbtl[0].onmouseover=()=>
+{
+ sbtl[0].style.transform='scale(1.1)'
+}
+sbtl[0].onmouseout=()=>
+{
+ sbtl[0].style.transform='scale(1)'
+}
 
 
 </script>
