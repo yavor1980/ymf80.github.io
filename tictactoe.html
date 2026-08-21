@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+
 <html>
 <head>
- <meta charset="utf-8">
- <link rel="stylesheet" href />
 	
 <style>
 body
-{
+{	
+ height:199%;
  background:#070;
 }
 #idbtn
@@ -16,7 +15,6 @@ body
  left:40%; 
  bottom:11%;	 
  width:16%;	  
- height:9%;
  background:#707;
  color:#bbb;
  font-size:2em;
@@ -63,9 +61,15 @@ body
  cursor:pointer;
 }
 
+.sbtl
+{
+ position:absolute;
+ transition:1s;
+}
 </style>
 </head>
-<body>
+<body id=idbd>
+
 <div id=idcont> 
  <div class='ttl'> Click any cell </div>
      
@@ -86,9 +90,15 @@ body
   
 </div>  
  
-<script type>
+ <div class=sbtl>
+  
+ 
+ </div>
+ 
+<script >
 ttl=document.getElementsByClassName('ttl') 
 c=document.getElementsByClassName('cell') 
+sbtl=document.getElementsByClassName('sbtl') 
  
 i=0, j=0 
 for(k=0;k<9;k++)
@@ -108,6 +118,15 @@ ttl[1].style.transform='scale(0)'
 ttl[2].style.left=33+'%'
 ttl[2].style.color='#500'
 ttl[2].style.transform='scale(0)'
+
+sbtl[0].style.cursor='pointer'
+sbtl[0].style.left=16+'%'
+sbtl[0].style.top=99+'%'
+sbtl[0].style.width=76+'%'
+sbtl[0].style.height=77+'%'
+sbtl[0].style.background='#000'
+sbtl[0].style.border='8px ridge #ff0'
+
 
 idcont.onmouseover=()=>
 {
@@ -161,7 +180,7 @@ function  comb(v)
 }
 
 ii=0
-function  cl(i)
+function  clk(i)
 {
  c[i].onclick=()=>
  {
@@ -173,9 +192,11 @@ function  cl(i)
    //comb('0')
  }
 }
- cl(0), cl(1), cl(2)
- cl(3), cl(4), cl(5)
- cl(6), cl(7), cl(8)
+ clk(0), clk(1), clk(2)
+ clk(3), clk(4), clk(5)
+ clk(6), clk(7), clk(8)
+
+
 
 </script>
 </body>
