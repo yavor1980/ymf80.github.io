@@ -289,7 +289,7 @@ function stp()
     setInterval(stp, 1111);	
 		 
 function clk()
-{
+{  
  grnd[4].style.borderTopLeftRadius=17+'%'
  grnd[4].style.borderTopRightRadius=17+'%'
  grnd[4].style.borderBottom='4px ridge #300'
@@ -302,6 +302,8 @@ function clk()
  ttagrss[0].style.background='#00b'
  ttagrss[1].style.background='#70f'
  ttagrss[2].style.background='#00e'
+ hd[2].style.borderLeft='9px ridge #700'
+ hd[2].style.borderRight='9px ridge #700'
  mth[0].style.height=22+'%'
  gl[0].style.transform='scale(2)'
  gl[1].style.transform='scale(2)'
@@ -353,6 +355,11 @@ function clk()
   ttagrss[2].style.background=
    'radial-gradient(#0ff,#00f)'
   mth[0].style.height='1%'
+  hd[2].style.borderLeft=''
+  hd[2].style.borderRight=''
+  
+  
+  
   hd[2].style.transform=
    'scale(1) translate(0%,0)'
   gl[0].style.transform='scale(1)'
@@ -367,16 +374,8 @@ function clk()
  },  2222)
 }
       
-btn[0].onmousedown=()=>
-{ 
- clk()   
-}
-	 
-hd[2].onmouseover=()=>
-{ 
-  clk() 
-}
-
+btn[0].onmousedown=()=>{ clk(); }
+hd[2].onmouseover=()=>{ clk(); }
 </script>
 </body>
 </html>
