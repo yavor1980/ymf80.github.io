@@ -265,10 +265,10 @@ var eagl=
   brd[5].style.background=
    'radial-gradient(17px,#090,#900)' 
   brd[5].style.borderRadius=55+'%'
-  brd[5].style.borderBottomLeftRadius=19+'%'
-  brd[5].style.borderBottomRightRadius=19+'%'
-  
-  
+  brd[5].style.borderBottomLeftRadius=
+   Math.random()*55+'%'
+  brd[5].style.borderBottomRightRadius=
+   Math.random()*55+'%'
   brd[5].style.transform='skew(-22deg)' 
    
   eagle[1].style.left=1+'%'
@@ -395,6 +395,11 @@ var eagl=
    Math.random()*22+'deg)'
   brd[2].style.transform='rotate('+
    Math.random()*(-22)+'deg)' 
+  brd[5].style.width=(Math.random()*22+22)+'%'
+  brd[5].style.borderBottomLeftRadius=
+   Math.random()*55+'%'
+  brd[5].style.borderBottomRightRadius=
+   Math.random()*55+'%'  
   if(eagl.b==0)
    eagle[0].style.transform='scale(1.2)'
   else
