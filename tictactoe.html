@@ -123,7 +123,7 @@ ttl[2].style.left=33+'%'
 ttl[2].style.color='#500'
 ttl[2].style.transform='scale(0)'
 
-cl=[]
+cl=[], clrs=['#f00','#0f0','#00f']
 sbtl[0].style.cursor='pointer'
 sbtl[0].style.left=12+'%'
 sbtl[0].style.top=111+'%'
@@ -137,11 +137,8 @@ for(i=0;i<8;i++)
   cl[i].className='cll'
    cl[i].style.left=i*12.5+'%'
    cl[i].style.top=j*12.5+'%'
-   switch(i%3){
-	case 0: cl[i].style.background='#f00'; break;
-    case 1: cl[i].style.background='#0f0'; break;
-    case 2: cl[i].style.background='#00f'; break;
-   }
+   cl[i].style.background=
+    clrs[Math.round(Math.random()*3)-1]
     sbtl[0].appendChild(cl[i])
  }
 
@@ -213,33 +210,24 @@ function  clk(i)
  clk(3), clk(4), clk(5)
  clk(6), clk(7), clk(8)
 
-Isbtl=0, nsbtl=0
+Isbtl=0
 sbtl[0].onmouseover=()=>
 {
  sbtl[0].style.transform='scale(1.1)'
  Isbtl=setInterval(()=>{
-  
   for(i=0;i<8;i++)
    for(j=0;j<8;j++)
    {
-     nsbtl=Math.round(Math.random()*3)
-	switch(nsbtl) 
-    {
-	 case 0:cl[i].style.background='#f00';break;
-	 case 1:cl[i].style.background='#0f0';break;
-	 case 2:cl[i].style.background='#00f';break;
-	}
-   }
+   cl[i].style.left=i*12.5+'%'
+   cl[i].style.top=j*12.5+'%'
+   cl[i].style.background=
+    clrs[Math.round(Math.random()*3)-1]
+   }    
  }, 999)
 }
 sbtl[0].onmouseout=()=>
 {
   clearInterval(Isbtl)
- for(i=0;i<8;i++)
-  for(j=0;j<8;j++) 
-  {
-   cl[i].style.background='#888'
-  }
  sbtl[0].style.transform='scale(1)'
 }
 
