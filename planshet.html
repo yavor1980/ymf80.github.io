@@ -4,7 +4,7 @@
 #idbd
 {
  background:radial-gradient(#090,#888);
- height:155%;
+ height:266%;
 }
 
 .btn,.dsply,.pnel,.trmo,.clma
@@ -21,7 +21,7 @@
  border-radius:55%;
 }
 
-.csvg
+.csvg,.sv
 {
  position:absolute;
  transition:1s;
@@ -66,6 +66,10 @@
  </div>
 </div> 
 
+<div class=sv>
+ <div class=sv></div>
+</div>
+
 <script>
 btn=document.getElementsByClassName("btn")
 csvg=document.getElementsByClassName("csvg")
@@ -74,6 +78,7 @@ pnel=document.getElementsByClassName("pnel")
 
 trmo=document.getElementsByClassName("trmo")
 clma=document.getElementsByClassName("clma")
+sv=document.getElementsByClassName("sv")
 
 btn[0].style.left=86+'%'
 btn[0].style.top=3+'%'
@@ -168,7 +173,7 @@ inp(7,99,44,'','','')
  pnel[7].style.transform='scale(0)'
  
 trmo[0].style.left=9+'%'
-trmo[0].style.top=90+'%'
+trmo[0].style.top=108+'%'
 trmo[0].style.width=82+'%'
 trmo[0].style.height=65+'%' 
 trmo[0].style.background='#ff0'
@@ -210,6 +215,23 @@ clma[0].style.left=-18+'%'
 clma[0].style.top=-23+'%'
 clma[1].style.left=-18+'%'
 clma[1].style.top=88+'%'
+
+sv[0].style.cursor='pointer'
+sv[0].style.left=9+'%'
+sv[0].style.top=188+'%'
+sv[0].style.width=82+'%'
+sv[0].style.height=65+'%'
+sv[0].style.background='#ff0'
+sv[0].style.borderRadius=5+'%'
+sv[0].style.cursor='pointer'
+sv[1].style.left=9+'%'
+sv[1].style.top=20+'%'
+sv[1].style.width=52+'%'
+sv[1].style.height=39+'%'
+sv[1].style.border='33px ridge #700'
+sv[1].style.borderLeft='33px ridge transparent'
+sv[1].style.borderRadius=5+'%' 
+
  
 bbtn=1
 btn[0].onclick=()=>
