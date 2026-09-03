@@ -68,9 +68,12 @@
 
 <div class=sv>
  <div class=sv>
+  <div class=clma></div>
+  <div class=clma></div>
   <div class=sv></div>
   <div class=sv></div>
  </div>
+ <div class=sv>ThermoSensor</div>
 </div>
 
 <script>
@@ -82,6 +85,7 @@ pnel=document.getElementsByClassName("pnel")
 trmo=document.getElementsByClassName("trmo")
 clma=document.getElementsByClassName("clma")
 sv=document.getElementsByClassName("sv")
+
 
 btn[0].style.left=86+'%'
 btn[0].style.top=3+'%'
@@ -183,7 +187,7 @@ trmo[0].style.background='#ff0'
 trmo[0].style.borderRadius=5+'%'
 trmo[1].style.left=17+'%'
 trmo[1].style.top=4+'%'
-trmo[1].style.color='#099'
+trmo[1].style.color='#f0f'
 trmo[1].style.transform='scale(3)'
 trmo[2].style.left=14+'%'
 trmo[2].style.top=30+'%'
@@ -221,13 +225,13 @@ clma[1].style.top=88+'%'
 
 sv[0].style.cursor='pointer'
 sv[0].style.left=9+'%'
-sv[0].style.top=188+'%'
+sv[0].style.top=193+'%'
 sv[0].style.width=82+'%'
 sv[0].style.height=65+'%'
 sv[0].style.background='#ff0'
 sv[0].style.borderRadius=5+'%'
 sv[1].style.left=9+'%'
-sv[1].style.top=20+'%'
+sv[1].style.top=29+'%'
 sv[1].style.width=44+'%'
 sv[1].style.height=39+'%'
 sv[1].style.border='33px ridge #000'
@@ -235,7 +239,7 @@ sv[1].style.borderLeft='33px ridge transparent'
 sv[1].style.borderRadius=5+'%' 
 sv[1].style.borderTopRightRadius=50+'%'
 sv[1].style.borderBottomRightRadius=50+'%'
-sv[1].style.opacity=0.2
+sv[1].style.opacity=0.8
 sv[2].style.left=89+'%'
 sv[2].style.top=-18+'%'
 sv[2].style.width=7+'%'
@@ -250,6 +254,14 @@ sv[3].style.height=109+'%'
 sv[3].style.border='13px ridge #000'
 sv[3].style.borderLeft='33px ridge transparent'
 sv[3].style.borderRight='33px ridge transparent'
+sv[4].style.left=17+'%'
+sv[4].style.top=4+'%'
+sv[4].style.color='#f0f'
+sv[4].style.transform='scale(3)'
+clma[2].style.left=-26+'%'
+clma[2].style.top=-23+'%'
+clma[3].style.left=-26+'%'
+clma[3].style.top=96+'%'
  
 bbtn=1
 btn[0].onclick=()=>
@@ -343,7 +355,7 @@ dsply[0].onmouseout=()=>
 trmo[1].onmouseover=()=>
 {
  trmo[1].style.transform=
-  'scale(5) translate(14%,6%)  skew(-23deg)'
+  'scale(5) translate(64%,-39%)  skew(-23deg)'
  trmo[2].style.borderTop='55px solid #400'
  trmo[2].style.borderBottom='55px solid #400'  
  trmo[2].style.transform=
@@ -401,6 +413,10 @@ sv[0].onmouseover=()=>
  sv[3].style.borderLeft='33px ridge transparent'
  sv[3].style.borderRight='33px ridge transparent'
  sv[3].style.transform='translate(-15%,0)'
+ sv[4].style.transform=
+  'scale(5) translate(-3%,-64%)  skew(-13deg)'
+ clma[2].style.transform='translate(-48%,0)' 
+ clma[3].style.transform='translate(-48%,0)' 
  Isv=setInterval(()=>{
   sv[2].style.transform=
   'scale('+(1.8+Math.random()/2)+',1) translate(9%,0)' 
@@ -410,7 +426,7 @@ sv[0].onmouseout=()=>
 {
  sv[1].style.border='33px ridge #000'
  sv[1].style.borderLeft='33px ridge transparent'
- sv[1].style.opacity=0.2
+ sv[1].style.opacity=0.8
  sv[1].style.transform='scale(1)'
  sv[2].style.border='33px ridge #000'
  sv[2].style.transform='scale(1)'
@@ -418,6 +434,9 @@ sv[0].onmouseout=()=>
  sv[3].style.borderLeft='33px ridge transparent'
  sv[3].style.borderRight='33px ridge transparent'
  sv[3].style.transform='scale(1)'
+ clma[2].style.transform='scale(1)'
+ clma[3].style.transform='scale(1)'
+ sv[4].style.transform='scale(3)' 
   clearInterval(Isv)
 }
 
