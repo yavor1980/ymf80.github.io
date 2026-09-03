@@ -248,7 +248,12 @@ adds[1].style.background=
  'radial-gradient(#0f0,#070)'
 adds[1].style.borderRadius=55+'%'
 adds[1].style.borderBottom='1px ridge #ff0' 
- 
+adds[2].style.left=8+'%'
+adds[2].style.top=14+'%'
+adds[2].style.width=77+'%'
+adds[2].style.height=86+'%'
+adds[2].style.borderRadius=55+'%'
+adds[2].style.borderBottom='1px ridge #ff0' 
  
 strsX=111, strsY=-111, strsS=5
 function clpl()
@@ -281,6 +286,8 @@ function clpl()
   (1+Math.random()*2)+')' 
  adds[0].style.transform='scale(1,'+ 
   (1+Math.random()/2)+')'
+ adds[2].style.transform='scale(1,'+ 
+  (1+Math.random()/2)+') '  
 }	  
 bclsh=0 
 function clsh()
@@ -309,8 +316,11 @@ shtl[0].onmouseover=()=>
  spce[4].style.opacity=1
  spce[5].style.opacity=1
  adds[0].style.borderBottom='15px ridge #ff0' 
+ adds[2].style.borderBottom='15px ridge #ff0'
  adds[0].style.transform=
   'scale(2) translate(99%,55%) skew(22deg)'
+ adds[2].style.transform=
+  'scale(2) translate(9%,44%)' 
  shtl[0].style.transform=
   'scale(2) translate(-19%,55%) skew(22deg)'
  shtl[2].style.borderTopLeftRadius=55+'%'
@@ -331,6 +341,9 @@ shtl[0].onmouseout=()=>
  spce[5].style.opacity=0
  adds[0].style.borderBottom='1px ridge #ff0' 
  adds[0].style.transform='skew(22deg)'
+ adds[0].style.transform='scale(1)'
+ adds[2].style.borderBottom='1px ridge #ff0'
+ adds[2].style.transform='scale(1)'
  shtl[0].style.transform='scale(1)  skew(44deg)' 
  shtl[2].style.borderRadius=22+'%'
  shtl[4].style.transform='scale(1)'
