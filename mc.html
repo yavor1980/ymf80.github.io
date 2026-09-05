@@ -72,6 +72,7 @@
  <div class=antnn></div>
 </div>
 <div class=antnn></div>
+<div class=antnn></div>
  
 <div class=cmnd>mov ax,00h</div>
 <div class=cmnd>xchg bx,ax</div>
@@ -171,6 +172,11 @@ inn(antnn,6, 70,55,19,22, '','')
  antnn[6].style.opacity=0.6
  antnn[6].style.background=
   'radial-gradient(22px, #555,#f99)'
+inn(antnn,7, 7,35,19,22, '','') 
+ antnn[7].style.borderRadius=15+'%'
+ antnn[7].style.opacity=0.4
+ antnn[7].style.background=
+  'radial-gradient(#000,#f00)' 
  
 inn(cmnd,0, 9,12)
 inn(cmnd,1, 9,16)
@@ -254,7 +260,9 @@ function clk()
  antnn[6].style.borderRadius=(15+35*Math.random())+'%'
  antnn[6].style.background=
   'radial-gradient('+99*Math.random()+'px, #555,#f99)'
- antnn[6].style.opacity=0.8
+ antnn[6].style.opacity=1
+ antnn[7].style.borderRadius=55*Math.random()+'%'
+ antnn[7].style.opacity=1
   llv=lv
   lrv=rv
  if(bcl)
@@ -318,6 +326,8 @@ prcssr[0].onmouseout=()=>
  antnn[6].style.background=
   'radial-gradient(22px, #555,#f99)'
  antnn[6].style.opacity=0.6
+ antnn[7].style.borderRadius=15+'%'
+ antnn[7].style.opacity=0.6
  cmnd[icmnd].style.transform='scale(1.5)'
   bcl=1
   snd[0].onmouseout()
