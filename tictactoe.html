@@ -123,7 +123,7 @@ ttl[2].style.left=33+'%'
 ttl[2].style.color='#500'
 ttl[2].style.transform='scale(0)'
 
-cl=[], clrs=['#f00','#0f0','#00f']
+cl=[], clrs=['#f00','#0f0','#00f','#ff0','#f0f']
 c0=[]; c1=[]; c2=[]; c3=[]; c4=[];
  c5=[]; c6=[]; c7=[]
 sbtl[0].style.cursor='pointer'
@@ -140,7 +140,7 @@ for(j=0;j<8;j++)
    cl[j].style.width=100+'%'
    cl[j].style.height=12.5+'%'
    cl[j].style.background=
-    clrs[Math.round(Math.random()*3)-1]
+    clrs[Math.round(Math.random()*5)]
     sbtl[0].appendChild(cl[j])
 }
 
@@ -164,7 +164,7 @@ for(i=0;i<8;i++)
  
 idcont.onmouseover=()=>
 {
- idcont.style.transform='scale(1.2)'
+ idcont.style.transform='scale(1.1)'
 }
 idcont.onmouseout=()=>
 {
@@ -209,7 +209,7 @@ function  comb(v)
    ttl[1].style.transform=
     'scale(1.7) translate(8%,38%)'
    ttl[2].style.transform=
-    'scale(1.7) translate(399%,100%)'
+    'scale(2.7) translate(199%,133%)'
   }
 }
 
@@ -219,11 +219,10 @@ function  clk(i)
  c[i].onclick=()=>
  {
   c[i].innerHTML='X'
-  //while(ii==i)
-   ii=Math.round(Math.random()*9)
+  // while(ii==i)
+   ii=Math.round(Math.random()*8)
   c[ii].innerHTML='0'
    comb('X')
-   //comb('0')
  }
 }
  clk(0), clk(1), clk(2)
@@ -238,21 +237,21 @@ sbtl[0].onmouseover=()=>
   for(i=0;i<8;i++)
    {
     c0[i].style.background=//'#000'
-     clrs[Math.round(Math.random()*3)-1]
+     clrs[Math.round(Math.random()*5)-1]
     c1[i].style.background=//'#000'
-     clrs[Math.round(Math.random()*3)-1] 
+     clrs[Math.round(Math.random()*5)-1]
     c2[i].style.background=//'#000'
-     clrs[Math.round(Math.random()*3)-1] 	
+     clrs[Math.round(Math.random()*5)-1]
     c3[i].style.background=//'#000'
-     clrs[Math.round(Math.random()*3)-1] 
+     clrs[Math.round(Math.random()*5)-1]
     c4[i].style.background=//'#000'
-     clrs[Math.round(Math.random()*3)-1]
+     clrs[Math.round(Math.random()*5)-1]
     c5[i].style.background=//'#000'
-     clrs[Math.round(Math.random()*3)-1] 
+     clrs[Math.round(Math.random()*5)-1]
     c6[i].style.background=//'#000'
-     clrs[Math.round(Math.random()*3)-1] 	
+     clrs[Math.round(Math.random()*5)-1]
     c7[i].style.background=//'#000'
-     clrs[Math.round(Math.random()*3)-1]  	 
+     clrs[Math.round(Math.random()*5)-1]
    }    
  }, 999)
 }
