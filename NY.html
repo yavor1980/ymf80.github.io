@@ -72,6 +72,7 @@
  <div class=crstint></div>
  <div class=crstint>Happy<br>&nbsp New year!</div>
  <div class=crstintt></div>
+ <div class=crstintt></div>
 </div>
 
 <div class=snwmn>
@@ -210,8 +211,8 @@ crstint[1].style.background=
 crstint[1].style.borderRadius=55+'%' 
 crstint[1].style.transform='scale(3.4,2.1)' 
 crstint[1].style.zIndex=-1
-crstint[2].style.left=33+'%'
-crstint[2].style.top=59+'%'
+crstint[2].style.left=39+'%'
+crstint[2].style.top=69+'%'
 crstint[2].style.width=33+'%'
 crstint[2].style.height=25+'%'
 crstint[2].style.background=
@@ -221,7 +222,7 @@ crstint[2].style.borderTopRightRadius=44+'%'
 crstint[2].style.borderBottomLeftRadius=55+'%' 
 crstint[2].style.borderBottomRightRadius=55+'%'
 crstint[3].style.left=11+'%'
-crstint[3].style.top=33+'%'
+crstint[3].style.top=37+'%'
 crstint[3].style.width=29+'%'
 crstint[3].style.height=34+'%'
 crstint[3].style.border='8px ridge #f80'
@@ -229,7 +230,7 @@ crstint[3].style.opacity=0.6
 crstint[3].style.borderTopLeftRadius=55+'%' 
 crstint[3].style.borderTopRightRadius=44+'%'
 crstint[3].style.transform=
- 'scale(3.4,2.1) skew(0deg)'
+ 'scale(3.4,2.7) skew(0deg)'
 crstint[4].style.left=1+'%'
 crstint[4].style.top=33+'%'
 crstint[4].style.transform='scale(0)'
@@ -241,15 +242,24 @@ crstintt[0].style.height=44+'%'
 crstintt[0].style.background=
  'radial-gradient(#990,#770)'
 crstintt[0].style.borderRadius=55+'%' 
-crstintt[1].style.left=-7+'%'
-crstintt[1].style.top=30+'%'
+crstintt[1].style.left=7+'%'
+crstintt[1].style.top=22+'%'
 crstintt[1].style.width=36+'%'
 crstintt[1].style.height=28+'%'
 crstintt[1].style.background=
- 'radial-gradient(33px,#e0e,#707)'
+ 'radial-gradient(33px,#e0e,#700)'
 crstintt[1].style.borderRadius=55+'%' 
 crstintt[1].style.borderTopLeftRadius=29+'%'
 crstintt[1].style.borderTopRightRadius=29+'%'
+crstintt[2].style.left=-17+'%'
+crstintt[2].style.top=60+'%'
+crstintt[2].style.width=36+'%'
+crstintt[2].style.height=28+'%'
+crstintt[2].style.background=
+ 'radial-gradient(33px,#e0e,#007)'
+crstintt[2].style.borderRadius=55+'%' 
+crstintt[2].style.borderTopLeftRadius=29+'%'
+crstintt[2].style.borderTopRightRadius=29+'%'
 
 snwmn[0].style.left=66+'%'
 snwmn[0].style.top=33+'%'
@@ -393,10 +403,20 @@ fcrtr=()=>
  crstintt[1].style.background=
   'radial-gradient('+Math.round(Math.random()*44)+
   'px,#ff0,#f0f)' 
+ crstintt[2].style.background=
+  'radial-gradient('+Math.round(Math.random()*44)+
+  'px,#ff0,#00f)'   
+ smint[3].style.transform=
+   'scale('+(1+Math.random())+
+   ') translate(0%,-116%) rotate('+
+   (211+Math.random()*30)+'deg)'
+ smint[4].style.transform=
+   'scale('+(1.4+Math.random())+
+   ') translate(0%,116%) rotate('+
+   (21+Math.random()*30)+'deg)' 
 }
 crstmtr[0].onmouseover=()=>
 {
-  //snwmn[0].onmouseover()
  bckrnd[1].style.transform=
   'scale(6) translate(-99%,-33%)'
  bckrnd[5].style.opacity=1
@@ -422,7 +442,6 @@ crstmtr[0].onmouseover=()=>
 } 
 crstmtr[0].onmouseout=()=>
 { 
-  snwmn[0].onmouseout()
  bckrnd[0].style.opacity=0.2
  bckrnd[1].style.transform='scale(5)' 
  bckrnd[2].style.transform='scale(0.5)' 
@@ -449,7 +468,13 @@ crstmtr[0].onmouseout=()=>
  crstint[4].style.color='#000'  
  crstint[4].style.transform='scale(0)'
  crstintt[1].style.background=
-  'radial-gradient(33px,#e0e,#707)' 
+  'radial-gradient(33px,#e0e,#700)' 
+ crstintt[2].style.background=
+ 'radial-gradient(33px,#e0e,#007)' 
+ smint[3].style.borderRadius=0+'%'
+ smint[3].style.transform='rotate(188deg)'
+ smint[4].style.borderRadius=0+'%'
+ smint[4].style.transform='rotate(8deg)'
   clearInterval(Itr)
 }
  
