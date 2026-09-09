@@ -406,10 +406,14 @@ fcrtr=()=>
  crstintt[2].style.background=
   'radial-gradient('+Math.round(Math.random()*44)+
   'px,#ff0,#00f)'   
+snwmn[0].style.transform='translate(-55%,22%)'  
+  
+ smint[3].style.borderRadius=35+'%' 
  smint[3].style.transform=
    'scale('+(1+Math.random())+
    ') translate(0%,-116%) rotate('+
    (211+Math.random()*30)+'deg)'
+ smint[4].style.borderRadius=35+'%'   
  smint[4].style.transform=
    'scale('+(1.4+Math.random())+
    ') translate(0%,116%) rotate('+
@@ -437,8 +441,7 @@ crstmtr[0].onmouseover=()=>
  crstint[4].style.color='#f00' 
  crstint[4].style.transform=
   'scale(4) translate(80%,-97%) skew(11deg)'
-  fcrtr()
-  Itr=setInterval(fcrtr, 999)
+  fcrtr(); Itr=setInterval(fcrtr, 999)
 } 
 crstmtr[0].onmouseout=()=>
 { 
@@ -471,6 +474,7 @@ crstmtr[0].onmouseout=()=>
   'radial-gradient(33px,#e0e,#700)' 
  crstintt[2].style.background=
  'radial-gradient(33px,#e0e,#007)' 
+ snwmn[0].style.transform='scale(1)'
  smint[3].style.borderRadius=0+'%'
  smint[3].style.transform='rotate(188deg)'
  smint[4].style.borderRadius=0+'%'
