@@ -68,10 +68,11 @@
 
 <div class=sv>
  <div class=sv>
-  <div class=clma></div>
-  <div class=clma></div>
   <div class=sv></div>
-  <div class=sv></div>
+  <div class=sv>
+   <div class=clma></div>
+   <div class=clma></div>
+  </div>
  </div>
  <div class=sv>ThermoSensor</div>
 </div>
@@ -85,7 +86,6 @@ pnel=document.getElementsByClassName("pnel")
 trmo=document.getElementsByClassName("trmo")
 clma=document.getElementsByClassName("clma")
 sv=document.getElementsByClassName("sv")
-
 
 btn[0].style.left=86+'%'
 btn[0].style.top=3+'%'
@@ -259,9 +259,9 @@ sv[4].style.top=4+'%'
 sv[4].style.color='#f0f'
 sv[4].style.transform='scale(3)'
 clma[2].style.left=-26+'%'
-clma[2].style.top=-23+'%'
+clma[2].style.top=-19+'%'
 clma[3].style.left=-26+'%'
-clma[3].style.top=96+'%'
+clma[3].style.top=90+'%'
  
 bbtn=1
 btn[0].onclick=()=>
@@ -419,7 +419,10 @@ sv[1].onmouseover=()=>
  clma[3].style.transform='translate(-48%,0)' 
  Isv=setInterval(()=>{
   sv[2].style.transform=
-  'scale('+(1.8+Math.random()/2)+',1) translate(9%,0)' 
+   'scale('+(1.8+Math.random()/2)+',1) translate(9%,0)' 
+  sv[3].style.transform=' scale('+(0.5+
+   Math.random()/5)+',1) translate(-48%,0)'
+ 
  }, 999)  
 }
 sv[1].onmouseout=()=>
