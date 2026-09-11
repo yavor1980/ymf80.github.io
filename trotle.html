@@ -117,6 +117,7 @@
  <div class=acoils></div>
 </div>
 
+<button class=btn>SCREEN</button>
 <div class=elmtr>
  <div class=ttl>ElectroMotor</div>
  <div class=elmtr></div>
@@ -145,6 +146,9 @@ elmtr=document.getElementsByClassName('elmtr')
 btn[0].style.right=6+'%'
 btn[0].style.top=9+'%'
 btn[0].style.transform='scale(3)'
+btn[1].style.right=9+'%'
+btn[1].style.top=199+'%'
+btn[1].style.transform='scale(2.5)'
 
 coil[1].style.left=0+'%'
 coil[1].style.top=0+'%'
@@ -565,6 +569,21 @@ function trsfrmoff()
 } 
 idtrsfrmtr.onmouseover=()=>{ trsfrmon();}
 idtrsfrmtr.onmouseout=()=>{ trsfrmoff();}
+
+bbtn1=0
+btn[1].onclick=()=>
+{if(bbtn1==0)
+ {
+  elmtr[0].style.transform=
+   'scale(1,0.4) translate(0,-199%)'
+   btn[1].innerHTML='DEF'
+ } 
+ else
+ {
+  elmtr[0].style.transform='scale(1)'
+   btn[1].innerHTML='SCREEN'
+ } bbtn1=!bbtn1
+}
 
 Ielmtr=0
 elmtr[0].onmouseover=()=>
