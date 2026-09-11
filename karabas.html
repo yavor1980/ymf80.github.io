@@ -6,7 +6,8 @@
 <body id=idbd>
 <style>
 #idbd
-{
+{ 
+ height:222%;
  background:linear-gradient(#dd0,177px,#333);
 }
 
@@ -270,8 +271,7 @@ function mv()
   (1+Math.random()/9)+') translate(0%,'+
   (-Math.random()*19)+'%)' 
 }
- mv()
- Imv=setInterval(mv, 999)
+ mv(); Imv=setInterval(mv, 999)
  
  i=1,li=1
 function fkmv()
@@ -327,8 +327,7 @@ kttl[0].onmouseover=()=>
 kttl[0].onmouseout=()=>
 { 
  clearInterval(Ipna)
-  mv()
-  Imv=setInterval(mv, 999)
+  mv(); Imv=setInterval(mv, 999)
  blb[0].style.transform='scale(1)' 
  blb[1].style.background=
   'radial-gradient(#777,#bba)'
@@ -345,23 +344,10 @@ kttl[0].onmouseout=()=>
  rcncrcl[1].style.transform='scale(1)'
 }
 
-bttl[0].onmouseover=()=>
-{ 
- kttl[0].onmouseover()
-}
-bttl[0].onmouseout=()=>
-{ 
- kttl[0].onmouseout()
-}
-
-cncr[0].onmouseover=()=>
-{ 
- kttl[0].onmouseover()
-}
-cncr[0].onmouseout=()=>
-{ 
- kttl[0].onmouseout()
-}
+bttl[0].onmouseover=()=>{ kttl[0].onmouseover();}
+bttl[0].onmouseout=()=>{ kttl[0].onmouseout();}
+cncr[0].onmouseover=()=>{ kttl[0].onmouseover();}
+cncr[0].onmouseout=()=>{ kttl[0].onmouseout();}
 	  	   
 </script>
 </body>
