@@ -68,6 +68,8 @@
  <div class=bx></div>
  <div class=bx></div>
  <div class=bx></div>
+ <div class=bx></div>
+ <div class=bx>BREWERY</div>
 </div>
 
 <script>
@@ -305,7 +307,17 @@ bx[4].style.background=
  'radial-gradient(#f00,#ff0)'
 bx[4].style.opacity=0.2
 bx[4].style.borderRadius=55+'%'
-
+bx[5].style.left=-20+'%'
+bx[5].style.top=112+'%'
+bx[5].style.width=144+'%'
+bx[5].style.height=33+'%'
+bx[5].style.background=
+ 'radial-gradient(#d00,#f00)'
+bx[5].style.opacity=0.2
+bx[5].style.borderRadius=55+'%'
+bx[6].style.left=20+'%'
+bx[6].style.top=-112+'%'
+bx[6].style.transform='scale(5) skew(-22deg)'
 
 Imv=0
 function mv()
@@ -406,6 +418,7 @@ bx[0].onmouseover=()=>
 { 
  bx[3].style.opacity=0.9
  bx[4].style.opacity=0.9
+ bx[5].style.opacity=0.9
  Ibx0=setInterval(()=>{
    bx[1].style.height=(80+19*Math.random())+'%'
    bx[1].style.borderTopLeftRadius=
@@ -422,7 +435,9 @@ bx[0].onmouseover=()=>
     (55*Math.random())+'%'	
    bx[3].style.opacity=Math.random()
    bx[4].style.opacity=Math.random()
-	
+   bx[5].style.opacity=Math.random()
+   bx[5].style.transform='scale('+
+    (1+Math.random()/5)+')'
  }, 999)
 }
 bx[0].onmouseout=()=>
@@ -434,6 +449,8 @@ bx[0].onmouseout=()=>
  bx[2].style.borderRadius=55+'%'
  bx[3].style.opacity=0.2
  bx[4].style.opacity=0.2
+ bx[5].style.opacity=0.2
+ bx[5].style.transform='scale(1)'
 }
 	  	   
 </script>
