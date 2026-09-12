@@ -7,8 +7,8 @@
 <style>
 #idbd
 { 
- height:222%;
- background:linear-gradient(#dd0,177px,#333);
+ height:299%;
+ background:linear-gradient(#dd0,#990);
 }
 
 .kttl,.bttl,.blb,.ttl,.pna,.bx,
@@ -64,6 +64,8 @@
 </div>
 
 <div class=bx>
+ <div class=bx></div>
+ <div class=bx></div>
  <div class=bx></div>
  <div class=bx></div>
 </div>
@@ -264,7 +266,7 @@ rcncrcl[1].style.borderRadius=44+'%'
 
 bx[0].style.cursor='pointer'
 bx[0].style.left=20+'%'
-bx[0].style.top=134+'%'
+bx[0].style.top=188+'%'
 bx[0].style.width=50+'%'
 bx[0].style.height=73+'%'
 bx[0].style.borderRadius=24+'%'
@@ -287,6 +289,23 @@ bx[2].style.height=66+'%'
 bx[2].style.background=
  'radial-gradient(#f90,#7f0)'
 bx[2].style.borderRadius=55+'%'
+bx[3].style.left=-13+'%'
+bx[3].style.top=-29+'%'
+bx[3].style.width=122+'%'
+bx[3].style.height=22+'%'
+bx[3].style.background=
+ 'radial-gradient(#f00,#ff0)'
+bx[3].style.opacity=0.2
+bx[3].style.borderRadius=55+'%'
+bx[4].style.left=-33+'%'
+bx[4].style.top=-88+'%'
+bx[4].style.width=166+'%'
+bx[4].style.height=44+'%'
+bx[4].style.background=
+ 'radial-gradient(#f00,#ff0)'
+bx[4].style.opacity=0.2
+bx[4].style.borderRadius=55+'%'
+
 
 Imv=0
 function mv()
@@ -385,6 +404,8 @@ cncr[0].onmouseout=()=>{ kttl[0].onmouseout();}
 Ibx0=0
 bx[0].onmouseover=()=>
 { 
+ bx[3].style.opacity=0.9
+ bx[4].style.opacity=0.9
  Ibx0=setInterval(()=>{
    bx[1].style.height=(80+19*Math.random())+'%'
    bx[1].style.borderTopLeftRadius=
@@ -399,6 +420,9 @@ bx[0].onmouseover=()=>
     (55*Math.random())+'%'
    bx[2].style.borderBottomRightRadius=
     (55*Math.random())+'%'	
+   bx[3].style.opacity=Math.random()
+   bx[4].style.opacity=Math.random()
+	
  }, 999)
 }
 bx[0].onmouseout=()=>
@@ -408,6 +432,8 @@ bx[0].onmouseout=()=>
  bx[1].style.borderTopLeftRadius=7+'%'
  bx[1].style.borderTopRightRadius=7+'%'
  bx[2].style.borderRadius=55+'%'
+ bx[3].style.opacity=0.2
+ bx[4].style.opacity=0.2
 }
 	  	   
 </script>
