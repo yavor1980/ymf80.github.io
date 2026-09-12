@@ -11,7 +11,7 @@
  background:linear-gradient(#dd0,177px,#333);
 }
 
-.kttl,.bttl,.blb,.ttl,.pna,
+.kttl,.bttl,.blb,.ttl,.pna,.bx,
 .cncr,.lcncrcl,.rcncrcl,.tl
 {
  position:absolute;   
@@ -63,6 +63,11 @@
  </div>
 </div>
 
+<div class=bx>
+ <div class=bx></div>
+ <div class=bx></div>
+</div>
+
 <script>
 kttl=document.getElementsByClassName('kttl')
 bttl=document.getElementsByClassName('bttl')
@@ -74,6 +79,8 @@ cncr=document.getElementsByClassName('cncr')
 tl=document.getElementsByClassName('tl')
 lcncrcl=document.getElementsByClassName('lcncrcl')
 rcncrcl=document.getElementsByClassName('rcncrcl')
+
+bx=document.getElementsByClassName('bx')
 
 kttl[0].style.left=12+'%'
 kttl[0].style.top=11+'%'
@@ -255,6 +262,32 @@ rcncrcl[1].style.background=
  'linear-gradient(#dd0,#333)'
 rcncrcl[1].style.borderRadius=44+'%'
 
+bx[0].style.cursor='pointer'
+bx[0].style.left=20+'%'
+bx[0].style.top=134+'%'
+bx[0].style.width=50+'%'
+bx[0].style.height=73+'%'
+bx[0].style.borderRadius=24+'%'
+bx[0].style.borderTopLeftRadius=7+'%'
+bx[0].style.borderTopRightRadius=7+'%'
+bx[0].style.border='22px ridge #000'
+bx[0].style.borderTop='17px ridge transparent'
+bx[1].style.bottom=0+'%'
+bx[1].style.width=100+'%'
+bx[1].style.height=80+'%'
+bx[1].style.background=
+ 'radial-gradient(#ff0,#7f0)'
+bx[1].style.borderRadius=24+'%'
+bx[1].style.borderTopLeftRadius=7+'%'
+bx[1].style.borderTopRightRadius=7+'%'
+bx[2].style.left=15+'%'
+bx[2].style.top=29+'%'
+bx[2].style.width=66+'%'
+bx[2].style.height=66+'%'
+bx[2].style.background=
+ 'radial-gradient(#f90,#7f0)'
+bx[2].style.borderRadius=55+'%'
+
 Imv=0
 function mv()
 {
@@ -348,6 +381,34 @@ bttl[0].onmouseover=()=>{ kttl[0].onmouseover();}
 bttl[0].onmouseout=()=>{ kttl[0].onmouseout();}
 cncr[0].onmouseover=()=>{ kttl[0].onmouseover();}
 cncr[0].onmouseout=()=>{ kttl[0].onmouseout();}
+
+Ibx0=0
+bx[0].onmouseover=()=>
+{ 
+ Ibx0=setInterval(()=>{
+   bx[1].style.height=(80+19*Math.random())+'%'
+   bx[1].style.borderTopLeftRadius=
+    (55*Math.random())+'%'
+   bx[1].style.borderTopRightRadius=
+    (55*Math.random())+'%'
+   bx[2].style.borderTopLeftRadius=
+    (55*Math.random())+'%'
+   bx[2].style.borderTopRightRadius=
+    (55*Math.random())+'%'
+   bx[2].style.borderBottomLeftRadius=
+    (55*Math.random())+'%'
+   bx[2].style.borderBottomRightRadius=
+    (55*Math.random())+'%'	
+ }, 999)
+}
+bx[0].onmouseout=()=>
+{ 
+  clearInterval(Ibx0)
+ bx[1].style.height=80+'%'
+ bx[1].style.borderTopLeftRadius=7+'%'
+ bx[1].style.borderTopRightRadius=7+'%'
+ bx[2].style.borderRadius=55+'%'
+}
 	  	   
 </script>
 </body>
