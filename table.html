@@ -344,6 +344,7 @@ for(i=0;i<8;i++)
  c[i].className='cll'
  c[i].style.left=i*12.5+'%'
  c[i].style.height=100+'%'
+ c[i].style.fontSize=0+'em'
   ea[n].appendChild(c[i])
 }  	
 } 	
@@ -544,20 +545,27 @@ dgrm[0].onmouseout=()=>
  fc[0].onmouseout()
 }
 
-nea=0
+nea=0, vnea=0
 function finn(c)
 { 
  for(j=0;j<8;j++)
  {
+  r=
+  g=
+  b=
+  
   nea=Math.round(Math.random()*7)
-  c[nea].innerHTML=nea
+  vnea=Math.round(Math.random()*99)
+  c[nea].style.color='#b00'
+  
+  
+   c[nea].innerHTML=vnea
  }
 }
-exle[0].onmouseover=()=>
-{
- for(j=0;j<8;j++)
+ setInterval(()=>{
+  for(i=0;i<8;i++)
  {
-   switch(j)
+  switch(i)
   {
    case 0: finn(ea0); break;
    case 1: finn(ea1); break;
@@ -565,16 +573,35 @@ exle[0].onmouseover=()=>
    case 3: finn(ea3); break;
    case 4: finn(ea4); break;
    case 5: finn(ea5); break;
-   case 6: rinn(ea6); break;
+   //case 6: rinn(ea6); break;
    case 7: finn(ea7); break;
   }
  }
+  
+  }, 999)
+
+exle[0].onmouseover=()=>
+{
+ for(i=0;i<8;i++)
+ { 
+  switch(i)
+  {
+   case 0: fclr(ea0,1.5); break;
+   case 1: fclr(ea1,1.5); break;
+   case 2: fclr(ea2,1.5); break;
+   case 3: fclr(ea3,1.5); break;
+   case 4: fclr(ea4,1.5); break;
+   case 5: fclr(ea5,1.5); break;
+   case 6: fclr(ea6,1.5); break;
+   case 7: fclr(ea7,1.5); break;
+  }
+ }
 }
-function fclr(c)
+function fclr(c,vv)
 { 
  for(j=0;j<8;j++)
  {
-  c[j].innerHTML=''
+  c[j].style.fontSize=vv+'em'
  }
 }
 exle[0].onmouseout=()=>
@@ -583,14 +610,14 @@ exle[0].onmouseout=()=>
  { 
   switch(i)
   {
-   case 0: fclr(ea0); break;
-   case 1: fclr(ea1); break;
-   case 2: fclr(ea2); break;
-   case 3: fclr(ea3); break;
-   case 4: fclr(ea4); break;
-   case 5: fclr(ea5); break;
-   case 6: fclr(ea6); break;
-   case 7: fclr(ea7); break;
+   case 0: fclr(ea0,0); break;
+   case 1: fclr(ea1,0); break;
+   case 2: fclr(ea2,0); break;
+   case 3: fclr(ea3,0); break;
+   case 4: fclr(ea4,0); break;
+   case 5: fclr(ea5,0); break;
+   case 6: fclr(ea6,0); break;
+   case 7: fclr(ea7,0); break;
   }
  }
 }
