@@ -5,7 +5,8 @@
 <style>
 #idbd
 {
- background:linear-gradient(#0ff,44%,#ff0);
+ height:187%;
+ background:linear-gradient(#8ff,#ffa);
 }
 
 .btn,.tbtn,#idfc,.fc,.zr,.bd,.lg
@@ -33,11 +34,15 @@
 .bd{ border-radius:50%;} 
 .lg{ width:22%; height:33%; border-radius:50%;}
 
-.dgrm,.tbl
+.dgrm,.tbl,.exle,.cll
 {
- position:absolute;
- transition:1s; 
- cursor:pointer;
+ position:absolute; transition:1s; 
+}
+.cll
+{
+ width:12.5%; height:12.5%; border:2px ridge #000;
+ font-size:2em; text-align:center; 
+ ///padding:2px;
 }
 
 td
@@ -113,9 +118,13 @@ td
  <div class=dgrm></div>
 </div>
 
+<div class=exle></div>
+
 <script>
 btn=document.getElementsByClassName('btn')
 tbtn=document.getElementsByClassName('tbtn')
+exle=document.getElementsByClassName('exle')
+cll=document.getElementsByClassName('cll')
 
 fc=document.getElementsByClassName('fc')
 zr=document.getElementsByClassName('zr')
@@ -295,10 +304,10 @@ dgrm[9].style.background='#b00'
 dgrm[9].style.borderRadius=55+'%' 
 dgrm[9].style.opacity=0	 
 
+tbl[0].style.cursor='pointer'
 tbl[0].style.left=13+'%'
 tbl[0].style.top=22+'%' 
 tbl[0].style.border='5px ridge #00f'
-tbl[0].style.cursor='pointer'
 tbl[0].style.transform='scale(2)'
 tbl[1].style.left=18+'%'
 tbl[1].style.top=6+'%' 
@@ -310,6 +319,38 @@ tbl[2].style.color='#f0f'
 tbl[2].style.opacity=0.2	
 tbl[2].style.transform='scale(3) skew(-22deg)'
 	
+exle[0].style.cursor='pointer'
+exle[0].style.left=4+'%'
+exle[0].style.top=118+'%' 	
+exle[0].style.width=89+'%'
+exle[0].style.height=59+'%' 
+exle[0].style.background='#fff'	
+exle[0].style.border='9px ridge #00f'
+ea0=[],ea1=[],ea2=[],ea3=[],  
+ea4=[],ea5=[],ea6=[],ea7=[], ea=[]
+for(i=0;i<8;i++)
+{
+ ea[i]=document.createElement("div")
+ ea[i].className='cll'
+ ea[i].style.top=i*12.5+'%'
+ ea[i].style.width=100+'%'
+  exle[0].appendChild(ea[i])
+}  	
+function unnea(c,n)
+{    
+for(i=0;i<8;i++)
+{
+ c[i]=document.createElement("div")
+ c[i].className='cll'
+ c[i].style.left=i*12.5+'%'
+ c[i].style.height=100+'%'
+  ea[n].appendChild(c[i])
+}  	
+} 	
+unnea(ea0,0), unnea(ea1,1), unnea(ea2,2),
+unnea(ea3,3), unnea(ea4,4), unnea(ea5,5),
+unnea(ea6,6), unnea(ea7,7)
+
 b=0
 function cl()
 {       
@@ -501,6 +542,57 @@ dgrm[0].onmouseover=()=>
 dgrm[0].onmouseout=()=>
 {
  fc[0].onmouseout()
+}
+
+nea=0
+function finn(c)
+{ 
+ for(j=0;j<8;j++)
+ {
+  nea=Math.round(Math.random()*7)
+  c[nea].innerHTML=nea
+ }
+}
+exle[0].onmouseover=()=>
+{
+ for(j=0;j<8;j++)
+ {
+   switch(j)
+  {
+   case 0: finn(ea0); break;
+   case 1: finn(ea1); break;
+   case 2: finn(ea2); break;
+   case 3: finn(ea3); break;
+   case 4: finn(ea4); break;
+   case 5: finn(ea5); break;
+   case 6: rinn(ea6); break;
+   case 7: finn(ea7); break;
+  }
+ }
+}
+function fclr(c)
+{ 
+ for(j=0;j<8;j++)
+ {
+  c[j].innerHTML=''
+ }
+}
+exle[0].onmouseout=()=>
+{ 
+ for(i=0;i<8;i++)
+ { 
+  switch(i)
+  {
+   case 0: fclr(ea0); break;
+   case 1: fclr(ea1); break;
+   case 2: fclr(ea2); break;
+   case 3: fclr(ea3); break;
+   case 4: fclr(ea4); break;
+   case 5: fclr(ea5); break;
+   case 6: fclr(ea6); break;
+   case 7: fclr(ea7); break;
+  }
+ }
 }
 
 </script>
