@@ -119,6 +119,7 @@ td
 </div>
 
 <div class=exle></div>
+<div class=exle>EXCEL</div>
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -326,6 +327,11 @@ exle[0].style.width=89+'%'
 exle[0].style.height=59+'%' 
 exle[0].style.background='#fff'	
 exle[0].style.border='9px ridge #00f'
+exle[1].style.left=40+'%'
+exle[1].style.top=107+'%'
+exle[1].style.color='#f00'
+exle[1].style.opacity=0.2
+exle[1].style.transform='scale(6) skew(-22deg)'
 ea0=[],ea1=[],ea2=[],ea3=[],  
 ea4=[],ea5=[],ea6=[],ea7=[], ea=[]
 for(i=0;i<8;i++)
@@ -545,21 +551,19 @@ dgrm[0].onmouseout=()=>
  fc[0].onmouseout()
 }
 
-nea=0, vnea=0
+vnea=0, nea=0
 function finn(c)
 { 
  for(j=0;j<8;j++)
  {
-  r=
-  g=
-  b=
-  
-  nea=Math.round(Math.random()*7)
+  r=Math.round(Math.random()*9)
+  g=Math.round(Math.random()*9)
+  b=Math.round(Math.random()*9)
+  c[nea].style.color='#'+r+''+g+''+b
   vnea=Math.round(Math.random()*99)
-  c[nea].style.color='#b00'
+
   
-  
-   c[nea].innerHTML=vnea
+   c[j].innerHTML=vnea
  }
 }
  setInterval(()=>{
@@ -573,27 +577,34 @@ function finn(c)
    case 3: finn(ea3); break;
    case 4: finn(ea4); break;
    case 5: finn(ea5); break;
-   //case 6: rinn(ea6); break;
+   case 6: finn(ea6); break;
    case 7: finn(ea7); break;
   }
  }
-  
   }, 999)
 
+function ftr(c,tr,bw)
+{ 
+ nea=Math.round(Math.random()*7)
+ c[nea].style.border=''+bw+'px ridge #000'
+ c[nea].style.transform='scale('+tr+')'
+}
+3
 exle[0].onmouseover=()=>
-{
+{  
+ exle[1].style.opacity=1
  for(i=0;i<8;i++)
  { 
   switch(i)
   {
-   case 0: fclr(ea0,1.5); break;
-   case 1: fclr(ea1,1.5); break;
-   case 2: fclr(ea2,1.5); break;
-   case 3: fclr(ea3,1.5); break;
-   case 4: fclr(ea4,1.5); break;
-   case 5: fclr(ea5,1.5); break;
-   case 6: fclr(ea6,1.5); break;
-   case 7: fclr(ea7,1.5); break;
+   case 0: fclr(ea0,1.5); ftr(ea0,1.2,5); break;
+   case 1: fclr(ea1,1.5); ftr(ea1,1.2,5); break;
+   case 2: fclr(ea2,1.5); ftr(ea2,1.2,5); break;
+   case 3: fclr(ea3,1.5); ftr(ea3,1.2,5); break;
+   case 4: fclr(ea4,1.5); ftr(ea4,1.2,5); break;
+   case 5: fclr(ea5,1.5); ftr(ea5,1.2,5); break;
+   case 6: fclr(ea6,1.5); ftr(ea6,1.2,5); break;
+   case 7: fclr(ea7,1.5); ftr(ea7,1.2,5); break;
   }
  }
 }
@@ -606,18 +617,19 @@ function fclr(c,vv)
 }
 exle[0].onmouseout=()=>
 { 
+ exle[1].style.opacity=0.2
  for(i=0;i<8;i++)
  { 
   switch(i)
   {
-   case 0: fclr(ea0,0); break;
-   case 1: fclr(ea1,0); break;
-   case 2: fclr(ea2,0); break;
-   case 3: fclr(ea3,0); break;
-   case 4: fclr(ea4,0); break;
-   case 5: fclr(ea5,0); break;
-   case 6: fclr(ea6,0); break;
-   case 7: fclr(ea7,0); break;
+   case 0: fclr(ea0,0); ftr(ea0,1,2); break;
+   case 1: fclr(ea1,0); ftr(ea1,1,2); break;
+   case 2: fclr(ea2,0); ftr(ea2,1,2); break;
+   case 3: fclr(ea3,0); ftr(ea3,1,2); break;
+   case 4: fclr(ea4,0); ftr(ea4,1,2); break;
+   case 5: fclr(ea5,0); ftr(ea5,1,2); break;
+   case 6: fclr(ea6,0); ftr(ea6,1,2); break;
+   case 7: fclr(ea7,0); ftr(ea7,1,2); break;
   }
  }
 }
