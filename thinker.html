@@ -9,8 +9,7 @@ body
 
 .d,.glss,.gls,.hd,.schty
 {
- position:absolute;
- transition:1s;
+ position:absolute; transition:1s;
 }
 .d,.glss,.gls,.hd
 {
@@ -18,43 +17,36 @@ body
 }
 .gls
 {
- width:100%;
- height:100%;
- background:#fff;
- opacity:0.1;
+ width:100%; height:100%;
+ background:#fff; opacity:0.1;
 }
 .lzr,.rzr
 {
- position:absolute;
- transition:1s;
- left:39%;
- top:39%;
- width:22%;
- height:22%;
- background:#000;
- border-radius:55%;
+ position:absolute; transition:1s;
+ left:39%; top:39%;
+ width:22%; height:22%;
+ background:#000; border-radius:55%;
 }
-.thts
+.thts,.kst
 {
- position:absolute;
- transition:1s;
+ position:absolute; transition:1s;
+}
+.kst
+{
+  z-index:1; width:6%; height:99%;
+  background:#000; border-radius:55%;
 }
 
 .nme
 {
- position:absolute;
- transition:2s;
- color:#fff;
- font-size:2em;
- cursor:pointer;
+ position:absolute; transition:2s;cursor:pointer;
+ color:#fff; font-size:2em;
 }
 
 .dvce
 {
- position:absolute;
- transition:1s;
- cursor:pointer;
- z-index:1;
+ position:absolute; transition:1s;
+ cursor:pointer; z-index:1;
 }
 
 </style>
@@ -103,12 +95,16 @@ body
   
 <div class=schty>
  <div class=schty>
-  <div class=thts></div>
-  <div class=thts></div>
+  <div class=kst></div>
+  <div class=kst></div>
+  <div class=kst></div>
+  <div class=kst></div> 
  </div> 
  <div class=schty>
-  <div class=thts></div>
-  <div class=thts></div>
+  <div class=kst></div>
+  <div class=kst></div>
+  <div class=kst></div>
+  <div class=kst></div> 
  </div> 
 </div> 
   
@@ -124,6 +120,7 @@ thts=document.getElementsByClassName('thts')
 nme=document.getElementsByClassName('nme')
 dvce=document.getElementsByClassName('dvce')
 schty=document.getElementsByClassName('schty')
+kst=document.getElementsByClassName('kst')
   
 d[0].style.left=11+'%'
 d[0].style.top=30+'%'
@@ -213,36 +210,7 @@ thts[0].style.background='#fff';
 thts[0].style.opacity=0.1
 thts[0].style.borderRadius=55+'%'
 thts[0].style.textAlign='center'
-thts[1].style.left=0+'%';
-thts[1].style.top=-15+'%';
-thts[1].style.width=6+'%';
-thts[1].style.height=28+'%';
-thts[1].style.background='#000';
-thts[1].style.opacity=0.2
-thts[1].style.borderRadius=55+'%'
-thts[2].style.zIndex=1
-thts[2].style.left=0+'%';
-thts[2].style.top=15+'%';
-thts[2].style.width=6+'%';
-thts[2].style.height=28+'%';
-thts[2].style.background='#000';
-thts[2].style.opacity=0.2
-thts[2].style.borderRadius=55+'%'
-thts[3].style.left=0+'%';
-thts[3].style.top=62+'%';
-thts[3].style.width=6+'%';
-thts[3].style.height=78+'%';
-thts[3].style.background='#000';
-thts[3].style.opacity=0.2
-thts[3].style.borderRadius=55+'%'
-thts[4].style.left=0+'%';
-thts[4].style.top=154+'%';
-thts[4].style.width=6+'%';
-thts[4].style.height=78+'%';
-thts[4].style.background='#000';
-thts[4].style.opacity=0.2
-thts[4].style.borderRadius=55+'%' 
- 
+
 dvce[0].style.left=60+'%'
 dvce[0].style.top=66+'%';
 dvce[0].style.width=24+'%';
@@ -322,19 +290,32 @@ schty[0].style.width=70+'%'
 schty[0].style.height=67+'%'
 schty[0].style.border='77px ridge #f00'
 schty[1].style.left=-5+'%'
-schty[1].style.top=14+'%'
+schty[1].style.top=15+'%'
 schty[1].style.width=88+'%'
-schty[1].style.height=70+'%'
+schty[1].style.height=22+'%'
 schty[1].style.border='7px ridge #fff'
 schty[1].style.borderLeft='77px ridge transparent'
 schty[1].style.borderRight='77px ridge transparent'
 schty[2].style.left=-5+'%'
-schty[2].style.top=36+'%'
+schty[2].style.top=61+'%'
 schty[2].style.width=88+'%'
-schty[2].style.height=25+'%'
+schty[2].style.height=22+'%'
 schty[2].style.border='7px ridge #fff'
 schty[2].style.borderLeft='77px ridge transparent'
 schty[2].style.borderRight='77px ridge transparent'
+
+kst[0].style.top=-55+'%';
+kst[1].style.top=55+'%';
+kst[2].style.top=-55+'%';
+kst[2].style.transform='translate(1555%,0)'
+kst[3].style.top=55+'%';
+kst[3].style.transform='translate(1555%,0)'
+kst[4].style.top=-55+'%';
+kst[5].style.top=55+'%';
+kst[6].style.top=-55+'%';
+kst[6].style.transform='translate(1555%,0)'
+kst[7].style.top=55+'%';
+kst[7].style.transform='translate(1555%,0)'
 
 b=0
 function clk()
@@ -489,32 +470,56 @@ dvce[0].onmouseout=()=>
 Ischty=0
 schty[0].onmouseover=()=>
 {
- thts[1].style.opacity=1
- thts[2].style.opacity=1
- thts[3].style.opacity=1
- thts[4].style.opacity=1
+kst[0].style.opacity=1
+kst[1].style.opacity=1
+kst[2].style.opacity=1
+kst[3].style.opacity=1
+kst[4].style.opacity=1
+kst[5].style.opacity=1
+kst[6].style.opacity=1
+kst[7].style.opacity=1
  Ischty=setInterval(()=>{
-  thts[1].style.transform='translate('+
+  kst[0].style.transform='translate('+
    1555*Math.random()+'%,0%)'
-  thts[2].style.transform='translate('+
+  kst[1].style.transform='translate('+
    1555*Math.random()+'%,0%)'
-  thts[3].style.transform='translate('+
+  kst[2].style.transform='translate('+
    1555*Math.random()+'%,0%)'
-  thts[4].style.transform='translate('+
+  kst[3].style.transform='translate('+
    1555*Math.random()+'%,0%)'
+  kst[4].style.transform='translate('+
+   1555*Math.random()+'%,0%)'
+  kst[5].style.transform='translate('+
+   1555*Math.random()+'%,0%)'
+  kst[6].style.transform='translate('+
+   1555*Math.random()+'%,0%)' 
+  kst[7].style.transform='translate('+
+   1555*Math.random()+'%,0%)' 
  }, 999)
 }
 schty[0].onmouseout=()=>
 {
   clearInterval(Ischty)
- thts[1].style.opacity=0.2
- thts[1].style.transform='scale(1)'
- thts[2].style.opacity=0.2
- thts[2].style.transform='scale(1)'
- thts[3].style.opacity=0.2
- thts[3].style.transform='scale(1)'
- thts[4].style.opacity=0.2
- thts[4].style.transform='scale(1)'
+ kst[0].style.opacity=0.2
+ kst[0].style.transform='scale(1)'
+ kst[1].style.opacity=0.2
+ kst[1].style.transform='scale(1)'
+ kst[2].style.opacity=0.2
+ kst[2].style.transform=
+  'scale(1) translate(1555%,0)'
+ kst[3].style.opacity=0.2
+ kst[3].style.transform=
+  'scale(1 ) translate(1555%,0)'
+ kst[4].style.opacity=0.2
+ kst[4].style.transform= 'scale(1) '
+ kst[5].style.opacity=0.2
+ kst[5].style.transform='scale(1) '
+ kst[6].style.opacity=0.2
+ kst[6].style.transform=
+  'scale(1) translate(1555%,0)'
+ kst[7].style.opacity=0.2
+ kst[7].style.transform=
+  'scale(1) translate(1555%,0)'
 }
 	  // inme=Math.round(Math.random()*5)
 </script>
