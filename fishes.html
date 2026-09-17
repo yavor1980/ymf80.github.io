@@ -82,6 +82,7 @@
  <div class=stns></div>
  <div class=stns></div>
  <div class=stns></div>
+ <div class=stns></div>
 </div>
 
 <script>
@@ -225,7 +226,15 @@ stns[5].style.width=19+'%'
 stns[5].style.height=133+'%'
 stns[5].style.background=
  'radial-gradient(22px,#f00,#f0f)'  
- 
+stns[6].style.left=3+'%'
+stns[6].style.top=13+'%'
+stns[6].style.width=119+'%'
+stns[6].style.height=133+'%' 
+stns[6].style.border='12px ridge #ff0'
+stns[6].style.borderTop='12px ridge transparent'
+stns[6].style.borderLeft='12px ridge transparent' 
+stns[6].style.opacity=0.1
+
 b=0
 function cl()
 {
@@ -356,7 +365,8 @@ fsh[0].onmouseover=()=>
    (33*Math.random())+'%,2%)'  
   stns[5].style.transform='scale(1,'
    +(0.3+Math.random())+') translate(2%,'+ 
-   (-93*Math.random())+'%)'   
+   (-93*Math.random())+'%)'  
+  stns[6].style.opacity=0.8
   setTimeout(()=>{
    fns[0].style.transform='scale(0.8,1)'
    fns[1].style.transform='scale(0.8,1)'
@@ -402,7 +412,8 @@ fsh[0].onmouseout=()=>
  stns[2].style.transform='scale(1)'
  stns[3].style.transform='scale(1)'
  stns[4].style.transform='scale(1)' 
- stns[5].style.transform='scale(1)'  
+ stns[5].style.transform='scale(1)' 
+ stns[6].style.opacity=0.1
 }  
  
 </script>
