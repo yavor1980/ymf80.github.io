@@ -4,7 +4,7 @@
 <style>
 body
 {  
- background:linear-gradient(#00f,#00b);
+ background:radial-gradient(#00f,#009);
 }
 
 .grnd
@@ -164,7 +164,7 @@ apprts[3].style.zIndex=1
 apprts[3].style.left=38+'%'
 apprts[3].style.top=2+'%'
 apprts[3].style.background='#ff0'
-apprts[3].style.opacity=0
+apprts[3].style.opacity=0.1
 
 tsbmrne[0].style.left=27+'%'
 tsbmrne[0].style.top=11+'%'
@@ -196,17 +196,19 @@ prjctr[2].style.zIndex=-1
 prjctr[2].style.left=5+(77*Math.random())+'%'
 prjctr[2].style.top=12+'%'
 prjctr[2].style.width=7+'%'
-prjctr[2].style.height=13+'%'
-prjctr[2].style.background='#500'
-prjctr[2].style.opacity=0
+prjctr[2].style.height=6+'%'
+prjctr[2].style.background=
+ 'radial-gradient(#ff0,#f00)'
+prjctr[2].style.opacity=0.3
 prjctr[2].style.borderRadius=55+'%'
 prjctr[3].style.zIndex=-1
 prjctr[3].style.left=5+(77*Math.random())+'%'
 prjctr[3].style.top=12+'%'
 prjctr[3].style.width=7+'%'
-prjctr[3].style.height=13+'%'
-prjctr[3].style.background='#500'
-prjctr[3].style.opacity=0
+prjctr[3].style.height=6+'%'
+prjctr[3].style.background=
+ 'radial-gradient(#ff0,#f00)'
+prjctr[3].style.opacity=0.3
 prjctr[3].style.borderRadius=55+'%'
 
 bsmv=0, sc=0
@@ -238,21 +240,18 @@ function pmv()
  bpmv=Math.round(Math.random())
  tr=Math.random()*99-66
  sc=Math.random()+1
+ prjctr[0].style.opacity=Math.random()
  prjctr[0].style.transform=
   'scale('+sc+',1) translate('+tr+
   '%,'+tr+'%) rotate(-44deg)' 
  prjctr[2].style.top=5+(37*Math.random())+'%'
  prjctr[3].style.top=5+(37*Math.random())+'%'
  if(bpmv==0){
-  prjctr[2].style.background='#f00'
-  prjctr[2].style.transform='scale(2)'
-  prjctr[3].style.background='#f00'
-  prjctr[3].style.transform='scale(2)'
+  prjctr[2].style.transform='scale(3)'
+  prjctr[3].style.transform='scale(0)'
  }else{
-  prjctr[2].style.background='#500'
-  prjctr[2].style.transform='scale(1)'
-  prjctr[3].style.background='#500'
-  prjctr[3].style.transform='scale(1)'
+  prjctr[2].style.transform='scale(0)'
+  prjctr[3].style.transform='scale(3)'
  } 
 }
    Iprjctr=setInterval(pmv, 666)
@@ -304,13 +303,13 @@ sbmrne[0].onmouseover=()=>
  apprts[2].style.transform='scale(1.2)'
  apprts[3].style.opacity=0.7
  apprts[3].style.transform=' translate(0%,0%)'
- prjctr[0].style.width=(11+Math.random()*15)+'%' 
- prjctr[0].style.borderWidth=4+Math.random()*13
+ prjctr[0].style.width=(1+Math.random()*15)+'%' 
+ prjctr[0].style.borderWidth=4+Math.random()*9
  prjctr[1].style.transform=
   'scale(5) skew(-11deg) translate(66%,-9%)'
  prjctr[2].style.left=5+(77*Math.random())+'%'
- prjctr[2].style.opacity=0.5
- prjctr[3].style.opacity=0.4
+ prjctr[2].style.opacity=Math.random()
+ prjctr[3].style.opacity=Math.random()
   bsmv=1 
 }
 sbmrne[0].onmouseout=()=>
@@ -338,13 +337,13 @@ sbmrne[0].onmouseout=()=>
  apprts[1].style.transform='scale(1)'
  apprts[2].style.background='#000'
  apprts[2].style.transform='scale(1)'
- apprts[3].style.opacity=0
+ apprts[3].style.opacity=0.1
  apprts[3].style.transform='scale(1)'
  prjctr[0].style.width=11+'%'
  prjctr[0].style.borderWidth=4
  prjctr[1].style.transform='scale(0)' 
- prjctr[2].style.opacity=0
- prjctr[3].style.opacity=0
+ prjctr[2].style.opacity=0.3
+ prjctr[3].style.opacity=0.3
   bsmv=0
 }
 
