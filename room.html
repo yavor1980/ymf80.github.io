@@ -8,8 +8,7 @@
 }
 button
 {
- position:absolute;
- transition:1s;
+ position:absolute; transition:1s;
  border-radius:33%;
  transform:scale(2.2);
  cursor:pointer;
@@ -18,26 +17,22 @@ button:hover{ border-radius:33%;}
 
 #idplt,.imgg
 {
- position:absolute;
- transition:1s;
+ position:absolute; transition:1s;
 }
 
 .wls
 {
- position:absolute;
- transition:2s;
+ position:absolute; transition:2s;
  border-radius:5%; 
 }
 
 .drn,.prplr,.vctr
 {
- position:absolute;
- transition:1s;
+ position:absolute; transition:1s;
 }
 .prplr
 {
- transition:2s;
- opacity:0.5;
+ transition:2s; opacity:0.5;
 }
 </style>
 
@@ -150,6 +145,7 @@ wls[1].style.height=60+'%'
 wls[1].style.background='#0f0'
 wls[1].style.opacity=0.5
 
+drn[0].style.cursor='pointer'
 drn[0].style.left=44+'%'
 drn[0].style.top=44+'%'
 drn[0].style.width=22+'%'
@@ -323,8 +319,8 @@ function fdrn()
   wls[1].style.transform=
    'scale('+(Math.random()/5+0.8)+')'
    w-=1; h-=0; b++   
-  drn[6].style.transform='scale(7,'+
-   (8+Math.random())+')'  
+  drn[6].style.transform='scale('+
+   (8*Math.random())+')'  
   prplr[0].style.transform='scale('+(1+Math.random())+')'
   prplr[1].style.transform='scale('+(1+Math.random())+')'
   prplr[2].style.transform='scale('+(1+Math.random())+')'
