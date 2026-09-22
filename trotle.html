@@ -10,31 +10,26 @@
 <style>
 #idbd
 {
- background:linear-gradient(44deg,#330,#cc0);
  height:444%;
+ background:linear-gradient(44deg,#330,#cc0);
 }
 
 .btn
 {
- position:absolute;
- cursor:pointer;
+ position:absolute; cursor:pointer;
 }
 
 .coil
 {
- position:absolute;
- transition:1s;
+ position:absolute; transition:1s;
  cursor:pointer;
- left:19%;
- top:39%;
- width:12%;
- height:14%;
+ left:19%; top:39%;
+ width:12%; height:14%;
  transform:scale(2);
 }
 .fld,.cpcty,.dbbl
 {
- position:absolute;
- transition:333ms;
+ position:absolute; transition:333ms;
 }
 .cpcty{cursor:pointer;}
 .fld,.dbbl{transform:scale(0);}
@@ -46,15 +41,11 @@
 
 #idtrsfrmtr,.lcoils,.rcoils,.acoils,.ttl,.elmtr
 {
- position:absolute;
- transition:1s;
- cursor:pointer;
+ position:absolute; transition:1s; cursor:pointer;
 }
 .lcoils,.rcoils,.acoils
 {
- width:298px;
- height:11%;
- border-radius:55%;
+ width:298px; height:11%; border-radius:55%;
  border:22px ridge #777;
  border-top:22px ridge transparent;
 }
@@ -541,7 +532,6 @@ function trsfrmon()
     (1+Math.random()/2)+')'
    ttl[2].style.transform='scale('+
     (1+Math.random()/2)+')'
-   
  }, 333)
 } 
 function trsfrmoff()
@@ -571,19 +561,17 @@ idtrsfrmtr.onmouseover=()=>{ trsfrmon();}
 idtrsfrmtr.onmouseout=()=>{ trsfrmoff();}
 
 bbtn1=0
-btn[1].onclick=()=>
-{if(bbtn1==0)
- {
-  elmtr[0].style.transform=
-   'scale(1,0.4) translate(0,-199%)'
-   btn[1].innerHTML='DEF'
- } 
- else
- {
-  elmtr[0].style.transform='scale(1)'
-   btn[1].innerHTML='SCREEN'
- } bbtn1=!bbtn1
+btn[1].onmouseover=()=>
+{
+ elmtr[0].onmouseover()
 }
+btn[1].onmouseout=()=>
+{
+ elmtr[0].onmouseout()
+}
+
+ elmtr[0].style.transform=
+  'scale(1,0.4) translate(0,-199%)'
 
 Ielmtr=0
 elmtr[0].onmouseover=()=>
@@ -601,7 +589,7 @@ elmtr[0].onmouseover=()=>
  elmtr[4].style.borderBottom='27px ridge transparent'
  elmtr[5].style.opacity=0.8
  elmtr[6].style.opacity=0.8
- ttl[3].style.color='#700'
+ ttl[3].style.color='#fff'
  ttl[3].style.transform='scale(5) skew(-8deg)' 
  Ielmtr=setInterval(()=>{
   elmtr[1]. style.transform=
@@ -618,7 +606,8 @@ elmtr[0].onmouseout=()=>
 {
   clearInterval(Ielmtr)
  elmtr[0].style.border='99px ridge #777'
- elmtr[0].style.transform='scale(1)'
+ elmtr[0].style.transform=
+  'scale(1,0.4) translate(0,-199%)'
  elmtr[1].style.background='#777'
  elmtr[1].style.transform='scale(1)'
  elmtr[2].style.background='#777'
