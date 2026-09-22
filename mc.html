@@ -2,39 +2,30 @@
 <html>
 <body id=idbd >
 <style>
-.prcssr,.lp,.rp,.sp,.antnn
+.prcssr,.lp,.rp,.sp,.antnn,.rd
 { 
- position:absolute;  
- transition:777ms;
- cursor:pointer;  
+ position:absolute; transition:777ms;
 }
 .lmp
 { 
- position:absolute;  
- transition:1s;
- cursor:pointer;
+ position:absolute; transition:1s;
  transform:scale(2);
 }
 .cmnd
 { 
- position:absolute;  
- transition:1s;
+ position:absolute; transition:1s;
  cursor:pointer;
- transform:scale(1.5);
- z-index:1;
+ transform:scale(1.5); z-index:1;
 }
 .rgstr
 { 
- position:absolute;  
- transition:1s;
- cursor:pointer;
- transform:scale(2);
+ position:absolute; transition:1s;
+ cursor:pointer; transform:scale(2);
  z-index:1;
 }
 .snd
 {
- position:absolute;  
- transition:1s;
+ position:absolute; transition:1s;
 }
 
 </style>
@@ -98,11 +89,13 @@ rp=document.getElementsByClassName('rp')
 sp=document.getElementsByClassName('sp')
 lmp=document.getElementsByClassName('lmp')
 antnn=document.getElementsByClassName('antnn')
+rd=document.getElementsByClassName('rd')
 
 cmnd=document.getElementsByClassName('cmnd')
 rgstr=document.getElementsByClassName('rgstr')
 snd=document.getElementsByClassName('snd')
 
+idbd.style.height=166+'%'
 idbd.style.background=
  'linear-gradient(222deg, #0f0,#090)'
 
@@ -116,7 +109,9 @@ function inn(nm,i,l,t,w,h,bkg,clr)
  nm[i].style.color=clr 
 }
 inn(prcssr,0, 33,22, 20,27, '#333','')
+ prcssr[0].style.cursor='pointer'
  prcssr[0].style.borderRadius=3+'%'
+ 
 inn(prcssr,1, 18,14, 64,70, '#444','')
  prcssr[1].style.borderRadius=8+'%'
  prcssr[1].style.textAlign='center'
