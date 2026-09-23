@@ -111,11 +111,11 @@ function inn(nm,i,l,t,w,h,bkg,clr)
 inn(prcssr,0, 33,22, 20,27, '#333','')
  prcssr[0].style.cursor='pointer'
  prcssr[0].style.borderRadius=3+'%'
- 
 inn(prcssr,1, 18,14, 64,70, '#444','')
  prcssr[1].style.borderRadius=8+'%'
  prcssr[1].style.textAlign='center'
  prcssr[1].style.fontSize=3+'em'
+ prcssr[1].style.color='#000'
 inn(prcssr,2, 14,46, 72,44, '#fff','')
 inn(lp,0, -14,11, 26,2,' #ff0','')
 inn(lp,1, -14,26, 26,2,' #ff0','')
@@ -143,6 +143,7 @@ inn(lmp,4, 81,33,10,33, '#000','')
  lmp[4].style.borderRadius=55+'%'
  
 inn(antnn,0, 27,73,22,2, '#111','')
+ antnn[0].style.cursor='pointer'
  antnn[0].style.borderRadius=25+'%'
 inn(antnn,1, 9,-400,5,933, '#000','')
  antnn[1].style.borderRadius=55+'%'
@@ -222,6 +223,7 @@ icmnd=0
 function clk()
 {
  prcssr[0].style.background='#700'
+ prcssr[1].style.color='#f00'
  prcssr[2].innerHTML=''+
   Math.round(Math.random())+Math.round(Math.random())+
   Math.round(Math.random())+Math.round(Math.random())
@@ -301,10 +303,11 @@ prcssr[0].onmouseout=()=>
   lp[i].style.transform= 'scale(1)'
   rp[i].style.transform= 'scale(1)'
   cmnd[i].style.color='#000' 
- }
+ } 
  prcssr[0].style.background= '#333'
  prcssr[0].style.transform= 'scale(1)'
  prcssr[1].style.background= '#444'
+ prcssr[1].style.color='#000'
   prcssr[2].innerHTML=''
  sp[0].style.transform= 'scale(1)'
  sp[1].style.transform= 'scale(1)'
