@@ -82,6 +82,11 @@
  <div class=snd>pressure(db)</div>
  <div class=snd>dynamic</div>
 
+<div class=rd>
+ <div class=rd></div>
+ <div class=rd></div> 
+</div>
+
 <script>
 prcssr=document.getElementsByClassName('prcssr')
 lp=document.getElementsByClassName('lp')
@@ -89,11 +94,11 @@ rp=document.getElementsByClassName('rp')
 sp=document.getElementsByClassName('sp')
 lmp=document.getElementsByClassName('lmp')
 antnn=document.getElementsByClassName('antnn')
-rd=document.getElementsByClassName('rd')
 
 cmnd=document.getElementsByClassName('cmnd')
 rgstr=document.getElementsByClassName('rgstr')
 snd=document.getElementsByClassName('snd')
+rd=document.getElementsByClassName('rd')
 
 idbd.style.height=166+'%'
 idbd.style.background=
@@ -216,6 +221,26 @@ snd[4].style.top=19+'%'
 snd[4].style.color='#f00'
 snd[4].style.transform='scale(0) '
  
+rd[0].style.cursor='pointer' 
+rd[0].style.left=6+'%'
+rd[0].style.top=101+'%'
+rd[0].style.width=87+'%'
+rd[0].style.height=49+'%'
+rd[0].style.borderRadius=55+'%'
+rd[0].style.border='14px ridge #099'
+rd[0].style.borderTop='14px ridge transparent'
+rd[0].style.borderBottom='14px ridge transparent'
+rd[0].style.opacity=0.4
+rd[1].style.left=46+'%'
+rd[1].style.top=22+'%'
+rd[1].style.width=7+'%'
+rd[1].style.height=49+'%'
+rd[1].style.borderRadius=55+'%'
+rd[1].style.border='6px ridge #0ff'
+rd[1].style.borderTop='14px ridge transparent'
+rd[1].style.borderBottom='14px ridge transparent'
+
+ 
 bcl=1
 lv=0, llv=0
 rv=0, lrv=0
@@ -290,8 +315,7 @@ function clk()
 Ip=0
 prcssr[0].onmouseover=()=>
 { 
-  clk()
-  Ip=setInterval(clk, 999)
+  clk(); Ip=setInterval(clk, 999)
   snd[0].onmouseover()
   rgstr[0].onmouseover()
 }
@@ -356,9 +380,7 @@ function fcmnd(i,frz)
  fcmnd(3,'org 0100h')
 
 argstr=["AX","BX","CX","DX","EX"], ia=0; 
-Irgstr=0
-brgstr=0
-brgstr1=0
+Irgstr=0, brgstr=0, brgstr1=0
 rgstr[0].onmouseover=()=>
 {
  rgstr[0].style.background='none'
@@ -387,8 +409,7 @@ rgstr[0].onmouseover=()=>
 } 
 rgstr[0].onmouseout=()=>
 {
-  clearInterval(Irgstr)
-  ia=0
+  clearInterval(Irgstr); ia=0
  rgstr[0].style.background='#f0f'
  rgstr[0].style.transform='scale(3)'
  rgstr[0].style.color='#ff0'
@@ -399,8 +420,7 @@ rgstr[0].onmouseout=()=>
  rgstr[3].style.transform='scale(0)'
 } 
 
-Isnd0=0
-bsnd0=0
+Isnd0=0; bsnd0=0
 snd[0].onmouseover=()=>
 {
  snd[0].style.background='none'
@@ -432,6 +452,26 @@ snd[0].onmouseout=()=>
  snd[4].style.transform='scale(0)'
   clearInterval(Isnd0)
 } 
+
+Ird0=0,brd0=1
+rd[0].onmouseover=()=>
+{
+ rd[0].style.opacity=1
+ Ird0=setInterval(()=>{
+  if(brd0){
+   rd[1].style.transform='scale(11,1)'
+   rd[1].style.transition=1+'s'
+  }else{
+   rd[1].style.transform='scale(1)'
+   rd[1].style.transition=0+'s'
+ } brd0=!brd0; },  999)  
+}
+rd[0].onmouseout=()=>
+{
+ rd[0].style.opacity=0.4
+  clearInterval(Ird0)
+ rd[1].style.transform='scale(1)' 
+}
 
 </script>
 </body>
