@@ -239,7 +239,14 @@ rd[1].style.borderRadius=55+'%'
 rd[1].style.border='6px ridge #0ff'
 rd[1].style.borderTop='14px ridge transparent'
 rd[1].style.borderBottom='14px ridge transparent'
-
+rd[2].style.left=46+'%'
+rd[2].style.top=22+'%'
+rd[2].style.width=7+'%'
+rd[2].style.height=49+'%'
+rd[2].style.borderRadius=55+'%'
+rd[2].style.border='6px ridge #0ff'
+rd[2].style.borderTop='14px ridge transparent'
+rd[2].style.borderBottom='14px ridge transparent'
  
 bcl=1
 lv=0, llv=0
@@ -461,9 +468,13 @@ rd[0].onmouseover=()=>
   if(brd0){
    rd[1].style.transform='scale(11,1)'
    rd[1].style.transition=1+'s'
+   rd[2].style.transform='scale(7,1)'
+   rd[2].style.transition=1+'s' 
   }else{
    rd[1].style.transform='scale(1)'
    rd[1].style.transition=0+'s'
+   rd[2].style.transform='scale(1)'
+   rd[2].style.transition=0+'s'
  } brd0=!brd0; },  999)  
 }
 rd[0].onmouseout=()=>
@@ -471,6 +482,7 @@ rd[0].onmouseout=()=>
  rd[0].style.opacity=0.4
   clearInterval(Ird0)
  rd[1].style.transform='scale(1)' 
+ rd[2].style.transform='scale(1)'
 }
 
 </script>
