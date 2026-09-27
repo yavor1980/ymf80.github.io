@@ -268,11 +268,11 @@ trdnt[0].onmouseout=()=>
  }
 }
  
-Ifngrs=0
+Ifngrs=0, clrs=['#f00','#0f0','#00f','#f0f','#ff0']
 fngrs[0].onmouseover=()=>
 {
  fngrs[0].style.background=
-  'radial-gradient(#ff0,#00f,#f00,#000,#f00)'
+  'radial-gradient(#ff0,#00f,#f00,#000,#f0f)'
  fngrs[0].style.transform=
   'scale(1.2) translate(-22px,0)'  
  fngrs[1].style.color='#0f0'
@@ -280,6 +280,15 @@ fngrs[0].onmouseover=()=>
  fngrs[1].style.transform=
   'scale(5) translate(-22px,-8px) skew(-22deg)'
  Ifngrs=setInterval(()=>{
+  b0=Math.round(Math.random()*3)
+  b1=Math.round(Math.random()*3)
+  b2=Math.round(Math.random()*3)
+  b3=Math.round(Math.random()*3)
+  b4=Math.round(Math.random()*3) 
+  fngrs[0].style.background=
+   'radial-gradient('+clrs[b0]+','+clrs[b1]+','+
+   clrs[b2]+','+clrs[b3]+','+clrs[b4]+','+
+   clrs[b1]+')'
   fngrs[0].style.transform='scale('+
    (1+Math.random()/4)+') translate(0,-22px)'
   }, 999)
@@ -306,6 +315,15 @@ fngrs[2].onmouseover=()=>
  fngrs[3].style.transform=
   'scale(5) translate(-22px,-8px) skew(-22deg)'
  Ifngrs=setInterval(()=>{
+  b0=Math.round(Math.random()*3)
+  b1=Math.round(Math.random()*3)
+  b2=Math.round(Math.random()*3)
+  b3=Math.round(Math.random()*3)
+  b4=Math.round(Math.random()*3) 
+  fngrs[2].style.background=
+   'linear-gradient(90deg,'+clrs[b0]+','+clrs[b1]+','+
+   clrs[b2]+','+clrs[b3]+','+clrs[b4]+','+
+   clrs[b1]+')'
   fngrs[2].style.transform='scale('+
    (1+Math.random()/4)+') translate(0,-22px)'
   }, 999)
