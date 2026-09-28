@@ -85,6 +85,7 @@
 <div class=rd>
  <div class=rd></div>
  <div class=rd></div> 
+ <div class=rd></div> 
 </div>
 
 <script>
@@ -227,7 +228,7 @@ rd[0].style.top=101+'%'
 rd[0].style.width=87+'%'
 rd[0].style.height=49+'%'
 rd[0].style.borderRadius=55+'%'
-rd[0].style.border='14px ridge #099'
+rd[0].style.border='14px ridge #990'
 rd[0].style.borderTop='14px ridge transparent'
 rd[0].style.borderBottom='14px ridge transparent'
 rd[0].style.opacity=0.4
@@ -247,6 +248,15 @@ rd[2].style.borderRadius=55+'%'
 rd[2].style.border='6px ridge #0ff'
 rd[2].style.borderTop='14px ridge transparent'
 rd[2].style.borderBottom='14px ridge transparent'
+rd[3].style.transition=7+'ms'
+rd[3].style.left=7+'%'
+rd[3].style.top=-8+'%'
+rd[3].style.width=86+'%'
+rd[3].style.height=117+'%'
+rd[3].style.borderRadius=55+'%'
+rd[3].style.border='6px ridge #0ff'
+rd[3].style.borderLeft='14px ridge transparent'
+rd[3].style.borderRight='14px ridge transparent'
  
 bcl=1
 lv=0, llv=0
@@ -465,6 +475,8 @@ rd[0].onmouseover=()=>
 {
  rd[0].style.opacity=1
  Ird0=setInterval(()=>{
+  rd[3].style.transform='scale('+
+   (1+Math.random()/6)+')'
   if(brd0){
    rd[1].style.transform='scale(11,1)'
    rd[1].style.transition=1+'s'
@@ -483,6 +495,7 @@ rd[0].onmouseout=()=>
   clearInterval(Ird0)
  rd[1].style.transform='scale(1)' 
  rd[2].style.transform='scale(1)'
+ rd[3].style.transform='scale(1)'
 }
 
 </script>
