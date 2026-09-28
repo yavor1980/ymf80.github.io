@@ -5,7 +5,11 @@
 </head>
 <body id=idbd>
 <style>
-#idbd{background:radial-gradient(#660,#bb0);}
+#idbd
+{
+ height:194%;
+ background:radial-gradient(#660,#bb0);
+}
 input{text-align:center;}
 
 #idbdy
@@ -14,7 +18,7 @@ input{text-align:center;}
  left:2%; top:2%; width:94%; height:94%; background:#880;
  border-radius:12%; border:9px ridge #990;
 }
-.bse,.zpr,.dlg,.dlgr,.btn,.lst
+.bse,.zpr,.dlg,.dlgr,.btn,.lst,.bs
 {
  position:absolute; transition:1s;
 }
@@ -64,6 +68,10 @@ input{text-align:center;}
  </div>
 </div>  
 
+<div class=bs>
+ <div class=bs></div>
+</div>
+
 <script>
 btn=document.getElementsByClassName('btn')
 bse=document.getElementsByClassName('bse')
@@ -71,7 +79,9 @@ dlg=document.getElementsByClassName('dlg')
 dlgr=document.getElementsByClassName('dlgr')
 zpr=document.getElementsByClassName('zpr')
 lst=document.getElementsByClassName('lst') 
-  
+
+bs=document.getElementsByClassName('bs') 
+
 btn[0].style.left=40+'%'
 btn[0].style.top=5+'%'  
 btn[0].style.color='#800'
@@ -199,12 +209,21 @@ lst[6].style.color='#900'
 lst[6].style.transform='scale(4)'
 lst[6].style.cursor='pointer'
  lst[6].innerHTML='EMPTY'
+ 
+bs[0].style.cursor='pointer'
+bs[0].style.left=3+'%'
+bs[0].style.top=112+'%' 
+bs[0].style.width=92+'%'
+bs[0].style.height=77+'%' 
+bs[0].style.background='#ddd'
+bs[0].style.borderRadius=8+'%'
+bs[0].style.border='9px ridge #990'
+ 
 //===================================================
  
 I=setInterval(()=>{
  lst[6].style.transform='scale('+
   (4+2*Math.random())+')translate(12%,0) '
- 
 }, 999) 
  
 sbse=['meeting','expo','seminar']
