@@ -75,7 +75,9 @@ input{text-align:center;}
   <div class=bs></div>
   <div class=bs></div>
  </div>
- <div class=bs></div>
+ <div class=bs>
+  <div class=bs> </div>
+ </div>
 </div>
 
 <script>
@@ -258,6 +260,11 @@ bs[6].style.background=
  'radial-gradient(42px,#ff0,#080)'
 bs[6].style.opacity=0.4
 bs[6].style.borderRadius=55+'%'
+bs[7].style.left=26+'%'
+bs[7].style.top=26+'%'
+bs[7].style.opacity=0
+bs[7].style.border='29px ridge #000'
+bs[7].style.transform='rotate(45deg)' 
  
 //===================================================
  
@@ -455,9 +462,10 @@ bs[0].onmouseover=()=>
  bsdir=Math.round(Math.random()*4)
  bs[5].style.opacity=1
  bs[6].style.opacity=Math.random()
- bs[6].style.transition=0+'s'
  bs[6].style.left=Math.random()*77+'%'
- bs[6].style.top=Math.random()*77+'%' 
+ bs[6].style.top=Math.random()*77+'%'
+ bs[6].style.transform='scale(1,'+Math.random()+')'
+ bs[7].style.opacity=1 
  switch(bsdir)
  {
   case 1: 
@@ -469,6 +477,8 @@ bs[0].onmouseover=()=>
 	 'scale(1.3) translate(95%,0)'
 	bs[4].style.transform=
 	 'scale(1.4) translate(145%,0)'
+	bs[7].style.transform=
+	 'translate(85%,0) rotate(45deg)'	 
     break
   case 2: 
     bs[1].style.transform=
@@ -479,6 +489,8 @@ bs[0].onmouseover=()=>
 	 'scale(1.3) translate(-95%,0)'
 	bs[4].style.transform=
 	 'scale(1.4) translate(-145%,0)'
+	bs[7].style.transform=
+	 'translate(-85%,0) rotate(45deg)'	
     break	
   case 3: 
     bs[1].style.transform=
@@ -489,6 +501,8 @@ bs[0].onmouseover=()=>
 	 'scale(1.3) translate(0,95%)'
 	bs[4].style.transform=
 	 'scale(1.4) translate(0,145%)'
+	bs[7].style.transform=
+	 'translate(0,85%) rotate(45deg)'	
     break
   case 4: 
     bs[1].style.transform=
@@ -499,6 +513,8 @@ bs[0].onmouseover=()=>
 	 'scale(1.3) translate(0,-95%)'
 	bs[4].style.transform=
 	 'scale(1.4) translate(0,-145%)'
+	bs[7].style.transform=
+	 'translate(0,-85%)	rotate(45deg)' 
     break		
  }
  }, 999)
@@ -512,6 +528,7 @@ bs[0].onmouseout=()=>
  bs[4].style.transform='scale(1)' 
  bs[5].style.opacity=0 
  bs[6].style.opacity=0.4
+ bs[7].style.opacity=0 
 }
  
 </script>
