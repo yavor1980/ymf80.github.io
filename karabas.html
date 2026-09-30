@@ -70,6 +70,8 @@
  <div class=bx></div>
  <div class=bx></div>
  <div class=bx>BREWERY</div>
+ <div class=bx></div>
+ <div class=bx>TECHNOLOGY</div>
 </div>
 
 <script>
@@ -317,7 +319,20 @@ bx[5].style.opacity=0.2
 bx[5].style.borderRadius=55+'%'
 bx[6].style.left=20+'%'
 bx[6].style.top=-112+'%'
+bx[6].style.opacity=0.2
 bx[6].style.transform='scale(5) skew(-22deg)'
+bx[7].style.left=20+'%'
+bx[7].style.top=112+'%'
+bx[7].style.width=144+'%'
+bx[7].style.height=33+'%'
+bx[7].style.background=
+ 'radial-gradient(#d00,#f00)'
+bx[7].style.opacity=0.2
+bx[7].style.borderRadius=55+'%'
+bx[8].style.left=20+'%'
+bx[8].style.top=-100+'%'
+bx[8].style.opacity=0.2
+bx[8].style.transform='scale(5) skew(-22deg)'
 
 Imv=0
 function mv()
@@ -419,9 +434,14 @@ bx[0].onmouseover=()=>
  bx[3].style.opacity=0.9
  bx[4].style.opacity=0.9
  bx[5].style.opacity=0.9
-  bx[6].style.color='#fff'
+ bx[6].style.color='#fff'
+ bx[6].style.opacity=0.9
  bx[6].style.transform=
   'scale(7) translate(39%,-9%) skew(22deg)'
+ bx[8].style.color='#ddd' 
+ bx[8].style.opacity=0.9
+ bx[8].style.transform=
+  'scale(7) translate(13%,19%) skew(22deg)'  
  Ibx0=setInterval(()=>{
    bx[1].style.height=(80+19*Math.random())+'%'
    bx[1].style.borderTopLeftRadius=
@@ -455,7 +475,11 @@ bx[0].onmouseout=()=>
  bx[5].style.opacity=0.2
  bx[5].style.transform='scale(1)'
  bx[6].style.color='#000'
+ bx[6].style.opacity=0.2
  bx[6].style.transform='scale(5) skew(-22deg)'
+ bx[8].style.color='#000'
+ bx[8].style.opacity=0.2
+ bx[8].style.transform='scale(5) skew(-22deg)'
 }
 	  	  
 </script>
