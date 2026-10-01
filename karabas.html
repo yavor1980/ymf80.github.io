@@ -278,6 +278,8 @@ bx[0].style.borderTopLeftRadius=7+'%'
 bx[0].style.borderTopRightRadius=7+'%'
 bx[0].style.border='22px ridge #000'
 bx[0].style.borderTop='17px ridge transparent'
+bx[0].style.transform=
+ 'scale(1,0.4) translate(0,-200%)'
 bx[1].style.bottom=0+'%'
 bx[1].style.width=100+'%'
 bx[1].style.height=80+'%'
@@ -309,24 +311,24 @@ bx[4].style.background=
  'radial-gradient(#f00,#ff0)'
 bx[4].style.opacity=0.2
 bx[4].style.borderRadius=55+'%'
-bx[5].style.left=-20+'%'
+bx[5].style.left=-29+'%'
 bx[5].style.top=112+'%'
-bx[5].style.width=144+'%'
+bx[5].style.width=100+'%'
 bx[5].style.height=33+'%'
 bx[5].style.background=
- 'radial-gradient(#d00,#f00)'
+ 'radial-gradient(#ff0,#f00)'
 bx[5].style.opacity=0.2
 bx[5].style.borderRadius=55+'%'
 bx[6].style.left=20+'%'
 bx[6].style.top=-112+'%'
 bx[6].style.opacity=0.2
 bx[6].style.transform='scale(5) skew(-22deg)'
-bx[7].style.left=20+'%'
+bx[7].style.left=33+'%'
 bx[7].style.top=112+'%'
-bx[7].style.width=144+'%'
+bx[7].style.width=100+'%'
 bx[7].style.height=33+'%'
 bx[7].style.background=
- 'radial-gradient(#d00,#f00)'
+ 'radial-gradient(#ff0,#f00)'
 bx[7].style.opacity=0.2
 bx[7].style.borderRadius=55+'%'
 bx[8].style.left=20+'%'
@@ -431,6 +433,7 @@ cncr[0].onmouseout=()=>{ kttl[0].onmouseout();}
 Ibx0=0
 bx[0].onmouseover=()=>
 { 
+ bx[0].style.transform='scale(1)'
  bx[3].style.opacity=0.9
  bx[4].style.opacity=0.9
  bx[5].style.opacity=0.9
@@ -438,6 +441,7 @@ bx[0].onmouseover=()=>
  bx[6].style.opacity=0.9
  bx[6].style.transform=
   'scale(7) translate(39%,-9%) skew(22deg)'
+ bx[7].style.opacity=0.9  
  bx[8].style.color='#ddd' 
  bx[8].style.opacity=0.9
  bx[8].style.transform=
@@ -461,11 +465,16 @@ bx[0].onmouseover=()=>
    bx[5].style.opacity=Math.random()
    bx[5].style.transform='scale('+
     (1+Math.random()/5)+')'
+   bx[7].style.opacity=Math.random()
+   bx[7].style.transform='scale('+
+    (1+Math.random()/5)+')'	
  }, 999)
 }
 bx[0].onmouseout=()=>
 { 
   clearInterval(Ibx0)
+ bx[0].style.transform=
+  'scale(1,0.4) translate(0,-200%)'
  bx[1].style.height=80+'%'
  bx[1].style.borderTopLeftRadius=7+'%'
  bx[1].style.borderTopRightRadius=7+'%'
@@ -477,6 +486,8 @@ bx[0].onmouseout=()=>
  bx[6].style.color='#000'
  bx[6].style.opacity=0.2
  bx[6].style.transform='scale(5) skew(-22deg)'
+ bx[7].style.opacity=0.2
+ bx[7].style.transform='scale(1)'
  bx[8].style.color='#000'
  bx[8].style.opacity=0.2
  bx[8].style.transform='scale(5) skew(-22deg)'
