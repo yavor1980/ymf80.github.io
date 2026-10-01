@@ -78,6 +78,9 @@ input{text-align:center;}
  <div class=bs>
   <div class=bs> </div>
  </div>
+ <div class=bs>
+  <div class=bs> </div>
+ </div>
 </div>
 
 <script>
@@ -265,6 +268,19 @@ bs[7].style.top=26+'%'
 bs[7].style.opacity=0
 bs[7].style.border='29px ridge #000'
 bs[7].style.transform='rotate(45deg)' 
+bs[8].style.left=Math.random()*77+'%'
+bs[8].style.top=Math.random()*77+'%' 
+bs[8].style.width=13+'%'
+bs[8].style.height=20+'%'
+bs[8].style.background=
+ 'radial-gradient(42px,#ff0,#008)'
+bs[8].style.opacity=0.4
+bs[8].style.borderRadius=55+'%'
+bs[9].style.left=26+'%'
+bs[9].style.top=26+'%'
+bs[9].style.opacity=0
+bs[9].style.border='29px ridge #000'
+bs[9].style.transform='rotate(45deg)'  
  
 //===================================================
  
@@ -407,9 +423,7 @@ function flst(i)
    idel=i
  }
  lst[i].ondblclick=()=>
- { 
-  lst[i].innerHTML=''
- }
+ { lst[i].innerHTML=''; }
 } 
  flst(1),flst(2),flst(3),flst(4),flst(5)
 lst[6].onmouseover=()=>
@@ -466,6 +480,11 @@ bs[0].onmouseover=()=>
  bs[6].style.top=Math.random()*77+'%'
  bs[6].style.transform='scale(1,'+Math.random()+')'
  bs[7].style.opacity=1 
+ bs[8].style.opacity=Math.random()
+ bs[8].style.left=Math.random()*77+'%'
+ bs[8].style.top=Math.random()*77+'%'
+ bs[8].style.transform='scale(1,'+Math.random()+')'
+ bs[9].style.opacity=1 
  switch(bsdir)
  {
   case 1: 
@@ -479,6 +498,8 @@ bs[0].onmouseover=()=>
 	 'scale(1.4) translate(145%,0)'
 	bs[7].style.transform=
 	 'translate(85%,0) rotate(45deg)'	 
+	bs[9].style.transform=
+	 'translate(85%,0) rotate(45deg)'	 
     break
   case 2: 
     bs[1].style.transform=
@@ -491,6 +512,8 @@ bs[0].onmouseover=()=>
 	 'scale(1.4) translate(-145%,0)'
 	bs[7].style.transform=
 	 'translate(-85%,0) rotate(45deg)'	
+	bs[9].style.transform=
+	 'translate(-85%,0) rotate(45deg)'	 
     break	
   case 3: 
     bs[1].style.transform=
@@ -503,6 +526,8 @@ bs[0].onmouseover=()=>
 	 'scale(1.4) translate(0,145%)'
 	bs[7].style.transform=
 	 'translate(0,85%) rotate(45deg)'	
+	bs[9].style.transform=
+	 'translate(0,85%) rotate(45deg)'	 
     break
   case 4: 
     bs[1].style.transform=
@@ -515,6 +540,8 @@ bs[0].onmouseover=()=>
 	 'scale(1.4) translate(0,-145%)'
 	bs[7].style.transform=
 	 'translate(0,-85%)	rotate(45deg)' 
+	bs[9].style.transform=
+	 'translate(0,-85%)	rotate(45deg)' 	 
     break		
  }
  }, 999)
@@ -529,6 +556,8 @@ bs[0].onmouseout=()=>
  bs[5].style.opacity=0 
  bs[6].style.opacity=0.4
  bs[7].style.opacity=0 
+ bs[8].style.opacity=0.4 
+ bs[9].style.opacity=0  
 }
  
 </script>
