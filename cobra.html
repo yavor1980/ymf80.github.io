@@ -431,9 +431,8 @@ function clk()
   'scale(1.2) rotate(45deg) skew(33deg)'
  bg[0].style.transform=
   'translate(0,'+(-522*Math.random())+'%) skew(22deg)'
+ bg[4].style.opacity=0.8
  bg[4].style.transform='scale(2,1.2)'
- 
- 
  ttl[3].style.background=
   'radial-gradient(#088,#00f)'
  ttl[3].style.opacity=0.8
@@ -467,6 +466,7 @@ function clk()
   insct[3].style.borderRadius=55+'%'
   insct[3].style.transform='scale(1)'
   insct[4].style.transform='scale(0)'
+  bg[4].style.opacity=0.4
   bg[4].style.transform='scale(1)'
   ttl[2].style.transform='scale(1)'
   ttl[3].style.opacity=0.7
@@ -475,7 +475,7 @@ function clk()
   ttl[4].style.transform='scale(1)' 
   ttl[0].onmouseout()
  }, 999)
-}
+} 
 
 idb.onclick=()=>{ clk();  }
 
