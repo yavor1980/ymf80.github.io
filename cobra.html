@@ -75,6 +75,7 @@ button:hover
  <div class=bg></div>
  <div class=bg></div>
  <div class=bg></div>
+ <div class=bg></div>
 </div>
  
 </body >
@@ -327,6 +328,15 @@ bg[3].style.width=19+'%'
 bg[3].style.height=98+'%' 
 bg[3].style.border='17px ridge #000'
 bg[3].style.borderTop='17px ridge transparent'
+bg[4].style.left=5+'%'
+bg[4].style.top=85+'%'
+bg[4].style.width=19+'%'
+bg[4].style.height=98+'%' 
+bg[4].style.background=
+ 'radial-gradient(#0ff,#0b0)' 
+bg[4].style.opacity=0.4 
+bg[4].style.borderBottomLeftRadius=8+'%'
+bg[4].style.borderBottomRightRadius=8+'%'
 
   bcl=0
 function cl()
@@ -421,6 +431,9 @@ function clk()
   'scale(1.2) rotate(45deg) skew(33deg)'
  bg[0].style.transform=
   'translate(0,'+(-522*Math.random())+'%) skew(22deg)'
+ bg[4].style.transform='scale(2,1.2)'
+ 
+ 
  ttl[3].style.background=
   'radial-gradient(#088,#00f)'
  ttl[3].style.opacity=0.8
@@ -454,6 +467,7 @@ function clk()
   insct[3].style.borderRadius=55+'%'
   insct[3].style.transform='scale(1)'
   insct[4].style.transform='scale(0)'
+  bg[4].style.transform='scale(1)'
   ttl[2].style.transform='scale(1)'
   ttl[3].style.opacity=0.7
   ttl[3].style.background=
