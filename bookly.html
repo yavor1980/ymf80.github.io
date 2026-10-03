@@ -254,7 +254,7 @@ bs[4].style.borderRadius=55+'%'
 bs[5].style.zIndex=-3
 bs[5].style.opacity=0
 bs[5].style.border='29px ridge #000'
-bs[5].style.transform='rotate(45deg)'
+bs[5].style.transform='scale(0) rotate(45deg)'
 bs[6].style.left=Math.random()*77+'%'
 bs[6].style.top=Math.random()*77+'%' 
 bs[6].style.width=13+'%'
@@ -314,7 +314,8 @@ function abse(i,pp)
  bse[i].onclick=()=>
  { 
   dlg[0].style.zIndex=1
-  dlg[0].style.transform='scale(2) translate(37%,27%)'
+  dlg[0].style.transform=
+   'scale(2) translate(37%,27%)'
   pbse=pp
   m=Math.round(Math.random()*11)
   d=Math.round(Math.random()*30)
@@ -468,13 +469,14 @@ dlgr[3].onclick=()=>
  dlgr[3].disabled=1
 }
 
-
 bsdir=0, bsI=0, nbs=0
 bs[0].onmouseover=()=>
 { 
  bsI=setInterval(()=>{
  bsdir=Math.round(Math.random()*4)
  bs[5].style.opacity=1
+ bs[5].style.transform='scale(1) rotate(45deg)'
+ bs[4].style.border=''
  bs[6].style.opacity=Math.random()
  bs[6].style.left=Math.random()*77+'%'
  bs[6].style.top=Math.random()*77+'%'
@@ -494,13 +496,14 @@ bs[0].onmouseover=()=>
 	 'scale(1.2) translate(55%,0)'
 	bs[3].style.transform=
 	 'scale(1.3) translate(95%,0)'
+    bs[4].style.borderRight='7px ridge #ff0'
 	bs[4].style.transform=
 	 'scale(1.4) translate(145%,0)'
 	bs[7].style.transform=
 	 'translate(85%,0) rotate(45deg)'	 
 	bs[9].style.transform=
 	 'translate(85%,0) rotate(45deg)'	 
-    break
+   break
   case 2: 
     bs[1].style.transform=
 	 'scale(1) translate(-555%,0)'
@@ -508,13 +511,14 @@ bs[0].onmouseover=()=>
 	 'scale(1.2) translate(-55%,0)'
 	bs[3].style.transform=
 	 'scale(1.3) translate(-95%,0)'
+	bs[4].style.borderLeft='7px ridge #ff0' 
 	bs[4].style.transform=
 	 'scale(1.4) translate(-145%,0)'
 	bs[7].style.transform=
 	 'translate(-85%,0) rotate(45deg)'	
 	bs[9].style.transform=
 	 'translate(-85%,0) rotate(45deg)'	 
-    break	
+   break	
   case 3: 
     bs[1].style.transform=
 	 'scale(1) translate(0,255%)'
@@ -522,13 +526,14 @@ bs[0].onmouseover=()=>
 	 'scale(1.2) translate(0,55%)'
 	bs[3].style.transform=
 	 'scale(1.3) translate(0,95%)'
+	bs[4].style.borderBottom='7px ridge #ff0'  
 	bs[4].style.transform=
 	 'scale(1.4) translate(0,145%)'
 	bs[7].style.transform=
 	 'translate(0,85%) rotate(45deg)'	
 	bs[9].style.transform=
 	 'translate(0,85%) rotate(45deg)'	 
-    break
+   break
   case 4: 
     bs[1].style.transform=
 	 'scale(1) translate(0,-255%)'
@@ -536,13 +541,14 @@ bs[0].onmouseover=()=>
 	 'scale(1.2) translate(0,-55%)'
 	bs[3].style.transform=
 	 'scale(1.3) translate(0,-95%)'
+	bs[4].style.borderTop='7px ridge #ff0' 	 
 	bs[4].style.transform=
 	 'scale(1.4) translate(0,-145%)'
 	bs[7].style.transform=
 	 'translate(0,-85%)	rotate(45deg)' 
 	bs[9].style.transform=
 	 'translate(0,-85%)	rotate(45deg)' 	 
-    break		
+   break		
  }
  }, 999)
 }
@@ -551,8 +557,10 @@ bs[0].onmouseout=()=>
   clearInterval(bsI)
  bs[1].style.transform='scale(1)' 
  bs[2].style.transform='scale(1)' 
- bs[3].style.transform='scale(1)' 
+ bs[3].style.transform='scale(1)'
+ bs[4].style.border='none'
  bs[4].style.transform='scale(1)' 
+ bs[5].style.transform='scale(0) rotate(45deg)'
  bs[5].style.opacity=0 
  bs[6].style.opacity=0.4
  bs[7].style.opacity=0 
