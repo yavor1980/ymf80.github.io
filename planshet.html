@@ -59,6 +59,7 @@
  <div class=trmo>
   <div class=trmo></div>
   <div class=trmo></div>
+  
   <div class=trmo>
    <div class=clma></div>
    <div class=clma></div>
@@ -210,15 +211,15 @@ trmo[4].style.width=96+'px'
 trmo[4].style.height=9+'px'
 trmo[4].style.opacity=0
 trmo[4].style.borderRadius=55+'%'
-trmo[4].style.borderTop='15px solid  #f00'
-trmo[4].style.borderBottom='15px solid #f00'  
+trmo[4].style.borderTop='15px solid  #f0f'
+trmo[4].style.borderBottom='15px solid #f0f'  
 trmo[5].style.left=-14+'%'
 trmo[5].style.top=-28+'%'
 trmo[5].style.width=96+'px'
 trmo[5].style.height=122+'px'
 trmo[5].style.opacity=0.4
-trmo[5].style.borderTop='15px solid  #900'
-trmo[5].style.borderBottom='15px solid #900'  
+trmo[5].style.borderTop='15px solid  #666'
+trmo[5].style.borderBottom='15px solid #666'  
 clma[0].style.left=-18+'%'
 clma[0].style.top=-23+'%'
 clma[1].style.left=-18+'%'
@@ -263,7 +264,7 @@ clma[2].style.left=-26+'%'
 clma[2].style.top=-19+'%'
 clma[3].style.left=-26+'%'
 clma[3].style.top=90+'%'
-clma[4].style.left=-44+'%'
+clma[4].style.left=-55+'%'
 clma[4].style.top=13+'%'
 clma[4].style.width=39+'%'
 clma[4].style.height=50+'%'
@@ -373,14 +374,18 @@ trmo[1].onmouseover=()=>
  trmo[3].style.borderRight='33px ridge #f00'
  trmo[4].style.opacity=0.1
  trmo[4].style.transform='scale(2)'
+ trmo[5].style.borderTop='15px ridge #900'
+ trmo[5].style.borderBottom='15px ridge #900'
  trmo[5].style.opacity=1
+ clma[0].style.border='12px ridge #f00'
+ clma[1].style.border='12px ridge #f00' 
  Itrmo=setInterval(()=>
  {
   trmo[3].style.transform='scale('+
    (1+Math.random()/2)+') rotate(45deg)'
  trmo[4].style.opacity=Math.random() 
  trmo[4].style.transform='scale('+
-   (2+2*Math.random())+',2)'
+   (2+2*Math.random())+',2) translate(-22%,0)'
  trmo[5].style.transform='scale('+
    (1+Math.random())+',1) translate(-22%,0)'  
  }, 999)
@@ -397,17 +402,17 @@ trmo[1].onmouseout=()=>
  trmo[4].style.opacity=0
  trmo[4].style.transform='scale(1)'
  trmo[5].style.opacity=0.4
+ trmo[5].style.borderTop='15px solid  #666'
+ trmo[5].style.borderBottom='15px solid #666' 
  trmo[5].style.transform='scale(1)'
+ clma[0].style.border='12px ridge #555'
+ clma[1].style.border='12px ridge #555' 
   clearInterval(Itrmo)
 }
 trmo[2].onmouseover=()=>
-{
- trmo[1].onmouseover()
-}
+{ trmo[1].onmouseover();}
 trmo[2].onmouseout=()=>
-{
- trmo[1].onmouseout()
-}
+{ trmo[1].onmouseout();}
 
 sv[1].onmouseover=()=>
 { 
@@ -425,14 +430,16 @@ sv[1].onmouseover=()=>
  sv[3].style.transform='translate(-15%,0)'
  sv[4].style.transform=
   'scale(5) translate(-3%,-64%)  skew(-13deg)'
+ clma[2].style.border='12px ridge #f00' 
  clma[2].style.transform='translate(-48%,0)' 
+ clma[3].style.border='12px ridge #f00' 
  clma[3].style.transform='translate(-48%,0)' 
  Isv=setInterval(()=>{
   sv[2].style.transform=
    'scale('+(1.8+Math.random()/2)+',1) translate(9%,0)' 
   sv[3].style.transform=' scale('+(0.5+
    Math.random()/5)+',1) translate(-48%,0)'
-   
+  clma[4].style.opacity=Math.random()
  }, 999)  
 }
 sv[1].onmouseout=()=>
@@ -447,8 +454,11 @@ sv[1].onmouseout=()=>
  sv[3].style.borderLeft='33px ridge transparent'
  sv[3].style.borderRight='33px ridge transparent'
  sv[3].style.transform='scale(1)'
+ clma[2].style.border='12px ridge #888'
  clma[2].style.transform='scale(1)'
+ clma[3].style.border='12px ridge #888'
  clma[3].style.transform='scale(1)'
+ clma[4].style.opacity=0
  sv[4].style.transform='scale(3)' 
   clearInterval(Isv)
 }
