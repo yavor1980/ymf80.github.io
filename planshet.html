@@ -72,6 +72,7 @@
   <div class=sv>
    <div class=clma></div>
    <div class=clma></div>
+    <div class=clma></div>
   </div>
  </div>
  <div class=sv>ThermoSensor</div>
@@ -262,6 +263,14 @@ clma[2].style.left=-26+'%'
 clma[2].style.top=-19+'%'
 clma[3].style.left=-26+'%'
 clma[3].style.top=90+'%'
+clma[4].style.left=-44+'%'
+clma[4].style.top=13+'%'
+clma[4].style.width=39+'%'
+clma[4].style.height=50+'%'
+clma[4].style.border='23px ridge #f00'
+clma[4].style.borderTop='23px ridge transparent'
+clma[4].style.borderBottom='23px ridge transparent'
+clma[4].style.opacity=0
  
 bbtn=1
 btn[0].onclick=()=>
@@ -362,16 +371,17 @@ trmo[1].onmouseover=()=>
   'scale(1.2) translate(88%,0)' 
  trmo[3].style.borderTop='33px ridge #f00'
  trmo[3].style.borderRight='33px ridge #f00'
- trmo[4].style.opacity=1
+ trmo[4].style.opacity=0.1
  trmo[4].style.transform='scale(2)'
  trmo[5].style.opacity=1
  Itrmo=setInterval(()=>
  {
   trmo[3].style.transform='scale('+
    (1+Math.random()/2)+') rotate(45deg)'
-  trmo[4].style.transform='scale('+
+ trmo[4].style.opacity=Math.random() 
+ trmo[4].style.transform='scale('+
    (2+2*Math.random())+',2)'
-  trmo[5].style.transform='scale('+
+ trmo[5].style.transform='scale('+
    (1+Math.random())+',1) translate(-22%,0)'  
  }, 999)
 }
@@ -422,7 +432,7 @@ sv[1].onmouseover=()=>
    'scale('+(1.8+Math.random()/2)+',1) translate(9%,0)' 
   sv[3].style.transform=' scale('+(0.5+
    Math.random()/5)+',1) translate(-48%,0)'
- 
+   
  }, 999)  
 }
 sv[1].onmouseout=()=>
