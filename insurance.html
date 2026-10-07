@@ -52,7 +52,7 @@ select:hover
  <div class=mnge>
   <div class=ttl>Sum:</div>
   <input value='1000' class=ttl>
-   <div class=ttl></div>
+   <div class=ttl>Item</div>
   <button class=mnge disabled>OK</button>
   <button class=mnge disabled>C</button>
  </div> 
@@ -222,6 +222,7 @@ mnge[1].onclick=()=>
   mnge[2].disabled=1
  term[1].style.transform='scale(2) translate(-53%,69%)'
  mnge[1].style.transform='scale(3)'
+ term[1].style.color='#fff'
  term[2].style.cursor='pointer' 
   term[2].disabled=0
 }
@@ -236,10 +237,13 @@ mnge[2].onclick=()=>
  ttl[3].innerHTML=''
  mnge[1].disabled=1
  mnge[2].disabled=1
+ 
 }  
 
 term[2].onclick=()=>
 { 
+  ttl[3].innerHTML='Item'
+ term[1].style.color='#000' 
  term[1].style.transform='scale(1)'
  term[2].style.cursor='default' 
   term[2].disabled=1
