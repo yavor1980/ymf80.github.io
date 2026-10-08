@@ -16,27 +16,16 @@ input
 :text-align:center;
  transform:scale(1,2); 
 }
-select
-{
- background:#0ff; 
-}
-select:hover
-{
- cursor:pointer;
-}
+select: { background:#0ff; }
+select :hover{ cursor:pointer; }
 
-.btn
+.btn,.pnl,.mnge,.term,.ttl,.rslt
 {
  position:absolute;   
  transition:1s;
 }
-
 .pnl,.mnge,.term,.ttl
-{
- position:absolute;   
- transition:1s;
- text-align:center;
-}
+{ text-align:center;}
 
 </style>
 <div class=pnl>
@@ -66,6 +55,7 @@ select:hover
   You are insured!
   <button class=term>OK</button> 
  </div>  
+  
 </div>
 <script>
 var btn=document.getElementsByClassName('btn')
@@ -220,7 +210,9 @@ mnge[1].onclick=()=>
   mnge[1].disabled=1
  mnge[2].style.cursor='default'  
   mnge[2].disabled=1
- term[1].style.transform='scale(2) translate(-53%,69%)'
+ term[1].style.fontSize=1.2+'em' 
+ term[1].style.transform=
+  'scale(2) translate(-53%,69%) skew(-9deg)'
  mnge[1].style.transform='scale(3)'
  term[1].style.color='#fff'
  term[2].style.cursor='pointer' 
@@ -237,16 +229,22 @@ mnge[2].onclick=()=>
  ttl[3].innerHTML=''
  mnge[1].disabled=1
  mnge[2].disabled=1
- 
 }  
 
+aterm=[], nterm=0
 term[2].onclick=()=>
-{ 
+{  
   ttl[3].innerHTML='Item'
- term[1].style.color='#000' 
+ term[1].style.color='#000'
+ term[1].style.fontSize=1+'em' 
  term[1].style.transform='scale(1)'
  term[2].style.cursor='default' 
   term[2].disabled=1
+ aterm[n]=createElement('div') 
+ aterm[n].className='rslt'
+ mnge[0].appendChild(aterm[n]) 
+ mnge[0].style.left=7+'%'
+ mnge[0].style.top=7+'%'
 }  
  
 //Ittl0=setInterval(()=>{
