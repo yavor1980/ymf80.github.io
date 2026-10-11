@@ -17,7 +17,7 @@ input
  transform:scale(1,2); 
 }
 select: { background:#0ff; }
-select :hover{ cursor:pointer; }
+select:hover{ cursor:pointer; }
 
 .btn,.pnl,.mnge,.term,.ttl,.rslt
 {
@@ -29,11 +29,11 @@ select :hover{ cursor:pointer; }
 
 </style>
 <div class=pnl>
- <input type=submit class=btn value='life' >
- <input type=submit class=btn value='health'>
- <input type=submit class=btn value='ownership' >
- <input type=submit class=btn value='auto'>
- <input type=submit class=btn value='tourism'>
+ <input type=submit class=btn value='Life' >
+ <input type=submit class=btn value='Health'>
+ <input type=submit class=btn value='Ownership' >
+ <input type=submit class=btn value='Auto'>
+ <input type=submit class=btn value='Tourism'>
  <div class=btn>What must be insuranced?</div>
 </div>
 <div class=pnl>
@@ -160,7 +160,16 @@ term[2].style.top=60+'%'
 term[2].style.width=88+'%'
 term[2].style.height=33+'%'
  term[2].disabled=1
-
+ 
+aterm=[], nterm=0
+aterm[nterm]=document.createElement('div') 
+aterm[nterm].className='rslt'
+mnge[0].appendChild(aterm[nterm]) 
+aterm[0].style.left=37+'%'
+aterm[0].style.top=37+'%'
+aterm[0].style.fontSize=2.6+'em' 
+aterm[0].style.cursor='pointer'  
+  
 function abtn(i,clr,str)
 {
  btn[i].onmouseover=()=>
@@ -174,7 +183,7 @@ function abtn(i,clr,str)
   ttl[3].style.transform='scale(3) skew(-12deg)'
  }
  btn[i].onclick=()=>
- { 
+ {  
    mnge[1].disabled=0
    mnge[2].disabled=0
   ttl[0].style.zIndex=1
@@ -187,24 +196,18 @@ function abtn(i,clr,str)
   mnge[1].style.transform=
    'scale(5) translate(-25%,-25%)' 
   mnge[2].style.cursor='pointer' 
+  aterm[0].innerHTML=str
  } 
 }
- abtn(0,'#f00','life'), abtn(1,'#00f','health'), 
- abtn(2,'#0f0','ownership'), abtn(3,'#fb0','auto'), 
- abtn(4,'#f0b','tourism')
+ abtn(0,'#f00','Life'), abtn(1,'#00f','Health'), 
+ abtn(2,'#0f0','Ownership'), abtn(3,'#fb0','Auto'), 
+ abtn(4,'#f0b','Tourism')
  
 ttl[2].onclick=()=>
-{ 
- ttl[2].value='2000' 
-}  
+{ ttl[2].value='2000';  }  
 
-mnge[1].onmouseout=()=>
-{ 
- ttl[0].innerHTML='Insurance'
-} 
 mnge[1].onclick=()=>
 { 
-  ttl[0].innerHTML='You are insured!'
   ttl[3].innerHTML=''
  mnge[1].style.cursor='default' 
   mnge[1].disabled=1
@@ -219,32 +222,23 @@ mnge[1].onclick=()=>
   term[2].disabled=0
 }
 
-mnge[2].onmouseout=()=>
-{ 
- ttl[0].innerHTML='Insurance'
-}  
 mnge[2].onclick=()=>
 { 
  ttl[0].style.transform='scale(3) skew(-12deg)'
- ttl[3].innerHTML=''
+  ttl[3].innerHTML=''
  mnge[1].disabled=1
  mnge[2].disabled=1
 }  
 
-aterm=[], nterm=0
 term[2].onclick=()=>
 {  
+  ttl[0].innerHTML='Insuranced'
   ttl[3].innerHTML='Item'
  term[1].style.color='#000'
  term[1].style.fontSize=1+'em' 
  term[1].style.transform='scale(1)'
  term[2].style.cursor='default' 
   term[2].disabled=1
- aterm[n]=createElement('div') 
- aterm[n].className='rslt'
- mnge[0].appendChild(aterm[n]) 
- mnge[0].style.left=7+'%'
- mnge[0].style.top=7+'%'
 }  
  
 //Ittl0=setInterval(()=>{
