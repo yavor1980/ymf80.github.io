@@ -27,11 +27,11 @@ body
  width:22%; height:22%;
  background:#000; border-radius:55%;
 }
-.thts,.kst
+.thts,.kst,.dkst
 {
  position:absolute; transition:1s;
 }
-.kst
+.kst,.dkst
 {
   z-index:1; width:6%; height:99%;
   background:#000; border-radius:55%;
@@ -99,12 +99,20 @@ body
   <div class=kst></div>
   <div class=kst></div>
   <div class=kst></div> 
+  <div class=dkst></div>
+  <div class=dkst></div>
+  <div class=dkst></div>
+  <div class=dkst></div>  
  </div> 
  <div class=schty>
   <div class=kst></div>
   <div class=kst></div>
   <div class=kst></div>
   <div class=kst></div> 
+  <div class=dkst></div>
+  <div class=dkst></div>
+  <div class=dkst></div>
+  <div class=dkst></div>  
  </div> 
 </div> 
   
@@ -121,6 +129,7 @@ nme=document.getElementsByClassName('nme')
 dvce=document.getElementsByClassName('dvce')
 schty=document.getElementsByClassName('schty')
 kst=document.getElementsByClassName('kst')
+dkst=document.getElementsByClassName('dkst')
   
 d[0].style.left=11+'%'
 d[0].style.top=30+'%'
@@ -305,17 +314,49 @@ schty[2].style.borderLeft='77px ridge transparent'
 schty[2].style.borderRight='77px ridge transparent'
 
 kst[0].style.top=-55+'%';
+kst[0].style.opacity=0.2
 kst[1].style.top=55+'%';
+kst[1].style.opacity=0.2
 kst[2].style.top=-55+'%';
+kst[2].style.opacity=0.2
 kst[2].style.transform='translate(1555%,0)'
 kst[3].style.top=55+'%';
+kst[3].style.opacity=0.2
 kst[3].style.transform='translate(1555%,0)'
 kst[4].style.top=-55+'%';
+kst[4].style.opacity=0.2
 kst[5].style.top=55+'%';
+kst[5].style.opacity=0.2
 kst[6].style.top=-55+'%';
+kst[6].style.opacity=0.2
 kst[6].style.transform='translate(1555%,0)'
 kst[7].style.top=55+'%';
+kst[7].style.opacity=0.2
 kst[7].style.transform='translate(1555%,0)'
+dkst[0].style.left=30+'%';
+dkst[0].style.top=-55+'%';
+dkst[0].style.opacity=0.2
+dkst[1].style.left=30+'%';
+dkst[1].style.top=55+'%';
+dkst[1].style.opacity=0.2
+dkst[2].style.top=-55+'%';
+dkst[2].style.opacity=0.2
+dkst[2].style.transform='translate(1000%,0)'
+dkst[3].style.top=55+'%';
+dkst[3].style.opacity=0.2
+dkst[3].style.transform='translate(1000%,0)'
+dkst[4].style.left=30+'%';
+dkst[4].style.top=-55+'%';
+dkst[4].style.opacity=0.2
+dkst[5].style.left=30+'%';
+dkst[5].style.top=55+'%';
+dkst[5].style.opacity=0.2
+dkst[6].style.top=-55+'%';
+dkst[6].style.opacity=0.2
+dkst[6].style.transform='translate(1000%,0)'
+dkst[7].style.top=55+'%';
+dkst[7].style.opacity=0.2
+dkst[7].style.transform='translate(1000%,0)'
 
 b=0
 function clk()
@@ -478,6 +519,14 @@ kst[4].style.opacity=1
 kst[5].style.opacity=1
 kst[6].style.opacity=1
 kst[7].style.opacity=1
+dkst[0].style.opacity=1
+dkst[1].style.opacity=1
+dkst[2].style.opacity=1
+dkst[3].style.opacity=1
+dkst[4].style.opacity=1
+dkst[5].style.opacity=1
+dkst[6].style.opacity=1
+dkst[7].style.opacity=1
  Ischty=setInterval(()=>{
   kst[0].style.transform='translate('+
    1555*Math.random()+'%,0%)'
@@ -495,6 +544,22 @@ kst[7].style.opacity=1
    1555*Math.random()+'%,0%)' 
   kst[7].style.transform='translate('+
    1555*Math.random()+'%,0%)' 
+  dkst[0].style.transform='translate('+
+   1000*Math.random()+'%,0%)'
+  dkst[1].style.transform='translate('+
+   1000*Math.random()+'%,0%)'
+  dkst[2].style.transform='translate('+
+   1000*Math.random()+'%,0%)'
+  dkst[3].style.transform='translate('+
+   1000*Math.random()+'%,0%)'
+  dkst[4].style.transform='translate('+
+   1000*Math.random()+'%,0%)'
+  dkst[5].style.transform='translate('+
+   1000*Math.random()+'%,0%)'
+  dkst[6].style.transform='translate('+
+   1000*Math.random()+'%,0%)' 
+  dkst[7].style.transform='translate('+
+   1000*Math.random()+'%,0%)'   
  }, 999)
 }
 schty[0].onmouseout=()=>
@@ -520,6 +585,26 @@ schty[0].onmouseout=()=>
  kst[7].style.opacity=0.2
  kst[7].style.transform=
   'scale(1) translate(1555%,0)'
+ dkst[0].style.opacity=0.2
+ dkst[0].style.transform='scale(1)'
+ dkst[1].style.opacity=0.2
+ dkst[1].style.transform='scale(1)'
+ dkst[2].style.opacity=0.2
+ dkst[2].style.transform=
+  'scale(1) translate(1000%,0)'
+ dkst[3].style.opacity=0.2
+ dkst[3].style.transform=
+  'scale(1 ) translate(1000%,0)'
+ dkst[4].style.opacity=0.2
+ dkst[4].style.transform= 'scale(1) '
+ dkst[5].style.opacity=0.2
+ dkst[5].style.transform='scale(1) '
+ dkst[6].style.opacity=0.2
+ dkst[6].style.transform=
+  'scale(1) translate(1000%,0)'
+ dkst[7].style.opacity=0.2
+ dkst[7].style.transform=
+  'scale(1) translate(1000%,0)'  
 }
 	  // inme=Math.round(Math.random()*5)
 </script>
