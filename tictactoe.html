@@ -5,19 +5,14 @@
 <style>
 body
 {	
- height:199%;
- background:#070;
+ height:222%; background:#070;
 }
 #idbtn
 {	 
- position:absolute;
- cursor:pointer;
- left:40%; 
- bottom:11%;	 
- width:16%;	  
- background:#707;
- color:#bbb;
- font-size:2em;
+ position:absolute; cursor:pointer;
+ left:40%; bottom:11%;	 
+ width:16%;	background:#707;
+ color:#bbb; font-size:2em;
  border-radius:23%;
 }
 	
@@ -88,15 +83,13 @@ body
 <div class='cell'></div>
 <div class='cell'></div>
 <div class='cell'></div>
-
   <div class='ttl'>Winner</div>
   <div class='ttl'>X</div>
-
-<button id='idbtn'>Reset</button>
-  
+<button id='idbtn'>Reset</button> 
 </div>  
  
 <div class=sbtl></div>
+<div class=sbtl>COLOR GAME</div>
  
 <script >
 ttl=document.getElementsByClassName('ttl') 
@@ -129,10 +122,15 @@ c0=[]; c1=[]; c2=[]; c3=[]; c4=[];
  c5=[]; c6=[]; c7=[]
 sbtl[0].style.cursor='pointer'
 sbtl[0].style.left=12+'%'
-sbtl[0].style.top=111+'%'
+sbtl[0].style.top=133+'%'
 sbtl[0].style.width=76+'%'
 sbtl[0].style.height=77+'%'
 sbtl[0].style.border='8px ridge #ff0'
+sbtl[1].style.left=8+'%'
+sbtl[1].style.top=100+'%'
+sbtl[1].style.color='#00f'
+sbtl[1].style.fontSize=8+'em'
+sbtl[1].style.opacity=0.2
 for(j=0;j<8;j++)
 {
   cl[j]=document.createElement("div")
@@ -144,7 +142,6 @@ for(j=0;j<8;j++)
     clrs[Math.round(Math.random()*5)]
     sbtl[0].appendChild(cl[j])
 }
-
 function inn(c,n)
 {
 for(i=0;i<8;i++)
@@ -234,6 +231,8 @@ Isbtl=0
 sbtl[0].onmouseover=()=>
 {
  sbtl[0].style.transform='scale(1.1)'
+ sbtl[1].style.opacity=1
+ sbtl[1].style.transform='scale(1.1) skew(6deg)'
  Isbtl=setInterval(()=>{
   for(i=0;i<8;i++)
    {
@@ -260,6 +259,8 @@ sbtl[0].onmouseout=()=>
 {
   clearInterval(Isbtl)
  sbtl[0].style.transform='scale(1)'
+ sbtl[1].style.opacity=0.2
+ sbtl[1].style.transform='scale(1)'
 }
 
 //alert(cc[4])
