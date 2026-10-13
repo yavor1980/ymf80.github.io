@@ -28,36 +28,28 @@
 
 .grnd,.hd,.mth,.gl,.pw,.hvs,.ttagrss
 {
- position:absolute;   
- transition:1s;  
+ position:absolute; transition:1s;  
 }
 .ttagrss
 {
- text-align:center;
- font-size:0em;
+ text-align:center; font-size:0em;
  z-index:-1;
 }
 
 .zr
 {
- position:absolute;   
- transition:1s;
- left:33%;
- top:33%;
- width:33%;
- height:33%;
+ position:absolute; transition:1s;
+ left:33%; top:33%;
+ width:33%; height:33%;
  background:#f00;
  border-radius:55%;
 }
 
 .fhvs
 {
- position:absolute; 
- transition:1s;
- left:30%;
- top:-98%;
- width:45%;
- height:99%;
+ position:absolute; transition:1s;
+ left:30%; top:-98%;
+ width:45%; height:99%;
  background:radial-gradient(#444,#440);
  border-radius:55%;
  border-bottom-left-radius:22%;
@@ -302,6 +294,8 @@ function clk()
  ttagrss[0].style.background='#00b'
  ttagrss[1].style.background='#70f'
  ttagrss[2].style.background='#00e'
+ hd[2].style.borderTop='9px ridge #880'
+ hd[2].style.borderBottom='9px ridge #880'
  hd[2].style.borderLeft='9px ridge #700'
  hd[2].style.borderRight='9px ridge #700'
  mth[0].style.height=22+'%'
@@ -310,9 +304,11 @@ function clk()
  fhvs[0].style.borderTop='17px ridge #333'
  fhvs[1].style.borderTop='17px ridge #333'
  pw[3].style.background=
-  'radial-gradient(#fb0,#555)'
+  'radial-gradient(#f80,#555)'
+ pw[3].style.borderTop='9px ridge #800' 
  pw[3].style.transform=
   'scale(2.4,2) translate(0,-44%)'
+ pw[4].style.borderTop='9px ridge #800'  
  pw[4].style.transform=
   'scale(1.4,1.4) translate(0,-11%)' 
  pw[5].style.transform='scale(1.3,1)'  
@@ -355,11 +351,7 @@ function clk()
   ttagrss[2].style.background=
    'radial-gradient(#0ff,#00f)'
   mth[0].style.height='1%'
-  hd[2].style.borderLeft=''
-  hd[2].style.borderRight=''
-  
-  
-  
+  hd[2].style.border=''
   hd[2].style.transform=
    'scale(1) translate(0%,0)'
   gl[0].style.transform='scale(1)'
@@ -368,7 +360,9 @@ function clk()
   fhvs[1].style.borderTop='none'
   pw[3].style.background=
    'radial-gradient(#f80,#555)'
+  pw[3].style.border=''
   pw[3].style.transform='scale(1)'
+  pw[4].style.border=''
   pw[4].style.transform='scale(1)'
    btn[0].innerHTML='danger'
  },  2222)
