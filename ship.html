@@ -24,30 +24,23 @@ body
 
 .wtr
 {
- position:absolute;
- transition:2s;
- left:0%;
- bottom:0%;
- width:100%;
- height:33%;
+ position:absolute; transition:2s;
+ left:0%; bottom:0%;
+ width:100%; height:33%;
  background:#00b;
 }
 
 .sh
 {
- position:absolute;
- transition:1s;
- left:33%;
- top:44%;
- width:18%;
- height:33%;
+ position:absolute; transition:1s;
+ left:33%; top:44%;
+ width:18%; height:33%;
  cursor:pointer;
 }
 .slte,.mgun,.sltee
 {
- position:absolute;
- width:5%;
- height:5%;
+ position:absolute; transition:1s;
+ width:5%; height:5%;
  border-radius:55%;
  z-index:-1;
 }
@@ -85,6 +78,7 @@ body
 
 <div class=prscpe>
  <div class=prscpe></div>
+  <div class=prscpe></div>
   <div class=prscpe></div>
 </div>
 
@@ -361,6 +355,13 @@ prscpe[4].style.height=53+'%'
 prscpe[4].style.borderBottom='12px ridge #bb0' 
 prscpe[4].style.borderRadius=55+'%'
 prscpe[4].style.opacity=0
+prscpe[5].style.left=-222+'%'
+prscpe[5].style.top=94+'%'
+prscpe[5].style.width=533+'%'
+prscpe[5].style.height=53+'%'
+prscpe[5].style.borderBottom='12px ridge #bb0' 
+prscpe[5].style.borderRadius=55+'%'
+prscpe[5].style.opacity=0
 
 mne[0].style.left=59+'%'
 mne[0].style.top=81+'%'
@@ -405,7 +406,11 @@ function cl()
  prscpe[3].style.transform=
   'scale('+(1+Math.random()/3)+')'
  prscpe[4].style.transform=
-  'scale('+(1+Math.random()/2)+')'  
+  'scale('+(1+Math.random()/5)+') translate(0,'+
+  (575*Math.random()/4)+'%)'
+ prscpe[5].style.transform=
+  'scale('+(1+Math.random()/5)+') translate(0,'+
+  (575*Math.random()/4)+'%)' 
  hlcptr[0].style.transform=
   'scale(0.8) translate('+(Math.random()*191-122)+'%,'+
   (Math.random()*11)+'%) rotate('+
@@ -421,20 +426,20 @@ function cl()
   ',1) translate(0,67%)'
  mgun[4].style.transform='scale('+(1+
   Math.random())+') translate(0,'+
-  575*Math.random()+'%)'
+  575*Math.random()/4+'%)'
  mgun[5].style.transform='scale('+(1+
   Math.random())+') translate(0,'+
-  575*Math.random()+'%)' 
+  575*Math.random()/4+'%)' 
  mne[0].style.transform='scale(2) translate('+
  155*Math.random()+'%,'+ 55*Math.random()+'%)' 
  if(b)
  {
   wtr[1].style.transform=
-   'scale(1.3) translate(11%,0)'
+   'scale(1.12) translate(11%,0)'
   wtr[2].style.transform=
-   'scale(1.3) translate(-11%,0)'
+   'scale(1.12) translate(-11%,0)'
   wtr[3].style.transform=
-   'scale(1.3) translate(11%,0)'
+   'scale(1.12) translate(11%,0)'
   sh[0].style.transform=
    'scale(1) rotate(3deg)'
   sh[1].style.transform='scale(1.1)'
@@ -564,6 +569,7 @@ sh[0].onmouseover=()=>
  prscpe[2].style.opacity=1
  prscpe[2].style.width=4+'%'
  prscpe[4].style.opacity=0.5
+ prscpe[5].style.opacity=0.5
  sh[0].style.transform='scale(1.3) '
  sh[4].style.background='#bb0'
  slte[3].style.left=76+'%'
@@ -597,6 +603,7 @@ sh[0].onmouseout=()=>
  prscpe[2].style.opacity=0.2
  prscpe[2].style.transform='scale(1) '
  prscpe[4].style.opacity=0
+ prscpe[5].style.opacity=0
  sh[0].style.transform='scale(1) '
  sh[4].style.background='#000'
  sltee[3].style.opacity=0.2
