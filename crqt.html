@@ -3,7 +3,7 @@
 <style>
 #idbd
 {
- height:299%;
+ height:399%;
  background:#ee0;
 }
 
@@ -108,6 +108,7 @@ button:hover
   <div class=prshn></div>
  </div>
  <div class=dsl>DIESEL</div>
+ <div class=dsl></div>
  <div class=dsl></div>
 </div>
 
@@ -369,6 +370,14 @@ dsl[4].style.height=33+'%'
 dsl[4].style.background='#888'
 dsl[4].style.opacity=0.4
 dsl[4].style.borderRadius=55+'%'
+dsl[5].style.left=16+'%'
+dsl[5].style.top=158+'%'
+dsl[5].style.width=70+'%'
+dsl[5].style.height=87+'%'
+dsl[5].style.background=
+ 'linear-gradient(#666,#900)'
+dsl[5].style.opacity=0.4
+dsl[5].style.borderRadius=55+'%'
 prshn[0].style.left=78+'%'
 prshn[1].style.left=0+'%'
 
@@ -581,15 +590,18 @@ dsl[0].onmouseover=()=>
  prshn[0].style.left=0+'%'
  prshn[1].style.left=78+'%'
  dsl[4].style.opacity=1
+ dsl[5].style.opacity=1 
  Idsl=setInterval(()=>{
  dsl[4].style.transform=
   'scale('+(1+Math.random()/6)+')'
   if(bdsl){
    dsl[4].style.borderRadius=0+'%'
+   dsl[5].style.transform='rotate(99deg)'
    prshn[0].style.left=78+'%'
    prshn[1].style.left=0+'%'
   }else{
    dsl[4].style.borderRadius=55+'%'
+   dsl[5].style.transform='rotate(-99deg)'
    prshn[0].style.left=0+'%'
    prshn[1].style.left=78+'%'
   }  bdsl=!bdsl
@@ -597,7 +609,7 @@ dsl[0].onmouseover=()=>
 }
 dsl[0].onmouseout=()=>
 {
-   clearInterval(Idsl)
+  clearInterval(Idsl)
  dsl[0].style.transform='scale(1)'
  dsl[1].style.background='#555'
  dsl[2].style.background='#555'
@@ -607,6 +619,8 @@ dsl[0].onmouseout=()=>
  dsl[4].style.background='#888'
  dsl[4].style.borderRadius=55+'%'
  dsl[4].style.opacity=0.4
+ dsl[5].style.opacity=0.4
+ dsl[5].style.transform='scale(1)'
  prshn[0].style.left=78+'%'
  prshn[1].style.left=0+'%'
 }
