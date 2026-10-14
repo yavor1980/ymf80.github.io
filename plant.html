@@ -6,36 +6,29 @@
 <body id=idbd>
 <style>
 #idbd
-{
- background: linear-gradient(#ff0,#0ff);
-}
+{background:linear-gradient(#ff0,#0ff); }
 
 .btn
 {
- position:absolute;
- color:#fff;
- transition:1s;
+ position:absolute; transition:1s;
+ cursor:pointer; color:#fff;
  text-align:center;
  font-size:2em;
- cursor:pointer;
 }
 
 .bgrnd
 {
- position:absolute;   
- transition:2s;
+ position:absolute; transition:2s;
 }
 
 .plnt,#idplnt
 {
- position:absolute;   
- transition:2s;
+ position:absolute; transition:2s;
  cursor:pointer;
 }
 .flwr,.cld,.gl,.frz,.btrfly
 {
- position:absolute;   
- transition:1s;
+ position:absolute; transition:1s;
  cursor:pointer;
 }
 .cld,.gl,.btrfly{border-radius:55%;}
@@ -112,6 +105,8 @@ plnt[0].style.width=22+'%'
 plnt[0].style.height=44+'%'
 plnt[0].style.background=
  'linear-gradient(#840,#000)' 
+plnt[0].style.border='9px ridge #000' 
+plnt[0].style.borderBottom='0px ridge transparent' 
 plnt[0].style.borderTopLeftRadius=9+'%'
 plnt[0].style.borderTopRightRadius=9+'%'
 plnt[1].style.left=66+'%'
@@ -120,10 +115,11 @@ plnt[1].style.width=22+'%'
 plnt[1].style.height=22+'%'
 plnt[1].style.background='#990'
 plnt[2].style.left=22+'%'
-plnt[2].style.top=49+'%'  
+plnt[2].style.bottom=2+'%'  
 plnt[2].style.width=55+'%'
 plnt[2].style.height=44+'%' 
 plnt[2].style.background='#999'
+plnt[2].style.borderTop='5px ridge #000' 
 plnt[2].style.borderTopLeftRadius=9+'%'
 plnt[2].style.borderTopRightRadius=9+'%'
 plnt[3].style.left=11+'%'
@@ -131,17 +127,21 @@ plnt[3].style.top=17+'%'
 plnt[3].style.width=22+'%'
 plnt[3].style.height=22+'%'  
 plnt[3].style.background='#999'
+plnt[3].style.borderTop='5px ridge #000' 
 plnt[4].style.left=59+'%'
 plnt[4].style.top=17+'%'  
 plnt[4].style.width=22+'%'
 plnt[4].style.height=22+'%'  
 plnt[4].style.background='#999'
+plnt[4].style.borderTop='5px ridge #000' 
 idplnt.style.left=5+'%'
 idplnt.style.bottom=8+'%'  
 idplnt.style.width=62+'%'
 idplnt.style.height=25+'%'
 idplnt.style.background=
  'linear-gradient(#840,#000)' 
+idplnt.style.border='9px ridge #000' 
+idplnt.style.borderBottom='0px ridge transparent' 
 idplnt.style.borderTopLeftRadius=15+'%'
 idplnt.style.borderTopRightRadius=15+'%'
 idplnt.style.zIndex=-1
@@ -191,6 +191,8 @@ btrfly[1].style.width=44+'%'
 btrfly[1].style.height=244+'%'
 btrfly[1].style.background=
  'radial-gradient(#f00,#ff0)' 
+btrfly[1].style.borderTopLeftRadius=29+'%'
+btrfly[1].style.borderTopRightRadius=29+'%' 
 btrfly[1].style.opacity=0.9
 btrfly[1].style.transform='scale(2,1) rotate(-36deg) '
 btrfly[2].style.left=56+'%'
@@ -199,6 +201,8 @@ btrfly[2].style.width=44+'%'
 btrfly[2].style.height=244+'%'
 btrfly[2].style.background=
  'radial-gradient(#f00,#ff0)' 
+btrfly[2].style.borderTopLeftRadius=29+'%' 
+btrfly[2].style.borderTopRightRadius=29+'%'  
 btrfly[2].style.opacity=0.9
 btrfly[2].style.transform='scale(2,1) rotate(36deg)'
 	
@@ -299,15 +303,16 @@ o=
    plnt[0].style.transform='scale(1.1) '
    plnt[1].style.transform='scale(1.2) '
    plnt[2].style.transform='scale(1.2) '
-   plnt[3].style.transform='scale(1.2) '
+   plnt[3].style.transfor
+   m='scale(1.2) '
    plnt[4].style.transform='scale(1.2) '
    plnt[2].style.background='#800'
    plnt[3].style.background='#700'
    plnt[4].style.background='#600'
-   plnt[5].style.background='#600'
    bgrnd[1].style.opacity=0.5	
    bgrnd[1].style.transform=
-    'scale('+(1+Math.random()/2)+') translate(3%,-33%)'
+    'scale('+(1+Math.random())+
+	') translate('+(33*Math.random())+'%,-33%)'
    cld[0].style.transform='scale(1)'	
    setTimeout(()=>{
 	frz[0].style.opacity=1; 
@@ -328,7 +333,6 @@ o=
    plnt[3].style.background='#f00'
    plnt[4].style.transform='scale(1) '
    plnt[4].style.background='#f00'
-   plnt[5].style.transform='scale(1)'
    cld[0].style.transform='scale(4) '
    cld[0].style.opacity=1
    frz[1].style.opacity=0
@@ -338,7 +342,12 @@ o=
  },  
 }
 plnt[0].onmouseover=()=>
-{ 	
+{ 	 
+ plnt[0].style.border=''
+ plnt[2].style.border=''
+ plnt[3].style.border=''
+ plnt[4].style.border=''
+ idplnt.style.border=''
  flwr[0].style.background='#020'
  flwr[1].style.background='#200'
  flwr[2].style.background='#200'
@@ -348,16 +357,27 @@ plnt[0].onmouseover=()=>
  frz[3].style.transform='scale(0)'  
 }
 plnt[0].onmouseout=()=>
-{ 	
+{ 	   
   clearInterval(o.intr)
   o.intr=0
  idbd.style.background='linear-gradient(#ff0,#0ff)'
  bgrnd[0].style.background='linear-gradient(#090,#0e0)' 
  bgrnd[1].style.opacity=0
  cld[0].style.transform='scale(0)'
+ plnt[0].style.border='9px ridge #000' 
+ plnt[0].style.borderBottom='0px ridge transparent'
+ idplnt.style.border='9px ridge #000' 
+ idplnt.style.borderBottom='0px ridge transparent'
+ plnt[1].style.transform='scale(1) '
  plnt[2].style.background='#555'
+ plnt[2].style.borderTop='5px ridge #000' 
+ plnt[2].style.transform='scale(1) '
  plnt[3].style.background='#999'
+ plnt[3].style.borderTop='5px ridge #000' 
+ plnt[3].style.transform='scale(1) '
  plnt[4].style.background='#999' 
+ plnt[4].style.borderTop='5px ridge #000' 
+ plnt[4].style.transform='scale(1) '
  flwr[0].style.background='#050'
  flwr[1].style.background='#f00'
  flwr[2].style.background='#f00'
