@@ -573,12 +573,10 @@ telm[0].onmouseout=()=>
  } 
 }
 
-Idsl=0,bdsl=1
+Idsl=0,bdsl=0
 function fdsl0()
 {
- Idsl=setInterval(()=>{
-  dsl[4].style.transform=
-   'scale('+(1+Math.random()/6)+')'
+
   if(bdsl){
    dsl[1].style.borderLeft=''
    dsl[2].style.borderRight=''
@@ -593,8 +591,7 @@ function fdsl0()
    dsl[5].style.transform='rotate(-99deg)'
    prshn[0].style.left=0+'%'
    prshn[1].style.left=78+'%'
-  }  bdsl=!bdsl
- }, 999)
+  } 
 }
 dsl[0].onmouseover=()=>
 {
@@ -614,7 +611,11 @@ dsl[0].onmouseover=()=>
  dsl[4].style.opacity=1
  dsl[5].style.opacity=1 
   fdsl0()
-}
+ Idsl=setInterval(()=>{
+  dsl[4].style.transform=
+   'scale('+(1+Math.random()/6)+')'
+   fdsl0(); bdsl=!bdsl; }, 999)
+}  
 dsl[0].onmouseout=()=>
 {
   clearInterval(Idsl)
