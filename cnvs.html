@@ -4,6 +4,7 @@
 <style>
 body
 {
+ //height:777%;
  background:radial-gradient(#0f0,#f90);
 }
 
@@ -109,7 +110,7 @@ function faxs()
  cntxt.lineTo(145, 134)
  cntxt.stroke()
 }
-var shft=66, scle=22, trvl=1, Iosc=0, ff=1, fff=0.01
+var shft=66, scle=22, trvl=1, Iosc=0, ff=2, fff=0.01
 function foscll()
 { 
  cntxt.strokeStyle='#b00'
@@ -148,7 +149,7 @@ var Ihz=0, dd=0, ddd=-0.1
 function fHz()
 { 
 Ihz=setInterval(()=>{ 
- cntxt.clearRect(0,0,999,999)
+ cntxt.clearRect(0,0, 999,999)
  for(i=0;i<300;i++)
  {
   cntxt.beginPath()
@@ -157,14 +158,15 @@ Ihz=setInterval(()=>{
   cntxt.lineTo(i*dd,33+y)
   cntxt.stroke()
    dd+=ddd;
-   if((dd>-178)||(dd<168)) ddd=-1*ddd 
+   //if((dd>-178)||(dd<168))
+    ddd=-1*ddd 
  }  
 }, 999)   
 }
 
 function fbtn(i)
 { 
- btn[i].onclick=()=>
+btn[i].onclick=()=>
  {   
    bcnvs=i
   btn[i].style.background='#b00'
@@ -226,14 +228,12 @@ btnd[3].onclick=()=>
  if(boscll==0)
  {
   btnd[3].style.background='#b00'
-  fHz()
-  btnd[3].value='Stop'
+   fHz(); btnd[3].value='Stop'
  }
  else
  {
   btnd[3].style.background='#090'
-  clearInterval(Ihz)
-  btnd[3].value='Hz'
+   clearInterval(Ihz); btnd[3].value='Hz'
  }
    boscll=!boscll
 }
@@ -253,7 +253,7 @@ cnv[0].onmouseout=()=>
   dy=25; dd=5
 }
 cnv[0].onclick=()=>
-{    ff=1
+{    ff=1;
  dy=25+Math.random()*28
  dd=Math.random()*24
  switch(bcnvs) 
@@ -261,7 +261,7 @@ cnv[0].onclick=()=>
   case 1: frndline(); break;
   case 2: fround(); break;
   case 3: fline(); break;
-  case 4: frnd(); break;
+  case 4: fround(); break;
  }  
 }
 
