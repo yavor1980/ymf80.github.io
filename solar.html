@@ -312,6 +312,14 @@ function clsh()
 
 shtl[0].onmouseover=()=>
 {
+ for(i=0;i<5;i++)
+ {
+  strs[i].style.transform=
+   'scale('+Math.random()*9+
+   ') translate('+Math.random()*999+'%,'+
+   Math.random()*999+'%)'
+ } 
+
  spce[0].style.opacity=0.4
  spce[1].style.transform=
   'scale(1) translate(-19%,0%) skew(22deg)'
