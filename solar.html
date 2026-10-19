@@ -20,18 +20,15 @@
 }
 .plnt
 {
- position:absolute;  
- transition:4s;
+ position:absolute; transition:4s;
  border-radius:55%; 
  transition-timing-function:linear;
 }
 
 .strs
 {
- position:absolute;  
- transition:2s;
- width:0.4%;
- height:1%;
+ position:absolute; transition:2s;
+ width:0.4%; height:1%;
  background:radial-gradient(#888,#ff0);
  border-radius:55%;
  z-index:-1;
@@ -39,8 +36,7 @@
 
 .shtl,.flme,.spce,.adds
 {
- position:absolute;  
- transition:1s;
+ position:absolute; transition:1s;
 }
 .shtl{cursor:pointer;}
 .flme{border-radius:55%;}
@@ -74,9 +70,9 @@
  <div class=spce></div>
  <div class=spce></div>
  <div class=spce></div>
+ <div class=spce></div>
 </div>
-<div class=spce></div>
- 
+
 <div class=adds>
  <div class=adds></div>
  <div class=adds></div>
@@ -127,8 +123,7 @@ shtl[0].style.left=66+'%'
 shtl[0].style.top=45+'%'  
 shtl[0].style.width=16+'%'
 shtl[0].style.height=11+'%' 
-shtl[0].style.transform=
- 'rotate(0deg)  skew(44deg)'
+shtl[0].style.transform='skew(44deg)'
 shtl[1].style.left=6+'%'
 shtl[1].style.top=-3+'%'  
 shtl[1].style.width=99+'%'
@@ -151,7 +146,7 @@ shtl[3].style.top=77+'%'
 shtl[3].style.width=99+'%'
 shtl[3].style.height=33+'%'	
 shtl[3].style.background=
-'radial-gradient(#090,#444)'
+ 'radial-gradient(#090,#444)'
 shtl[3].style.borderTopLeftRadius=55+'%'
 shtl[3].style.borderBottomLeftRadius=55+'%'
 shtl[3].style.zIndex=-1
@@ -160,7 +155,7 @@ shtl[4].style.top=+33+'%'
 shtl[4].style.width=49+'%'
 shtl[4].style.height=43+'%'	
 shtl[4].style.background=
-'radial-gradient(#060,#040)'	
+ 'radial-gradient(#060,#040)'	
 shtl[4].style.borderRadius=27+'%'
 shtl[4].style.zIndex=-2
 	
@@ -176,7 +171,7 @@ flme[1].style.top=6+'%'
 flme[1].style.width=22+'%'
 flme[1].style.height=88+'%'
 flme[1].style.borderLeft='22px ridge #b99'
-flme[1].style.opacity=0
+flme[1].style.opacity=0.2
 flme[2].style.left=-44+'%'
 flme[2].style.top=7+'%'  
 flme[2].style.width=33+'%'
@@ -195,14 +190,16 @@ spce[0].style.top=4+'%'
 spce[0].style.width=77+'%'
 spce[0].style.height=8+'%'
 spce[0].style.background=
- 'radial-gradient(#ff0,#880)'
+ 'radial-gradient(#ff0,#040)'
 spce[0].style.opacity=0.2
 spce[0].style.borderRadius=33+'%'
 spce[0].style.transform='skew(-22deg)'
-spce[1].style.left=67+'%'
+spce[1].style.left=107+'%'
 spce[1].style.top=22+'%'
 spce[1].style.width=12+'%'
 spce[1].style.height=9+'%'
+spce[1].style.background=
+ 'radial-gradient(#ff0,#040)'
 spce[1].style.borderRadius=44+'%'
 spce[1].style.transform=
  'scale(0.4) translate(-599%,-199%) skew(-22deg)'
@@ -232,7 +229,13 @@ spce[5].style.height=98+'%'
 spce[5].style.borderRadius=55+'%'
 spce[5].style.borderBottom='11px ridge #ff0'  
 spce[5].style.opacity=0
- 
+spce[6].style.left=22+'%'
+spce[6].style.top=22+'%'
+spce[6].style.width=28+'%'
+spce[6].style.height=9+'%'
+spce[6].style.borderRadius=55+'%'
+spce[6].style.borderBottom='11px ridge #f06'  
+
 adds[0].style.left=8+'%'
 adds[0].style.top=4+'%'
 adds[0].style.width=7+'%'
@@ -256,7 +259,7 @@ adds[2].style.width=77+'%'
 adds[2].style.height=86+'%'
 adds[2].style.borderRadius=55+'%'
 adds[2].style.borderBottom='1px ridge #ff0' 
- 
+
 strsX=111, strsY=-111, strsS=5
 function clpl()
 {
@@ -286,7 +289,7 @@ function clpl()
  spce[4].style.transform='scale('+
   (1+Math.random()*2)+')'
  spce[5].style.transform='scale('+
-  (1+Math.random()*2)+')' 
+  (1+Math.random()*2)+')'  
  adds[0].style.transform='scale(1,'+ 
   (1+Math.random()/2)+')'
  adds[2].style.transform='scale(1,'+ 
@@ -316,17 +319,21 @@ shtl[0].onmouseover=()=>
  {
   strs[i].style.transform=
    'scale('+Math.random()*9+
-   ') translate('+Math.random()*999+'%,'+
-   Math.random()*999+'%)'
+   ') translate('+Math.random()*300+'%,'+
+   Math.random()*300+'%)'
  } 
 
  spce[0].style.opacity=0.4
  spce[1].style.transform=
-  'scale(1) translate(-19%,0%) skew(22deg)'
+  'scale(1) translate(-398%,0%) skew(22deg)'
  spce[2].style.borderBottom='33px ridge #550' 
  spce[4].style.opacity=1
  spce[5].style.opacity=1
+ spce[6].style.opacity=1
+ spce[6].style.transform=
+  'scale(12) translate(-99%,55%) rotare(-55deg)'
  adds[0].style.borderBottom='15px ridge #ff0' 
+ adds[1].style.borderBottom='10px ridge #f0f' 
  adds[2].style.borderBottom='15px ridge #ff0'
  adds[0].style.transform=
   'scale(2) translate(99%,55%) skew(22deg)'
@@ -350,16 +357,19 @@ shtl[0].onmouseout=()=>
  spce[2].style.borderBottom='11px ridge #555' 
  spce[4].style.opacity=0
  spce[5].style.opacity=0
+ spce[6].style.opacity=0 
+ spce[6].style.transform='scale(0)'
  adds[0].style.borderBottom='1px ridge #ff0' 
  adds[0].style.transform='skew(22deg)'
  adds[0].style.transform='scale(1)'
+ adds[1].style.borderBottom='1px ridge #ff0' 
  adds[2].style.borderBottom='1px ridge #ff0'
  adds[2].style.transform='scale(1)'
  shtl[0].style.transform='scale(1)  skew(44deg)' 
  shtl[2].style.borderRadius=22+'%'
  shtl[4].style.transform='scale(1)'
  flme[0].style.opacity=0
- flme[1].style.opacity=0
+ flme[1].style.opacity=0.2
  flme[2].style.opacity=0
 }    
 
