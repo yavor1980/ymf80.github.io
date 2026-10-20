@@ -194,15 +194,14 @@ spce[0].style.background=
 spce[0].style.opacity=0.2
 spce[0].style.borderRadius=33+'%'
 spce[0].style.transform='skew(-22deg)'
-spce[1].style.left=107+'%'
-spce[1].style.top=22+'%'
+spce[1].style.left=70+'%'
+spce[1].style.top=9+'%'
 spce[1].style.width=12+'%'
 spce[1].style.height=9+'%'
 spce[1].style.background=
  'radial-gradient(#ff0,#040)'
 spce[1].style.borderRadius=44+'%'
-spce[1].style.transform=
- 'scale(0.4) translate(-599%,-199%) skew(-22deg)'
+spce[1].style.transform='scale(0.4) skew(-22deg)'
 spce[2].style.width=99+'%'
 spce[2].style.height=99+'%'
 spce[2].style.background=
@@ -229,13 +228,14 @@ spce[5].style.height=98+'%'
 spce[5].style.borderRadius=55+'%'
 spce[5].style.borderBottom='11px ridge #ff0'  
 spce[5].style.opacity=0
-spce[6].style.left=22+'%'
-spce[6].style.top=22+'%'
-spce[6].style.width=28+'%'
-spce[6].style.height=9+'%'
-spce[6].style.borderRadius=55+'%'
-spce[6].style.borderBottom='11px ridge #f06'  
-
+spce[6].style.left=-12+'%'
+spce[6].style.top=-42+'%'
+spce[6].style.width=144+'%'
+spce[6].style.height=69+'%'
+spce[6].style.borderRadius=24+'%'
+spce[6].style.background=
+ 'radial-gradient(#776,#040)'
+ 
 adds[0].style.left=8+'%'
 adds[0].style.top=4+'%'
 adds[0].style.width=7+'%'
@@ -288,8 +288,8 @@ function clpl()
   (1+Math.random()/2)+')'
  spce[4].style.transform='scale('+
   (1+Math.random()*2)+')'
- spce[5].style.transform='scale('+
-  (1+Math.random()*2)+')'  
+ spce[6].style.transform='scale('+
+  (1+Math.random()/2)+',1)'  
  adds[0].style.transform='scale(1,'+ 
   (1+Math.random()/2)+')'
  adds[2].style.transform='scale(1,'+ 
@@ -322,10 +322,9 @@ shtl[0].onmouseover=()=>
    ') translate('+Math.random()*300+'%,'+
    Math.random()*300+'%)'
  } 
-
  spce[0].style.opacity=0.4
  spce[1].style.transform=
-  'scale(1) translate(-398%,0%) skew(22deg)'
+  'scale(1) translate(-98%,88%) skew(22deg)'
  spce[2].style.borderBottom='33px ridge #550' 
  spce[4].style.opacity=1
  spce[5].style.opacity=1
@@ -352,13 +351,10 @@ shtl[0].onmouseover=()=>
 shtl[0].onmouseout=()=>
 {
  spce[0].style.opacity=0.2
- spce[1].style.transform=
-  'scale(0.4)translate(-599%,-199%) skew(-22deg)'
+ spce[1].style.transform='scale(0.4) skew(-22deg)'
  spce[2].style.borderBottom='11px ridge #555' 
  spce[4].style.opacity=0
  spce[5].style.opacity=0
- spce[6].style.opacity=0 
- spce[6].style.transform='scale(0)'
  adds[0].style.borderBottom='1px ridge #ff0' 
  adds[0].style.transform='skew(22deg)'
  adds[0].style.transform='scale(1)'
