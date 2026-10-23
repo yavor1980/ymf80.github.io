@@ -83,8 +83,8 @@ body
 </div>
 
 <div class=sh> 
- <div class=sh><div class=ttnm >SHIP</div></div>
- <div class=sh><div class=ttnm >SHIP</div></div>
+ <div class=sh><div class=ttnm>SHIP</div></div>
+ <div class=sh><div class=ttnm>SHIP</div></div>
  <div class=sltee></div>
  <div class=sltee></div>
  <div class=sh><div class=sh></div></div>
@@ -327,7 +327,8 @@ prscpe[1].style.left=-152+'%'
 prscpe[1].style.top=-44+'%'
 prscpe[1].style.width=423+'%'
 prscpe[1].style.height=56+'%'
-prscpe[1].style.background='#ff0'
+prscpe[1].style.background=
+ 'radial-gradient(9px,#f0f,#ff0)'
 prscpe[1].style.borderRadius=55+'%' 
 prscpe[1].style.opacity=0.4
 prscpe[2].style.zIndex=-1
@@ -394,7 +395,10 @@ mne[3].style.transform='rotate(7deg)'
 
 b=0,mcht=0
 function cl()
-{  
+{   
+ prscpe[1].style.background=
+  'radial-gradient('+62*Math.random()+
+  'px,#f0f,#ff0)'
  prscpe[1].style.transform='scale('+
   (1+Math.random())+')'  
  sltee[3].style.transform='scale('+
@@ -564,7 +568,7 @@ sh[0].onmouseover=()=>
   slte[3].style.transform='scale(0)'
  }, 2000)  
  prscpe[0].style.opacity=1
- prscpe[0].style.transform=' translate(0%,-47%)'
+ prscpe[0].style.transform='translate(0%,-47%)'
  prscpe[1].style.opacity=0.8
  prscpe[2].style.opacity=1
  prscpe[2].style.width=4+'%'
@@ -585,6 +589,7 @@ sh[0].onmouseover=()=>
  ttnm[1].style.transform=
   'scale(1.5) skew(-22deg)'
  hlcptr[0].style.transform='scale(1)'
+
  hlcptr[1].style.opacity=1
  hlcptr[2].style.opacity=1
  hlcptr[3].style.opacity=1
@@ -598,6 +603,8 @@ sh[0].onmouseout=()=>
 {   mcht=0 
  prscpe[0].style.opacity=0.4
  prscpe[0].style.transform='scale(1)'
+ prscpe[1].style.background=
+  'radial-gradient(9px,#f0f,#ff0)'
  prscpe[1].style.opacity=0.2
  prscpe[2].style.width=3+'%'
  prscpe[2].style.opacity=0.2
