@@ -279,7 +279,8 @@ insct[0].style.height=9+'%'
 insct[0].style.opacity=0.4
 insct[1].style.width=199+'%'
 insct[1].style.height=60+'%'
-insct[1].style.background='#900'
+insct[1].style.background=
+ 'radial-gradient(#bb0,#900)'
 insct[2].style.left=99+'%'
 insct[2].style.top=-95+'%'
 insct[2].style.width=193+'%'
@@ -291,7 +292,7 @@ insct[3].style.top=-95+'%'
 insct[3].style.width=193+'%'
 insct[3].style.height=139+'%'
 insct[3].style.background=
- 'radial-gradient(#0ff,#80f)'
+ 'radial-gradient(#00f,#fff)'
 insct[3].style.transform='rotate(-22deg)'
 insct[4].style.zIndex=-1
 insct[4].style.left=29+'%'
@@ -348,6 +349,10 @@ function cl()
   (1+Math.random())+')'
  insct[0].style.transform='translate('+
   (844*Math.random()-444)+'%,'+(84*Math.random())+'%)'
+ insct[1].style.borderTopLeftRadius=
+  55*Math.random()+'%'
+ insct[1].style.borderBottomLeftRadius=
+  55*Math.random()+'%'
  insct[2].style.transform='rotate('+
   (92*Math.random())+'deg)'
  insct[3].style.transform='rotate('+
@@ -392,7 +397,7 @@ function cl()
    i=setInterval(cl, 999)
 
 function clk()
-{   
+{     
   v=Math.round(Math.random()*2-1)
  idb.style.opacity=0
  ttl[2].style.transform=
@@ -461,6 +466,7 @@ function clk()
   tbe[4].style.borderWidth=3+'px'
   tbe[4].style.transform='scale(1)'
   insct[0].style.opacity=0.4
+
   insct[2].style.borderRadius=55+'%'
   insct[2].style.transform='scale(1)'
   insct[3].style.borderRadius=55+'%'
