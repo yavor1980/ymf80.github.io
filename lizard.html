@@ -161,18 +161,18 @@ grnd[5].style.top=45+'%'
 grnd[5].style.width=39+'%'
 grnd[5].style.height=10+'%'
 grnd[5].style.background=
- 'radial-gradient(#000,#777)' 
+ 'radial-gradient(#000,#b00)' 
 grnd[5].style.borderRadius=55+'%' 
-grnd[5].style.opacity=0  
+grnd[5].style.opacity=0.2 
 grnd[5].style.zIndex=-1
 grnd[6].style.left=55+'%'	  
 grnd[6].style.top=45+'%'
 grnd[6].style.width=39+'%'
 grnd[6].style.height=10+'%'
 grnd[6].style.background=
- 'radial-gradient(#000,#777)' 
+ 'radial-gradient(#000,#b00)' 
 grnd[6].style.borderRadius=55+'%' 
-grnd[6].style.opacity=0  
+grnd[6].style.opacity=0.2  
 grnd[6].style.zIndex=-1
 	  
 function inn(nm,i, l,t, w,h, bkgrd, btlr,btrr,bblr,bbrr)
@@ -238,7 +238,11 @@ inn(ttagrss,2, 4,19, 23,12,
 function stp()
 {  
  grnd[5].style.transform=
-  'scale(1,'+(1+Math.random())+') translate(-9%,-148%)' 
+  'scale(1,'+(1+Math.random())+
+  ') translate(-9%,-148%)' 
+ grnd[6].style.transform=
+  'scale(1,'+(1+Math.random())+
+  ') translate(-9%,-148%)'  
  ttagrss[0].style.transform=
   'scale('+(1+Math.random()/3)+')translate('+
   (1+Math.random()*35)+'%,-1%)'  
@@ -292,10 +296,10 @@ function clk()
  ttagrss[0].style.background='#00b'
  ttagrss[1].style.background='#70f'
  ttagrss[2].style.background='#00e'
- hd[2].style.borderTop='12px ridge #880'
- hd[2].style.borderBottom='12px ridge #880'
- hd[2].style.borderLeft='19px ridge #700'
- hd[2].style.borderRight='19px ridge #700'
+ hd[2].style.borderTop='19px ridge #880'
+ hd[2].style.borderBottom='1px ridge #880'
+ hd[2].style.borderLeft='12px ridge #700'
+ hd[2].style.borderRight='12px ridge #700'
  mth[0].style.height=22+'%'
  gl[0].style.transform='scale(2)'
  gl[1].style.transform='scale(2)'
@@ -338,9 +342,9 @@ function clk()
   grnd[3].style.transform='scale(1)'
   grnd[4].style.borderBottom='none'
   grnd[4].style.transform='scale(1)'
-  grnd[5].style.opacity=0
+  grnd[5].style.opacity=0.2
   grnd[5].style.transform='scale(1)'
-  grnd[6].style.opacity=0
+  grnd[6].style.opacity=0.2
   grnd[6].style.transform='scale(1)'
   ttagrss[0].style.background=
    'radial-gradient(#0ff,#00f)'
