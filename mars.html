@@ -192,7 +192,7 @@ grd=
   star[3].style.top=Math.random()*39+'%'
   star[4].style.left=Math.random()*39+'%' 
   star[4].style.top=Math.random()*39+'%'
-  star[5].style.left=Math.random()*39+'%' 
+  star[5].style.left=Math.random()*9+'%' 
   star[5].style.top=Math.random()*39+'%'
   star[5].style.width=5+'%' 
   star[5].style.height=2+'%'
@@ -206,9 +206,12 @@ grd=
  },
  cl:function()
  {
-  kr1[1].style.transform='scale('+(0.5+Math.random())+')'
-  kr2[1].style.transform='scale('+(0.5+Math.random())+')'
-  kr3[1].style.transform='scale('+(0.5+Math.random())+')'
+  kr1[1].style.transform='scale('+
+   (0.5+Math.random())+')'
+  kr2[1].style.transform='scale('+
+   (0.5+Math.random())+')'
+  kr3[1].style.transform='scale('+
+   (0.5+Math.random())+')'
   star[0].style.opacity=Math.random() 
   star[1].style.opacity=Math.random() 
   star[2].style.opacity=Math.random() 
@@ -403,10 +406,14 @@ ids.onmouseover=()=>
    ') translate('+1289*Math.random()+'%,'+
     1289*Math.random()+'%)'
   } 
+ star[5].style.borderLeft='13px ridge #00d'
+ star[5].style.borderRight='13px ridge #00d'
+ star[5].style.borderBottom='19px ridge #100'
  star[5].style.transform=
   'scale(5) translate('+198*Math.random()+'%,'+
     28*Math.random()+'%)'
- star[6].style.border='3px ridge #d00'
+ star[6].style.border='1px ridge #d00'
+ star[6].style.borderBottom='3px ridge #400'
  ids.style.background=
   'radial-gradient(#909,#ff0)' 
  hd[0].style.borderBottomLeftRadius=55+'%' 
@@ -485,6 +492,7 @@ ids.onmouseout=()=>
   fids[i]=0
   star[i].style.transform='scale(1)'
  }
+ star[5].style.border=''
  star[5].style.transform='scale(1)'
  star[6].style.border=''
  ids.style.background='radial-gradient(#555,#ff0)'
