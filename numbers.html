@@ -1,20 +1,20 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-<title>counter</title>
-<meta http-equiv="content-type" content="text/html" >
-<link rel='stylesheet' type='text/css'>
+ <title>counter</title> 
+</head>
 
+<body id=idbd >
 <style>
 #idbd
 {
+ height:144%;
  background:linear-gradient(44deg,#330,#cc0);
 }
 
 .indctr,.ttmthm,.bin,.ttsrv,.ttcntrl,.ttl,.btn
 {
- position:absolute;
- transition:1s;
+ position:absolute; transition:1s;
  cursor:pointer;
 }
 .bin,.tres
@@ -24,9 +24,6 @@
 }
 
 </style>
-</head>
-
-<body id=idbd >
 
 <button class=btn>GO</button>
 <button class=btn>O</button>
@@ -97,11 +94,13 @@ btn[1].style.height=4+'%'
 btn[1].style.background='#b00'
 btn[1].style.transform='scale(4)'
 btn[1].style.borderRadius=26+'%'
-btn[2].style.left=79+'%'
-btn[2].style.top=55+'%'
+btn[2].style.left=10+'%'
+btn[2].style.top=105+'%'
+btn[2].style.width=84+'%'
+btn[2].style.height=32+'%'
 btn[2].style.textAlign='center'
-btn[2].style.transform='scale(4)'
-
+btn[2].style.borderRadius=6+'%'
+btn[2].style.fontSize=17+'em'
 
 function init(nm,i,l,t,w,h)
 {
@@ -308,7 +307,7 @@ function fi8(clr)
 function fi9(clr)
 {
  for(i=1;i<4;i++)
- indctr[i].style.background=clr
+  indctr[i].style.background=clr
  indctr[4].style.background=clr
  indctr[6].style.background=clr
  indctr[7].style.background=clr
