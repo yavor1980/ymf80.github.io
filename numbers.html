@@ -431,7 +431,7 @@ btn[1].onclick=()=>
 
 btn[2].onchange=()=>
 {
-  switch(btn[2].value)
+ switch(btn[2].value)
  {
   case 0: fi0('#f00'); break;
   case 1: fi1('#f00'); break;
@@ -449,6 +449,7 @@ btn[2].onchange=()=>
 bind=0
 indctr[0].onmouseover=()=>
 {
+ indctr[0].style.transform='scale(3.4)'
  bind=Math.round(Math.random()*9) 
  switch(bind)
  {
@@ -466,6 +467,7 @@ indctr[0].onmouseover=()=>
 }
 indctr[0].onmouseout=()=>
 {
+ indctr[0].style.transform='scale(3)'
  ficlear('#555')
 } 
 
@@ -560,7 +562,19 @@ ttsrv[0].onmouseout=()=>
  ttsrv[7].style.border='none' 
  ttsrv[7].style.transform='scale(0)'
   clearInterval(Isrv)
-}  
+} 
+ 
+btn[2].onmouseover=()=>
+{
+ btn[2].style.transform='scale(1.1)'
+  btn[2].value='12345'
+} 
+btn[2].onmouseout=()=>
+{
+ btn[2].style.transform='scale(1)'
+  btn[2].value='0'
+} 
+
 
 </script>
 </body>
