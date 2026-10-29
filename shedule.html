@@ -50,7 +50,7 @@
 </div>
 
 <div class=prddk>
-
+ <div class=prddk>Color Tonnel </div>
 </div>
 
 <script>
@@ -118,6 +118,10 @@ prddk[0].style.height=77+'%'
 prddk[0].style.background=
  'radial-gradient(#f00,#f0f,#0f0)'
 prddk[0].style.borderRadius=45+'%' 
+prddk[1].style.left=47+'%' 
+prddk[1].style.top=9+'%'
+prddk[1].style.color='#900'
+prddk[1].style.transform='scale(0)'
  
 Icl=0, bcl=0
 function cl()
@@ -281,14 +285,20 @@ ftr[3].onmouseout=()=>
   clearInterval(Iftr3)
 }  
 
+bprddk=0
 prddk[0].onmouseover=()=>
 {
  prddk[0].style.transform='scale(1.1)'
+ prddk[1].style.transform=
+  'scale(4) translate(42%,-200%) skew(22deg)'
  Iftr3=setInterval(()=>{
+ if(bprddk)
   prddk[0].style.background=
    'radial-gradient(#f00,#0f0,#00f)'
-   
-   
+ else 
+  prddk[0].style.background=
+ 'radial-gradient(#f00,#f0f,#0f0)'
+   bprddk=!bprddk
  }, 999) 
 }
 prddk[0].onmouseout=()=>
@@ -296,6 +306,7 @@ prddk[0].onmouseout=()=>
  prddk[0].style.background=
  'radial-gradient(#f00,#f0f,#0f0)'
  prddk[0].style.transform='scale(1)'
+ prddk[1].style.transform='scale(0)'
   clearInterval(Iftr3)
 }
 
