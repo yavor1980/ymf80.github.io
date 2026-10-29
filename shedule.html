@@ -4,13 +4,13 @@
 
 #idbd
 {
+ height:219%;
  background:linear-gradient( #f60,#ff0);
 }
 
 .hd
 {
- position:absolute;
- transition:1s;
+ position:absolute; transition:1s;
  background:radial-gradient(#0f0,#000);
  text-align:center; 
  font-size:1.2em;
@@ -18,18 +18,15 @@
 
 .ftr
 {
- position:absolute;
- transition:1s;
- width:98%;
- height:62%;
+ position:absolute; transition:1s;
+ width:98%; height:62%;
  font-size:2em;
  text-align:center;
 }
 
-.frz
+.frz,.prddk
 {
- position:absolute;
- transition:1s;
+ position:absolute; transition:1s;
  cursor:pointer;
 }
 
@@ -52,9 +49,14 @@
  <div class=ftr>VCTR</div>
 </div>
 
+<div class=prddk>
+
+</div>
+
 <script>
 hd=document.getElementsByClassName('hd')  
 ftr=document.getElementsByClassName('ftr')
+prddk=document.getElementsByClassName('prddk') 
    
 function inn(nm,i, l,t, w,h,bkg )
 {
@@ -109,6 +111,14 @@ ftr[3].style.paddingTop=9+'%'
 ftr[3].style.cursor='pointer'
 ftr[3].style.borderRadius=55+'%'
  
+prddk[0].style.left=7+'%' 
+prddk[0].style.top=129+'%'
+prddk[0].style.width=87+'%'
+prddk[0].style.height=77+'%'  
+prddk[0].style.background=
+ 'radial-gradient(#f00,#f0f,#0f0)'
+prddk[0].style.borderRadius=45+'%' 
+ 
 Icl=0, bcl=0
 function cl()
 {
@@ -136,10 +146,10 @@ function act(i)
   hd[8].style.color='#0f0'
   hd[8].style.fontSize=2+'em'
  Iact=setInterval(()=>{
-  hd[6].style.transform='scale(1,'+(1+Math.random()/2)+
-   ')'
-  hd[8].style.transform='scale(1,'+(1+Math.random()/2)+
-   ')'
+  hd[6].style.transform='scale(1,'+
+   (1+Math.random()/2)+')'
+  hd[8].style.transform='scale(1,'+
+   (1+Math.random()/2)+')'
  }, 999)
  ftr[1].style.color='#f00' 
   ftr[1].style.background='#009'
@@ -224,11 +234,7 @@ function act(i)
   hd[i].style.zIndex=0
  }
 }	
- act(1)
- act(2)
- act(3)
- act(4)
- act(5)
+ act(1); act(2); act(3); act(4); act(5);
 
 ftr[1].onmouseover=()=>
 {
@@ -274,6 +280,24 @@ ftr[3].onmouseout=()=>
  ftr[3].style.borderRadius=55+'%'
   clearInterval(Iftr3)
 }  
+
+prddk[0].onmouseover=()=>
+{
+ prddk[0].style.transform='scale(1.1)'
+ Iftr3=setInterval(()=>{
+  prddk[0].style.background=
+   'radial-gradient(#f00,#0f0,#00f)'
+   
+   
+ }, 999) 
+}
+prddk[0].onmouseout=()=>
+{
+ prddk[0].style.background=
+ 'radial-gradient(#f00,#f0f,#0f0)'
+ prddk[0].style.transform='scale(1)'
+  clearInterval(Iftr3)
+}
 
 //setTimeout()
 </script>
