@@ -426,7 +426,7 @@ ids.onmouseover=()=>
  hd[2].style.transform='scale(2,2)'
  hd[2].style.background=
   'radial-gradient(#303,#d00)'
- hd[3].style.height='28%'   
+ hd[3].style.height=28+'%'   
  hd[3].style.borderBottomLeftRadius=55+'%' 
  hd[3].style.borderBottomRightRadius=55+'%' 
  hd[4].style.borderBottomLeftRadius=55+'%' 
@@ -559,16 +559,17 @@ inf[0].onmouseover=()=>
  inf[0].style.transform='skew(33deg)' 
   inf[0].innerHTML= 
    'martian<br> &nbsp &nbsp landform '
- inf[1].style.width=8+'%' 
+ inf[1].style.width=11+'%' 
  inf[1].style.background='#880'  
- inf[1].style.border='39px ridge #f07'
+ inf[1].style.borderLeft='39px ridge #00f'
+ inf[1].style.borderRight='39px ridge #00f'
+ inf[1].style.borderBottom='69px ridge #f07' 
  inf[1].style.opacity=1   
- inf[1].style.borderRadius=55*Math.random()+'%'
-  infI=setInterval(()=>{
-   inf[1].style.borderRadius=55*Math.random()+'%' 
+ inf[1].style.borderRadius=55+'%'
+  infI=setInterval(()=>{ 
    inf[1].style.transform=
-    'translate(0,'+66*Math.random()+
-	'%) skew('+(22-44*Math.random())+'deg)'
+    'scale(1,0.6) translate('+(-66*Math.random())+
+	'%,'+66*Math.random()+'%) '
   }, 999) 
   inf[1].innerHTML='' 
 }     
