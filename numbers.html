@@ -564,11 +564,16 @@ ttsrv[0].onmouseout=()=>
   clearInterval(Isrv)
 } 
  
+function rbtn()
+{
+ return abtn[Math.round(Math.random()*4)]
+}
+abtn=['1','2','3','4','5']
 btn[2].onmouseover=()=>
 {
  btn[2].style.color='#900'
  btn[2].style.transform='scale(1.1)'
-  btn[2].value='12345'
+  btn[2].value=rbtn()+rbtn()+rbtn()+rbtn()+rbtn()
 } 
 btn[2].onmouseout=()=>
 {
