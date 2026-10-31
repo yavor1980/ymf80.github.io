@@ -181,26 +181,27 @@ flwr[3].style.borderRadius=55+'%'
 btrfly[0].style.left=16+'%'
 btrfly[0].style.top=13+'%'  
 btrfly[0].style.width=9+'%'
-btrfly[0].style.height=4+'%'
+btrfly[0].style.height=5+'%'
 btrfly[0].style.background=
  'radial-gradient(#550,#f0f)' 
 btrfly[0].style.borderTopRightRadius=19+'%'
-btrfly[1].style.left=16+'%'
-btrfly[1].style.top=-199+'%'  
+btrfly[1].style.left=-16+'%'
+btrfly[1].style.top=-155+'%'  
 btrfly[1].style.width=44+'%'
 btrfly[1].style.height=244+'%'
 btrfly[1].style.background=
- 'radial-gradient(#f00,#ff0)' 
+ 'radial-gradient(#00f,#fff)' 
 btrfly[1].style.borderTopLeftRadius=29+'%'
 btrfly[1].style.borderTopRightRadius=29+'%' 
 btrfly[1].style.opacity=0.9
-btrfly[1].style.transform='scale(2,1) rotate(-36deg) '
-btrfly[2].style.left=56+'%'
-btrfly[2].style.top=-199+'%'  
+btrfly[1].style.transform=
+ 'scale(2,1) rotate(-36deg) '
+btrfly[2].style.left=76+'%'
+btrfly[2].style.top=-155+'%'  
 btrfly[2].style.width=44+'%'
 btrfly[2].style.height=244+'%'
 btrfly[2].style.background=
- 'radial-gradient(#f00,#ff0)' 
+ 'radial-gradient(#00f,#fff)' 
 btrfly[2].style.borderTopLeftRadius=29+'%' 
 btrfly[2].style.borderTopRightRadius=29+'%'  
 btrfly[2].style.opacity=0.9
@@ -251,6 +252,16 @@ frz[3].style.cursor='pointer'
 Ifr=0,bfr=0
 function ffl()
 {
+ vffl=(22+44*Math.random())
+ btrfly[1].style.background=
+  'radial-gradient('+vffl+
+  'px,#00f,#fff)' 
+ btrfly[2].style.background=
+  'radial-gradient('+vffl+
+  'px,#00f,#fff)' 
+ 
+ 
+ 
  btrfly[0].style.transform=
   'scale('+(0.4+Math.random())+','+(1+Math.random())+
   ') translate('+333*Math.random()+'%,'+
