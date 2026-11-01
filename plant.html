@@ -183,7 +183,10 @@ btrfly[0].style.top=13+'%'
 btrfly[0].style.width=9+'%'
 btrfly[0].style.height=5+'%'
 btrfly[0].style.background=
- 'radial-gradient(#550,#f0f)' 
+ 'radial-gradient(#550,#770)' 
+btrfly[0].style.borderBottom='14px ridge #f0f'
+
+
 btrfly[0].style.borderTopRightRadius=19+'%'
 btrfly[1].style.left=-16+'%'
 btrfly[1].style.top=-155+'%'  
@@ -355,6 +358,7 @@ o=
 plnt[0].onmouseover=()=>
 { 	 
  plnt[0].style.border=''
+ plnt[1].style.borderTop='14px ridge #007'
  plnt[2].style.border=''
  plnt[3].style.border=''
  plnt[4].style.border=''
@@ -368,7 +372,7 @@ plnt[0].onmouseover=()=>
  frz[3].style.transform='scale(0)'  
 }
 plnt[0].onmouseout=()=>
-{ 	   
+{ 	    
   clearInterval(o.intr)
   o.intr=0
  idbd.style.background='linear-gradient(#ff0,#0ff)'
@@ -379,6 +383,7 @@ plnt[0].onmouseout=()=>
  plnt[0].style.borderBottom='0px ridge transparent'
  idplnt.style.border='9px ridge #000' 
  idplnt.style.borderBottom='0px ridge transparent'
+ plnt[1].style.border=''
  plnt[1].style.transform='scale(1) '
  plnt[2].style.background='#555'
  plnt[2].style.borderTop='5px ridge #000' 
