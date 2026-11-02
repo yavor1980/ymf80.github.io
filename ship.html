@@ -11,8 +11,7 @@ body
 .btn
 {
  position:absolute;
- width:7%;
- height:5%;
+ width:7%; height:5%;
  transition:1s;
  cursor:pointer;
  transform:scale(1.2);
@@ -78,6 +77,7 @@ body
 
 <div class=prscpe>
  <div class=prscpe></div>
+  <div class=prscpe></div>
   <div class=prscpe></div>
   <div class=prscpe></div>
 </div>
@@ -328,7 +328,7 @@ prscpe[1].style.top=-44+'%'
 prscpe[1].style.width=423+'%'
 prscpe[1].style.height=56+'%'
 prscpe[1].style.background=
- 'radial-gradient(9px,#f0f,#ff0)'
+ 'radial-gradient(9px,#999,#ff0)'
 prscpe[1].style.borderRadius=55+'%' 
 prscpe[1].style.opacity=0.4
 prscpe[2].style.zIndex=-1
@@ -363,6 +363,16 @@ prscpe[5].style.height=53+'%'
 prscpe[5].style.borderBottom='12px ridge #bb0' 
 prscpe[5].style.borderRadius=55+'%'
 prscpe[5].style.opacity=0
+prscpe[6].style.zIndex=-1
+prscpe[6].style.left=-73+'%'
+prscpe[6].style.top=-64+'%'
+prscpe[6].style.width=253+'%'
+prscpe[6].style.height=43+'%'
+prscpe[6].style.background=
+ 'radial-gradient(#ff0,#550)'
+prscpe[6].style.borderRadius=55+'%'
+prscpe[6].style.borderTopLeftRadius=9+'%'
+prscpe[6].style.borderTopRightRadius=9+'%'
 
 mne[0].style.left=59+'%'
 mne[0].style.top=81+'%'
@@ -398,13 +408,14 @@ function cl()
 {   
  prscpe[1].style.background=
   'radial-gradient('+62*Math.random()+
-  'px,#f0f,#ff0)'
+  'px,#999,#ff0)'
  prscpe[1].style.transform='scale('+
   (1+Math.random())+')'  
  sltee[3].style.transform='scale('+
   (mcht+2*Math.random())+')' 
  prscpe[2].style.transform=
-  'scale(0.8) translate('+(Math.random()*191-122)+ 
+  'scale('+(1+Math.random()/5)+') translate('+
+  (Math.random()*391-122)+ 
   '%,'+(Math.random()*11)+'%) skew('+
   (Math.random()*66-33)+'deg)'
  prscpe[3].style.transform=
