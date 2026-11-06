@@ -244,13 +244,15 @@ prgrss[2].style.transform='scale(0)'
   
 Ig=0
 bg=0
-function mv()
+function cl()
 {
  grnd[3].style.transform='scale('+
   (1+Math.random())+')'
  hlls[0].style.transform='scale('+
   (1+Math.random())+' ) translate(0%,'+
   (-88*Math.random()) +'%)'
+ hlls[1].style.transform='scale(1,'+
+  (1+Math.random())+')'
  hd[0].style.transform= 'scale(1.4) translate('+
    (44-88*Math.random())+'%, -33%)'
  if(bg)
@@ -285,7 +287,7 @@ function mv()
  }	 
   bg=!bg
 }
-   Ig=setInterval(mv, 1111) 
+   Ig=setInterval(cl, 1111) 
   
 btn[0].onmouseover=()=>
 {
@@ -323,7 +325,9 @@ pzr[0].onmouseover=()=>
  hlls[0].style.left=16+'%' 
  hlls[0].style.opacity=1
  hlls[1].style.opacity=1
- hlls[1].style.transform='translate(0%,-94%)'
+ hlls[1].style.left=73+'%'
+ hlls[1].style.top=44+'%'
+ hlls[1].style.borderRadius=50+'%'
  frz[0].style.color='#f00'
   b=Math.round(Math.random())
  if(b)
@@ -372,7 +376,10 @@ pzr[0].onmouseout=()=>
  grnd[4].style.opacity=0.4
  hlls[0].style.left=3+'%' 
  hlls[0].style.opacity=0.4
+ hlls[1].style.left=73+'%'
+ hlls[1].style.top=60+'%' 
  hlls[1].style.opacity=0.4
+ hlls[1].style.borderRadius=35+'%'
  hlls[1].style.transform='scale(1)' 
  hd[0].style.transform='scale(1)' 
  pzr[1].style.transform='scale(1)'
