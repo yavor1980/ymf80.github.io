@@ -235,11 +235,11 @@ prgrss[0].style.transform='scale(5) skew(22deg)'
 prgrss[0].style.cursor='pointer' 
 prgrss[1].style.left=11+'%' 
 prgrss[1].style.top=12+'%'
-prgrss[1].style.color='#000' 
+prgrss[1].style.color='#fff' 
 prgrss[1].style.transform='scale(0)'
 prgrss[2].style.left=11+'%' 
 prgrss[2].style.top=6+'%'
-prgrss[2].style.color='#000' 
+prgrss[2].style.color='#fff' 
 prgrss[2].style.transform='scale(0)'
   
 Ig=0
@@ -396,24 +396,20 @@ prgrss[0].onmouseover=()=>
 {
  prgrss[0].style.zIndex=1
  prgrss[0].style.borderRadius=22+'%'
- prgrss[0].style.background='#ff0'
- prgrss[0].style.color='#f00'
+ prgrss[0].style.color='#f0f'
  prgrss[0].style.transform=
-  'scale(2.4) translate(11%,0)' 
+  'scale(3) translate(11%,0) skew(22deg)' 
   prgrss[0].innerHTML=
    'development direction<br> from lowest to highest'
- prgrss[1].style.background='#ff0'
  prgrss[1].style.transform=
-  'scale(2) translate(0,88%) skew(-12deg)' 
- prgrss[2].style.background='#ff0'
+  'scale(2) translate(200%,111%) skew(-12deg)' 
  prgrss[2].style.transform=
-  'scale(2) translate(0,233%) skew(-12deg)'
+  'scale(2) translate(200%,333%) skew(-12deg)'
 }
 prgrss[0].onmouseout=()=>
 {
  prgrss[0].style.zIndex=0
  prgrss[0].style.borderRadius=0+'%'
- prgrss[0].style.background='none'
  prgrss[0].style.color='#0f0'
  prgrss[0].style.transform='scale(5) skew(22deg)' 
   prgrss[0].innerHTML='Progress'
