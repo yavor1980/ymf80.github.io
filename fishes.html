@@ -9,12 +9,9 @@
 
 #idbtn
 { 
- position:absolute;
- transition:1s;
- right:5%;
- top:4%;
- width:9%;
- height:6%;
+ position:absolute; transition:1s;
+ right:5%; top:4%;
+ width:9%; height:6%;
  background:#f00;
  font-size:2em;
  cursor:pointer;
@@ -23,10 +20,8 @@
 #idaq
 { 
  position:absolute;
- left:33%;
- top:4%;
- width:55%;
- height:77%;
+ left:33%; top:4%;
+ width:55%; height:77%;
  opacity:0.5;
 }
 
@@ -40,8 +35,7 @@
 }
 .plls,.fc,.fns,.bbl,.jlly,.stns
 { 
- position:absolute; 
- transition:2s;
+ position:absolute; transition:2s;
  border-radius:55%;
 }
 .jlly{z-index:1;}
@@ -339,7 +333,8 @@ fsh[0].onmouseover=()=>
    Math.random()/2)+') translate(0%,'+
    Math.random()*(-33)+'%'
   jlly[2].style.background=
-   'radial-gradient(8px,#099,#fff)'
+   'radial-gradient('+(7+18*Math.random())+
+   'px,#099,#fff)'
   jlly[2].style.transform='scale(0.6) translate('+
    (45+Math.random()*(-92))+'%,24%) '  
   jlly[2].style.borderTopLeftRadius=
