@@ -3,16 +3,15 @@
 <head>
  <title>counter</title> 
 </head>
-
 <body id=idbd >
 <style>
 #idbd
 {
- height:144%;
- background:linear-gradient(44deg,#330,#cc0);
+ height:222%;
+ background:linear-gradient(44deg,#880,#cc0);
 }
 
-.indctr,.ttmthm,.bin,.ttsrv,.ttcntrl,.ttl,.btn
+.indctr,.ttmthm,.bin,.ttsrv,.ttcntrl,.ttl,.btn,.lg
 {
  position:absolute; transition:1s;
  cursor:pointer;
@@ -27,7 +26,6 @@
 
 <button class=btn>GO</button>
 <button class=btn>O</button>
-<input type=number min=0 max=9 value=0 class=btn>
 
 <div class=indctr>
  <div class=indctr></div>
@@ -71,6 +69,18 @@
  <div class=ttsrv>answer</div>
  <div class=ttsrv>request</div>
  <div class=ttsrv>data<br>&nbsp exchange</div>
+ 
+<input type=number min=0 max=9 value=0 class=btn>
+
+<div class=lg>
+ <div class=lg>log
+  <div class=lg>a</div>
+  <div class=lg>b</div>
+ </div>
+ <div class=lg>=</div>
+ <div class=lg>a</div>
+ <div class=lg>b</div> 
+</div>
 
 <script>
 btn=document.getElementsByClassName('btn')
@@ -82,6 +92,7 @@ tres=document.getElementsByClassName('tres')
 
 ttmthm=document.getElementsByClassName('ttmthm')
 ttsrv=document.getElementsByClassName('ttsrv')
+lg=document.getElementsByClassName('lg')
 
 btn[0].style.left=77+'%'
 btn[0].style.top=9+'%'
@@ -206,6 +217,35 @@ ttsrv[7].style.background='#bbb'
 ttsrv[7].style.color='#f0b'
 ttsrv[7].style.borderRadius=17+'%'
 ttsrv[7].style.transform='scale(0)'
+/**/
+lg[0].style.left=20+'%'
+lg[0].style.top=155+'%'
+lg[0].style.width=68+'%'
+lg[0].style.height=55+'%'
+lg[0].style.background='#bbb'
+lg[0].style.borderRadius=17+'%'
+lg[1].style.left=8+'%'
+lg[1].style.top=5+'%'
+lg[1].style.color='#900'
+lg[1].style.fontSize=17+'em'
+lg[2].style.left=99+'%'
+lg[2].style.top=47+'%'
+lg[2].style.color='#500'
+lg[2].style.fontSize=0.6+'em'
+lg[3].style.left=111+'%'
+lg[3].style.top=-2+'%'
+lg[3].style.color='#500'
+lg[3].style.fontSize=1.1+'em'
+lg[4].style.left=66+'%'
+lg[4].style.top=22+'%'
+lg[4].style.color='#050'
+lg[5].style.left=5+'%'
+lg[5].style.top=47+'%'
+lg[5].style.color='#050'
+lg[6].style.left=69+'%'
+lg[6].style.top=47+'%'
+lg[6].style.color='#005'
+
 
 function fi0(clr)
 {
@@ -564,6 +604,7 @@ ttsrv[0].onmouseout=()=>
   clearInterval(Isrv)
 } 
  
+Ibtn=0
 function rbtn()
 {
  return abtn[Math.round(Math.random()*4)]
@@ -573,15 +614,46 @@ btn[2].onmouseover=()=>
 {
  btn[2].style.color='#900'
  btn[2].style.transform='scale(1.1)'
+ Ibtn2=setInterval(()=>{
   btn[2].value=rbtn()+rbtn()+rbtn()+rbtn()+rbtn()
+ }, 999)
 } 
 btn[2].onmouseout=()=>
 {
  btn[2].style.color='#000'
  btn[2].style.transform='scale(1)'
   btn[2].value='0'
+  clearInterval(Ibtn2)
 } 
 
+lg[0].onmouseover=()=>
+{
+ lg[0].style.color='#b00'
+ lg[0].style.fontSize=1+'em'
+ lg[0].style.transform='scale(1.1)'
+ lg[1].style.fontSize=7+'em'
+ lg[1].style.transform='translate(55%,0) '
+ lg[4].style.transform=
+  'scale(11) translate(-72%,33%)'
+ lg[5].style.transform='scale(8)'
+ lg[6].style.transform='scale(8)' 
+ Ibtn2=setInterval(()=>{
+  
+ },999)
+} 
+lg[0].onmouseout=()=>
+{
+ lg[0].style.transform='scale(1)'
+ lg[1].style.color='#900'
+ lg[1].style.fontSize=17+'em'
+ lg[1].style.transform='scale(1)'
+ lg[2].style.transform='scale(1)'
+ lg[3].style.transform='scale(1)'
+ lg[4].style.transform='scale(1)'
+ lg[5].style.transform='scale(1)'
+ lg[6].style.transform='scale(1)'
+  clearInterval(Ibtn2)
+} 
 
 </script>
 </body>
