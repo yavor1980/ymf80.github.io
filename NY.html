@@ -15,18 +15,15 @@
 
 .crstmtr
 { 
- position:absolute; 
- transition:1s;
+ position:absolute; transition:1s;
  cursor:pointer;
- width:44%;
- height:11%;
+ width:44%; height:11%;
  border-radius:55%;
  opacity:0.9;
 }
 .crstint,.crstintt
 { 
- position:absolute; 
- transition:1s;
+ position:absolute; transition:1s;
  border-radius:22%;
 }
 
@@ -111,8 +108,8 @@ function finit(nm,i,l,t,w,h,bkgr)
  nm[i].style.height=h+'%'
  nm[i].style.background=bkgr
 }
-finit(bckrnd,0,0,78,100,22,
- 'radial-gradient(#099,#eee)')
+//finit(bckrnd,0,0,78,100,22,
+ //'radial-gradient(#099,#eee)')
  bckrnd[0].style.borderTopLeftRadius=29+'%'
  bckrnd[0].style.borderTopRightRadius=29+'%'
  bckrnd[0].style.opacity=0.2
@@ -406,7 +403,7 @@ fcrtr=()=>
  crstintt[2].style.background=
   'radial-gradient('+Math.round(Math.random()*44)+
   'px,#ff0,#00f)'   
-snwmn[0].style.transform='translate(-55%,22%)'  
+ snwmn[0].style.transform='translate(-55%,22%)'  
   
  smint[3].style.borderRadius=35+'%' 
  smint[3].style.transform=
