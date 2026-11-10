@@ -3,8 +3,7 @@
 <body id=idbd>
 <style>
 
-#idbd
-{
+#idbd{
  background:linear-gradient(0deg,#000,#990);
 }
 
@@ -52,6 +51,8 @@
  <div class=drv></div>
  <div class=drv></div>
 </div>
+<div class=drts></div>
+<div class=drts></div>
 <div class=drts></div>
 
 <div class=frz>White</div>
@@ -195,6 +196,18 @@ drts[0].style.background='#bbb'
 drts[0].style.borderRadius=55+'%'
 drts[0].style.border='15px ridge #000'
 drts[0].style.transform='skew(-16deg)'
+drts[1].style.left=8+'%'
+drts[1].style.bottom=0+'%'
+drts[1].style.width=56+'%'
+drts[1].style.height=12+'%'
+drts[1].style.background='#400'
+drts[1].style.transform='skew(-30deg)'
+drts[2].style.left=15+'%'
+drts[2].style.bottom=0+'%'
+drts[2].style.width=56+'%'
+drts[2].style.height=12+'%'
+drts[2].style.background='#400'
+drts[2].style.transform='skew(30deg)'
 
 hdd[0].style.left=9+'%'
 hdd[0].style.top=18+'%'
@@ -280,8 +293,7 @@ function clk()
   idb.style.opacity=1
  }, 999)  
 }
-idb.onclick=()=>
-{    
+idb.onclick=()=>{    
  clk() 
 }  
 
@@ -309,8 +321,13 @@ flme[0].onmouseover=()=>
   drts[0].style.background=
    'radial-gradient('+(44+Math.random()*33)+
    'px,#f00,#ff0)'
+  drts[1].style.background=
+   'linear-gradient('+(-Math.random()*99)+
+   'deg,#f00,#ff0)'  
+  drts[2].style.background=
+   'linear-gradient(33'+(Math.random()*99)+
+   'deg,#f00,#ff0)'   
  }, 999)
-  
  hdd[0].style.transform=
   'scale(4) rotate(-33deg) skew(-33deg)'
  hdd[0].style.color='#f00' 
@@ -333,7 +350,9 @@ flme[0].onmouseout=()=>
  fl[3].style.transform=
   'scale(1) translate(0%,-99%) rotate(33deg) skew(33deg)'
  drts[0].style.transform='skew(-16deg)'
- drts[0].style.background='#fff'
+ drts[0].style.background='#400'
+ drts[1].style.background='#400'
+ drts[2].style.background='#400'
  hdd[0].style.transform=
   'scale(3) rotate(-33deg)'
  hdd[0].style.color='#000' 
