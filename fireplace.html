@@ -285,6 +285,7 @@ idb.onclick=()=>
  clk() 
 }  
 
+Iflme0=0
 flme[0].onmouseover=()=>
 {    
  flme[0].style.border='15px ridge #404'
@@ -302,10 +303,14 @@ flme[0].onmouseover=()=>
  fl[3].style.transform=
   'scale(1) translate(119%,-99%)'+
   ' rotate(-23deg) skew(33deg)'
- drts[0].style.transform='skew(1deg)'
- drts[0].style.background=
-  'radial-gradient('+(44+Math.random()*33)+
-  'px,#f00,#ff0)'
+ Iflme0=setInterval(()=>{
+  drts[0].style.transform='skew('+
+   (0+Math.random()*18)+'deg)'
+  drts[0].style.background=
+   'radial-gradient('+(44+Math.random()*33)+
+   'px,#f00,#ff0)'
+ }, 999)
+  
  hdd[0].style.transform=
   'scale(4) rotate(-33deg) skew(-33deg)'
  hdd[0].style.color='#f00' 
@@ -315,6 +320,7 @@ flme[0].onmouseover=()=>
 } 
 flme[0].onmouseout=()=>
 {    
+   clearInterval(Iflme0)
  flme[0].style.border='15px ridge #404'
  flme[1].style.background=
    'radial-gradient(44px,#b0b,#f00)'
@@ -336,21 +342,17 @@ flme[0].onmouseout=()=>
  hdd[1].style.color='#000' 
 }
 
-flme[1].onmouseover=()=>
-{    
+flme[1].onmouseover=()=>{    
  flme[3].style.opacity=0.9
 } 
-flme[1].onmouseout=()=>
-{    
+flme[1].onmouseout=()=>{    
  flme[3].style.opacity=0
 }
 
-flme[2].onmouseover=()=>
-{    
+flme[2].onmouseover=()=>{    
  flme[3].style.opacity=0.9
 } 
-flme[2].onmouseout=()=>
-{    
+flme[2].onmouseout=()=>{ 
  flme[3].style.opacity=0
 }
 
@@ -395,21 +397,17 @@ act(frz,6,'#ff8','purple pink')
 act(frz,7,'#0f0','Green')
 act(frz,8,'#0f0','blue green')
 
-hdd[0].onmouseover=()=>
-{    
+hdd[0].onmouseover=()=>{    
  flme[0].onmouseover()
 }
-hdd[0].onmouseout=()=>
-{    
+hdd[0].onmouseout=()=>{    
  flme[0].onmouseout()
 }  
 
-hdd[1].onmouseover=()=>
-{    
+hdd[1].onmouseover=()=>{    
  flme[0].onmouseover()
 }
-hdd[1].onmouseout=()=>
-{    
+hdd[1].onmouseout=()=>{    
  flme[0].onmouseout()
 }  
 	  
