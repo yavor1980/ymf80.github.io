@@ -108,8 +108,8 @@ function finit(nm,i,l,t,w,h,bkgr)
  nm[i].style.height=h+'%'
  nm[i].style.background=bkgr
 }
-//finit(bckrnd,0,0,78,100,22,
- //'radial-gradient(#099,#eee)')
+finit(bckrnd,0,0,78,100,22,
+ 'radial-gradient(#099,#eee)')
  bckrnd[0].style.borderTopLeftRadius=29+'%'
  bckrnd[0].style.borderTopRightRadius=29+'%'
  bckrnd[0].style.opacity=0.2
@@ -386,12 +386,12 @@ snwmn[0].onmouseout=()=>
 
 fcrtr=()=>
 {
- bckrnd[2].style.transform=
-  'scale('+(0.5+Math.random())+')'
- bckrnd[3].style.transform=
-  'scale('+(0.5+Math.random())+')'
- bckrnd[4].style.transform= 
- 'scale('+(0.5+Math.random())+')'
+ bckrnd[2].style.transform='scale('+
+  (0.5+Math.random())+') translate(-287%,-963%)'
+ bckrnd[3].style.transform='scale('+
+  (0.5+Math.random())+') translate(787%,3%)'
+ bckrnd[4].style.transform= 'scale('+
+  (0.5+Math.random())+') translate(-78%,-67%)'
  crstint[2].style.background=
   'radial-gradient('+Math.round(Math.random()*44)+
   'px,#ff0,#f00)'
