@@ -37,6 +37,7 @@
  <div class=ppp></div>
 </div>
 <div class=ppp></div>
+<div class=ppp></div>
 
 <script>
 hd=document.getElementsByClassName('hd')  
@@ -133,12 +134,19 @@ ppp[3].style.borderRadius=22+'%'
 ppp[3].style.transform=
  'scale(1.8) rotate(45deg)'
 ppp[4].style.left=18+'%'
-ppp[4].style.top=11+'%'
+ppp[4].style.top=12+'%'
 ppp[4].style.width=70+'%'
 ppp[4].style.height=7+'%'
 ppp[4].style.borderTop='22px ridge #f00'
 ppp[4].style.borderRadius=55+'%'  
 ppp[4].style.opacity=0
+ppp[5].style.left=18+'%'
+ppp[5].style.top=19+'%'
+ppp[5].style.width=70+'%'
+ppp[5].style.height=7+'%'
+ppp[5].style.borderTop='22px ridge #f0f'
+ppp[5].style.borderRadius=55+'%'  
+ppp[5].style.opacity=0 
  
 Icl=0
 bcl=0
@@ -170,8 +178,9 @@ function sltcl()
   ppp[4].style.opacity=1
   ppp[4].style.transform='scale('+(1+Math.random()/4)+ 
    ') translate(0%,'+(-76*Math.random())+'%)'
-
-  
+  ppp[5].style.opacity=1
+  ppp[5].style.transform='scale('+(1+Math.random()/4)+ 
+   ') translate(0%,'+(-76*Math.random())+'%)'
   setTimeout(()=>{
    slte[1].style.transition='444ms'
    slte[1].style.opacity=0.5
@@ -248,6 +257,7 @@ hd[0].onmouseout=()=>
  hd[0].style.color='#b00'
  ppp[0].style.transform='scale(0)'
  ppp[4].style.opacity=0
+ ppp[5].style.opacity=0
   hd[0].innerHTML='Waiting...' 
   hd[1].innerHTML='When?..'
  hd[2].style.opacity=0
