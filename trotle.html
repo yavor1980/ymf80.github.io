@@ -27,7 +27,7 @@
  width:12%; height:14%;
  transform:scale(2);
 }
-.fld,.cpcty,.dbbl
+.fld,.cpcty,.dbbl,.fldd
 {
  position:absolute; transition:333ms;
 }
@@ -49,7 +49,7 @@
  border:22px ridge #777;
  border-top:22px ridge transparent;
 }
-.lcoils{left:-84%;}
+.lcoils{left:-55%;}
 .rcoils{ left:84%;}
 
 </style>
@@ -117,6 +117,8 @@
  <div class=elmtr></div>
  <div class=elmtr></div>
  <div class=elmtr></div>
+ <div class=fldd></div>
+ <div class=fldd></div> 
 </div>
 
 <script>
@@ -133,6 +135,7 @@ rcoils=document.getElementsByClassName('rcoils')
 acoils=document.getElementsByClassName('acoils')
 
 elmtr=document.getElementsByClassName('elmtr')
+fldd=document.getElementsByClassName('fldd')
 
 btn[0].style.right=6+'%'
 btn[0].style.top=9+'%'
@@ -289,11 +292,11 @@ lcoils[3].style.top=66+'%'
 rcoils[1].style.top=22+'%'
 rcoils[2].style.top=44+'%'
 rcoils[3].style.top=66+'%'
-acoils[0].style.left=-84+'%'
+acoils[0].style.left=-55+'%'
 acoils[0].style.top=12+'%'
-acoils[1].style.left=-84+'%'
+acoils[1].style.left=-55+'%'
 acoils[1].style.top=32+'%'
-acoils[2].style.left=-84+'%'
+acoils[2].style.left=-55+'%'
 acoils[2].style.top=54+'%'
 acoils[3].style.left=84+'%'
 acoils[3].style.top=12+'%'
@@ -379,6 +382,24 @@ elmtr[6].style.borderLeft='27px ridge transparent'
 elmtr[6].style.borderRight='27px ridge transparent'
 elmtr[6].style.opacity=0
 elmtr[6].style.borderRadius=55+'%'
+fldd[0].style.left=-5+'%'
+fldd[0].style.top=-36+'%'
+fldd[0].style.width=100+'%'
+fldd[0].style.height=2+'%'
+fldd[0].style.border='19px ridge #ff0'
+fldd[0].style.borderLeft='27px ridge transparent'
+fldd[0].style.borderRight='27px ridge transparent'
+fldd[0].style.opacity=0
+fldd[0].style.borderRadius=55+'%'
+fldd[1].style.left=-6+'%'
+fldd[1].style.top=128+'%'
+fldd[1].style.width=100+'%'
+fldd[1].style.height=2+'%'
+fldd[1].style.border='19px ridge #ff0'
+fldd[1].style.borderLeft='27px ridge transparent'
+fldd[1].style.borderRight='27px ridge transparent'
+fldd[1].style.opacity=0
+fldd[1].style.borderRadius=55+'%'
 
 btn[0].onmouseover=()=>
 {
@@ -561,17 +582,14 @@ idtrsfrmtr.onmouseover=()=>{ trsfrmon();}
 idtrsfrmtr.onmouseout=()=>{ trsfrmoff();}
 
 bbtn1=0
-btn[1].onmouseover=()=>
-{
+btn[1].onmouseover=()=>{
  elmtr[0].onmouseover()
 }
-btn[1].onmouseout=()=>
-{
+btn[1].onmouseout=()=>{
  elmtr[0].onmouseout()
 }
 
-elmtr[0].style.transform=
- 'scale(1,0.8)'
+elmtr[0].style.transform='scale(1,0.8)'
 
 Ielmtr=0
 elmtr[0].onmouseover=()=>
@@ -589,10 +607,12 @@ elmtr[0].onmouseover=()=>
  elmtr[4].style.borderBottom='27px ridge transparent'
  elmtr[5].style.opacity=0.8
  elmtr[6].style.opacity=0.8
+ fldd[0].style.opacity=0.8
+ fldd[1].style.opacity=0.8
  ttl[3].style.color='#fff'
  ttl[3].style.transform='scale(5) skew(-8deg)' 
  Ielmtr=setInterval(()=>{
-  elmtr[1]. style.transform=
+  elmtr[1].style.transform=
    'rotate('+(Math.random()*90)+'deg)'
   elmtr[2].style.transform=
    'rotate('+(Math.random()*90)+'deg)' 
@@ -600,6 +620,10 @@ elmtr[0].onmouseover=()=>
    (1+Math.random()/4)+')'
   elmtr[6].style.transform='scale('+
    (1+Math.random()/4)+')'
+  fldd[0].style.transform='scale('+
+   (1+Math.random()/4)+')'
+  fldd[1].style.transform='scale('+
+   (1+Math.random()/4)+')'  
  }, 999)
 }
 elmtr[0].onmouseout=()=>
@@ -616,9 +640,9 @@ elmtr[0].onmouseout=()=>
  elmtr[4].style.border='99px ridge #777'
  elmtr[4].style.borderBottom='27px ridge transparent'
  elmtr[5].style.opacity=0
- elmtr[5].style.transform='scale(1)'
  elmtr[6].style.opacity=0
- elmtr[6].style.transform='scale(1)'
+ fldd[0].style.opacity=0
+ fldd[1].style.opacity=0
  ttl[3].style.color='#000'
  ttl[3].style.transform='scale(5) skew(8deg)' 
 }
