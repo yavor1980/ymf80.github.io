@@ -277,8 +277,8 @@ function cld()
   flme[3].style.borderRadius=55+'%'
  }
   b=!b
-}
-     I=setInterval(cld, 999)
+} 
+   cld();  I=setInterval(cld, 999)
 
 function clk()
 {
@@ -297,6 +297,20 @@ idb.onclick=()=>{
  clk() 
 }  
 
+function fflme0()
+{
+  drts[0].style.transform='skew('+
+   (0+Math.random()*18)+'deg)'
+  drts[0].style.background=
+   'radial-gradient('+(44+Math.random()*33)+
+   'px,#f00,#ff0)'
+  drts[1].style.background=
+   'linear-gradient('+(-Math.random()*99)+
+   'deg,#f00,#ff0)'  
+  drts[2].style.background=
+   'linear-gradient(33'+(Math.random()*99)+
+   'deg,#f00,#ff0)' 
+}
 Iflme0=0
 flme[0].onmouseover=()=>
 {    
@@ -315,19 +329,7 @@ flme[0].onmouseover=()=>
  fl[3].style.transform=
   'scale(1) translate(119%,-99%)'+
   ' rotate(-23deg) skew(33deg)'
- Iflme0=setInterval(()=>{
-  drts[0].style.transform='skew('+
-   (0+Math.random()*18)+'deg)'
-  drts[0].style.background=
-   'radial-gradient('+(44+Math.random()*33)+
-   'px,#f00,#ff0)'
-  drts[1].style.background=
-   'linear-gradient('+(-Math.random()*99)+
-   'deg,#f00,#ff0)'  
-  drts[2].style.background=
-   'linear-gradient(33'+(Math.random()*99)+
-   'deg,#f00,#ff0)'   
- }, 999)
+  fflme0(); Iflme0=setInterval(fflme0, 999)
  hdd[0].style.transform=
   'scale(4) rotate(-33deg) skew(-33deg)'
  hdd[0].style.color='#f00' 
