@@ -15,8 +15,9 @@ input{text-align:center;}
 #idbdy
 {
  position:absolute; transition:1s;
- left:2%; top:2%; width:94%; height:94%; background:#880;
- border-radius:12%; border:9px ridge #990;
+ left:2%; top:2%; width:94%; height:94%;
+ background:#880; border-radius:12%;
+ border:9px ridge #990;
 }
 .bse,.zpr,.dlg,.dlgr,.btn,.lst,.bs
 {
@@ -225,7 +226,7 @@ bs[0].style.cursor='pointer'
 bs[0].style.left=3+'%'
 bs[0].style.top=112+'%' 
 bs[0].style.width=92+'%'
-bs[0].style.height=77+'%' 
+bs[0].style.height=90+'%' 
 bs[0].style.background='#ddd'
 bs[0].style.borderRadius=8+'%'
 bs[0].style.border='9px ridge #990'
@@ -281,7 +282,6 @@ bs[9].style.top=26+'%'
 bs[9].style.opacity=0
 bs[9].style.border='29px ridge #000'
 bs[9].style.transform='rotate(45deg)'  
- 
 //===================================================
  
 I=setInterval(()=>{
@@ -289,26 +289,21 @@ I=setInterval(()=>{
   (4+2*Math.random())+')translate(12%,0) '
 }, 999) 
  
-sbse=['meeting','expo','seminar']
-pbse=0
-bse[0].onmouseover=()=>
-{ 
+sbse=['meeting','expo','seminar']; pbse=0
+bse[0].onmouseover=()=>{ 
  bse[0].style.transform='scale(1.2)'
  bse[4].style.color='#f00'
 }
- bse[0].onmouseout=()=>
-{ 
+ bse[0].onmouseout=()=>{ 
  bse[0].style.transform='scale(1)'
  bse[4].style.color='#900'
 }
 function abse(i,pp)
 {  
- bse[i].onmouseover=()=>
- { 
+ bse[i].onmouseover=()=>{ 
   bse[i].style.transform='scale(1.2)'
  }
- bse[i].onmouseout=()=>
- { 
+ bse[i].onmouseout=()=>{ 
   bse[i].style.transform='scale(1)'
  }
  bse[i].onclick=()=>
@@ -450,10 +445,9 @@ function shft()
 }
 dlgr[2].onclick=()=>
 { 
-  fzpr('rejected!')
+  fzpr('rejected!'); ilst--
  dlgr[0].style.zIndex=0
-  shft()
-  dlgr[1].value='dd.mm.yy' 
+  shft(); dlgr[1].value='dd.mm.yy' 
  dlgr[0].style.transform='scale(1)'
  dlgr[1].disabled=1
  dlgr[2].disabled=1
@@ -472,11 +466,11 @@ dlgr[3].onclick=()=>
 bsdir=0, bsI=0, nbs=0
 bs[0].onmouseover=()=>
 { 
- bsI=setInterval(()=>{
+bsI=setInterval(()=>{
  bsdir=Math.round(Math.random()*4)
+  bs[4].style.border=''
  bs[5].style.opacity=1
  bs[5].style.transform='scale(1) rotate(45deg)'
- bs[4].style.border=''
  bs[6].style.opacity=Math.random()
  bs[6].style.left=Math.random()*77+'%'
  bs[6].style.top=Math.random()*77+'%'
