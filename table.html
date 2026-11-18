@@ -561,8 +561,6 @@ function finn(c)
   b=Math.round(Math.random()*9)
   c[nea].style.color='#'+r+''+g+''+b
   vnea=Math.round(Math.random()*99)
-
-  
    c[j].innerHTML=vnea
  }
 }
@@ -589,7 +587,7 @@ function ftr(c,tr,bw)
  c[nea].style.border=''+bw+'px ridge #000'
  c[nea].style.transform='scale('+tr+')'
 }
-3
+
 exle[0].onmouseover=()=>
 {  
  exle[1].style.opacity=1
@@ -608,11 +606,13 @@ exle[0].onmouseover=()=>
   }
  }
 }
+
 function fclr(c,vv)
 { 
  for(j=0;j<8;j++)
  {
   c[j].style.fontSize=vv+'em'
+  c[j].style.transform='scale(1)'
  }
 }
 exle[0].onmouseout=()=>
@@ -622,14 +622,14 @@ exle[0].onmouseout=()=>
  { 
   switch(i)
   {
-   case 0: fclr(ea0,0); ftr(ea0,1,2); break;
-   case 1: fclr(ea1,0); ftr(ea1,1,2); break;
-   case 2: fclr(ea2,0); ftr(ea2,1,2); break;
-   case 3: fclr(ea3,0); ftr(ea3,1,2); break;
-   case 4: fclr(ea4,0); ftr(ea4,1,2); break;
-   case 5: fclr(ea5,0); ftr(ea5,1,2); break;
-   case 6: fclr(ea6,0); ftr(ea6,1,2); break;
-   case 7: fclr(ea7,0); ftr(ea7,1,2); break;
+   case 0: fclr(ea0,0); break;
+   case 1: fclr(ea1,0); break;
+   case 2: fclr(ea2,0); break;
+   case 3: fclr(ea3,0); break;
+   case 4: fclr(ea4,0); break;
+   case 5: fclr(ea5,0); break;
+   case 6: fclr(ea6,0); break;
+   case 7: fclr(ea7,0); break;
   }
  }
 }
