@@ -2,10 +2,8 @@
 <style>
 button
 {
- position:absolute;
- transition:1s;
- right:22%;
- top:9%;
+ position:absolute; transition:1s;
+ right:22%; top:9%;
  background:#f00;
  color:#bb0;
  transform:scale(2);
@@ -435,7 +433,9 @@ function clk()
  insct[4].style.transform=
   'scale(1.2) rotate(45deg) skew(33deg)'
  bg[0].style.transform=
-  'translate(0,'+(-522*Math.random())+'%) skew(22deg)'
+  'translate('+(-52*Math.random())+'%,'+
+  (-522*Math.random())+'%) skew(22deg)'
+ bg[3].style.transform='scale(2.8,1.2)'
  bg[4].style.opacity=0.8
  bg[4].style.transform='scale(2,1.2)'
  ttl[3].style.background=
@@ -466,12 +466,12 @@ function clk()
   tbe[4].style.borderWidth=3+'px'
   tbe[4].style.transform='scale(1)'
   insct[0].style.opacity=0.4
-
   insct[2].style.borderRadius=55+'%'
   insct[2].style.transform='scale(1)'
   insct[3].style.borderRadius=55+'%'
   insct[3].style.transform='scale(1)'
   insct[4].style.transform='scale(0)'
+  bg[3].style.transform='scale(1)'
   bg[4].style.opacity=0.4
   bg[4].style.transform='scale(1)'
   ttl[2].style.transform='scale(1)'
