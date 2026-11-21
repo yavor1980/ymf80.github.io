@@ -63,6 +63,7 @@
  <div class=lctr></div>
  <div class=lctr></div>
  <div class=lctr></div>
+ <div class=lctr></div>
  <div class=gl><div class=zr></div></div>
  <div class=gl><div class=zr></div></div>
  <div class=ns><div class=ns></div></div>
@@ -133,10 +134,18 @@ lctr[4].style.left=42+'%'
 lctr[4].style.top=11+'%'
 lctr[4].style.width=24+'%'
 lctr[4].style.height=11+'%'
-lctr[4].style.background='#fff'
+lctr[4].style.background='#ff0'
 lctr[4].style.opacity=0.5
 lctr[4].style.borderRadius=55+'%' 
-lctr[4].style.transform='scale(0)'	
+lctr[4].style.transform='scale(0)'
+lctr[5].style.left=42+'%'
+lctr[5].style.top=11+'%'
+lctr[5].style.width=24+'%'
+lctr[5].style.height=11+'%'
+lctr[5].style.background='#f0f'
+lctr[5].style.opacity=0.5
+lctr[5].style.borderRadius=55+'%' 
+lctr[5].style.transform='scale(0)'	
 	
 function initj(nm,i,l,t,w,h,bg)
 {
@@ -203,6 +212,8 @@ function mvd()
  tbl[4].style.borderTopLeftRadius=55+'%'
  tbl[4].style.borderTopRightRadius=55+'%'
  tbl[4].style.height=Math.random()*80+'%'
+ tbl[5].style.transform=
+  'rotate(33deg) translate('+v+'%,-1888%)'
 }
 function mvm()
 { 
@@ -210,8 +221,6 @@ function mvm()
  zr[0].style.left=1+'%'
  zr[1].style.left=1+'%'  
  mth[0].style.height=Math.random()*11+'%'
- tbl[5].style.transform=
-  'rotate(33deg) translate('+v+'%,-1888%)'
 } 
 Id=0
 Im=0  
@@ -246,7 +255,6 @@ tbl[0].onmouseover=()=>
   clearInterval(Im)
  lctr[3].style.transform=
   'scale(2) translate(0,-177%) skew(-13deg)'
- lctr[4].style.color='#900' 
  tbl[0].style.borderTop='16px ridge #088'
  tbl[0].style.transform='skew(-22deg)'
  tbl[1].style.borderTopLeftRadius=0+'%'
@@ -270,13 +278,21 @@ tbl[0].onmouseover=()=>
  Iwng0=setInterval(()=>{
   if(bwng0)
   {
-   lctr[3].style.transform='scale(2) translate(0,-177%)'
-   lctr[4].style.transform='scale(1) translate(200%,-333%)'
+   lctr[3].style.transform=
+    'scale(2) translate(9%,-177%)'
+   lctr[4].style.transform=
+    'scale(1) translate(200%,-333%)'
+   lctr[5].style.transform=
+    'scale(1) translate(-122%,-333%)'	
   }
   else
   {
-   lctr[3].style.transform='scale(2.5) translate(0,-177%)'
-   lctr[4].style.transform='scale(2) translate(200%,-333%)'
+   lctr[3].style.transform=
+    'scale(2.5) translate(66%,-177%)'
+   lctr[4].style.transform=
+    'scale(2) translate(200%,-333%)'
+   lctr[5].style.transform=
+    'scale(2) translate(-188%,-333%)'
   }
     bwng0=!bwng0
  },  999)
@@ -284,10 +300,8 @@ tbl[0].onmouseover=()=>
 tbl[0].onmouseout=()=>
 { 
  lctr[3].style.transform='scale(0)'
- lctr[3].style.borderRadius='55%'
- lctr[4].style.color='#000'
  lctr[4].style.transform='scale(0)'
- lctr[4].style.borderRadius='55%'
+ lctr[5].style.transform='scale(0)'
   tbl[0].style.borderTop='6px ridge #088'
  tbl[0].style.transform='skew(44deg)' 
  Id=setInterval(()=>
