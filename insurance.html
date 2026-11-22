@@ -7,6 +7,7 @@
 <style>
 #idbd
 {
+ height:188%;
  background:linear-gradient(0deg,#0b0,#0bb);
 }
 input
@@ -55,6 +56,8 @@ select:hover{ cursor:pointer; }
   You are insured!
   <button class=term>OK</button> 
  </div>  
+ 
+<div class=pnl></div> 
   
 </div>
 <script>
@@ -81,6 +84,13 @@ pnl[1].style.background='#888'
 pnl[1].style.borderRadius=12+'%'
 pnl[1].style.border='4px ridge #bb0'
 pnl[1].style.transform='scale(1.4)'
+pnl[2].style.left=17+'%'
+pnl[2].style.top=111+'%'
+pnl[2].style.width=66+'%'
+pnl[2].style.height=88+'%'
+pnl[2].style.background='#bbb'
+pnl[2].style.borderRadius=12+'%'
+pnl[2].style.border='4px ridge #bb0'
 
 btn[0].style.left=11+'%'
 btn[0].style.top=55+'%'
@@ -101,7 +111,8 @@ btn[3].style.transform='scale(2)'
 btn[4].style.left=77+'%'
 btn[4].style.top=55+'%'
 btn[4].style.background='#f0b'
-btn[4].style.transform='scale(2)'  
+btn[4].style.transform='scale(2)' 
+btn[5].style.cursor='default'
 btn[5].style.left=29+'%'
 btn[5].style.top=15+'%'
 btn[5].style.color='#f0b'
@@ -116,12 +127,13 @@ ttl[1].style.left=7+'%'
 ttl[1].style.top=8+'%'
 ttl[1].style.color='#bbb'
 ttl[1].style.transform='scale(3)'
-ttl[1].style.cursor='pointer'
+ttl[1].style.cursor='default'
 ttl[2].style.left=22+'%'
 ttl[2].style.top=8+'%'
 ttl[3].style.left=72+'%'
 ttl[3].style.top=8+'%'
 ttl[3].style.transform='scale(3) skew(-12deg)'
+ttl[3].style.cursor='default'
 
 mnge[0].style.left=3+'%'
 mnge[0].style.top=30+'%'  
@@ -149,12 +161,16 @@ term[0].style.left=13+'%'
 term[0].style.top=13+'%' 
 term[0].style.borderRadius=13+'%' 
 term[0].style.transform='scale(3)'
+term[1].style.cursor='pointer' 
 term[1].style.left=73+'%'
 term[1].style.top=8+'%'
 term[1].style.width=13+'%'
 term[1].style.height=19+'%'
 term[1].style.background='#b00' 
 term[1].style.borderRadius=13+'%' 
+term[2].style.cursor='pointer' 
+
+
 term[2].style.left=7+'%'
 term[2].style.top=60+'%'
 term[2].style.width=88+'%'
@@ -189,12 +205,15 @@ function abtn(i,clr,str)
   ttl[0].style.zIndex=1
   ttl[0].style.transform=
    'scale(5) translate(0,-52%) skew(-8deg)'
+  ttl[3].style.zIndex=1
   ttl[3].style.color=clr 
-  ttl[3].style.transform='scale(5) skew(-12deg)'
+  ttl[3].style.transform=
+   'scale(5) translate(-52%,-52%) skew(-12deg)'
    ttl[3].innerHTML=str 
   mnge[1].style.cursor='pointer' 
+  mnge[1].style.zIndex=1
   mnge[1].style.transform=
-   'scale(5) translate(-25%,-25%)' 
+   'scale(7) translate(-33%,-25%)' 
   mnge[2].style.cursor='pointer' 
   aterm[0].innerHTML=str
  } 
@@ -226,8 +245,9 @@ mnge[2].onclick=()=>
 { 
  ttl[0].style.transform='scale(3) skew(-12deg)'
   ttl[3].innerHTML=''
- mnge[1].disabled=1
- mnge[2].disabled=1
+  mnge[1].disabled=1
+  mnge[1].style.transform='scale(3)'
+  mnge[2].disabled=1
 }  
 
 term[2].onclick=()=>
