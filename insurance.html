@@ -213,8 +213,8 @@ aterm[0].style.top=37+'%'
 aterm[0].style.fontSize=2.6+'em' 
 aterm[0].style.cursor='pointer'  
   
-astr=[]
-function abtn(i,clr,str)
+astr=[], iastr=0
+function fbtn(i,clr,str)
 {
  btn[i].onmouseover=()=>
  { 
@@ -243,12 +243,13 @@ function abtn(i,clr,str)
   mnge[1].style.transform=
    'scale(7) translate(-33%,-25%)' 
   mnge[2].style.cursor='pointer' 
-  aterm[0].innerHTML=str
+   aterm[0].innerHTML=str
+   astr[iastr]=str; iastr++
  } 
 }
- abtn(0,'#f00','Life'), abtn(1,'#00f','Health'), 
- abtn(2,'#0f0','Ownership'), abtn(3,'#fb0','Auto'), 
- abtn(4,'#f0b','Tourism')
+ fbtn(0,'#f00','Life'), fbtn(1,'#00f','Health'), 
+ fbtn(2,'#0f0','Ownership'), fbtn(3,'#fb0','Auto'), 
+ fbtn(4,'#f0b','Tourism')
  
 ttl[2].onclick=()=>
 { ttl[2].value='2000';  }  
@@ -267,9 +268,11 @@ mnge[1].onclick=()=>
  term[1].style.color='#fff'
  term[2].style.cursor='pointer' 
   term[2].disabled=0
- for(i=0;i<6;i++)  
+ for(i=0;i<6;i++){  
   insrnsd[i].style.opacity=1
- insrnsd[0].innerHTML=str
+  insrnsd[i].style.cursor='pointer' 
+ } 
+ insrnsd[iastr].innerHTML=astr[--iastr]
 }
 mnge[2].onclick=()=>
 { 
