@@ -34,7 +34,7 @@ select:hover{ cursor:pointer; }
  left:6%; width:88%; height:12%;
  background:#fff; opacity:0.2;
  border-radius:13%;
- font-size:3em;
+ font-size:0em;
  padding-down:3px;
 }
 
@@ -45,10 +45,9 @@ select:hover{ cursor:pointer; }
  <input type=submit class=btn value='Ownership' >
  <input type=submit class=btn value='Auto'>
  <input type=submit class=btn value='Tourism'>
- <div class=btn>What must be insuranced?</div>
+ <div class=ttl>What must be insuranced?</div>
 </div>
 <div class=pnl>
- <div class=ttl>Insurance</div>
  <div class=mnge>
   <div class=ttl>Sum:</div>
   <input value='1000' class=ttl>
@@ -68,11 +67,11 @@ select:hover{ cursor:pointer; }
  </div>  
  
 <div class=pnl>
- <div class=insrnsd></div>
- <div class=insrnsd></div>
- <div class=insrnsd></div>
- <div class=insrnsd></div>
- <div class=insrnsd></div>
+ <div class=insrnsd>Life</div>
+ <div class=insrnsd>Health</div>
+ <div class=insrnsd>Ownership</div>
+ <div class=insrnsd>Auto</div>
+ <div class=insrnsd>Tourism</div>
  <div class=insrnsd>Insuranced:</div>
 </div> 
   
@@ -130,17 +129,12 @@ btn[4].style.left=77+'%'
 btn[4].style.top=55+'%'
 btn[4].style.background='#f0b'
 btn[4].style.transform='scale(2)' 
-btn[5].style.cursor='default'
-btn[5].style.left=29+'%'
-btn[5].style.top=15+'%'
-btn[5].style.color='#f0b'
-btn[5].style.transform='scale(3) skew(-12deg)' 
 
-ttl[0].style.left=49+'%'
-ttl[0].style.top=11+'%'
-ttl[0].style.color='#600'
-ttl[0].style.transform='scale(3) skew(-12deg)'
 ttl[0].style.cursor='default'
+ttl[0].style.left=29+'%'
+ttl[0].style.top=15+'%'
+ttl[0].style.color='#f0b'
+ttl[0].style.transform='scale(3) skew(-12deg)' 
 ttl[1].style.left=7+'%'
 ttl[1].style.top=8+'%'
 ttl[1].style.color='#bbb'
@@ -194,10 +188,15 @@ term[2].style.height=33+'%'
  term[2].disabled=1
 
 insrnsd[0].style.top=22+'%' 
+insrnsd[0].style.color='#f00'
 insrnsd[1].style.top=36+'%'
+insrnsd[1].style.color='#00f'
 insrnsd[2].style.top=50+'%'
+insrnsd[2].style.color='#0f0'
 insrnsd[3].style.top=64+'%'
+insrnsd[3].style.color='#990'
 insrnsd[4].style.top=78+'%'
+insrnsd[4].style.color='#909'
 insrnsd[5].style.top=2+'%'
 insrnsd[5].style.background='none'
 insrnsd[5].style.color='#b00' 
@@ -213,7 +212,6 @@ aterm[0].style.top=37+'%'
 aterm[0].style.fontSize=2.6+'em' 
 aterm[0].style.cursor='pointer'  
   
-astr=[], iastr=0
 function fbtn(i,clr,str)
 {
  btn[i].onmouseover=()=>
@@ -232,7 +230,7 @@ function fbtn(i,clr,str)
    mnge[2].disabled=0
   ttl[0].style.zIndex=1
   ttl[0].style.transform=
-   'scale(5) translate(0,-52%) skew(-8deg)'
+   'scale(3) translate(0,-2%) skew(-8deg)'
   ttl[3].style.zIndex=1
   ttl[3].style.color=clr 
   ttl[3].style.transform=
@@ -243,16 +241,14 @@ function fbtn(i,clr,str)
   mnge[1].style.transform=
    'scale(7) translate(-33%,-25%)' 
   mnge[2].style.cursor='pointer' 
-   aterm[0].innerHTML=str
-   astr[iastr]=str; iastr++
+   pi=i
  } 
 }
  fbtn(0,'#f00','Life'), fbtn(1,'#00f','Health'), 
  fbtn(2,'#0f0','Ownership'), fbtn(3,'#fb0','Auto'), 
  fbtn(4,'#f0b','Tourism')
  
-ttl[2].onclick=()=>
-{ ttl[2].value='2000';  }  
+ttl[2].onclick=()=>{ttl[2].value='2000';}  
 
 mnge[1].onclick=()=>
 { 
@@ -268,11 +264,10 @@ mnge[1].onclick=()=>
  term[1].style.color='#fff'
  term[2].style.cursor='pointer' 
   term[2].disabled=0
- for(i=0;i<6;i++){  
-  insrnsd[i].style.opacity=1
+ for(i=0;i<6;i++)
   insrnsd[i].style.cursor='pointer' 
- } 
- insrnsd[iastr].innerHTML=astr[--iastr]
+ insrnsd[pi].style.opacity=1
+ insrnsd[pi].style.fontSize=3+'em'
 }
 mnge[2].onclick=()=>
 { 
@@ -285,7 +280,6 @@ mnge[2].onclick=()=>
 
 term[2].onclick=()=>
 {  
-  ttl[0].innerHTML='Insuranced'
   ttl[3].innerHTML='Item'
  term[1].style.color='#000'
  term[1].style.fontSize=1+'em' 
