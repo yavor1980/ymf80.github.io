@@ -65,6 +65,10 @@ select:hover{ cursor:pointer; }
   You are insured!
   <button class=term>OK</button> 
  </div>  
+ <div class=term>
+  Do you want to rasign?
+  <button class=btn>OK</button> 
+ </div>  
  
 <div class=pnl>
  <div class=insrnsd>Life</div>
@@ -173,10 +177,9 @@ term[0].style.left=13+'%'
 term[0].style.top=13+'%' 
 term[0].style.borderRadius=13+'%' 
 term[0].style.transform='scale(3)'
-term[1].style.cursor='pointer' 
 term[1].style.zIndex=1
 term[1].style.left=73+'%'
-term[1].style.top=78+'%'
+term[1].style.top=8+'%'
 term[1].style.width=13+'%'
 term[1].style.height=19+'%'
 term[1].style.background='#b00' 
@@ -187,6 +190,19 @@ term[2].style.top=60+'%'
 term[2].style.width=88+'%'
 term[2].style.height=33+'%'
  term[2].disabled=1
+term[3].style.zIndex=1
+term[3].style.left=73+'%'
+term[3].style.top=78+'%'
+term[3].style.width=13+'%'
+term[3].style.height=19+'%'
+term[3].style.background='#b00' 
+term[3].style.borderRadius=13+'%' 
+btn[5].style.cursor='pointer' 
+btn[5].style.left=7+'%'
+btn[5].style.top=60+'%'
+btn[5].style.width=88+'%'
+btn[5].style.height=33+'%'
+ btn[5].disabled=1
 
 insrnsd[0].style.top=22+'%' 
 insrnsd[0].style.color='#f00'
@@ -267,6 +283,7 @@ mnge[1].onclick=()=>
   term[2].disabled=0
  for(i=0;i<6;i++)
   insrnsd[i].style.cursor='pointer' 
+ insrnsd[5].style.opacity=1 
  insrnsd[pi].style.opacity=1
  insrnsd[pi].style.fontSize=3+'em'
 }
@@ -289,13 +306,17 @@ term[2].onclick=()=>
   term[2].disabled=1
 }  
  
-function finsrd(i)
+function fdel(i)
 {
- term[2].onclick=()=>
+ insrnsd[i].onclick=()=>
  {
-   
+   insrnsd[i].innerHTML=''
+  insrnsd[i].style.opacity=0.2
+  
  } 
 } 
+ fdel(0); fdel(1); fdel(2);
+ fdel(03); fdel(4);
  
 //Ittl0=setInterval(()=>{
 </script>
