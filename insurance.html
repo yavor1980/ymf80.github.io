@@ -26,7 +26,7 @@ select:hover{ cursor:pointer; }
  transition:1s;
 }
 .pnl,.mnge,.term,.ttl
-{ text-align:center;}
+{ text-align:center; cursor:default;}
 
 .insrnsd
 {
@@ -67,7 +67,7 @@ select:hover{ cursor:pointer; }
  </div>  
  <div class=term>
   Do you want to rasign?
-  <button class=btn>OK</button> 
+  <button class=term>OK</button> 
  </div>  
  
 <div class=pnl>
@@ -197,12 +197,13 @@ term[3].style.width=13+'%'
 term[3].style.height=19+'%'
 term[3].style.background='#b00' 
 term[3].style.borderRadius=13+'%' 
-btn[5].style.cursor='pointer' 
-btn[5].style.left=7+'%'
-btn[5].style.top=60+'%'
-btn[5].style.width=88+'%'
-btn[5].style.height=33+'%'
- btn[5].disabled=1
+term[3].style.fontSize=0.6+'%' 
+term[4].style.cursor='pointer' 
+term[4].style.left=7+'%'
+term[4].style.top=60+'%'
+term[4].style.width=88+'%'
+term[4].style.height=33+'%'
+ term[4].disabled=1
 
 insrnsd[0].style.top=22+'%' 
 insrnsd[0].style.color='#f00'
@@ -309,14 +310,20 @@ term[2].onclick=()=>
 function fdel(i)
 {
  insrnsd[i].onclick=()=>
- {
-   insrnsd[i].innerHTML=''
-  insrnsd[i].style.opacity=0.2
-  
+ {       pi=i
+  term[3].style.transform='scale(3)'
+  term[4].disabled=0
  } 
 } 
  fdel(0); fdel(1); fdel(2);
  fdel(03); fdel(4);
+term[4].onclick=()=>
+{
+  insrnsd[pi].innerHTML=''
+ insrnsd[pi].style.opacity=0.2 
+ term[3].style.transform='scale(1)'
+}  
+ 
  
 //Ittl0=setInterval(()=>{
 </script>
